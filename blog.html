@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog — SEZMOO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="vignette"></div>
+<div class="cursor">PLAY</div>
+<div class="cursor-dot"></div>
+<div class="scrubber"><div class="scrubber__fill"><span class="scrubber__head"></span></div></div>
+
+<nav class="nav">
+  <a class="brand" href="index.html#hero" aria-label="SEZMOO">
+    <img class="brand__logo" src="assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+  </a>
+  <div class="nav__menu" id="main-menu">
+    <a href="index.html#work">Portfolio</a>
+    <a href="index.html#services">Video</a>
+    <a href="index.html#services">Social media</a>
+    <a href="index.html#studio">Studio</a>
+    <a href="index.html#team">Zespół</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#cta">Kontakt</a>
+  </div>
+  <div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div>
+  <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+  <section class="blog blog--page shell" id="blog" data-screen-label="Blog">
+    <div class="blog-hero">
+      <div>
+        <span class="eyebrow reveal"><span class="tick"></span>SEZMOO BLOG</span>
+        <h1 class="blog-hero__title reveal">Artykuły z bloga Sezmoo.</h1>
+      </div>
+      <p class="blog-hero__copy reveal" data-d="1">Przeniesione i dopasowane do nowej strony wpisy o projektowaniu, brandingu, social mediach, druku i modelach współpracy.</p>
+    </div>
+
+    <div class="blog-topics reveal">
+      <a href="#all" class="is-active">Wszystko</a>
+      <a href="#case">Case study</a>
+      <a href="#design">Design</a>
+      <a href="#branding">Branding</a>
+      <a href="#social">Social media</a>
+      <a href="#business">Współpraca</a>
+    </div>
+
+    <article class="blog-feature reveal">
+      <div class="blog-feature__media">
+        <img src="uploads/1758725889858.jpg" alt="World of Warships event zespołowy" />
+        <span>CASE STUDY</span>
+      </div>
+      <div class="blog-feature__body">
+        <span class="blog-post__meta">EVENT · CASE STUDY · 2025-09-25</span>
+        <h2>10 lat World of Warships. Gaming Room i event na 10-lecie.</h2>
+        <p>Sezmoo Creative Agency, Wargaming, Muzeum Marynarki Wojennej w Gdyni i World of Warships. Złożony projekt eventowy: od pustego kontenera po gotową przestrzeń Captain’s Club.</p>
+        <a href="artykul-world-of-warships.html">Czytaj artykuł</a>
+      </div>
+    </article>
+
+    <div class="blog-layout">
+      <div class="blog__list">
+        <article class="blog-post reveal">
+          <div class="blog-post__thumb"><img src="uploads/projekt-katalog-szymichowski-pruszcz-park-1.avif" alt="Projekt katalogu przygotowanego do druku" /></div>
+          <span class="blog-post__meta">DESIGN · 2025-05-14</span>
+          <h3>Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej</h3>
+          <p>Format pliku, spady, marginesy, CMYK, fonty, rozdzielczość i komplet materiałów dla drukarni.</p>
+          <a href="artykul.html">Czytaj dalej</a>
+        </article>
+        <article class="blog-post reveal" data-d="1">
+          <div class="blog-post__thumb"><img src="uploads/Katalog_sezmoo_tes_yacht.avif" alt="Spójny branding i katalog marki" /></div>
+          <span class="blog-post__meta">BRANDING · 2025-05-14</span>
+          <h3>Dlaczego Twoja firma potrzebuje spójnego brandingu?</h3>
+          <p>O tym, dlaczego marka to więcej niż logo i jak konsekwentny system wizualny buduje rozpoznawalność.</p>
+          <a href="artykul-branding.html">Czytaj dalej</a>
+        </article>
+        <article class="blog-post reveal" data-d="2">
+          <div class="blog-post__thumb"><img src="uploads/sezmoo_netto_fotografia_architektura.avif" alt="Stała obsługa marketingowa marki" /></div>
+          <span class="blog-post__meta">BIZNES · 2025-03-25</span>
+          <h3>Abonament vs. zlecenie: różnice w obsłudze klienta</h3>
+          <p>Porównanie stałej obsługi marketingowej i jednorazowych projektów: koszty, tempo, relacja i efekty.</p>
+          <a href="artykul-abonament-vs-zlecenie.html">Czytaj dalej</a>
+        </article>
+        <article class="blog-post reveal">
+          <div class="blog-post__thumb"><img src="uploads/Kartka_swieta_audi_plichta.jpg" alt="Grafika do social media Audi Plichta" /></div>
+          <span class="blog-post__meta">SOCIAL · 2025-03-07</span>
+          <h3>Aktualne wymiary grafik na social media. Przewodnik 2025</h3>
+          <p>Najważniejsze formaty dla Facebooka, Instagrama, LinkedIna, X, YouTube i TikToka.</p>
+          <a href="artykul-wymiary-social-media-2025.html">Czytaj dalej</a>
+        </article>
+      </div>
+
+      <aside class="blog-side reveal" data-d="1">
+        <span class="blog-side__label">Kategorie</span>
+        <a href="#case">Case study</a>
+        <a href="#design">Projektowanie graficzne</a>
+        <a href="#branding">Branding</a>
+        <a href="#social">Social media</a>
+        <a href="#business">Obsługa marketingowa</a>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer shell">
+    <div class="footer__row">
+      <div class="footer__brand"><img src="assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></div>
+      <div class="footer__meta">
+        VIDEO &amp; CONTENT STUDIO<br>
+        hello@sezmoo.pl<br>
+        +48 000 000 000<br>
+        Zeusa 34, Gdańsk
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 SEZMOO — ALL RIGHTS RESERVED</span>
+      <span>INSTAGRAM · TIKTOK · YOUTUBE · LINKEDIN</span>
+    </div>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
