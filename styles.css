@@ -593,6 +593,13 @@ section { position: relative; }
   text-transform: uppercase;
   line-height: 1.55;
 }
+/* hover-swap portraits */
+.team-card__photo { position: relative; }
+.team-card__photo .ph {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+}
+.team-card__photo .ph--hover { opacity: 0; transition: opacity .5s var(--ease); }
+.team-card:hover .ph--hover { opacity: 1; }
 @media (max-width: 1100px){ .team__grid{ grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px){ .team__grid{ grid-template-columns: 1fr; } }
 
@@ -1142,4 +1149,38 @@ img.card__video { background: var(--bg-2); }
 @media (max-width: 680px){
   .crew__row { grid-template-columns: 1fr; gap: 8px; }
   .crew__role { text-align: left; }
+}
+
+/* ============================================================
+   YOUTUBE BACKGROUND EMBEDS — cover-fill any container (no black bars)
+   ============================================================ */
+.yt-bg {
+  position: absolute; inset: 0; overflow: hidden;
+  container-type: size; background: #000; z-index: 1;
+}
+.yt-bg iframe {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width:  max(100cqw, 100cqh * 16 / 9);
+  height: max(100cqh, 100cqw * 9 / 16);
+  border: 0; pointer-events: none;
+}
+/* hero reel uses the same cinematic grade as the old <video> */
+.hero__video:has(iframe) { opacity: 1; }
+.hero__video .yt-bg iframe { filter: brightness(0.62) saturate(1.05); }
+/* studio media becomes a vertical reel frame for the Short */
+.studio__media.is-vertical { aspect-ratio: 9 / 16; max-height: min(82vh, 860px); margin-inline: auto; }
+
+/* ============================================================
+   MOBILE FIXES — overlap + footer alignment
+   ============================================================ */
+@media (max-width: 760px){
+  /* decorative hero play + HUDs overlapped the headline on phones */
+  .hero__play { display: none; }
+  .hero__hud.tr { display: none; }
+  .hero__hud.tl { top: clamp(72px, 10vh, 100px); }
+
+  /* footer: stack, left-align, keep logo inside the padding */
+  .footer__row { flex-direction: column; align-items: flex-start; gap: 26px; }
+  .footer__brand img { width: clamp(150px, 52vw, 240px); }
+  .footer__bottom { flex-direction: column; gap: 12px; margin-top: 30px; }
 }
