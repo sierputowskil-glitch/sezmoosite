@@ -171,6 +171,73 @@
     parallax();
   }
 
+  /* ---------- SERVICES: shutter / export scroll scene ---------- */
+  (function contentPackScene() {
+    const pack = document.querySelector(".content-pack--scroll");
+    const services = document.querySelector(".services");
+    if (!pack || !services) return;
+    const frames = [...pack.querySelectorAll(".pack-frame")];
+    const stage = pack.querySelector("[data-pack-stage]");
+    const clamp = (v, min = 0, max = 1) => Math.max(min, Math.min(max, v));
+    const map = (v, start, end) => clamp((v - start) / (end - start));
+    const smooth = (v) => {
+      v = clamp(v);
+      return v * v * (3 - 2 * v);
+    };
+
+    function updateScene() {
+      const r = pack.getBoundingClientRect();
+      const vh = innerHeight || document.documentElement.clientHeight;
+      const p = clamp((vh * 0.86 - r.top) / (vh * 0.72 + r.height * 0.45));
+      const open = smooth(map(p, 0.06, 0.36));
+      const split = smooth(map(p, 0.34, 0.92));
+      const sr = services.getBoundingClientRect();
+      const sp = clamp((vh - sr.top) / (vh + sr.height));
+
+      services.style.setProperty("--services-progress", sp.toFixed(3));
+      pack.style.setProperty("--pack-progress", p.toFixed(3));
+      pack.style.setProperty("--pack-open", open.toFixed(3));
+      pack.style.setProperty("--pack-split", split.toFixed(3));
+      pack.style.setProperty("--pack-glow", (Math.sin(p * Math.PI) * 0.9).toFixed(3));
+
+      frames.forEach((frameEl, index) => {
+        if (index === 0) return;
+        const frameIn = smooth(map(p, 0.36 + index * 0.08, 0.66 + index * 0.07));
+        frameEl.style.setProperty("--frame-in", frameIn.toFixed(3));
+      });
+
+      if (stage) {
+        if (p < 0.32) stage.textContent = "Open gate";
+        else if (p < 0.66) stage.textContent = "Split formats";
+        else stage.textContent = "Campaign export";
+      }
+    }
+
+    if (reduce) {
+      services.style.setProperty("--services-progress", "1");
+      pack.style.setProperty("--pack-progress", "1");
+      pack.style.setProperty("--pack-open", "1");
+      pack.style.setProperty("--pack-split", "1");
+      frames.forEach((frameEl) => frameEl.style.setProperty("--frame-in", "1"));
+      if (stage) stage.textContent = "Campaign export";
+      return;
+    }
+
+    let ticking = false;
+    const requestUpdate = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        updateScene();
+        ticking = false;
+      });
+    };
+
+    updateScene();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+  })();
+
   /* ---------- PORTFOLIO: hover-play real videos (incl. blurred bg copy) ---------- */
   document.querySelectorAll(".card").forEach((card) => {
     const vids = card.querySelectorAll(".card__video, .card__video-bg");

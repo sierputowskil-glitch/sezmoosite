@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SEZMOO — Video & Content Studio</title>
+<title>SEZMOO — Content, video i kampanie dla marek</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body id="top">
 
 <!-- film texture -->
 <div class="grain"></div>
@@ -21,6 +21,14 @@
 
 <!-- page scrubber -->
 <div class="scrubber"><div class="scrubber__fill"><span class="scrubber__head"></span></div></div>
+
+<div class="floating-socials" aria-label="Social media">
+  <a href="#" aria-label="Instagram">IG</a>
+  <a href="#" aria-label="Facebook">FB</a>
+  <a href="#" aria-label="YouTube">YT</a>
+  <a href="#" aria-label="LinkedIn">IN</a>
+</div>
+<a class="scroll-top" href="#top" aria-label="Przewiń do góry">↑</a>
 
 <!-- ============ NAV ============ -->
 <nav class="nav">
@@ -79,7 +87,7 @@
       <span class="clip"><span>Video, które</span></span>
       <span class="clip"><span>robi <em class="accent" style="font-style:normal">robotę.</em></span></span>
     </h1>
-    <p class="hero__sub">Filmy, rolki i kampanie wizualne dla marek, które chcą być widoczne.</p>
+    <p class="hero__sub">Produkujemy video, content i materiały kampanijne dla marek, które muszą być widoczne regularnie — nie tylko przy dużych premierach.</p>
     <div class="hero__cta">
       <a href="#work" class="btn btn--primary" data-magnetic><span class="ico"></span><span class="lbl">Zobacz portfolio</span></a>
       <a href="#kontakt" class="btn" data-magnetic><span class="lbl">Porozmawiajmy</span></a>
@@ -265,71 +273,93 @@
 
 <!-- ============ 3 · WHAT WE DO ============ -->
 <section class="services shell" id="services" data-screen-label="Services">
+  <div class="services-bg" aria-hidden="true">
+    <span class="services-bg__wash"></span>
+    <span class="services-bg__beam"></span>
+    <span class="services-bg__scan"></span>
+  </div>
   <div class="sec-head">
-    <h2 class="sec-title reveal">Od pomysłu<br>do gotowego <span style="color:var(--rec)">contentu.</span></h2>
-    <span class="sec-index reveal">[ 03 ] — 12 USŁUG</span>
+    <h2 class="sec-title reveal">Jedna produkcja.<br>Wiele <span style="color:var(--rec)">formatów.</span></h2>
+    <span class="sec-index reveal">[ 03 ] — CONTENT SYSTEM</span>
+  </div>
+
+  <div class="content-pack content-pack--scroll reveal" data-cursor="play">
+    <div class="content-pack__screen">
+      <div class="pack-stage">
+        <span>Frame build</span>
+        <strong data-pack-stage>Open gate</strong>
+      </div>
+      <div class="pack-guides" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="pack-frame pack-frame--wide">
+        <span>16:9</span>
+        <strong>Hero film</strong>
+      </div>
+      <div class="pack-frame pack-frame--vertical">
+        <span>9:16</span>
+        <strong>Reels / Shorts</strong>
+      </div>
+      <div class="pack-frame pack-frame--square">
+        <span>1:1</span>
+        <strong>Social ads</strong>
+      </div>
+      <div class="pack-frame pack-frame--banner">
+        <span>OOH / WWW</span>
+        <strong>Kreacje kampanijne</strong>
+      </div>
+      <div class="pack-output" aria-hidden="true">
+        <span>RAW</span>
+        <i></i>
+        <span>EDIT</span>
+        <i></i>
+        <span>EXPORT</span>
+      </div>
+      <div class="pack-playhead"><span data-tc>00:00:12:08</span></div>
+      <div class="pack-shutter" aria-hidden="true"><span></span><span></span></div>
+    </div>
+    <div class="content-pack__copy">
+      <span class="eyebrow"><span class="tick"></span>Campaign output</span>
+      <h3>Nie kończymy na jednym filmie.</h3>
+      <p>Z materiału z planu budujemy zestaw do publikacji: spoty, rolki, grafiki, formaty reklamowe, miniatury, landing i oprawę kampanii. Video jest osią, a reszta sprawia, że content pracuje w wielu kanałach.</p>
+      <a href="#kontakt" class="btn btn--primary" data-magnetic><span class="ico"></span><span class="lbl">Zaplanuj produkcję</span></a>
+    </div>
   </div>
 
   <div class="svc-grid">
-    <div class="svc reveal" data-cursor="link">
+    <div class="svc reveal svc--pillar" data-cursor="link">
       <span class="svc__no">S—01</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Produkcja wideo</h3><p class="svc__desc">Pełna produkcja filmowa — od planu zdjęciowego po finalny montaż.</p></div>
+      <div class="svc__body">
+        <h3 class="svc__title">Video &amp; motion</h3>
+        <p class="svc__desc">Filmy reklamowe, rolki, relacje, dron, montaż i animacje — od planu po gotowy eksport.</p>
+        <div class="svc__chips"><span>spoty</span><span>reels</span><span>event recap</span><span>motion / 3D</span></div>
+      </div>
     </div>
-    <div class="svc reveal" data-d="1" data-cursor="link">
+    <div class="svc reveal svc--pillar" data-d="1" data-cursor="link">
       <span class="svc__no">S—02</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Reels / TikTok / Shorts</h3><p class="svc__desc">Krótkie formaty skrojone pod algorytm i zasięgi.</p></div>
+      <div class="svc__body">
+        <h3 class="svc__title">Social &amp; campaign content</h3>
+        <p class="svc__desc">Stała produkcja formatów do social media, kampanii płatnych, premier, promocji i komunikacji sprzedażowej.</p>
+        <div class="svc__chips"><span>content plan</span><span>ads</span><span>launch</span><span>formaty 9:16 / 1:1</span></div>
+      </div>
     </div>
-    <div class="svc reveal" data-d="2" data-cursor="link">
+    <div class="svc reveal svc--pillar" data-d="2" data-cursor="link">
       <span class="svc__no">S—03</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Fotografia</h3><p class="svc__desc">Sesje produktowe, wizerunkowe, eventowe i architektoniczne.</p></div>
+      <div class="svc__body">
+        <h3 class="svc__title">Design &amp; brand materials</h3>
+        <p class="svc__desc">Grafiki, key visuale, katalogi, banery, OOH i materiały, które domykają kampanię wizualnie.</p>
+        <div class="svc__chips"><span>KV</span><span>banery</span><span>print</span><span>social assets</span></div>
+      </div>
     </div>
-    <div class="svc reveal" data-cursor="link">
+    <div class="svc reveal svc--pillar" data-d="3" data-cursor="link">
       <span class="svc__no">S—04</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Animacje 2D / 3D</h3><p class="svc__desc">Wizualizacje, motion design i grafika, która przyciąga wzrok.</p></div>
-    </div>
-    <div class="svc reveal" data-d="1" data-cursor="link">
-      <span class="svc__no">S—05</span>
-      <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Projektowanie graficzne</h3><p class="svc__desc">Katalogi, materiały reklamowe i grafiki do social mediów.</p></div>
-    </div>
-    <div class="svc reveal" data-d="2" data-cursor="link">
-      <span class="svc__no">S—06</span>
-      <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Strony &amp; landing page</h3><p class="svc__desc">Szybkie, nowoczesne strony www i strony pod kampanie.</p></div>
-    </div>
-    <div class="svc reveal" data-cursor="link">
-      <span class="svc__no">S—07</span>
-      <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Identyfikacja wizualna</h3><p class="svc__desc">Logo, system marki i spójny język wizualny od podstaw.</p></div>
-    </div>
-    <div class="svc reveal" data-d="1" data-cursor="link">
-      <span class="svc__no">S—08</span>
-      <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Kampanie reklamowe</h3><p class="svc__desc">Płatne kampanie i kreacje, które realnie sprzedają.</p></div>
-    </div>
-    <div class="svc reveal" data-d="2" data-cursor="link">
-      <span class="svc__no">S—09</span>
-      <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Obsługa social media</h3><p class="svc__desc">Prowadzenie profili, content plan i stała produkcja.</p></div>
-    </div>
-    <div class="svc reveal" data-cursor="link">
-      <span class="svc__no">S—10</span>
-      <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Ujęcia z drona</h3><p class="svc__desc">Zdjęcia i wideo z powietrza — dynamiczne kadry z lotu ptaka.</p></div>
-    </div>
-    <div class="svc reveal" data-d="1" data-cursor="link">
-      <span class="svc__no">S—11</span>
-      <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Materiały reklamowe</h3><p class="svc__desc">Katalogi, foldery, OOH i nośniki reklamy zewnętrznej.</p></div>
-    </div>
-    <div class="svc reveal" data-d="2" data-cursor="link">
-      <span class="svc__no">S—12</span>
-      <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
-      <div class="svc__body"><h3 class="svc__title">Eventy &amp; relacje</h3><p class="svc__desc">Realizacje wydarzeń, aftermovie i instalacje brandowe.</p></div>
+      <div class="svc__body">
+        <h3 class="svc__title">Web &amp; digital support</h3>
+        <p class="svc__desc">Landing pages, strony kampanijne i digitalowe zaplecze, które spina publikację contentu.</p>
+        <div class="svc__chips"><span>landing</span><span>WWW</span><span>formularze</span><span>kampanie digital</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -359,12 +389,12 @@
       </div>
     </div>
     <div>
-      <h2 class="studio__title reveal">Pomysł, produkcja,<br>montaż — <span class="accent">jeden zespół.</span></h2>
-      <p class="studio__copy reveal" data-d="1">Pracujemy jako zespół kreatywno-produkcyjny: od koncepcji, przez plan zdjęć, po gotowe formaty do social media, kampanii i stron www. Jesteśmy Twoim zewnętrznym działem marketingu.</p>
+      <h2 class="studio__title reveal">Pomysł, produkcja,<br>formaty — <span class="accent">jeden zespół.</span></h2>
+      <p class="studio__copy reveal" data-d="1">Pracujemy jako zespół kreatywno-produkcyjny: od koncepcji, przez plan zdjęć, po paczkę gotowych materiałów do social media, kampanii, eventów i stron. Video jest osią, ale dowozimy cały kontekst publikacji.</p>
       <div class="studio__points">
-        <div class="spt reveal"><span class="spt__no">01</span><span class="spt__txt">Myślimy formatami.</span></div>
-        <div class="spt reveal" data-d="1"><span class="spt__no">02</span><span class="spt__txt">Pracujemy szybko.</span></div>
-        <div class="spt reveal" data-d="2"><span class="spt__no">03</span><span class="spt__txt">Dowozimy wizualnie.</span></div>
+        <div class="spt reveal"><span class="spt__no">01</span><span class="spt__txt">Myślimy kanałami.</span></div>
+        <div class="spt reveal" data-d="1"><span class="spt__no">02</span><span class="spt__txt">Produkujemy sprawnie.</span></div>
+        <div class="spt reveal" data-d="2"><span class="spt__no">03</span><span class="spt__txt">Oddajemy gotowe formaty.</span></div>
       </div>
     </div>
   </div>
@@ -529,7 +559,7 @@
     <div class="contact__grid">
       <div>
         <span class="eyebrow reveal"><span class="tick"></span>Let's roll</span>
-        <p class="contact__lead reveal" data-d="1">Masz markę, produkt albo kampanię do pokazania? Napisz do nas — odpowiadamy w ciągu 24h.</p>
+        <p class="contact__lead reveal" data-d="1">Masz markę, produkt albo kampanię do pokazania? Napisz, czego potrzebujesz — odpowiadamy w ciągu 24h.</p>
         <div class="cinfo reveal" data-d="2">
           <div class="cinfo__item"><div class="cinfo__k">E-mail</div><div class="cinfo__v"><a href="mailto:hello@sezmoo.com">hello@sezmoo.com</a></div></div>
           <div class="cinfo__item"><div class="cinfo__k">Telefon</div><div class="cinfo__v"><a href="tel:+48502260450">+48 502 260 450</a></div></div>
@@ -548,6 +578,18 @@
           <div class="cfield"><label for="cf-phone">Telefon</label><input id="cf-phone" name="phone" type="tel" placeholder="+48 ..." /></div>
         </div>
         <div class="cfield"><label for="cf-email">E-mail</label><input id="cf-email" name="email" type="email" placeholder="ty@firma.pl" required /></div>
+        <div class="cfield">
+          <label for="cf-need">Czego potrzebujesz?</label>
+          <select id="cf-need" name="need" required>
+            <option value="">Wybierz obszar</option>
+            <option>Video / motion</option>
+            <option>Kampania / content</option>
+            <option>Social media</option>
+            <option>Design / grafika</option>
+            <option>Strona / landing page</option>
+            <option>Nie wiem — chcę pogadać</option>
+          </select>
+        </div>
         <div class="cfield"><label for="cf-msg">Wiadomość</label><textarea id="cf-msg" name="message" placeholder="Opowiedz nam o projekcie..." required></textarea></div>
         <label class="cconsent"><input type="checkbox" required /> <span>Wyrażam zgodę na przetwarzanie moich danych w celu kontaktu, zgodnie z polityką prywatności SEZMOO.</span></label>
         <button class="btn btn--primary" type="submit"><span class="ico"></span><span class="lbl">Wyślij wiadomość</span></button>
@@ -559,18 +601,44 @@
 
 <!-- ============ FOOTER ============ -->
 <footer class="footer shell">
-  <div class="footer__row">
-    <div class="footer__brand"><img src="assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></div>
-    <div class="footer__meta">
-      VIDEO &amp; CONTENT STUDIO<br>
-      <a href="mailto:hello@sezmoo.com">hello@sezmoo.com</a><br>
-      <a href="tel:+48502260450">+48 502 260 450</a><br>
-      Zeusa 34, 80-299 Gdańsk
+  <div class="footer__panel">
+    <div class="footer__top">
+      <a class="footer__brand" href="#top" aria-label="SEZMOO">
+        <img src="assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+      </a>
+      <div class="footer__statement">
+        <span>Content · Video · Campaigns</span>
+        <p>Video, content i kampanie wizualne dla marek.</p>
+      </div>
     </div>
-  </div>
-  <div class="footer__bottom">
-    <span>© 2026 SEZMOO — ALL RIGHTS RESERVED</span>
-    <span><a href="#">INSTAGRAM</a> · <a href="#">FACEBOOK</a> · <a href="#">YOUTUBE</a> · <a href="#">LINKEDIN</a></span>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <span class="footer__label">Kontakt</span>
+        <a href="mailto:hello@sezmoo.com">hello@sezmoo.com</a>
+        <a href="tel:+48502260450">+48 502 260 450</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Studio</span>
+        <a href="#work">Realizacje</a>
+        <a href="#services">Usługi</a>
+        <a href="#kontakt">Brief</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Social</span>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Adres</span>
+        <p>Zeusa 34<br>80-299 Gdańsk</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 SEZMOO — ALL RIGHTS RESERVED</span>
+      <a href="#top">Back to top</a>
+    </div>
   </div>
 </footer>
 
