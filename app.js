@@ -238,6 +238,43 @@
     window.addEventListener("resize", requestUpdate);
   })();
 
+  /* ---------- TEAM: compact contact-sheet scroll settle ---------- */
+  (function teamContactSheet() {
+    const team = document.querySelector(".team");
+    if (!team) return;
+    const clamp = (v, min = 0, max = 1) => Math.max(min, Math.min(max, v));
+    const smooth = (v) => {
+      v = clamp(v);
+      return v * v * (3 - 2 * v);
+    };
+
+    function updateTeam() {
+      const r = team.getBoundingClientRect();
+      const vh = innerHeight || document.documentElement.clientHeight;
+      const p = smooth(clamp((vh * 0.86 - r.top) / (vh * 0.54 + r.height * 0.35)));
+      team.style.setProperty("--team-progress", p.toFixed(3));
+    }
+
+    if (reduce) {
+      team.style.setProperty("--team-progress", "1");
+      return;
+    }
+
+    let ticking = false;
+    const requestUpdate = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        updateTeam();
+        ticking = false;
+      });
+    };
+
+    updateTeam();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+  })();
+
   /* ---------- PORTFOLIO: hover-play real videos (incl. blurred bg copy) ---------- */
   document.querySelectorAll(".card").forEach((card) => {
     const vids = card.querySelectorAll(".card__video, .card__video-bg");
@@ -267,25 +304,42 @@
   /* ---------- PORTFOLIO filters ---------- */
   const chips = document.querySelectorAll(".chip");
   const cards = document.querySelectorAll(".card[data-cats]");
+  const applyPortfolioFilter = (f) => {
+    cards.forEach((card) => {
+      const match = f === "all" || (card.dataset.cats || "").split(",").includes(f);
+      card.style.transition = "opacity .4s ease, transform .4s ease";
+      if (match) {
+        card.style.display = "";
+        requestAnimationFrame(() => { card.style.opacity = "1"; card.style.transform = "none"; });
+      } else {
+        card.style.opacity = "0";
+        card.style.transform = "scale(.97)";
+        setTimeout(() => {
+          const active = document.querySelector(".chip.is-on");
+          if (!active || active.dataset.filter !== f) return;
+          card.style.display = "none";
+        }, 380);
+      }
+    });
+  };
   chips.forEach((chip) => {
     chip.addEventListener("click", () => {
       chips.forEach((c) => c.classList.remove("is-on"));
       chip.classList.add("is-on");
       const f = chip.dataset.filter;
-      cards.forEach((card) => {
-        const match = f === "all" || (card.dataset.cats || "").split(",").includes(f);
-        card.style.transition = "opacity .4s ease, transform .4s ease";
-        if (match) {
-          card.style.display = "";
-          requestAnimationFrame(() => { card.style.opacity = "1"; card.style.transform = "none"; });
-        } else {
-          card.style.opacity = "0";
-          card.style.transform = "scale(.97)";
-          setTimeout(() => { if (!chip.classList.contains("is-on")) return; card.style.display = "none"; }, 380);
-        }
-      });
+      applyPortfolioFilter(f);
     });
   });
+  if (chips.length && cards.length) {
+    const params = new URLSearchParams(window.location.search);
+    const requested = params.get("cat");
+    const target = requested && [...chips].find((chip) => chip.dataset.filter === requested);
+    if (target) {
+      chips.forEach((c) => c.classList.remove("is-on"));
+      target.classList.add("is-on");
+      applyPortfolioFilter(requested);
+    }
+  }
 
   /* ---------- PROCESS timeline (scroll-driven playhead) ---------- */
   const track = document.querySelector(".tl__track");
