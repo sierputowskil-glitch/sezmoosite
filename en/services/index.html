@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../../styles.css" />
 </head>
-<body id="top">
+<body id="top"><canvas class="flow-bg-canvas" id="flow-bg-canvas" aria-hidden="true"></canvas>
 <div class="grain"></div><div class="vignette"></div><div class="cursor">PLAY</div><div class="cursor-dot"></div>
 <div class="scrubber"><div class="scrubber__fill"><span class="scrubber__head"></span></div></div>
 
@@ -20,7 +20,7 @@
     <a href="../../index.html#work">Portfolio</a>
     <a href="../../index.html#services">Services</a>
     <a href="../../index.html#studio">Studio</a>
-    <a href="../about-us/">About us</a>
+    <a href="../about-us/index.html">About us</a>
     <a href="../../index.html#kontakt">Contact</a>
   </div>
   <div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div>
@@ -45,10 +45,10 @@
   <section class="sub-section shell">
     <div class="sub-head reveal"><h2>Core service pages.</h2><span>[ SEO ROUTES ]</span></div>
     <div class="sub-grid">
-      <article class="sub-card reveal"><h3>Video production & reels</h3><p>Films, reels, shorts, event recaps and hero videos for brand communication.</p><a href="video-production-reels/">Open service</a></article>
-      <article class="sub-card reveal" data-d="1"><h3>Social media management</h3><p>Ongoing content planning, publication support and visual consistency for social channels.</p><a href="social-media-management/">Open service</a></article>
-      <article class="sub-card reveal" data-d="2"><h3>Paid campaigns</h3><p>Creative assets and campaign formats prepared for performance channels.</p><a href="paid-campaigns/">Open service</a></article>
-      <article class="sub-card reveal"><h3>Websites & landing pages</h3><p>Campaign landing pages and websites that connect content with conversion.</p><a href="websites-and-landing-pages/">Open service</a></article>
+      <article class="sub-card reveal"><h3>Video production & reels</h3><p>Films, reels, shorts, event recaps and hero videos for brand communication.</p><a href="video-production-reels/index.html">Open service</a></article>
+      <article class="sub-card reveal" data-d="1"><h3>Social media management</h3><p>Ongoing content planning, publication support and visual consistency for social channels.</p><a href="social-media-management/index.html">Open service</a></article>
+      <article class="sub-card reveal" data-d="2"><h3>Paid campaigns</h3><p>Creative assets and campaign formats prepared for performance channels.</p><a href="paid-campaigns/index.html">Open service</a></article>
+      <article class="sub-card reveal"><h3>Websites & landing pages</h3><p>Campaign landing pages and websites that connect content with conversion.</p><a href="websites-and-landing-pages/index.html">Open service</a></article>
     </div>
   </section>
 
@@ -58,7 +58,49 @@
       <a href="../../index.html#kontakt" class="btn btn--primary"><span class="ico"></span><span class="lbl">Start a brief</span></a>
     </div>
   </section>
+<footer class="footer shell">
+  <div class="footer__panel">
+    <div class="footer__top">
+      <a class="footer__brand" href="../../index.html#hero" aria-label="SEZMOO">
+        <img src="../../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+      </a>
+      <div class="footer__statement">
+        <span>Content · Video · Campaigns</span>
+        <p>Video, content and campaign work for brands.</p>
+      </div>
+    </div>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <span class="footer__label">Contact</span>
+        <a href="mailto:hello@sezmoo.com">hello@sezmoo.com</a>
+        <a href="tel:+48502260450">+48 502 260 450</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Studio</span>
+        <a href="../../en/portfolio-en/index.html">Work</a>
+        <a href="../../en/services/index.html">Services</a>
+        <a href="../../index.html#kontakt">Contact</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Social</span>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Address</span>
+        <p>Zeusa 34<br>80-299 Gdańsk</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 SEZMOO — ALL RIGHTS RESERVED</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
 </main>
 <script src="../../app.js"></script>
+<script src="../../flowing-background.js"></script>
 </body>
 </html>
