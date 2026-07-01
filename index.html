@@ -22,6 +22,8 @@
 <!-- page scrubber -->
 <div class="scrubber"><div class="scrubber__fill"><span class="scrubber__head"></span></div></div>
 
+<canvas class="flow-bg-canvas" id="flow-bg-canvas" aria-hidden="true"></canvas>
+
 <div class="floating-socials" aria-label="Social media">
   <a href="#" aria-label="Instagram">IG</a>
   <a href="#" aria-label="Facebook">FB</a>
@@ -37,7 +39,7 @@
   </a>
   <div class="nav__menu" id="main-menu">
     <a href="#work">Portfolio</a>
-    <a href="uslugi-marketingowe/">Usługi</a>
+    <a href="uslugi-marketingowe/index.html">Usługi</a>
     <a href="#studio">Studio</a>
     <a href="#team">Zespół</a>
     <a href="#opinie">Opinie</a>
@@ -112,12 +114,14 @@
     <button class="chip" data-filter="motion">Motion / 3D</button>
   </div>
 
-  <div class="work__grid">
+  <div class="work-slider reveal">
+    <button class="work-arrow work-arrow--prev" type="button" aria-label="Poprzednie realizacje" data-reel-prev>‹</button>
+    <div class="work-reel">
 
-    <article class="card card--lg reveal" data-cats="automotive,kampanie" data-cursor="play" data-parallax="22">
+    <article class="card card--lg reveal" data-cats="automotive,kampanie" data-cursor="play">
       <div class="card__media card__media--fit">
-        <video class="card__video-bg" src="uploads/audi-rs5-trailer.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
-        <video class="card__video" src="uploads/audi-rs5-trailer.mp4" muted loop playsinline preload="metadata"></video>
+        <video class="card__video-bg" src="uploads/audi-rs5-trailer.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+        <video class="card__video" src="uploads/audi-rs5-trailer.mp4" muted playsinline preload="metadata"></video>
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__tc"><span class="rd"></span>TC 00:33:02</div>
         <div class="card__live">▶ PREVIEW</div>
@@ -132,7 +136,7 @@
       </div>
     </article>
 
-    <article class="card card--sm reveal" data-d="1" data-cats="b2b,motion" data-cursor="play" data-parallax="16">
+    <article class="card card--sm reveal" data-d="1" data-cats="b2b,motion" data-cursor="play">
       <div class="card__media">
         <img class="card__video" src="assets/work/vts-animacja.avif" alt="VTS Group — animacja 3D" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
@@ -149,7 +153,7 @@
       </div>
     </article>
 
-    <article class="card card--third reveal" data-cats="automotive,social" data-cursor="play" data-parallax="18">
+    <article class="card card--third reveal" data-cats="automotive,social" data-cursor="play">
       <div class="card__media">
         <img class="card__video" src="assets/work/byd.jpg" alt="BYD Plichta" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
@@ -166,7 +170,7 @@
       </div>
     </article>
 
-    <article class="card card--third reveal" data-d="1" data-cats="automotive" data-cursor="play" data-parallax="18">
+    <article class="card card--third reveal" data-d="1" data-cats="automotive" data-cursor="play">
       <div class="card__media">
         <img class="card__video" src="assets/work/landrover.jpg" alt="Land Rover — offroad" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
@@ -183,7 +187,7 @@
       </div>
     </article>
 
-    <article class="card card--third reveal" data-d="2" data-cats="b2b,eventy" data-cursor="play" data-parallax="18">
+    <article class="card card--third reveal" data-d="2" data-cats="b2b,eventy" data-cursor="play">
       <div class="card__media">
         <img class="card__video" src="assets/work/baltic-robert-2.avif" alt="Baltic Towers — employer branding" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
@@ -200,7 +204,7 @@
       </div>
     </article>
 
-    <article class="card card--half reveal" data-cats="eventy,kampanie" data-cursor="play" data-parallax="20">
+    <a class="card card--half reveal" href="realizacja-world-of-warships.html" data-cats="eventy,kampanie" data-cursor="play">
       <div class="card__media">
         <img class="card__video" src="assets/work/captains-club-int.avif" alt="World of Warships — Captain's Club" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
@@ -215,9 +219,9 @@
         </div>
         <span class="card__tag">EVENT</span>
       </div>
-    </article>
+    </a>
 
-    <article class="card card--half reveal" data-d="1" data-cats="automotive,kampanie" data-cursor="play" data-parallax="20">
+    <article class="card card--half reveal" data-d="1" data-cats="automotive,kampanie" data-cursor="play">
       <div class="card__media">
         <img class="card__video" src="assets/work/audi-a6-etron.jpg" alt="Audi A6 e-tron" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
@@ -234,7 +238,7 @@
       </div>
     </article>
 
-    <article class="card card--half reveal" data-cats="eventy" data-cursor="play" data-parallax="20">
+    <article class="card card--half reveal" data-cats="eventy" data-cursor="play">
       <div class="card__media">
         <img class="card__video" src="assets/work/balet.avif" alt="Widowisko na stadionie" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
@@ -251,7 +255,7 @@
       </div>
     </article>
 
-    <article class="card card--half reveal" data-d="1" data-cats="motion" data-cursor="play" data-parallax="20">
+    <article class="card card--half reveal" data-d="1" data-cats="motion" data-cursor="play">
       <div class="card__media">
         <img class="card__video" src="assets/work/animacja-3d.jpg" alt="Wizualizacja 3D" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
@@ -269,63 +273,67 @@
     </article>
 
   </div>
+    <button class="work-arrow work-arrow--next" type="button" aria-label="Kolejne realizacje" data-reel-next>›</button>
+  </div>
+  <div class="work-slider__hud reveal">
+    <div class="work-dots" data-reel-dots></div>
+    <span class="work-reel__count" data-reel-count>01 / 02</span>
+  </div>
 </section>
 
 <!-- ============ 3 · WHAT WE DO ============ -->
 <section class="services shell" id="services" data-screen-label="Services">
-  <div class="services-bg" aria-hidden="true">
-    <span class="services-bg__wash"></span>
-    <span class="services-bg__beam"></span>
-    <span class="services-bg__scan"></span>
-  </div>
-  <div class="sec-head">
-    <h2 class="sec-title reveal">Jedna produkcja.<br>Wiele <span style="color:var(--rec)">formatów.</span></h2>
-    <span class="sec-index reveal">[ 03 ] — CONTENT SYSTEM</span>
-  </div>
-
-  <div class="content-pack content-pack--scroll reveal" data-cursor="play">
-    <div class="content-pack__screen">
-      <div class="pack-stage">
-        <span>Frame build</span>
-        <strong data-pack-stage>Open gate</strong>
+  <div class="services-scene reveal">
+    <div class="services-scene__sticky">
+      <div class="sec-head">
+        <h2 class="sec-title reveal">Jedna produkcja.<br>Wiele <span style="color:var(--rec)">formatów.</span></h2>
+        <span class="sec-index reveal">[ 03 ] — CONTENT SYSTEM</span>
       </div>
-      <div class="pack-guides" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-      <div class="pack-frame pack-frame--wide">
-        <span>16:9</span>
-        <strong>Hero film</strong>
+    <div class="content-pack content-pack--scroll" data-cursor="play">
+      <div class="content-pack__screen">
+        <div class="pack-stage">
+          <span>Frame build</span>
+          <strong data-pack-stage>Open gate</strong>
+        </div>
+        <div class="pack-guides" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="pack-frame pack-frame--wide">
+          <span>16:9</span>
+          <strong>Hero film</strong>
+        </div>
+        <div class="pack-frame pack-frame--vertical">
+          <span>9:16</span>
+          <strong>Reels / Shorts</strong>
+        </div>
+        <div class="pack-frame pack-frame--square">
+          <span>1:1</span>
+          <strong>Social ads</strong>
+        </div>
+        <div class="pack-frame pack-frame--banner">
+          <span>OOH / WWW</span>
+          <strong>Kreacje kampanijne</strong>
+        </div>
+        <div class="pack-output" aria-hidden="true">
+          <span>RAW</span>
+          <i></i>
+          <span>EDIT</span>
+          <i></i>
+          <span>EXPORT</span>
+        </div>
+        <div class="pack-playhead"><span data-tc>00:00:12:08</span></div>
+        <div class="pack-shutter" aria-hidden="true"><span></span><span></span></div>
       </div>
-      <div class="pack-frame pack-frame--vertical">
-        <span>9:16</span>
-        <strong>Reels / Shorts</strong>
+      <div class="content-pack__copy">
+        <span class="eyebrow"><span class="tick"></span>Campaign output</span>
+        <h3>Nie kończymy na jednym filmie.</h3>
+        <p>Z materiału z planu budujemy zestaw do publikacji: spoty, rolki, grafiki, formaty reklamowe, miniatury, landing i oprawę kampanii. Video jest osią, a reszta sprawia, że content pracuje w wielu kanałach.</p>
+        <a href="uslugi-marketingowe/index.html" class="btn btn--primary" data-magnetic><span class="ico"></span><span class="lbl">Zaplanuj produkcję</span></a>
       </div>
-      <div class="pack-frame pack-frame--square">
-        <span>1:1</span>
-        <strong>Social ads</strong>
-      </div>
-      <div class="pack-frame pack-frame--banner">
-        <span>OOH / WWW</span>
-        <strong>Kreacje kampanijne</strong>
-      </div>
-      <div class="pack-output" aria-hidden="true">
-        <span>RAW</span>
-        <i></i>
-        <span>EDIT</span>
-        <i></i>
-        <span>EXPORT</span>
-      </div>
-      <div class="pack-playhead"><span data-tc>00:00:12:08</span></div>
-      <div class="pack-shutter" aria-hidden="true"><span></span><span></span></div>
     </div>
-    <div class="content-pack__copy">
-      <span class="eyebrow"><span class="tick"></span>Campaign output</span>
-      <h3>Nie kończymy na jednym filmie.</h3>
-      <p>Z materiału z planu budujemy zestaw do publikacji: spoty, rolki, grafiki, formaty reklamowe, miniatury, landing i oprawę kampanii. Video jest osią, a reszta sprawia, że content pracuje w wielu kanałach.</p>
-      <a href="uslugi-marketingowe/" class="btn btn--primary" data-magnetic><span class="ico"></span><span class="lbl">Zaplanuj produkcję</span></a>
     </div>
   </div>
 
   <div class="svc-grid">
-    <a class="svc reveal svc--pillar" href="uslugi-marketingowe/produkcja-wideo-reels/" data-cursor="link">
+    <a class="svc reveal svc--pillar" href="uslugi-marketingowe/produkcja-wideo-reels/index.html" data-cursor="link">
       <span class="svc__no">S—01</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
       <div class="svc__body">
@@ -334,7 +342,7 @@
         <div class="svc__chips"><span>spoty</span><span>reels</span><span>event recap</span><span>motion / 3D</span></div>
       </div>
     </a>
-    <a class="svc reveal svc--pillar" href="uslugi-marketingowe/obsluga-social-media/" data-d="1" data-cursor="link">
+    <a class="svc reveal svc--pillar" href="uslugi-marketingowe/obsluga-social-media/index.html" data-d="1" data-cursor="link">
       <span class="svc__no">S—02</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
       <div class="svc__body">
@@ -343,7 +351,7 @@
         <div class="svc__chips"><span>content plan</span><span>ads</span><span>launch</span><span>formaty 9:16 / 1:1</span></div>
       </div>
     </a>
-    <a class="svc reveal svc--pillar" href="uslugi-marketingowe/projektowanie-graficzne/" data-d="2" data-cursor="link">
+    <a class="svc reveal svc--pillar" href="uslugi-marketingowe/projektowanie-graficzne/index.html" data-d="2" data-cursor="link">
       <span class="svc__no">S—03</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
       <div class="svc__body">
@@ -352,7 +360,7 @@
         <div class="svc__chips"><span>KV</span><span>banery</span><span>print</span><span>social assets</span></div>
       </div>
     </a>
-    <a class="svc reveal svc--pillar" href="uslugi-marketingowe/strony-internetowe-i-landing-page/" data-d="3" data-cursor="link">
+    <a class="svc reveal svc--pillar" href="uslugi-marketingowe/strony-internetowe-i-landing-page/index.html" data-d="3" data-cursor="link">
       <span class="svc__no">S—04</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
       <div class="svc__body">
@@ -505,19 +513,63 @@
     <h2 class="sec-title reveal">Zaufali nam.</h2>
     <span class="sec-index reveal">[ 07 ] — CLIENTS</span>
   </div>
-  <div class="logo-wall reveal">
-    <div class="logo-cellc"><img class="logo-rings" src="assets/clients/audi.svg" alt="Audi" /></div>
-    <div class="logo-cellc"><span class="logo-word">Netto</span></div>
-    <div class="logo-cellc"><img class="logo-mark" src="assets/clients/vls.svg" alt="VLS" /></div>
-    <div class="logo-cellc"><img class="logo-mark" src="assets/clients/doraco.svg" alt="Doraco" /></div>
-    <div class="logo-cellc"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="VeloBank" /></div>
-    <div class="logo-cellc"><img class="logo-mark" src="assets/clients/q4rail.svg" alt="Q4rail" /></div>
-    <div class="logo-cellc"><img class="logo-mark" src="assets/clients/2track.svg" alt="2track" /></div>
-    <div class="logo-cellc"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="Life Dom Seniora" /></div>
-    <div class="logo-cellc"><span class="logo-word">BYD</span></div>
-    <div class="logo-cellc"><span class="logo-word">OMODA &amp; JAECOO</span></div>
-    <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
-    <div class="logo-cellc"><span class="logo-word">VTS Group</span></div>
+  <div class="logo-marquee reveal" aria-label="Zaufali nam — klienci">
+    <div class="logo-track">
+      <div class="logo-cellc"><img class="logo-rings" src="assets/clients/audi.svg" alt="Audi" /></div>
+      <div class="logo-cellc"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/vls.svg" alt="VLS" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/doraco.svg" alt="Doraco" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="VeloBank" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/q4rail.svg" alt="Q4rail" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/2track.svg" alt="2track" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="Life Dom Seniora" /></div>
+      <div class="logo-cellc"><span class="logo-word">BYD</span></div>
+      <div class="logo-cellc"><span class="logo-word">OMODA &amp; JAECOO</span></div>
+      <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
+      <div class="logo-cellc"><span class="logo-word">VTS Group</span></div>
+      <!-- duplikat dla płynnej pętli -->
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-rings" src="assets/clients/audi.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/vls.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/doraco.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/q4rail.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/2track.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">BYD</span></div>
+      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">OMODA &amp; JAECOO</span></div>
+      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">Baltic Towers</span></div>
+      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">VTS Group</span></div>
+    </div>
+  </div>
+  <div class="logo-marquee logo-marquee--reverse reveal" aria-hidden="true">
+    <div class="logo-track">
+      <div class="logo-cellc"><span class="logo-word">VTS Group</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/doraco.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">BYD</span></div>
+      <div class="logo-cellc"><img class="logo-rings" src="assets/clients/audi.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/vls.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">OMODA &amp; JAECOO</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/2track.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/q4rail.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="" /></div>
+      <!-- duplikat dla płynnej pętli -->
+      <div class="logo-cellc"><span class="logo-word">VTS Group</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/doraco.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">BYD</span></div>
+      <div class="logo-cellc"><img class="logo-rings" src="assets/clients/audi.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/vls.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">OMODA &amp; JAECOO</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/2track.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/q4rail.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="" /></div>
+    </div>
   </div>
 </section>
 
@@ -627,7 +679,7 @@
       <div class="footer__col">
         <span class="footer__label">Studio</span>
         <a href="#work">Realizacje</a>
-        <a href="uslugi-marketingowe/">Usługi</a>
+        <a href="uslugi-marketingowe/index.html">Usługi</a>
         <a href="#kontakt">Brief</a>
       </div>
       <div class="footer__col">
@@ -660,6 +712,7 @@
   </svg>
 </template>
 
+<script src="flowing-background.js"></script>
 <script src="app.js"></script>
 <script>
 /* contact form — no backend: confirm + reset */
