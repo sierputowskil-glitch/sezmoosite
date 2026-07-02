@@ -232,9 +232,7 @@
       const packExit = stickyMode ? smooth(map(pinProgress, 0.78, 1)) : 0;
       const open = smooth(map(p, 0.06, 0.36));
       const split = smooth(map(p, 0.34, 0.92));
-      const sp = clamp((vh - sr.top) / (vh + sr.height));
 
-      services.style.setProperty("--services-progress", sp.toFixed(3));
       pack.style.setProperty("--pack-progress", p.toFixed(3));
       pack.style.setProperty("--pack-open", open.toFixed(3));
       pack.style.setProperty("--pack-split", split.toFixed(3));
@@ -256,7 +254,6 @@
     }
 
     if (reduce) {
-      services.style.setProperty("--services-progress", "1");
       pack.style.setProperty("--pack-progress", "1");
       pack.style.setProperty("--pack-open", "1");
       pack.style.setProperty("--pack-split", "1");
@@ -390,20 +387,21 @@
   })();
 
   /* ---------- PORTFOLIO reel (pinned, batches of 5) ---------- */
-  (function workReel() {
-    const scene = document.querySelector(".work-scene");
-    const sticky = document.querySelector(".work-scene__sticky");
+  (function workSlider() {
     const reel = document.querySelector(".work-reel");
-    if (!scene || !sticky || !reel) return;
+    if (!reel) return;
     const chips = [...document.querySelectorAll(".work__filters .chip")];
     const allCards = [...reel.querySelectorAll(".card")];
+    const prevBtn = document.querySelector("[data-reel-prev]");
+    const nextBtn = document.querySelector("[data-reel-next]");
+    const dotsWrap = document.querySelector("[data-reel-dots]");
+    const countEl = document.querySelector("[data-reel-count]");
     const PER = 5;
     let filter = "all";
     let batches = [];
     let curBatch = -1;
 
-    const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
-    const stickyMode = () => window.matchMedia("(min-width: 1101px)").matches;
+    const desktopMode = () => window.matchMedia("(min-width: 1101px)").matches;
     const chunk = (arr, n) => { const o = []; for (let i = 0; i < arr.length; i += n) o.push(arr.slice(i, i + n)); return o; };
 
     function layoutFor(size) {
@@ -412,6 +410,11 @@
       if (size === 3) return [[1,7,1,3],[7,13,1,2],[7,13,2,3]];
       if (size === 2) return [[1,7,1,3],[7,13,1,3]];
       return [[1,13,1,3]];
+    }
+
+    function syncHud() {
+      if (countEl) countEl.innerHTML = "<b>" + String(curBatch + 1).padStart(2, "0") + "</b> / " + String(batches.length).padStart(2, "0");
+      if (dotsWrap) [...dotsWrap.children].forEach((d, i) => d.classList.toggle("is-on", i === curBatch));
     }
 
     function applyBatch(batch, lay, desktop, animate) {
@@ -431,19 +434,19 @@
         void c.offsetWidth;
         c.classList.add("is-live");
       });
-      const el = document.querySelector("[data-reel-count]");
-      if (el) el.textContent = String(curBatch + 1).padStart(2, "0") + " / " + String(batches.length).padStart(2, "0");
+      syncHud();
     }
     function showBatch(idx, animate) {
-      idx = Math.max(0, Math.min(batches.length - 1, idx | 0));
+      const n = batches.length;
+      idx = ((idx % n) + n) % n; // loop
       if (idx === curBatch) return;
       const prev = curBatch;
       curBatch = idx;
-      const desktop = stickyMode();
+      const desktop = desktopMode();
       const batch = batches[idx] || [];
       const lay = layoutFor(batch.length);
       clearTimeout(showBatch._t);
-      if (animate && prev >= 0) {
+      if (animate && prev >= 0 && desktop) {
         allCards.forEach((c) => {
           if (c.classList.contains("is-live") && batch.indexOf(c) === -1) {
             c.classList.remove("is-live");
@@ -456,10 +459,23 @@
       }
     }
 
+    function buildDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = "";
+      batches.forEach((_, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", "Realizacje — grupa " + (i + 1));
+        b.addEventListener("click", () => showBatch(i, true));
+        dotsWrap.appendChild(b);
+      });
+    }
+
     function rebuild() {
       const filtered = allCards.filter((c) => filter === "all" || (c.dataset.cats || "").split(",").includes(filter));
       batches = chunk(filtered, PER);
       if (batches.length === 0) batches = [[]];
+      buildDots();
       curBatch = -1;
       showBatch(0, false);
     }
@@ -479,36 +495,37 @@
       rebuild();
     }));
 
-    let ticking = false;
-    function update() {
-      if (!stickyMode()) {
-        sticky.style.top = "";
-        allCards.forEach((c) => { c.classList.remove("is-hidden"); c.classList.add("is-live"); c.style.gridColumn = ""; c.style.gridRow = ""; c.style.transitionDelay = ""; });
-        curBatch = -2;
-        return;
-      }
-      if (curBatch === -2) { curBatch = -1; }
-      const stH = sticky.getBoundingClientRect().height;
-      const vh = innerHeight || document.documentElement.clientHeight;
-      const centerTop = Math.max(24, (vh - stH) / 2);
-      sticky.style.top = centerTop + "px";
-      const sr = scene.getBoundingClientRect();
-      const travel = Math.max(1, sr.height - stH);
-      const p = clamp((centerTop - sr.top) / travel);
-      const n = batches.length;
-      const seg = clamp((p - 0.06) / 0.88);
-      const idx = Math.min(n - 1, Math.floor(seg * n));
-      showBatch(idx, true);
-    }
-    const req = () => { if (ticking) return; ticking = true; requestAnimationFrame(() => { update(); ticking = false; }); };
+    if (prevBtn) prevBtn.addEventListener("click", () => showBatch(curBatch - 1, true));
+    if (nextBtn) nextBtn.addEventListener("click", () => showBatch(curBatch + 1, true));
+
+    // keyboard when section in view
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      if (!desktopMode()) return;
+      const r = reel.getBoundingClientRect();
+      if (r.bottom < 80 || r.top > innerHeight - 80) return;
+      if (e.key === "ArrowLeft") showBatch(curBatch - 1, true);
+      else showBatch(curBatch + 1, true);
+    });
+
+    // touch swipe (mobile shows all, but keep for tablet)
+    let sx = 0;
+    reel.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; }, { passive: true });
+    reel.addEventListener("touchend", (e) => {
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 60 && desktopMode()) showBatch(curBatch + (dx < 0 ? 1 : -1), true);
+    }, { passive: true });
+
+    let wasDesktop = desktopMode();
+    window.addEventListener("resize", () => {
+      const now = desktopMode();
+      if (now !== wasDesktop) { wasDesktop = now; const keep = curBatch; curBatch = -1; showBatch(Math.max(0, keep), false); }
+    });
 
     rebuild();
     const params = new URLSearchParams(window.location.search);
     const rc = params.get("cat");
     if (rc) { const t = chips.find((c) => c.dataset.filter === rc); if (t) { chips.forEach((c) => c.classList.remove("is-on")); t.classList.add("is-on"); filter = rc; rebuild(); } }
-    update();
-    window.addEventListener("scroll", req, { passive: true });
-    window.addEventListener("resize", req);
   })();
 
   /* ---------- PROCESS timeline (scroll-driven playhead) ---------- */
@@ -538,6 +555,78 @@
     if (!reduce) timeline();
     else clips.forEach((c) => c.classList.add("is-done"));
   }
+
+  /* ---------- Scroll word-fill (kudos-style) ---------- */
+  (function wordFill() {
+    const selector = ".sec-title, .studio__title, .studio__copy, .sub-hero h1, .sub-head h2, .service-hub h1";
+    const targets = [...document.querySelectorAll(selector)];
+    if (!targets.length) return;
+    const DIM = 0.12;
+    const EDGE = 1; // per-letter reveal (each letter flips at its own threshold)
+
+    function wrap(node, bag) {
+      [...node.childNodes].forEach((child) => {
+        if (child.nodeType === 3) {
+          const parts = child.nodeValue.split(/(\s+)/);
+          if (!parts.length) return;
+          const frag = document.createDocumentFragment();
+          parts.forEach((tok) => {
+            if (tok === "") return;
+            if (/^\s+$/.test(tok)) { frag.appendChild(document.createTextNode(tok)); return; }
+            const word = document.createElement("span");
+            word.className = "wf-word";
+            word.style.display = "inline-block";
+            word.style.whiteSpace = "pre";
+            for (const ch of tok) {
+              const s = document.createElement("span");
+              s.className = "wf-w";
+              s.textContent = ch;
+              bag.push(s);
+              word.appendChild(s);
+            }
+            frag.appendChild(word);
+          });
+          node.replaceChild(frag, child);
+        } else if (child.nodeType === 1 && child.tagName !== "BR") {
+          wrap(child, bag);
+        }
+      });
+    }
+
+    const items = targets.map((el) => {
+      el.classList.remove("reveal");
+      el.style.opacity = "1";
+      el.style.transform = "none";
+      const words = [];
+      wrap(el, words);
+      words.forEach((w) => { w.style.opacity = DIM; w.style.transition = "opacity .3s ease"; });
+      return { el, words };
+    });
+
+    if (reduce) { items.forEach((it) => it.words.forEach((w) => (w.style.opacity = "1"))); return; }
+
+    function update() {
+      const vh = innerHeight || document.documentElement.clientHeight;
+      items.forEach(({ el, words }) => {
+        const r = el.getBoundingClientRect();
+        const N = words.length;
+        const f = Math.max(0, Math.min(1, (vh * 0.86 - r.top) / (r.height + vh * 0.34)));
+        for (let i = 0; i < N; i++) {
+          const lit = Math.max(0, Math.min(1, (f * (N + EDGE) - i) / EDGE));
+          words[i].style.opacity = (DIM + (1 - DIM) * lit).toFixed(3);
+        }
+      });
+    }
+    let lastY = -1, lastH = -1;
+    function loop() {
+      const y = window.scrollY || window.pageYOffset || 0;
+      const h = innerHeight;
+      if (y !== lastY || h !== lastH) { lastY = y; lastH = h; update(); }
+      requestAnimationFrame(loop);
+    }
+    update();
+    requestAnimationFrame(loop);
+  })();
 
   /* ---------- Smooth anchor nav ---------- */
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
