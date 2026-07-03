@@ -19,13 +19,26 @@
   <div class="sub-hero__grid">
     <div>
       <span class="eyebrow reveal"><span class="tick"></span>Usługi SEZMOO</span>
-      <h1 class="reveal">Jedna produkcja. Wiele formatów.</h1>
-      <p class="sub-hero__lead reveal" data-d="1">Robimy content, video i kampanie dla marek, które potrzebują spójnych materiałów do sociali, reklam, stron, eventów i sprzedaży.</p>
-      <div class="sub-hero__meta reveal" data-d="2"><span>Video first</span><span>Social</span><span>Kampanie</span><span>WWW</span><span>Design</span></div>
+      <h1 class="reveal">Jedna produkcja. Wiele <span class="h1-rot" data-no-wf aria-label="formatów, rolek, spotów, kampanii, historii, kadrów"><span class="h1-rot__list"><span>formatów</span><span>rolek</span><span>spotów</span><span>kampanii</span><span>historii</span><span>kadrów</span><span>formatów</span></span></span></h1>
+      <p class="sub-hero__lead reveal" data-d="1">Robimy content, wideo i kampanie dla marek, które potrzebują spójnych materiałów do sociali, reklam, stron, eventów i sprzedaży.</p>
+      <div class="sub-hero__meta reveal" data-d="2"><span>Wideo first</span><span>Social</span><span>Kampanie</span><span>WWW</span><span>Design</span></div>
     </div>
     <div class="sub-panel reveal" data-d="1">
       <span class="sub-panel__label">Content system</span>
-      <p>Z jednego planu budujemy paczkę materiałów: spoty, rolki, zdjęcia, grafiki, reklamy, landing pages, animacje i formaty sprzedażowe.</p>
+      <div class="csys">
+        <div class="csys__head">
+          <b>1 produkcja</b><span class="csys__arrow">→</span><span class="csys__count">6 formatów</span>
+        </div>
+        <ul class="csys__rows">
+          <li><b>Spot</b><span>16:9 · 9:16</span></li>
+          <li><b>Rolka</b><span>9:16 · reels</span></li>
+          <li><b>Foto</b><span>produkt · event</span></li>
+          <li><b>Landing</b><span>web · form</span></li>
+          <li><b>Grafika</b><span>social · print</span></li>
+          <li><b>OOH</b><span>banner · citylight</span></li>
+        </ul>
+        <p class="csys__sr">Z jednego planu budujemy paczkę materiałów: spoty, rolki, zdjęcia, grafiki, reklamy, landing pages, animacje i formaty sprzedażowe.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -47,6 +60,7 @@
     <a class="service-tile reveal" href="reklama-zewnetrzna/index.html"><span>10</span><h3>Reklama zewnętrzna</h3><p>OOH, banery, citylighty i formaty widoczne poza ekranem telefonu.</p><i>OOH</i></a>
     <a class="service-tile reveal" data-d="1" href="materialy-reklamowe/index.html"><span>11</span><h3>Materiały reklamowe</h3><p>Foldery, katalogi, POS, prezentacje i materiały wspierające sprzedaż.</p><i>Print</i></a>
     <a class="service-tile reveal" data-d="2" href="organizacja-eventow/index.html"><span>12</span><h3>Organizacja eventów</h3><p>Oprawa wizualna, content i komunikacja wokół wydarzeń marki.</p><i>Event</i></a>
+    <a class="service-tile service-tile--end reveal" href="../index.html#kontakt"><h3>Nie widzisz swojego formatu? Zbudujemy go pod Twoją kampanię.</h3><span class="end-link">Napisz brief →</span></a>
   </div>
   <div class="portfolio-routing reveal">
     <div>
@@ -75,7 +89,7 @@
       </a>
       <div class="footer__statement">
         <span>Content · Video · Campaigns</span>
-        <p>Video, content i kampanie wizualne dla marek.</p>
+        <p>Wideo, content i kampanie wizualne dla marek.</p>
       </div>
     </div>
     <div class="footer__grid">
@@ -111,5 +125,127 @@
 </main>
 <script src="../app.js"></script>
 <script src="../flowing-background.js"></script>
+<script>
+/* removed: service-tile film-frame preview / 3D tilt / count-up.
+   Tiles now rely on a calm background + arrow hover state in CSS. */
+(function servicePreview(){ return;
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var fine = matchMedia("(pointer: fine)").matches;
+  var tiles = [].slice.call(document.querySelectorAll(".service-tile"));
+  if (!tiles.length) return;
+
+  tiles.forEach(function(tile){
+    if (tile.querySelector(".tile-media")) return;
+    var tag = (tile.querySelector("i") ? tile.querySelector("i").textContent : "clip").trim();
+    tag; // reserved for future preview labelling
+    var media = document.createElement("span");
+    media.className = "tile-media";
+    media.setAttribute("aria-hidden", "true");
+    media.innerHTML =
+      '<span class="tile-media__stripes"></span>' +
+      '<span class="tile-media__scrim"></span>' +
+      '<span class="tile-media__scan"></span>' +
+      '<span class="tile-media__tc"><i></i><b>00:00:00:00</b></span>';
+    tile.insertBefore(media, tile.firstChild);
+
+    var tcEl = media.querySelector(".tile-media__tc b");
+    var raf = null, start = 0, vid = null;
+
+    function fmt(ms){
+      var f = Math.floor((ms % 1000) / 40);            // 25 fps
+      var s = Math.floor(ms / 1000) % 60;
+      var m = Math.floor(ms / 60000) % 60;
+      var pad = function(n){ return (n < 10 ? "0" : "") + n; };
+      return "00:" + pad(m) + ":" + pad(s) + ":" + pad(f);
+    }
+    function tick(t){
+      if (!start) start = t;
+      tcEl.textContent = fmt(t - start);
+      raf = requestAnimationFrame(tick);
+    }
+    function enter(){
+      if (!reduce){ start = 0; raf = requestAnimationFrame(tick); }
+      if (tile.dataset.video && !vid){
+        vid = document.createElement("video");
+        vid.muted = true; vid.loop = true; vid.playsInline = true;
+        vid.setAttribute("playsinline", ""); vid.preload = "none";
+        vid.className = "tile-media__video";
+        vid.src = tile.dataset.video;
+        media.insertBefore(vid, media.querySelector(".tile-media__scrim"));
+      }
+      if (vid){ var p = vid.play(); if (p && p.catch) p.catch(function(){}); }
+    }
+    function leave(){
+      if (raf){ cancelAnimationFrame(raf); raf = null; }
+      if (vid){ vid.pause(); }
+    }
+    tile.addEventListener("mouseenter", enter);
+    tile.addEventListener("mouseleave", leave);
+    tile.addEventListener("focus", enter);
+    tile.addEventListener("blur", leave);
+
+    /* magnetic arrow + subtle tilt (pointer devices only) */
+    if (fine && !reduce) {
+      tile.addEventListener("mouseenter", function(){ tile.classList.add("is-tilt"); });
+      tile.addEventListener("mousemove", function(e){
+        var r = tile.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        tile.style.setProperty("--ax", (px * 12).toFixed(1) + "px");
+        tile.style.setProperty("--ay", (py * 12).toFixed(1) + "px");
+        tile.style.transform =
+          "perspective(1000px) rotateX(" + (-py * 4).toFixed(2) +
+          "deg) rotateY(" + (px * 4).toFixed(2) + "deg)";
+      });
+      tile.addEventListener("mouseleave", function(){
+        tile.classList.remove("is-tilt");
+        tile.style.transform = "";
+        tile.style.removeProperty("--ax");
+        tile.style.removeProperty("--ay");
+      });
+    }
+  });
+
+  /* ---- timecode-style number punch-in (01–12 count up on reveal) ---- */
+  var easeOut = function(p){ return 1 - Math.pow(1 - p, 3); };
+  function numSpan(tile){
+    var kids = tile.children;
+    for (var i = 0; i < kids.length; i++){
+      if (kids[i].tagName === "SPAN" && !kids[i].classList.contains("tile-media")) return kids[i];
+    }
+    return null;
+  }
+  tiles.forEach(function(tile){
+    var el = numSpan(tile);
+    if (!el) return;
+    var target = parseInt(el.textContent, 10);
+    if (isNaN(target)) return;
+    el.setAttribute("data-num", target);
+    if (!reduce) el.textContent = "00";
+  });
+  if (!reduce && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        var el = numSpan(en.target);
+        if (!el || el.dataset.counted) return;
+        el.dataset.counted = "1";
+        var target = parseInt(el.getAttribute("data-num"), 10);
+        var dur = 480 + Math.random() * 220, t0 = performance.now();
+        el.classList.add("is-count");
+        (function step(t){
+          var p = Math.min(1, (t - t0) / dur);
+          var v = Math.round(easeOut(p) * target);
+          el.textContent = (v < 10 ? "0" : "") + v;
+          if (p < 1) requestAnimationFrame(step);
+          else el.classList.remove("is-count");
+        })(t0);
+        io.unobserve(en.target);
+      });
+    }, { threshold: 0.4 });
+    tiles.forEach(function(t){ io.observe(t); });
+  }
+})();
+</script>
 </body>
 </html>

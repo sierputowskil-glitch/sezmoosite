@@ -404,12 +404,33 @@
     const desktopMode = () => window.matchMedia("(min-width: 1101px)").matches;
     const chunk = (arr, n) => { const o = []; for (let i = 0; i < arr.length; i += n) o.push(arr.slice(i, i + n)); return o; };
 
-    function layoutFor(size) {
-      if (size >= 5) return [[1,7,1,3],[7,10,1,2],[10,13,1,2],[7,10,2,3],[10,13,2,3]];
-      if (size === 4) return [[1,7,1,3],[7,13,1,2],[7,10,2,3],[10,13,2,3]];
-      if (size === 3) return [[1,7,1,3],[7,13,1,2],[7,13,2,3]];
-      if (size === 2) return [[1,7,1,3],[7,13,1,3]];
-      return [[1,13,1,3]];
+    let places = new Map();
+    const isPortrait = (c) => c.getAttribute("data-short") === "1";
+    // Orientation-aware packer: 4 bands (3 cols each) x 2 rows.
+    // Portrait/short = full-height vertical tile (2 rows); others = square/rect (1 row).
+    function packBatches(cards) {
+      const out = [];
+      const pl = new Map();
+      let bands, batch;
+      const fresh = () => { bands = [0, 0, 0, 0]; batch = []; out.push(batch); };
+      const col = (b) => (b * 3 + 1) + " / " + (b * 3 + 4);
+      fresh();
+      cards.forEach((c) => {
+        if (isPortrait(c)) {
+          let b = bands.indexOf(0);
+          if (b === -1) { fresh(); b = 0; }
+          pl.set(c, [col(b), "1 / 3"]);
+          bands[b] = 2; batch.push(c);
+        } else {
+          let b = bands.findIndex((v) => v < 2);
+          if (b === -1) { fresh(); b = 0; }
+          const row = bands[b];
+          pl.set(c, [col(b), (row + 1) + " / " + (row + 2)]);
+          bands[b] = row + 1; batch.push(c);
+        }
+      });
+      if (out.length && out[out.length - 1].length === 0) out.pop();
+      return { batches: out, places: pl };
     }
 
     function syncHud() {
@@ -429,7 +450,7 @@
       });
       batch.forEach((c, i) => {
         c.classList.remove("is-hidden", "is-exit");
-        if (desktop) { const L = lay[i]; c.style.gridColumn = L[0] + " / " + L[1]; c.style.gridRow = L[2] + " / " + L[3]; }
+        if (desktop) { const L = lay[i]; if (L) { c.style.gridColumn = L[0]; c.style.gridRow = L[1]; } }
         c.style.transitionDelay = (animate ? i * 0.06 : 0) + "s";
         void c.offsetWidth;
         c.classList.add("is-live");
@@ -444,7 +465,7 @@
       curBatch = idx;
       const desktop = desktopMode();
       const batch = batches[idx] || [];
-      const lay = layoutFor(batch.length);
+      const lay = batch.map((c) => places.get(c));
       clearTimeout(showBatch._t);
       if (animate && prev >= 0 && desktop) {
         allCards.forEach((c) => {
@@ -473,7 +494,9 @@
 
     function rebuild() {
       const filtered = allCards.filter((c) => filter === "all" || (c.dataset.cats || "").split(",").includes(filter));
-      batches = chunk(filtered, PER);
+      const packed = packBatches(filtered);
+      batches = packed.batches;
+      places = packed.places;
       if (batches.length === 0) batches = [[]];
       buildDots();
       curBatch = -1;
@@ -559,7 +582,7 @@
   /* ---------- Scroll word-fill (kudos-style) ---------- */
   (function wordFill() {
     const selector = ".sec-title, .studio__title, .studio__copy, .sub-hero h1, .sub-head h2, .service-hub h1";
-    const targets = [...document.querySelectorAll(selector)];
+    const targets = [...document.querySelectorAll(selector)].filter((el) => !el.matches(".sub-hero h1"));
     if (!targets.length) return;
     const DIM = 0.12;
     const EDGE = 1; // per-letter reveal (each letter flips at its own threshold)
@@ -588,6 +611,7 @@
           });
           node.replaceChild(frag, child);
         } else if (child.nodeType === 1 && child.tagName !== "BR") {
+          if (child.hasAttribute && child.hasAttribute("data-no-wf")) return;
           wrap(child, bag);
         }
       });
@@ -626,6 +650,43 @@
     }
     update();
     requestAnimationFrame(loop);
+  })();
+
+  /* ---------- Sub-hero heading intro (above-the-fold, staggered per-letter on load) ---------- */
+  (function heroIntro() {
+    const els = [...document.querySelectorAll(".sub-hero h1")];
+    if (!els.length) return;
+    els.forEach((el) => {
+      el.classList.remove("reveal");
+      el.style.opacity = "1";
+      el.style.transform = "none";
+      if (reduce) return;
+      const letters = [];
+      (function walk(node) {
+        [...node.childNodes].forEach((c) => {
+          if (c.nodeType === 3) {
+            const frag = document.createDocumentFragment();
+            [...c.textContent].forEach((ch) => {
+              if (ch === " ") { frag.appendChild(document.createTextNode(" ")); return; }
+              const s = document.createElement("span");
+              s.textContent = ch;
+              s.style.display = "inline-block";
+              s.style.opacity = "0.08";
+              s.style.transform = "translateY(0.18em)";
+              s.style.transition = "opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1)";
+              frag.appendChild(s);
+              letters.push(s);
+            });
+            node.replaceChild(frag, c);
+          } else if (c.nodeType === 1 && c.tagName !== "BR") {
+            walk(c);
+          }
+        });
+      })(el);
+      letters.forEach((s, i) => {
+        setTimeout(() => { s.style.opacity = "1"; s.style.transform = "none"; }, 140 + i * 20);
+      });
+    });
   })();
 
   /* ---------- Smooth anchor nav ---------- */
