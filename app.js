@@ -494,9 +494,15 @@
 
     function rebuild() {
       const filtered = allCards.filter((c) => filter === "all" || (c.dataset.cats || "").split(",").includes(filter));
-      const packed = packBatches(filtered);
-      batches = packed.batches;
-      places = packed.places;
+      if (desktopMode()) {
+        const packed = packBatches(filtered);
+        batches = packed.batches;
+        places = packed.places;
+      } else {
+        // mobile: simple pages of 4 tiles, same switcher/slider
+        batches = chunk(filtered, 4);
+        places = new Map();
+      }
       if (batches.length === 0) batches = [[]];
       buildDots();
       curBatch = -1;
@@ -536,13 +542,13 @@
     reel.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; }, { passive: true });
     reel.addEventListener("touchend", (e) => {
       const dx = e.changedTouches[0].clientX - sx;
-      if (Math.abs(dx) > 60 && desktopMode()) showBatch(curBatch + (dx < 0 ? 1 : -1), true);
+      if (Math.abs(dx) > 50) showBatch(curBatch + (dx < 0 ? 1 : -1), true);
     }, { passive: true });
 
     let wasDesktop = desktopMode();
     window.addEventListener("resize", () => {
       const now = desktopMode();
-      if (now !== wasDesktop) { wasDesktop = now; const keep = curBatch; curBatch = -1; showBatch(Math.max(0, keep), false); }
+      if (now !== wasDesktop) { wasDesktop = now; rebuild(); }
     });
 
     rebuild();
@@ -666,19 +672,27 @@
         [...node.childNodes].forEach((c) => {
           if (c.nodeType === 3) {
             const frag = document.createDocumentFragment();
-            [...c.textContent].forEach((ch) => {
-              if (ch === " ") { frag.appendChild(document.createTextNode(" ")); return; }
-              const s = document.createElement("span");
-              s.textContent = ch;
-              s.style.display = "inline-block";
-              s.style.opacity = "0.08";
-              s.style.transform = "translateY(0.18em)";
-              s.style.transition = "opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1)";
-              frag.appendChild(s);
-              letters.push(s);
+            // split into words; wrap each word so lines only break at spaces
+            c.textContent.split(/(\s+)/).forEach((tok) => {
+              if (tok === "") return;
+              if (/^\s+$/.test(tok)) { frag.appendChild(document.createTextNode(" ")); return; }
+              const word = document.createElement("span");
+              word.style.display = "inline-block";
+              word.style.whiteSpace = "nowrap";
+              [...tok].forEach((ch) => {
+                const s = document.createElement("span");
+                s.textContent = ch;
+                s.style.display = "inline-block";
+                s.style.opacity = "0.08";
+                s.style.transform = "translateY(0.18em)";
+                s.style.transition = "opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1)";
+                word.appendChild(s);
+                letters.push(s);
+              });
+              frag.appendChild(word);
             });
             node.replaceChild(frag, c);
-          } else if (c.nodeType === 1 && c.tagName !== "BR") {
+          } else if (c.nodeType === 1 && c.tagName !== "BR" && !c.hasAttribute("data-no-wf")) {
             walk(c);
           }
         });
@@ -702,4 +716,60 @@
       }
     });
   });
+})();
+
+/* ============================================================
+   COOKIE CONSENT — lang-aware, persistent, shown on all pages
+   ============================================================ */
+(function cookieConsent() {
+  var KEY = "sezmoo-cookie-consent";
+  try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+
+  var en = (document.documentElement.lang || "pl").toLowerCase().indexOf("en") === 0;
+
+  // relative path to site root, derived from a known asset (styles.css / app.js)
+  function rootPrefix() {
+    var el = document.querySelector('link[href$="styles.css"]') || document.querySelector('script[src$="app.js"]');
+    var u = el ? (el.getAttribute("href") || el.getAttribute("src") || "") : "";
+    return u.replace(/(styles\.css|app\.js)(\?.*)?$/, "");
+  }
+  var up = rootPrefix();
+  var privacyHref = up + (en ? "en/privacy-policy/index.html" : "polityka-prywatnosci/index.html");
+
+  var t = en ? {
+    text: "We use cookies to make the site work, remember preferences and — with your consent — for statistics and marketing.",
+    more: "Privacy policy", accept: "Accept all", nec: "Only necessary"
+  } : {
+    text: "Używamy plików cookies, aby strona działała poprawnie, zapamiętywała preferencje oraz — za Twoją zgodą — w celach statystycznych i marketingowych.",
+    more: "Polityka prywatności", accept: "Akceptuję", nec: "Tylko niezbędne"
+  };
+
+  function save(v) {
+    try { localStorage.setItem(KEY, v + "|" + Date.now()); } catch (e) {}
+    banner.setAttribute("data-hide", "");
+    setTimeout(function () { if (banner.parentNode) banner.parentNode.removeChild(banner); }, 420);
+  }
+
+  var banner = document.createElement("div");
+  banner.className = "cookie-bar";
+  banner.setAttribute("role", "dialog");
+  banner.setAttribute("aria-label", en ? "Cookie consent" : "Zgoda na cookies");
+  banner.innerHTML =
+    '<div class="cookie-bar__inner">' +
+      '<div class="cookie-bar__tag">● COOKIES</div>' +
+      '<p class="cookie-bar__text">' + t.text + ' <a href="' + privacyHref + '">' + t.more + ' →</a></p>' +
+      '<div class="cookie-bar__actions">' +
+        '<button type="button" class="cookie-bar__btn" data-nec>' + t.nec + '</button>' +
+        '<button type="button" class="cookie-bar__btn cookie-bar__btn--primary" data-accept>' + t.accept + '</button>' +
+      '</div>' +
+    '</div>';
+
+  function mount() {
+    document.body.appendChild(banner);
+    requestAnimationFrame(function () { banner.setAttribute("data-show", ""); });
+    banner.querySelector("[data-accept]").addEventListener("click", function () { save("all"); });
+    banner.querySelector("[data-nec]").addEventListener("click", function () { save("necessary"); });
+  }
+  if (document.body) mount();
+  else document.addEventListener("DOMContentLoaded", mount);
 })();

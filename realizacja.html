@@ -38,9 +38,9 @@
     <a href="index.html#team">Zespół</a>
     <a href="index.html#kontakt">Kontakt</a>
   </div>
-  <div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div>
-  <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
-</nav>
+  <div class="nav__right"><div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div>
+  <div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" id="lang-en" href="en/portfolio-en/index.html">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
+</div></nav>
 
 <main id="rz-main"></main>
 
@@ -102,6 +102,10 @@ var RZ_ORDER = ["WG5ufZMfjQ8","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_cyZxE","O5iF7Sx
   var main = document.getElementById("rz-main");
   var v = new URLSearchParams(location.search).get("v");
   var d = v && RZ[v];
+
+  // point EN switcher at the matching EN case study
+  var enLink = document.getElementById("lang-en");
+  if (enLink) enLink.href = v ? "en/realizacja.html?v=" + v : "en/portfolio-en/index.html";
 
   if (!d) {
     main.innerHTML = '<section class="rz-empty"><div><h1>Nie znaleziono realizacji.</h1>' +

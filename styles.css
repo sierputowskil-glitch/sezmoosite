@@ -216,7 +216,7 @@ main {
 .nav__lang-opt.is-active { color: var(--on-accent); background: var(--rec); }
 .nav__burger { display: none; order: 4; }
 
-@media (max-width: 860px) {
+@media (max-width: 1100px) {
   .nav {
     gap: 14px;
   }
@@ -470,8 +470,8 @@ section { position: relative; }
   .work-reel { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; height: auto; }
   .js .work-reel .card { opacity: 1; transform: none; height: auto; min-height: clamp(220px, 44vw, 300px); }
   .work-reel .card { grid-column: auto !important; grid-row: auto !important; }
-  .work-reel .card.is-hidden { display: flex; }
-  .work-slider__hud { display: none; }
+  .work-reel .card.is-hidden { display: none; }
+  .work-slider__hud { display: flex; }
 }
 .work__filters { display:flex; flex-wrap:wrap; gap:8px; margin-top: 34px; }
 .chip { font-family: var(--font-mono); font-size: 11px; letter-spacing:.1em; text-transform:uppercase;
@@ -2715,6 +2715,36 @@ img.card__video { background: var(--bg-2); }
 .cform .btn { width: 100%; justify-content: center; margin-top: 4px; }
 .cform__note { font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; color: var(--fg-faint); text-align: center; }
 @media (max-width: 860px){ .contact__grid{ grid-template-columns: 1fr; } .cform__row{ grid-template-columns: 1fr; } }
+
+/* ============================================================
+   COOKIE CONSENT BAR
+   ============================================================ */
+.cookie-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 9700;
+  padding: clamp(12px,2vw,20px); display: flex; justify-content: center;
+  transform: translateY(120%); transition: transform .5s var(--ease); pointer-events: none; }
+.cookie-bar[data-show] { transform: none; }
+.cookie-bar[data-hide] { transform: translateY(120%); }
+.cookie-bar__inner { pointer-events: auto; width: min(100%, 940px);
+  display: flex; align-items: center; gap: clamp(14px,2vw,28px); flex-wrap: wrap;
+  background: oklch(0.155 0.004 60 / 0.96); border: 1px solid var(--line-soft); border-radius: 8px;
+  backdrop-filter: blur(16px) saturate(1.1); box-shadow: 0 22px 70px oklch(0 0 0 / 0.42);
+  padding: clamp(14px,1.6vw,20px) clamp(16px,2vw,26px); }
+.cookie-bar__tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; color: var(--rec); white-space: nowrap; }
+.cookie-bar__text { flex: 1 1 320px; font-size: 13px; line-height: 1.5; color: var(--fg-dim); margin: 0; }
+.cookie-bar__text a { color: var(--fg); border-bottom: 1px solid var(--line); white-space: nowrap; transition: color .3s var(--ease), border-color .3s var(--ease); }
+.cookie-bar__text a:hover { color: var(--rec); border-color: var(--rec); }
+.cookie-bar__actions { display: flex; gap: 10px; margin-left: auto; }
+.cookie-bar__btn { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--fg-dim); border: 1px solid var(--line); border-radius: 100px; background: transparent;
+  padding: 11px 20px; cursor: pointer; white-space: nowrap;
+  transition: color .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease); }
+.cookie-bar__btn:hover { color: var(--fg); border-color: var(--fg-faint); }
+.cookie-bar__btn--primary { color: var(--on-accent); background: var(--rec); border-color: var(--rec); }
+.cookie-bar__btn--primary:hover { color: var(--on-accent); background: oklch(0.86 0.17 92); border-color: oklch(0.86 0.17 92); }
+@media (max-width: 620px){
+  .cookie-bar__actions { margin-left: 0; width: 100%; }
+  .cookie-bar__btn { flex: 1 1 auto; text-align: center; }
+}
 
 /* ============================================================
    TEAM — group feature photo
