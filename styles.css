@@ -19,6 +19,7 @@
   /* Sezmoo signal yellow — REC, playhead, markers, accents */
   --rec:       #ffd200;
   --rec-glow:  rgb(255 210 0 / 0.45);
+  --accent-hi: #ffd200;  /* reserved brand-yellow for big headline accents */
   --on-accent: #17140a;  /* dark text on yellow surfaces */
 
   --shell-pad: clamp(18px, 4vw, 56px);
@@ -214,6 +215,15 @@ main {
   transition: color .3s var(--ease), background .3s var(--ease); }
 .nav__lang-opt:hover { color: var(--fg); }
 .nav__lang-opt.is-active { color: var(--on-accent); background: var(--rec); }
+/* theme switcher */
+.nav__theme { display: inline-flex; align-items: center; border: 1px solid var(--line-soft);
+  border-radius: 100px; overflow: hidden; order: 2; }
+.nav__theme-opt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--fg-faint); padding: 6px 11px; line-height: 1;
+  background: transparent; border: 0; cursor: pointer;
+  transition: color .3s var(--ease), background .3s var(--ease); }
+.nav__theme-opt:hover { color: var(--fg); }
+.nav__theme-opt.is-active { color: var(--on-accent); background: var(--rec); }
 .nav__burger { display: none; order: 4; }
 
 @media (max-width: 1100px) {
@@ -948,7 +958,7 @@ section { position: relative; }
   width:34px;height:34px; padding:8px; border:1px solid rgb(255 210 0 / .18); border-radius:999px;
   opacity:.42; transform: translate(-4px,4px); transition: all .5s var(--ease); color: var(--rec); background: rgb(255 210 0 / .04); }
 .svc:hover .svc__arrow,
-.svc:focus-visible .svc__arrow { opacity:1; transform: none; border-color: rgb(255 210 0 / .58); background: rgb(255 210 0 / .10); }
+.svc:focus-visible .svc__arrow { opacity:1; transform: none; border-color: #ffd200; background: #ffd200; color: #17140a; }
 
 @media (max-width: 1100px){
   .services-bg { inset-inline: 0; }
@@ -956,8 +966,13 @@ section { position: relative; }
   .content-pack { grid-template-columns: 1fr; }
   .services-scene { min-height: auto; }
   .services-scene__sticky { position: relative; top: auto; opacity: 1; transform: none; }
-  .content-pack__screen { border-right: 0; border-bottom: 1px solid var(--line-soft); }
-  .content-pack__screen::before { display: none; }
+  /* Kill the floating animated screen on touch/narrow — it caused horizontal drift. */
+  .content-pack__screen { display: none; }
+  .pack-mobile { display: block; }
+  .content-pack__copy { padding: clamp(28px,7vw,40px) clamp(20px,6vw,32px) clamp(30px,7vw,40px); }
+  .content-pack__copy .btn { margin-bottom: 6px; }
+  .content-pack { margin-bottom: clamp(28px,6vh,56px); }
+  .services { padding-bottom: clamp(40px,7vh,84px); }
   .svc-grid{ grid-template-columns: repeat(2,1fr); }
 }
 /* Short desktop viewports (e.g. MacBook Air): compact the pinned scene so it fits */
@@ -973,16 +988,47 @@ section { position: relative; }
   .services-scene .sec-title { font-size: clamp(28px, 3vw, 48px); }
 }
 @media (max-width: 640px){
-  .content-pack__screen { min-height: 420px; }
-  .pack-frame--wide { left: 7%; top: 15%; width: 58%; }
-  .pack-frame--vertical { right: 7%; top: 10%; width: 26%; }
-  .pack-frame--square { left: 9%; bottom: 31%; width: 29%; }
-  .pack-frame--banner { right: 7%; bottom: 8%; width: 54%; }
-  .pack-output { bottom: 38px; grid-template-columns: auto 28px auto 28px auto; gap: 8px; }
-  .pack-playhead span { display: none; }
   .svc-grid{ grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce){ .pack-frame{ animation:none; } }
+
+/* Content-system — clean stacked format list for mobile/tablet */
+@media (min-width: 1101px){ .pack-mobile { display: none; } }
+.pack-mobile__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--fg-faint); padding-bottom: 14px; border-bottom: 1px solid var(--line-soft);
+}
+.pack-mobile__stage { display: inline-flex; align-items: center; gap: 8px; }
+.pack-mobile__stage i { width: 8px; height: 8px; border-radius: 50%; background: var(--rec); box-shadow: 0 0 10px var(--rec-glow); }
+.pack-mobile__exp { color: var(--rec); }
+/* Content-system — scroll-driven format timeline (mobile), matches PROCESS */
+.pack-seq { position: relative; margin: 18px 0 0; padding-left: 30px; }
+.pack-seq::before { content:""; position:absolute; left:9px; top:6px; bottom:6px; width:1px; background: var(--line-soft); }
+.pack-seq__fill { position:absolute; left:9px; top:6px; width:1px; height:0; background: var(--rec); box-shadow:0 0 10px var(--rec-glow); transition: height .35s ease; }
+.pseq { position: relative; padding: 15px 16px 17px; border:1px solid var(--line-soft); border-radius:4px; background: var(--bg-2); overflow:hidden; transition: border-color .35s, background .35s; }
+.pseq + .pseq { margin-top: 10px; }
+.pseq__node { position:absolute; left:-30px; top:15px; width:19px; height:19px; border-radius:50%; display:grid; place-items:center; z-index:3; font-family:var(--font-mono); font-size:9px; color: var(--fg-faint); background: var(--bg); border:1px solid var(--line-soft); transition: color .35s, border-color .35s; }
+.pseq__top { display:flex; align-items:center; gap:12px; }
+.pseq__badge { font-family:var(--font-mono); font-size:10px; letter-spacing:.1em; color: var(--fg-faint); min-width:58px; transition: color .35s; }
+.pseq__name { flex:1; min-width:0; margin:0; font-weight:800; font-stretch:106%; font-size: clamp(19px,5.4vw,24px); line-height:1; letter-spacing:-.01em; }
+.pseq__glyph { flex:none; border:1px solid var(--line-soft); border-radius:2px; background: oklch(0.24 0.03 100 / .3); transition: border-color .35s, background .35s; }
+.pseq__glyph--wide{ width:44px; height:25px; }
+.pseq__glyph--vertical{ width:18px; height:32px; }
+.pseq__glyph--square{ width:30px; height:30px; }
+.pseq__glyph--banner{ width:44px; height:18px; }
+.pseq__desc { margin: 9px 0 0; color: var(--fg-faint); font-size: 14px; line-height: 1.5; max-width: 44ch; text-wrap: pretty; }
+.pseq__bar { position:absolute; left:0; bottom:0; height:2px; width:0; background: var(--rec); transition: width .5s ease; }
+.pseq.is-active { border-color: var(--rec); background: oklch(0.26 0.03 102 / .3); }
+.pseq.is-active .pseq__node, .pseq.is-done .pseq__node { color: var(--rec); border-color: var(--rec); }
+.pseq.is-active .pseq__badge { color: var(--rec); }
+.pseq.is-active .pseq__glyph { border-color: rgb(255 210 0 / .55); background: oklch(0.3 0.05 100 / .4); }
+.pseq.is-done .pseq__bar { width: 100%; }
+.pack-mobile__flow {
+  display: flex; align-items: center; gap: 12px; margin-top: 16px;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-faint);
+}
+.pack-mobile__flow i { flex: 1; height: 1px; background: var(--line-soft); }
 
 /* ============================================================
    STUDIO
@@ -1964,12 +2010,17 @@ img.card__video { background: var(--bg-2); }
   position: absolute;
   right: clamp(26px, 2.4vw, 38px);
   top: clamp(26px, 2.4vw, 38px);
-  color: var(--fg-faint);
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border: 1px solid rgb(255 210 0 / .18);
+  border-radius: 999px;
+  background: rgb(255 210 0 / .04);
+  color: var(--rec);
   font-family: var(--font-mono);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
   opacity: .5;
-  transition: color .35s var(--ease), transform .35s var(--ease), opacity .35s var(--ease);
+  transition: color .35s var(--ease), transform .35s var(--ease), opacity .35s var(--ease), background .35s var(--ease), border-color .35s var(--ease);
 }
 .service-tile:hover,
 .service-tile:focus-visible {
@@ -1981,9 +2032,10 @@ img.card__video { background: var(--bg-2); }
 .service-tile:focus-visible i { color: var(--fg); }
 .service-tile:hover::after,
 .service-tile:focus-visible::after {
-  color: var(--rec);
+  color: #17140a;
+  background: #ffd200;
+  border-color: #ffd200;
   opacity: 1;
-  transform: translate(3px, -3px);
 }
 .service-tile--feature {
   grid-column: span 2;
@@ -2617,16 +2669,25 @@ img.card__video { background: var(--bg-2); }
   flex: 0 0 auto;
   background: var(--bg); display: grid; place-items: center;
   min-height: clamp(98px, 12vh, 142px); padding: 0 clamp(34px, 4.4vw, 68px);
-  position: relative;
+  position: relative; cursor: pointer;
   transition: background .45s var(--ease);
 }
 .logo-marquee .logo-cellc { border-right: 1px solid var(--line-soft); }
 .logo-cellc:hover { background: var(--bg-2); }
+/* clickable affordance — brand-yellow underline grows on hover */
+.logo-cellc::after {
+  content: ""; position: absolute; left: 50%; bottom: clamp(20px, 2.4vh, 30px);
+  width: 0; height: 2px; background: var(--accent-hi); transform: translateX(-50%);
+  transition: width .35s var(--ease); pointer-events: none;
+}
+.logo-cellc:hover::after, .logo-cellc:focus-visible::after { width: 30px; }
 .logo-mark, .logo-rings {
   height: clamp(22px, 2.3vw, 32px); width: auto; max-width: 130px; object-fit: contain;
   filter: brightness(0) invert(1); opacity: .48; transition: opacity .4s var(--ease), transform .4s var(--ease);
 }
-.logo-cellc:hover .logo-mark, .logo-cellc:hover .logo-rings { opacity: .95; transform: scale(1.04); }
+.logo-cellc:hover .logo-mark, .logo-cellc:hover .logo-rings { opacity: 1; transform: scale(1.06); }
+/* LIGHT theme: recolor the (white-tuned) marquee logos to black so they read on the off-white ground */
+:root[data-theme="light"] .logo-mark, :root[data-theme="light"] .logo-rings { filter: brightness(0); }
 .logo-word {
   font-weight: 800; font-stretch: 104%; font-size: clamp(15px, 1.5vw, 22px);
   letter-spacing: .005em; color: var(--fg-faint); transition: color .4s var(--ease);
@@ -2837,4 +2898,320 @@ img.card__video { background: var(--bg-2); }
 }
 @media (max-width: 480px){
   .footer__grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   LIGHT THEME  (home page)
+   Dark cinematic hero + final CTA are preserved; everything
+   between flips to a warm off-white surface.
+   ============================================================ */
+:root[data-theme="light"] {
+  --bg:        oklch(0.965 0.006 85);
+  --bg-2:      oklch(0.930 0.007 85);
+  --bg-3:      oklch(0.888 0.009 85);
+  --line:      oklch(0.80 0.010 75);
+  --line-soft: oklch(0.80 0.010 75 / 0.5);
+  --fg:        oklch(0.235 0.014 60);
+  --fg-dim:    oklch(0.42 0.014 60);
+  --fg-faint:  oklch(0.545 0.014 60);
+  /* small UI accents go monochrome in light — brand yellow is reserved
+     for the hero, final CTA and the big headline (--accent-hi) only */
+  --rec:       oklch(0.47 0.006 70);
+  --rec-glow:  rgb(120 116 108 / 0.22);
+}
+:root[data-theme="light"] body { background: var(--bg); color: var(--fg); }
+/* the animated WebGL smoke is dark-only — drop it, use a flat light ground */
+:root[data-theme="light"] .flow-bg-canvas { display: none; }
+:root[data-theme="light"] .grain { mix-blend-mode: multiply; opacity: 0.035; }
+:root[data-theme="light"] .vignette {
+  background: radial-gradient(120% 120% at 50% 42%, transparent 62%, oklch(0.45 0.01 60 / 0.05) 100%);
+}
+
+/* NAV — light stuck bar; keep text light while floating over the dark hero */
+:root[data-theme="light"] .nav:not(.is-stuck) {
+  --fg: oklch(0.96 0.006 80);
+  --fg-dim: oklch(0.76 0.008 75);
+  --fg-faint: oklch(0.64 0.008 70);
+  --line-soft: oklch(0.9 0.006 80 / 0.4);
+}
+:root[data-theme="light"] .nav.is-stuck {
+  background: oklch(0.965 0.006 85 / 0.8);
+  border-bottom-color: var(--line-soft);
+}
+:root[data-theme="light"] .nav.is-stuck .brand__logo { content: url("assets/brand/sezmoo-logo-by.svg"); }
+@media (max-width: 1100px) {
+  :root[data-theme="light"] .nav__menu {
+    background: oklch(0.97 0.006 85 / 0.96);
+    box-shadow: 0 22px 70px oklch(0 0 0 / 0.14);
+  }
+}
+
+/* HERO — stays cinematic dark: re-assert the dark token set inside it */
+:root[data-theme="light"] .hero,
+:root[data-theme="light"] .cta {
+  --fg: oklch(0.96 0.006 80);
+  --fg-dim: oklch(0.74 0.008 75);
+  --fg-faint: oklch(0.55 0.008 70);
+  --line: oklch(0.27 0.006 60);
+  --line-soft: oklch(0.225 0.005 60 / 0.6);
+  --rec: #ffd200;
+  --rec-glow: rgb(255 210 0 / 0.45);
+}
+:root[data-theme="light"] .hero { background: oklch(0.11 0.004 60); color: var(--fg); }
+:root[data-theme="light"] .cta { --bg: oklch(0.10 0.004 60); color: var(--fg); }
+
+/* Surfaces that were hardcoded dark → light equivalents */
+:root[data-theme="light"] .badge { background: oklch(0.90 0.006 85 / 0.6); }
+:root[data-theme="light"] .cform { background: oklch(0.94 0.006 85 / 0.7); }
+:root[data-theme="light"] .cookie-bar {
+  background: oklch(0.965 0.006 85 / 0.96);
+  box-shadow: 0 22px 70px oklch(0 0 0 / 0.14);
+}
+:root[data-theme="light"] .footer__panel {
+  background: linear-gradient(180deg, oklch(0.935 0.006 85 / .7), oklch(0.905 0.008 85 / .82));
+}
+:root[data-theme="light"] .footer__brand img { filter: brightness(0); }
+
+/* active-state tints were dark overlays → neutral gray on light */
+:root[data-theme="light"] .tl__clips .clip.is-active { background: oklch(0.87 0.004 70 / 0.75); }
+:root[data-theme="light"] .pseq.is-active { background: oklch(0.87 0.004 70 / 0.75); }
+
+/* hardcoded brand-yellow bits → grayscale in light */
+:root[data-theme="light"] .svc__chips span {
+  border-color: oklch(0.55 0.006 70 / 0.4); background: oklch(0.5 0.006 70 / 0.05);
+}
+/* service card hover → solid black with white content (like dark) */
+:root[data-theme="light"] .svc::before { background: oklch(0.14 0.004 60); }
+:root[data-theme="light"] .svc:hover { color: #f4f0e6; }
+:root[data-theme="light"] .svc:hover .svc__no,
+:root[data-theme="light"] .svc:hover .svc__desc { color: oklch(0.78 0.008 75); }
+:root[data-theme="light"] .svc:hover .svc__title { color: #f4f0e6; }
+:root[data-theme="light"] .svc:hover .svc__chips span {
+  color: #f4f0e6; border-color: oklch(0.9 0.006 80 / 0.4);
+}
+:root[data-theme="light"] .svc:hover .svc__arrow {
+  color: #f4f0e6; border-color: oklch(0.9 0.006 80 / 0.5); background: oklch(0.9 0.006 80 / 0.08);
+}
+:root[data-theme="light"] .svc__arrow {
+  border-color: oklch(0.55 0.006 70 / 0.34); background: oklch(0.5 0.006 70 / 0.05); color: var(--fg-dim);
+}
+:root[data-theme="light"] .svc:hover .svc__arrow,
+:root[data-theme="light"] .svc:focus-visible .svc__arrow {
+  border-color: #ffd200; background: #ffd200; color: #17140a;
+}
+
+/* contact section: yellow/blue blooms → neutral gray */
+:root[data-theme="light"] .contact__bg {
+  background:
+    radial-gradient(55% 75% at 18% 22%, oklch(0.55 0.004 70 / 0.14), transparent 60%),
+    radial-gradient(55% 75% at 88% 82%, oklch(0.5 0.004 70 / 0.12), transparent 60%);
+}
+
+/* ---- interactive components keep the brand yellow-on-black in light ---- */
+/* primary buttons: yellow fill + black label (like dark) */
+:root[data-theme="light"] .btn--primary { background: #ffd200; border-color: #ffd200; color: #17140a; }
+:root[data-theme="light"] .btn--primary::before { background: #17140a; }
+:root[data-theme="light"] .btn--primary:hover { color: #fff; border-color: #17140a; }
+
+/* nav switchers: active option filled in brand yellow (not a gray outline) */
+:root[data-theme="light"] .nav__theme,
+:root[data-theme="light"] .nav__lang { border-color: rgb(255 210 0 / 0.55); }
+:root[data-theme="light"] .nav__theme-opt.is-active,
+:root[data-theme="light"] .nav__lang-opt.is-active { background: #ffd200; color: #17140a; }
+
+/* work card hover hint → brand yellow pill (sits over dark media) */
+:root[data-theme="light"] .card__hint { background: #ffd200; color: #17140a; }
+
+/* portfolio switcher: fully black pill (like dark), yellow-fill hover on arrows */
+:root[data-theme="light"] .work-slider__hud {
+  background: oklch(0.13 0.004 60 / 0.96); border-color: oklch(0.3 0.006 60); color: oklch(0.7 0.008 75);
+}
+:root[data-theme="light"] .work-reel__count { color: #f4f0e6; }
+:root[data-theme="light"] .work-reel__count b { color: #ffd200; }
+:root[data-theme="light"] .work-nav {
+  background: oklch(0.22 0.006 60); border-color: oklch(0.36 0.006 60); color: #f4f0e6;
+}
+:root[data-theme="light"] .work-nav:hover {
+  background: #ffd200; border-color: #ffd200; color: #17140a; transform: scale(1.08);
+}
+:root[data-theme="light"] .work-dots button { background: oklch(0.5 0.006 70 / 0.55); }
+:root[data-theme="light"] .work-dots button.is-on { background: #ffd200; box-shadow: 0 0 14px rgb(255 210 0 / 0.4); }
+
+/* floating social rail + back-to-top: yellow-on-dark chips, yellow-fill hover with black label */
+:root[data-theme="light"] .floating-socials a,
+:root[data-theme="light"] .scroll-top {
+  background: oklch(0.16 0.006 60 / 0.92); border-color: rgb(255 210 0 / 0.5); color: #ffd200;
+}
+:root[data-theme="light"] .floating-socials a:hover,
+:root[data-theme="light"] .scroll-top:hover {
+  background: #ffd200; border-color: #ffd200; color: #17140a;
+}
+
+/* contact address social chips: brand yellow accent (not flat gray) */
+:root[data-theme="light"] .cinfo__socials a {
+  color: #17140a; border-color: rgb(255 210 0 / 0.7); background: rgb(255 210 0 / 0.12);
+}
+:root[data-theme="light"] .cinfo__socials a:hover {
+  color: #17140a; background: #ffd200; border-color: #ffd200;
+}
+
+/* video timecode badges (work cards, studio, content-system) → identical to dark:
+   dark chip, light text, brand-yellow REC dot — they sit over media, not the page */
+:root[data-theme="light"] .card__tc,
+:root[data-theme="light"] .studio__media .tc {
+  color: #f4f0e6; background: oklch(0.1 0.004 60 / 0.6);
+}
+:root[data-theme="light"] .card__tc .rd,
+:root[data-theme="light"] .studio__media .tc .d { background: #ffd200; }
+:root[data-theme="light"] .pack-playhead { color: #ffd200; }
+
+/* content-system animated screen: keep the dark cinematic token set so all
+   labels (Hero film, Reels / Shorts, RAW/EDIT/EXPORT, timecode) read like dark */
+:root[data-theme="light"] .content-pack__screen {
+  --fg: #f4f0e6; --fg-dim: oklch(0.74 0.008 75); --fg-faint: oklch(0.6 0.008 70);
+  --line: oklch(0.28 0.006 60); --line-soft: oklch(0.28 0.006 60 / 0.6);
+  --rec: #ffd200; --rec-glow: rgb(255 210 0 / 0.45);
+  color: var(--fg);
+}
+
+/* FOOTER → black panel (like dark) */
+:root[data-theme="light"] .footer__panel {
+  --fg: #f4f0e6; --fg-dim: oklch(0.74 0.008 75); --fg-faint: oklch(0.58 0.008 70);
+  --line: oklch(0.28 0.006 60); --line-soft: oklch(0.28 0.006 60 / 0.7);
+  --rec: #ffd200; --rec-glow: rgb(255 210 0 / 0.45);
+  background: oklch(0.11 0.004 60); border-color: oklch(0.26 0.006 60); color: var(--fg);
+}
+:root[data-theme="light"] .footer__brand img { filter: none; }
+
+/* PROCESS timeline clips → black film frames with a sweep-on-hover (like dark) */
+:root[data-theme="light"] .tl__clips .clip {
+  background: oklch(0.13 0.004 60); border-color: oklch(0.28 0.006 60); color: #f4f0e6;
+}
+:root[data-theme="light"] .clip__no,
+:root[data-theme="light"] .clip__dur { color: oklch(0.66 0.008 75); }
+:root[data-theme="light"] .clip__name { color: #f4f0e6; }
+:root[data-theme="light"] .clip__strip {
+  background: repeating-linear-gradient(90deg, oklch(0.5 0.006 70) 0 6px, transparent 6px 12px);
+}
+:root[data-theme="light"] .clip__fill { background: #ffd200; }
+:root[data-theme="light"] .tl__clips .clip::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(115deg, transparent 34%, rgb(255 255 255 / 0.14) 50%, transparent 66%);
+  transform: translateX(-120%); transition: transform .75s var(--ease);
+}
+:root[data-theme="light"] .tl__clips .clip:hover {
+  border-color: #ffd200; box-shadow: 0 0 0 1px rgb(255 210 0 / 0.4), 0 18px 40px oklch(0 0 0 / 0.4);
+}
+:root[data-theme="light"] .tl__clips .clip:hover::after { transform: translateX(120%); }
+:root[data-theme="light"] .tl__clips .clip.is-active { background: oklch(0.2 0.02 100 / 0.95); border-color: #ffd200; }
+:root[data-theme="light"] .tl__clips .clip.is-active .clip__name { color: #fff; }
+
+/* ============================================================
+   LIGHT THEME — SEO subpages (service hub / detail, portfolio bridge)
+   Hardcoded dark surfaces + white-overlay chips flip to light.
+   ============================================================ */
+/* content-system panel: dark card → warm off-white surface */
+:root[data-theme="light"] .sub-panel { background: oklch(0.945 0.006 85); }
+/* hero meta chips: white overlay → neutral gray outline */
+:root[data-theme="light"] .service-detail .sub-hero__meta span {
+  background: oklch(0.5 0.006 70 / 0.05); border: 1px solid oklch(0.55 0.006 70 / 0.28);
+}
+/* media stage: dark frame → soft neutral frame (still holds media well) */
+:root[data-theme="light"] .service-stage {
+  background: linear-gradient(180deg, oklch(0.5 0.006 70 / 0.04), transparent), oklch(0.925 0.006 85);
+  box-shadow: 0 24px 80px oklch(0 0 0 / 0.12), inset 0 0 0 1px oklch(0.5 0.006 70 / 0.08);
+}
+/* pill links whose border/bg were white overlays → neutral gray on light */
+:root[data-theme="light"] .portfolio-routing__links a,
+:root[data-theme="light"] .work-bridge__filters a,
+:root[data-theme="light"] .service-next a {
+  border-color: oklch(0.55 0.006 70 / 0.32);
+}
+:root[data-theme="light"] .work-bridge__filters a { background: oklch(0.5 0.006 70 / 0.04); }
+:root[data-theme="light"] .work-bridge__filters a:hover,
+:root[data-theme="light"] .service-next a:hover,
+:root[data-theme="light"] .portfolio-routing__links a:hover {
+  border-color: oklch(0.42 0.006 70 / 0.55); color: var(--fg);
+}
+
+/* Kinetic H1 rotating word → brand yellow (big-headline accent, like the home hero) */
+:root[data-theme="light"] .h1-rot { color: var(--accent-hi); }
+
+/* Big-headline accent words stay brand-yellow in light (not the monochrome --rec).
+   Covers both .accent spans and inline color:var(--rec) highlight spans in titles. */
+:root[data-theme="light"] .hero h1 .accent,
+:root[data-theme="light"] .sec-title .accent,
+:root[data-theme="light"] .studio__title .accent,
+:root[data-theme="light"] .svc__title .accent,
+:root[data-theme="light"] .sub-head h2 .accent,
+:root[data-theme="light"] .cs-title .accent,
+:root[data-theme="light"] .cs-sec__title .accent,
+:root[data-theme="light"] .cs-lead .accent,
+:root[data-theme="light"] h1 [style*="--rec"],
+:root[data-theme="light"] h2 [style*="--rec"],
+:root[data-theme="light"] h3 [style*="--rec"] { color: var(--accent-hi) !important; }
+
+/* Service tiles: hover flips to solid black with light content (like .svc on home) */
+:root[data-theme="light"] .service-tile:hover,
+:root[data-theme="light"] .service-tile:focus-visible {
+  background: oklch(0.14 0.004 60); color: #f4f0e6;
+}
+:root[data-theme="light"] .service-tile:hover h3,
+:root[data-theme="light"] .service-tile:focus-visible h3 { color: #f4f0e6; }
+:root[data-theme="light"] .service-tile:hover p,
+:root[data-theme="light"] .service-tile:focus-visible p { color: oklch(0.78 0.008 75); }
+:root[data-theme="light"] .service-tile:hover span,
+:root[data-theme="light"] .service-tile:focus-visible span,
+:root[data-theme="light"] .service-tile:hover::after,
+:root[data-theme="light"] .service-tile:focus-visible::after,
+:root[data-theme="light"] .service-tile:hover .end-link,
+:root[data-theme="light"] .service-tile:focus-visible .end-link { color: #ffd200; }
+:root[data-theme="light"] .service-tile:hover i,
+:root[data-theme="light"] .service-tile:focus-visible i { color: #f4f0e6; }
+
+/* Subpages have no dark video hero → nav reads as the light "scrolled" bar even at the top */
+:root[data-theme="light"] body:not(:has(.hero)) .nav:not(.is-stuck) {
+  --fg: oklch(0.20 0.014 60);
+  --fg-dim: oklch(0.42 0.014 60);
+  --line-soft: oklch(0.9 0.006 85 / 0.4);
+  background: oklch(0.965 0.006 85 / 0.72);
+  backdrop-filter: blur(14px) saturate(1.1);
+  border-bottom: 1px solid oklch(0.9 0.006 85 / 0.4);
+}
+:root[data-theme="light"] body:not(:has(.hero)) .nav:not(.is-stuck) .brand__logo { content: url("assets/brand/sezmoo-logo-by.svg"); }
+
+/* Subpages have no video hero, so the WebGL smoke is the only moving background —
+   the shader is tuned very dark for behind-video use, so lift it on subpages
+   (dark theme only) to make the animated background actually visible. */
+:root:not([data-theme="light"]) body:not(:has(.hero)) .flow-bg-canvas {
+  filter: brightness(1.35) contrast(1.02);
+}
+
+/* Case-study cover always sits over a dark photo → keep it cinematic-dark in light too
+   (light text, brand-yellow accents, dark bottom fade) so the title stays readable. */
+:root[data-theme="light"] .cs-hero {
+  --fg: oklch(0.96 0.006 80);
+  --fg-dim: oklch(0.80 0.008 75);
+  --fg-faint: oklch(0.62 0.008 75);
+  --rec: #ffd200;
+  --rec-glow: rgb(255 210 0 / 0.45);
+  --line-soft: oklch(0.96 0.006 80 / 0.18);
+  color: oklch(0.96 0.006 80);
+}
+:root[data-theme="light"] .cs-title { color: oklch(0.96 0.006 80); }
+
+/* light: more brand-yellow on interactive UI — menu highlight, filter chips, ghost buttons */
+:root[data-theme="light"] .nav__menu a::after { background: var(--accent-hi); }
+:root[data-theme="light"] .chip.is-on,
+:root[data-theme="light"] .chip:hover { background: #ffd200; border-color: #ffd200; color: #17140a; }
+:root[data-theme="light"] .btn:not(.btn--primary)::before { background: #ffd200; }
+:root[data-theme="light"] .btn:not(.btn--primary):hover { color: #17140a; border-color: #ffd200; }
+:root[data-theme="light"] .eyebrow .tick { background: var(--accent-hi); }
+.sub-hero__meta span { transition: color .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease); }
+.sub-hero__meta span:hover { color: var(--rec); border-color: rgb(255 210 0 / .5); }
+:root[data-theme="light"] .sub-hero__meta span:hover { color: #17140a; background: #ffd200; border-color: #ffd200; }
+:root[data-theme="light"] .cs-hero__media::after {
+  background:
+    linear-gradient(180deg, oklch(0.12 0.004 60 / .55) 0%, transparent 26%, transparent 40%, oklch(0.12 0.004 60 / .82) 88%, oklch(0.11 0.004 60) 100%),
+    repeating-linear-gradient(0deg, transparent 0 3px, oklch(0 0 0 / .16) 3px 4px);
 }

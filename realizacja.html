@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <title>Realizacja · SEZMOO</title>
 <meta name="description" content="Case study realizacji wideo SEZMOO." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,7 +40,7 @@
     <a href="index.html#kontakt">Kontakt</a>
   </div>
   <div class="nav__right"><div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div>
-  <div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" id="lang-en" href="en/portfolio-en/index.html">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
+  <div class="nav__theme" role="group" aria-label="Motyw / Theme"><button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw / Dark">DARK</button><button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw / Light">LIGHT</button></div><div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" id="lang-en" href="en/portfolio-en/index.html">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
 </div></nav>
 
 <main id="rz-main"></main>
@@ -50,49 +51,214 @@
 var RZ = {
   "WG5ufZMfjQ8": { title:"Trailer RS5", accent:"RS5.", client:"Audi RS5", cat:"Automotive · Trailer", short:true,
     kv:[["Klient","Audi RS5","Automotive"],["Format","Short","Pionowy 9:16"],["Zakres","Zdjęcia · Montaż","Produkcja"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Dynamiczny trailer Audi RS5 — mocny, filmowy kadr w formacie pionowym pod social media." },
+    lead:"Dynamiczny trailer Audi RS5 — mocny, filmowy kadr w formacie pionowym pod social media.",
+    intro:"Samochód, który w trzy sekundy zatrzymuje <span class='accent'>kciuk.</span>",
+    context:[
+      "Audi RS5 sprzedaje się emocją — dźwiękiem, sylwetką, ruchem. Wyzwaniem było przenieść to do pionowego formatu, który wygrywa w feedzie, gdzie widz decyduje w ułamku sekundy.",
+      "Zależało nam, żeby short nie wyglądał jak przycięta reklama TV, tylko jak treść zaprojektowana od zera pod social — z mocnym pierwszym kadrem i rytmem cięć zgranym z warstwą dźwięku."
+    ],
+    steps:[
+      ["Koncept kadru","Zaprojektowaliśmy sekwencję ujęć budującą napięcie od pierwszej klatki — detal, ruch, całość."],
+      ["Zdjęcia","Auto zarejestrowaliśmy w ruchu i w detalu, od razu pod pionowy kadr 9:16."],
+      ["Montaż i grade","Cięcia zsynchronizowaliśmy z dźwiękiem, a kolor dopięliśmy pod kontrastowy, filmowy look."],
+      ["Dostawa","Gotowy plik trafił prosto do rolek i reklamy — bez dodatkowego przycinania."]
+    ] },
   "Hdnf6zcn3bA": { title:"Modny Tata — Bieganie", accent:"Bieganie.", client:"Modny Tata", cat:"Automotive · Lifestyle", short:true,
     kv:[["Klient","Modny Tata","Kampania"],["Format","Short","Pionowy 9:16"],["Zakres","Koncept · Realizacja","Produkcja"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Lifestyle'owy short z serii „Modny Tata” — motoryzacja spotyka codzienną energię." },
+    lead:"Lifestyle'owy short z serii „Modny Tata” — motoryzacja spotyka codzienną energię.",
+    intro:"Motoryzacja, która wpisuje się w <span class='accent'>codzienność.</span>",
+    context:[
+      "„Modny Tata” to seria, w której auto jest częścią stylu życia, a nie tylko bohaterem spotu. Odcinek „Bieganie” miał połączyć motoryzacyjny sznyt z porannym, aktywnym rytmem.",
+      "Chcieliśmy uniknąć sztywnej reklamy — postawiliśmy na naturalną scenę, w której samochód jest tłem dla codziennej energii bohatera."
+    ],
+    steps:[
+      ["Scenariusz sceny","Ułożyliśmy prostą narrację dnia, w której auto pojawia się naturalnie, bez nachalnej ekspozycji."],
+      ["Zdjęcia w plenerze","Zarejestrowaliśmy bohatera i auto w ruchu, przy naturalnym świetle, pod format pionowy."],
+      ["Montaż","Zmontowaliśmy dynamiczny short z rytmem dopasowanym do publikacji w rolkach."],
+      ["Dostawa","Odcinek oddaliśmy gotowy do wpięcia w cykl serii na social media."]
+    ] },
   "c_5toy1IhIs": { title:"Żółte RS3", accent:"RS3.", client:"Audi RS3", cat:"Automotive · Trailer", short:true,
     kv:[["Klient","Audi RS3","Automotive"],["Format","Short","Pionowy 9:16"],["Zakres","Zdjęcia · Montaż","Produkcja"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Żółte RS3 w krótkiej, dynamicznej formie — kolor i ruch jako bohaterowie kadru." },
+    lead:"Żółte RS3 w krótkiej, dynamicznej formie — kolor i ruch jako bohaterowie kadru.",
+    intro:"Kolor i ruch jako <span class='accent'>bohaterowie.</span>",
+    context:[
+      "Żółte Audi RS3 jest samo w sobie key visualem — wystarczy dać mu odpowiedni kadr i światło. Zadaniem było zbudować krótką, mocną formę, w której kolor niesie całą uwagę.",
+      "Format pionowy pod social wymagał kompozycji zaprojektowanej wertykalnie — tak, żeby sylwetka i barwa auta pracowały na pełnej wysokości ekranu."
+    ],
+    steps:[
+      ["Koncept wizualny","Oparliśmy kadr na kontraście żółtego lakieru z ciemnym, filmowym tłem."],
+      ["Zdjęcia","Zarejestrowaliśmy auto w detalu i w ruchu, pod pionowy kadr 9:16."],
+      ["Grade","Wyciągnęliśmy nasycenie i kontrast tak, aby kolor został bohaterem kadru."],
+      ["Dostawa","Short trafił do publikacji jako gotowy materiał social."]
+    ] },
   "X8-hf_cyZxE": { title:"Dolphin z Kamilą", accent:"Dolphin.", client:"BYD Dolphin", cat:"Automotive · Lifestyle", short:true,
     kv:[["Klient","BYD Dolphin","Automotive"],["Format","Short","Pionowy 9:16"],["Zakres","Koncept · Realizacja","Produkcja"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"BYD Dolphin w lifestyle'owej odsłonie z Kamilą — elektryk w miejskim rytmie." },
+    lead:"BYD Dolphin w lifestyle'owej odsłonie z Kamilą — elektryk w miejskim rytmie.",
+    intro:"Elektryk w miejskim <span class='accent'>rytmie.</span>",
+    context:[
+      "BYD Dolphin to auto miejskie i codzienne — chcieliśmy pokazać je w naturalnym kontekście, a nie w studyjnej próżni. Stąd lifestyle'owa odsłona z Kamilą jako przewodniczką po aucie.",
+      "Wyzwaniem było połączyć lekki, ludzki ton z czytelną prezentacją auta, tak żeby short działał zarówno wizerunkowo, jak i informacyjnie."
+    ],
+    steps:[
+      ["Koncept","Zbudowaliśmy prostą narrację, w której bohaterka pokazuje auto w codziennych sytuacjach."],
+      ["Zdjęcia","Nakręciliśmy sceny w mieście, przy naturalnym świetle, pod pionowy format."],
+      ["Montaż","Złożyliśmy dynamiczny, lekki short z rytmem pod social media."],
+      ["Dostawa","Materiał oddaliśmy gotowy do publikacji w kanałach marki."]
+    ] },
   "O5iF7SxqX1I": { title:"Modny Tata — Padel", accent:"Padel.", client:"Modny Tata", cat:"Automotive · Lifestyle", short:true,
     kv:[["Klient","Modny Tata","Kampania"],["Format","Short","Pionowy 9:16"],["Zakres","Koncept · Realizacja","Produkcja"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Kolejna odsłona „Modnego Taty” — tym razem na korcie do padla." },
+    lead:"Kolejna odsłona „Modnego Taty” — tym razem na korcie do padla.",
+    intro:"Ten sam bohater, nowa <span class='accent'>scena.</span>",
+    context:[
+      "Kolejny odcinek serii „Modny Tata” przenosi motoryzacyjny lifestyle na kort do padla — sport, który dobrze oddaje energię i styl bohatera.",
+      "Zadaniem było utrzymać spójność serii: ten sam ton, ta sama estetyka kadru, przy nowym, świeżym kontekście."
+    ],
+    steps:[
+      ["Ciągłość serii","Zachowaliśmy język wizualny znany z poprzednich odcinków, dodając kontekst padla."],
+      ["Zdjęcia","Zarejestrowaliśmy scenę na korcie i auto w tle, pod pionowy kadr."],
+      ["Montaż","Zmontowaliśmy energetyczny short spójny z resztą cyklu."],
+      ["Dostawa","Odcinek trafił do serii publikowanej na social media."]
+    ] },
   "jco18tIaCT0": { title:"CRT", accent:"CRT.", client:"CRT", cat:"B2B · Film wizerunkowy", short:false,
     kv:[["Klient","CRT","B2B"],["Format","Film","Wizerunkowy"],["Zakres","Produkcja · Montaż","End-to-end"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Film wizerunkowy CRT — opowieść o marce i ludziach, którzy za nią stoją." },
+    lead:"Film wizerunkowy CRT — opowieść o marce i ludziach, którzy za nią stoją.",
+    intro:"Marka, którą tworzą <span class='accent'>ludzie.</span>",
+    context:[
+      "Film wizerunkowy CRT miał opowiedzieć o firmie nie przez sam produkt, ale przez ludzi i sposób, w jaki pracują. To materiał budujący zaufanie w relacjach B2B.",
+      "Wyzwaniem było ująć złożoną działalność w klarowną, filmową narrację — tak, żeby widz po chwili rozumiał, kim jest marka i dlaczego warto z nią rozmawiać."
+    ],
+    steps:[
+      ["Preprodukcja","Ustaliliśmy strukturę narracji i kluczowe wątki, które film ma opowiedzieć."],
+      ["Zdjęcia","Zarejestrowaliśmy firmę w działaniu — ludzi, przestrzeń i procesy — w spójnej, filmowej estetyce."],
+      ["Montaż i dźwięk","Złożyliśmy opowieść z warstwą lektorską i muzyczną budującą wiarygodny ton."],
+      ["Dostawa","Oddaliśmy film gotowy na stronę, prezentacje i kanały marki."]
+    ] },
   "NHEIfdgr9mI": { title:"IZIPAK", accent:"IZIPAK.", client:"IZIPAK", cat:"B2B · Produkt", short:false,
     kv:[["Klient","IZIPAK","B2B"],["Format","Film","Produktowy"],["Zakres","Produkcja · Montaż","End-to-end"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Produktowy film IZIPAK — pokazujemy rozwiązanie w działaniu, klarownie i konkretnie." },
+    lead:"Produktowy film IZIPAK — pokazujemy rozwiązanie w działaniu, klarownie i konkretnie.",
+    intro:"Rozwiązanie pokazane w <span class='accent'>działaniu.</span>",
+    context:[
+      "Produktowy film IZIPAK miał w prosty sposób pokazać, jak działa rozwiązanie i jaką realną wartość daje odbiorcy. W B2B liczy się konkret, nie ozdobniki.",
+      "Zależało nam na czytelności — żeby nawet złożony produkt był zrozumiały po jednym obejrzeniu, bez potrzeby dodatkowego tłumaczenia."
+    ],
+    steps:[
+      ["Scenariusz","Rozpisaliśmy film wokół realnego zastosowania produktu, krok po kroku."],
+      ["Zdjęcia","Zarejestrowaliśmy produkt w użyciu, z detalami istotnymi dla odbiorcy."],
+      ["Montaż","Uporządkowaliśmy materiał w klarowną, konkretną narrację."],
+      ["Dostawa","Film trafił do komunikacji sprzedażowej i kanałów marki."]
+    ] },
   "AygAJ4SOIw8": { title:"Tiger Energetyk", accent:"Tiger.", client:"Tiger", cat:"B2B · Energetyk", short:false,
     kv:[["Klient","Tiger","B2B"],["Format","Film","Brandowy"],["Zakres","Produkcja · Montaż","End-to-end"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Energetyczny film dla marki Tiger — mocny rytm, wyrazisty branding." },
+    lead:"Energetyczny film dla marki Tiger — mocny rytm, wyrazisty branding.",
+    intro:"Mocny rytm, wyrazisty <span class='accent'>branding.</span>",
+    context:[
+      "Tiger to marka o zdecydowanym, energetycznym charakterze. Film miał oddać ten temperament — dynamiką montażu, kolorem i tempem.",
+      "Wyzwaniem było utrzymać wysoką energię przez cały materiał, bez utraty czytelności przekazu i rozpoznawalności marki."
+    ],
+    steps:[
+      ["Koncept","Zaprojektowaliśmy język wizualny oparty na kontraście, tempie i mocnym brandingu."],
+      ["Zdjęcia","Zarejestrowaliśmy sceny z myślą o dynamicznym, rytmicznym montażu."],
+      ["Montaż i grade","Zbudowaliśmy tempo cięć zgrane z muzyką i dopięliśmy wyrazisty kolor."],
+      ["Dostawa","Materiał oddaliśmy w formatach pod kampanię i social media."]
+    ] },
   "wVy04YYnbRM": { title:"PISF", accent:"PISF.", client:"PISF", cat:"Event · Relacja", short:false,
     kv:[["Klient","PISF","Event"],["Format","Relacja","Wideo"],["Zakres","Dokumentacja · Montaż","Event"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Relacja wideo z wydarzenia PISF — dokumentacja atmosfery i najważniejszych momentów." },
+    lead:"Relacja wideo z wydarzenia PISF — dokumentacja atmosfery i najważniejszych momentów.",
+    intro:"Wydarzenie, które warto <span class='accent'>zapamiętać.</span>",
+    context:[
+      "Relacja wideo z wydarzenia PISF miała utrwalić atmosferę i najważniejsze momenty — tak, żeby po fakcie można było wrócić do wydarzenia i pokazać je tym, których nie było.",
+      "Praca eventowa to jedno podejście, bez powtórek — wyzwaniem było uchwycić kluczowe sceny w czasie rzeczywistym i złożyć je w spójną opowieść."
+    ],
+    steps:[
+      ["Plan zdjęć","Przed wydarzeniem ustaliliśmy, które momenty i przestrzenie są kluczowe do zarejestrowania."],
+      ["Dokumentacja","Zarejestrowaliśmy przebieg wydarzenia — sceny, ludzi i atmosferę — w ruchu."],
+      ["Montaż","Złożyliśmy dynamiczną relację oddającą rytm i charakter wydarzenia."],
+      ["Dostawa","Oddaliśmy materiał gotowy do publikacji i komunikacji po evencie."]
+    ] },
   "iknT-xURZag": { title:"Gdańsk Miastem Kultury", accent:"Kultury.", client:"Gdańsk", cat:"Event · Miasto", short:false,
     kv:[["Klient","Miasto Gdańsk","Event"],["Format","Relacja","Wideo"],["Zakres","Dokumentacja · Montaż","Event"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Gdańsk Miastem Kultury — filmowa opowieść o mieście i jego kulturalnym pulsie." },
+    lead:"Gdańsk Miastem Kultury — filmowa opowieść o mieście i jego kulturalnym pulsie.",
+    intro:"Miasto i jego kulturalny <span class='accent'>puls.</span>",
+    context:[
+      "„Gdańsk Miastem Kultury” to filmowa opowieść o mieście — o jego przestrzeniach, wydarzeniach i ludziach, którzy tworzą kulturalny krajobraz.",
+      "Wyzwaniem było ująć wielowątkowy temat w spójny materiał, który oddaje charakter miasta bez popadania w suchą wyliczankę."
+    ],
+    steps:[
+      ["Koncept narracji","Zbudowaliśmy opowieść łączącą różne oblicza kulturalnego Gdańska w jeden rytm."],
+      ["Zdjęcia","Zarejestrowaliśmy miasto, wydarzenia i przestrzenie w filmowej estetyce."],
+      ["Montaż i dźwięk","Złożyliśmy materiał z warstwą muzyczną budującą emocjonalny ton."],
+      ["Dostawa","Film trafił do komunikacji miejskiej i kanałów wydarzenia."]
+    ] },
   "tvTuMX3mxG4": { title:"Baltic Towers", accent:"Towers.", client:"Baltic Towers", cat:"Event · Otwarcie", short:false,
     kv:[["Klient","Baltic Towers","Event"],["Format","Relacja","Wideo"],["Zakres","Dokumentacja · Montaż","Event"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Relacja z otwarcia Baltic Towers — nowa inwestycja w filmowej odsłonie." },
+    lead:"Relacja z otwarcia Baltic Towers — nowa inwestycja w filmowej odsłonie.",
+    intro:"Nowa inwestycja w filmowej <span class='accent'>odsłonie.</span>",
+    context:[
+      "Otwarcie Baltic Towers to moment ważny dla inwestycji i marki. Relacja miała utrwalić to wydarzenie i pokazać skalę projektu w atrakcyjnej, filmowej formie.",
+      "Łączyliśmy dokumentację eventu z prezentacją samego obiektu — tak, żeby materiał działał zarówno jako relacja, jak i wizytówka inwestycji."
+    ],
+    steps:[
+      ["Plan zdjęć","Zaplanowaliśmy rejestrację wydarzenia i ujęcia prezentujące skalę obiektu."],
+      ["Dokumentacja","Zarejestrowaliśmy przebieg otwarcia oraz architekturę i przestrzenie."],
+      ["Montaż","Złożyliśmy relację łączącą emocję wydarzenia z prezentacją inwestycji."],
+      ["Dostawa","Materiał oddaliśmy pod komunikację inwestycji i social media."]
+    ] },
   "lD11UTII6Ko": { title:"Modna Mama — Pilates", accent:"Pilates.", client:"Modna Mama", cat:"Event · Lifestyle", short:true,
     kv:[["Klient","Modna Mama","Kampania"],["Format","Short","Pionowy 9:16"],["Zakres","Koncept · Realizacja","Produkcja"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Short z serii „Modna Mama” — pilates w lekkiej, lifestyle'owej formie." },
+    lead:"Short z serii „Modna Mama” — pilates w lekkiej, lifestyle'owej formie.",
+    intro:"Aktywność w lekkiej, lifestyle'owej <span class='accent'>formie.</span>",
+    context:[
+      "Short z serii „Modna Mama” pokazuje pilates jako element stylu życia — lekko, estetycznie, bez presji. To content budujący relację z odbiorczyniami.",
+      "Zadaniem było utrzymać spójność serii i ciepły, naturalny ton, przy pionowym formacie pod social."
+    ],
+    steps:[
+      ["Koncept","Ułożyliśmy prostą, naturalną scenę wpisaną w język serii „Modna Mama”."],
+      ["Zdjęcia","Zarejestrowaliśmy zajęcia przy naturalnym świetle, pod pionowy kadr."],
+      ["Montaż","Zmontowaliśmy lekki, estetyczny short z rytmem pod rolki."],
+      ["Dostawa","Odcinek trafił do cyklu publikowanego na social media."]
+    ] },
   "7HZN5VCTvoo": { title:"Animacja Dolphin G", accent:"Dolphin G.", client:"Dolphin G", cat:"Motion · Animacja", short:true,
     kv:[["Klient","BYD Dolphin","Motion"],["Format","Animacja","2D/3D"],["Zakres","Koncept · Animacja","Motion design"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Animowany short Dolphin G — motion design w służbie produktu." },
+    lead:"Animowany short Dolphin G — motion design w służbie produktu.",
+    intro:"Motion design w służbie <span class='accent'>produktu.</span>",
+    context:[
+      "Animowany short Dolphin G miał pokazać produkt tam, gdzie zdjęcia nie sięgają — w czystej, graficznej formie, w pełni kontrolowanej w postprodukcji.",
+      "Motion design dał nam swobodę: mogliśmy podkreślić cechy produktu i zbudować dynamikę bez ograniczeń planu zdjęciowego."
+    ],
+    steps:[
+      ["Koncept i storyboard","Rozrysowaliśmy sekwencję animacji i kluczowe ujęcia produktu."],
+      ["Animacja 2D/3D","Zbudowaliśmy ruch i kompozycje w pełni w postprodukcji."],
+      ["Grade i dźwięk","Dopięliśmy kolor i warstwę dźwiękową pod dynamiczny short."],
+      ["Dostawa","Materiał oddaliśmy w formatach pod social i reklamę."]
+    ] },
   "lOwJMPKMdYA": { title:"Baltic BHP", accent:"BHP.", client:"Baltic BHP", cat:"Motion · Animacja 2D", short:false,
     kv:[["Klient","Baltic","Motion"],["Format","Animacja","2D"],["Zakres","Koncept · Animacja","Motion design"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Animacja 2D Baltic BHP — złożone treści podane prosto i czytelnie." },
+    lead:"Animacja 2D Baltic BHP — złożone treści podane prosto i czytelnie.",
+    intro:"Złożone treści podane <span class='accent'>prosto.</span>",
+    context:[
+      "Animacja 2D Baltic BHP miała przełożyć trudny, techniczny temat na czytelny, przystępny przekaz. Bezpieczeństwo pracy to treść, która musi być zrozumiała dla każdego.",
+      "Wyzwaniem było zachować precyzję informacji przy lekkiej, angażującej formie graficznej."
+    ],
+    steps:[
+      ["Scenariusz","Uporządkowaliśmy treść w logiczną, łatwą do przyswojenia sekwencję."],
+      ["Design i storyboard","Zaprojektowaliśmy spójny system graficzny i rozrysowaliśmy animację."],
+      ["Animacja 2D","Zbudowaliśmy płynny ruch podkreślający kluczowe komunikaty."],
+      ["Dostawa","Film trafił do komunikacji wewnętrznej i szkoleniowej marki."]
+    ] },
   "WszuntCE51c": { title:"Baltic Model Fabryki", accent:"3D.", client:"Baltic", cat:"Motion · Model 3D", short:false,
     kv:[["Klient","Baltic","Motion"],["Format","Animacja","3D"],["Zakres","Model · Animacja","Motion design"],["Studio","SEZMOO","Gdańsk"]],
-    lead:"Trójwymiarowy model fabryki Baltic — wizualizacja procesu w pełnym 3D." }
+    lead:"Trójwymiarowy model fabryki Baltic — wizualizacja procesu w pełnym 3D.",
+    intro:"Proces pokazany w pełnym <span class='accent'>3D.</span>",
+    context:[
+      "Trójwymiarowy model fabryki Baltic pozwolił pokazać obiekt i proces tam, gdzie kamera nie wejdzie — w przekroju, w skali, w pełnej kontroli nad kadrem.",
+      "Wizualizacja 3D porządkuje złożony proces i czyni go zrozumiałym dla odbiorcy — inwestora, klienta, partnera."
+    ],
+    steps:[
+      ["Model 3D","Zbudowaliśmy trójwymiarowy model obiektu na podstawie materiałów klienta."],
+      ["Animacja","Zaprojektowaliśmy kamery i ruch prowadzący widza przez proces."],
+      ["Grade i render","Dopięliśmy oświetlenie, materiały i kolor pod filmowy render."],
+      ["Dostawa","Wizualizację oddaliśmy pod prezentacje i komunikację inwestycji."]
+    ] }
 };
 
 /* ordered list for prev/next navigation */
@@ -131,6 +297,14 @@ var RZ_ORDER = ["WG5ufZMfjQ8","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_cyZxE","O5iF7Sx
       '<div class="cs-meta__v">' + c[1] + '<small>' + c[2] + '</small></div></div>';
   }).join("");
 
+  var contextHtml = (d.context || []).map(function (p) { return '<p>' + p + '</p>'; }).join("");
+  var stepsHtml = (d.steps || []).map(function (s, i) {
+    var n = (i + 1 < 10 ? "0" : "") + (i + 1);
+    return '<div class="cs-step reveal"><div class="cs-step__no">' + n + '</div>' +
+      '<div class="cs-step__title">' + s[0] + '</div>' +
+      '<div class="cs-step__desc">' + s[1] + '</div></div>';
+  }).join("");
+
   main.innerHTML =
   '<header class="cs-hero" data-screen-label="Case · Cover">' +
     '<div class="cs-hero__media"><img src="' + thumb + '" onerror="this.onerror=null;this.src=\'' + thumbFallback + '\'" alt="' + d.title + '" /></div>' +
@@ -147,11 +321,28 @@ var RZ_ORDER = ["WG5ufZMfjQ8","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_cyZxE","O5iF7Sx
 
   '<section class="cs-meta" aria-label="Dane projektu"><div class="shell"><div class="cs-meta__grid">' + kvHtml + '</div></div></section>' +
 
+  '<section class="cs-sec" data-screen-label="Kontekst">' +
+    '<div class="shell">' +
+      '<span class="cs-sec__no reveal">[ 01 ] — KONTEKST</span>' +
+      '<div class="cs-intro__grid" style="margin-top:clamp(24px,3.6vh,46px)">' +
+        '<p class="cs-lead reveal">' + (d.intro || d.lead) + '</p>' +
+        '<div class="cs-body reveal" data-d="1">' + contextHtml + '</div>' +
+      '</div>' +
+    '</div>' +
+  '</section>' +
+
+  '<section class="cs-sec" data-screen-label="Podejście">' +
+    '<div class="shell">' +
+      '<span class="cs-sec__no reveal">[ 02 ] — PODEJŚCIE</span>' +
+      '<h2 class="cs-sec__title reveal">Jak to <span class="accent">zrobiliśmy.</span></h2>' +
+      '<div class="cs-steps">' + stepsHtml + '</div>' +
+    '</div>' +
+  '</section>' +
+
   '<section class="cs-sec" data-screen-label="Film">' +
     '<div class="shell">' +
-      '<span class="cs-sec__no reveal">[ 01 ] — FILM</span>' +
+      '<span class="cs-sec__no reveal">[ 03 ] — EFEKT</span>' +
       '<h2 class="cs-sec__title reveal">Zobacz realizację<br>w <span class="accent">ruchu.</span></h2>' +
-      '<p class="cs-body reveal" data-d="1" style="max-width:54ch;margin-top:20px">' + d.lead + '</p>' +
       '<div class="cs-film reveal" data-d="1" style="margin-top:clamp(30px,4vh,48px)">' +
         '<div class="cs-film__frame rz-film__frame' + (d.short ? " is-short" : "") + '" data-cursor="play" data-yt="' + v + '" role="button" tabindex="0" aria-label="Odtwórz film ' + d.title + '">' +
           '<img src="' + thumb + '" onerror="this.onerror=null;this.src=\'' + thumbFallback + '\'" alt="Kadr — ' + d.title + '" />' +
@@ -179,7 +370,7 @@ var RZ_ORDER = ["WG5ufZMfjQ8","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_cyZxE","O5iF7Sx
       '<div class="footer__col"><span class="footer__label">Social</span><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a><a href="#">LinkedIn</a></div>' +
       '<div class="footer__col"><span class="footer__label">Adres</span><p>Zeusa 34<br>80-299 Gdańsk</p></div>' +
     '</div>' +
-    '<div class="footer__bottom"><span>© 2026 SEZMOO — ALL RIGHTS RESERVED</span><a href="#top">Back to top</a></div>' +
+    '<div class="footer__bottom"><span>© 2026 SEZMOO — ALL RIGHTS RESERVED</span><a class="footer__legal" href="polityka-prywatnosci/index.html">Polityka prywatności</a><a href="#top">Back to top</a></div>' +
   '</div></footer>';
 
   // film facade -> real embed on click
@@ -202,5 +393,25 @@ var RZ_ORDER = ["WG5ufZMfjQ8","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_cyZxE","O5iF7Sx
 })();
 </script>
 <script src="flowing-background.js"></script>
+<script>
+/* Theme switcher (dark / light) */
+(function () {
+  var root = document.documentElement;
+  var opts = [].slice.call(document.querySelectorAll('[data-theme-set]'));
+  function apply(t) {
+    root.setAttribute('data-theme', t);
+    try { localStorage.setItem('sezmoo-theme', t); } catch (e) {}
+    opts.forEach(function (b) {
+      var on = b.getAttribute('data-theme-set') === t;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  opts.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-theme-set')); });
+  });
+  apply(root.getAttribute('data-theme') || 'dark');
+})();
+</script>
 </body>
 </html>

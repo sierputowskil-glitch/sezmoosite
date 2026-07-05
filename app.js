@@ -277,6 +277,35 @@
     window.addEventListener("resize", requestUpdate);
   })();
 
+  /* ---------- CONTENT SYSTEM (mobile): scroll-driven format timeline ---------- */
+  (function packMobileTimeline() {
+    const seq = document.querySelector(".pack-seq");
+    if (!seq) return;
+    const items = [...seq.querySelectorAll(".pseq")];
+    const fill = seq.querySelector(".pack-seq__fill");
+    if (!items.length) return;
+    if (reduce) { items.forEach((i) => i.classList.add("is-done", "is-active")); if (fill) fill.style.height = "100%"; return; }
+    function upd() {
+      const vh = innerHeight || document.documentElement.clientHeight;
+      let done = 0;
+      items.forEach((it) => {
+        const r = it.getBoundingClientRect();
+        const mid = r.top + r.height / 2;
+        const isDone = mid < vh * 0.48;
+        const isActive = !isDone && mid < vh * 0.72 && r.bottom > vh * 0.18;
+        it.classList.toggle("is-done", isDone);
+        it.classList.toggle("is-active", isActive);
+        if (isDone) done++;
+      });
+      if (fill) fill.style.height = ((done / items.length) * 100).toFixed(1) + "%";
+    }
+    let ticking = false;
+    const req = () => { if (ticking) return; ticking = true; requestAnimationFrame(() => { upd(); ticking = false; }); };
+    upd();
+    window.addEventListener("scroll", req, { passive: true });
+    window.addEventListener("resize", req);
+  })();
+
   /* ---------- TEAM: compact contact-sheet scroll settle ---------- */
   (function teamContactSheet() {
     const team = document.querySelector(".team");

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <title>SEZMOO — Content, wideo i kampanie dla marek</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -78,6 +79,10 @@
   </div>
   <div class="nav__right">
     <div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div>
+    <div class="nav__theme" role="group" aria-label="Motyw / Theme">
+      <button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw">DARK</button>
+      <button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw">LIGHT</button>
+    </div>
     <div class="nav__lang" role="group" aria-label="Język / Language">
       <a class="nav__lang-opt is-active" href="index.html#hero" aria-current="page">PL</a>
       <a class="nav__lang-opt" href="en/index.html">EN</a>
@@ -107,10 +112,6 @@
   </div>
   <div class="hero__grad"></div>
 
-  <div class="hero__hud tl">
-    <span class="recwrap"><span class="d"></span>REC</span>
-    <span data-tc>00:00:12:08</span>
-  </div>
   <div class="hero__hud tr">
     <div>SEZMOO / VIDEO &amp; CONTENT STUDIO</div>
     <div style="color:var(--fg-faint);margin-top:6px">4K · 24FPS · GDAŃSK / PL</div>
@@ -355,7 +356,7 @@
   <div class="services-scene reveal">
     <div class="services-scene__sticky">
       <div class="sec-head">
-        <h2 class="sec-title reveal">Jedna produkcja.<br>Wiele <span style="color:var(--rec)">formatów.</span></h2>
+        <h2 class="sec-title reveal">Jedna produkcja.<br>Wiele <span style="color:var(--accent-hi)">formatów.</span></h2>
         <span class="sec-index reveal">[ 03 ] — CONTENT SYSTEM</span>
       </div>
     <div class="content-pack content-pack--scroll" data-cursor="play">
@@ -390,6 +391,56 @@
         </div>
         <div class="pack-playhead"><span data-tc>00:00:12:08</span></div>
         <div class="pack-shutter" aria-hidden="true"><span></span><span></span></div>
+      </div>
+      <div class="pack-mobile" role="list" aria-label="Formaty kampanii">
+        <div class="pack-mobile__head">
+          <span class="pack-mobile__stage"><i></i>Frame build</span>
+          <span class="pack-mobile__exp">Campaign export</span>
+        </div>
+        <div class="pack-seq">
+          <span class="pack-seq__fill" aria-hidden="true"></span>
+          <div class="pseq">
+            <span class="pseq__node">01</span>
+            <div class="pseq__top">
+              <span class="pseq__badge">16:9</span>
+              <h4 class="pseq__name">Hero film</h4>
+              <span class="pseq__glyph pseq__glyph--wide" aria-hidden="true"></span>
+            </div>
+            <p class="pseq__desc">Główny film na stronę, YouTube i prezentacje ofertowe.</p>
+            <span class="pseq__bar" aria-hidden="true"></span>
+          </div>
+          <div class="pseq">
+            <span class="pseq__node">02</span>
+            <div class="pseq__top">
+              <span class="pseq__badge">9:16</span>
+              <h4 class="pseq__name">Reels / Shorts</h4>
+              <span class="pseq__glyph pseq__glyph--vertical" aria-hidden="true"></span>
+            </div>
+            <p class="pseq__desc">Pionowe wersje pod Reels, TikTok i YouTube Shorts.</p>
+            <span class="pseq__bar" aria-hidden="true"></span>
+          </div>
+          <div class="pseq">
+            <span class="pseq__node">03</span>
+            <div class="pseq__top">
+              <span class="pseq__badge">1:1</span>
+              <h4 class="pseq__name">Social ads</h4>
+              <span class="pseq__glyph pseq__glyph--square" aria-hidden="true"></span>
+            </div>
+            <p class="pseq__desc">Kwadratowe formaty pod płatne kampanie w social media.</p>
+            <span class="pseq__bar" aria-hidden="true"></span>
+          </div>
+          <div class="pseq">
+            <span class="pseq__node">04</span>
+            <div class="pseq__top">
+              <span class="pseq__badge">OOH / WWW</span>
+              <h4 class="pseq__name">Kreacje kampanijne</h4>
+              <span class="pseq__glyph pseq__glyph--banner" aria-hidden="true"></span>
+            </div>
+            <p class="pseq__desc">Grafiki, bannery i miniatury spinające całą kampanię.</p>
+            <span class="pseq__bar" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="pack-mobile__flow" aria-hidden="true"><span>RAW</span><i></i><span>EDIT</span><i></i><span>EXPORT</span></div>
       </div>
       <div class="content-pack__copy">
         <span class="eyebrow"><span class="tick"></span>Campaign output</span>
@@ -585,59 +636,59 @@
   <div class="logo-marquee reveal" aria-label="Zaufali nam — klienci">
     <div class="logo-track">
       <div class="logo-cellc"><img class="logo-rings" src="assets/clients/audi.svg" alt="Audi" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/byd.svg" alt="BYD" /></div>
       <div class="logo-cellc"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/omoda-jaecoo.svg" alt="Omoda &amp; Jaecoo" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/cherry.svg" alt="Cherry" /></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/vls.svg" alt="VLS" /></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/doraco.svg" alt="Doraco" /></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="VeloBank" /></div>
+      <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/q4rail.svg" alt="Q4rail" /></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/2track.svg" alt="2track" /></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="Life Dom Seniora" /></div>
-      <div class="logo-cellc"><span class="logo-word">BYD</span></div>
-      <div class="logo-cellc"><span class="logo-word">OMODA &amp; JAECOO</span></div>
-      <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
-      <div class="logo-cellc"><span class="logo-word">VTS Group</span></div>
       <!-- duplikat dla płynnej pętli -->
       <div class="logo-cellc" aria-hidden="true"><img class="logo-rings" src="assets/clients/audi.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/byd.svg" alt="" /></div>
       <div class="logo-cellc" aria-hidden="true"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/omoda-jaecoo.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/cherry.svg" alt="" /></div>
       <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/vls.svg" alt="" /></div>
       <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/doraco.svg" alt="" /></div>
       <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="" /></div>
+      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">Baltic Towers</span></div>
       <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/q4rail.svg" alt="" /></div>
       <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/2track.svg" alt="" /></div>
       <div class="logo-cellc" aria-hidden="true"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="" /></div>
-      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">BYD</span></div>
-      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">OMODA &amp; JAECOO</span></div>
-      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">Baltic Towers</span></div>
-      <div class="logo-cellc" aria-hidden="true"><span class="logo-word">VTS Group</span></div>
     </div>
   </div>
   <div class="logo-marquee logo-marquee--reverse reveal" aria-hidden="true">
     <div class="logo-track">
-      <div class="logo-cellc"><span class="logo-word">VTS Group</span></div>
-      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/doraco.svg" alt="" /></div>
-      <div class="logo-cellc"><span class="logo-word">BYD</span></div>
-      <div class="logo-cellc"><img class="logo-rings" src="assets/clients/audi.svg" alt="" /></div>
-      <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
-      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/vls.svg" alt="" /></div>
-      <div class="logo-cellc"><span class="logo-word">OMODA &amp; JAECOO</span></div>
-      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="" /></div>
-      <div class="logo-cellc"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="" /></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/2track.svg" alt="" /></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/q4rail.svg" alt="" /></div>
-      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/doraco.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/vls.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/cherry.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/omoda-jaecoo.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/byd.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-rings" src="assets/clients/audi.svg" alt="" /></div>
       <!-- duplikat dla płynnej pętli -->
-      <div class="logo-cellc"><span class="logo-word">VTS Group</span></div>
-      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/doraco.svg" alt="" /></div>
-      <div class="logo-cellc"><span class="logo-word">BYD</span></div>
-      <div class="logo-cellc"><img class="logo-rings" src="assets/clients/audi.svg" alt="" /></div>
-      <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
-      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/vls.svg" alt="" /></div>
-      <div class="logo-cellc"><span class="logo-word">OMODA &amp; JAECOO</span></div>
-      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="" /></div>
-      <div class="logo-cellc"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="" /></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/2track.svg" alt="" /></div>
       <div class="logo-cellc"><img class="logo-mark" src="assets/clients/q4rail.svg" alt="" /></div>
-      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/life-dom-seniora.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">Baltic Towers</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/velo-bank.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/doraco.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/vls.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/cherry.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/omoda-jaecoo.svg" alt="" /></div>
+      <div class="logo-cellc"><span class="logo-word">Netto</span></div>
+      <div class="logo-cellc"><img class="logo-mark" src="assets/clients/byd.svg" alt="" /></div>
+      <div class="logo-cellc"><img class="logo-rings" src="assets/clients/audi.svg" alt="" /></div>
     </div>
   </div>
 </section>
@@ -764,7 +815,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 SEZMOO — ALL RIGHTS RESERVED</span>
+      <span>© 2026 SEZMOO — ALL RIGHTS RESERVED</span><a class="footer__legal" href="polityka-prywatnosci/index.html">Polityka prywatności</a>
       <a href="#top">Back to top</a>
     </div>
   </div>
@@ -898,6 +949,26 @@
     tag.src = "https://www.youtube.com/iframe_api";
     document.head.appendChild(tag);
   }
+})();
+</script>
+<script>
+/* Theme switcher (dark / light) */
+(function () {
+  var root = document.documentElement;
+  var opts = [].slice.call(document.querySelectorAll('[data-theme-set]'));
+  function apply(t) {
+    root.setAttribute('data-theme', t);
+    try { localStorage.setItem('sezmoo-theme', t); } catch (e) {}
+    opts.forEach(function (b) {
+      var on = b.getAttribute('data-theme-set') === t;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  opts.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-theme-set')); });
+  });
+  apply(root.getAttribute('data-theme') || 'dark');
 })();
 </script>
 </body>
