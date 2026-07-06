@@ -2,6 +2,16 @@
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) return;
 
+  // Touch devices (esp. Android) can't run a full-screen fbm shader without
+  // starving scroll compositing — disable the smoke there; it's barely visible
+  // on a phone anyway. Desktop keeps the animated background.
+  var isTouchDevice = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+  if (isTouchDevice) {
+    var cnv = document.getElementById('flow-bg-canvas');
+    if (cnv) cnv.style.display = 'none';
+    return;
+  }
+
   var CONFIG = {
     speed: 0.035,
     cursor: {

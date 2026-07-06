@@ -3421,4 +3421,7 @@ img.card__video { background: var(--bg-2); }
   .card__tc { background: oklch(0.1 0.004 60 / 0.86); }
   .work-reel__counter { background: oklch(0.12 0.004 60 / 0.92); }
   .cform { background: oklch(0.155 0.004 60 / 0.94); }
+  /* full-screen mix-blend grain forces a whole-viewport recomposite every
+     scroll frame on Android — drop the texture on touch (vignette is cheap, stays) */
+  .grain { display: none !important; }
 }
