@@ -12,7 +12,9 @@
   (function smoothScroll() {
     if (reduce || !fine) return; // native scroll on touch / reduced-motion
     const s = document.createElement("script");
-    s.src = "https://unpkg.com/lenis@1.1.14/dist/lenis.min.js";
+    var appTag = document.querySelector('script[src$="app.js"]');
+    var base = appTag ? appTag.getAttribute("src").replace(/app\.js(\?.*)?$/, "") : "";
+    s.src = base + "lenis.min.js";
     s.onload = function () {
       const L = window.Lenis || (window.lenis && window.lenis.Lenis);
       if (!L) return;
@@ -115,6 +117,91 @@
     window.addEventListener("resize", () => {
       if (window.innerWidth > 860) setOpen(false);
     });
+  })();
+
+  /* ---------- MOBILE BOTTOM BAR (Onet-style quick dock) ---------- */
+  (function mobileBottomBar() {
+    if (document.querySelector(".mbar")) return;
+
+    var isEN = (document.documentElement.getAttribute("lang") || "").toLowerCase().indexOf("en") === 0;
+    var T = isEN
+      ? { phone: "Call", mail: "E-mail", top: "Top", dark: "Dark", light: "Light", menu: "Menu", lang: "Język",
+          aphone: "Call us", amail: "Write an e-mail", atop: "Scroll to top", atheme: "Toggle theme", alang: "Change language", amenu: "Open menu", abar: "Quick access" }
+      : { phone: "Telefon", mail: "E-mail", top: "Góra", dark: "Ciemny", light: "Jasny", menu: "Menu", lang: "Language",
+          aphone: "Zadzwoń", amail: "Napisz e-mail", atop: "Przewiń do góry", atheme: "Przełącz motyw", alang: "Zmień język", amenu: "Otwórz menu", abar: "Szybki dostęp" };
+
+    var ICO = {
+      phone: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
+      mail: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>',
+      up: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6"/><path d="M6 12l6-6 6 6"/></svg>',
+      theme: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none"/></svg>',
+      globe: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16"/><path d="M12 4a12 12 0 0 1 0 16 12 12 0 0 1 0-16"/></svg>',
+      menu: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>'
+    };
+
+    function makeItem(o) {
+      var el = document.createElement(o.href ? "a" : "button");
+      if (o.href) { el.href = o.href; } else { el.type = "button"; }
+      el.className = "mbar__item" + (o.cls ? " " + o.cls : "");
+      if (o.aria) el.setAttribute("aria-label", o.aria);
+      el.innerHTML = '<span class="mbar__ico">' + o.svg + "</span><span class=\"mbar__lbl\">" + o.label + "</span>";
+      if (o.on) el.addEventListener("click", o.on);
+      return el;
+    }
+
+    var bar = document.createElement("nav");
+    bar.className = "mbar";
+    bar.setAttribute("aria-label", T.abar);
+
+    // 1 · Phone
+    bar.appendChild(makeItem({ href: "tel:+48502260450", svg: ICO.phone, label: T.phone, aria: T.aphone }));
+
+    // 2 · E-mail
+    bar.appendChild(makeItem({ href: "mailto:hello@sezmoo.com", svg: ICO.mail, label: T.mail, aria: T.amail }));
+
+    // 3 · CENTER — scroll to top (raised yellow puck)
+    bar.appendChild(makeItem({
+      svg: ICO.up, label: T.top, cls: "mbar__top", aria: T.atop,
+      on: function () {
+        if (window.__lenis && window.__lenis.scrollTo) window.__lenis.scrollTo(0, { duration: 1 });
+        else window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }));
+
+    // 4 · Theme toggle (reuses the page's own switcher so state persists everywhere)
+    var themeItem = makeItem({
+      svg: ICO.theme, label: T.dark, cls: "mbar__theme", aria: T.atheme,
+      on: function () {
+        var next = (root.getAttribute("data-theme") || "dark") === "dark" ? "light" : "dark";
+        var opt = document.querySelector('[data-theme-set="' + next + '"]');
+        if (opt) { opt.click(); }
+        else {
+          root.setAttribute("data-theme", next);
+          try { localStorage.setItem("sezmoo-theme", next); } catch (e) {}
+        }
+      }
+    });
+    var themeLbl = themeItem.querySelector(".mbar__lbl");
+    function syncTheme() { themeLbl.textContent = (root.getAttribute("data-theme") || "dark") === "dark" ? T.light : T.dark; }
+    syncTheme();
+    new MutationObserver(syncTheme).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+    bar.appendChild(themeItem);
+
+    // 5 · Language switch (falls back to Menu where a page has no lang switcher)
+    var otherLang = document.querySelector(".nav__lang .nav__lang-opt:not(.is-active)");
+    if (otherLang && otherLang.getAttribute("href")) {
+      bar.appendChild(makeItem({
+        href: otherLang.getAttribute("href"), svg: ICO.globe,
+        label: (otherLang.textContent || "").trim() || T.lang, aria: T.alang
+      }));
+    } else {
+      bar.appendChild(makeItem({
+        svg: ICO.menu, label: T.menu, aria: T.amenu,
+        on: function () { var b = document.querySelector(".nav__burger"); if (b) b.click(); }
+      }));
+    }
+
+    document.body.appendChild(bar);
   })();
 
   /* ---------- SCRUBBER (page progress) ---------- */

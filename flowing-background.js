@@ -136,10 +136,11 @@
     U[n] = gl.getUniformLocation(prog, n);
   });
 
-  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var dprMax = 2;
+  var dpr = Math.min(window.devicePixelRatio || 1, dprMax);
 
   function resize() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    dpr = Math.min(window.devicePixelRatio || 1, dprMax);
     var w = Math.floor(canvas.clientWidth * dpr);
     var h = Math.floor(canvas.clientHeight * dpr);
     if (canvas.width !== w || canvas.height !== h) {
@@ -150,6 +151,8 @@
   }
 
   var mouse = { tx: 0.5, ty: 0.5, x: 0.5, y: 0.5, tAmt: 0, amt: 0 };
+  var pendingResize = true;
+  function scheduleResize() { pendingResize = true; }
 
   function onMove(e) {
     var rect = canvas.getBoundingClientRect();
@@ -158,7 +161,7 @@
     mouse.tAmt = 1;
   }
 
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize', scheduleResize);
   window.addEventListener('pointermove', onMove, { passive: true });
   window.addEventListener('pointerdown', onMove, { passive: true });
   document.addEventListener('mouseleave', function () { mouse.tAmt = 0; });
@@ -166,8 +169,29 @@
 
   var start = performance.now();
 
+  // Adaptive quality: pause in background tabs, and if the GPU can't keep up,
+  // drop DPR to 1 and halve the frame rate so weak/integrated GPUs stop grinding.
+  var lastT = start, acc = 0, cnt = 0, degraded = false, skipFrame = false;
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) lastT = performance.now(); // avoid a huge dt spike on resume
+  });
+
   function loop(now) {
-    resize();
+    if (document.hidden) { requestAnimationFrame(loop); return; }
+
+    var dt = now - lastT; lastT = now;
+    if (dt < 200) { acc += dt; cnt++; } // ignore resume/GC spikes in the average
+    if (cnt >= 60) {
+      var avg = acc / cnt; acc = 0; cnt = 0;
+      if (!degraded && avg > 26) { // sustained < ~38fps
+        degraded = true;
+        dprMax = 1;
+        pendingResize = true;
+      }
+    }
+    if (degraded) { skipFrame = !skipFrame; if (skipFrame) { requestAnimationFrame(loop); return; } }
+
+    if (pendingResize) { resize(); pendingResize = false; }
     mouse.x += (mouse.tx - mouse.x) * CONFIG.cursor.follow;
     mouse.y += (mouse.ty - mouse.y) * CONFIG.cursor.follow;
     mouse.amt += (mouse.tAmt - mouse.amt) * CONFIG.cursor.fadeIn;
