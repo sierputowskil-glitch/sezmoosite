@@ -3262,6 +3262,14 @@ img.card__video { background: var(--bg-2); }
 }
 :root[data-theme="light"] body:not(:has(.hero)) .nav:not(.is-stuck) .brand__logo { content: url("assets/brand/sezmoo-logo-by.svg"); }
 
+/* light-theme mobile burger: a dark chip with dark bars is invisible on the
+   light bar — give it a light chip, dark border and solid black bars */
+:root[data-theme="light"] .nav__burger {
+  background: oklch(0.9 0.007 85 / 0.85);
+  border-color: oklch(0.5 0.012 60);
+}
+:root[data-theme="light"] .nav__burger span { background: #17140a; }
+
 /* Subpages have no video hero, so the WebGL smoke is the only moving background —
    the shader is tuned very dark for behind-video use, so lift it on subpages
    (dark theme only) to make the animated background actually visible. */
