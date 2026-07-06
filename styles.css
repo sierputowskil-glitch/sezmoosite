@@ -3296,6 +3296,17 @@ img.card__video { background: var(--bg-2); }
 :root[data-theme="light"] .chip:hover { background: #ffd200; border-color: #ffd200; color: #17140a; }
 :root[data-theme="light"] .btn:not(.btn--primary)::before { background: #ffd200; }
 :root[data-theme="light"] .btn:not(.btn--primary):hover { color: #17140a; border-color: #ffd200; }
+
+/* light-theme blog: --rec is grey in light, so filter chips, CTA buttons, the
+   "FEATURED" tag and "Czytaj dalej" links all went muddy. Force brand yellow. */
+:root[data-theme="light"] .blog-topics a.is-active,
+:root[data-theme="light"] .blog-topics a:hover { background: #ffd200; border-color: #ffd200; color: #17140a; }
+:root[data-theme="light"] .blog-feature a,
+:root[data-theme="light"] .article__cta a { background: #ffd200; color: #17140a; }
+:root[data-theme="light"] .blog-feature__media span { color: #ffd200; }
+:root[data-theme="light"] .blog-post a { color: #8a6d00; }
+:root[data-theme="light"] .blog-post:hover { border-color: #ffd200; }
+:root[data-theme="light"] .blog-post:hover a { color: #17140a; }
 :root[data-theme="light"] .eyebrow .tick { background: var(--accent-hi); }
 .sub-hero__meta span { transition: color .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease); }
 .sub-hero__meta span:hover { color: var(--rec); border-color: rgb(255 210 0 / .5); }
