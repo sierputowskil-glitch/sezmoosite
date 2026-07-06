@@ -136,7 +136,10 @@
     U[n] = gl.getUniformLocation(prog, n);
   });
 
-  var dprMax = 2;
+  // On touch/mobile the heavy fbm shader competes with scroll compositing and
+  // judders at 120Hz, so cap to DPR 1 and run at half frame-rate there.
+  var isTouch = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+  var dprMax = isTouch ? 1 : 2;
   var dpr = Math.min(window.devicePixelRatio || 1, dprMax);
 
   function resize() {
@@ -189,7 +192,7 @@
         pendingResize = true;
       }
     }
-    if (degraded) { skipFrame = !skipFrame; if (skipFrame) { requestAnimationFrame(loop); return; } }
+    if (degraded || isTouch) { skipFrame = !skipFrame; if (skipFrame) { requestAnimationFrame(loop); return; } }
 
     if (pendingResize) { resize(); pendingResize = false; }
     mouse.x += (mouse.tx - mouse.x) * CONFIG.cursor.follow;

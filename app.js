@@ -268,8 +268,8 @@
     });
   }
 
-  /* ---------- PARALLAX thumbnails ---------- */
-  if (!reduce) {
+  /* ---------- PARALLAX thumbnails (desktop only — per-frame reads jitter touch scroll) ---------- */
+  if (fine && !reduce) {
     const px = [...document.querySelectorAll("[data-parallax]")];
     function parallax() {
       const vh = innerHeight;
@@ -679,22 +679,28 @@
   const clips = [...document.querySelectorAll(".tl__clips .clip")];
   const ptc = document.querySelector(".tl__playhead .ptc");
   if (track && playhead && clips.length) {
+    let lastP = -1;
     function timeline() {
       const r = track.getBoundingClientRect();
       const vh = innerHeight;
+      // off-screen: skip all work (no layout writes while it's not visible)
+      if (r.bottom < -120 || r.top > vh + 120) { requestAnimationFrame(timeline); return; }
       // progress as the track scrolls through the middle band of viewport
       const start = vh * 0.85;
       const end = vh * 0.2;
       let p = (start - r.top) / (start - end + r.height);
       p = Math.max(0, Math.min(1, p));
-      playhead.style.left = (p * 100) + "%";
-      if (ptc) ptc.textContent = tc(Math.round(p * (clips.length * 48)));
-      const activeIdx = Math.min(clips.length - 1, Math.floor(p * clips.length + 0.0001));
-      clips.forEach((c, i) => {
-        c.classList.toggle("is-done", i < activeIdx || (p >= 1 && i <= activeIdx));
-        c.classList.toggle("is-active", i === activeIdx && p < 1);
-        if (p >= 1) c.classList.add("is-done");
-      });
+      if (Math.abs(p - lastP) > 0.0005) {
+        lastP = p;
+        playhead.style.left = (p * 100) + "%";
+        if (ptc) ptc.textContent = tc(Math.round(p * (clips.length * 48)));
+        const activeIdx = Math.min(clips.length - 1, Math.floor(p * clips.length + 0.0001));
+        clips.forEach((c, i) => {
+          c.classList.toggle("is-done", i < activeIdx || (p >= 1 && i <= activeIdx));
+          c.classList.toggle("is-active", i === activeIdx && p < 1);
+          if (p >= 1) c.classList.add("is-done");
+        });
+      }
       requestAnimationFrame(timeline);
     }
     if (!reduce) timeline();
