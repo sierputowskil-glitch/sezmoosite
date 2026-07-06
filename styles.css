@@ -1873,7 +1873,7 @@ img.card__video { background: var(--bg-2); }
   line-height: .96;
   letter-spacing: -.018em;
 }
-.sub-head span {
+.sub-head > span {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: .18em;
@@ -2649,12 +2649,13 @@ img.card__video { background: var(--bg-2); }
   text-transform: uppercase;
 }
 .sub-list a:hover { color: var(--rec); }
-@media (max-width: 920px) {
+@media (max-width: 1100px) {
   .sub-hero__grid,
   .sub-cta { grid-template-columns: 1fr; }
   .sub-grid { grid-template-columns: 1fr; }
   .service-hub__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .service-tile--feature { grid-column: span 1; }
+  .service-tile--end { grid-column: span 2; }
   .portfolio-routing { grid-template-columns: 1fr; }
   .portfolio-routing__links { justify-content: flex-start; }
   .service-metrics,
@@ -2665,7 +2666,7 @@ img.card__video { background: var(--bg-2); }
   .work-bridge__actions,
   .work-bridge__filters { justify-items: start; justify-content: flex-start; }
   .sub-head { display: block; }
-  .sub-head span { display: block; margin-top: 16px; }
+  .sub-head > span { display: block; margin-top: 16px; }
 }
 @media (max-width: 620px) {
   .service-hub__grid { grid-template-columns: 1fr; grid-auto-columns: minmax(0, 1fr); }
