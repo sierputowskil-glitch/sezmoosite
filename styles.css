@@ -3396,3 +3396,29 @@ img.card__video { background: var(--bg-2); }
   :root[data-theme="light"] .mbar__top .mbar__ico { box-shadow: 0 10px 24px oklch(0 0 0 / .22), 0 0 0 5px var(--bg); }
   :root[data-theme="light"] .mbar__top .mbar__lbl { color: oklch(0.44 0.01 70); }
 }
+
+/* ============================================================
+   TOUCH PERFORMANCE — Android Chrome recomputes backdrop-filter blur over
+   scrolling content every frame and janks hard (iOS composites it on the GPU
+   and stays smooth). On coarse pointers we drop every blur and swap the
+   frosted transparency for near-opaque surfaces so scroll stays buttery.
+   ============================================================ */
+@media (pointer: coarse) {
+  .nav, .nav.is-stuck, .nav__burger, .nav__menu,
+  .card__tc, .work-reel__counter, .hero__reel, .pack-output, .pack-frame,
+  .cform, .cookie-bar, .mbar, .floating-socials a, .scroll-top,
+  :root[data-theme="light"] .nav.is-stuck {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  /* fixed chrome that sits over moving content → make it fully opaque */
+  .nav.is-stuck { background: oklch(0.14 0.004 60 / 0.98); }
+  :root[data-theme="light"] .nav.is-stuck { background: oklch(0.965 0.006 85 / 0.98); }
+  .mbar { background: oklch(0.13 0.004 60 / 0.99); }
+  :root[data-theme="light"] .mbar { background: oklch(0.985 0.006 85 / 0.99); }
+  .nav__burger { background: oklch(0.16 0.004 60 / 0.9); }
+  .nav__menu { background: oklch(0.155 0.004 60 / 0.99); }
+  .card__tc { background: oklch(0.1 0.004 60 / 0.86); }
+  .work-reel__counter { background: oklch(0.12 0.004 60 / 0.92); }
+  .cform { background: oklch(0.155 0.004 60 / 0.94); }
+}
