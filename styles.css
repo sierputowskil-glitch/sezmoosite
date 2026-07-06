@@ -2990,7 +2990,6 @@ img.card__video { background: var(--bg-2); }
   background: oklch(0.965 0.006 85 / 0.8);
   border-bottom-color: var(--line-soft);
 }
-:root[data-theme="light"] .nav.is-stuck .brand__logo { content: url("../../../Downloads/_paczka 4/assets/brand/sezmoo-logo-by.svg"); }
 @media (max-width: 1100px) {
   :root[data-theme="light"] .nav__menu {
     background: oklch(0.97 0.006 85 / 0.96);
@@ -3260,7 +3259,6 @@ img.card__video { background: var(--bg-2); }
   -webkit-backdrop-filter: blur(14px) saturate(1.1); backdrop-filter: blur(14px) saturate(1.1);
   border-bottom: 1px solid oklch(0.9 0.006 85 / 0.4);
 }
-:root[data-theme="light"] body:not(:has(.hero)) .nav:not(.is-stuck) .brand__logo { content: url("assets/brand/sezmoo-logo-by.svg"); }
 
 /* light-theme mobile burger: a dark chip with dark bars is invisible on the
    light bar — give it a light chip, dark border and solid black bars */

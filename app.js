@@ -5,6 +5,27 @@
   "use strict";
   const root = document.documentElement;
   root.classList.add("js");
+
+  /* ---------- Brand logo theme swap ----------
+     The logo file depends only on theme: dark → white+yellow (-wy),
+     light → black+yellow (-by). Done in JS (not CSS content:url) because a
+     replaced-element content url resolves relative to the DOCUMENT, so a fixed
+     path 404s on subpages ("../assets" vs "assets"). Swapping the filename in
+     the existing src keeps whatever relative prefix each page already uses. */
+  (function brandLogoSwap() {
+    var img = document.querySelector(".brand__logo");
+    if (!img) return;
+    function apply() {
+      var light = (root.getAttribute("data-theme") || "dark") === "light";
+      var want = light ? "sezmoo-logo-by.svg" : "sezmoo-logo-wy.svg";
+      var src = img.getAttribute("src") || "";
+      var next = src.replace(/sezmoo-logo-(wy|by)\.svg/, want);
+      if (next !== src) img.setAttribute("src", next);
+    }
+    apply();
+    new MutationObserver(apply).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+  })();
+
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
