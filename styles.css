@@ -22,7 +22,7 @@
   --accent-hi: #ffd200;  /* reserved brand-yellow for big headline accents */
   --on-accent: #17140a;  /* dark text on yellow surfaces */
 
-  --shell-pad: clamp(18px, 4vw, 56px);
+  --shell-pad: clamp(26px, 4vw, 56px);
   --maxw: 1640px;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
