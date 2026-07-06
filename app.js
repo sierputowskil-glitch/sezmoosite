@@ -15,15 +15,22 @@
   (function brandLogoSwap() {
     var img = document.querySelector(".brand__logo");
     if (!img) return;
+    var nav = document.querySelector(".nav");
+    var hasVideoHero = !!document.querySelector(".hero"); // home only
     function apply() {
       var light = (root.getAttribute("data-theme") || "dark") === "light";
-      var want = light ? "sezmoo-logo-by.svg" : "sezmoo-logo-wy.svg";
+      // white+yellow only when the logo sits over the dark home video hero
+      // (dark theme everywhere, or home hero at top before the bar sticks).
+      var overVideoHero = hasVideoHero && nav && !nav.classList.contains("is-stuck");
+      var white = !light || overVideoHero;
+      var want = white ? "sezmoo-logo-wy.svg" : "sezmoo-logo-by.svg";
       var src = img.getAttribute("src") || "";
       var next = src.replace(/sezmoo-logo-(wy|by)\.svg/, want);
       if (next !== src) img.setAttribute("src", next);
     }
     apply();
     new MutationObserver(apply).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+    if (nav) new MutationObserver(apply).observe(nav, { attributes: true, attributeFilter: ["class"] });
   })();
 
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
