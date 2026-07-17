@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# nie indeksuj katalogu roboczego / starego duplikatu
+Disallow: /_do-podmiany/
+Disallow: /_paczka/
+Disallow: /sezmoo-site/
+Disallow: /sezmoo-ds/
+Disallow: /uploads/
+
+Sitemap: https://sezmoo.com/sitemap.xml

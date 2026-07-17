@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<title>404 — nie znaleziono strony | SEZMOO</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/assets/favicon.png" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#16130e" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body id="top">
+<canvas class="flow-bg-canvas" id="flow-bg-canvas" aria-hidden="true"></canvas>
+<div class="grain"></div>
+<div class="vignette"></div>
+
+<main style="min-height:100svh;display:grid;place-items:center;padding:clamp(24px,6vw,80px);text-align:center;position:relative;z-index:1">
+  <div style="max-width:640px">
+    <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--fg-faint);display:inline-flex;align-items:center;gap:10px"><span style="width:22px;height:1px;background:#ffd200;display:inline-block"></span>Error 404 · nagranie nie istnieje</span>
+    <h1 style="font-family:var(--font-display);font-weight:800;line-height:.98;letter-spacing:-.01em;font-size:clamp(64px,14vw,160px);color:var(--fg);margin:clamp(18px,3vh,28px) 0 0">4<span style="color:#ffd200">0</span>4</h1>
+    <p style="font-family:var(--font-display);font-size:clamp(17px,1.6vw,21px);line-height:1.5;color:var(--fg-dim);max-width:46ch;margin:clamp(16px,2.5vh,24px) auto 0;text-wrap:pretty">Ten kadr nie trafił do montażu. Strona, której szukasz, nie istnieje albo zmieniła adres.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:clamp(28px,4vh,40px)">
+      <a href="/" style="font-family:var(--font-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:17px 28px;border-radius:100px;background:#ffd200;color:#17140a;text-decoration:none">Strona główna</a>
+      <a href="/portfolio/index.html" style="font-family:var(--font-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:17px 28px;border-radius:100px;border:1px solid var(--line);color:var(--fg);text-decoration:none">Portfolio</a>
+      <a href="/uslugi-marketingowe/index.html" style="font-family:var(--font-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:17px 28px;border-radius:100px;border:1px solid var(--line);color:var(--fg);text-decoration:none">Usługi</a>
+    </div>
+  </div>
+</main>
+
+<script src="/flowing-background.js"></script>
+</body>
+</html>

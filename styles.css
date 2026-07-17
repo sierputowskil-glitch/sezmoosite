@@ -625,6 +625,11 @@ section { position: relative; }
   border:1px solid var(--line); padding:5px 11px; border-radius:100px; white-space:nowrap;
   transition: all .35s var(--ease); }
 .card:hover .card__tag { color: var(--bg); background: var(--rec); border-color: var(--rec); }
+.card__info:has(.card__cats) { flex-wrap: wrap; }
+.card__cats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; width: 100%; }
+.card__cchip { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--fg-faint); border: 1px solid var(--line-soft); padding: 4px 9px; border-radius: 100px; white-space: nowrap; }
+:root[data-theme="light"] .card__cchip { color: var(--fg-dim); border-color: var(--line); }
 .card__ph-label { position:absolute; bottom:14px; left:50%; transform:translateX(-50%); z-index:2;
   font-family: var(--font-mono); font-size:10px; letter-spacing:.2em; color: oklch(0.96 0.006 80 / 0.35);
   text-transform: uppercase; white-space:nowrap; }
@@ -1941,7 +1946,7 @@ img.card__video { background: var(--bg-2); }
   display: inline-flex;
   overflow: hidden;
   height: 1em;
-  vertical-align: -0.12em;
+  vertical-align: 0.02em;
   color: var(--rec);
 }
 .h1-rot__list {

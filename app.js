@@ -637,7 +637,7 @@
     }
 
     function rebuild() {
-      const filtered = allCards.filter((c) => filter === "all" || (c.dataset.cats || "").split(",").includes(filter));
+      const filtered = allCards.filter((c) => filter === "all" || (c.dataset.cats || "").split(/[\s,]+/).filter(Boolean).includes(filter));
       if (desktopMode()) {
         const packed = packBatches(filtered);
         batches = packed.batches;
@@ -922,4 +922,33 @@
   }
   if (document.body) mount();
   else document.addEventListener("DOMContentLoaded", mount);
+})();
+
+/* ---------- Category chips on cards (derived from data-cats) ---------- */
+(function cardCategoryChips() {
+  var isEN = (document.documentElement.getAttribute("lang") || "").toLowerCase().indexOf("en") === 0;
+  var LABELS = isEN
+    ? { video: "Video", social: "Social", animacje: "3D/2D", eventy: "Event" }
+    : { video: "Wideo", social: "Social", animacje: "3D/2D", eventy: "Event" };
+  function build() {
+    var cards = document.querySelectorAll(".card[data-cats]");
+    cards.forEach(function (card) {
+      var info = card.querySelector(".card__info");
+      if (!info || info.querySelector(".card__cats")) return;
+      var cats = (card.getAttribute("data-cats") || "").split(/[\s,]+/).filter(Boolean);
+      if (!cats.length) return;
+      var row = document.createElement("div");
+      row.className = "card__cats";
+      cats.forEach(function (c) {
+        if (!LABELS[c]) return;
+        var chip = document.createElement("span");
+        chip.className = "card__cchip";
+        chip.textContent = LABELS[c];
+        row.appendChild(chip);
+      });
+      info.appendChild(row);
+    });
+  }
+  if (document.readyState !== "loading") build();
+  else document.addEventListener("DOMContentLoaded", build);
 })();

@@ -18,10 +18,10 @@
       follow: 0.09,
       fadeIn: 0.06,
       warpRadius: 0.22,
-      warpStrength: 0.045,
-      rippleStrength: 0.025,
+      warpStrength: 0,
+      rippleStrength: 0,
       glowRadius: 0.13,
-      glowStrength: 0.22,
+      glowStrength: 0,
       shadowStrength: 0.72
     }
   };
@@ -168,10 +168,8 @@
   function scheduleResize() { pendingResize = true; }
 
   function onMove(e) {
-    var rect = canvas.getBoundingClientRect();
-    mouse.tx = (e.clientX - rect.left) / rect.width;
-    mouse.ty = 1.0 - (e.clientY - rect.top) / rect.height;
-    mouse.tAmt = 1;
+    // cursor interaction with the smoke fully disabled — ambient animation only
+    mouse.tAmt = 0;
   }
 
   window.addEventListener('resize', scheduleResize);
