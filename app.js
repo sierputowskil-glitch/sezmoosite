@@ -236,14 +236,17 @@
   const fill = document.querySelector(".scrubber__fill");
   const head = document.querySelector(".scrubber__head");
   function updateScrub() {
+    if (!fill || !head) return;
     const h = document.documentElement.scrollHeight - window.innerHeight;
     const p = h > 0 ? (window.scrollY / h) * 100 : 0;
     fill.style.width = p + "%";
     head.style.left = p + "%";
   }
-  updateScrub();
-  window.addEventListener("scroll", updateScrub, { passive: true });
-  window.addEventListener("resize", updateScrub);
+  if (fill && head) {
+    updateScrub();
+    window.addEventListener("scroll", updateScrub, { passive: true });
+    window.addEventListener("resize", updateScrub);
+  }
 
   /* ---------- REVEAL on scroll (position-based; robust where IO is unreliable) ---------- */
   function revealCheck() {

@@ -96,7 +96,7 @@
     '  col = mix(col, fog, core * (u_glowStrength + 0.2 * smoothstep(0.2, 0.8, f)));',
     '  float vig = smoothstep(1.25, 0.35, distance(uv, vec2(0.5)));',
     '  col *= mix(0.72, 1.0, vig);',
-    '  float grain = (hash(gl_FragCoord.xy + fract(u_time*28.6)) - 0.5) * 0.055;',
+    '  float grain = (hash(gl_FragCoord.xy) - 0.5) * 0.03;',
     '  col += grain;',
     '  gl_FragColor = vec4(col, 1.0);',
     '}'
