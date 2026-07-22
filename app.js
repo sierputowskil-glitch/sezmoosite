@@ -130,6 +130,26 @@
     const menu = document.querySelector(".nav__menu");
     if (!btn || !menu) return;
 
+    // Enhance mobile menu: brand logo (top) + social icons (bottom). Hidden on desktop via CSS.
+    if (!menu.querySelector(".nav__menu-logo")) {
+      var srcBrand = document.querySelector(".brand");
+      var srcLogo = document.querySelector(".brand__logo");
+      var logo = document.createElement("a");
+      logo.className = "nav__menu-logo";
+      logo.setAttribute("aria-label", "SEZMOO");
+      if (srcBrand) logo.href = srcBrand.getAttribute("href") || "#top";
+      logo.innerHTML = '<img src="' + (srcLogo ? srcLogo.getAttribute("src") : "") + '" alt="SEZMOO" />';
+      var social = document.createElement("div");
+      social.className = "nav__social";
+      social.innerHTML =
+        '<a href="https://www.instagram.com/sezmoo/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>' +
+        '<a href="https://www.facebook.com/sezmooagencja" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7.2c0-.8.2-1.2 1.3-1.2H17V3.1C16.6 3 15.5 3 14.3 3 11.8 3 10.2 4.5 10.2 7v2H7.7v3h2.5v9h3.3v-9h2.5l.4-3H14z"/></svg></a>' +
+        '<a href="https://www.youtube.com/@sezmooagency" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.4-2.5.4-3.8s-.1-2.6-.4-3.8zM10 15V9l5.2 3L10 15z"/></svg></a>' +
+        '<a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.6H3.7V21h3.2V8.6zM5.3 3.2A1.9 1.9 0 1 0 5.3 7a1.9 1.9 0 0 0 0-3.8zM21 21h-3.2v-6.1c0-1.5 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V21H10.3V8.6h3v1.7h.1c.4-.8 1.5-1.7 3-1.7 3.3 0 3.9 2.1 3.9 4.9V21z"/></svg></a>';
+      menu.insertBefore(logo, menu.firstChild);
+      menu.appendChild(social);
+    }
+
     const setOpen = (open) => {
       btn.classList.toggle("is-open", open);
       menu.classList.toggle("is-open", open);
@@ -143,7 +163,7 @@
       if (e.key === "Escape") setOpen(false);
     });
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 860) setOpen(false);
+      if (window.innerWidth > 1100) setOpen(false);
     });
   })();
 
