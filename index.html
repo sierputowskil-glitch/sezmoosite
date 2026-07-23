@@ -39,7 +39,7 @@
   "name": "SEZMOO",
   "description": "Studio wideo i contentu z Gdańska. Produkcja filmów reklamowych, materiałów na social media, animacji 3D/2D i kampanii dla marek.",
   "url": "https://sezmoo.com/",
-  "email": "hello@sezmoo.com",
+  "email": "biuro@sezmoo.com",
   "telephone": "+48502260450",
   "image": "https://sezmoo.com/assets/brand/sezmoo-logo-wy.svg",
   "priceRange": "$",
@@ -435,64 +435,48 @@
       </div>
       <style>
       .services-static{margin-top:clamp(30px,4.5vh,60px)}
-      .fmt-wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(26px,4vw,66px);align-items:center;margin-top:clamp(28px,4vh,52px)}
-      .fmt-board{background:#0c0b09;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:clamp(18px,2.1vw,30px);position:relative;overflow:hidden}
-      .fmt-board::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:38px 38px;pointer-events:none}
-      .fmt-board__hud{position:relative;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:clamp(16px,1.8vw,22px)}
-      .fmt-board__hud b{color:#ffd200;font-weight:400}
-      .fmt-board__hud .dot{color:#ffd200;margin-right:8px}
-      .fmt-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1vw,15px)}
-      .fmt-cell{border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:clamp(14px,1.4vw,18px);background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:12px;min-height:158px}
-      .fmt-cell--hero{border-color:rgba(255,210,0,.55);background:linear-gradient(165deg,rgba(255,210,0,.08),rgba(255,255,255,.02))}
-      .fmt-cell__glyph{height:54px;display:flex;align-items:flex-end}
-      .fmt-cell__glyph i{display:block;border:1.5px solid rgba(255,255,255,.32);background:rgba(255,255,255,.04);border-radius:2px}
-      .fmt-cell--hero .fmt-cell__glyph i{border-color:#ffd200;background:rgba(255,210,0,.1)}
-      .g-wide i{width:94px;height:53px}
-      .g-vertical i{width:30px;height:53px}
-      .g-square i{width:53px;height:53px}
-      .g-banner i{width:102px;height:26px}
-      .fmt-cell__badge{font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;color:#ffd200}
-      .fmt-cell__name{font-family:var(--font-display);font-weight:760;font-stretch:106%;font-size:clamp(16px,1.3vw,21px);line-height:1;color:#f4f0e6}
-      .fmt-cell__desc{font-size:12.5px;line-height:1.45;color:rgba(255,255,255,.48);margin-top:auto}
-      .fmt-board__flow{position:relative;display:flex;align-items:center;gap:12px;margin-top:clamp(16px,1.8vw,22px);font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:rgba(255,255,255,.5)}
-      .fmt-board__flow i{flex:1;height:1px;background:rgba(255,255,255,.16)}
-      .fmt-board__flow b{color:#ffd200;font-weight:400}
+      .fmt-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(26px,4vw,66px);align-items:center;margin-top:clamp(28px,4vh,52px)}
+      .fmt2{position:relative;background:#0c0b09;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:clamp(18px,2.1vw,28px);overflow:hidden}
+      .fmt2::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+      .fmt2__hud{position:relative;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:15px}
+      .fmt2__hud .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ffd200;margin-right:8px;vertical-align:middle}
+      .fmt2__master{position:relative;border-radius:9px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.1)}
+      .fmt2__frames{display:flex;gap:4px;padding:9px}
+      .fmt2__frames i{flex:1;height:clamp(44px,6vw,62px);border-radius:3px;background:linear-gradient(135deg,rgba(255,210,0,.24),rgba(255,255,255,.05))}
+      .fmt2__frames i:nth-child(even){background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03))}
+      .fmt2__sprk{height:11px;background:#0a0a09;background-image:repeating-linear-gradient(90deg,transparent 0 8px,rgba(255,255,255,.13) 8px 13px)}
+      .fmt2__mlbl{position:absolute;top:8px;left:10px;font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.72);background:rgba(0,0,0,.5);padding:3px 7px;border-radius:3px}
+      .fmt2__split{position:relative;display:flex;align-items:center;gap:12px;margin:14px 0;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#ffd200;white-space:nowrap}
+      .fmt2__split::before,.fmt2__split::after{content:"";flex:1;height:1px;background:rgba(255,210,0,.26)}
+      .fmt2__outs{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+      .fmt2__out{display:flex;align-items:center;gap:13px;padding:13px 14px;border-radius:9px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1)}
+      .fmt2__shape{flex:none;background:rgba(255,210,0,.16);border:1px solid rgba(255,210,0,.5);border-radius:2px}
+      .s-169{width:44px;height:25px}.s-916{width:20px;height:36px}.s-11{width:32px;height:32px}.s-ban{width:48px;height:16px}
+      .fmt2__out .r{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;color:#ffd200;margin-bottom:4px}
+      .fmt2__out h4{font-family:var(--font-display);font-weight:720;font-stretch:104%;font-size:clamp(14px,1.1vw,17px);line-height:1;color:#f4f0e6;margin:0}
+      .fmt2__out p{font-size:11.5px;line-height:1.35;color:rgba(255,255,255,.45);margin:5px 0 0}
       .fmt-copy .eyebrow{margin-bottom:18px}
       .fmt-copy__title{font-family:var(--font-display);font-weight:800;font-stretch:104%;font-size:clamp(30px,3.6vw,52px);line-height:1;letter-spacing:-.02em;margin:0 0 clamp(16px,1.6vw,20px)}
       .fmt-copy__p{color:var(--fg-dim);font-size:clamp(15px,1.15vw,17px);line-height:1.6;max-width:44ch;margin:0 0 clamp(22px,2.4vw,30px)}
       @media(max-width:1000px){.fmt-wrap{grid-template-columns:1fr;gap:32px}}
-      @media(max-width:520px){.fmt-grid{grid-template-columns:1fr}}
+      @media(max-width:520px){.fmt2__outs{grid-template-columns:1fr}}
       </style>
       <div class="fmt-wrap">
-        <div class="fmt-board">
-          <div class="fmt-board__hud"><span><span class="dot">●</span>1 produkcja → <b>wiele formatów</b></span><span>00:01:05:06</span></div>
-          <div class="fmt-grid">
-            <div class="fmt-cell fmt-cell--hero">
-              <div class="fmt-cell__glyph g-wide"><i></i></div>
-              <span class="fmt-cell__badge">16:9</span>
-              <div class="fmt-cell__name">Hero film</div>
-              <p class="fmt-cell__desc">Główny film na stronę, YouTube i prezentacje ofertowe.</p>
-            </div>
-            <div class="fmt-cell">
-              <div class="fmt-cell__glyph g-vertical"><i></i></div>
-              <span class="fmt-cell__badge">9:16</span>
-              <div class="fmt-cell__name">Reels / Shorts</div>
-              <p class="fmt-cell__desc">Pionowe wersje pod Reels, TikTok i YouTube Shorts.</p>
-            </div>
-            <div class="fmt-cell">
-              <div class="fmt-cell__glyph g-square"><i></i></div>
-              <span class="fmt-cell__badge">1:1</span>
-              <div class="fmt-cell__name">Social ads</div>
-              <p class="fmt-cell__desc">Kwadratowe formaty pod płatne kampanie w social media.</p>
-            </div>
-            <div class="fmt-cell">
-              <div class="fmt-cell__glyph g-banner"><i></i></div>
-              <span class="fmt-cell__badge">Bilbordy / WWW</span>
-              <div class="fmt-cell__name">Kreacje kampanijne</div>
-              <p class="fmt-cell__desc">Grafiki, banery i miniatury spinające całą kampanię.</p>
-            </div>
+        <div class="fmt2">
+          <div class="fmt2__hud"><span><span class="dot"></span>1 produkcja</span><span>4K · 24FPS · Gdańsk</span></div>
+          <div class="fmt2__master">
+            <div class="fmt2__sprk"></div>
+            <div class="fmt2__frames"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="fmt2__sprk"></div>
+            <span class="fmt2__mlbl">MASTER · plan zdjęciowy</span>
           </div>
-          <div class="fmt-board__flow"><span>RAW</span><i></i><span>EDIT</span><i></i><b>EXPORT</b></div>
+          <div class="fmt2__split">z jednego materiału → 4 formaty</div>
+          <div class="fmt2__outs">
+            <div class="fmt2__out"><span class="fmt2__shape s-169"></span><div><span class="r">16:9</span><h4>Hero film</h4><p>Strona, YouTube, oferty</p></div></div>
+            <div class="fmt2__out"><span class="fmt2__shape s-916"></span><div><span class="r">9:16</span><h4>Reels / Shorts</h4><p>Reels, TikTok, Shorts</p></div></div>
+            <div class="fmt2__out"><span class="fmt2__shape s-11"></span><div><span class="r">1:1</span><h4>Social ads</h4><p>Kampanie płatne</p></div></div>
+            <div class="fmt2__out"><span class="fmt2__shape s-ban"></span><div><span class="r">Bilbordy / WWW</span><h4>Kreacje kampanijne</h4><p>Banery, miniatury, KV</p></div></div>
+          </div>
         </div>
         <div class="fmt-copy">
           <span class="eyebrow"><span class="tick"></span>Co dostajesz</span>
@@ -599,9 +583,6 @@
       <div class="team-card__photo"><span>HF</span></div>
       <div class="team-card__body">
         <span class="team-card__no">T·02</span>
-      </div>
-      <div class="team-card__body">
-        <span class="team-card__no">T·02</span>
         <h3 class="team-card__name">Hubert Fudała</h3>
         <p class="team-card__role">Operator kamery i montażysta</p>
       </div>
@@ -618,9 +599,6 @@
       <div class="team-card__photo"><span>OU</span></div>
       <div class="team-card__body">
         <span class="team-card__no">T·04</span>
-      </div>
-      <div class="team-card__body">
-        <span class="team-card__no">T·04</span>
         <h3 class="team-card__name">Olga Urbańska</h3>
         <p class="team-card__role">Specjalistka ds. social media i contentu</p>
       </div>
@@ -635,9 +613,6 @@
     </article>
     <article class="team-card reveal" data-d="2">
       <div class="team-card__photo"><span>RS</span></div>
-      <div class="team-card__body">
-        <span class="team-card__no">T·06</span>
-      </div>
       <div class="team-card__body">
         <span class="team-card__no">T·06</span>
         <h3 class="team-card__name">Radosław Schenk</h3>

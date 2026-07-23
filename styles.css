@@ -349,6 +349,8 @@ main {
   }
   .nav__tc .label { display: none; }
   .nav__burger {
+    position: relative;
+    z-index: 97;
     width: 42px;
     height: 42px;
     flex: 0 0 42px;
@@ -371,6 +373,11 @@ main {
   .nav__burger.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
   .nav__burger.is-open span:nth-child(2) { opacity: 0; }
   .nav__burger.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .nav__burger.is-open {
+    background: oklch(0.12 0.004 60 / 0.9);
+    border-color: #ffd200;
+  }
+  .nav__burger.is-open span { background: #ffd200; }
 }
 
 /* ============================================================

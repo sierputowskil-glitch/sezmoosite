@@ -205,7 +205,7 @@
     bar.appendChild(makeItem({ href: "tel:+48502260450", svg: ICO.phone, label: T.phone, aria: T.aphone }));
 
     // 2 · E-mail
-    bar.appendChild(makeItem({ href: "mailto:hello@sezmoo.com", svg: ICO.mail, label: T.mail, aria: T.amail }));
+    bar.appendChild(makeItem({ href: "mailto:biuro@sezmoo.com", svg: ICO.mail, label: T.mail, aria: T.amail }));
 
     // 3 · CENTER — scroll to top (raised yellow puck)
     bar.appendChild(makeItem({
