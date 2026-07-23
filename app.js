@@ -572,30 +572,20 @@
     const chunk = (arr, n) => { const o = []; for (let i = 0; i < arr.length; i += n) o.push(arr.slice(i, i + n)); return o; };
 
     let places = new Map();
-    const isPortrait = (c) => c.getAttribute("data-short") === "1";
-    // Orientation-aware packer: 4 bands (3 cols each) x 2 rows.
-    // Portrait/short = full-height vertical tile (2 rows); others = square/rect (1 row).
+    // Uniform grid packer: 4 columns × 2 rows = 8 equal tiles per batch, row-major.
     function packBatches(cards) {
       const out = [];
       const pl = new Map();
-      let bands, batch;
-      const fresh = () => { bands = [0, 0, 0, 0]; batch = []; out.push(batch); };
-      const col = (b) => (b * 3 + 1) + " / " + (b * 3 + 4);
-      fresh();
-      cards.forEach((c) => {
-        if (isPortrait(c)) {
-          let b = bands.indexOf(0);
-          if (b === -1) { fresh(); b = 0; }
-          pl.set(c, [col(b), "1 / 3"]);
-          bands[b] = 2; batch.push(c);
-        } else {
-          let b = bands.findIndex((v) => v < 2);
-          if (b === -1) { fresh(); b = 0; }
-          const row = bands[b];
-          pl.set(c, [col(b), (row + 1) + " / " + (row + 2)]);
-          bands[b] = row + 1; batch.push(c);
-        }
-      });
+      const COLS = 4, ROWS = 2, PERB = COLS * ROWS;
+      const col = (c) => (c * 3 + 1) + " / " + (c * 3 + 4);
+      for (let i = 0; i < cards.length; i += PERB) {
+        const batch = cards.slice(i, i + PERB);
+        out.push(batch);
+        batch.forEach((c, j) => {
+          const r = Math.floor(j / COLS), cc = j % COLS;
+          pl.set(c, [col(cc), (r + 1) + " / " + (r + 2)]);
+        });
+      }
       if (out.length && out[out.length - 1].length === 0) out.pop();
       return { batches: out, places: pl };
     }
