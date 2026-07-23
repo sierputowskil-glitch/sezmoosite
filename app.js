@@ -27,6 +27,14 @@
       var src = img.getAttribute("src") || "";
       var next = src.replace(/sezmoo-logo-(wy|by)\.svg/, want);
       if (next !== src) img.setAttribute("src", next);
+      // mobile menu logo clone: light panel → black+yellow (by), dark panel → white+yellow (wy)
+      var mimg = document.querySelector(".nav__menu-logo img");
+      if (mimg) {
+        var mwant = light ? "sezmoo-logo-by.svg" : "sezmoo-logo-wy.svg";
+        var msrc = mimg.getAttribute("src") || "";
+        var mnext = msrc.replace(/sezmoo-logo-(wy|by)\.svg/, mwant);
+        if (mnext !== msrc) mimg.setAttribute("src", mnext);
+      }
     }
     apply();
     new MutationObserver(apply).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
@@ -138,7 +146,10 @@
       logo.className = "nav__menu-logo";
       logo.setAttribute("aria-label", "SEZMOO");
       if (srcBrand) logo.href = srcBrand.getAttribute("href") || "#top";
-      logo.innerHTML = '<img src="' + (srcLogo ? srcLogo.getAttribute("src") : "") + '" alt="SEZMOO" />';
+      var baseLogoSrc = srcLogo ? srcLogo.getAttribute("src") : "";
+      var menuLight = (document.documentElement.getAttribute("data-theme") || "dark") === "light";
+      var menuLogoSrc = baseLogoSrc.replace(/sezmoo-logo-(wy|by)\.svg/, menuLight ? "sezmoo-logo-by.svg" : "sezmoo-logo-wy.svg");
+      logo.innerHTML = '<img src="' + menuLogoSrc + '" alt="SEZMOO" />';
       var social = document.createElement("div");
       social.className = "nav__social";
       social.innerHTML =
