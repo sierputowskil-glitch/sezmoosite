@@ -102,11 +102,10 @@
   .pt-shell { grid-template-columns:1fr; gap:22px; }
   .pt-side { position:static; }
   .pt-side__label { display:none; }
-  .pt-side__list { flex-direction:row; flex-wrap:nowrap; gap:8px; overflow-x:auto; padding-bottom:14px;
-    border-bottom:1px solid var(--line); -webkit-overflow-scrolling:touch; scrollbar-width:none; }
-  .pt-side__list::-webkit-scrollbar { display:none; }
-  .pt-navlink { flex:0 0 auto; font-size:13px; letter-spacing:.1em; line-height:1; white-space:nowrap;
-    border:1px solid var(--line); border-radius:100px; padding:10px 16px; }
+  .pt-side__list { flex-direction:row; flex-wrap:wrap; gap:8px; padding-bottom:14px;
+    border-bottom:1px solid var(--line); }
+  .pt-navlink { flex:0 0 auto; font-size:13px; letter-spacing:.08em; line-height:1; white-space:nowrap;
+    border:1px solid var(--line); border-radius:100px; padding:9px 14px; }
   .pt-navlink .n { font-size:11px; transform:none; margin-left:2px; }
   .pt-navlink:hover { transform:none; }
   .pt-navlink.is-on { color:var(--on-accent); background:var(--rec); border-color:var(--rec); }
@@ -116,13 +115,17 @@
   .pt-grid { column-count:1; }
   .pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:4/5; }
 }
-.portfolio-page { overflow-x:clip; }
+.portfolio-page { overflow-x:clip; width:100%; }
 @media (max-width:600px){
-  .pt-hero { padding:120px 18px 6px; }
-  .pt-hero h1 { font-size:clamp(32px,11vw,50px); line-height:.96; }
+  .pt-hero { padding:116px 20px 6px; }
+  .pt-hero h1 { font-size:clamp(30px,9.2vw,46px); line-height:.98; }
   .pt-hero__top { gap:14px; }
   .pt-hero__lead { font-size:14px; }
-  .pt-shell { padding-left:18px; padding-right:18px; }
+  .pt-shell { padding:20px 20px 60px; gap:18px; }
+  .pt-grid { column-count:1; column-gap:0; }
+  .pt-tile { margin-bottom:20px; }
+  .pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:4/5; }
+  .pt-title { font-size:26px; }
 }
 
 /* video modal */
@@ -155,11 +158,11 @@
   <aside class="pt-side">
     <span class="pt-side__label">Categories</span>
     <div class="pt-side__list" id="pt-filters">
-      <button class="pt-navlink is-on" type="button" data-filter="all">All <span class="n">{18}</span></button>
-      <button class="pt-navlink" type="button" data-filter="video">Video <span class="n">{05}</span></button>
+      <button class="pt-navlink is-on" type="button" data-filter="all">All <span class="n">{32}</span></button>
+      <button class="pt-navlink" type="button" data-filter="video">Video <span class="n">{17}</span></button>
       <button class="pt-navlink" type="button" data-filter="eventy">Events <span class="n">{04}</span></button>
       <button class="pt-navlink" type="button" data-filter="foto">Photo <span class="n">{01}</span></button>
-      <button class="pt-navlink" type="button" data-filter="animacje">Animation <span class="n">{01}</span></button>
+      <button class="pt-navlink" type="button" data-filter="animacje">Animation <span class="n">{03}</span></button>
       <button class="pt-navlink" type="button" data-filter="grafika">Graphics <span class="n">{07}</span></button>
     </div>
   </aside>
@@ -179,6 +182,11 @@
     <div class="pt-media"><img src="https://i.ytimg.com/vi/OJnUGJdFk9w/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/OJnUGJdFk9w/hqdefault.jpg'" alt="DENZA" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">Z9 GT premiere · Event</span><span class="pt-cap__year">2025</span></div>
     <h3 class="pt-title">DENZA</h3>
+  </a>
+  <a class="pt-tile" data-ratio="portrait" data-cats="eventy" data-media="img" href="../../realizacja-exlantix.html">
+    <div class="pt-media"><img src="../../assets/portfolio/exlantix/ex-206.jpg" alt="Premiera EXLANTIX w Gdańsku" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Brand premiere · Event</span><span class="pt-cap__year">2025</span></div>
+    <h3 class="pt-title">EXLANTIX</h3>
   </a>
   <a class="pt-tile" data-ratio="portrait" data-cats="video" data-media="yt" data-id="Hdnf6zcn3bA" data-short="1" data-case="1">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/Hdnf6zcn3bA/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/Hdnf6zcn3bA/hqdefault.jpg'" alt="JAECOO 8" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Short</span><span class="pt-media__open" aria-hidden="true">→</span></div>
@@ -210,13 +218,13 @@
     <div class="pt-cap"><span class="pt-cap__tags">Factory model · 3D animation</span><span class="pt-cap__year">2024</span></div>
     <h3 class="pt-title">Baltic 3D</h3>
   </a>
-  <a class="pt-tile" data-ratio="square" data-cats="animacje" data-media="img" data-yt-todo="1">
-    <div class="pt-media" style="display:grid;place-items:center;background:var(--bg-3);"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-faint);">Link soon</span><span class="pt-media__badge"><span class="d"></span>Animation</span></div>
+  <a class="pt-tile" data-ratio="wide" data-cats="animacje" data-media="yt" data-id="DFj4rZzxHXA">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/DFj4rZzxHXA/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/DFj4rZzxHXA/hqdefault.jpg'" alt="VTS Group" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Animation</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">3D animation · Video</span><span class="pt-cap__year">2024</span></div>
     <h3 class="pt-title">VTS Group</h3>
   </a>
-  <a class="pt-tile" data-ratio="square" data-cats="animacje" data-media="img" data-yt-todo="1">
-    <div class="pt-media" style="display:grid;place-items:center;background:var(--bg-3);"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-faint);">Link soon</span><span class="pt-media__badge"><span class="d"></span>Animation</span></div>
+  <a class="pt-tile" data-ratio="portrait" data-cats="animacje" data-media="yt" data-id="kCAxex9-oN4" data-short="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/kCAxex9-oN4/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/kCAxex9-oN4/hqdefault.jpg'" alt="JAECOO Mundial" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Animation</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">Contest results · Animation</span><span class="pt-cap__year">2024</span></div>
     <h3 class="pt-title">JAECOO Mundial</h3>
   </a>

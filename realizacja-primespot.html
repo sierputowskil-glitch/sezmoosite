@@ -124,9 +124,9 @@
     <span class="cs-sec__no reveal">[ 02 ] · DWIE LINIE KREATYWNE</span>
     <h2 class="cs-sec__title reveal">Ten sam projekt,<br>dwa nastroje.</h2>
   </div>
-  <div class="ad-grid--phones" style="display:grid;place-items:center;margin-top:clamp(28px,4vh,48px)">
+  <div class="ad-grid ad-grid--phones reveal" style="margin-top:clamp(28px,4vh,48px)">
     <figure class="ad-phone ad-story reveal">
-      <script type="application/json" class="ad-story__data">[{"src":"assets/portfolio/primespot/pjur-blue-story-1.jpg","alt":"PrimeSpot Przystań Jurata, linia wieczorna: Lokalizacja, która procentuje, Stories 9:16","cap":"Linia 1 · Wieczór / „Przystań”"},{"src":"assets/portfolio/primespot/pjur-warm-story-1.jpg","alt":"PrimeSpot, linia ciepła: Przystań, która otula spokojem morza, zachód słońca, Stories 9:16","cap":"Linia 2 · Zachód / „Miejsce nad morzem”"}]</script>
+      <script type="application/json" class="ad-story__data">[{"src":"assets/portfolio/primespot/pjur-blue-story-1.jpg","alt":"PrimeSpot Stories"},{"src":"assets/portfolio/primespot/story-1.jpg","alt":"PrimeSpot Stories"},{"src":"assets/portfolio/primespot/story-2.png","alt":"PrimeSpot Stories"},{"src":"assets/portfolio/primespot/story-3.png","alt":"PrimeSpot Stories"}]</script>
       <div class="ad-phone__screen">
         <img class="ad-story__img" alt="" loading="lazy" />
         <div class="ad-phone__ui">
@@ -137,7 +137,21 @@
         <button class="ad-story__zone ad-story__prev" type="button" aria-label="Poprzednia"></button>
         <button class="ad-story__zone ad-story__next" type="button" aria-label="Następna"></button>
       </div>
-      <figcaption class="ad-cap ad-story__cap"></figcaption>
+      <figcaption class="ad-cap">Linia 1 · Stories</figcaption>
+    </figure>
+    <figure class="ad-phone ad-story reveal">
+      <script type="application/json" class="ad-story__data">[{"src":"assets/portfolio/primespot/pjur-warm-story-1.jpg","alt":"PrimeSpot Stories"},{"src":"assets/portfolio/primespot/story-4.png","alt":"PrimeSpot Stories"},{"src":"assets/portfolio/primespot/story-5.png","alt":"PrimeSpot Stories"}]</script>
+      <div class="ad-phone__screen">
+        <img class="ad-story__img" alt="" loading="lazy" />
+        <div class="ad-phone__ui">
+          <div class="ad-phone__top ad-story__bars"></div>
+          <div class="ad-phone__hdr"><span class="ad-phone__av">PS</span><span><span class="ad-phone__name">primespot</span><span class="ad-phone__spon">Sponsorowane</span></span></div>
+          <span class="ad-phone__cta">Dowiedz się więcej</span>
+        </div>
+        <button class="ad-story__zone ad-story__prev" type="button" aria-label="Poprzednia"></button>
+        <button class="ad-story__zone ad-story__next" type="button" aria-label="Następna"></button>
+      </div>
+      <figcaption class="ad-cap">Linia 2 · Stories</figcaption>
     </figure>
   </div>
   <div class="shell">
@@ -327,7 +341,7 @@
     data.forEach(function(d){ var p=new Image(); p.src=d.src; });
     function show(n){
       idx=(n+data.length)%data.length;
-      img.src=data[idx].src; img.alt=data[idx].alt||''; if(cap) cap.textContent=data[idx].cap||'';
+      img.src=data[idx].src; img.alt=data[idx].alt||''; if(cap&&data[idx].cap) cap.textContent=data[idx].cap;
       bars.forEach(function(b,i){ b.style.transition='none'; b.style.width=(i<idx?'100%':'0%'); });
       void wrap.offsetWidth;
       var b=bars[idx]; if(b){ b.style.transition='width '+DUR+'ms linear'; b.style.width='100%'; }
