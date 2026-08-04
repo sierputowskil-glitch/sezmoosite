@@ -57,9 +57,9 @@
 .pt-navlink.is-on .n { color:var(--rec); opacity:.85; }
 
 /* ---- grid (true masonry, tightly packed) ---- */
-.pt-grid { column-count:2; column-gap:clamp(16px,1.8vw,30px); }
+.pt-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,2.4vw,42px) clamp(16px,1.8vw,30px); align-items:start; }
 
-.pt-tile { display:block; break-inside:avoid; margin:0 0 clamp(24px,2.4vw,42px); will-change:transform; transform:perspective(1200px); text-align:left; color:inherit; font:inherit; background:none; border:0; padding:0;
+.pt-tile { display:block; break-inside:avoid; margin:0; will-change:transform; transform:perspective(1200px); text-align:left; color:inherit; font:inherit; background:none; border:0; padding:0;
   cursor:pointer; width:100%; }
 .pt-tile.is-hide { display:none; }
 .pt-media { position:relative; overflow:hidden; border-radius:10px; background:var(--bg-3);
@@ -112,7 +112,7 @@
   .pt-navlink.is-on .n { color:var(--on-accent); }
 }
 @media (max-width:760px){
-  .pt-grid { column-count:1; }
+  .pt-grid { grid-template-columns:1fr; }
   .pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:4/5; }
 }
 .portfolio-page { overflow-x:clip; width:100%; }
@@ -122,7 +122,7 @@
   .pt-hero__top { gap:14px; }
   .pt-hero__lead { font-size:14px; }
   .pt-shell { padding:20px 20px 60px; gap:18px; }
-  .pt-grid { column-count:1; column-gap:0; }
+  .pt-grid { grid-template-columns:1fr; }
   .pt-tile { margin-bottom:20px; }
   .pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:4/5; }
   .pt-title { font-size:26px; }
@@ -158,9 +158,9 @@
   <aside class="pt-side">
     <span class="pt-side__label">Kategorie</span>
     <div class="pt-side__list" id="pt-filters">
-      <button class="pt-navlink is-on" type="button" data-filter="all">Wszystko <span class="n">{32}</span></button>
-      <button class="pt-navlink" type="button" data-filter="video">Wideo <span class="n">{17}</span></button>
-      <button class="pt-navlink" type="button" data-filter="eventy">Eventy <span class="n">{04}</span></button>
+      <button class="pt-navlink is-on" type="button" data-filter="all">Wszystko <span class="n">{35}</span></button>
+      <button class="pt-navlink" type="button" data-filter="video">Wideo <span class="n">{19}</span></button>
+      <button class="pt-navlink" type="button" data-filter="eventy">Eventy <span class="n">{05}</span></button>
       <button class="pt-navlink" type="button" data-filter="foto">Foto <span class="n">{01}</span></button>
       <button class="pt-navlink" type="button" data-filter="animacje">Animacje <span class="n">{03}</span></button>
       <button class="pt-navlink" type="button" data-filter="grafika">Grafika <span class="n">{07}</span></button>
@@ -168,165 +168,180 @@
   </aside>
 
   <section class="pt-grid" id="pt-grid" data-screen-label="Portfolio kafle">
-  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="jco18tIaCT0" data-case="1">
-    <div class="pt-media"><img src="https://i.ytimg.com/vi/jco18tIaCT0/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/jco18tIaCT0/hqdefault.jpg'" alt="CRT" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Film</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Film wizerunkowy · Wideo</span><span class="pt-cap__year">2024</span></div>
-    <h3 class="pt-title">CRT</h3>
+  <a class="pt-tile" data-ratio="portrait" data-cats="eventy" data-media="img" href="../realizacja-exlantix.html">
+    <div class="pt-media"><img src="../assets/portfolio/exlantix/ex-206.jpg" alt="Premiera EXLANTIX w Gdańsku" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Premiera marki · Event</span></div>
+    <h3 class="pt-title">EXLANTIX</h3>
   </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="NHEIfdgr9mI" data-case="1">
-    <div class="pt-media"><img src="https://i.ytimg.com/vi/NHEIfdgr9mI/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/NHEIfdgr9mI/hqdefault.jpg'" alt="IZIPAK" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Film</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Film produktowy · Wideo</span><span class="pt-cap__year">2024</span></div>
-    <h3 class="pt-title">IZIPAK</h3>
+  <a class="pt-tile" data-ratio="portrait" data-cats="video" data-media="yt" data-id="WG5ufZMfjQ8" data-short="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/WG5ufZMfjQ8/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WG5ufZMfjQ8/hqdefault.jpg'" alt="Audi RS5" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Trailer · Wideo</span></div>
+    <h3 class="pt-title">Audi RS5</h3>
+  </a>
+  <a class="pt-tile" data-ratio="portrait" data-cats="animacje" data-media="yt" data-id="kCAxex9-oN4" data-short="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/kCAxex9-oN4/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/kCAxex9-oN4/hqdefault.jpg'" alt="JAECOO Mundial" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Animacja</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Wyniki konkursu · Animacja</span></div>
+    <h3 class="pt-title">JAECOO Mundial</h3>
   </a>
   <a class="pt-tile" data-ratio="portrait" data-cats="eventy" data-media="yt" data-id="OJnUGJdFk9w" data-short="1" href="../realizacja-denza.html">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/OJnUGJdFk9w/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/OJnUGJdFk9w/hqdefault.jpg'" alt="DENZA" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Premiera Z9 GT · Event</span><span class="pt-cap__year">2025</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Premiera Z9 GT · Event</span></div>
     <h3 class="pt-title">DENZA</h3>
   </a>
-  <a class="pt-tile" data-ratio="portrait" data-cats="eventy" data-media="img" href="../realizacja-exlantix.html">
-    <div class="pt-media"><img src="../assets/portfolio/exlantix/ex-206.jpg" alt="Premiera EXLANTIX w Gdańsku" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Premiera marki · Event</span><span class="pt-cap__year">2025</span></div>
-    <h3 class="pt-title">EXLANTIX</h3>
+  <a class="pt-tile" data-ratio="portrait" data-cats="video" data-media="yt" data-id="lD11UTII6Ko" data-short="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/lD11UTII6Ko/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/lD11UTII6Ko/hqdefault.jpg'" alt="Dzień Mamy · OMODA JAECOO" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">OMODA JAECOO · Wideo</span></div>
+    <h3 class="pt-title">Dzień Mamy</h3>
   </a>
   <a class="pt-tile" data-ratio="portrait" data-cats="video" data-media="yt" data-id="Hdnf6zcn3bA" data-short="1" data-case="1">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/Hdnf6zcn3bA/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/Hdnf6zcn3bA/hqdefault.jpg'" alt="JAECOO 8" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Short</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Lifestyle · Wideo</span><span class="pt-cap__year">2025</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Lifestyle · Wideo</span></div>
     <h3 class="pt-title">JAECOO 8</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="tPSlDvHGSH0">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/tPSlDvHGSH0/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tPSlDvHGSH0/hqdefault.jpg'" alt="Audi Plichta" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Dzień Kobiet 2025 · Wideo</span></div>
+    <h3 class="pt-title">Audi Plichta</h3>
+  </a>
+  <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img" data-src="../assets/portfolio/primespot/pjur-blue-square-1.jpg" href="../realizacja-primespot.html">
+    <div class="pt-media"><img src="../assets/portfolio/primespot/pjur-blue-square-1.jpg" alt="PrimeSpot" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Przystań Jurata · Kampania Meta Ads</span></div>
+    <h3 class="pt-title">PrimeSpot</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="eventy" data-media="img" href="../realizacja-world-of-warships.html">
+    <div class="pt-media"><img src="../assets/work/captains-club-int.avif" alt="World of Warships · Captain's Club" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Captain's Club · Event</span></div>
+    <h3 class="pt-title">World of Warships</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="animacje" data-media="yt" data-id="WszuntCE51c" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/WszuntCE51c/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WszuntCE51c/hqdefault.jpg'" alt="Baltic 3D" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>3D</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Model fabryki · Animacja 3D</span></div>
+    <h3 class="pt-title">Baltic 3D</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="eventy" data-media="yt" data-id="wVy04YYnbRM" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/wVy04YYnbRM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/wVy04YYnbRM/hqdefault.jpg'" alt="PISF" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Event</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Relacja · Event</span></div>
+    <h3 class="pt-title">PISF</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="jco18tIaCT0" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/jco18tIaCT0/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/jco18tIaCT0/hqdefault.jpg'" alt="CRT" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Film</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film wizerunkowy · Wideo</span></div>
+    <h3 class="pt-title">CRT</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="eventy" data-media="yt" data-id="tvTuMX3mxG4" data-case="1">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/tvTuMX3mxG4/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tvTuMX3mxG4/hqdefault.jpg'" alt="Baltic Towers" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Event</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Otwarcie · Event</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Otwarcie · Event</span></div>
     <h3 class="pt-title">Baltic Towers</h3>
   </a>
   <a class="pt-tile" data-ratio="portrait" data-cats="video" data-media="yt" data-id="X8-hf_cyZxE" data-short="1" data-case="1">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/X8-hf_cyZxE/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/X8-hf_cyZxE/hqdefault.jpg'" alt="BYD Dolphin" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Short</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Automotive · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Automotive · Wideo</span></div>
     <h3 class="pt-title">BYD Dolphin</h3>
-  </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="iknT-xURZag" data-case="1">
-    <div class="pt-media"><img src="https://i.ytimg.com/vi/iknT-xURZag/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/iknT-xURZag/hqdefault.jpg'" alt="Gdańsk Miastem Kultury" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Miastem Kultury · Wideo</span><span class="pt-cap__year">2023</span></div>
-    <h3 class="pt-title">Gdańsk</h3>
-  </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="eventy" data-media="yt" data-id="wVy04YYnbRM" data-case="1">
-    <div class="pt-media"><img src="https://i.ytimg.com/vi/wVy04YYnbRM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/wVy04YYnbRM/hqdefault.jpg'" alt="PISF" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Event</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Relacja · Event</span><span class="pt-cap__year">2024</span></div>
-    <h3 class="pt-title">PISF</h3>
-  </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="animacje" data-media="yt" data-id="WszuntCE51c" data-case="1">
-    <div class="pt-media"><img src="https://i.ytimg.com/vi/WszuntCE51c/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WszuntCE51c/hqdefault.jpg'" alt="Baltic 3D" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>3D</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Model fabryki · Animacja 3D</span><span class="pt-cap__year">2024</span></div>
-    <h3 class="pt-title">Baltic 3D</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="animacje" data-media="yt" data-id="DFj4rZzxHXA">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/DFj4rZzxHXA/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/DFj4rZzxHXA/hqdefault.jpg'" alt="VTS Group" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Animacja</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Animacja 3D · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Animacja 3D · Wideo</span></div>
     <h3 class="pt-title">VTS Group</h3>
-  </a>
-  <a class="pt-tile" data-ratio="portrait" data-cats="animacje" data-media="yt" data-id="kCAxex9-oN4" data-short="1">
-    <div class="pt-media"><img src="https://i.ytimg.com/vi/kCAxex9-oN4/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/kCAxex9-oN4/hqdefault.jpg'" alt="JAECOO Mundial" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Animacja</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Wyniki konkursu · Animacja</span><span class="pt-cap__year">2024</span></div>
-    <h3 class="pt-title">JAECOO Mundial</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="IH3xK5yzSGI">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/IH3xK5yzSGI/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/IH3xK5yzSGI/hqdefault.jpg'" alt="Gaja Park" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Doraco · Film promocyjny</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Doraco · Film promocyjny</span></div>
     <h3 class="pt-title">Gaja Park</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="foNjF4rmI6A">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/foNjF4rmI6A/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/foNjF4rmI6A/hqdefault.jpg'" alt="Rydzówka Resort" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Film reklamowy</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film reklamowy</span></div>
     <h3 class="pt-title">Rydzówka Resort</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="uEQx8bXv1uM">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/uEQx8bXv1uM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/uEQx8bXv1uM/hqdefault.jpg'" alt="Szkoła Baletowa" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Gdańsk · Film promocyjny</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Gdańsk · Film promocyjny</span></div>
     <h3 class="pt-title">Szkoła Baletowa</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="phXKtUNlDuM">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/phXKtUNlDuM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/phXKtUNlDuM/hqdefault.jpg'" alt="DORACO" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">TVP · Realizacja</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">TVP · Realizacja</span></div>
     <h3 class="pt-title">DORACO</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="bCxvqDc8HYs" data-case="1">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/bCxvqDc8HYs/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bCxvqDc8HYs/hqdefault.jpg'" alt="Porto Mare" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">DS Development · Film promocyjny</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">DS Development · Film promocyjny</span></div>
     <h3 class="pt-title">Porto Mare</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="pDQ8vGDMLDM">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/pDQ8vGDMLDM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/pDQ8vGDMLDM/hqdefault.jpg'" alt="BYD Świąteczny" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Film świąteczny · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film świąteczny · Wideo</span></div>
     <h3 class="pt-title">BYD Świąteczny</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="EYep01WK7G0">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/EYep01WK7G0/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/EYep01WK7G0/hqdefault.jpg'" alt="Land Rover" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Film promocyjny · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film promocyjny · Wideo</span></div>
     <h3 class="pt-title">Land Rover</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="PvHXbj1xNdA">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/PvHXbj1xNdA/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/PvHXbj1xNdA/hqdefault.jpg'" alt="Port Gdynia" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Rozładunek statku · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Rozładunek statku · Wideo</span></div>
     <h3 class="pt-title">Port Gdynia</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="JZCqtWY_cGc">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/JZCqtWY_cGc/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/JZCqtWY_cGc/hqdefault.jpg'" alt="PrimeSpot Jastarnia" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Prime Spot · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Prime Spot · Wideo</span></div>
     <h3 class="pt-title">PrimeSpot Jastarnia</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="E-eVE7zqBSU">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/E-eVE7zqBSU/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/E-eVE7zqBSU/hqdefault.jpg'" alt="Baltic Towers" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Film wizerunkowy · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film wizerunkowy · Wideo</span></div>
     <h3 class="pt-title">Baltic Towers</h3>
-  </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="tPSlDvHGSH0">
-    <div class="pt-media"><img src="https://i.ytimg.com/vi/tPSlDvHGSH0/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tPSlDvHGSH0/hqdefault.jpg'" alt="Audi Plichta" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Dzień Kobiet 2025 · Wideo</span><span class="pt-cap__year">2025</span></div>
-    <h3 class="pt-title">Audi Plichta</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="Z-KB8adO_Wk">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/Z-KB8adO_Wk/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/Z-KB8adO_Wk/hqdefault.jpg'" alt="Baltic Towers Load" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Załadunek na statek · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Załadunek na statek · Wideo</span></div>
     <h3 class="pt-title">Baltic Towers Load</h3>
-  </a>
-  <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img" data-src="../assets/portfolio/primespot/pjur-blue-square-1.jpg" href="../realizacja-primespot.html">
-    <div class="pt-media"><img src="../assets/portfolio/primespot/pjur-blue-square-1.jpg" alt="PrimeSpot" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Przystań Jurata · Kampania Meta Ads</span><span class="pt-cap__year">2025</span></div>
-    <h3 class="pt-title">PrimeSpot</h3>
-  </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img">
-    <div class="pt-media" style="display:grid;place-items:center;background:var(--bg-3);"><span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-faint);">Sesje foto · wkrótce</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Fotografia · Wkrótce</span><span class="pt-cap__year">2026</span></div>
-    <h3 class="pt-title">Foto</h3>
   </a>
   <a class="pt-tile" data-ratio="portrait" data-cats="grafika" data-media="img">
     <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/ulotka-broszura-TES-yacht-magnam.webp" alt="TES Yacht — Broszura · Druk" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Broszura · Druk</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Broszura · Druk</span></div>
     <h3 class="pt-title">TES Yacht</h3>
   </a>
   <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img">
     <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-graficzny-oklatki-vinyli-gootovsky-power-plant-3.webp" alt="Gootovsky — Okładki winyli · Druk" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Okładki winyli · Druk</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Okładki winyli · Druk</span></div>
     <h3 class="pt-title">Gootovsky</h3>
   </a>
   <a class="pt-tile" data-ratio="portrait" data-cats="grafika" data-media="img">
     <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-graficzny-menu-restauracji-el-molo-1.webp" alt="El Molo — Menu · Restauracja" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Menu · Restauracja</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Menu · Restauracja</span></div>
     <h3 class="pt-title">El Molo</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img">
     <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-katalog-szymichowski-pruszcz-park-1.webp" alt="Pruszcz Park — Katalog · Nieruchomości" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Katalog · Nieruchomości</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Katalog · Nieruchomości</span></div>
     <h3 class="pt-title">Pruszcz Park</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img">
     <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-ulotki-ctrlsky-3-1024x608.webp" alt="ctrlsky — Ulotka · Druk" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Ulotka · Druk</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Ulotka · Druk</span></div>
     <h3 class="pt-title">ctrlsky</h3>
   </a>
   <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img">
     <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/sezmoo_custom34_grafika_folder-1.webp" alt="Studio Custom 34 — Folder · Druk" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Folder · Druk</span><span class="pt-cap__year">2024</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Folder · Druk</span></div>
     <h3 class="pt-title">Studio Custom 34</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="NHEIfdgr9mI" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/NHEIfdgr9mI/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/NHEIfdgr9mI/hqdefault.jpg'" alt="IZIPAK" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Film</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film produktowy · Wideo</span></div>
+    <h3 class="pt-title">IZIPAK</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="iknT-xURZag" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/iknT-xURZag/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/iknT-xURZag/hqdefault.jpg'" alt="Gdańsk Miastem Kultury" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Miastem Kultury · Wideo</span></div>
+    <h3 class="pt-title">Gdańsk</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img">
+    <div class="pt-media" style="display:grid;place-items:center;background:var(--bg-3);"><span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-faint);">Sesje foto · wkrótce</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Fotografia · Wkrótce</span></div>
+    <h3 class="pt-title">Foto</h3>
   </a>
   </section>
 </div>
