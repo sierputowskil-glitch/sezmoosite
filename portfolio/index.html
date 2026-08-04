@@ -116,6 +116,14 @@
   .pt-grid { column-count:1; }
   .pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:4/5; }
 }
+.portfolio-page { overflow-x:clip; }
+@media (max-width:600px){
+  .pt-hero { padding:120px 18px 6px; }
+  .pt-hero h1 { font-size:clamp(32px,11vw,50px); line-height:.96; }
+  .pt-hero__top { gap:14px; }
+  .pt-hero__lead { font-size:14px; }
+  .pt-shell { padding-left:18px; padding-right:18px; }
+}
 
 /* video modal */
 .pt-vlb { position:fixed; inset:0; z-index:9999; display:flex; align-items:center; justify-content:center;
