@@ -147,6 +147,74 @@
 .cs-shot__tc::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--rec); box-shadow: 0 0 8px var(--rec-glow); }
 @media (max-width: 720px){ .cs-row--split{ grid-template-columns: 1fr; } .cs-shot--wide{ aspect-ratio: 16/10; } }
 
+/* ===== Ad creatives: show WHOLE, native ratio, no crop/zoom/darkening ===== */
+.cs-shot--ad { background: #0d0d0b; }
+.cs-shot--ad img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; transform: none !important; filter: none !important;
+}
+.cs-shot--ad:hover img { filter: none !important; transform: none !important; }
+.cs-ratio-feed  { aspect-ratio: 1200 / 628; }
+.cs-ratio-sq    { aspect-ratio: 1 / 1; }
+.cs-ratio-45    { aspect-ratio: 4 / 5; }
+.cs-ratio-story { aspect-ratio: 9 / 16; }
+
+/* ===== Ad mockups (reusable for Meta / Google Ads case studies) ===== */
+.ad-grid { display: grid; gap: clamp(20px,3vw,40px); }
+.ad-grid--2 { grid-template-columns: 1fr 1fr; }
+.ad-grid--phones { grid-template-columns: repeat(2, minmax(0,300px)); justify-content: center; }
+.ad-cap { display:block; text-align:center; margin-top:12px; font-family: var(--font-mono);
+  font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-faint); }
+
+/* phone (Stories / Reels 9:16) */
+.ad-phone { width:100%; max-width:300px; margin:0 auto; background:#0b0b0c;
+  border:1px solid oklch(0.62 0 0 / .35); border-radius:38px; padding:11px;
+  box-shadow:0 34px 80px rgba(0,0,0,.55); }
+.ad-phone__screen { position:relative; border-radius:28px; overflow:hidden; aspect-ratio:9/16; background:#000; }
+.ad-phone__screen > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.ad-phone__ui { position:absolute; inset:0; display:flex; flex-direction:column; padding:14px; pointer-events:none;
+  background:linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,0) 22%, rgba(0,0,0,0) 68%, rgba(0,0,0,.35)); }
+.ad-phone__top { display:flex; gap:4px; }
+.ad-phone__top i { flex:1; height:2.5px; border-radius:2px; background:rgba(255,255,255,.35); }
+.ad-phone__top i:first-child { background:#fff; }
+.ad-phone__hdr { display:flex; align-items:center; gap:9px; margin-top:12px; }
+.ad-phone__av { width:28px; height:28px; border-radius:50%; flex:none; display:grid; place-items:center;
+  background:linear-gradient(135deg,#c9a84a,#7a5a12); color:#0e0e0c; font-family:var(--font-mono); font-size:10px; font-weight:700;
+  border:1.5px solid rgba(255,255,255,.65); }
+.ad-phone__name { color:#fff; font-size:12px; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,.5); }
+.ad-phone__spon { display:block; color:rgba(255,255,255,.8); font-size:9px; letter-spacing:.04em; text-shadow:0 1px 4px rgba(0,0,0,.5); }
+.ad-phone__cta { margin-top:auto; align-self:stretch; text-align:center; padding:11px 18px;
+  background:rgba(255,255,255,.16); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.42);
+  border-radius:30px; color:#fff; font-size:12px; font-weight:600; letter-spacing:.02em; }
+
+/* interactive Stories player */
+.ad-story__img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.ad-story__bars i { position:relative; overflow:hidden; background:rgba(255,255,255,.35); }
+.ad-story__bars i:first-child { background:rgba(255,255,255,.35); }
+.ad-story__bars b { position:absolute; inset:0; width:0; background:#fff; }
+.ad-story__zone { position:absolute; top:0; bottom:0; width:40%; z-index:6; border:0; padding:0;
+  background:transparent; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+.ad-story__prev { left:0; } .ad-story__next { right:0; }
+
+/* social post card (Feed 1200×628 / 1:1 / 4:5) */
+.ad-post { width:100%; max-width:520px; margin:0 auto; background:var(--bg-2);
+  border:1px solid var(--line-soft); border-radius:14px; overflow:hidden; box-shadow:0 22px 55px rgba(0,0,0,.4); }
+.ad-post--feed { max-width:640px; }
+.ad-post__head { display:flex; align-items:center; gap:10px; padding:12px 14px; }
+.ad-post__av { width:38px; height:38px; border-radius:50%; flex:none; display:grid; place-items:center;
+  background:linear-gradient(135deg,#c9a84a,#7a5a12); color:#0e0e0c; font-family:var(--font-mono); font-size:12px; font-weight:700; }
+.ad-post__id { display:flex; flex-direction:column; line-height:1.3; }
+.ad-post__name { font-size:14px; font-weight:600; color:var(--fg); }
+.ad-post__spon { font-family:var(--font-mono); font-size:10px; letter-spacing:.07em; color:var(--fg-faint); }
+.ad-post__more { margin-left:auto; color:var(--fg-faint); letter-spacing:2px; font-size:16px; }
+.ad-post__media { background:#0d0d0b; font-size:0; }
+.ad-post__media img { width:100%; height:auto; display:block; }
+.ad-post__bar { display:flex; align-items:center; gap:16px; padding:11px 14px; color:var(--fg-faint); }
+.ad-post__bar svg { width:20px; height:20px; }
+.ad-post__cta { margin-left:auto; padding:8px 16px; background:var(--rec); color:var(--on-accent);
+  border-radius:6px; font-size:12px; font-weight:700; letter-spacing:.02em; }
+@media (max-width:720px){ .ad-grid--2, .ad-grid--phones { grid-template-columns:1fr; } }
+
 /* ============== FILM PLAYER (facade) ============== */
 .cs-film__frame {
   position: relative; aspect-ratio: 16/9; overflow: hidden; border: 1px solid var(--line-soft);
@@ -192,9 +260,9 @@
 
 /* ============== NEXT PROJECT ============== */
 .cs-next { position: relative; display: block; overflow: hidden; min-height: clamp(320px,46vw,560px); }
-.cs-next img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.7) brightness(.4); transition: transform 1.4s var(--ease), filter .6s var(--ease); }
-.cs-next:hover img { transform: scale(1.05); filter: saturate(.95) brightness(.55); }
-.cs-next::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, oklch(0.12 0.004 60 / .3), oklch(0.12 0.004 60 / .55)); }
+.cs-next img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); filter: saturate(.55) brightness(.34) blur(9px); transition: transform 1.4s var(--ease), filter .6s var(--ease); }
+.cs-next:hover img { transform: scale(1.16); filter: saturate(.7) brightness(.42) blur(8px); }
+.cs-next::after { content:""; position:absolute; inset:0; background: radial-gradient(120% 100% at 50% 40%, oklch(0.14 0.006 70 / .35), oklch(0.11 0.004 60 / .72)); }
 .cs-next__inner { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center;
   padding-block: clamp(50px,8vh,90px); }
 .cs-next__k { font-family: var(--font-mono); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--rec); }

@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/assets/favicon.png" sizes="any" />
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16130e" />
+<script>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 <meta property="og:image" content="https://sezmoo.com/assets/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -15,7 +16,6 @@
 <link rel="alternate" hreflang="pl" href="https://sezmoo.com/portfolio/" />
 <link rel="alternate" hreflang="en" href="https://sezmoo.com/en/portfolio-en/" />
 <link rel="alternate" hreflang="x-default" href="https://sezmoo.com/portfolio/" />
-<script>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <title>Portfolio, realizacje wideo, social, animacje i eventy | SEZMOO</title>
 <meta name="description" content="Portfolio SEZMOO: realizacje wideo i foto, materiały na social media, animacje 3D/2D oraz relacje z eventów. Zobacz projekty dla marek motoryzacyjnych, B2B i eventowych." />
 <link rel="canonical" href="https://sezmoo.com/portfolio/" />
@@ -27,522 +27,411 @@
 <link rel="stylesheet" href="../styles.css" />
 <style>
 /* ============================================================
-   PORTFOLIO, categories + YouTube lightbox (page-scoped)
+   PORTFOLIO — BIG TILES (proposal, page-scoped)
+   Large media, small category caption, staggered grid
    ============================================================ */
-.pf-cats { margin-top: clamp(32px,4.5vh,58px); display:flex; flex-direction:column; gap: clamp(48px,6.5vh,92px); }
-.pf-cat.is-hide { display:none; }
+.pt-hero { max-width:var(--maxw); margin-inline:auto; padding: clamp(120px,16vh,190px) var(--shell-pad) clamp(24px,4vh,44px); }
+.pt-hero__top { display:flex; align-items:flex-end; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+.pt-hero h1 { font-weight:820; font-stretch:112%; letter-spacing:-.03em; line-height:.9;
+  font-size:clamp(46px,9vw,132px); text-transform:uppercase; margin:clamp(14px,2vh,22px) 0 0; }
+.pt-hero h1 em { font-style:normal; color:var(--rec); }
+.pt-hero__lead { max-width:40ch; color:var(--fg-dim); font-size:clamp(15px,1.1vw,17px); line-height:1.55; }
+.pt-hero__lead b { color:var(--fg); font-weight:640; }
 
-.pf-cat__head { display:flex; align-items:baseline; gap:16px; padding-bottom:16px;
-  border-bottom:1px solid var(--line-soft); margin-bottom: clamp(20px,2.4vw,32px); }
-.pf-cat__num { font-family:var(--font-mono); font-size:12px; letter-spacing:.22em; color:var(--rec); }
-.pf-cat__head h3 { font-weight:760; font-stretch:106%; font-size:clamp(24px,3.2vw,46px);
-  line-height:1; letter-spacing:-.02em; }
-.pf-cat__count { margin-left:auto; font-family:var(--font-mono); font-size:12px; letter-spacing:.2em; color:var(--fg-faint); }
+/* ---- shell: sticky sidebar + masonry grid ---- */
+.pt-shell { display:grid; grid-template-columns:clamp(190px,17vw,270px) 1fr; align-items:start;
+  gap:clamp(28px,3.4vw,64px); max-width:var(--maxw); margin-inline:auto;
+  padding:clamp(30px,4.5vh,54px) var(--shell-pad) clamp(50px,9vh,110px); }
+.pt-side { position:sticky; top:clamp(90px,12vh,116px); }
+.pt-side__label { font-family:var(--font-mono); font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--fg-faint); display:block; padding-bottom:16px; margin-bottom:14px; border-bottom:1px solid var(--line); }
+.pt-side__list { display:flex; flex-direction:column; }
+.pt-navlink { display:flex; align-items:flex-start; gap:6px; text-align:left; background:none; border:0; cursor:pointer;
+  font-family:var(--font-display); font-weight:770; font-stretch:106%; text-transform:uppercase; letter-spacing:-.01em;
+  font-size:clamp(20px,1.6vw,30px); line-height:1.34; color:var(--fg-faint);
+  transition:color .3s var(--ease), transform .35s var(--ease); }
+.pt-navlink .n { font-family:var(--font-mono); font-weight:400; font-size:.42em; letter-spacing:.04em;
+  color:var(--fg-faint); opacity:.75; transform:translateY(.2em); }
+.pt-navlink:hover { color:var(--fg); transform:translateX(4px); }
+.pt-navlink.is-on { color:var(--rec); }
+.pt-navlink.is-on .n { color:var(--rec); opacity:.85; }
 
-.pf-grid { display:grid; gap:clamp(14px,1.5vw,24px); grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); }
+/* ---- grid (true masonry, tightly packed) ---- */
+.pt-grid { column-count:2; column-gap:clamp(16px,1.8vw,30px); }
 
-.pf-card { display:flex; flex-direction:column; text-align:left; font:inherit; color:inherit;
-  width:100%; padding:0; margin:0; cursor:pointer; }
-.pf-card .card__media { aspect-ratio:16/9; }
-.pf-grid--v .pf-card .card__media { aspect-ratio:9/16; }
-.pf-card:focus-visible { outline:2px solid var(--rec); outline-offset:3px; }
-.pf-card.is-more-hidden { display:none; }
-.pf-card.is-cat-hide { display:none; }
-.pf-card .card__media iframe { position:absolute; inset:0; width:100%; height:100%; border:0; z-index:3; pointer-events:none; }
-.pf-card.is-hoving .card__scan, .pf-card.is-hoving .card__sweep { opacity:0; }
-.pf-card.is-hoving .card__play { opacity:0; }
-.pf-card .card__hint { position:absolute; left:12px; bottom:12px; z-index:4; font-family:var(--font-mono);
-  font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--on-accent);
-  background:var(--rec); padding:5px 9px; border-radius:3px; opacity:0; transform:translateY(4px);
-  transition:opacity .3s var(--ease), transform .3s var(--ease); pointer-events:none; }
-.pf-card:hover .card__hint { opacity:1; transform:none; }
-.pf-more { display:flex; justify-content:center; margin-top: clamp(20px,2.4vw,32px); }
-.pf-more__btn { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-mono); font-size:12px;
-  letter-spacing:.14em; text-transform:uppercase; color:var(--fg-dim); border:1px solid var(--line);
-  border-radius:100px; background:transparent; padding:13px 26px; cursor:pointer;
-  transition: color .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease); }
-.pf-more__btn:hover { color:var(--on-accent); background:var(--rec); border-color:var(--rec); }
-.pf-more__btn .n { color:var(--rec); }
-.pf-more__btn:hover .n { color:var(--on-accent); }
+.pt-tile { display:block; break-inside:avoid; margin:0 0 clamp(24px,2.4vw,42px); will-change:transform; transform:perspective(1200px); text-align:left; color:inherit; font:inherit; background:none; border:0; padding:0;
+  cursor:pointer; width:100%; }
+.pt-tile.is-hide { display:none; }
+.pt-media { position:relative; overflow:hidden; border-radius:10px; background:var(--bg-3);
+  border:1px solid var(--line-soft); aspect-ratio:4/3; }
+.pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:3/4; }
+.pt-tile[data-ratio="wide"] .pt-media { aspect-ratio:16/10; }
+.pt-tile[data-ratio="square"] .pt-media { aspect-ratio:1/1; }
+.pt-media img { width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease), filter .5s var(--ease); }
+.pt-media iframe { position:absolute; inset:0; width:100%; height:100%; border:0; z-index:2; pointer-events:none;
+  transform:scale(1.32); } /* zoom to hide YT chrome */
+.pt-tile:hover .pt-media img { transform:scale(1.05); }
+/* corner ticks + play badge, cosmos-ish */
+.pt-media__badge { position:absolute; left:14px; top:14px; z-index:3; display:inline-flex; align-items:center; gap:7px;
+  font-family:var(--font-mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--fg);
+  background:oklch(0.1 0.004 60 / .55); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  border:1px solid var(--line-soft); border-radius:100px; padding:6px 11px; }
+.pt-media__badge .d { width:6px; height:6px; border-radius:50%; background:var(--rec); }
+.pt-media__open { position:absolute; right:14px; bottom:14px; z-index:3; width:46px; height:46px; border-radius:50%;
+  display:grid; place-items:center; background:var(--rec); color:var(--on-accent); font-size:17px; line-height:1;
+  opacity:0; transform:translateY(8px) scale(.9); transition:opacity .4s var(--ease), transform .4s var(--ease); }
+.pt-tile:hover .pt-media__open { opacity:1; transform:none; }
 
-/* ---- lightbox ---- */
-.lb { position:fixed; inset:0; z-index:9800; display:grid; place-items:center;
-  padding: clamp(16px,4vw,56px); background: oklch(0.06 0.004 60 / 0.86);
-  backdrop-filter: blur(10px) saturate(1.05);
-  opacity:0; visibility:hidden; transition: opacity .4s var(--ease), visibility .4s var(--ease); }
-.lb.is-open { opacity:1; visibility:visible; }
-.lb__inner { position:relative; width:min(100%, 1180px); }
-.lb.is-short .lb__inner { width:auto; max-width:100%; }
-.lb__frame { position:relative; width:100%; aspect-ratio:16/9; background:#000;
-  border:1px solid var(--line); border-radius:6px; overflow:hidden;
-  box-shadow: 0 40px 120px oklch(0 0 0 / 0.6);
-  transform: translateY(16px) scale(.985); transition: transform .5s var(--ease); }
-.lb.is-short .lb__frame { aspect-ratio:9/16; height:min(84vh, 900px); width:auto; }
-.lb.is-open .lb__frame { transform:none; }
-.lb__frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
-.lb__bar { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:14px;
-  font-family:var(--font-mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--fg-dim); }
-.lb__title { color:var(--fg); }
-.lb__title b { font-family:var(--font-display); font-weight:800; font-stretch:106%; letter-spacing:-.01em;
-  text-transform:none; font-size:16px; margin-right:12px; }
-.lb__close { font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--fg-dim); border:1px solid var(--line); border-radius:100px; background:transparent;
-  padding:9px 18px; cursor:pointer; transition: color .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease); }
-.lb__close:hover { color:var(--on-accent); background:var(--rec); border-color:var(--rec); }
+/* caption */
+.pt-cap { display:flex; align-items:baseline; justify-content:space-between; gap:16px;
+  margin:clamp(14px,1.4vw,20px) 2px 0; }
+.pt-cap__tags { font-family:var(--font-mono); font-size:clamp(11px,0.85vw,13px); letter-spacing:.05em;
+  color:var(--fg-faint); }
+.pt-cap__year { font-family:var(--font-mono); font-size:clamp(11px,0.85vw,13px); letter-spacing:.05em;
+  color:var(--fg-faint); flex:0 0 auto; }
+.pt-title { margin:6px 2px 0; font-weight:720; font-stretch:104%; letter-spacing:-.015em; line-height:1;
+  font-size:clamp(26px,3vw,44px); transition:color .35s var(--ease); }
+.pt-tile:hover .pt-title { color:var(--rec); }
+@media (prefers-reduced-motion:reduce){ .pt-tile { transform:none !important; } }
 
-@media (max-width:620px){
-  .pf-grid { grid-template-columns:1fr; }
-  .pf-grid--v { grid-template-columns:repeat(2,1fr); }
-  .lb.is-short .lb__frame { height:auto; width:100%; }
-  .lb.is-short .lb__inner { width:min(100%,420px); }
+/* compact grafika/foto */
+.pt-tile[data-cats="grafika"] .pt-media, .pt-tile[data-cats="foto"] .pt-media { aspect-ratio:4/3; background:var(--bg-2); }
+.pt-tile[data-cats="grafika"] .pt-media img { object-fit:contain; }
+
+@media (max-width:900px){
+  .pt-shell { grid-template-columns:1fr; gap:22px; }
+  .pt-side { position:static; }
+  .pt-side__label { display:none; }
+  .pt-side__list { flex-direction:row; flex-wrap:nowrap; gap:8px; overflow-x:auto; padding-bottom:14px;
+    border-bottom:1px solid var(--line); -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+  .pt-side__list::-webkit-scrollbar { display:none; }
+  .pt-navlink { flex:0 0 auto; font-size:13px; letter-spacing:.1em; line-height:1; white-space:nowrap;
+    border:1px solid var(--line); border-radius:100px; padding:10px 16px; }
+  .pt-navlink .n { font-size:11px; transform:none; margin-left:2px; }
+  .pt-navlink:hover { transform:none; }
+  .pt-navlink.is-on { color:var(--on-accent); background:var(--rec); border-color:var(--rec); }
+  .pt-navlink.is-on .n { color:var(--on-accent); }
 }
+@media (max-width:760px){
+  .pt-grid { column-count:1; }
+  .pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:4/5; }
+}
+
+/* video modal */
+.pt-vlb { position:fixed; inset:0; z-index:9999; display:flex; align-items:center; justify-content:center;
+  padding:clamp(18px,5vw,70px); background:oklch(0.06 0.004 60 / .9); backdrop-filter:blur(8px); }
+.pt-vlb[hidden] { display:none; }
+.pt-vlb__frame { position:relative; width:min(1100px,100%); aspect-ratio:16/9; }
+.pt-vlb__frame.is-short { width:auto; height:min(86vh,760px); aspect-ratio:9/16; }
+.pt-vlb__frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:6px;
+  box-shadow:0 30px 80px rgba(0,0,0,.55); }
+.pt-vlb__close { position:absolute; top:18px; right:22px; width:44px; height:44px; border-radius:50%;
+  border:1px solid rgba(255,255,255,.3); background:rgba(0,0,0,.4); color:#fff; font-size:19px; cursor:pointer; }
 </style>
 </head>
 <body id="top"><canvas class="flow-bg-canvas" id="flow-bg-canvas" aria-hidden="true"></canvas>
 <div class="grain"></div><div class="vignette"></div><div class="cursor">PLAY</div><div class="cursor-dot"></div>
-<nav class="nav"><a class="brand" href="../index.html#hero" aria-label="SEZMOO"><img class="brand__logo" src="../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a><div class="nav__menu" id="main-menu"><a href="#work-list">Portfolio</a><a href="../uslugi-marketingowe/index.html#lista-uslug">Usługi</a><a href="../index.html#team">Zespół</a><a href="../index.html#opinie">Opinie</a><a href="../blog.html">Blog</a><a href="../index.html#kontakt">Kontakt</a></div><div class="nav__right"><div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div><div class="nav__theme" role="group" aria-label="Motyw / Theme"><button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw / Dark">DARK</button><button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw / Light">LIGHT</button></div><div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" href="../en/portfolio-en/index.html">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button></div></nav>
-<main class="portfolio-page">
-<section class="sub-hero shell">
-  <div class="sub-hero__grid">
-    <div>
-      <span class="eyebrow reveal"><span class="tick"></span>Portfolio · Produkcja wideo &amp; content</span>
-      <h1 class="reveal">Wideo, które<br>pracuje na<br>Twoją markę.</h1>
-      <p class="sub-hero__lead reveal" data-d="1">Filmy reklamowe, content na social media, relacje z eventów i motion design 2D/3D. Wybrane realizacje SEZMOO dla marek automotive, B2B, kultury i przemysłu, najedź, by zobaczyć podgląd, kliknij, by otworzyć case study.</p>
-      <div class="sub-hero__meta reveal" data-d="2"><span>Wideo / Photo</span><span>Social media</span><span>Animacje 3D/2D</span><span>Eventy</span><span>Grafika</span></div>
-    </div>
-    <div class="sub-panel reveal" data-d="1"><span class="sub-panel__label">Wybrane realizacje</span><p>Wybrane realizacje z ostatnich miesięcy, od filmów reklamowych, przez eventy, po motion design. Użyj filtrów, aby zawęzić widok do wybranego obszaru.</p></div>
-  </div>
-</section>
-<section class="work shell portfolio-work" id="work-list" data-screen-label="Portfolio">
-  <div class="sec-head">
-    <h2 class="sec-title reveal">Realizacje<br>wideo.</h2>
-    <span class="sec-index reveal">[ 14 FILMÓW · 21 GRAFIK ]</span>
-  </div>
-  <div class="work__filters reveal">
-    <button class="chip is-on" type="button" data-filter="all">Wszystko</button>
-    <button class="chip" type="button" data-filter="video">Wideo / Photo</button>
-    <button class="chip" type="button" data-filter="social">Social media</button>
-    <button class="chip" type="button" data-filter="animacje">Animacje 3D / 2D</button>
-    <button class="chip" type="button" data-filter="eventy">Eventy</button>
-    <button class="chip" type="button" data-filter="grafika">Grafika</button>
-  </div>
+<nav class="nav"><a class="brand" href="../index.html#hero" aria-label="SEZMOO"><img class="brand__logo" src="../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a><div class="nav__menu" id="main-menu"><a aria-current="page" href="index.html">Portfolio</a><a href="../uslugi-marketingowe/index.html#lista-uslug">Usługi</a><a href="../index.html#team">Zespół</a><a href="../index.html#opinie">Opinie</a><a href="../blog.html">Blog</a><a href="../index.html#kontakt">Kontakt</a></div><div class="nav__right"><div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div><div class="nav__theme" role="group" aria-label="Motyw / Theme"><button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw / Dark">DARK</button><button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw / Light">LIGHT</button></div><div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" href="../en/portfolio-en/index.html">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button></div></nav>
 
-  <div class="pf-cats">
-    <div class="pf-cat" data-cat="video">
-      <div class="pf-cat__head"><span class="pf-cat__num">01</span><h3>Wideo / Photo</h3><span class="pf-cat__count">07 KLIPÓW</span></div>
-      <div class="pf-grid">
-        <button class="card pf-card reveal" type="button" data-cats="video" data-yt="jco18tIaCT0" data-title="CRT">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/jco18tIaCT0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/jco18tIaCT0/hqdefault.jpg'" alt="CRT" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 01:12:04</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">CRT</div><div class="card__cat">Wideo / Film wizerunkowy</div></div><span class="card__tag">FILM</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video" data-yt="NHEIfdgr9mI" data-title="IZIPAK">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/NHEIfdgr9mI/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/NHEIfdgr9mI/hqdefault.jpg'" alt="IZIPAK" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:58:33</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">IZIPAK</div><div class="card__cat">Wideo / Produkt</div></div><span class="card__tag">FILM</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video" data-yt="NeJhz19eUkk" data-title="SEZMOO · Film">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/NeJhz19eUkk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/NeJhz19eUkk/hqdefault.jpg'" alt="SEZMOO film" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:44:10</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">SEZMOO</div><div class="card__cat">Wideo / Produkcja</div></div><span class="card__tag">FILM</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video" data-yt="pDQ8vGDMLDM" data-title="SEZMOO · Film">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/pDQ8vGDMLDM/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/pDQ8vGDMLDM/hqdefault.jpg'" alt="SEZMOO film" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:37:52</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">SEZMOO</div><div class="card__cat">Wideo / Produkcja</div></div><span class="card__tag">FILM</span></div>
-        </button>
-      </div>
-      <div class="pf-grid pf-grid--v" style="margin-top:clamp(14px,1.5vw,24px)">
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="tgcCHgkOM4I" data-short="1" data-title="EXLANTIX · Short premiery">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/tgcCHgkOM4I/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tgcCHgkOM4I/hqdefault.jpg'" alt="EXLANTIX short premiery" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:00:29</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">EXLANTIX</div><div class="card__cat">Social / Premiera marki</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="OJnUGJdFk9w" data-short="1" data-title="DENZA · Short premiery">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/OJnUGJdFk9w/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/OJnUGJdFk9w/hqdefault.jpg'" alt="DENZA short premiery Z9 GT" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:00:34</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">DENZA</div><div class="card__cat">Social / Premiera Z9 GT</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="WG5ufZMfjQ8" data-short="1" data-title="Audi RS5 · Trailer">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/WG5ufZMfjQ8/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WG5ufZMfjQ8/hqdefault.jpg'" alt="Audi RS5 trailer" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:00:33</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Audi RS5</div><div class="card__cat">Social / Trailer</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-      </div>
-    </div>
-    <div class="pf-cat" data-cat="social">
-      <div class="pf-cat__head"><span class="pf-cat__num">02</span><h3>Social media</h3><span class="pf-cat__count">10 KLIPÓW</span></div>
-      <div class="pf-grid pf-grid--v">
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="WG5ufZMfjQ8" data-short="1" data-title="Trailer RS5">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/WG5ufZMfjQ8/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WG5ufZMfjQ8/hqdefault.jpg'" alt="Trailer RS5" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:33:02</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Audi RS5</div><div class="card__cat">Social / Trailer</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="Hdnf6zcn3bA" data-short="1" data-title="JAECOO 8 × Modny Tata">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/Hdnf6zcn3bA/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/Hdnf6zcn3bA/hqdefault.jpg'" alt="Modny Tata, Bieganie" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:11:44</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">JAECOO 8</div><div class="card__cat">Social / Lifestyle</div></div><span class="card__tag">LIFESTYLE</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="c_5toy1IhIs" data-short="1" data-title="Żółte RS3">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/c_5toy1IhIs/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/c_5toy1IhIs/hqdefault.jpg'" alt="Żółte RS3" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:24:19</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Audi RS3</div><div class="card__cat">Social / Automotive</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="X8-hf_cyZxE" data-short="1" data-title="Dolphin z Kamilą">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/X8-hf_cyZxE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/X8-hf_cyZxE/hqdefault.jpg'" alt="Dolphin z Kamilą" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:41:07</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">BYD Dolphin</div><div class="card__cat">Social / Automotive</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="O5iF7SxqX1I" data-short="1" data-title="Modny Tata, Padel">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/O5iF7SxqX1I/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/O5iF7SxqX1I/hqdefault.jpg'" alt="Modny Tata, Padel" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:18:52</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Modny Tata</div><div class="card__cat">Social / Lifestyle</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="lD11UTII6Ko" data-short="1" data-title="Dzień Mamy z Modną Mamą">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/lD11UTII6Ko/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/lD11UTII6Ko/hqdefault.jpg'" alt="Modna Mama, Pilates" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:22:16</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">OMODA JAECOO</div><div class="card__cat">Social / Lifestyle</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="eBcPwtZ0eOk" data-short="1" data-title="Baltic Towers · Kampania rekrutacyjna">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/eBcPwtZ0eOk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/eBcPwtZ0eOk/hqdefault.jpg'" alt="Baltic Towers kampania rekrutacyjna" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:00:29</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Baltic Towers</div><div class="card__cat">Social / Rekrutacja</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="NB0t38Tufzs" data-short="1" data-title="Audi RS7 · Grupa Plichta">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/NB0t38Tufzs/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/NB0t38Tufzs/hqdefault.jpg'" alt="Audi RS7 Grupa Plichta" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:00:21</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Audi RS7</div><div class="card__cat">Social / Automotive</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="FjJpZlk80x8" data-short="1" data-title="EXLANTIX ET">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/FjJpZlk80x8/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/FjJpZlk80x8/hqdefault.jpg'" alt="EXLANTIX ET rolka" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:00:24</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">EXLANTIX</div><div class="card__cat">Social / ET</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="video social" data-yt="0bFtOANffnU" data-short="1" data-title="EXLANTIX ET · rolka 2">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/0bFtOANffnU/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/0bFtOANffnU/hqdefault.jpg'" alt="EXLANTIX ET rolka 2" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:00:27</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">EXLANTIX</div><div class="card__cat">Social / ET</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-      </div>
-    </div>
-    <div class="pf-cat" data-cat="animacje">
-      <div class="pf-cat__head"><span class="pf-cat__num">03</span><h3>Animacje 3D / 2D</h3><span class="pf-cat__count">03 KLIPY</span></div>
-      <div class="pf-grid">
-        <button class="card pf-card reveal" type="button" data-cats="video animacje" data-yt="7HZN5VCTvoo" data-short="1" data-title="Animacja Dolphin G">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/7HZN5VCTvoo/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/7HZN5VCTvoo/hqdefault.jpg'" alt="Animacja Dolphin G" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:09:30</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Dolphin G</div><div class="card__cat">Animacje / Motion</div></div><span class="card__tag">SHORT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="animacje" data-yt="lOwJMPKMdYA" data-title="Baltic BHP">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/lOwJMPKMdYA/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/lOwJMPKMdYA/hqdefault.jpg'" alt="Baltic BHP" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 00:56:12</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Baltic BHP</div><div class="card__cat">Animacje / 3D</div></div><span class="card__tag">MOTION</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="animacje" data-yt="WszuntCE51c" data-title="Baltic Model Fabryki">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/WszuntCE51c/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WszuntCE51c/hqdefault.jpg'" alt="Baltic Model Fabryki" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 01:04:47</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Baltic</div><div class="card__cat">Animacje / Model 3D</div></div><span class="card__tag">3D</span></div>
-        </button>
-      </div>
-    </div>
-    <div class="pf-cat" data-cat="eventy">
-      <div class="pf-cat__head"><span class="pf-cat__num">04</span><h3>Eventy</h3><span class="pf-cat__count">05 POZYCJI</span></div>
-      <div class="pf-grid">
-        <a class="card pf-card reveal" href="../realizacja-denza.html" data-cats="eventy" data-cursor="link">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/denza/dz-410.jpg" alt="Premiera DENZA Z9 GT w Tokarach" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">DENZA</div><div class="card__cat">Event / Premiera Z9 GT</div></div><span class="card__tag">CASE</span></div>
-        </a>
-        <a class="card pf-card reveal" href="../realizacja-exlantix.html" data-cats="eventy" data-cursor="link">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/exlantix/ex-206.jpg" alt="Premiera EXLANTIX w Gdańsku" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">EXLANTIX</div><div class="card__cat">Event / Premiera marki</div></div><span class="card__tag">CASE</span></div>
-        </a>
-        <button class="card pf-card reveal" type="button" data-cats="eventy" data-yt="wVy04YYnbRM" data-title="PISF">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/wVy04YYnbRM/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/wVy04YYnbRM/hqdefault.jpg'" alt="PISF" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 02:04:11</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">PISF</div><div class="card__cat">Event / Relacja</div></div><span class="card__tag">EVENT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="eventy" data-yt="iknT-xURZag" data-title="Gdańsk Miastem Kultury">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/iknT-xURZag/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/iknT-xURZag/hqdefault.jpg'" alt="Gdańsk Miastem Kultury" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 01:38:40</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Gdańsk</div><div class="card__cat">Event / Miastem Kultury</div></div><span class="card__tag">EVENT</span></div>
-        </button>
-        <button class="card pf-card reveal" type="button" data-cats="eventy" data-yt="tvTuMX3mxG4" data-title="Baltic Towers">
-          <div class="card__media"><img class="card__video" src="https://i.ytimg.com/vi/tvTuMX3mxG4/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tvTuMX3mxG4/hqdefault.jpg'" alt="Baltic Towers" loading="lazy" /><div class="card__scan"></div><div class="card__sweep"></div><div class="card__tc"><span class="rd"></span>TC 01:11:08</div><div class="card__live">▶ PLAY</div><span class="card__play">PLAY</span><div class="card__bar"><i></i></div></div>
-          <div class="card__info"><div><div class="card__client">Baltic Towers</div><div class="card__cat">Event / Otwarcie</div></div><span class="card__tag">EVENT</span></div>
-        </button>
-      </div>
-    </div>
-    <div class="pf-cat" data-cat="grafika">
-      <div class="pf-cat__head"><span class="pf-cat__num">05</span><h3>Grafika i kampanie</h3><span class="pf-cat__count">21 GRAFIK</span></div>
-      <div class="pf-grid">
-        <a class="card pf-card pf-card--img reveal" href="../realizacja-kapka.html" data-cats="grafika" data-case="1" data-cursor="link">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/kapka/kapka-logo.jpg" alt="Kapka Cafe · logo i branding" loading="lazy" style="object-fit:contain;background:#f3e9d6" /><span class="pf-set">CASE STUDY</span></div>
-          <div class="card__info"><div><div class="card__client">KAPKA CAFE</div><div class="card__cat">Branding / Logo i identyfikacja</div></div><span class="card__tag">CASE</span></div>
-        </a>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/byd-womans-day.jpg" data-title="BYD · Woman’s Day">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/byd-womans-day.jpg" alt="BYD Woman’s Day" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">BYD</div><div class="card__cat">Grafika / Woman’s Day</div></div><span class="card__tag">BYD</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/byd-walentynki.jpg" data-title="BYD · Walentynki">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/byd-walentynki.jpg" alt="BYD Walentynki" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">BYD</div><div class="card__cat">Grafika / Walentynki</div></div><span class="card__tag">BYD</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/chery-lineup.jpg" data-gallery="../assets/portfolio/plichta/chery-lineup.jpg,../assets/portfolio/plichta/chery-tiggo7.jpg,../assets/portfolio/plichta/chery-tiggo4.jpg,../assets/portfolio/plichta/chery-tiggo7-phev.jpg,../assets/portfolio/plichta/chery-tiggo8.jpg,../assets/portfolio/plichta/chery-tiggo9.jpg" data-title="Chery · Kampania Meta / Instagram / Google Ads">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/chery-lineup.jpg" alt="Chery · Kampania Meta / Instagram / Google Ads" loading="lazy" /><span class="pf-set">GALERIA · 6</span></div>
-          <div class="card__info"><div><div class="card__client">CHERY</div><div class="card__cat">Kampania / Meta · Instagram · Google Ads</div></div><span class="card__tag">CHERY</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/bestune-t90.jpg" data-title="Bestune · T90">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/bestune-t90.jpg" alt="Bestune T90" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">BESTUNE</div><div class="card__cat">Grafika / T90</div></div><span class="card__tag">BESTUNE</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/bestune-b70-liftback.jpg" data-title="Bestune · B70 Liftback">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/bestune-b70-liftback.jpg" alt="Bestune B70 Liftback" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">BESTUNE</div><div class="card__cat">Grafika / B70 Liftback</div></div><span class="card__tag">BESTUNE</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/bestune-b70-spec.jpg" data-title="Bestune · B70 Business">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/bestune-b70-spec.jpg" alt="Bestune B70 Business" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">BESTUNE</div><div class="card__cat">Grafika / B70 Business</div></div><span class="card__tag">BESTUNE</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/bestune-dzien-ojca.jpg" data-title="Bestune · Dzień Ojca">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/bestune-dzien-ojca.jpg" alt="Bestune Dzień Ojca" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">BESTUNE</div><div class="card__cat">Grafika / Dzień Ojca</div></div><span class="card__tag">BESTUNE</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/oj-jaecoo-forest.jpg" data-title="OMODA & JAECOO · JAECOO S">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/oj-jaecoo-forest.jpg" alt="OMODA & JAECOO JAECOO S" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">OMODA & JAECOO</div><div class="card__cat">Grafika / JAECOO S</div></div><span class="card__tag">O&J</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/oj-jaecoo-medalisci.jpg" data-title="OMODA & JAECOO · Konkurs">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/oj-jaecoo-medalisci.jpg" alt="OMODA & JAECOO Konkurs" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">OMODA & JAECOO</div><div class="card__cat">Grafika / Konkurs</div></div><span class="card__tag">O&J</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/oj-chillout.jpg" data-title="OMODA & JAECOO · Chillout">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/oj-chillout.jpg" alt="OMODA & JAECOO Chillout" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">OMODA & JAECOO</div><div class="card__cat">Grafika / Chillout</div></div><span class="card__tag">O&J</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/oj-jaecoo7-shs-1x1.jpg" data-gallery="../assets/portfolio/plichta/oj-jaecoo7-shs-1x1.jpg,../assets/portfolio/plichta/oj-jaecoo7-shs-9x16.jpg,../assets/portfolio/plichta/oj-jaecoo7-mailing.jpg" data-title="OMODA & JAECOO · JAECOO 7 Super Hybrid">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/oj-jaecoo7-shs-1x1.jpg" alt="OMODA & JAECOO JAECOO 7 Super Hybrid" loading="lazy" /><span class="pf-set">GALERIA · 3</span></div>
-          <div class="card__info"><div><div class="card__client">OMODA & JAECOO</div><div class="card__cat">Kampania / JAECOO 7 Super Hybrid</div></div><span class="card__tag">O&J</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/oj-omoda7-shs.jpg" data-title="OMODA & JAECOO · OMODA 7 SHS">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/oj-omoda7-shs.jpg" alt="OMODA & JAECOO OMODA 7 SHS" loading="lazy" /></div>
-          <div class="card__info"><div><div class="card__client">OMODA & JAECOO</div><div class="card__cat">Grafika / OMODA 7 SHS</div></div><span class="card__tag">O&J</span></div>
-        </button>
-        <button class="card pf-card pf-card--img reveal" type="button" data-cats="grafika" data-full="../assets/portfolio/plichta/oj-omoda7-1.jpg" data-gallery="../assets/portfolio/plichta/oj-omoda7-1.jpg,../assets/portfolio/plichta/oj-omoda7-2.jpg,../assets/portfolio/plichta/oj-omoda7-3.jpg,../assets/portfolio/plichta/oj-omoda7-4.jpg,../assets/portfolio/plichta/oj-omoda7-5.jpg,../assets/portfolio/plichta/oj-omoda7-6.jpg" data-title="OMODA & JAECOO · OMODA 7 — karuzela">
-          <div class="card__media"><img class="card__video" src="../assets/portfolio/plichta/oj-omoda7-1.jpg" alt="OMODA & JAECOO OMODA 7 karuzela" loading="lazy" /><span class="pf-set">KARUZELA · 6</span></div>
-          <div class="card__info"><div><div class="card__client">OMODA & JAECOO</div><div class="card__cat">Kampania / OMODA 7 · karuzela</div></div><span class="card__tag">O&J</span></div>
-        </button>
-      </div>
+<main class="portfolio-page">
+<section class="pt-hero">
+  <div class="pt-hero__top">
+    <div>
+      <span class="eyebrow"><span class="tick"></span>Portfolio · Realizacje wideo i content</span>
+      <h1>Realizacje,<br>które <em>widać</em>.</h1>
     </div>
   </div>
 </section>
-<style>
-.pf-card--img .card__media{aspect-ratio:1/1}
-.pf-lb{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:clamp(18px,5vw,70px);background:rgba(0,0,0,.92)}
-.pf-lb[hidden]{display:none}
-.pf-lb img{max-width:100%;max-height:100%;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
-.pf-lb__close{position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.4);color:#fff;font-size:20px;line-height:1;cursor:pointer}
-.pf-set{position:absolute;top:10px;right:10px;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:#fff;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.35);border-radius:100px;padding:3px 9px;backdrop-filter:blur(4px)}
-.pf-lb__nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.4);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:2}
-.pf-lb__prev{left:22px}.pf-lb__next{right:22px}
-.pf-lb__count{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;color:#fff;opacity:.8}
-.pf-vlb{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:clamp(18px,5vw,70px);background:rgba(0,0,0,.92)}
-.pf-vlb[hidden]{display:none}
-.pf-vlb__frame{position:relative;width:min(1100px,100%);aspect-ratio:16/9}
-.pf-vlb__frame.is-short{width:auto;height:min(86vh,760px);aspect-ratio:9/16}
-.pf-vlb__frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
-</style>
-<div class="pf-lb" id="pf-lb" hidden><button class="pf-lb__close" type="button" aria-label="Zamknij">✕</button><button class="pf-lb__nav pf-lb__prev" type="button" aria-label="Poprzednie">‹</button><img id="pf-lb-img" src="" alt="" /><button class="pf-lb__nav pf-lb__next" type="button" aria-label="Następne">›</button><span class="pf-lb__count" id="pf-lb-count"></span></div>
-<script>
-(function(){var lb=document.getElementById("pf-lb"),img=document.getElementById("pf-lb-img"),cnt=document.getElementById("pf-lb-count"),prev=lb&&lb.querySelector(".pf-lb__prev"),next=lb&&lb.querySelector(".pf-lb__next");if(!lb)return;var set=[],idx=0;function render(){img.src=set[idx];var multi=set.length>1;prev.style.display=next.style.display=multi?"":"none";cnt.style.display=multi?"":"none";cnt.textContent=(idx+1)+" / "+set.length;}document.querySelectorAll(".pf-card[data-full]").forEach(function(b){b.addEventListener("click",function(){var g=b.getAttribute("data-gallery");set=g?g.split(","):[b.getAttribute("data-full")];idx=0;img.alt=b.getAttribute("data-title")||"";render();lb.hidden=false;document.body.style.overflow="hidden";});});function step(d){idx=(idx+d+set.length)%set.length;render();}prev.addEventListener("click",function(e){e.stopPropagation();step(-1);});next.addEventListener("click",function(e){e.stopPropagation();step(1);});function c(){lb.hidden=true;img.src="";document.body.style.overflow="";}lb.addEventListener("click",function(e){if(e.target===lb||e.target.classList.contains("pf-lb__close"))c();});document.addEventListener("keydown",function(e){if(lb.hidden)return;if(e.key==="Escape")c();else if(e.key==="ArrowLeft")step(-1);else if(e.key==="ArrowRight")step(1);});})();
-</script>
+
+<div class="pt-shell">
+  <aside class="pt-side">
+    <span class="pt-side__label">Kategorie</span>
+    <div class="pt-side__list" id="pt-filters">
+      <button class="pt-navlink is-on" type="button" data-filter="all">Wszystko <span class="n">{31}</span></button>
+      <button class="pt-navlink" type="button" data-filter="video">Wideo <span class="n">{17}</span></button>
+      <button class="pt-navlink" type="button" data-filter="eventy">Eventy <span class="n">{03}</span></button>
+      <button class="pt-navlink" type="button" data-filter="foto">Foto <span class="n">{01}</span></button>
+      <button class="pt-navlink" type="button" data-filter="animacje">Animacje <span class="n">{03}</span></button>
+      <button class="pt-navlink" type="button" data-filter="grafika">Grafika <span class="n">{07}</span></button>
+    </div>
+  </aside>
+
+  <section class="pt-grid" id="pt-grid" data-screen-label="Portfolio kafle">
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="jco18tIaCT0" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/jco18tIaCT0/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/jco18tIaCT0/hqdefault.jpg'" alt="CRT" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Film</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film wizerunkowy · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">CRT</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="NHEIfdgr9mI" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/NHEIfdgr9mI/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/NHEIfdgr9mI/hqdefault.jpg'" alt="IZIPAK" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Film</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film produktowy · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">IZIPAK</h3>
+  </a>
+  <a class="pt-tile" data-ratio="portrait" data-cats="eventy" data-media="yt" data-id="OJnUGJdFk9w" data-short="1" href="../realizacja-denza.html">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/OJnUGJdFk9w/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/OJnUGJdFk9w/hqdefault.jpg'" alt="DENZA" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Premiera Z9 GT · Event</span><span class="pt-cap__year">2025</span></div>
+    <h3 class="pt-title">DENZA</h3>
+  </a>
+  <a class="pt-tile" data-ratio="portrait" data-cats="video" data-media="yt" data-id="Hdnf6zcn3bA" data-short="1" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/Hdnf6zcn3bA/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/Hdnf6zcn3bA/hqdefault.jpg'" alt="JAECOO 8" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Short</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Lifestyle · Wideo</span><span class="pt-cap__year">2025</span></div>
+    <h3 class="pt-title">JAECOO 8</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="eventy" data-media="yt" data-id="tvTuMX3mxG4" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/tvTuMX3mxG4/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tvTuMX3mxG4/hqdefault.jpg'" alt="Baltic Towers" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Event</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Otwarcie · Event</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Baltic Towers</h3>
+  </a>
+  <a class="pt-tile" data-ratio="portrait" data-cats="video" data-media="yt" data-id="X8-hf_cyZxE" data-short="1" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/X8-hf_cyZxE/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/X8-hf_cyZxE/hqdefault.jpg'" alt="BYD Dolphin" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Short</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Automotive · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">BYD Dolphin</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="iknT-xURZag" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/iknT-xURZag/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/iknT-xURZag/hqdefault.jpg'" alt="Gdańsk Miastem Kultury" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Miastem Kultury · Wideo</span><span class="pt-cap__year">2023</span></div>
+    <h3 class="pt-title">Gdańsk</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="eventy" data-media="yt" data-id="wVy04YYnbRM" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/wVy04YYnbRM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/wVy04YYnbRM/hqdefault.jpg'" alt="PISF" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Event</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Relacja · Event</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">PISF</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="animacje" data-media="yt" data-id="WszuntCE51c" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/WszuntCE51c/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WszuntCE51c/hqdefault.jpg'" alt="Baltic 3D" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>3D</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Model fabryki · Animacja 3D</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Baltic 3D</h3>
+  </a>
+  <a class="pt-tile" data-ratio="square" data-cats="animacje" data-media="img" data-yt-todo="1">
+    <div class="pt-media" style="display:grid;place-items:center;background:var(--bg-3);"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-faint);">Link wkrótce</span><span class="pt-media__badge"><span class="d"></span>Animacja</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Animacja 3D · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">VTS Group</h3>
+  </a>
+  <a class="pt-tile" data-ratio="square" data-cats="animacje" data-media="img" data-yt-todo="1">
+    <div class="pt-media" style="display:grid;place-items:center;background:var(--bg-3);"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-faint);">Link wkrótce</span><span class="pt-media__badge"><span class="d"></span>Animacja</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Wyniki konkursu · Animacja</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">JAECOO Mundial</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="IH3xK5yzSGI">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/IH3xK5yzSGI/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/IH3xK5yzSGI/hqdefault.jpg'" alt="Gaja Park" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Doraco · Film promocyjny</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Gaja Park</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="foNjF4rmI6A">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/foNjF4rmI6A/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/foNjF4rmI6A/hqdefault.jpg'" alt="Rydzówka Resort" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film reklamowy</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Rydzówka Resort</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="uEQx8bXv1uM">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/uEQx8bXv1uM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/uEQx8bXv1uM/hqdefault.jpg'" alt="Szkoła Baletowa" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Gdańsk · Film promocyjny</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Szkoła Baletowa</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="phXKtUNlDuM">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/phXKtUNlDuM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/phXKtUNlDuM/hqdefault.jpg'" alt="DORACO" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">TVP · Realizacja</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">DORACO</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="bCxvqDc8HYs" data-case="1">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/bCxvqDc8HYs/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bCxvqDc8HYs/hqdefault.jpg'" alt="Porto Mare" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">DS Development · Film promocyjny</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Porto Mare</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="pDQ8vGDMLDM">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/pDQ8vGDMLDM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/pDQ8vGDMLDM/hqdefault.jpg'" alt="BYD Świąteczny" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film świąteczny · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">BYD Świąteczny</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="EYep01WK7G0">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/EYep01WK7G0/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/EYep01WK7G0/hqdefault.jpg'" alt="Land Rover" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film promocyjny · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Land Rover</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="PvHXbj1xNdA">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/PvHXbj1xNdA/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/PvHXbj1xNdA/hqdefault.jpg'" alt="Port Gdynia" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Rozładunek statku · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Port Gdynia</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="JZCqtWY_cGc">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/JZCqtWY_cGc/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/JZCqtWY_cGc/hqdefault.jpg'" alt="PrimeSpot Jastarnia" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Prime Spot · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">PrimeSpot Jastarnia</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="E-eVE7zqBSU">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/E-eVE7zqBSU/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/E-eVE7zqBSU/hqdefault.jpg'" alt="Baltic Towers" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Film wizerunkowy · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Baltic Towers</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="tPSlDvHGSH0">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/tPSlDvHGSH0/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tPSlDvHGSH0/hqdefault.jpg'" alt="Audi Plichta" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Dzień Kobiet 2025 · Wideo</span><span class="pt-cap__year">2025</span></div>
+    <h3 class="pt-title">Audi Plichta</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="Z-KB8adO_Wk">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/Z-KB8adO_Wk/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/Z-KB8adO_Wk/hqdefault.jpg'" alt="Baltic Towers Load" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Wideo</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Załadunek na statek · Wideo</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Baltic Towers Load</h3>
+  </a>
+  <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img" data-src="../assets/portfolio/primespot/pjur-blue-square-1.jpg" href="../realizacja-primespot.html">
+    <div class="pt-media"><img src="../assets/portfolio/primespot/pjur-blue-square-1.jpg" alt="PrimeSpot" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Przystań Jurata · Kampania Meta Ads</span><span class="pt-cap__year">2025</span></div>
+    <h3 class="pt-title">PrimeSpot</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img">
+    <div class="pt-media" style="display:grid;place-items:center;background:var(--bg-3);"><span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-faint);">Sesje foto · wkrótce</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Fotografia · Wkrótce</span><span class="pt-cap__year">2026</span></div>
+    <h3 class="pt-title">Foto</h3>
+  </a>
+  <a class="pt-tile" data-ratio="portrait" data-cats="grafika" data-media="img">
+    <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/ulotka-broszura-TES-yacht-magnam.webp" alt="TES Yacht — Broszura · Druk" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Broszura · Druk</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">TES Yacht</h3>
+  </a>
+  <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img">
+    <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-graficzny-oklatki-vinyli-gootovsky-power-plant-3.webp" alt="Gootovsky — Okładki winyli · Druk" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Okładki winyli · Druk</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Gootovsky</h3>
+  </a>
+  <a class="pt-tile" data-ratio="portrait" data-cats="grafika" data-media="img">
+    <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-graficzny-menu-restauracji-el-molo-1.webp" alt="El Molo — Menu · Restauracja" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Menu · Restauracja</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">El Molo</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img">
+    <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-katalog-szymichowski-pruszcz-park-1.webp" alt="Pruszcz Park — Katalog · Nieruchomości" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Katalog · Nieruchomości</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Pruszcz Park</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img">
+    <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-ulotki-ctrlsky-3-1024x608.webp" alt="ctrlsky — Ulotka · Druk" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Ulotka · Druk</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">ctrlsky</h3>
+  </a>
+  <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img">
+    <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/sezmoo_custom34_grafika_folder-1.webp" alt="Studio Custom 34 — Folder · Druk" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Folder · Druk</span><span class="pt-cap__year">2024</span></div>
+    <h3 class="pt-title">Studio Custom 34</h3>
+  </a>
+  </section>
+</div>
+</main>
+
 <footer class="footer shell service-footer">
   <div class="footer__panel">
     <div class="footer__top"><a class="footer__brand" href="../index.html#hero" aria-label="SEZMOO"><img src="../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a><div class="footer__statement"><span>Content · Video · Campaigns</span><p>Wideo, content i kampanie wizualne dla marek.</p></div></div>
-    <div class="footer__grid"><div class="footer__col"><span class="footer__label">Kontakt</span><a href="mailto:biuro@sezmoo.com">biuro@sezmoo.com</a><a href="tel:+48502260450">+48 502 260 450</a></div><div class="footer__col"><span class="footer__label">Studio</span><a href="#work-list">Realizacje</a><a href="../uslugi-marketingowe/index.html#lista-uslug">Usługi</a><a href="../index.html#kontakt">Brief</a></div><div class="footer__col"><span class="footer__label">Social</span><a href="https://www.instagram.com/sezmoo/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/sezmooagencja" target="_blank" rel="noopener">Facebook</a><a href="https://www.youtube.com/@sezmooagency" target="_blank" rel="noopener">YouTube</a><a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener">LinkedIn</a></div><div class="footer__col"><span class="footer__label">Adres</span><p>Zeusa 34<br>80-299 Gdańsk</p></div></div>
+    <div class="footer__grid"><div class="footer__col"><span class="footer__label">Kontakt</span><a href="mailto:biuro@sezmoo.com">biuro@sezmoo.com</a><a href="tel:+48502260450">+48 502 260 450</a></div><div class="footer__col"><span class="footer__label">Studio</span><a href="index.html">Realizacje</a><a href="../uslugi-marketingowe/index.html#lista-uslug">Usługi</a><a href="../index.html#kontakt">Brief</a></div><div class="footer__col"><span class="footer__label">Social</span><a href="https://www.instagram.com/sezmoo/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/sezmooagencja" target="_blank" rel="noopener">Facebook</a><a href="https://www.youtube.com/@sezmooagency" target="_blank" rel="noopener">YouTube</a><a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener">LinkedIn</a></div><div class="footer__col"><span class="footer__label">Adres</span><p>Zeusa 34<br>80-299 Gdańsk</p></div></div>
     <div class="footer__bottom"><span>© 2026 SEZMOO · WSZELKIE PRAWA ZASTRZEŻONE</span><a class="footer__legal" href="../polityka-prywatnosci/index.html">Polityka prywatności</a><a href="#top">Do góry</a></div>
   </div>
 </footer>
-</main>
-
-<!-- YouTube API probe player injected by script -->
 
 <script src="../app.js"></script>
 <script src="../flowing-background.js"></script>
 <script>
-/* Portfolio: category filter + YouTube lightbox */
 (function () {
-  var chips = [].slice.call(document.querySelectorAll(".work__filters .chip"));
-  var cats = [].slice.call(document.querySelectorAll(".pf-cat"));
+  var CASE_IDS = ["WG5ufZMfjQ8","Hdnf6zcn3bA","X8-hf_cyZxE","jco18tIaCT0","NHEIfdgr9mI","wVy04YYnbRM","iknT-xURZag","tvTuMX3mxG4","WszuntCE51c"];
+  var tiles = [].slice.call(document.querySelectorAll(".pt-tile"));
 
-  function applyFilter(f) {
-    chips.forEach(function (c) { c.classList.toggle("is-on", c.dataset.filter === f); });
-    var specific = f !== "all";
-    cats.forEach(function (cat) {
-      var cards = [].slice.call(cat.querySelectorAll(".pf-card"));
-      var visible = 0;
-      cards.forEach(function (card) {
-        var list = (card.getAttribute("data-cats") || "").split(/[\s,]+/);
-        var match = !specific || list.indexOf(f) > -1;
-        card.classList.toggle("is-cat-hide", !match);
-        if (specific) { card.classList.remove("is-more-hidden"); }
-        else if (card.classList.contains("pf-extra")) { card.classList.add("is-more-hidden"); }
-        if (match && !card.classList.contains("is-more-hidden")) visible++;
-      });
-      cat.classList.toggle("is-hide", visible === 0);
-      var more = cat.querySelector(".pf-more");
-      if (more) {
-        more.style.display = specific ? "none" : "";
-        var b = more.querySelector(".pf-more__btn");
-        if (b && !specific) b.innerHTML = (b.dataset.label || "Poka\u017c wszystkie") + ' <span class="n">+' + (b.dataset.count || "") + "</span>";
-      }
-    });
-  }
+  /* filters */
+  var chips = [].slice.call(document.querySelectorAll(".pt-navlink"));
   chips.forEach(function (chip) {
-    chip.addEventListener("click", function () { applyFilter(chip.dataset.filter || "all"); });
-  });
-
-  /* max 4 tiles per category + reveal-more toggle */
-  var MAX = 4;
-  cats.forEach(function (cat) {
-    var grid = cat.querySelector(".pf-grid");
-    if (!grid) return;
-    var cards = [].slice.call(grid.querySelectorAll(".pf-card"));
-    if (cards.length <= MAX) return;
-    var hidden = cards.slice(MAX);
-    hidden.forEach(function (c) { c.classList.add("is-more-hidden"); c.classList.add("pf-extra"); });
-    var wrap = document.createElement("div"); wrap.className = "pf-more";
-    var btn = document.createElement("button"); btn.type = "button"; btn.className = "pf-more__btn";
-    var label = "Poka\u017c wszystkie";
-    btn.dataset.label = label; btn.dataset.count = hidden.length;
-    btn.innerHTML = label + ' <span class="n">+' + hidden.length + "</span>";
-    wrap.appendChild(btn); cat.appendChild(wrap);
-    btn.addEventListener("click", function () {
-      var collapsed = hidden[0].classList.contains("is-more-hidden");
-      hidden.forEach(function (c) { c.classList.toggle("is-more-hidden", !collapsed); });
-      btn.innerHTML = collapsed ? "Zwi\u0144" : (label + ' <span class="n">+' + hidden.length + "</span>");
+    chip.addEventListener("click", function () {
+      var f = chip.dataset.filter || "all";
+      chips.forEach(function (c) { c.classList.toggle("is-on", c === chip); });
+      tiles.forEach(function (t) {
+        var list = (t.getAttribute("data-cats") || "").split(/[\s,]+/);
+        t.classList.toggle("is-hide", !(f === "all" || list.indexOf(f) > -1));
+      });
     });
   });
 
-  /* preselect from ?cat= (map legacy service categories) */
-  var map = { video:"video", wideo:"video", photo:"video", social:"social", animacje:"animacje", motion:"animacje", "3d":"animacje", eventy:"eventy", event:"eventy", automotive:"video", b2b:"video", kampanie:"social" };
-  var rc = new URLSearchParams(location.search).get("cat");
-  if (rc && map[rc]) applyFilter(map[rc]);
-
-  /* ---- cards: hover-preview, real duration, click -> case study ---- */
-  var CASE_IDS = ["WG5ufZMfjQ8","4DTDakWPmfM","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_cyZxE","O5iF7SxqX1I","jco18tIaCT0","NHEIfdgr9mI","AygAJ4SOIw8","wVy04YYnbRM","iknT-xURZag","tvTuMX3mxG4","lD11UTII6Ko","7HZN5VCTvoo","lOwJMPKMdYA","WszuntCE51c"];
-  var vlb=null;
-  function openVideo(id, short){
-    if(!vlb){
-      vlb=document.createElement("div"); vlb.className="pf-vlb"; vlb.hidden=true;
-      vlb.innerHTML='<button class="pf-lb__close" type="button" aria-label="Zamknij">\u2715</button><div class="pf-vlb__frame"></div>';
+  /* video modal */
+  var vlb = null;
+  function openVideo(id, short) {
+    if (!vlb) {
+      vlb = document.createElement("div"); vlb.className = "pt-vlb"; vlb.hidden = true;
+      vlb.innerHTML = '<button class="pt-vlb__close" type="button" aria-label="Zamknij">\u2715</button><div class="pt-vlb__frame"></div>';
       document.body.appendChild(vlb);
-      vlb.addEventListener("click",function(e){ if(e.target===vlb||e.target.classList.contains("pf-lb__close")) closeVideo(); });
-      document.addEventListener("keydown",function(e){ if(!vlb.hidden&&e.key==="Escape") closeVideo(); });
+      vlb.addEventListener("click", function (e) { if (e.target === vlb || e.target.classList.contains("pt-vlb__close")) closeVideo(); });
+      document.addEventListener("keydown", function (e) { if (!vlb.hidden && e.key === "Escape") closeVideo(); });
     }
-    var frame=vlb.querySelector(".pf-vlb__frame");
-    frame.className="pf-vlb__frame"+(short?" is-short":"");
-    frame.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1&origin=https://sezmoo.com" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe>';
-    vlb.hidden=false; document.body.style.overflow="hidden";
+    var frame = vlb.querySelector(".pt-vlb__frame");
+    frame.className = "pt-vlb__frame" + (short ? " is-short" : "");
+    frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe>';
+    vlb.hidden = false; document.body.style.overflow = "hidden";
   }
-  function closeVideo(){ if(!vlb)return; vlb.hidden=true; vlb.querySelector(".pf-vlb__frame").innerHTML=""; document.body.style.overflow=""; }
-  var allCards = [].slice.call(document.querySelectorAll(".pf-card"));
+  function closeVideo() { if (!vlb) return; vlb.hidden = true; vlb.querySelector(".pt-vlb__frame").innerHTML = ""; document.body.style.overflow = ""; }
 
-  allCards.forEach(function (card) {
-    var media = card.querySelector(".card__media");
-    var yid = card.getAttribute("data-yt");
-    if (media) {
-      var hint = document.createElement("span");
-      hint.className = "card__hint";
-      hint.textContent = card.getAttribute("data-case") ? "Zobacz case \u2192" : (!yid ? "Powi\u0119ksz \u2192" : (CASE_IDS.indexOf(yid) > -1 ? "Zobacz realizacj\u0119 \u2192" : "Odtw\u00f3rz \u2192"));
-      media.appendChild(hint);
-    }
-    // click -> case study if it exists, otherwise play video in a modal
-    card.addEventListener("click", function () {
-      if (!yid) return;
-      if (CASE_IDS.indexOf(yid) > -1) { location.href = "../realizacja.html?v=" + yid; return; }
-      openVideo(yid, card.getAttribute("data-short") === "1");
+  /* click routing */
+  tiles.forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      if (t.getAttribute("href")) return;
+      e.preventDefault();
+      var id = t.getAttribute("data-id");
+      if (!id) return;
+      if (CASE_IDS.indexOf(id) > -1) { location.href = "../realizacja.html?v=" + id; return; }
+      openVideo(id, t.getAttribute("data-short") === "1");
     });
   });
 
-  /* hover-preview: inject muted autoplay iframe on enter, remove on leave */
+  /* in-tile hover video */
   var canHover = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
   if (canHover) {
-    allCards.forEach(function (card) {
-      var media = card.querySelector(".card__media");
-      var id = card.getAttribute("data-yt");
-      if (!media || !id) return;
-      var timer = null;
-      card.addEventListener("mouseenter", function () {
+    tiles.forEach(function (t) {
+      if (t.getAttribute("data-media") !== "yt") return;
+      var media = t.querySelector(".pt-media"), id = t.getAttribute("data-id"), timer = null;
+      t.addEventListener("mouseenter", function () {
         timer = setTimeout(function () {
           if (media.querySelector("iframe")) return;
           var ifr = document.createElement("iframe");
-          ifr.src = "https://www.youtube-nocookie.com/embed/" + id +
-            "?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=" + id + "&origin=https://sezmoo.com";
+          ifr.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=" + id;
           ifr.allow = "autoplay; encrypted-media; picture-in-picture";
-          ifr.setAttribute("tabindex", "-1");
+          ifr.tabIndex = -1;
           media.appendChild(ifr);
-          card.classList.add("is-hoving");
-        }, 260);
+        }, 240);
       });
-      card.addEventListener("mouseleave", function () {
+      t.addEventListener("mouseleave", function () {
         clearTimeout(timer);
         var ifr = media.querySelector("iframe");
         if (ifr) ifr.remove();
-        card.classList.remove("is-hoving");
       });
     });
   }
 
-  /* real durations via YouTube IFrame API (one hidden probe player) */
-  function fmt(s) {
-    s = Math.round(s);
-    var m = Math.floor(s / 60), r = s % 60;
-    return "TC " + (m < 10 ? "0" + m : m) + ":" + (r < 10 ? "0" + r : r);
-  }
-  function initDurations() {
-    var probeHost = document.createElement("div");
-    probeHost.style.cssText = "position:absolute;width:1px;height:1px;left:-9999px;top:-9999px;overflow:hidden;";
-    document.body.appendChild(probeHost);
-    var probeEl = document.createElement("div");
-    probeHost.appendChild(probeEl);
-    var queue = allCards.map(function (c) {
-      return { id: c.getAttribute("data-yt"), tc: c.querySelector(".card__tc") };
-    }).filter(function (q) { return q.id && q.tc; });
-    var i = 0, player, guard;
-    function writeDur() {
-      var d = 0;
-      try { d = player.getDuration(); } catch (e) {}
-      if (d && d > 0) {
-        var q = queue[i];
-        var rd = q.tc.querySelector(".rd");
-        q.tc.textContent = fmt(d);
-        if (rd) q.tc.insertBefore(rd, q.tc.firstChild);
-        clearTimeout(guard);
-        i++; next();
-      }
-    }
-    function next() {
-      if (i >= queue.length) { probeHost.remove(); return; }
-      guard = setTimeout(function () { i++; next(); }, 4000); // skip if stuck
-      player.cueVideoById(queue[i].id);
-    }
-    window.YT.ready(function () {
-      player = new YT.Player(probeEl, {
-        height: "1", width: "1", videoId: queue[0] ? queue[0].id : "",
-        playerVars: { autoplay: 0, controls: 0 },
-        events: {
-          onReady: function () { next(); },
-          onStateChange: function (e) { if (e.data === YT.PlayerState.CUED) writeDur(); }
-        }
+  /* ---- scroll depth: tiles grow toward viewport centre + subtle 3D tilt ---- */
+  /* desktop only: on narrow screens the scale-up would cause horizontal scroll */
+  if (window.matchMedia("(min-width:900px)").matches && !window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
+    var ticking = false;
+    function depthFrame() {
+      var vh = window.innerHeight;
+      tiles.forEach(function (t) {
+        if (t.classList.contains("is-hide")) return;
+        var r = t.getBoundingClientRect();
+        if (r.bottom < -240 || r.top > vh + 240) return;
+        var d = ((r.top + r.height / 2) - vh / 2) / vh;   /* 0 = centred */
+        d = Math.max(-1, Math.min(1, d));
+        var s = 1.04 - Math.abs(d) * 0.14;                 /* grow near centre */
+        var rx = d * 7;                                     /* tilt for depth */
+        t.style.transform = "perspective(1200px) rotateX(" + rx + "deg) scale(" + s.toFixed(4) + ")";
       });
-    });
-  }
-  if (window.YT && window.YT.Player) {
-    initDurations();
-  } else {
-    var prev = window.onYouTubeIframeAPIReady;
-    window.onYouTubeIframeAPIReady = function () { if (prev) prev(); initDurations(); };
-    var tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.head.appendChild(tag);
+      ticking = false;
+    }
+    function reqDepth() { if (!ticking) { ticking = true; requestAnimationFrame(depthFrame); } }
+    window.addEventListener("scroll", reqDepth, { passive: true });
+    window.addEventListener("resize", reqDepth);
+    reqDepth();
   }
 })();
 </script>
 <script>
-/* Theme switcher (dark / light) */
 (function () {
   var root = document.documentElement;
   var opts = [].slice.call(document.querySelectorAll('[data-theme-set]'));
   function apply(t) {
     root.setAttribute('data-theme', t);
     try { localStorage.setItem('sezmoo-theme', t); } catch (e) {}
-    opts.forEach(function (b) {
-      var on = b.getAttribute('data-theme-set') === t;
-      b.classList.toggle('is-active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
+    opts.forEach(function (b) { var on = b.getAttribute('data-theme-set') === t; b.classList.toggle('is-active', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
   }
-  opts.forEach(function (b) {
-    b.addEventListener('click', function () { apply(b.getAttribute('data-theme-set')); });
-  });
+  opts.forEach(function (b) { b.addEventListener('click', function () { apply(b.getAttribute('data-theme-set')); }); });
   apply(root.getAttribute('data-theme') || 'dark');
 })();
 </script>

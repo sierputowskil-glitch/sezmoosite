@@ -261,7 +261,7 @@ main {
     align-items: stretch;
     justify-content: flex-start;
     gap: 2px;
-    padding: 84px clamp(24px, 9vw, 64px) 38px;
+    padding: 84px clamp(24px, 9vw, 64px) calc(38px + 62px + env(safe-area-inset-bottom, 0px));
     background: oklch(0.115 0.004 60 / 0.985);
     border: 0;
     -webkit-backdrop-filter: blur(20px) saturate(1.1); backdrop-filter: blur(20px) saturate(1.1);
@@ -388,14 +388,6 @@ main {
 
 .hero__reel {
   position: absolute; inset: 0; z-index: 0;
-  /* cinematic mask reveal */
-  clip-path: inset(14% 14% 14% 14%);
-  animation: reelReveal 1.6s var(--ease) 0.25s both;
-}
-@keyframes reelReveal {
-  0%   { clip-path: inset(46% 46% 46% 46%); filter: brightness(0.2) blur(8px); }
-  60%  { filter: brightness(0.55) blur(0); }
-  100% { clip-path: inset(0% 0% 0% 0%); filter: brightness(0.6) blur(0); }
 }
 .hero__reel .frame-media { position: absolute; inset: 0; }
 
@@ -425,7 +417,7 @@ main {
   mix-blend-mode: multiply; opacity: .5;
 }
 .hero__grad { position:absolute; inset:0; z-index:2; pointer-events:none;
-  background: linear-gradient(180deg, transparent 0%, transparent 55%, oklch(0.1 0.004 60 / 0.55) 100%); }
+  background: linear-gradient(180deg, transparent 0%, transparent 55%, oklch(0.1 0.004 60 / 0.4) 100%); }
 
 .hero__corners { position: absolute; inset: clamp(18px,3.4vw,46px); z-index: 3; pointer-events: none; }
 .hero__corners span { position: absolute; width: 34px; height: 34px; border: 2px solid oklch(0.96 0.006 80 / 0.55); }
@@ -503,7 +495,7 @@ section { position: relative; }
 .js .reveal.in { opacity: 1; transform: none; }
 .js .reveal[data-d="1"]{ transition-delay:.08s } .js .reveal[data-d="2"]{ transition-delay:.16s }
 .js .reveal[data-d="3"]{ transition-delay:.24s } .js .reveal[data-d="4"]{ transition-delay:.32s }
-@media (prefers-reduced-motion: reduce){ .js .reveal{ opacity:1; transform:none; } .hero__reel{animation:none;clip-path:none} }
+@media (prefers-reduced-motion: reduce){ .js .reveal{ opacity:1; transform:none; } }
 
 /* ============================================================
    WORK / PORTFOLIO
@@ -535,6 +527,31 @@ section { position: relative; }
 .work-reel .card.is-hidden { display: none; }
 .work-reel .card__media { flex: 1 1 auto; min-height: 0; height: auto; }
 .work-reel .card__media img, .work-reel .card__media video { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---- Full-bleed reel cards: photo fills the card, caption sits on a soft scrim ---- */
+.work-reel .card { position: relative; }
+.work-reel .card__media { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
+.work-reel .card__video { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.92) brightness(.84); }
+.work-reel .card:hover .card__video { filter: saturate(1.05) brightness(.96); }
+.work-reel .card__info {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 4;
+  align-items: flex-end; flex-wrap: nowrap;
+  padding: clamp(38px,7vh,70px) clamp(15px,1.4vw,20px) clamp(15px,1.6vw,20px);
+  background: linear-gradient(to top,
+    oklch(0.06 0.004 60 / 0.9) 0%,
+    oklch(0.06 0.004 60 / 0.55) 42%,
+    transparent 100%);
+  pointer-events: none;
+}
+.work-reel .card__client { color: #f6f2e8; text-shadow: 0 1px 14px oklch(0 0 0 / 0.5); }
+.work-reel .card__cat { color: oklch(0.92 0.006 80 / 0.72); }
+/* single readable tag over the scrim; drop the duplicated category chips */
+.work-reel .card__cats { display: none; }
+.work-reel .card__tag {
+  pointer-events: auto; color: #f4f0e6;
+  background: oklch(0.1 0.004 60 / 0.42); border-color: oklch(0.96 0.006 80 / 0.34);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.work-reel .card:hover .card__tag { color: var(--bg); background: var(--rec); border-color: var(--rec); }
 
 /* nav buttons inside switcher */
 .work-nav {
@@ -576,6 +593,14 @@ section { position: relative; }
   .work-reel .card { grid-column: auto !important; grid-row: auto !important; }
   .work-reel .card.is-hidden { display: none; }
   .work-slider__hud { display: flex; }
+}
+@media (max-width: 560px){
+  .work-slider__hud { gap: 12px; padding-left: 12px; padding-right: 12px; }
+  .work-nav { width: 34px; height: 34px; }
+  .work-dots { gap: 6px; }
+  .work-dots button { width: 20px; }
+  .work-dots button.is-on { width: 34px; }
+  .work-reel__count { font-size: 12px; letter-spacing: .08em; white-space: nowrap; }
 }
 .work__filters { display:flex; flex-wrap:wrap; gap:8px; margin-top: 34px; }
 .chip { font-family: var(--font-mono); font-size: 11px; letter-spacing:.1em; text-transform:uppercase;
@@ -2967,7 +2992,7 @@ img.card__video { background: var(--bg-2); }
 }
 /* hero reel uses the same cinematic grade as the old <video> */
 .hero__video:has(iframe) { opacity: 1; }
-.hero__video .yt-bg iframe { filter: brightness(0.62) saturate(1.05); }
+.hero__video .yt-bg iframe { filter: brightness(0.78) saturate(1.05); }
 /* studio media becomes a vertical reel frame for the Short */
 .studio__media.is-vertical { aspect-ratio: 9 / 16; max-height: min(82vh, 860px); margin-inline: auto; }
 
@@ -3388,6 +3413,8 @@ img.card__video { background: var(--bg-2); }
     backdrop-filter: blur(18px) saturate(1.1);
     border-top: 1px solid var(--line-soft);
     box-shadow: 0 -14px 40px oklch(0 0 0 / 0.42);
+    transform: translateZ(0); -webkit-transform: translateZ(0);
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
   }
   .mbar__item {
     display: grid;
