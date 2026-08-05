@@ -460,6 +460,7 @@ main {
 
 .hero__sub { margin-top: clamp(28px,4vh,44px); max-width: 44ch; font-size: clamp(16px,1.4vw,21px);
   color: var(--fg-dim); line-height: 1.5; }
+.hero__sub b { color: var(--fg); font-weight: 700; }
 .hero__cta { display:flex; flex-wrap:wrap; gap: 14px; margin-top: clamp(26px,4vh,44px); }
 
 /* ---------- Buttons ---------- */
