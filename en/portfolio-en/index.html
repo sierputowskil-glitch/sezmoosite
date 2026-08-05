@@ -57,9 +57,9 @@
 .pt-navlink.is-on .n { color:var(--rec); opacity:.85; }
 
 /* ---- grid (true masonry, tightly packed) ---- */
-.pt-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,2.4vw,42px) clamp(16px,1.8vw,30px); align-items:start; }
+.pt-grid { columns:2; column-gap:clamp(16px,1.8vw,30px); }
 
-.pt-tile { display:block; break-inside:avoid; margin:0; will-change:transform; transform:perspective(1200px); text-align:left; color:inherit; font:inherit; background:none; border:0; padding:0;
+.pt-tile { display:block; break-inside:avoid; margin:0 0 clamp(24px,2.4vw,42px); will-change:transform; transform:perspective(1200px); text-align:left; color:inherit; font:inherit; background:none; border:0; padding:0;
   cursor:pointer; width:100%; }
 .pt-tile.is-hide { display:none; }
 .pt-media { position:relative; overflow:hidden; border-radius:10px; background:var(--bg-3);
@@ -112,7 +112,7 @@
   .pt-navlink.is-on .n { color:var(--on-accent); }
 }
 @media (max-width:760px){
-  .pt-grid { grid-template-columns:1fr; }
+  .pt-grid { columns:1; }
   .pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:4/5; }
 }
 .portfolio-page { overflow-x:clip; width:100%; }
@@ -122,7 +122,7 @@
   .pt-hero__top { gap:14px; }
   .pt-hero__lead { font-size:14px; }
   .pt-shell { padding:20px 20px 60px; gap:18px; }
-  .pt-grid { grid-template-columns:1fr; }
+  .pt-grid { columns:1; }
   .pt-tile { margin-bottom:20px; }
   .pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:4/5; }
   .pt-title { font-size:26px; }
@@ -218,6 +218,11 @@
     <div class="pt-cap"><span class="pt-cap__tags">Factory model · 3D animation</span></div>
     <h3 class="pt-title">Baltic 3D</h3>
   </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="animacje" data-media="yt" data-id="DFj4rZzxHXA">
+    <div class="pt-media"><img src="https://i.ytimg.com/vi/DFj4rZzxHXA/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/DFj4rZzxHXA/hqdefault.jpg'" alt="VTS Group" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Animation</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">3D animation · Video</span></div>
+    <h3 class="pt-title">VTS Group</h3>
+  </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="wVy04YYnbRM" data-case="1">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/wVy04YYnbRM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/wVy04YYnbRM/hqdefault.jpg'" alt="PISF" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Event</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">Coverage · Video</span></div>
@@ -237,11 +242,6 @@
     <div class="pt-media"><img src="https://i.ytimg.com/vi/X8-hf_cyZxE/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/X8-hf_cyZxE/hqdefault.jpg'" alt="BYD Dolphin" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Short</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">Automotive · Video</span></div>
     <h3 class="pt-title">BYD Dolphin</h3>
-  </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="animacje" data-media="yt" data-id="DFj4rZzxHXA">
-    <div class="pt-media"><img src="https://i.ytimg.com/vi/DFj4rZzxHXA/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/DFj4rZzxHXA/hqdefault.jpg'" alt="VTS Group" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Animation</span><span class="pt-media__open" aria-hidden="true">→</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">3D animation · Video</span></div>
-    <h3 class="pt-title">VTS Group</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="IH3xK5yzSGI">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/IH3xK5yzSGI/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/IH3xK5yzSGI/hqdefault.jpg'" alt="Gaja Park" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Video</span><span class="pt-media__open" aria-hidden="true">→</span></div>
