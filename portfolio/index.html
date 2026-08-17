@@ -149,7 +149,7 @@
   <div class="pt-hero__top">
     <div>
       <span class="eyebrow"><span class="tick"></span>Portfolio · Realizacje wideo i content</span>
-      <h1>Realizacje,<br>które <em>widać</em>.</h1>
+      <h1>Zobacz nasze<br><em>realizacje</em>.</h1>
     </div>
   </div>
 </section>
@@ -445,8 +445,8 @@
         if (r.bottom < -240 || r.top > vh + 240) return;
         var d = ((r.top + r.height / 2) - vh / 2) / vh;   /* 0 = centred */
         d = Math.max(-1, Math.min(1, d));
-        var s = 1.04 - Math.abs(d) * 0.14;                 /* grow near centre */
-        var rx = d * 7;                                     /* tilt for depth */
+        var s = 1;                                          /* no scroll zoom */
+        var rx = d * 3;                                     /* subtle tilt only */
         t.style.transform = "perspective(1200px) rotateX(" + rx + "deg) scale(" + s.toFixed(4) + ")";
       });
       ticking = false;
