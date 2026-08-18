@@ -2737,6 +2737,11 @@ img.card__video { background: var(--bg-2); }
 @media (max-width: 1100px) {
   .sub-hero__grid,
   .sub-cta { grid-template-columns: 1fr; }
+  /* podstrony usług: kolumna z mediami nie może wymuszać min 360px */
+  .service-detail .sub-hero__grid { grid-template-columns: minmax(0, 1fr); }
+  .service-detail .sub-hero h1 { max-width: none; font-size: clamp(34px, 8.4vw, 60px); }
+  .service-detail .sub-hero__lead { max-width: 46ch; font-size: clamp(16px, 3.6vw, 19px); }
+  .service-stage { min-height: clamp(240px, 34vh, 380px); }
   .sub-grid { grid-template-columns: 1fr; }
   .service-hub__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .service-tile--feature { grid-column: span 1; }

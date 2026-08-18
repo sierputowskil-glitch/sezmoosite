@@ -62,6 +62,11 @@
 .pt-tile { display:block; break-inside:avoid; margin:0 0 clamp(24px,2.4vw,42px); will-change:transform; transform:perspective(1200px); text-align:left; color:inherit; font:inherit; background:none; border:0; padding:0;
   cursor:pointer; width:100%; }
 .pt-tile.is-hide { display:none; }
+/* podpisy NAD zdjęciem */
+.pt-tile { display:flex; flex-direction:column; }
+.pt-tile .pt-cap { order:1; }
+.pt-tile .pt-title { order:2; }
+.pt-tile .pt-media { order:3; }
 .pt-media { position:relative; overflow:hidden; border-radius:10px; background:var(--bg-3);
   border:1px solid var(--line-soft); aspect-ratio:4/3; contain:layout paint; transform:translateZ(0); }
 .pt-tile[data-ratio="portrait"] .pt-media { aspect-ratio:3/4; }
@@ -84,12 +89,12 @@
 
 /* caption */
 .pt-cap { display:flex; align-items:baseline; justify-content:space-between; gap:16px;
-  margin:clamp(14px,1.4vw,20px) 2px 0; }
+  margin:0 2px 6px; }
 .pt-cap__tags { font-family:var(--font-mono); font-size:clamp(11px,0.85vw,13px); letter-spacing:.05em;
   color:var(--fg-faint); }
 .pt-cap__year { font-family:var(--font-mono); font-size:clamp(11px,0.85vw,13px); letter-spacing:.05em;
   color:var(--fg-faint); flex:0 0 auto; }
-.pt-title { margin:6px 2px 0; font-weight:720; font-stretch:104%; letter-spacing:-.015em; line-height:1;
+.pt-title { margin:0 2px clamp(10px,1vw,16px); font-weight:720; font-stretch:104%; letter-spacing:-.015em; line-height:1;
   font-size:clamp(26px,3vw,44px); transition:color .35s var(--ease); }
 .pt-tile:hover .pt-title { color:var(--rec); }
 @media (prefers-reduced-motion:reduce){ .pt-tile { transform:none !important; } }
