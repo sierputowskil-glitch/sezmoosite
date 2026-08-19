@@ -80,6 +80,11 @@
   padding:9px 18px; cursor:pointer; transition: color .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease); }
 .lb__close:hover { color:var(--on-accent); background:var(--rec); border-color:var(--rec); }
 .work-reel .card[data-yt] { cursor:pointer; }
+.svc__ico { display:block; width:30px; height:30px; color:#ffd200; margin:0 0 clamp(12px,1.2vw,18px);
+  opacity:.9; transition: transform .5s var(--ease), opacity .4s var(--ease); }
+.svc:hover .svc__ico { opacity:1; transform: translateX(6px) scale(1.06); }
+.sec-title--line { max-width:none; white-space:nowrap; font-size:clamp(30px,4.2vw,68px); }
+@media (max-width:520px){ .sec-title--line { font-size:clamp(26px,7.4vw,34px); } }
 @media (max-width:620px){ .lb.is-short .lb__frame { height:auto; width:100%; } .lb.is-short .lb__inner { width:min(100%,420px); } }
 </style>
 </head>
@@ -176,7 +181,7 @@
 <!-- ============ 2 · WORK / PORTFOLIO ============ -->
 <section class="work shell" id="work" data-screen-label="Work">
   <div class="sec-head">
-    <h2 class="sec-title reveal">Wybrane<br>projekty.</h2>
+    <h2 class="sec-title sec-title--line reveal">Wybrane projekty.</h2>
     <span class="sec-index reveal">[ 02 ] · PORTFOLIO</span>
   </div>
 
@@ -614,54 +619,54 @@
 <section class="services shell" id="services" data-screen-label="Services">
   <div class="services-static reveal">
       <div class="sec-head">
-        <h2 class="sec-title reveal">Jedna produkcja.<br>Różne <span style="color:#ffd200">możliwości.</span></h2>
+        <h2 class="sec-title reveal">Nasze <span style="color:#ffd200">usługi.</span></h2>
         <span class="sec-index reveal">[ 03 ] · PRODUKCJA CONTENTU</span>
       </div>
-      <p class="reveal" style="color:var(--fg-dim);font-size:clamp(15px,1.15vw,17px);line-height:1.6;max-width:64ch;margin:clamp(14px,1.6vw,20px) 0 0">Formaty planujemy pod&nbsp;konkretne zastosowanie. Produkcja wideo i&nbsp;foto, spoty reklamowe, rolki na&nbsp;Reels i&nbsp;TikTok, zdjęcia produktowe, ujęcia z&nbsp;drona, animacje 2D/3D, projektowanie graficzne, identyfikacja wizualna, strony internetowe, kampanie płatne, relacje z&nbsp;eventów i&nbsp;materiały reklamowe —&nbsp;z&nbsp;jednej produkcji, dla&nbsp;marek z&nbsp;Trójmiasta i&nbsp;całej Polski.</p>
+      
       </div>
   </div>
 
   <div class="svc-grid">
     <a class="svc reveal svc--pillar" href="uslugi-marketingowe/produkcja-wideo-reels/index.html" data-cursor="link">
-      <span class="svc__no">S·01</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
       <div class="svc__body">
+        <svg class="svc__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="M7 4.5v15M17 4.5v15M2.5 9.5h4.5M2.5 14.5h4.5M17 9.5h4.5M17 14.5h4.5"/></svg>
         <h3 class="svc__title">Produkcja wideo<br>i&nbsp;motion design</h3>
         <p class="svc__desc">Produkcja wideo reklamowego, rolek i&nbsp;animacji 2D —&nbsp;od&nbsp;ujęć z&nbsp;drona po&nbsp;gotowy montaż. Kręcimy, animujemy i&nbsp;eksportujemy w&nbsp;formatach pod&nbsp;kampanie i&nbsp;social media.</p>
         <div class="svc__chips"><span>spoty</span><span>reels</span><span>dron</span><span>motion</span></div>
       </div>
     </a>
     <a class="svc reveal svc--pillar" href="uslugi-marketingowe/fotografia/index.html" data-d="1" data-cursor="link">
-      <span class="svc__no">S·02</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
       <div class="svc__body">
+        <svg class="svc__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5h3l1.6-2.4h8.8L18 8.5h3v10.5a.5.5 0 0 1-.5.5h-17a.5.5 0 0 1-.5-.5V8.5Z"/><circle cx="12" cy="13.5" r="4"/></svg>
         <h3 class="svc__title">Foto i&nbsp;sesje</h3>
         <p class="svc__desc">Sesje zdjęciowe produktowe, wizerunkowe i&nbsp;eventowe. Od&nbsp;planu w&nbsp;studio po&nbsp;reportaż z&nbsp;realizacji —&nbsp;zdjęcia gotowe do&nbsp;kampanii i&nbsp;social media.</p>
         <div class="svc__chips"><span>produkt</span><span>wizerunek</span><span>event</span><span>studio</span></div>
       </div>
     </a>
     <a class="svc reveal svc--pillar" href="uslugi-marketingowe/projektowanie-graficzne/index.html" data-d="2" data-cursor="link">
-      <span class="svc__no">S·03</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
       <div class="svc__body">
+        <svg class="svc__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.2 3.9l4.9 4.9M3.5 20.5l1.2-5 11-11 4.9 4.9-11 11-5.1 1.1Z"/><path d="M12.7 6.4l4.9 4.9"/></svg>
         <h3 class="svc__title">Grafika i&nbsp;branding</h3>
         <p class="svc__desc">Logotypy, key visuale i&nbsp;grafika do&nbsp;social mediów. Materiały reklamowe, katalogi i&nbsp;projekty WWW —&nbsp;od&nbsp;projektu po&nbsp;realizację.</p>
         <div class="svc__chips"><span>logo</span><span>KV</span><span>katalogi</span><span>WWW</span></div>
       </div>
     </a>
     <a class="svc reveal svc--pillar" href="uslugi-marketingowe/obsluga-social-media/index.html" data-d="3" data-cursor="link">
-      <span class="svc__no">S·04</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
       <div class="svc__body">
+        <svg class="svc__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 5.4h3"/><circle cx="12" cy="18" r="1"/></svg>
         <h3 class="svc__title">Social media</h3>
         <p class="svc__desc">Strategia contentu, publikacje i&nbsp;prowadzenie profili oraz kampanie płatne —&nbsp;od&nbsp;strategii po&nbsp;codzienną obecność.</p>
         <div class="svc__chips"><span>strategia</span><span>publikacje</span><span>kampanie</span></div>
       </div>
     </a>
     <a class="svc reveal svc--pillar" href="uslugi-marketingowe/index.html#lista-uslug" data-d="4" data-cursor="link">
-      <span class="svc__no">S·05</span>
       <svg class="svc__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19 19 5M19 5H8M19 5v11"/></svg>
       <div class="svc__body">
+        <svg class="svc__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.4 2.1"/></svg>
         <h3 class="svc__title">Abonament i&nbsp;stała współpraca</h3>
         <p class="svc__desc">Stały pakiet godzin produkcyjnych w&nbsp;miesiącu —&nbsp;Ty decydujesz, na&nbsp;co je&nbsp;przeznaczyć. Raz wideo, raz sesja foto, raz grafika. Jeden zespół, elastycznie dopasowany do&nbsp;bieżących potrzeb marki.</p>
         <div class="svc__chips"><span>godziny</span><span>elastycznie</span><span>zespół</span></div>
@@ -696,8 +701,10 @@
     </div>
     <div>
       <h2 class="studio__title reveal">Poznaj <span class="accent">Sezmoo.</span></h2>
-      <p class="studio__copy reveal" data-d="1"><b>SEZMOO —&nbsp;agencja kreatywna Gdańsk:</b> produkcja wideo, social media, branding i&nbsp;reklama. Jesteśmy z&nbsp;Trójmiasta, ale realizacje kręcimy w&nbsp;całej Polsce. Film, fotografia, grafika, digital i&nbsp;produkcja offline powstają w&nbsp;jednym zespole. Dzięki temu łatwiej zachować spójność, sprawniej reagować na&nbsp;zmiany i&nbsp;prowadzić projekt od&nbsp;pierwszego pomysłu do&nbsp;gotowego wdrożenia. Działamy projektowo, przy&nbsp;pojedynczych realizacjach, i&nbsp;abonamentowo, gdy&nbsp;marka potrzebuje stałej produkcji.</p>
-      <p class="studio__copy reveal" data-d="1" style="margin-top:14px">Jak pracujemy, najlepiej zobaczyć podczas Twojej realizacji.</p>
+      <p class="studio__copy studio__copy--lead">Agencja kreatywna sezmoo —&nbsp;produkcja wideo, social media, branding i&nbsp;reklama.</p>
+      <p class="studio__copy">Jesteśmy z&nbsp;Trójmiasta, ale produkcje realizujemy na&nbsp;terenie całej Polski.</p>
+      <p class="studio__copy">Film, fotografia, grafika, digital i&nbsp;produkcja offline powstają w&nbsp;jednym zespole. Dzięki temu łatwiej zachować spójność, sprawniej reagować na&nbsp;zmiany i&nbsp;prowadzić projekt od&nbsp;pierwszego pomysłu do&nbsp;gotowego wdrożenia.</p>
+      <p class="studio__copy">Działamy projektowo, przy&nbsp;pojedynczych realizacjach, ale&nbsp;też abonamentowo, gdy&nbsp;marka potrzebuje stałej produkcji.</p>
       <div class="studio__points">
         <div class="spt reveal"><span class="spt__no">01</span><span class="spt__txt">14 lat na&nbsp;rynku.</span></div>
         <div class="spt reveal" data-d="1"><span class="spt__no">02</span><span class="spt__txt">Własny sprzęt filmowy i&nbsp;zaplecze produkcyjne.</span></div>
@@ -770,7 +777,7 @@
 <!-- ============ 6 · PROCESS ============ -->
 <section class="process shell" id="process" data-screen-label="Process">
   <div class="sec-head">
-    <h2 class="sec-title reveal">Tak montujemy<br>współpracę.</h2>
+    <h2 class="sec-title sec-title--line reveal">Tak wygląda współpraca z&nbsp;SEZMOO.</h2>
     <span class="sec-index reveal">[ 06 ] · PROCES</span>
   </div>
 
@@ -953,7 +960,7 @@
         <img src="assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
       </a>
       <div class="footer__statement">
-        <span>Content · Wideo · Kampanie</span>
+        <span>AGENCJA KREATYWNA · GDAŃSK · TRÓJMIASTO</span>
         <p>Wideo, content i kampanie wizualne dla marek.</p>
       </div>
     </div>

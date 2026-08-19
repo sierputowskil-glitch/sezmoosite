@@ -1177,12 +1177,16 @@ section { position: relative; }
 
 .studio__title { font-weight:760; font-stretch:108%; font-size: clamp(32px,4.8vw,76px); line-height:.96; letter-spacing:-.018em; text-wrap:balance; }
 .studio__title .accent{ color: var(--rec); }
-.studio__copy { color: var(--fg-dim); font-size: clamp(16px,1.3vw,20px); line-height:1.6; margin-top: 34px; max-width: 46ch; }
+.studio__copy { color: var(--fg-dim); font-size: clamp(15.5px,1.15vw,18px); line-height:1.68; margin-top: 18px; max-width: 52ch; text-wrap: pretty; }
+.studio__copy:first-of-type { margin-top: 34px; }
+.studio__copy--lead { color: var(--fg); font-weight: 640; font-size: clamp(17px,1.4vw,21px); line-height:1.42; max-width: 42ch; }
 .studio__points { margin-top: clamp(34px,5vh,56px); display:flex; flex-direction:column; }
-.spt { display:flex; align-items:center; gap:22px; padding: 26px 0; border-top:1px solid var(--line-soft); }
+.spt { display:flex; align-items:center; gap:18px; padding: 18px 0; border-top:1px solid var(--line-soft); }
 .spt:last-child { border-bottom:1px solid var(--line-soft); }
 .spt__no { font-family:var(--font-mono); font-size:12px; color: var(--rec); letter-spacing:.1em; }
-.spt__txt { font-weight:800; font-stretch:106%; font-size: clamp(22px,2.6vw,40px); line-height:1; letter-spacing:-.01em; transition: transform .5s var(--ease); }
+.spt__txt { font-weight:800; font-stretch:104%; font-size: clamp(16px,1.5vw,24px); line-height:1.1; letter-spacing:-.01em;
+  white-space: nowrap; transition: transform .5s var(--ease); }
+@media (max-width: 560px){ .spt__txt { white-space: normal; font-size: 16px; } }
 .spt:hover .spt__txt { transform: translateX(10px); }
 
 @media (max-width: 880px){
@@ -3545,18 +3549,20 @@ img.card__video { background: var(--bg-2); }
 /* Services hub — editorial rows */
 .svcA{border-top:1px solid var(--line);margin-top:clamp(24px,4vh,44px)}
 .svcA__row{position:relative;display:grid;grid-template-columns:70px minmax(0,1fr) minmax(0,.9fr) 54px;align-items:center;gap:clamp(16px,3vw,44px);
-  padding:clamp(22px,3vh,34px) 4px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;isolation:isolate;transition:padding-left .45s var(--ease)}
-.svcA__row::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--rec);transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease)}
-.svcA__row:hover{padding-left:clamp(14px,2vw,26px)}
-.svcA__row:hover::before{transform:scaleY(1)}
+  padding:clamp(22px,3vh,34px) 4px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;isolation:isolate}
+
 .svcA__no{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;color:var(--fg-faint);transition:color .4s var(--ease)}
 .svcA__t{font-family:var(--font-display);font-weight:760;font-stretch:104%;letter-spacing:-.02em;line-height:1;
   font-size:clamp(28px,3.6vw,54px);margin:0;transition:color .4s var(--ease)}
 .svcA__d{margin:0;font-size:clamp(13.5px,1vw,15px);line-height:1.5;color:var(--fg-dim);max-width:38ch;transition:color .4s var(--ease)}
 .svcA__go{justify-self:end;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;
   font-size:15px;color:var(--fg-dim);transition:transform .45s var(--ease),border-color .4s var(--ease),color .4s var(--ease),background .4s var(--ease)}
-.svcA__row:hover .svcA__no,.svcA__row:hover .svcA__t,.svcA__row:hover .svcA__d{color:#17140a}
-.svcA__row:hover .svcA__go{background:#17140a;border-color:#17140a;color:#ffd200;transform:rotate(-45deg)}
+.svcA__row:hover .svcA__no,.svcA__row:hover .svcA__t,.svcA__row:hover .svcA__d{color:#ffd200}
+.svcA__row:hover{border-bottom-color:rgb(255 210 0 / .4)}
+.svcA__row:hover .svcA__go{border-color:#ffd200;color:#ffd200;transform:rotate(-45deg)}
+[data-theme="light"] .svcA__row:hover .svcA__no,[data-theme="light"] .svcA__row:hover .svcA__t,[data-theme="light"] .svcA__row:hover .svcA__d{color:#7a6100}
+[data-theme="light"] .svcA__row:hover{border-bottom-color:rgb(122 97 0 / .45)}
+[data-theme="light"] .svcA__row:hover .svcA__go{border-color:#7a6100;color:#7a6100}
 @media(max-width:820px){
   .svcA__row{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"no go" "t t" "d d";align-items:start;gap:10px 14px;padding:clamp(20px,2.6vh,28px) 2px}
   .svcA__row:hover{padding-left:2px}
