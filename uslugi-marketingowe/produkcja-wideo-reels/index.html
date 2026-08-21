@@ -17,7 +17,7 @@
 <link rel="alternate" hreflang="x-default" href="https://sezmoo.com/uslugi-marketingowe/produkcja-wideo-reels/" />
 <script>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <title>Produkcja wideo i foto dla marek, filmy, reels, dron | SEZMOO</title>
-<meta name="description" content="Produkcja wideo i fotografia dla marek: filmy reklamowe, spoty, reels, zdjęcia produktowe, ujęcia z drona i animacje 2D/3D. Od koncepcji po gotowe eksporty. SEZMOO, Gdańsk." />
+<meta name="description" content="Produkcja filmowa dla firm i marek: filmy reklamowe, spoty, reels, filmy korporacyjne, ujęcia z drona oraz animacje 2D i 3D. Własny sprzęt i zespół. SEZMOO, Gdańsk." />
 <link rel="canonical" href="https://sezmoo.com/uslugi-marketingowe/produkcja-wideo-reels/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,106 +28,168 @@
 <div class="grain"></div><div class="vignette"></div><div class="cursor">PLAY</div><div class="cursor-dot"></div><div class="scrubber"><div class="scrubber__fill"><span class="scrubber__head"></span></div></div>
 <nav class="nav"><a class="brand" href="../../index.html#hero" aria-label="SEZMOO"><img class="brand__logo" src="../../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a><div class="nav__menu" id="main-menu"><a href="../../portfolio/index.html?cat=video#work-list">Portfolio</a><a aria-current="page" href="../index.html#lista-uslug">Usługi</a><a href="../../index.html#team">Zespół</a><a href="../../index.html#opinie">Opinie</a><a href="../../blog.html">Blog</a><a href="../../index.html#kontakt">Kontakt</a></div><div class="nav__right"><div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div><div class="nav__theme" role="group" aria-label="Motyw / Theme"><button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw / Dark">DARK</button><button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw / Light">LIGHT</button></div><div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" href="../../en/services/video-production-reels/index.html">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button></div></nav>
 <main class="service-detail">
+<style>
+.vprod{margin-top:clamp(24px,3.4vh,42px);border-top:1px solid var(--line-soft)}
+.vprod details{border-bottom:1px solid var(--line-soft)}
+.vprod summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:clamp(14px,1.6vw,26px);padding:clamp(17px,1.9vw,25px) 0;transition:color .3s var(--ease)}
+.vprod summary::-webkit-details-marker{display:none}
+.vprod summary:hover{color:#ffd200}
+.vprod__no{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:var(--fg-faint);transition:color .3s var(--ease)}
+.vprod summary:hover .vprod__no,.vprod details[open] .vprod__no{color:#ffd200}
+.vprod__t{margin:0;font-family:var(--font-display);font-weight:760;font-stretch:104%;letter-spacing:-.015em;font-size:clamp(19px,2vw,30px);line-height:1.05;color:inherit}
+.vprod__pm{position:relative;width:20px;height:20px;flex:none}
+.vprod__pm::before,.vprod__pm::after{content:"";position:absolute;background:currentColor;transition:transform .35s var(--ease),opacity .35s var(--ease)}
+.vprod__pm::before{left:0;top:9.5px;width:20px;height:1.5px}
+.vprod__pm::after{top:0;left:9.5px;height:20px;width:1.5px}
+.vprod details[open] .vprod__pm::after{transform:scaleY(0);opacity:0}
+.vprod__list{list-style:none;margin:0;padding:0 0 clamp(20px,2.4vw,30px);display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px 26px}
+.vprod__list li{position:relative;padding-left:16px;color:var(--fg-dim);font-size:clamp(14px,1.05vw,16px);line-height:1.45}
+.vprod__list li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1px;background:#ffd200}
+.vhow{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-top:clamp(22px,3.2vh,38px);background:var(--line-soft);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden}
+.vhow__i{background:var(--bg);padding:clamp(21px,2.1vw,29px);display:flex;flex-direction:column;gap:10px;transition:color .35s var(--ease)}
+.vhow__i:hover{color:#ffd200}
+.vhow__i span{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:var(--fg-faint);transition:color .35s var(--ease)}
+.vhow__i:hover span{color:#ffd200}
+.vhow__i h3{margin:0;font-family:var(--font-display);font-weight:740;font-stretch:104%;font-size:clamp(17px,1.35vw,21px);line-height:1.1;letter-spacing:-.012em;color:inherit}
+.vhow__i p{margin:0;color:var(--fg-dim);font-size:clamp(13.5px,1.02vw,15px);line-height:1.5}
+@media(max-width:1240px){.vhow{grid-template-columns:repeat(3,1fr)}.vhow__i:last-child{grid-column:span 2}}
+@media(max-width:820px){.vhow{grid-template-columns:repeat(2,1fr)}.vhow__i:last-child{grid-column:span 2}}
+@media(max-width:520px){.vhow{grid-template-columns:1fr}.vhow__i:last-child{grid-column:auto}}
+:root[data-theme="light"] .vprod summary:hover,:root[data-theme="light"] .vhow__i:hover{color:#7a6100}
+:root[data-theme="light"] .vprod summary:hover .vprod__no,:root[data-theme="light"] .vprod details[open] .vprod__no,:root[data-theme="light"] .vhow__i:hover span{color:#7a6100}
+.services-static{margin-top:clamp(30px,4.5vh,60px)}
+.fmt-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(26px,4vw,66px);align-items:center;margin-top:clamp(28px,4vh,52px)}
+.fmt2{position:relative;background:#0c0b09;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:clamp(18px,2.1vw,28px);overflow:hidden}
+.fmt2::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+.fmt2__hud{position:relative;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:15px}
+.fmt2__hud .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ffd200;margin-right:8px;vertical-align:middle}
+.fmt2__master{position:relative;border-radius:9px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.1)}
+.fmt2__frames{display:flex;gap:4px;padding:9px}
+.fmt2__frames i{flex:1;height:clamp(44px,6vw,62px);border-radius:3px;background:linear-gradient(135deg,rgba(255,210,0,.24),rgba(255,255,255,.05))}
+.fmt2__frames i:nth-child(even){background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03))}
+.fmt2__sprk{height:11px;background:#0a0a09;background-image:repeating-linear-gradient(90deg,transparent 0 8px,rgba(255,255,255,.13) 8px 13px)}
+.fmt2__mlbl{position:absolute;top:8px;left:10px;font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.72);background:rgba(0,0,0,.5);padding:3px 7px;border-radius:3px}
+.fmt2__split{position:relative;display:flex;align-items:center;gap:12px;margin:14px 0;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#ffd200;white-space:nowrap}
+.fmt2__split::before,.fmt2__split::after{content:"";flex:1;height:1px;background:rgba(255,210,0,.26)}
+.fmt2__outs{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fmt2__out{display:flex;align-items:center;gap:13px;padding:13px 14px;border-radius:9px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1)}
+.fmt2__shape{flex:none;background:rgba(255,210,0,.16);border:1px solid rgba(255,210,0,.5);border-radius:2px}
+.s-169{width:44px;height:25px}.s-916{width:20px;height:36px}.s-11{width:32px;height:32px}.s-ban{width:48px;height:16px}
+.fmt2__out .r{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;color:#ffd200;margin-bottom:4px}
+.fmt2__out h4{font-family:var(--font-display);font-weight:720;font-stretch:104%;font-size:clamp(14px,1.1vw,17px);line-height:1;color:#f4f0e6;margin:0}
+.fmt2__out p{font-size:11.5px;line-height:1.35;color:rgba(255,255,255,.45);margin:5px 0 0}
+.fmt-copy .eyebrow{margin-bottom:18px}
+.fmt-copy__title{font-family:var(--font-display);font-weight:800;font-stretch:104%;font-size:clamp(30px,3.6vw,52px);line-height:1;letter-spacing:-.02em;margin:0 0 clamp(16px,1.6vw,20px)}
+.fmt-copy__p{color:var(--fg-dim);font-size:clamp(15px,1.15vw,17px);line-height:1.6;max-width:44ch;margin:0 0 clamp(22px,2.4vw,30px)}
+@media(max-width:1000px){.fmt-wrap{grid-template-columns:1fr;gap:32px}}
+@media(max-width:520px){.fmt2__outs{grid-template-columns:1fr}}
+</style>
 <section class="sub-hero shell">
   <div class="sub-hero__grid">
     <div>
-      <span class="eyebrow reveal"><span class="tick"></span>Produkcja foto/wideo</span>
-      <h1 class="reveal">Foto i wideo. Jeden content.</h1>
-      <p class="sub-hero__lead reveal" data-d="1">Produkujemy wideo i zdjęcia dla marek: od koncepcji i planu zdjęciowego po montaż, kolor, retusz i eksporty pod wszystkie kanały.</p>
-      <div class="sub-hero__meta reveal" data-d="2"><span>Wideo</span><span>Foto</span><span>Dron</span><span>Animacje 2D/3D</span></div>
+      <span class="eyebrow reveal"><span class="tick"></span>Produkcja filmowa</span>
+      <h1 class="reveal">Produkcja filmowa dla&nbsp;firm i&nbsp;marek.</h1>
+      <p class="sub-hero__lead reveal" data-d="1">Produkcja wideo to&nbsp;core SEZMOO i&nbsp;jeden z&nbsp;najmocniej rozwiniętych obszarów naszej agencji. Mamy własny sprzęt filmowy i&nbsp;zaplecze produkcyjne oraz stały zespół, który prowadzi projekt od&nbsp;pierwszego pomysłu po&nbsp;gotowy materiał. Dzięki temu proces produkcyjny realizujemy wewnętrznie, bez&nbsp;uzależnienia od&nbsp;dostępności sprzętu i&nbsp;podwykonawców.</p>
+      <div class="sub-hero__meta reveal" data-d="2"><span>Wideo</span><span>Dron</span><span>Animacje 3D i&nbsp;2D</span><span>Social media</span></div>
     </div>
     <div class="service-stage reveal" data-d="1" data-cursor="play">
       <video src="../../uploads/audi-rs5-trailer.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Audi RS"></video>
-      <div class="service-stage__label"><strong>Audi RS</strong><span>Premium film / reels / cutdowny</span></div>
+      <div class="service-stage__label"><strong>Audi RS</strong><span>Film premium / rolki / cutdowny</span></div>
     </div>
   </div>
-  <div class="service-metrics"><div class="service-metric reveal" data-d="0"><span>01</span><strong>Koncepcja i plan zdjęć</strong></div><div class="service-metric reveal" data-d="1"><span>02</span><strong>Plan, kamera, światło</strong></div><div class="service-metric reveal" data-d="2"><span>03</span><strong>Montaż i eksporty</strong></div></div>
+  <div class="service-metrics"><div class="service-metric reveal" data-d="0"><span>01</span><strong>Koncepcja i&nbsp;plan zdjęć</strong></div><div class="service-metric reveal" data-d="1"><span>02</span><strong>Plan, kamera, światło</strong></div><div class="service-metric reveal" data-d="2"><span>03</span><strong>Montaż i&nbsp;eksporty</strong></div></div>
 </section>
 <section class="sub-section shell">
-  <div class="service-output">
-    <div class="service-output__intro reveal">
-      <span class="eyebrow"><span class="tick"></span>Zakres</span>
-      <h2 class="sec-title">Co dowozimy.</h2>
-      <p>Content foto i wideo z jednej produkcji: filmy, spoty, rolki, zdjęcia i animacje, od pomysłu po gotowe pliki.</p>
-      <div class="service-next"><a href="../index.html#lista-uslug">Wszystkie usługi</a><a href="../../portfolio/index.html?cat=video#work-list">Portfolio</a><a href="../../index.html#opinie">Opinie</a><a href="../../blog.html">Blog</a><a href="../../index.html#kontakt">Kontakt</a></div>
-    </div>
-    <div class="service-output__grid"><div class="service-output__item reveal" data-d="0"><span>01</span><h3>Wideo</h3><p>Filmy reklamowe i produktowe, spoty, promocyjne, biznesowe, teledyski, relacje z eventów i instruktaże.</p></div><div class="service-output__item reveal" data-d="1"><span>02</span><h3>Foto</h3><p>Fotografia produktowa, lifestyle, wizerunkowa, modowa, wnętrz, motoryzacyjna i eventowa.</p></div><div class="service-output__item reveal" data-d="2"><span>03</span><h3>Ujęcia z drona</h3><p>Lotnicze ujęcia i zdjęcia do filmów, inwestycji, eventów i marek motoryzacyjnych.</p></div><div class="service-output__item reveal" data-d="0"><span>04</span><h3>Animacje 2D/3D</h3><p>Motion design i animowane formaty wzbogacające materiały wideo.</p></div></div>
+  <div class="sec-head">
+    <span class="eyebrow reveal"><span class="tick"></span>Co produkujemy?</span>
+  </div>
+  <h2 class="sec-title reveal" style="margin-top:clamp(10px,1.2vw,16px)">Filmy dopasowane do&nbsp;<span style="color:#ffd200">celu.</span></h2>
+  <div class="vprod reveal">
+      <details open>
+        <summary><span class="vprod__no">01</span><h3 class="vprod__t">Reklama i&nbsp;marka</h3><span class="vprod__pm"></span></summary>
+        <ul class="vprod__list"><li>Film reklamowy / spot reklamowy</li><li>Film promocyjny</li><li>Film wizerunkowy</li><li>Film produktowy</li><li>Film premierowy / launch video</li><li>Brand video / branded content</li><li>Film sprzedażowy</li><li>Video case study / testimonial</li></ul>
+      </details>
+      <details>
+        <summary><span class="vprod__no">02</span><h3 class="vprod__t">Social media</h3><span class="vprod__pm"></span></summary>
+        <ul class="vprod__list"><li>Reels / rolki</li><li>TikTok</li><li>YouTube Shorts</li><li>Stories</li><li>Wideo do&nbsp;kampanii Meta Ads / TikTok Ads / YouTube Ads</li><li>Content produktowy</li><li>Serie wideo do&nbsp;social media</li><li>Materiały z&nbsp;influencerami</li></ul>
+      </details>
+      <details>
+        <summary><span class="vprod__no">03</span><h3 class="vprod__t">Firma / B2B</h3><span class="vprod__pm"></span></summary>
+        <ul class="vprod__list"><li>Film korporacyjny</li><li>Film biznesowy</li><li>Film o&nbsp;firmie / wideo wizytówka</li><li>Film employer brandingowy</li><li>Film rekrutacyjny</li><li>Film przemysłowy</li><li>Film z&nbsp;procesu produkcyjnego</li><li>Film technologiczny</li><li>Film na&nbsp;targi</li><li>Film do&nbsp;prezentacji sprzedażowej</li><li>Case study klienta</li></ul>
+      </details>
+      <details>
+        <summary><span class="vprod__no">04</span><h3 class="vprod__t">Edukacja i&nbsp;wiedza</h3><span class="vprod__pm"></span></summary>
+        <ul class="vprod__list"><li>Film instruktażowy</li><li>Film szkoleniowy</li><li>Tutorial</li><li>Explainer video</li><li>Kurs online / e-learning</li><li>Webinar</li><li>Podcast wideo</li><li>Wywiad / rozmowa ekspercka</li><li>Seria edukacyjna</li><li>Film BHP / szkolenie BHP</li></ul>
+      </details>
+      <details>
+        <summary><span class="vprod__no">05</span><h3 class="vprod__t">Eventy</h3><span class="vprod__pm"></span></summary>
+        <ul class="vprod__list"><li>Relacja z&nbsp;eventu / aftermovie</li><li>Film z&nbsp;konferencji</li><li>Film z&nbsp;targów</li><li>Film z&nbsp;premiery</li><li>Relacja z&nbsp;wydarzenia firmowego</li><li>Materiały social media z&nbsp;eventu</li><li>Wywiady podczas wydarzeń</li><li>Streaming / transmisja online</li></ul>
+      </details>
+      <details>
+        <summary><span class="vprod__no">06</span><h3 class="vprod__t">Muzyka i&nbsp;kultura</h3><span class="vprod__pm"></span></summary>
+        <ul class="vprod__list"><li>Teledyski</li><li>Live session</li><li>Materiały koncertowe</li><li>Filmy promujące wydarzenia kulturalne</li></ul>
+      </details>
+  </div>
+</section>
+<section class="sub-section shell">
+  <div class="sec-head">
+    <span class="eyebrow reveal"><span class="tick"></span>Jak produkujemy?</span>
+  </div>
+  <h2 class="sec-title reveal" style="margin-top:clamp(10px,1.2vw,16px)">Jak <span style="color:#ffd200">produkujemy.</span></h2>
+  <div class="vhow">
+      <div class="vhow__i reveal" data-d="0"><span>01</span><h3>Film</h3><p>Kamera, światło, dźwięk, reżyseria, organizacja planu.</p></div>
+      <div class="vhow__i reveal" data-d="1"><span>02</span><h3>Ujęcia z&nbsp;drona</h3><p>Zdjęcia lotnicze do&nbsp;filmów reklamowych, inwestycji, nieruchomości, przemysłu, eventów i&nbsp;automotive.</p></div>
+      <div class="vhow__i reveal" data-d="2"><span>03</span><h3>Animacja 2D / motion design</h3><p>Animacje reklamowe, produktowe, informacyjne, infografiki, typografia, elementy graficzne do&nbsp;filmów.</p></div>
+      <div class="vhow__i reveal" data-d="0"><span>04</span><h3>Animacja 3D</h3><p>Animacje produktowe i&nbsp;techniczne, wizualizacja procesów, produktów i&nbsp;rozwiązań trudnych do&nbsp;pokazania kamerą.</p></div>
+      <div class="vhow__i reveal" data-d="1"><span>05</span><h3>Postprodukcja</h3><p>Montaż, color grading, sound design, udźwiękowienie, napisy, motion design, VFX.</p></div>
   </div>
 </section>
 <section class="sub-section shell">
   <div class="services-static reveal">
     <div class="sec-head">
-      <h2 class="sec-title reveal">Jedna produkcja.<br>Wiele <span style="color:#ffd200">formatów.</span></h2>
+      <h2 class="sec-title reveal">Film zaczynamy planować od&nbsp;tego,<br>gdzie ma&nbsp;<span style="color:#ffd200">trafić.</span></h2>
     </div>
-      <p class="reveal" style="color:var(--fg-dim);font-size:clamp(15px,1.15vw,17px);line-height:1.6;max-width:62ch;margin:clamp(14px,1.6vw,20px) 0 0">Każdy materiał ma swój cel i miejsce publikacji. Już podczas briefu ustalamy, gdzie będzie wykorzystywany i jaką funkcję ma pełnić. Dzięki temu planujemy produkcję tak, aby powstały dokładnie takie materiały, jakie są potrzebne — od pojedynczej rolki po zestaw formatów wykorzystywanych w różnych kanałach komunikacji.</p>
-      <style>
-      .services-static{margin-top:clamp(30px,4.5vh,60px)}
-      .fmt-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(26px,4vw,66px);align-items:center;margin-top:clamp(28px,4vh,52px)}
-      .fmt2{position:relative;background:#0c0b09;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:clamp(18px,2.1vw,28px);overflow:hidden}
-      .fmt2::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
-      .fmt2__hud{position:relative;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:15px}
-      .fmt2__hud .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ffd200;margin-right:8px;vertical-align:middle}
-      .fmt2__master{position:relative;border-radius:9px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.1)}
-      .fmt2__frames{display:flex;gap:4px;padding:9px}
-      .fmt2__frames i{flex:1;height:clamp(44px,6vw,62px);border-radius:3px;background:linear-gradient(135deg,rgba(255,210,0,.24),rgba(255,255,255,.05))}
-      .fmt2__frames i:nth-child(even){background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03))}
-      .fmt2__sprk{height:11px;background:#0a0a09;background-image:repeating-linear-gradient(90deg,transparent 0 8px,rgba(255,255,255,.13) 8px 13px)}
-      .fmt2__mlbl{position:absolute;top:8px;left:10px;font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.72);background:rgba(0,0,0,.5);padding:3px 7px;border-radius:3px}
-      .fmt2__split{position:relative;display:flex;align-items:center;gap:12px;margin:14px 0;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#ffd200;white-space:nowrap}
-      .fmt2__split::before,.fmt2__split::after{content:"";flex:1;height:1px;background:rgba(255,210,0,.26)}
-      .fmt2__outs{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-      .fmt2__out{display:flex;align-items:center;gap:13px;padding:13px 14px;border-radius:9px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1)}
-      .fmt2__shape{flex:none;background:rgba(255,210,0,.16);border:1px solid rgba(255,210,0,.5);border-radius:2px}
-      .s-169{width:44px;height:25px}.s-916{width:20px;height:36px}.s-11{width:32px;height:32px}.s-ban{width:48px;height:16px}
-      .fmt2__out .r{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;color:#ffd200;margin-bottom:4px}
-      .fmt2__out h4{font-family:var(--font-display);font-weight:720;font-stretch:104%;font-size:clamp(14px,1.1vw,17px);line-height:1;color:#f4f0e6;margin:0}
-      .fmt2__out p{font-size:11.5px;line-height:1.35;color:rgba(255,255,255,.45);margin:5px 0 0}
-      .fmt-copy .eyebrow{margin-bottom:18px}
-      .fmt-copy__title{font-family:var(--font-display);font-weight:800;font-stretch:104%;font-size:clamp(30px,3.6vw,52px);line-height:1;letter-spacing:-.02em;margin:0 0 clamp(16px,1.6vw,20px)}
-      .fmt-copy__p{color:var(--fg-dim);font-size:clamp(15px,1.15vw,17px);line-height:1.6;max-width:44ch;margin:0 0 clamp(22px,2.4vw,30px)}
-      @media(max-width:1000px){.fmt-wrap{grid-template-columns:1fr;gap:32px}}
-      @media(max-width:520px){.fmt2__outs{grid-template-columns:1fr}}
-      </style>
-      <div class="fmt-wrap">
-        <div class="fmt2">
-          <div class="fmt2__hud"><span><span class="dot"></span>1 produkcja</span><span>4K · 25FPS · Gdańsk</span></div>
-          <div class="fmt2__master">
-            <div class="fmt2__sprk"></div>
-            <div class="fmt2__frames"><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="fmt2__sprk"></div>
-            <span class="fmt2__mlbl">MASTER · plan zdjęciowy</span>
-          </div>
-          <div class="fmt2__split">z jednego materiału → 4 formaty</div>
-          <div class="fmt2__outs">
-            <div class="fmt2__out"><span class="fmt2__shape s-169"></span><div><span class="r">16:9</span><h4>Hero film</h4><p>Strona, YouTube, oferty</p></div></div>
-            <div class="fmt2__out"><span class="fmt2__shape s-916"></span><div><span class="r">9:16</span><h4>Reels / Shorts</h4><p>Reels, TikTok, Shorts</p></div></div>
-            <div class="fmt2__out"><span class="fmt2__shape s-11"></span><div><span class="r">1:1</span><h4>Social ads</h4><p>Kampanie płatne</p></div></div>
-            <div class="fmt2__out"><span class="fmt2__shape s-ban"></span><div><span class="r">Bilbordy / WWW</span><h4>Kreacje kampanijne</h4><p>Banery, miniatury, KV</p></div></div>
-          </div>
+    <p class="reveal" style="color:var(--fg-dim);font-size:clamp(15px,1.15vw,17px);line-height:1.6;max-width:62ch;margin:clamp(14px,1.6vw,20px) 0 0">Social media, kampania płatna, YouTube, strona internetowa, ekran podczas targów, telewizor w&nbsp;punkcie sprzedaży czy&nbsp;duży ekran podczas eventu —&nbsp;miejsce emisji wpływa na&nbsp;sposób realizacji.</p>
+    <p class="reveal" style="color:var(--fg-dim);font-size:clamp(15px,1.15vw,17px);line-height:1.6;max-width:62ch;margin:clamp(12px,1.2vw,16px) 0 0">Dlatego już podczas briefu ustalamy potrzebne proporcje, długości i&nbsp;wersje materiału, a&nbsp;następnie uwzględniamy je&nbsp;w&nbsp;planie produkcji.</p>
+    <div class="fmt-wrap">
+      <div class="fmt2">
+        <div class="fmt2__hud"><span><span class="dot"></span>1 produkcja</span><span>4K · 25FPS · Gdańsk</span></div>
+        <div class="fmt2__master">
+          <div class="fmt2__sprk"></div>
+          <div class="fmt2__frames"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="fmt2__sprk"></div>
+          <span class="fmt2__mlbl">MASTER · plan zdjęciowy</span>
         </div>
-        <div class="fmt-copy">
-          <span class="eyebrow"><span class="tick"></span>Co dostajesz</span>
-          <h3 class="fmt-copy__title">Nie kończymy<br>na jednym filmie.</h3>
-          <p class="fmt-copy__p">Z materiału z planu budujemy zestaw do publikacji: spoty, rolki, grafiki, formaty reklamowe, miniatury, landing i oprawę kampanii. Wideo jest osią, a reszta sprawia, że content pracuje w wielu kanałach.</p>
-          <a href="../../index.html#kontakt" class="btn btn--primary" data-magnetic><span class="ico"></span><span class="lbl">Zaplanuj produkcję</span></a>
+        <div class="fmt2__split">gdzie materiał ma trafić</div>
+        <div class="fmt2__outs">
+          <div class="fmt2__out"><span class="fmt2__shape s-916"></span><div><span class="r">9:16</span><h4>Reels / Stories</h4></div></div>
+          <div class="fmt2__out"><span class="fmt2__shape s-169"></span><div><span class="r">16:9</span><h4>WWW / YouTube / event</h4></div></div>
+          <div class="fmt2__out"><span class="fmt2__shape s-11"></span><div><span class="r">1:1 / 4:5</span><h4>Meta Ads</h4></div></div>
+          <div class="fmt2__out"><span class="fmt2__shape s-ban"></span><div><span class="r">Custom</span><h4>Digital signage</h4></div></div>
         </div>
       </div>
+      <div class="fmt-copy">
+        <span class="eyebrow"><span class="tick"></span>Format</span>
+        <h3 class="fmt-copy__title">Masz temat.<br>Dobierzmy do&nbsp;niego<br>odpowiedni format.</h3>
+        <p class="fmt-copy__p">Nie musisz wiedzieć, czy&nbsp;potrzebujesz 30-sekundowego spotu, serii rolek czy&nbsp;filmu korporacyjnego. Zacznijmy od&nbsp;celu i&nbsp;miejsca, w&nbsp;którym materiał ma&nbsp;pracować.</p>
+        <a href="../../index.html#kontakt" class="btn btn--primary" data-magnetic><span class="ico"></span><span class="lbl">Porozmawiajmy o&nbsp;produkcji</span></a>
+      </div>
+    </div>
   </div>
 </section>
 <section class="sub-section shell">
   <div class="work-bridge reveal">
     <div>
       <span class="eyebrow"><span class="tick"></span>Portfolio</span>
-      <h2>Zobacz podobne projekty.</h2>
-      <p>Przejdź do najbliższej kategorii portfolio albo przełącz zakres.</p>
+      <h2>Zobacz nasze <span style="color:#ffd200">realizacje.</span></h2>
+      <p>Filmy, spoty i&nbsp;animacje, które zrealizowaliśmy dla&nbsp;marek.</p>
     </div>
     <div class="work-bridge__actions">
-      <a class="btn btn--primary" href="../../portfolio/index.html?cat=video#work-list"><span class="ico"></span><span class="lbl">Otwórz Wideo / Foto</span></a>
-      <div class="work-bridge__filters"><a class="is-active" href="../../portfolio/index.html?cat=video#work-list">Wideo / Foto</a><a class="" href="../../portfolio/index.html?cat=social#work-list">Social media</a><a class="" href="../../portfolio/index.html?cat=animacje#work-list">Animacje 3D/2D</a><a class="" href="../../portfolio/index.html?cat=eventy#work-list">Eventy</a></div>
+      <a class="btn btn--primary" href="../../portfolio/index.html?cat=video#pt-grid"><span class="ico"></span><span class="lbl">Zobacz portfolio wideo</span></a>
+      <div class="work-bridge__filters"><a class="is-active" href="../../portfolio/index.html?cat=video#pt-grid">Wideo</a><a href="../../portfolio/index.html?cat=animacje#pt-grid">Animacje 3D/2D</a><a href="../../portfolio/index.html?cat=eventy#pt-grid">Eventy</a></div>
     </div>
   </div>
-  <div class="related-work"><a class="work-mini reveal" href="../../portfolio/index.html?cat=video#work-list" data-d="0"><video src="../../uploads/audi-rs5-trailer.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Audi RS"></video><div class="work-mini__info"><span>Premium film / automotive</span><h3>Audi RS</h3><p>Realizacja dopasowana charakterem do tej usługi.</p></div></a><a class="work-mini reveal" href="../../portfolio/index.html?cat=video#work-list" data-d="1"><img src="../../assets/work/byd.jpg" alt="BYD Plichta" loading="lazy" /><div class="work-mini__info"><span>Social wideo / automotive</span><h3>BYD Plichta</h3><p>Realizacja dopasowana charakterem do tej usługi.</p></div></a><a class="work-mini reveal" href="../../portfolio/index.html?cat=video#work-list" data-d="2"><img src="../../assets/work/baltic-robert-2.avif" alt="Baltic Towers" loading="lazy" /><div class="work-mini__info"><span>Employer branding / video</span><h3>Baltic Towers</h3><p>Realizacja dopasowana charakterem do tej usługi.</p></div></a></div>
-  <div class="sub-cta reveal"><div><h2>Dobierzmy formaty.</h2><p>Opowiedz nam, gdzie materiał ma pracować. Zaproponujemy rozsądny zakres produkcji i paczkę gotową do publikacji.</p></div><a href="../../index.html#kontakt" class="btn btn--primary"><span class="ico"></span><span class="lbl">Skontaktuj się</span></a></div>
+  <div class="sub-cta reveal"><div><h2>Dobierzmy formaty.</h2><p>Opowiedz nam, gdzie materiał ma&nbsp;pracować. Zaproponujemy rozsądny zakres produkcji i&nbsp;paczkę gotową do&nbsp;publikacji.</p></div><a href="../../index.html#kontakt" class="btn btn--primary"><span class="ico"></span><span class="lbl">Skontaktuj się</span></a></div>
 </section>
 <footer class="footer shell service-footer">
   <div class="footer__panel">

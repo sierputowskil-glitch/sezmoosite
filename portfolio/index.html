@@ -319,11 +319,6 @@
     <h3 class="pt-title">El Molo</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img">
-    <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-katalog-szymichowski-pruszcz-park-1.webp" alt="Pruszcz Park — Katalog · Nieruchomości" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Katalog · Nieruchomości</span></div>
-    <h3 class="pt-title">Pruszcz Park</h3>
-  </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img">
     <div class="pt-media"><img src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-ulotki-ctrlsky-3-1024x608.webp" alt="ctrlsky — Ulotka · Druk" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Grafika</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">Ulotka · Druk</span></div>
     <h3 class="pt-title">ctrlsky</h3>
@@ -385,6 +380,14 @@
     });
   });
 
+
+  /* deep link: ?cat=video */
+  (function () {
+    var m = /[?&]cat=([a-z]+)/.exec(location.search);
+    if (!m) return;
+    var chip = document.querySelector('.pt-navlink[data-filter="' + m[1] + '"]');
+    if (chip) chip.click();
+  })();
   /* video modal */
   var vlb = null;
   function openVideo(id, short) {
