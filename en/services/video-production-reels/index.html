@@ -57,9 +57,11 @@
 .vprod__pm::before{left:0;top:9.5px;width:20px;height:1.5px}
 .vprod__pm::after{top:0;left:9.5px;height:20px;width:1.5px}
 .vprod details[open] .vprod__pm::after{transform:scaleY(0);opacity:0}
-.vprod__list{list-style:none;margin:0;padding:0 0 clamp(20px,2.4vw,30px);display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px 26px}
-.vprod__list li{position:relative;padding-left:16px;color:var(--fg-dim);font-size:clamp(14px,1.05vw,16px);line-height:1.45}
-.vprod__list li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1px;background:#ffd200}
+.vprod__list{list-style:none;margin:0;padding:0 0 clamp(20px,2.4vw,30px);display:flex;flex-wrap:wrap;gap:9px}
+.vprod__list li{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-dim);border:1px solid var(--line);border-radius:999px;padding:9px 13px;background:rgb(255 255 255 / .018);transition:color .3s var(--ease),border-color .3s var(--ease),background .3s var(--ease)}
+.vprod__list li:hover{color:#ffd200;border-color:rgb(255 210 0 / .5)}
+:root[data-theme="light"] .vprod__list li{background:oklch(0.5 0.006 70 / 0.05);border-color:oklch(0.55 0.006 70 / 0.28)}
+:root[data-theme="light"] .vprod__list li:hover{color:#17140a;background:#ffd200;border-color:#ffd200}
 .vhow{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-top:clamp(22px,3.2vh,38px);background:var(--line-soft);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden}
 .vhow__i{background:var(--bg);padding:clamp(21px,2.1vw,29px);display:flex;flex-direction:column;gap:10px;transition:color .35s var(--ease)}
 .vhow__i:hover{color:#ffd200}
@@ -98,12 +100,52 @@
 .fmt-copy__p{color:var(--fg-dim);font-size:clamp(15px,1.15vw,17px);line-height:1.6;max-width:44ch;margin:0 0 clamp(22px,2.4vw,30px)}
 @media(max-width:1000px){.fmt-wrap{grid-template-columns:1fr;gap:32px}}
 @media(max-width:520px){.fmt2__outs{grid-template-columns:1fr}}
+.pbridge{margin-top:clamp(4px,0.5vh,10px)}
+.pbridge__head{max-width:none}
+.pbridge__head h2{max-width:none;text-wrap:normal}
+.pbridge__head h2{margin:clamp(10px,1.2vw,16px) 0 0}
+.pbridge__head p{max-width:62ch;margin:clamp(12px,1.2vw,16px) 0 0;color:var(--fg-dim);font-size:clamp(15px,1.15vw,17px);line-height:1.6}
+.pbridge__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:clamp(22px,3.2vh,38px);background:var(--line-soft);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden}
+.pbridge__i{background:var(--bg);padding:clamp(20px,2vw,28px);display:flex;flex-direction:column;justify-content:space-between;gap:clamp(26px,3vw,46px);min-height:clamp(120px,10vw,150px);text-decoration:none;color:var(--fg);transition:color .35s var(--ease)}
+.pbridge__i:hover{color:#ffd200}
+.pbridge__i span{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:var(--fg-faint);transition:color .35s var(--ease)}
+.pbridge__i:hover span{color:#ffd200}
+.pbridge__row{display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+.pbridge__i h3{margin:0;font-family:var(--font-display);font-weight:760;font-stretch:104%;font-size:clamp(18px,1.5vw,24px);line-height:1.05;letter-spacing:-.015em;color:inherit}
+.pbridge__i em{font-style:normal;font-size:18px;line-height:1;opacity:.45;transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.pbridge__i:hover em{opacity:1;transform:translate(3px,-3px)}
+:root[data-theme="light"] .pbridge__i:hover,:root[data-theme="light"] .pbridge__i:hover span{color:#7a6100}
+.pwork{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:clamp(22px,3.2vh,38px);background:var(--line-soft);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden}
+.pwork__i{position:relative;background:var(--bg);text-decoration:none;color:var(--fg);display:flex;flex-direction:column;transition:color .35s var(--ease)}
+.pwork__i:hover{color:#ffd200}
+.pwork__m{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--bg-3)}
+.pwork__m img,.pwork__m video{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),filter .5s var(--ease);filter:saturate(.9)}
+.pwork__i:hover .pwork__m img,.pwork__i:hover .pwork__m video{transform:scale(1.05);filter:saturate(1)}
+.pwork__b{padding:clamp(15px,1.5vw,20px) clamp(16px,1.6vw,21px) clamp(17px,1.8vw,23px);display:flex;flex-direction:column;gap:7px}
+.pwork__b span{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-faint)}
+.pwork__b h3{margin:0;display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-family:var(--font-display);font-weight:760;font-stretch:104%;font-size:clamp(17px,1.4vw,22px);line-height:1.05;letter-spacing:-.015em;color:inherit}
+.pwork__b h3 em{font-style:normal;font-size:15px;opacity:.45;transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.pwork__i:hover h3 em{opacity:1;transform:translate(3px,-3px)}
+.pwork__all{background:var(--bg);display:flex;flex-direction:column;justify-content:space-between;gap:clamp(24px,3vw,40px);padding:clamp(20px,2vw,28px)}
+.pwork__all>span{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-faint)}
+.pwork__all a{text-decoration:none;color:var(--fg);transition:color .3s var(--ease)}
+.pwork__all a:hover{color:#ffd200}
+.pwork__big{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-family:var(--font-display);font-weight:800;font-stretch:104%;font-size:clamp(20px,1.7vw,27px);line-height:1.05;letter-spacing:-.018em}
+.pwork__big em{font-style:normal;font-size:16px;opacity:.5}
+.pwork__links{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.pwork__links a{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-dim);border:1px solid var(--line);border-radius:999px;padding:7px 11px;background:rgb(255 255 255 / .018);transition:color .3s var(--ease),border-color .3s var(--ease),background .3s var(--ease)}
+.pwork__links a:hover{color:#ffd200;border-color:rgb(255 210 0 / .5)}
+:root[data-theme="light"] .pwork__i:hover,:root[data-theme="light"] .pwork__all a:hover,:root[data-theme="light"] .pwork__links a:hover{color:#7a6100}
+:root[data-theme="light"] .pwork__links a{background:oklch(0.5 0.006 70 / 0.05);border-color:oklch(0.55 0.006 70 / 0.28)}
+@media(max-width:1040px){.pwork{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.pwork{grid-template-columns:1fr}}
+
 </style>
 <section class="sub-hero shell">
   <div class="sub-hero__grid">
     <div>
       <span class="eyebrow reveal"><span class="tick"></span>Film production</span>
-      <h1 class="reveal">Film production for companies and brands.</h1>
+      <h1 class="reveal"><span style="color:#ffd200">Film production</span> for companies and brands.</h1>
       <p class="sub-hero__lead reveal" data-d="1">Video production is the core of SEZMOO and one of the most developed areas of the agency. We own our film gear and production base, and a permanent team carries every project from the first idea to the finished material. The whole process runs in-house, with no dependency on rented kit or subcontractors.</p>
       <div class="sub-hero__meta reveal" data-d="2"><span>Video</span><span>Drone</span><span>3D & 2D animation</span><span>Social media</span></div>
     </div>
@@ -112,7 +154,6 @@
       <div class="service-stage__label"><strong>Audi RS</strong><span>Premium film / reels / cutdowns</span></div>
     </div>
   </div>
-  <div class="service-metrics"><div class="service-metric reveal" data-d="0"><span>01</span><strong>Concept and shoot plan</strong></div><div class="service-metric reveal" data-d="1"><span>02</span><strong>Set, camera, light</strong></div><div class="service-metric reveal" data-d="2"><span>03</span><strong>Edit and exports</strong></div></div>
 </section>
 <section class="sub-section shell">
   <div class="sec-head">
@@ -193,15 +234,23 @@
   </div>
 </section>
 <section class="sub-section shell">
-  <div class="work-bridge reveal">
-    <div>
-      <span class="eyebrow"><span class="tick"></span>Portfolio</span>
-      <h2>See our <span style="color:#ffd200">work.</span></h2>
-      <p>Films, spots and animation we produced for brands.</p>
+  <div class="pbridge">
+    <div class="pbridge__head">
+      <span class="eyebrow reveal"><span class="tick"></span>Portfolio</span>
+      <h2 class="sec-title reveal">See our <span style="color:#ffd200">work.</span></h2>
+      <p class="reveal">Films, spots and animation we produced for brands.</p>
     </div>
-    <div class="work-bridge__actions">
-      <a class="btn btn--primary" href="../../portfolio-en/index.html?cat=video#pt-grid"><span class="ico"></span><span class="lbl">See video portfolio</span></a>
-      <div class="work-bridge__filters"><a class="is-active" href="../../portfolio-en/index.html?cat=video#pt-grid">Video</a><a href="../../portfolio-en/index.html?cat=animacje#pt-grid">3D/2D animation</a><a href="../../portfolio-en/index.html?cat=eventy#pt-grid">Events</a></div>
+    <div class="pwork">
+      <a class="pwork__i reveal" href="../../realizacja.html?v=WG5ufZMfjQ8"><div class="pwork__m"><video src="../../../uploads/audi-rs5-trailer.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Audi RS5"></video></div><div class="pwork__b"><span>Trailer · Automotive</span><h3>Audi RS5 <em>↗</em></h3></div></a>
+      <a class="pwork__i reveal" href="../../portfolio-en/index.html?cat=video#pt-grid"><div class="pwork__m"><img src="../../../assets/work/byd.jpg" alt="BYD Plichta" loading="lazy" /></div><div class="pwork__b"><span>Social video · Automotive</span><h3>BYD Plichta <em>↗</em></h3></div></a>
+      <a class="pwork__i reveal" href="../../realizacja.html?v=tvTuMX3mxG4"><div class="pwork__m"><img src="../../../assets/work/baltic-robert-2.avif" alt="Baltic Towers" loading="lazy" /></div><div class="pwork__b"><span>Opening · Video</span><h3>Baltic Towers <em>↗</em></h3></div></a>
+      <div class="pwork__all reveal">
+        <span>More work</span>
+        <div>
+          <a class="pwork__big" href="../../portfolio-en/index.html#pt-grid">All work <em>↗</em></a>
+          <div class="pwork__links"><a href="../../portfolio-en/index.html?cat=video#pt-grid">Video</a><a href="../../portfolio-en/index.html?cat=animacje#pt-grid">3D/2D animation</a><a href="../../portfolio-en/index.html?cat=eventy#pt-grid">Events</a></div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="sub-cta reveal"><div><h2>Let us pick the formats.</h2><p>Tell us where the material has to work. We will propose a sensible production scope and a package ready to publish.</p></div><a href="../../../../index.html#kontakt" class="btn btn--primary"><span class="ico"></span><span class="lbl">Get in touch</span></a></div>
