@@ -2828,6 +2828,19 @@ img.card__video { background: var(--bg-2); }
   white-space: nowrap; text-align: center;
 }
 .logo-cellc:hover .logo-word { color: var(--fg); }
+/* Mobile: logotypy przesuwane palcem zamiast auto-marquee */
+@media (max-width: 860px){
+  .logo-marquee{
+    overflow-x: auto; overflow-y: hidden;
+    scroll-snap-type: x proximity; overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  }
+  .logo-marquee::-webkit-scrollbar{ display: none; }
+  .logo-track{ animation: none; }
+  .logo-cellc{ scroll-snap-align: center; padding: 0 clamp(26px, 9vw, 42px); }
+}
 @media (max-width: 980px){ .logo-wall{ grid-template-columns: repeat(3,1fr); } }
 @media (max-width: 540px){ .logo-wall{ grid-template-columns: repeat(2,1fr); } }
 

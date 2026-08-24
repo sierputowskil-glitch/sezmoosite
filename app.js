@@ -771,7 +771,7 @@
 
   /* ---------- Scroll word-fill (kudos-style) ---------- */
   (function wordFill() {
-    const selector = ".sec-title, .studio__title, .studio__copy, .sub-hero h1, .sub-head h2, .service-hub h1";
+    const selector = ".sec-title, .studio__title, .sub-hero h1, .sub-head h2, .service-hub h1";
     const targets = [...document.querySelectorAll(selector)].filter((el) => !el.matches(".sub-hero h1"));
     if (!targets.length) return;
     const DIM = 0.12;
