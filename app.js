@@ -316,6 +316,29 @@
   const hero = document.querySelector(".hero");
   if (hero) requestAnimationFrame(() => hero.classList.add("is-in"));
 
+  /* ---------- HERO lead: dopasuj szerokość do najdłuższej linii H1 ---------- */
+  (function heroLeadMeasure() {
+    const h1 = document.querySelector(".hero h1");
+    const sub = document.querySelector(".hero .hero__sub");
+    if (!h1 || !sub) return;
+    const lines = [...h1.querySelectorAll(".clip > span")];
+    if (!lines.length) return;
+    function fit() {
+      if (window.matchMedia("(max-width: 880px)").matches) { sub.style.maxWidth = ""; return; }
+      const range = document.createRange();
+      let w = 0;
+      lines.forEach((el) => {
+        range.selectNodeContents(el);
+        w = Math.max(w, range.getBoundingClientRect().width);
+      });
+      if (w > 40) sub.style.maxWidth = Math.ceil(w) + "px";
+    }
+    fit();
+    window.addEventListener("resize", fit, { passive: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    setTimeout(fit, 400);
+  })();
+
   /* ---------- MAGNETIC BUTTONS ---------- */
   if (fine && !reduce) {
     document.querySelectorAll("[data-magnetic]").forEach((el) => {
