@@ -3812,3 +3812,5 @@ img.card__video { background: var(--bg-2); }
 @media (prefers-reduced-motion: reduce){
   .tc-ini, .tc-ph { transition: none; }
 }
+
+.team__grid--photos .team-card__photo .tc-ini--front { z-index: 2; inset: 4% 0 auto 0; }
