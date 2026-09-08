@@ -121,7 +121,7 @@
     <a href="uslugi-marketingowe/index.html">Usługi</a>
     <a href="#team">Zespół</a>
     <a href="#opinie">Opinie</a>
-    <a href="blog.html">Blog</a>
+    <a href="blog.php">Blog</a>
     <a href="#kontakt">Kontakt</a>
   </div>
   <div class="nav__right">
@@ -955,9 +955,11 @@
           <a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
         </div>
       </div>
-      <form class="cform reveal" data-d="1" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden><label>Nie wypełniaj: <input name="bot-field" /></label></p>
+      <form class="cform reveal" data-d="1" id="contact-form" name="contact" method="POST" action="send.php" novalidate>
+        <input type="hidden" name="lang" value="pl" />
+        <input type="hidden" name="ts" value="" />
+        <input type="hidden" name="sig" value="" />
+        <p hidden aria-hidden="true"><label>Nie wypełniaj: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
         <div class="cform__row">
           <div class="cfield"><label for="cf-name">Imię i nazwisko</label><input id="cf-name" name="name" type="text" placeholder="Jan Kowalski" required /></div>
           <div class="cfield"><label for="cf-phone">Telefon</label><input id="cf-phone" name="phone" type="tel" placeholder="+48 ..." /></div>
@@ -975,8 +977,8 @@
             <option>Nie wiem, chcę pogadać</option>
           </select>
         </div>
-        <div class="cfield"><label for="cf-msg">Wiadomość</label><textarea id="cf-msg" name="message" placeholder="Opowiedz nam o projekcie..." required></textarea></div>
-        <label class="cconsent"><input type="checkbox" required /> <span>Wyrażam zgodę na&nbsp;przetwarzanie moich danych w&nbsp;celu kontaktu, zgodnie z&nbsp;<a href="polityka-prywatnosci/index.html" target="_blank" rel="noopener">polityką prywatności</a> SEZMOO.</span></label>
+        <div class="cfield"><label for="cf-msg">Wiadomość</label><textarea id="cf-msg" name="message" placeholder="Opowiedz nam o projekcie..." minlength="10" required></textarea></div>
+        <label class="cconsent"><input type="checkbox" name="consent" value="1" required /> <span>Wyrażam zgodę na&nbsp;przetwarzanie moich danych w&nbsp;celu kontaktu, zgodnie z&nbsp;<a href="polityka-prywatnosci/index.html" target="_blank" rel="noopener">polityką prywatności</a> SEZMOO.</span></label>
         <button class="btn btn--primary" type="submit"><span class="ico"></span><span class="lbl">Wyślij wiadomość</span></button>
         <p class="cform__note" id="cf-note">● REC · Odpowiadamy w ciągu 24h</p>
       </form>
@@ -1008,7 +1010,7 @@
         <a href="uslugi-marketingowe/index.html">Usługi</a>
         <a href="#team">Zespół</a>
         <a href="#opinie">Opinie</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.php">Blog</a>
       </div>
       <div class="footer__col">
         <span class="footer__label">Social</span>
@@ -1044,18 +1046,36 @@
 <script src="flowing-background.js"></script>
 <script src="app.js"></script>
 <script>
-/* contact form · Netlify Forms (POST) with graceful confirm */
+/* contact form · POST -> send.php (Cyberfolks) */
 (function(){
   var f = document.getElementById('contact-form');
   if(!f) return;
   var note = document.getElementById('cf-note');
+  var btn  = f.querySelector('button[type="submit"]');
+  var lbl  = btn ? btn.querySelector('.lbl') : null;
+  var lblText = lbl ? lbl.textContent : '';
+  // podpisany znacznik czasu (time-trap po stronie serwera)
+  fetch('token.php', { cache: 'no-store' })
+    .then(function(r){ return r.json(); })
+    .then(function(t){
+      if(!t) return;
+      var a = f.querySelector('input[name="ts"]');  if(a) a.value = t.ts;
+      var b = f.querySelector('input[name="sig"]'); if(b) b.value = t.sig;
+    })
+    .catch(function(){});
+  function say(t){ if(note){ note.textContent = t; note.style.color = 'var(--rec)'; } }
   f.addEventListener('submit', function(e){
     e.preventDefault();
     if(!f.checkValidity()){ f.reportValidity(); return; }
-    var data = new URLSearchParams(new FormData(f)).toString();
-    fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:data })
-      .then(function(){ if(note){ note.textContent = '\u25cf Dzi\u0119kujemy \u2014 odezwiemy si\u0119 w ci\u0105gu 24h.'; note.style.color = 'var(--rec)'; } f.reset(); })
-      .catch(function(){ if(note){ note.textContent = '\u25cf Co\u015b posz\u0142o nie tak \u2014 napisz na biuro@sezmoo.com.'; note.style.color = 'var(--rec)'; } });
+    if(btn){ btn.disabled = true; } if(lbl){ lbl.textContent = 'Wysy\u0142anie\u2026'; }
+    fetch(f.getAttribute('action'), { method:'POST', body: new FormData(f) })
+      .then(function(r){ return r.json().catch(function(){ return { ok: r.ok }; }); })
+      .then(function(d){
+        if(d && d.ok){ say('\u25cf Dzi\u0119kujemy \u2014 odezwiemy si\u0119 w ci\u0105gu 24h.'); f.reset(); }
+        else { say('\u25cf ' + ((d && d.error) || 'Co\u015b posz\u0142o nie tak') + ' \u2014 napisz na biuro@sezmoo.com'); }
+      })
+      .catch(function(){ say('\u25cf Co\u015b posz\u0142o nie tak \u2014 napisz na biuro@sezmoo.com'); })
+      .finally(function(){ if(btn){ btn.disabled = false; } if(lbl){ lbl.textContent = lblText; } });
   });
 })();
 </script>
