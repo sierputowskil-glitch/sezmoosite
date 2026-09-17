@@ -34,7 +34,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; overflow-x: clip; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; overflow-x: clip; scroll-padding-top: 110px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -1502,6 +1502,16 @@ section { position: relative; }
   letter-spacing: -.02em;
   margin-top: clamp(28px,5vh,70px);
 }
+.blog-feature h2 a.blog-post__title,
+.blog-post h3 a.blog-post__title {
+  color: inherit;
+  text-decoration: none;
+  transition: color .25s var(--ease);
+}
+.blog-feature h2 a.blog-post__title:hover,
+.blog-post h3 a.blog-post__title:hover {
+  color: var(--rec);
+}
 .blog-feature p {
   color: var(--fg-dim);
   font-size: clamp(16px,1.25vw,20px);
@@ -1509,7 +1519,7 @@ section { position: relative; }
   max-width: 48ch;
   margin-top: 22px;
 }
-.blog-feature a,
+.blog-feature__cta,
 .article__cta a {
   display: inline-flex;
   align-items: center;
@@ -1525,7 +1535,7 @@ section { position: relative; }
   border-radius: 999px;
   transition: transform .3s var(--ease), background .3s var(--ease);
 }
-.blog-feature a:hover,
+.blog-feature__cta:hover,
 .article__cta a:hover {
   transform: translateY(-2px);
 }
@@ -1570,7 +1580,7 @@ section { position: relative; }
   margin-top: 18px;
   max-width: 34ch;
 }
-.blog-post a {
+.blog-post__more {
   margin-top: 32px;
   font-family: var(--font-mono);
   font-size: 11px;
@@ -1626,7 +1636,7 @@ section { position: relative; }
   text-transform: uppercase;
 }
 .article__back:hover { color: var(--rec); }
-.article__title { max-width: 13ch; }
+.article__title { max-width: min(22ch, 100%); }
 .article__lead {
   color: var(--fg-dim);
   font-size: clamp(19px,2vw,30px);
@@ -1647,6 +1657,45 @@ section { position: relative; }
   inset: 0;
   filter: saturate(.78) brightness(.74);
 }
+.article__media .frame-media img,
+.blog-feature__media .frame-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.article__content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 28px 0;
+  border-radius: 2px;
+}
+.article__content figure {
+  margin: 28px 0;
+}
+.article__content figcaption {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+.article__content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 0.95em;
+}
+.article__content th,
+.article__content td {
+  border-bottom: 1px solid oklch(0.5 0.01 70 / .25);
+  padding: 10px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+.blog-post[hidden],
+.blog-feature[hidden] { display: none !important; }
 .article__media span {
   position: absolute;
   left: 18px;
@@ -1668,6 +1717,9 @@ section { position: relative; }
   margin-top: clamp(50px,8vh,96px);
 }
 .article__content section + section { margin-top: clamp(42px,6vh,70px); }
+.article__content section[id] {
+  scroll-margin-top: 110px;
+}
 .article__content h2 {
   font-weight: 800;
   font-stretch: 110%;
@@ -3401,12 +3453,15 @@ img.card__video { background: var(--bg-2); }
    "FEATURED" tag and "Czytaj dalej" links all went muddy. Force brand yellow. */
 :root[data-theme="light"] .blog-topics a.is-active,
 :root[data-theme="light"] .blog-topics a:hover { background: #ffd200; border-color: #ffd200; color: #17140a; }
-:root[data-theme="light"] .blog-feature a,
+:root[data-theme="light"] .blog-feature__cta,
 :root[data-theme="light"] .article__cta a { background: #ffd200; color: #17140a; }
 :root[data-theme="light"] .blog-feature__media span { color: #ffd200; }
-:root[data-theme="light"] .blog-post a { color: #8a6d00; }
+:root[data-theme="light"] .blog-post__more { color: #8a6d00; }
 :root[data-theme="light"] .blog-post:hover { border-color: #ffd200; }
-:root[data-theme="light"] .blog-post:hover a { color: #17140a; }
+:root[data-theme="light"] .blog-post:hover .blog-post__more,
+:root[data-theme="light"] .blog-post:hover .blog-post__title { color: #17140a; }
+:root[data-theme="light"] .blog-feature h2 a.blog-post__title:hover,
+:root[data-theme="light"] .blog-post h3 a.blog-post__title:hover { color: #8a6d00; }
 :root[data-theme="light"] .eyebrow .tick { background: var(--accent-hi); }
 .sub-hero__meta span { transition: color .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease); }
 .sub-hero__meta span:hover { color: var(--rec); border-color: rgb(255 210 0 / .5); }

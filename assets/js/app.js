@@ -74,12 +74,19 @@
         try { target = document.querySelector(id); } catch (_) { return; }
         if (!target) return;
         e.preventDefault();
-        lenis.scrollTo(target, { offset: -12 });
+        e.stopImmediatePropagation();
+        lenis.scrollTo(target, { offset: -anchorOffset() });
       });
     };
     s.onerror = function () { /* keep native scroll */ };
     document.head.appendChild(s);
   })();
+
+  function anchorOffset() {
+    const nav = document.querySelector(".nav");
+    const h = nav ? Math.ceil(nav.getBoundingClientRect().height) : 72;
+    return h + 24;
+  }
 
   /* ---------- TIMECODE (nav + hero) ---------- */
   function tc(frames) {
@@ -913,12 +920,18 @@
   /* ---------- Smooth anchor nav ---------- */
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
+      if (e.defaultPrevented) return;
       const id = a.getAttribute("href");
       if (id.length < 2) return;
       const t = document.querySelector(id);
       if (t) {
         e.preventDefault();
-        const y = t.getBoundingClientRect().top + window.scrollY - 12;
+        e.stopImmediatePropagation();
+        if (window.__lenis && window.__lenis.scrollTo) {
+          window.__lenis.scrollTo(t, { offset: -anchorOffset() });
+          return;
+        }
+        const y = t.getBoundingClientRect().top + window.scrollY - anchorOffset();
         window.scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
       }
     });

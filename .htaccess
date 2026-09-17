@@ -25,7 +25,8 @@ ErrorDocument 404 /404.php
 
 # --- Stare flat *.html → pretty URL (301) ---
 RewriteRule ^blog\.html$ /blog/ [R=301,L,QSA]
-RewriteRule ^artykul\.html$ /artykul/ [R=301,L,QSA]
+RewriteRule ^artykul\.html$ /blog/ [R=301,L,QSA]
+RewriteRule ^artykul/?$ /blog/ [R=301,L,QSA]
 RewriteRule ^portfolio-lista-b\.html$ /portfolio-lista-b/ [R=301,L,QSA]
 RewriteRule ^realizacja\.html$ /realizacja/ [R=301,L,QSA]
 RewriteRule ^realizacja-denza\.html$ /realizacja-denza/ [R=301,L,QSA]
@@ -52,7 +53,7 @@ RewriteRule ^(.+)\.html$ /$1/ [R=301,L,QSA]
 RewriteRule ^o-nas/?$ /#team [R=301,L,NE]
 RewriteRule ^uslugi/?$ /uslugi-marketingowe/ [R=301,L]
 RewriteRule ^kontakt/?$ /#kontakt [R=301,L,NE]
-RewriteRule ^uslugi-na-abonament/?$ /uslugi-marketingowe/abonamenty/ [R=301,L]
+# uslugi-na-abonament = artykuł bloga (nie przekierowuj na usługę)
 RewriteRule ^identyfikacja-wizualna/?$ /uslugi-marketingowe/identyfikacja-wizualna/ [R=301,L]
 RewriteRule ^en/services/branding/?$ /en/services/visual-identity/ [R=301,L]
 RewriteRule ^en/services/digital-graphics/?$ /en/services/graphic-design/ [R=301,L]
