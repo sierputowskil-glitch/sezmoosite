@@ -6,9 +6,22 @@ Options -Indexes
 
 ErrorDocument 404 /404.html
 
+# Blokada sekretów i logów formularza
+<FilesMatch "^(config\.local\.php)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
+    RewriteEngine On
+    RewriteBase /
+
+    # katalog logów formularza — niedostępny z WWW
+    RewriteRule ^logs(/|$) - [F,L]
 
 # --- Stare flat *.html → pretty URL (301) ---
 RewriteRule ^blog\.html$ /blog/ [R=301,L,QSA]

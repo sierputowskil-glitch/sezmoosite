@@ -1,0 +1,25 @@
+<?php
+/**
+ * Skopiuj jako config.local.php i uzupełnij.
+ * config.local.php jest poza gitem i zablokowany w .htaccess.
+ *
+ * Turnstile: https://dash.cloudflare.com → Turnstile → Add site
+ * SMTP Cyberfolks: zwykle smtp.cyberfolks.pl, port 587 (TLS) lub 465 (SSL)
+ */
+return [
+    // Cloudflare Turnstile
+    'TURNSTILE_SITE_KEY'   => '0x4AAAAA...',
+    'TURNSTILE_SECRET_KEY' => '0x4AAAAA...',
+
+    // SMTP (zalecane). Puste SMTP_HOST = fallback na PHP mail()
+    'SMTP_HOST'       => 'smtp.cyberfolks.pl',
+    'SMTP_PORT'       => 587,
+    'SMTP_SECURE'     => 'tls',          // tls | ssl | ''
+    'SMTP_USER'       => 'no-reply@sezmoo.com',
+    'SMTP_PASS'       => '',
+    'SMTP_FROM'       => 'no-reply@sezmoo.com',
+    'SMTP_FROM_NAME'  => 'SEZMOO',
+
+    // Skrzynka docelowa
+    'MAIL_TO'         => 'biuro@sezmoo.com',
+];

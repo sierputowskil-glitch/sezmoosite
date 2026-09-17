@@ -926,51 +926,10 @@
 })();
 
 /* ============================================================
-   COOKIE CONSENT — lang-aware, persistent, shown on all pages
+   COOKIE CONSENT — disabled; CookieYes loads via GTM
    ============================================================ */
 (function cookieConsent() {
-  var KEY = "sezmoo-cookie-consent";
-  try { if (localStorage.getItem(KEY)) return; } catch (e) {}
-
-  var en = (document.documentElement.lang || "pl").toLowerCase().indexOf("en") === 0;
-  var privacyHref = en ? "/en/privacy-policy/" : "/polityka-prywatnosci/";
-
-  var t = en ? {
-    text: "We use cookies to make the site work, remember preferences and — with your consent — for statistics and marketing.",
-    more: "Privacy policy", accept: "Accept all", nec: "Only necessary"
-  } : {
-    text: "Używamy plików cookies, aby strona działała poprawnie, zapamiętywała preferencje oraz — za Twoją zgodą — w celach statystycznych i marketingowych.",
-    more: "Polityka prywatności", accept: "Akceptuję", nec: "Tylko niezbędne"
-  };
-
-  function save(v) {
-    try { localStorage.setItem(KEY, v + "|" + Date.now()); } catch (e) {}
-    banner.setAttribute("data-hide", "");
-    setTimeout(function () { if (banner.parentNode) banner.parentNode.removeChild(banner); }, 420);
-  }
-
-  var banner = document.createElement("div");
-  banner.className = "cookie-bar";
-  banner.setAttribute("role", "dialog");
-  banner.setAttribute("aria-label", en ? "Cookie consent" : "Zgoda na cookies");
-  banner.innerHTML =
-    '<div class="cookie-bar__inner">' +
-      '<div class="cookie-bar__tag">● COOKIES</div>' +
-      '<p class="cookie-bar__text">' + t.text + ' <a href="' + privacyHref + '">' + t.more + ' →</a></p>' +
-      '<div class="cookie-bar__actions">' +
-        '<button type="button" class="cookie-bar__btn" data-nec>' + t.nec + '</button>' +
-        '<button type="button" class="cookie-bar__btn cookie-bar__btn--primary" data-accept>' + t.accept + '</button>' +
-      '</div>' +
-    '</div>';
-
-  function mount() {
-    document.body.appendChild(banner);
-    requestAnimationFrame(function () { banner.setAttribute("data-show", ""); });
-    banner.querySelector("[data-accept]").addEventListener("click", function () { save("all"); });
-    banner.querySelector("[data-nec]").addEventListener("click", function () { save("necessary"); });
-  }
-  if (document.body) mount();
-  else document.addEventListener("DOMContentLoaded", mount);
+  return;
 })();
 
 /* ---------- Category chips on cards (derived from data-cats) ---------- */
@@ -1002,60 +961,305 @@
   else document.addEventListener("DOMContentLoaded", build);
 })();
 
-/* ---------- Retainer forms → send.php (Cyberfolks) ---------- */
+/* ---------- Contact / retainer forms → send.php + Turnstile (invisible) ---------- */
 (function phpForms() {
-    var f = document.getElementById("abonament-form");
-    if (!f) return;
+  var forms = [].slice.call(document.querySelectorAll("#contact-form, #abonament-form"));
+  if (!forms.length) return;
+
+  var turnstileReady = null;
+  var siteKeyPromise = null;
+
+  /** GTM / GA4 — bez PII (bez email, telefonu, imienia, treści). */
+  function dlPush(payload) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
+  }
+
+  function formMeta(f) {
+    var langInput = f.querySelector('input[name="lang"]');
+    var originInput = f.querySelector('input[name="form-name"]');
+    var needEl = f.querySelector('[name="need"]');
+    var formName = (originInput && originInput.value === "abonament")
+      ? "abonament"
+      : (f.getAttribute("name") || f.id || "kontakt");
+    if (formName === "contact") formName = "kontakt";
+    return {
+      form_id: f.id || "",
+      form_name: formName,
+      form_lang: (langInput && langInput.value === "en") ? "en" : "pl",
+      form_need: needEl && needEl.value ? String(needEl.value) : ""
+    };
+  }
+
+  function loadTurnstileApi() {
+    if (window.turnstile) return Promise.resolve();
+    if (turnstileReady) return turnstileReady;
+    turnstileReady = new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      s.async = true;
+      s.onload = function () { resolve(); };
+      s.onerror = function () { reject(new Error("turnstile")); };
+      document.head.appendChild(s);
+    });
+    return turnstileReady;
+  }
+
+  function getSiteKey() {
+    if (siteKeyPromise) return siteKeyPromise;
+    siteKeyPromise = fetch("/public-config.php", { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        var k = d && d.turnstileSiteKey ? String(d.turnstileSiteKey) : "";
+        if (!k || k === "0x4AAAAA..." || k.indexOf("...") !== -1) throw new Error("no-sitekey");
+        return k;
+      });
+    return siteKeyPromise;
+  }
+
+  function bindForm(f) {
     var note = f.querySelector(".cform__note");
     var btn = f.querySelector('button[type="submit"]');
     var lbl = btn ? btn.querySelector(".lbl") : null;
     var lblText = lbl ? lbl.textContent : "";
     var en = ((f.querySelector('input[name="lang"]') || {}).value === "en");
-
-    function fillToken() {
-      fetch("/token.php", { cache: "no-store" })
-        .then(function (r) { return r.json(); })
-        .then(function (t) {
-          if (!t) return;
-          var a = f.querySelector('input[name="ts"]'); if (a) a.value = t.ts;
-          var b = f.querySelector('input[name="sig"]'); if (b) b.value = t.sig;
-        })
-        .catch(function () {});
-    }
-    fillToken();
+    var widgetId = null;
+    var tokenResolve = null;
+    var started = false;
+    var host = document.createElement("div");
+    host.setAttribute("aria-hidden", "true");
+    host.style.cssText = "position:absolute;width:0;height:0;overflow:hidden;clip:rect(0,0,0,0);";
+    f.appendChild(host);
 
     function say(t) {
-      if (note) { note.textContent = t; note.style.color = "var(--rec)"; }
+      if (note) {
+        note.textContent = t;
+        note.style.color = "var(--rec)";
+      }
     }
+
+    var NAME_RE = /^[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ][A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ'’\-]*(?:\s+[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ][A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ'’\-]*)+$/;
+    var PHONE_RE = /^\+?[0-9][0-9\s\-()]{6,18}[0-9]$/;
+    var nameInput = f.querySelector('input[name="name"]');
+    var phoneInput = f.querySelector('input[name="phone"]');
+
+    if (nameInput) {
+      nameInput.setAttribute("minlength", "3");
+      nameInput.setAttribute("maxlength", "120");
+      nameInput.setAttribute("autocomplete", "name");
+      nameInput.setAttribute(
+        "pattern",
+        "[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ][A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ'’\\-]*(?:\\s+[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ][A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ'’\\-]*)+"
+      );
+      nameInput.setAttribute(
+        "title",
+        en ? "First and last name (letters only)" : "Imię i nazwisko (same litery)"
+      );
+    }
+    if (phoneInput) {
+      phoneInput.setAttribute("maxlength", "40");
+      phoneInput.setAttribute("autocomplete", "tel");
+      phoneInput.setAttribute("inputmode", "tel");
+      phoneInput.setAttribute("pattern", "\\+?[0-9][0-9\\s\\-()]{6,18}[0-9]");
+      phoneInput.setAttribute(
+        "title",
+        en ? "Phone number, e.g. +48 500 000 000" : "Numer telefonu, np. +48 500 000 000"
+      );
+    }
+
+    function validateNamePhone() {
+      if (nameInput) {
+        var n = (nameInput.value || "").trim().replace(/\s+/g, " ");
+        nameInput.value = n;
+        if (!n) {
+          nameInput.setCustomValidity(en ? "Enter your name." : "Podaj imię i nazwisko.");
+        } else if (!NAME_RE.test(n)) {
+          nameInput.setCustomValidity(
+            en
+              ? "Enter your first and last name (letters only)."
+              : "Podaj imię i nazwisko (same litery)."
+          );
+        } else {
+          nameInput.setCustomValidity("");
+        }
+      }
+      if (phoneInput) {
+        var p = (phoneInput.value || "").trim();
+        phoneInput.value = p;
+        if (p === "") {
+          phoneInput.setCustomValidity("");
+        } else {
+          var digits = p.replace(/\D+/g, "");
+          if (!PHONE_RE.test(p) || digits.length < 9 || digits.length > 15) {
+            phoneInput.setCustomValidity(
+              en
+                ? "Enter a valid phone number (e.g. +48 500 000 000)."
+                : "Podaj prawidłowy numer telefonu (np. +48 500 000 000)."
+            );
+          } else {
+            phoneInput.setCustomValidity("");
+          }
+        }
+      }
+    }
+
+    if (nameInput) {
+      nameInput.addEventListener("input", function () { nameInput.setCustomValidity(""); });
+      nameInput.addEventListener("blur", validateNamePhone);
+    }
+    if (phoneInput) {
+      phoneInput.addEventListener("input", function () { phoneInput.setCustomValidity(""); });
+      phoneInput.addEventListener("blur", validateNamePhone);
+    }
+
+    function resetWidget() {
+      if (widgetId !== null && window.turnstile) {
+        try { window.turnstile.reset(widgetId); } catch (e) {}
+      }
+    }
+
+    function ensureWidget() {
+      if (widgetId !== null) return Promise.resolve();
+      return Promise.all([getSiteKey(), loadTurnstileApi()]).then(function (pair) {
+        var key = pair[0];
+        widgetId = window.turnstile.render(host, {
+          sitekey: key,
+          size: "invisible",
+          execution: "execute",
+          appearance: "execute",
+          callback: function () {
+            if (tokenResolve) {
+              var r = tokenResolve;
+              tokenResolve = null;
+              r();
+            }
+          },
+          "error-callback": function () {
+            if (tokenResolve) {
+              var r = tokenResolve;
+              tokenResolve = null;
+              r(new Error("turnstile-error"));
+            }
+          }
+        });
+      });
+    }
+
+    function runChallenge() {
+      return ensureWidget().then(function () {
+        return new Promise(function (resolve, reject) {
+          tokenResolve = function (err) {
+            if (err) reject(err);
+            else resolve();
+          };
+          try {
+            window.turnstile.execute(widgetId);
+          } catch (e) {
+            tokenResolve = null;
+            reject(e);
+          }
+        });
+      });
+    }
+
+    f.addEventListener("focusin", function () {
+      if (started) return;
+      started = true;
+      var meta = formMeta(f);
+      dlPush({
+        event: "form_start",
+        form_id: meta.form_id,
+        form_name: meta.form_name,
+        form_lang: meta.form_lang
+      });
+    });
+
+    ensureWidget().catch(function () {
+      say(en
+        ? "\u25cf Form protection failed to load \u2014 email biuro@sezmoo.com"
+        : "\u25cf Nie uda\u0142o si\u0119 za\u0142adowa\u0107 ochrony formularza \u2014 napisz na biuro@sezmoo.com");
+    });
 
     f.addEventListener("submit", function (e) {
       e.preventDefault();
-      if (!f.checkValidity()) { f.reportValidity(); return; }
+      validateNamePhone();
+      if (!f.checkValidity()) {
+        f.reportValidity();
+        return;
+      }
       if (btn) btn.disabled = true;
       if (lbl) lbl.textContent = en ? "Sending\u2026" : "Wysy\u0142anie\u2026";
-      fetch(f.getAttribute("action") || "/send.php", { method: "POST", body: new FormData(f) })
-        .then(function (r) { return r.json().catch(function () { return { ok: r.ok }; }); })
-        .then(function (d) {
+
+      var meta = formMeta(f);
+
+      runChallenge()
+        .then(function () {
+          return fetch(f.getAttribute("action") || "/send.php", {
+            method: "POST",
+            body: new FormData(f)
+          });
+        })
+        .then(function (r) {
+          return r.json().then(function (d) {
+            return { httpOk: r.ok, data: d };
+          }).catch(function () {
+            return { httpOk: false, data: { ok: false, error: en ? "Invalid server response" : "Nieprawid\u0142owa odpowied\u017a serwera" } };
+          });
+        })
+        .then(function (res) {
+          var d = res.data || {};
           if (d && d.ok) {
+            dlPush({
+              event: "generate_lead",
+              form_id: meta.form_id,
+              form_name: meta.form_name,
+              form_lang: meta.form_lang,
+              form_need: meta.form_need
+            });
             say(en
               ? "\u25cf Thank you \u2014 we\u2019ll get back to you within 24h."
               : "\u25cf Dzi\u0119kujemy \u2014 odezwiemy si\u0119 w ci\u0105gu 24h.");
             f.reset();
-            fillToken();
-          } else if (en) {
-            say("\u25cf Something went wrong \u2014 email biuro@sezmoo.com");
+            started = false;
+            resetWidget();
           } else {
-            say("\u25cf " + ((d && d.error) || "Co\u015b posz\u0142o nie tak") + " \u2014 napisz na biuro@sezmoo.com");
+            var err = d.error ? String(d.error) : "";
+            dlPush({
+              event: "form_submit_error",
+              form_id: meta.form_id,
+              form_name: meta.form_name,
+              form_lang: meta.form_lang,
+              form_need: meta.form_need,
+              error_type: err ? "server" : "unknown"
+            });
+            if (en) {
+              say("\u25cf " + (err || "Something went wrong") + " \u2014 email biuro@sezmoo.com");
+            } else {
+              say("\u25cf " + (err || "Co\u015b posz\u0142o nie tak") + " \u2014 napisz na biuro@sezmoo.com");
+            }
+            resetWidget();
           }
         })
         .catch(function () {
+          dlPush({
+            event: "form_submit_error",
+            form_id: meta.form_id,
+            form_name: meta.form_name,
+            form_lang: meta.form_lang,
+            form_need: meta.form_need,
+            error_type: "network"
+          });
           say(en
             ? "\u25cf Something went wrong \u2014 email biuro@sezmoo.com"
             : "\u25cf Co\u015b posz\u0142o nie tak \u2014 napisz na biuro@sezmoo.com");
+          resetWidget();
         })
         .finally(function () {
           if (btn) btn.disabled = false;
           if (lbl) lbl.textContent = lblText;
         });
     });
-  })();
+  }
+
+  forms.forEach(bindForm);
+})();

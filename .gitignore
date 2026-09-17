@@ -50,6 +50,8 @@ $RECYCLE.BIN/
 .env
 .env.*
 !.env.example
+config.local.php
+logs/
 
 # Dependencies and build leftovers
 node_modules/
