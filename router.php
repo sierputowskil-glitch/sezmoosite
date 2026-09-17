@@ -14,6 +14,26 @@ $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $path = $uri === null || $uri === '' ? '/' : $uri;
 $file = __DIR__ . $path;
 
+// Mirror kluczowych 301 z .htaccess (php -S ich nie czyta)
+$redirects = [
+    '/identyfikacja-wizualna' => '/uslugi-marketingowe/identyfikacja-wizualna/',
+    '/identyfikacja-wizualna/' => '/uslugi-marketingowe/identyfikacja-wizualna/',
+    '/uslugi' => '/uslugi-marketingowe/',
+    '/uslugi/' => '/uslugi-marketingowe/',
+    '/artykul' => '/blog/',
+    '/artykul/' => '/blog/',
+];
+if (isset($redirects[$path])) {
+    header('Location: ' . $redirects[$path], true, 301);
+    return true;
+}
+if (preg_match('#^/(en/|de/)?(category|tag|author)(/|$)#', $path)
+    || preg_match('#^/(en/|de/)?(comments/)?feed/?$#', $path)
+) {
+    header('Location: /blog/', true, 301);
+    return true;
+}
+
 // Istniejący plik (HTML, asset, PHP…) — niech serwuje built-in server
 if ($path !== '/' && is_file($file)) {
     return false;
