@@ -28,8 +28,8 @@
 </head>
 <body id="top"><canvas class="flow-bg-canvas" id="flow-bg-canvas" aria-hidden="true"></canvas>
 <div class="grain"></div><div class="vignette"></div><div class="cursor">PLAY</div><div class="cursor-dot"></div><div class="scrubber"><div class="scrubber__fill"><span class="scrubber__head"></span></div></div>
-<nav class="nav"><a class="brand" href="../../index.html#hero" aria-label="SEZMOO"><img class="brand__logo" src="../../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a><div class="nav__menu" id="main-menu"><a href="../../index.html#hero">Home</a>
-    <a href="../../portfolio/index.html?cat=eventy#work-list">Portfolio</a><a aria-current="page" href="../index.html#lista-uslug">Usługi</a><a href="../../index.html#team">Zespół</a><a href="../../index.html#opinie">Opinie</a><a href="../../blog.html">Blog</a><a href="../../index.html#kontakt">Kontakt</a></div><div class="nav__right"><div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div><div class="nav__theme" role="group" aria-label="Motyw / Theme"><button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw / Dark">DARK</button><button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw / Light">LIGHT</button></div><div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" href="../../en/services/retainers/index.html">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button></div></nav>
+<nav class="nav"><a class="brand" href="/#hero" aria-label="SEZMOO"><img class="brand__logo" src="../../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a><div class="nav__menu" id="main-menu"><a href="/#hero">Home</a>
+    <a href="/portfolio/?cat=eventy#work-list">Portfolio</a><a aria-current="page" href="/uslugi-marketingowe/#lista-uslug">Usługi</a><a href="/#team">Zespół</a><a href="/#opinie">Opinie</a><a href="/blog/">Blog</a><a href="/#kontakt">Kontakt</a></div><div class="nav__right"><div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div><div class="nav__theme" role="group" aria-label="Motyw / Theme"><button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw / Dark">DARK</button><button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw / Light">LIGHT</button></div><div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" href="/en/services/retainers/">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button></div></nav>
 <main class="service-detail">
 <div class="sd">
 <section class="sd__hero shell">
@@ -103,9 +103,12 @@
     <section class="sd__blk" id="abo-form">
       <div class="sd__blkh reveal"><h2>Zapytaj o&nbsp;<span style="color:#ffd200">wycenę abonamentu.</span></h2></div>
       <p class="sd__lead reveal" style="margin-top:0">Napisz, co&nbsp;publikujecie i&nbsp;jak często – wrócimy z&nbsp;propozycją zakresu i&nbsp;miesięczną kwotą. Odpowiadamy w&nbsp;ciągu 24h.</p>
-      <form class="cform reveal" data-d="1" id="abonament-form" name="abonament" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate style="margin-top:clamp(22px,2.6vw,32px)">
+      <form class="cform reveal" data-d="1" id="abonament-form" name="abonament" method="POST" action="/send.php" novalidate style="margin-top:clamp(22px,2.6vw,32px)">
         <input type="hidden" name="form-name" value="abonament" />
-        <p hidden><label>Nie wypełniaj: <input name="bot-field" /></label></p>
+        <input type="hidden" name="lang" value="pl" />
+        <input type="hidden" name="ts" value="" />
+        <input type="hidden" name="sig" value="" />
+        <p hidden aria-hidden="true"><label>Nie wypełniaj: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
         <div class="cform__row">
           <div class="cfield"><label for="ab-name">Imię i nazwisko</label><input id="ab-name" name="name" type="text" placeholder="Jan Kowalski" required /></div>
           <div class="cfield"><label for="ab-company">Firma</label><input id="ab-company" name="company" type="text" placeholder="Nazwa firmy" /></div>
@@ -121,8 +124,8 @@
             <option>Wideo / motion</option><option>Foto</option><option>Grafika</option><option>Social media</option><option>Wszystko po trochu</option>
           </select>
         </div>
-        <div class="cfield"><label for="ab-msg">Wiadomość</label><textarea id="ab-msg" name="message" placeholder="Ile materiałów miesięcznie, jakie kanały..." required></textarea></div>
-        <label class="cconsent"><input type="checkbox" required /> <span>Wyrażam zgodę na&nbsp;przetwarzanie moich danych w&nbsp;celu kontaktu, zgodnie z&nbsp;<a href="../../polityka-prywatnosci/index.html" target="_blank" rel="noopener">polityką prywatności</a> SEZMOO.</span></label>
+        <div class="cfield"><label for="ab-msg">Wiadomość</label><textarea id="ab-msg" name="message" placeholder="Ile materiałów miesięcznie, jakie kanały..." minlength="10" required></textarea></div>
+        <label class="cconsent"><input type="checkbox" name="consent" value="1" required /> <span>Wyrażam zgodę na&nbsp;przetwarzanie moich danych w&nbsp;celu kontaktu, zgodnie z&nbsp;<a href="/polityka-prywatnosci/" target="_blank" rel="noopener">polityką prywatności</a> SEZMOO.</span></label>
         <button class="btn btn--primary" type="submit"><span class="ico"></span><span class="lbl">Wyślij zapytanie</span></button>
         <p class="cform__note">● REC · Odpowiadamy w ciągu 24h</p>
       </form>
@@ -133,7 +136,7 @@
 <footer class="footer shell service-footer">
   <div class="footer__panel">
     <div class="footer__top">
-      <a class="footer__brand" href="../../index.html#hero" aria-label="SEZMOO">
+      <a class="footer__brand" href="/#hero" aria-label="SEZMOO">
         <img src="../../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
       </a>
       <div class="footer__statement">
@@ -149,9 +152,9 @@
       </div>
       <div class="footer__col">
         <span class="footer__label">Studio</span>
-        <a href="../../index.html#work">Realizacje</a>
-        <a href="../../uslugi-marketingowe/index.html#lista-uslug">Usługi</a>
-        <a href="../../index.html#kontakt">Brief</a>
+        <a href="/#work">Realizacje</a>
+        <a href="/uslugi-marketingowe/#lista-uslug">Usługi</a>
+        <a href="/#kontakt">Brief</a>
       </div>
       <div class="footer__col">
         <span class="footer__label">Social</span>
@@ -166,7 +169,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 SEZMOO · WSZELKIE PRAWA ZASTRZEŻONE</span><a class="footer__legal" href="../../polityka-prywatnosci/index.html">Polityka prywatności</a>
+      <span>© 2026 SEZMOO · WSZELKIE PRAWA ZASTRZEŻONE</span><a class="footer__legal" href="/polityka-prywatnosci/">Polityka prywatności</a>
       <a href="#top">Do góry</a>
     </div>
   </div>

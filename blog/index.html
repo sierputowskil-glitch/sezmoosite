@@ -3,11 +3,185 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Blog – SEZMOO</title>
-<meta http-equiv="refresh" content="0; url=../blog.html" />
-<link rel="canonical" href="../blog.html" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/assets/favicon.png" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#16130e" />
+<meta property="og:image" content="https://sezmoo.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://sezmoo.com/assets/og-image.png" />
+<script>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<title>Blog, produkcja wideo, content i marketing marek | SEZMOO</title>
+<meta name="description" content="Blog SEZMOO: praktyczne notatki o produkcji wideo, contentu na social media i marketingu marek, z planu, montażu i feedu." />
+<link rel="canonical" href="https://sezmoo.com/blog/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
 </head>
-<body>
-<p><a href="../blog.html">Przejdź do bloga SEZMOO</a></p>
+<body><canvas class="flow-bg-canvas" id="flow-bg-canvas" aria-hidden="true"></canvas>
+
+<div class="grain"></div>
+<div class="vignette"></div>
+<div class="cursor">PLAY</div>
+<div class="cursor-dot"></div>
+<div class="scrubber"><div class="scrubber__fill"><span class="scrubber__head"></span></div></div>
+
+<nav class="nav">
+  <a class="brand" href="/#hero" aria-label="SEZMOO">
+    <img class="brand__logo" src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+  </a>
+  <div class="nav__menu" id="main-menu">
+    <a href="/#hero">Home</a>
+    <a href="/#work">Portfolio</a>
+    <a href="/uslugi-marketingowe/">Usługi</a>
+    <a href="/#team">Zespół</a>
+    <a href="/#opinie">Opinie</a>
+    <a aria-current="page" href="/blog/">Blog</a>
+    <a href="/#kontakt">Kontakt</a>
+  </div>
+  <div class="nav__right"><div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div>
+  <div class="nav__theme" role="group" aria-label="Motyw / Theme"><button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw / Dark">DARK</button><button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw / Light">LIGHT</button></div><div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" href="/en/">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu">
+    <span></span><span></span><span></span>
+  </button>
+</div></nav>
+
+<main>
+  <section class="blog blog--page shell" id="blog" data-screen-label="Blog">
+    <div class="blog-hero">
+      <div>
+        <span class="eyebrow reveal"><span class="tick"></span>NOTATKI SEZMOO</span>
+        <h1 class="blog-hero__title reveal">Notatki z planu, montażu i feedu.</h1>
+      </div>
+      <p class="blog-hero__copy reveal" data-d="1">Praktyczne wpisy o produkcji wideo, krótkich formatach, social mediach i pracy z marką przed kamerą.</p>
+    </div>
+
+    <div class="blog-topics reveal">
+      <a href="#all" class="is-active">Wszystko</a>
+      <a href="#production">Produkcja</a>
+      <a href="#social">Social</a>
+      <a href="#post">Postprodukcja</a>
+      <a href="#strategy">Strategia</a>
+    </div>
+
+    <article class="blog-feature reveal">
+      <div class="blog-feature__media">
+        <div class="frame-media"></div>
+        <span>FEATURED</span>
+      </div>
+      <div class="blog-feature__body">
+        <span class="blog-post__meta">PRODUKCJA · 04 MIN · 12.06.2026</span>
+        <h2>Jak przygotować markę do dnia zdjęciowego?</h2>
+        <p>Brief, lokacje, produkt, osoby na planie i materiały, które skracają czas produkcji. Konkretna checklista przed wejściem kamer.</p>
+        <a href="/artykul/">Czytaj artykuł</a>
+      </div>
+    </article>
+
+    <div class="blog-layout">
+      <div class="blog__list">
+        <article class="blog-post reveal">
+          <span class="blog-post__meta">SOCIAL · 03 MIN</span>
+          <h3>Dlaczego jedna produkcja powinna dawać wiele formatów?</h3>
+          <p>Reels, kampanie, www i paid media mogą powstać z jednego planu, jeśli od początku myślimy dystrybucją.</p>
+          <a href="/artykul/">Czytaj dalej</a>
+        </article>
+        <article class="blog-post reveal" data-d="1">
+          <span class="blog-post__meta">POST · 05 MIN</span>
+          <h3>Kolor, rytm i pierwsze trzy sekundy.</h3>
+          <p>O tym, co sprawia, że materiał wygląda premium i zatrzymuje uwagę w feedzie.</p>
+          <a href="/artykul/">Czytaj dalej</a>
+        </article>
+        <article class="blog-post reveal" data-d="2">
+          <span class="blog-post__meta">STRATEGIA · 06 MIN</span>
+          <h3>Content plan, który nie kończy się po publikacji.</h3>
+          <p>Jak zaplanować produkcję tak, żeby materiał pracował w kampanii, organicu i na stronie.</p>
+          <a href="/artykul/">Czytaj dalej</a>
+        </article>
+        <article class="blog-post reveal">
+          <span class="blog-post__meta">EVENT · 04 MIN</span>
+          <h3>Aftermovie, który nie jest tylko relacją.</h3>
+          <p>Jak zamienić wydarzenie w materiał sprzedażowy, employer brandingowy i socialowy.</p>
+          <a href="/artykul/">Czytaj dalej</a>
+        </article>
+      </div>
+
+      <aside class="blog-side reveal" data-d="1">
+        <span class="blog-side__label">Tematy</span>
+        <a href="#production">Produkcja wideo</a>
+        <a href="#social">Reels / TikTok / Shorts</a>
+        <a href="#post">Postprodukcja</a>
+        <a href="#strategy">Content strategy</a>
+        <a href="/#cta">Zaproponuj temat</a>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer shell">
+  <div class="footer__panel">
+    <div class="footer__top">
+      <a class="footer__brand" href="/#hero" aria-label="SEZMOO">
+        <img src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+      </a>
+      <div class="footer__statement">
+        <span>AGENCJA KREATYWNA · GDAŃSK · TRÓJMIASTO</span>
+        <p>Offline i online marketing w jednym miejscu.</p>
+      </div>
+    </div>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <span class="footer__label">Kontakt</span>
+        <a href="mailto:biuro@sezmoo.com">biuro@sezmoo.com</a>
+        <a href="tel:+48502260450">+48 502 260 450</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Studio</span>
+        <a href="/#work">Realizacje</a>
+        <a href="/uslugi-marketingowe/">Usługi</a>
+        <a href="/#kontakt">Brief</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Social</span>
+        <a href="https://www.instagram.com/sezmoo/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/sezmooagencja" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.youtube.com/@sezmooagency" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Adres</span>
+        <p>Zeusa 34<br>80-299 Gdańsk</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 SEZMOO · WSZELKIE PRAWA ZASTRZEŻONE</span><a class="footer__legal" href="/polityka-prywatnosci/">Polityka prywatności</a>
+      <a href="#top">Do góry</a>
+    </div>
+  </div>
+</footer>
+</main>
+
+<script src="/app.js"></script>
+<script src="/flowing-background.js"></script>
+<script>
+/* Theme switcher (dark / light) */
+(function () {
+  var root = document.documentElement;
+  var opts = [].slice.call(document.querySelectorAll('[data-theme-set]'));
+  function apply(t) {
+    root.setAttribute('data-theme', t);
+    try { localStorage.setItem('sezmoo-theme', t); } catch (e) {}
+    opts.forEach(function (b) {
+      var on = b.getAttribute('data-theme-set') === t;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  opts.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-theme-set')); });
+  });
+  apply(root.getAttribute('data-theme') || 'dark');
+})();
+</script>
 </body>
 </html>

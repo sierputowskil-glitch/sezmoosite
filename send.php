@@ -72,10 +72,12 @@ $clean = static function (string $key, int $max = 300): string {
 $name    = $clean('name', 120);
 $email   = $clean('email', 160);
 $phone   = $clean('phone', 40);
+$company = $clean('company', 160);
 $need    = $clean('need', 80);
 $message = mb_substr(trim((string)($_POST['message'] ?? '')), 0, 5000);
 $consent = isset($_POST['consent']);
 $lang    = ($clean('lang', 4) === 'en') ? 'en' : 'pl';
+$origin  = $clean('form-name', 40) === 'abonament' ? 'abonament' : 'kontakt';
 
 if ($name === '' || $message === '') {
     fail('Uzupełnij wymagane pola.');
@@ -109,11 +111,14 @@ if (preg_match('~https?://~i', $name)) {
 $ip   = $ipRaw;
 $when = date('Y-m-d H:i:s');
 
+$companyLine = $company !== '' ? "Firma           : {$company}\n" : '';
+$originLine  = $origin === 'abonament' ? "Formularz       : abonament\n" : '';
+
 $body = <<<TXT
 Nowe zapytanie z formularza na sezmoo.com
-
+{$originLine}
 Imię i nazwisko : {$name}
-E-mail          : {$email}
+{$companyLine}E-mail          : {$email}
 Telefon         : {$phone}
 Obszar          : {$need}
 Język formularza: {$lang}
