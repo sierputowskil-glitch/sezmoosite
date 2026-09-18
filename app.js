@@ -933,15 +933,7 @@
   try { if (localStorage.getItem(KEY)) return; } catch (e) {}
 
   var en = (document.documentElement.lang || "pl").toLowerCase().indexOf("en") === 0;
-
-  // relative path to site root, derived from a known asset (styles.css / app.js)
-  function rootPrefix() {
-    var el = document.querySelector('link[href$="styles.css"]') || document.querySelector('script[src$="app.js"]');
-    var u = el ? (el.getAttribute("href") || el.getAttribute("src") || "") : "";
-    return u.replace(/(styles\.css|app\.js)(\?.*)?$/, "");
-  }
-  var up = rootPrefix();
-  var privacyHref = up + (en ? "en/privacy-policy/index.html" : "polityka-prywatnosci/index.html");
+  var privacyHref = en ? "/en/privacy-policy/" : "/polityka-prywatnosci/";
 
   var t = en ? {
     text: "We use cookies to make the site work, remember preferences and — with your consent — for statistics and marketing.",
@@ -1009,3 +1001,61 @@
   if (document.readyState !== "loading") build();
   else document.addEventListener("DOMContentLoaded", build);
 })();
+
+/* ---------- Retainer forms → send.php (Cyberfolks) ---------- */
+(function phpForms() {
+    var f = document.getElementById("abonament-form");
+    if (!f) return;
+    var note = f.querySelector(".cform__note");
+    var btn = f.querySelector('button[type="submit"]');
+    var lbl = btn ? btn.querySelector(".lbl") : null;
+    var lblText = lbl ? lbl.textContent : "";
+    var en = ((f.querySelector('input[name="lang"]') || {}).value === "en");
+
+    function fillToken() {
+      fetch("/token.php", { cache: "no-store" })
+        .then(function (r) { return r.json(); })
+        .then(function (t) {
+          if (!t) return;
+          var a = f.querySelector('input[name="ts"]'); if (a) a.value = t.ts;
+          var b = f.querySelector('input[name="sig"]'); if (b) b.value = t.sig;
+        })
+        .catch(function () {});
+    }
+    fillToken();
+
+    function say(t) {
+      if (note) { note.textContent = t; note.style.color = "var(--rec)"; }
+    }
+
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!f.checkValidity()) { f.reportValidity(); return; }
+      if (btn) btn.disabled = true;
+      if (lbl) lbl.textContent = en ? "Sending\u2026" : "Wysy\u0142anie\u2026";
+      fetch(f.getAttribute("action") || "/send.php", { method: "POST", body: new FormData(f) })
+        .then(function (r) { return r.json().catch(function () { return { ok: r.ok }; }); })
+        .then(function (d) {
+          if (d && d.ok) {
+            say(en
+              ? "\u25cf Thank you \u2014 we\u2019ll get back to you within 24h."
+              : "\u25cf Dzi\u0119kujemy \u2014 odezwiemy si\u0119 w ci\u0105gu 24h.");
+            f.reset();
+            fillToken();
+          } else if (en) {
+            say("\u25cf Something went wrong \u2014 email biuro@sezmoo.com");
+          } else {
+            say("\u25cf " + ((d && d.error) || "Co\u015b posz\u0142o nie tak") + " \u2014 napisz na biuro@sezmoo.com");
+          }
+        })
+        .catch(function () {
+          say(en
+            ? "\u25cf Something went wrong \u2014 email biuro@sezmoo.com"
+            : "\u25cf Co\u015b posz\u0142o nie tak \u2014 napisz na biuro@sezmoo.com");
+        })
+        .finally(function () {
+          if (btn) btn.disabled = false;
+          if (lbl) lbl.textContent = lblText;
+        });
+    });
+  })();

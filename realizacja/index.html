@@ -15,14 +15,14 @@
 <script>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <title>Realizacje wideo, case studies marek | SEZMOO</title>
 <meta name="description" content="Case studies realizacji wideo SEZMOO: kontekst, podejście i efekt projektów dla marek motoryzacyjnych, B2B i eventowych." />
-<link rel="canonical" href="https://sezmoo.com/realizacja.html" />
+<link rel="canonical" href="https://sezmoo.com/realizacja/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://i.ytimg.com" />
 <link rel="preconnect" href="https://www.youtube-nocookie.com" />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="case-study.css" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/case-study.css" />
 <style>
 /* dynamic case-study, video-driven */
 .rz-film__frame.is-short { aspect-ratio:9/16; max-width:min(440px,90vw); margin-inline:auto; }
@@ -40,23 +40,23 @@
 <a class="scroll-top" href="#top" aria-label="Przewiń do góry">↑</a>
 
 <nav class="nav">
-  <a class="brand" href="index.html#hero" aria-label="SEZMOO"><img class="brand__logo" src="assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a>
+  <a class="brand" href="/#hero" aria-label="SEZMOO"><img class="brand__logo" src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a>
   <div class="nav__menu" id="main-menu">
-    <a href="index.html#hero">Home</a>
-    <a href="portfolio/index.html">Portfolio</a>
-    <a href="uslugi-marketingowe/index.html">Usługi</a>
-    <a href="index.html#team">Zespół</a>
-    <a href="index.html#opinie">Opinie</a>
-    <a href="blog.html">Blog</a>
-    <a href="index.html#kontakt">Kontakt</a>
+    <a href="/#hero">Home</a>
+    <a href="/portfolio/">Portfolio</a>
+    <a href="/uslugi-marketingowe/">Usługi</a>
+    <a href="/#team">Zespół</a>
+    <a href="/#opinie">Opinie</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#kontakt">Kontakt</a>
   </div>
   <div class="nav__right"><div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div>
-  <div class="nav__theme" role="group" aria-label="Motyw / Theme"><button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw / Dark">DARK</button><button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw / Light">LIGHT</button></div><div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" id="lang-en" href="en/portfolio-en/index.html">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
+  <div class="nav__theme" role="group" aria-label="Motyw / Theme"><button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw / Dark">DARK</button><button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw / Light">LIGHT</button></div><div class="nav__lang" role="group" aria-label="Język / Language"><a class="nav__lang-opt is-active" href="#" aria-current="page">PL</a><a class="nav__lang-opt" id="lang-en" href="/en/portfolio-en/">EN</a></div><button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
 </div></nav>
 
 <main id="rz-main"></main>
 
-<script src="app.js"></script>
+<script src="/app.js"></script>
 <script>
 /* ===== Case-study data, keyed by YouTube id ===== */
 var RZ = {
@@ -282,11 +282,11 @@ var RZ_ORDER = ["WG5ufZMfjQ8","4DTDakWPmfM","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_c
 
   // point EN switcher at the matching EN case study
   var enLink = document.getElementById("lang-en");
-  if (enLink) enLink.href = v ? "en/realizacja.html?v=" + v : "en/portfolio-en/index.html";
+  if (enLink) enLink.href = v ? "/en/realizacja/?v=" + v : "/en/portfolio-en/";
 
   if (!d) {
     main.innerHTML = '<section class="rz-empty"><div><h1>Nie znaleziono realizacji.</h1>' +
-      '<p>Wróć do <a href="portfolio/index.html#work-list">portfolio</a> i wybierz projekt.</p></div></section>';
+      '<p>Wróć do <a href="/portfolio/#work-list">portfolio</a> i wybierz projekt.</p></div></section>';
     return;
   }
 
@@ -336,7 +336,7 @@ var RZ_ORDER = ["WG5ufZMfjQ8","4DTDakWPmfM","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_c
     '<div class="cs-hero__frame" aria-hidden="true"><span></span><span></span><span></span><span></span></div>' +
     '<div class="cs-hero__hud"><span class="rec">REC · ' + (d.short ? "9:16" : "16:9") + '</span><span data-tc>00:00:12:08</span><span>GDAŃSK / PL</span></div>' +
     '<div class="cs-hero__inner shell">' +
-      '<a class="cs-hero__back" href="portfolio/index.html#work-list">← Portfolio / Realizacje</a>' +
+      '<a class="cs-hero__back" href="/portfolio/#work-list">← Portfolio / Realizacje</a>' +
       '<span class="eyebrow cs-hero__cat"><span class="tick"></span>' + d.cat + '</span>' +
       '<h1 class="cs-title">' + h1Html + '</h1>' +
       '<p class="cs-hero__sub">' + d.lead + '</p>' +
@@ -379,7 +379,7 @@ var RZ_ORDER = ["WG5ufZMfjQ8","4DTDakWPmfM","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_c
     '</div>' +
   '</section>' +
 
-  '<a class="cs-next bleed" href="realizacja.html?v=' + nextId + '" data-cursor="link" aria-label="Następna realizacja, ' + nx.title + '">' +
+  '<a class="cs-next bleed" href="/realizacja/?v=' + nextId + '" data-cursor="link" aria-label="Następna realizacja, ' + nx.title + '">' +
     '<img src="https://i.ytimg.com/vi/' + nextId + '/maxresdefault.jpg" onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/' + nextId + '/hqdefault.jpg\'" alt="' + nx.title + '" />' +
     '<div class="cs-next__inner shell"><span class="cs-next__k">Następna realizacja →</span>' +
       '<span class="cs-next__title">' + nx.title + ' <span class="arrow">→</span></span>' +
@@ -387,15 +387,15 @@ var RZ_ORDER = ["WG5ufZMfjQ8","4DTDakWPmfM","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_c
   '</a>' +
 
   '<footer class="footer shell"><div class="footer__panel">' +
-    '<div class="footer__top"><a class="footer__brand" href="#top" aria-label="SEZMOO"><img src="assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a>' +
+    '<div class="footer__top"><a class="footer__brand" href="#top" aria-label="SEZMOO"><img src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a>' +
       '<div class="footer__statement"><span>AGENCJA KREATYWNA · GDAŃSK · TRÓJMIASTO</span><p>Offline i&nbsp;online marketing w&nbsp;jednym miejscu.</p></div></div>' +
     '<div class="footer__grid">' +
       '<div class="footer__col"><span class="footer__label">Kontakt</span><a href="mailto:biuro@sezmoo.com">biuro@sezmoo.com</a><a href="tel:+48502260450">+48 502 260 450</a></div>' +
-      '<div class="footer__col"><span class="footer__label">Studio</span><a href="portfolio/index.html#work-list">Realizacje</a><a href="uslugi-marketingowe/index.html">Usługi</a><a href="index.html#kontakt">Brief</a></div>' +
+      '<div class="footer__col"><span class="footer__label">Studio</span><a href="/portfolio/#work-list">Realizacje</a><a href="/uslugi-marketingowe/">Usługi</a><a href="/#kontakt">Brief</a></div>' +
       '<div class="footer__col"><span class="footer__label">Social</span><a href="https://www.instagram.com/sezmoo/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/sezmooagencja" target="_blank" rel="noopener">Facebook</a><a href="https://www.youtube.com/@sezmooagency" target="_blank" rel="noopener">YouTube</a><a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener">LinkedIn</a></div>' +
       '<div class="footer__col"><span class="footer__label">Adres</span><p>Zeusa 34<br>80-299 Gdańsk</p></div>' +
     '</div>' +
-    '<div class="footer__bottom"><span>© 2026 SEZMOO · WSZELKIE PRAWA ZASTRZEŻONE</span><a class="footer__legal" href="polityka-prywatnosci/index.html">Polityka prywatności</a><a href="#top">Do góry</a></div>' +
+    '<div class="footer__bottom"><span>© 2026 SEZMOO · WSZELKIE PRAWA ZASTRZEŻONE</span><a class="footer__legal" href="/polityka-prywatnosci/">Polityka prywatności</a><a href="#top">Do góry</a></div>' +
   '</div></footer>';
 
   // film facade -> real embed on click
@@ -417,7 +417,7 @@ var RZ_ORDER = ["WG5ufZMfjQ8","4DTDakWPmfM","Hdnf6zcn3bA","c_5toy1IhIs","X8-hf_c
   window.dispatchEvent(new Event("scroll"));
 })();
 </script>
-<script src="flowing-background.js"></script>
+<script src="/flowing-background.js"></script>
 <script>
 /* Theme switcher (dark / light) */
 (function () {
