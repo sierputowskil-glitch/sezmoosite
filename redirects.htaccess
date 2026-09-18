@@ -1,0 +1,61 @@
+# SEZMOO — same przekierowania 301
+# Wpinane z głównego .htaccess (include redirects.htaccess).
+# Nie dodawaj tu RewriteEngine / RewriteBase — są w .htaccess.
+
+# --- Stare flat *.html → pretty URL ---
+RewriteRule ^blog\.html$ /blog/ [R=301,L,QSA]
+RewriteRule ^artykul\.html$ /blog/ [R=301,L,QSA]
+RewriteRule ^artykul/?$ /blog/ [R=301,L,QSA]
+RewriteRule ^portfolio-lista-b\.html$ /portfolio-lista-b/ [R=301,L,QSA]
+RewriteRule ^realizacja\.html$ /realizacja/ [R=301,L,QSA]
+RewriteRule ^realizacja-denza\.html$ /realizacja-denza/ [R=301,L,QSA]
+RewriteRule ^realizacja-exlantix\.html$ /realizacja-exlantix/ [R=301,L,QSA]
+RewriteRule ^realizacja-kapka\.html$ /realizacja-kapka/ [R=301,L,QSA]
+RewriteRule ^realizacja-primespot\.html$ /realizacja-primespot/ [R=301,L,QSA]
+RewriteRule ^realizacja-world-of-warships\.html$ /realizacja-world-of-warships/ [R=301,L,QSA]
+RewriteRule ^en/realizacja\.html$ /en/realizacja/ [R=301,L,QSA]
+RewriteRule ^en/realizacja-kapka\.html$ /en/realizacja-kapka/ [R=301,L,QSA]
+RewriteRule ^en/realizacja-primespot\.html$ /en/realizacja-primespot/ [R=301,L,QSA]
+
+# --- Stare ścieżki WP / nawigacja PL ---
+RewriteRule ^o-nas/?$ /#team [R=301,L,NE]
+RewriteRule ^uslugi/?$ /uslugi-marketingowe/ [R=301,L]
+RewriteRule ^kontakt/?$ /#kontakt [R=301,L,NE]
+RewriteRule ^identyfikacja-wizualna/?$ /uslugi-marketingowe/identyfikacja-wizualna/ [R=301,L]
+
+# --- Stare ścieżki EN ---
+RewriteRule ^en/services/branding/?$ /en/services/visual-identity/ [R=301,L]
+RewriteRule ^en/services/digital-graphics/?$ /en/services/graphic-design/ [R=301,L]
+
+# --- DE → EN (mapa: linki/linki-mapa-strony.csv) ---
+RewriteRule ^de/?$ /en/ [R=301,L]
+RewriteRule ^de/uber-uns/?$ /en/about-us/ [R=301,L]
+RewriteRule ^de/datenschutzrichtlinie/?$ /en/privacy-policy/ [R=301,L]
+RewriteRule ^de/portfolio-3/?$ /en/portfolio-en/ [R=301,L]
+RewriteRule ^de/dienstleistungen/?$ /en/services/ [R=301,L]
+RewriteRule ^de/dienstleistungen/2d-und-3d-animationen/?$ /en/services/2d-and-3d-animations/ [R=301,L]
+RewriteRule ^de/dienstleistungen/visuelle-identitat/?$ /en/services/visual-identity/ [R=301,L]
+RewriteRule ^de/dienstleistungen/social-media-betreuung/?$ /en/services/social-media-management/ [R=301,L]
+RewriteRule ^de/dienstleistungen/bezahlte-kampagnen/?$ /en/services/paid-campaigns/ [R=301,L]
+RewriteRule ^de/dienstleistungen/werbematerialien/?$ /en/services/promotional-items/ [R=301,L]
+RewriteRule ^de/dienstleistungen/videoproduktion-reels/?$ /en/services/video-production-reels/ [R=301,L]
+RewriteRule ^de/dienstleistungen/fotografie/?$ /en/services/photoghraphy/ [R=301,L]
+RewriteRule ^de/dienstleistungen/digitale-grafik/?$ /en/services/graphic-design/ [R=301,L]
+RewriteRule ^de/dienstleistungen/webseiten-und-landing-pages/?$ /en/services/websites-and-landing-pages/ [R=301,L]
+RewriteRule ^de/dienstleistungen/eventorganisation/?$ /en/services/event-organization/ [R=301,L]
+
+# WP kategorie / tagi / autorzy / feedy → blog (przed catch-allem /de/)
+RewriteRule ^(en/|de/)?category(/|$) /blog/ [R=301,L]
+RewriteRule ^(en/|de/)?tag(/|$) /blog/ [R=301,L]
+RewriteRule ^(en/|de/)?author(/|$) /blog/ [R=301,L]
+RewriteRule ^(en/|de/)?comments/feed/?$ /blog/ [R=301,L]
+RewriteRule ^(en/|de/)?feed/?$ /blog/ [R=301,L]
+
+# Pozostałe /de/* → /en/
+RewriteRule ^de/(.*)$ /en/$1 [R=301,L]
+
+# Rank Math / WP sitemaps → nowa
+RewriteRule ^sitemap_index\.xml$ /sitemap.xml [R=301,L]
+RewriteRule ^page-sitemap\.xml$ /sitemap.xml [R=301,L]
+RewriteRule ^post-sitemap\.xml$ /sitemap.xml [R=301,L]
+RewriteRule ^category-sitemap\.xml$ /sitemap.xml [R=301,L]

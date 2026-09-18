@@ -14,15 +14,8 @@ $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $path = $uri === null || $uri === '' ? '/' : $uri;
 $file = __DIR__ . $path;
 
-// Mirror kluczowych 301 z .htaccess (php -S ich nie czyta)
-$redirects = [
-    '/identyfikacja-wizualna' => '/uslugi-marketingowe/identyfikacja-wizualna/',
-    '/identyfikacja-wizualna/' => '/uslugi-marketingowe/identyfikacja-wizualna/',
-    '/uslugi' => '/uslugi-marketingowe/',
-    '/uslugi/' => '/uslugi-marketingowe/',
-    '/artykul' => '/blog/',
-    '/artykul/' => '/blog/',
-];
+// Mirror 301 z redirects.htaccess (php -S ich nie czyta) — mapa w redirects.php
+$redirects = require __DIR__ . '/redirects.php';
 if (isset($redirects[$path])) {
     header('Location: ' . $redirects[$path], true, 301);
     return true;
@@ -31,6 +24,12 @@ if (preg_match('#^/(en/|de/)?(category|tag|author)(/|$)#', $path)
     || preg_match('#^/(en/|de/)?(comments/)?feed/?$#', $path)
 ) {
     header('Location: /blog/', true, 301);
+    return true;
+}
+// Pozostałe /de/* → /en/*
+if (preg_match('#^/de(?:/(.*))?$#', $path, $m)) {
+    $rest = isset($m[1]) && $m[1] !== '' ? rtrim($m[1], '/') . '/' : '';
+    header('Location: /en/' . $rest, true, 301);
     return true;
 }
 
