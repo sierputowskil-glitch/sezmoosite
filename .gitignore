@@ -55,8 +55,8 @@ logs/
 scripts/
 linki/
 
-# Apache — keep rewrite rules in the repo
-!.htaccess
+# Apache — local only; do not commit
+.htaccess
 
 # Dependencies and build leftovers
 node_modules/
