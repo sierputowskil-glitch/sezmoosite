@@ -53,6 +53,7 @@ $RECYCLE.BIN/
 config.local.php
 logs/
 scripts/
+linki/
 
 # Apache — keep rewrite rules in the repo
 !.htaccess

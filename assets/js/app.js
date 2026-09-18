@@ -939,7 +939,8 @@
 })();
 
 /* ============================================================
-   COOKIE CONSENT — disabled; CookieYes loads via GTM
+   COOKIE CONSENT — disabled; CookieYes CMP loads via GTM
+   (GTM-KJFG8DZL → CookieYes | CMP). Do not re-enable a local banner.
    ============================================================ */
 (function cookieConsent() {
   return;
