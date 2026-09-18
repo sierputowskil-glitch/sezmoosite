@@ -50,6 +50,12 @@ $RECYCLE.BIN/
 .env
 .env.*
 !.env.example
+config.local.php
+logs/
+scripts/
+
+# Apache — keep rewrite rules in the repo
+!.htaccess
 
 # Dependencies and build leftovers
 node_modules/

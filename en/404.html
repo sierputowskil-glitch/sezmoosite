@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<title>Page not found | SEZMOO</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/assets/favicon.png" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#16130e" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<style>
+  .page-404 {
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: clamp(24px, 6vw, 80px);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .page-404__inner {
+    max-width: 720px;
+    width: 100%;
+  }
+  .page-404__art {
+    width: min(100%, 560px);
+    margin: 0 auto;
+    display: block;
+  }
+  .page-404__art img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .page-404__title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-stretch: 106%;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-size: clamp(28px, 5vw, 44px);
+    color: var(--fg);
+    margin: clamp(20px, 3vh, 32px) 0 0;
+  }
+  .page-404__copy {
+    font-family: var(--font-display);
+    font-size: clamp(16px, 1.5vw, 19px);
+    line-height: 1.55;
+    color: var(--fg-dim);
+    max-width: 40ch;
+    margin: clamp(12px, 2vh, 18px) auto 0;
+    text-wrap: pretty;
+  }
+  .page-404__cta {
+    display: inline-flex;
+    margin-top: clamp(24px, 3.5vh, 36px);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 17px 28px;
+    border-radius: 100px;
+    background: #ffd200;
+    color: #17140a;
+    text-decoration: none;
+  }
+  .page-404__cta:hover {
+    filter: brightness(1.05);
+  }
+</style>
+</head>
+<body id="top">
+<canvas class="flow-bg-canvas" id="flow-bg-canvas" aria-hidden="true"></canvas>
+<div class="grain"></div>
+<div class="vignette"></div>
+
+<main class="page-404">
+  <div class="page-404__inner">
+    <figure class="page-404__art">
+      <img src="/assets/404.svg" width="1112" height="703" alt="404" />
+    </figure>
+    <h1 class="page-404__title">Woooo! Wrong way</h1>
+    <p class="page-404__copy">But don’t worry — head back home and try again 🙂</p>
+    <a class="page-404__cta" href="/en/">Home</a>
+  </div>
+</main>
+
+<script src="/assets/js/flowing-background.js"></script>
+</body>
+</html>

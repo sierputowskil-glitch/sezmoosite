@@ -25,12 +25,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body id="top"><canvas class="flow-bg-canvas" id="flow-bg-canvas" aria-hidden="true"></canvas>
 <div class="grain"></div><div class="vignette"></div><div class="cursor">PLAY</div><div class="cursor-dot"></div><div class="scrubber"><div class="scrubber__fill"><span class="scrubber__head"></span></div></div>
 <nav class="nav">
-  <a class="brand" href="/#hero" aria-label="SEZMOO"><img class="brand__logo" src="../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a>
+  <a class="brand" href="/#hero" aria-label="SEZMOO"><img class="brand__logo" src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a>
   <div class="nav__menu" id="main-menu">
     <a href="#abo-kto">Dla kogo</a>
     <a href="#abo-jak">Jak to działa</a>
@@ -77,8 +77,6 @@
       <form class="cform reveal" data-d="1" id="abonament-form" name="abonament" method="POST" action="/send.php" novalidate style="margin-top:clamp(22px,2.6vw,32px)">
         <input type="hidden" name="form-name" value="abonament" />
         <input type="hidden" name="lang" value="pl" />
-        <input type="hidden" name="ts" value="" />
-        <input type="hidden" name="sig" value="" />
         <p hidden aria-hidden="true"><label>Nie wypełniaj: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
         <div class="cform__row">
           <div class="cfield"><label for="ab-name">Imię i nazwisko</label><input id="ab-name" name="name" type="text" placeholder="Jan Kowalski" required /></div>
@@ -108,7 +106,7 @@
   <div class="footer__panel">
     <div class="footer__top">
       <a class="footer__brand" href="/#hero" aria-label="SEZMOO">
-        <img src="../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+        <img src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
       </a>
       <div class="footer__statement">
         <span>AGENCJA KREATYWNA · GDAŃSK · TRÓJMIASTO</span>
@@ -146,8 +144,8 @@
   </div>
 </footer>
 </main>
-<script src="../app.js"></script>
-<script src="../flowing-background.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/flowing-background.js"></script>
 <script>
 /* Theme switcher (dark / light) */
 (function () {

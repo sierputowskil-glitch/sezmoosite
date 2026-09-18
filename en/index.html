@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://i.ytimg.com" />
 <link rel="preconnect" href="https://www.youtube-nocookie.com" />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../assets/css/styles.css" />
 <style>
 /* YouTube lightbox (home) */
 .lb { position:fixed; inset:0; z-index:9800; display:grid; place-items:center;
@@ -87,7 +87,7 @@
 <!-- ============ NAV ============ -->
 <nav class="nav">
   <a class="brand" href="#hero" aria-label="SEZMOO">
-    <img class="brand__logo" src="../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+    <img class="brand__logo" src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
   </a>
   <div class="nav__menu" id="main-menu">
     <a href="/en/portfolio-en/">Portfolio</a>
@@ -484,7 +484,7 @@
 
     <a class="card reveal" href="/en/portfolio-en/?cat=grafika" data-cats="grafika" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="https://sezmoo.com/wp-content/uploads/2024/07/ulotka-broszura-TES-yacht-magnam.webp" alt="TES Yacht" loading="lazy" />
+        <img class="card__video" src="/assets/portfolio/tes-yacht/broszura.webp" alt="TES Yacht" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__live">▧ GRAFIKA</div>
         <span class="card__play">ZOBACZ</span>
@@ -494,7 +494,7 @@
 
     <a class="card reveal" href="/en/portfolio-en/?cat=grafika" data-cats="grafika" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-graficzny-oklatki-vinyli-gootovsky-power-plant-3.webp" alt="Gootovsky" loading="lazy" />
+        <img class="card__video" src="/assets/portfolio/gootovsky/okladki-winyli.webp" alt="Gootovsky" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__live">▧ GRAFIKA</div>
         <span class="card__play">ZOBACZ</span>
@@ -504,7 +504,7 @@
 
     <a class="card reveal" href="/en/portfolio-en/?cat=grafika" data-cats="grafika" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-graficzny-menu-restauracji-el-molo-1.webp" alt="El Molo" loading="lazy" />
+        <img class="card__video" src="/assets/portfolio/el-molo/menu.webp" alt="El Molo" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__live">▧ GRAFIKA</div>
         <span class="card__play">ZOBACZ</span>
@@ -514,7 +514,7 @@
 
     <a class="card reveal" href="/en/portfolio-en/?cat=grafika" data-cats="grafika" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="https://sezmoo.com/wp-content/uploads/2024/07/projekt-ulotki-ctrlsky-3-1024x608.webp" alt="ctrlsky" loading="lazy" />
+        <img class="card__video" src="/assets/portfolio/ctrlsky/ulotka.webp" alt="ctrlsky" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__live">▧ GRAFIKA</div>
         <span class="card__play">ZOBACZ</span>
@@ -524,7 +524,7 @@
 
     <a class="card reveal" href="/en/portfolio-en/?cat=grafika" data-cats="grafika" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="https://sezmoo.com/wp-content/uploads/2024/07/sezmoo_custom34_grafika_folder-1.webp" alt="Studio Custom 34" loading="lazy" />
+        <img class="card__video" src="/assets/portfolio/custom34/folder.webp" alt="Studio Custom 34" loading="lazy" />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__live">▧ GRAFIKA</div>
         <span class="card__play">ZOBACZ</span>
@@ -968,8 +968,6 @@
       </div>
       <form class="cform reveal" data-d="1" id="contact-form" name="contact" method="POST" action="../send.php" novalidate>
         <input type="hidden" name="lang" value="en" />
-        <input type="hidden" name="ts" value="" />
-        <input type="hidden" name="sig" value="" />
         <p hidden aria-hidden="true"><label>Don’t fill this: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
         <div class="cform__row">
           <div class="cfield"><label for="cf-name">Full name</label><input id="cf-name" name="name" type="text" placeholder="John Smith" required /></div>
@@ -1002,7 +1000,7 @@
   <div class="footer__panel">
     <div class="footer__top">
       <a class="footer__brand" href="#top" aria-label="SEZMOO">
-        <img src="../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+        <img src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
       </a>
       <div class="footer__statement">
         <span>CREATIVE AGENCY · GDAŃSK · TRICITY</span>
@@ -1054,42 +1052,8 @@
   </svg>
 </template>
 
-<script src="../flowing-background.js"></script>
-<script src="../app.js"></script>
-<script>
-/* contact form · POST -> send.php (Cyberfolks) */
-(function(){
-  var f = document.getElementById('contact-form');
-  if(!f) return;
-  var note = document.getElementById('cf-note');
-  var btn  = f.querySelector('button[type="submit"]');
-  var lbl  = btn ? btn.querySelector('.lbl') : null;
-  var lblText = lbl ? lbl.textContent : '';
-  // podpisany znacznik czasu (time-trap po stronie serwera)
-  fetch('../token.php', { cache: 'no-store' })
-    .then(function(r){ return r.json(); })
-    .then(function(t){
-      if(!t) return;
-      var a = f.querySelector('input[name="ts"]');  if(a) a.value = t.ts;
-      var b = f.querySelector('input[name="sig"]'); if(b) b.value = t.sig;
-    })
-    .catch(function(){});
-  function say(t){ if(note){ note.textContent = t; note.style.color = 'var(--rec)'; } }
-  f.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!f.checkValidity()){ f.reportValidity(); return; }
-    if(btn){ btn.disabled = true; } if(lbl){ lbl.textContent = 'Sending\u2026'; }
-    fetch(f.getAttribute('action'), { method:'POST', body: new FormData(f) })
-      .then(function(r){ return r.json().catch(function(){ return { ok: r.ok }; }); })
-      .then(function(d){
-        if(d && d.ok){ say('\u25cf Thank you \u2014 we\u2019ll get back to you within 24h.'); f.reset(); }
-        else { say('\u25cf Something went wrong \u2014 email biuro@sezmoo.com'); }
-      })
-      .catch(function(){ say('\u25cf Something went wrong \u2014 email biuro@sezmoo.com'); })
-      .finally(function(){ if(btn){ btn.disabled = false; } if(lbl){ lbl.textContent = lblText; } });
-  });
-})();
-</script>
+<script src="../assets/js/flowing-background.js"></script>
+<script src="../assets/js/app.js"></script>
 <script>
 /* Work-reel cards: hover-preview, real duration, click -> case study */
 (function () {
