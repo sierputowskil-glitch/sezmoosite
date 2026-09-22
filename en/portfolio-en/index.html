@@ -151,6 +151,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   box-shadow:0 30px 80px rgba(0,0,0,.55); }
 .pt-vlb__close { position:absolute; top:18px; right:22px; width:44px; height:44px; border-radius:50%;
   border:1px solid rgba(255,255,255,.3); background:rgba(0,0,0,.4); color:#fff; font-size:19px; cursor:pointer; }
+
+/* image gallery modal */
+.pt-glb__stage { position:relative; display:flex; align-items:center; justify-content:center;
+  width:min(1240px,100%); height:min(82vh,900px); }
+.pt-glb__stage img { max-width:100%; max-height:100%; width:auto; height:auto; border-radius:6px;
+  box-shadow:0 30px 80px rgba(0,0,0,.55); }
+.pt-glb__nav { position:absolute; top:50%; transform:translateY(-50%); width:52px; height:52px;
+  display:grid; place-items:center; border-radius:50%; border:1px solid rgba(255,255,255,.28);
+  background:rgba(0,0,0,.45); color:#fff; font-size:22px; cursor:pointer; transition:background .2s,border-color .2s; }
+.pt-glb__nav:hover { background:#ffd200; border-color:#ffd200; color:#16130e; }
+.pt-glb__nav--prev { left:clamp(-14px,-2vw,0px); }
+.pt-glb__nav--next { right:clamp(-14px,-2vw,0px); }
+.pt-glb__count { position:absolute; bottom:-34px; left:50%; transform:translateX(-50%);
+  font:600 12px/1 ui-monospace,Menlo,monospace; letter-spacing:.16em; color:rgba(255,255,255,.62); }
+@media (max-width:700px){
+  .pt-glb__nav { width:42px; height:42px; font-size:18px; }
+  .pt-glb__nav--prev { left:-6px; } .pt-glb__nav--next { right:-6px; }
+}
 </style>
 </head>
 <body id="top">
@@ -177,12 +195,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <aside class="pt-side">
     <span class="pt-side__label">Categories</span>
     <div class="pt-side__list" id="pt-filters">
-      <button class="pt-navlink is-on" type="button" data-filter="all">All <span class="n">{36}</span></button>
+      <button class="pt-navlink is-on" type="button" data-filter="all">All <span class="n">{50}</span></button>
       <button class="pt-navlink" type="button" data-filter="video">Video <span class="n">{22}</span></button>
       <button class="pt-navlink" type="button" data-filter="eventy">Events <span class="n">{03}</span></button>
-      <button class="pt-navlink" type="button" data-filter="foto">Photography <span class="n">{01}</span></button>
+      <button class="pt-navlink" type="button" data-filter="foto">Photography <span class="n">{12}</span></button>
       <button class="pt-navlink" type="button" data-filter="animacje">Animation <span class="n">{03}</span></button>
-      <button class="pt-navlink" type="button" data-filter="grafika">Graphics <span class="n">{07}</span></button>
+      <button class="pt-navlink" type="button" data-filter="grafika">Graphics <span class="n">{10}</span></button>
     </div>
   </aside>
 
@@ -201,6 +219,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pt-media"><img src="../../assets/portfolio/primespot/pjur-blue-square-1.jpg" alt="PrimeSpot" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">Przystań Jurata · Meta Ads campaign</span></div>
     <h3 class="pt-title">PrimeSpot</h3>
+  </a>
+  <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img" href="../../en/realizacja-kapka/">
+    <div class="pt-media"><img src="../../assets/portfolio/kapka/kapka-logo.jpg" alt="Kapka Cafe – logo and visual identity for a coffee shop" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Logo and identity · Coffee shop</span></div>
+    <h3 class="pt-title">Kapka Cafe</h3>
   </a>
   <a class="pt-tile" data-ratio="portrait" data-cats="animacje" data-media="yt" data-id="kCAxex9-oN4" data-short="1">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/kCAxex9-oN4/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/kCAxex9-oN4/hqdefault.jpg'" alt="JAECOO Mundial" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Animation</span><span class="pt-media__open" aria-hidden="true">→</span></div>
@@ -242,25 +265,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pt-cap"><span class="pt-cap__tags">Vinyl covers · Print</span></div>
     <h3 class="pt-title">Gootovsky</h3>
   </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img" data-gallery="../../assets/portfolio/szymichowski/katalog-1.avif|../../assets/portfolio/szymichowski/katalog-2.avif|../../assets/portfolio/szymichowski/katalog-3.avif|../../assets/portfolio/szymichowski/katalog-4.avif|../../assets/portfolio/szymichowski/katalog-5.avif">
+    <div class="pt-media"><img src="../../assets/portfolio/szymichowski/katalog-1.avif" alt="Szymichowski Pruszcz Park – investment catalogue" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Graphic</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Investment catalogue · Print</span></div>
+    <h3 class="pt-title">Szymichowski Pruszcz Park</h3>
+  </a>
   <a class="pt-tile" data-ratio="wide" data-cats="animacje" data-media="yt" data-id="DFj4rZzxHXA">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/DFj4rZzxHXA/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/DFj4rZzxHXA/hqdefault.jpg'" alt="VTS Group" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Animation</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">3D animation · Video</span></div>
     <h3 class="pt-title">VTS Group</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/nfm/nfm-1.avif|../../assets/portfolio/nfm/nfm-2.avif|../../assets/portfolio/nfm/nfm-3.avif|../../assets/portfolio/nfm/nfm-4.webp|../../assets/portfolio/nfm/nfm-5.webp">
+    <div class="pt-media"><img src="../../assets/portfolio/nfm/nfm-1.avif" alt="NFM – event photography" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Event photography</span></div>
+    <h3 class="pt-title">NFM</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="tPSlDvHGSH0">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/tPSlDvHGSH0/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tPSlDvHGSH0/hqdefault.jpg'" alt="Audi Plichta" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Video</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">Women's Day 2025 · Video</span></div>
     <h3 class="pt-title">Audi Plichta</h3>
   </a>
-  <a class="pt-tile" data-ratio="portrait" data-cats="grafika" data-media="img">
+  <a class="pt-tile" data-ratio="portrait" data-cats="grafika" data-media="img" data-gallery="../../assets/portfolio/el-molo/menu.webp|../../assets/portfolio/el-molo/menu-2.avif|../../assets/portfolio/el-molo/logo-1.avif|../../assets/portfolio/el-molo/brand.avif|../../assets/portfolio/el-molo/wizytowka.avif">
     <div class="pt-media"><img src="../../assets/portfolio/el-molo/menu.webp" alt="El Molo – Menu · Restaurant" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Graphic</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Menu · Restaurant</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Logo, menu and business cards · Restaurant</span></div>
     <h3 class="pt-title">El Molo</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="wVy04YYnbRM" data-case="1">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/wVy04YYnbRM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/wVy04YYnbRM/hqdefault.jpg'" alt="PISF" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Event</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">Coverage · Video</span></div>
     <h3 class="pt-title">PISF</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img" data-gallery="../../assets/portfolio/spenner/okladka-1.avif|../../assets/portfolio/spenner/okladka-2.webp|../../assets/portfolio/spenner/okladka-3.webp|../../assets/portfolio/spenner/okladka-4.webp|../../assets/portfolio/spenner/okladka-5.webp|../../assets/portfolio/spenner/okladka-6.avif">
+    <div class="pt-media"><img src="../../assets/portfolio/spenner/okladka-1.avif" alt="Marcin Spenner – album cover design" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Graphic</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Album cover · Design</span></div>
+    <h3 class="pt-title">Marcin Spenner</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img" data-gallery="../../assets/portfolio/life-dom-seniora/logo-1.avif|../../assets/portfolio/life-dom-seniora/logo-2.avif">
+    <div class="pt-media"><img src="../../assets/portfolio/life-dom-seniora/logo-1.avif" alt="Life Dom Seniora – logo design" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Graphic</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Logo · Senior home</span></div>
+    <h3 class="pt-title">Life Dom Seniora</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="grafika" data-media="img">
     <div class="pt-media"><img src="../../assets/portfolio/ctrlsky/ulotka.webp" alt="ctrlsky – Flyer · Print" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Graphic</span></div>
@@ -306,6 +349,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pt-media"><img src="https://i.ytimg.com/vi/phXKtUNlDuM/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/phXKtUNlDuM/hqdefault.jpg'" alt="DORACO" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Video</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">TVP · Production</span></div>
     <h3 class="pt-title">DORACO</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/doraco-tvp/hala-tvp-1.jpg|../../assets/portfolio/doraco-tvp/hala-tvp-2.jpg|../../assets/portfolio/doraco-tvp/hala-tvp-3.jpg|../../assets/portfolio/doraco-tvp/hala-tvp-4.jpg|../../assets/portfolio/doraco-tvp/hala-tvp-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/doraco-tvp/hala-tvp-1.jpg" alt="DORACO – TVP film studio building, aerial photography" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">TVP film studio · Aerial photography</span></div>
+    <h3 class="pt-title">DORACO · TVP studio</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="bCxvqDc8HYs" data-case="1">
     <div class="pt-media"><img src="https://i.ytimg.com/vi/bCxvqDc8HYs/hq2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bCxvqDc8HYs/hqdefault.jpg'" alt="Porto Mare" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Video</span><span class="pt-media__open" aria-hidden="true">→</span></div>
@@ -357,10 +405,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pt-cap"><span class="pt-cap__tags">City of Culture · Video</span></div>
     <h3 class="pt-title">Gdańsk</h3>
   </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img">
-    <div class="pt-media" style="display:grid;place-items:center;background:var(--bg-3);"><span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-faint);">Photo sessions · coming soon</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Photography · Soon</span></div>
-    <h3 class="pt-title">Photography</h3>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/audi-rs5-foto/rs5-1.jpg|../../assets/portfolio/audi-rs5-foto/rs5-2.jpg|../../assets/portfolio/audi-rs5-foto/rs5-3.jpg|../../assets/portfolio/audi-rs5-foto/rs5-4.jpg|../../assets/portfolio/audi-rs5-foto/rs5-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/audi-rs5-foto/rs5-1.jpg" alt="Audi RS5 – automotive photo session" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Automotive · Studio session</span></div>
+    <h3 class="pt-title">Audi RS5 · Photo session</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/baltic-towers-foto/bt-1.jpg|../../assets/portfolio/baltic-towers-foto/bt-2.jpg|../../assets/portfolio/baltic-towers-foto/bt-3.jpg|../../assets/portfolio/baltic-towers-foto/bt-4.jpg|../../assets/portfolio/baltic-towers-foto/bt-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/baltic-towers-foto/bt-1.jpg" alt="Baltic Towers – wind tower production photography" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Production and plant · Industry</span></div>
+    <h3 class="pt-title">Baltic Towers · Production</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/doraco-meeting/dm-1.jpg|../../assets/portfolio/doraco-meeting/dm-2.jpg|../../assets/portfolio/doraco-meeting/dm-3.jpg|../../assets/portfolio/doraco-meeting/dm-4.jpg|../../assets/portfolio/doraco-meeting/dm-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/doraco-meeting/dm-1.jpg" alt="DORACO Business Meeting – corporate event photography" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Conference · Event coverage</span></div>
+    <h3 class="pt-title">DORACO Business Meeting</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/chery-otwarcie/ch-1.jpg|../../assets/portfolio/chery-otwarcie/ch-2.jpg|../../assets/portfolio/chery-otwarcie/ch-3.jpg|../../assets/portfolio/chery-otwarcie/ch-4.jpg|../../assets/portfolio/chery-otwarcie/ch-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/chery-otwarcie/ch-1.jpg" alt="Chery – showroom opening event photography" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Showroom opening · Event coverage</span></div>
+    <h3 class="pt-title">Chery · Showroom opening</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/chery-zima/cz-1.jpg|../../assets/portfolio/chery-zima/cz-2.jpg|../../assets/portfolio/chery-zima/cz-3.jpg|../../assets/portfolio/chery-zima/cz-4.jpg|../../assets/portfolio/chery-zima/cz-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/chery-zima/cz-1.jpg" alt="Chery – winter automotive session" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Automotive · Winter session</span></div>
+    <h3 class="pt-title">Chery · Winter session</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/byd-atto3/atto3-1.jpg|../../assets/portfolio/byd-atto3/atto3-2.jpg|../../assets/portfolio/byd-atto3/atto3-3.jpg|../../assets/portfolio/byd-atto3/atto3-4.jpg|../../assets/portfolio/byd-atto3/atto3-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/byd-atto3/atto3-1.jpg" alt="BYD Atto 3 – automotive session" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Automotive · Location session</span></div>
+    <h3 class="pt-title">BYD Atto 3</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/exlantix-es/es-1.jpg|../../assets/portfolio/exlantix-es/es-2.jpg|../../assets/portfolio/exlantix-es/es-3.jpg|../../assets/portfolio/exlantix-es/es-4.jpg|../../assets/portfolio/exlantix-es/es-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/exlantix-es/es-1.jpg" alt="EXLANTIX ES – automotive session in the city" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Automotive · Urban session</span></div>
+    <h3 class="pt-title">EXLANTIX ES</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/milo/milo-1.jpg|../../assets/portfolio/milo/milo-2.jpg|../../assets/portfolio/milo/milo-3.jpg|../../assets/portfolio/milo/milo-4.jpg|../../assets/portfolio/milo/milo-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/milo/milo-1.jpg" alt="Milo – architecture and interior photography" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Architecture and interiors</span></div>
+    <h3 class="pt-title">Milo</h3>
+  </a>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/netto/netto-1.jpg|../../assets/portfolio/netto/netto-2.jpg|../../assets/portfolio/netto/netto-3.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/netto/netto-1.jpg" alt="Netto – store architecture photography" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Architecture and interiors · Retail</span></div>
+    <h3 class="pt-title">Netto</h3>
+  </a>
+  <a class="pt-tile" data-ratio="portrait" data-cats="foto" data-media="img" data-gallery="../../assets/portfolio/spenner-foto/sp-1.jpg|../../assets/portfolio/spenner-foto/sp-2.jpg|../../assets/portfolio/spenner-foto/sp-3.jpg|../../assets/portfolio/spenner-foto/sp-4.jpg|../../assets/portfolio/spenner-foto/sp-5.jpg">
+    <div class="pt-media"><img src="../../assets/portfolio/spenner-foto/sp-1.jpg" alt="Marcin Spenner – black and white portrait session" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Photography</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Portrait session · Music</span></div>
+    <h3 class="pt-title">Marcin Spenner · Session</h3>
   </a>
   </section>
 </div>
@@ -369,7 +462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="footer shell service-footer">
   <div class="footer__panel">
     <div class="footer__top"><a class="footer__brand" href="../../en/#hero" aria-label="SEZMOO"><img src="../../assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" /></a><div class="footer__statement"><span>CREATIVE AGENCY · GDAŃSK · TRICITY</span><p>Offline and online marketing in one place.</p></div></div>
-    <div class="footer__grid"><div class="footer__col"><span class="footer__label">Contact</span><a href="mailto:biuro@sezmoo.com">biuro@sezmoo.com</a><a href="tel:+48502260450">+48 502 260 450</a></div><div class="footer__col"><span class="footer__label">Studio</span><a href="../../en/portfolio-en/">Work</a><a href="../../en/services/">Services</a><a href="../../en/#kontakt">Brief</a></div><div class="footer__col"><span class="footer__label">Social</span><a href="https://www.instagram.com/sezmoo/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/sezmooagencja" target="_blank" rel="noopener">Facebook</a><a href="https://www.youtube.com/@sezmooagency" target="_blank" rel="noopener">YouTube</a><a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener">LinkedIn</a></div><div class="footer__col"><span class="footer__label">Address</span><p>Zeusa 34<br>80-299 Gdańsk</p></div></div>
+    <div class="footer__grid"><div class="footer__col"><span class="footer__label">Contact</span><a href="mailto:biuro@sezmoo.com">biuro@sezmoo.com</a><a href="tel:+48739260450">+48 739 260 450</a></div><div class="footer__col"><span class="footer__label">Studio</span><a href="../../en/portfolio-en/">Work</a><a href="../../en/services/">Services</a><a href="../../en/#kontakt">Brief</a></div><div class="footer__col"><span class="footer__label">Social</span><a href="https://www.instagram.com/sezmoo/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/sezmooagencja" target="_blank" rel="noopener">Facebook</a><a href="https://www.youtube.com/@sezmooagency" target="_blank" rel="noopener">YouTube</a><a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener">LinkedIn</a></div><div class="footer__col"><span class="footer__label">Address</span><p>Zeusa 34<br>80-299 Gdańsk</p></div></div>
     <div class="footer__bottom"><span>© 2026 SEZMOO · ALL RIGHTS RESERVED</span><a class="footer__legal" href="../../en/privacy-policy/">Privacy policy</a><a href="#top">Back to top</a></div>
   </div>
 </footer>
@@ -419,11 +512,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   function closeVideo() { if (!vlb) return; vlb.hidden = true; vlb.querySelector(".pt-vlb__frame").innerHTML = ""; document.body.style.overflow = ""; }
 
+  /* image gallery modal */
+  var glb = null, gList = [], gIdx = 0;
+  function renderGallery() {
+    var stage = glb.querySelector(".pt-glb__stage");
+    stage.querySelector("img").src = gList[gIdx];
+    stage.querySelector(".pt-glb__count").textContent = String(gIdx + 1).padStart(2, "0") + " / " + String(gList.length).padStart(2, "0");
+    var multi = gList.length > 1;
+    stage.querySelector(".pt-glb__nav--prev").hidden = !multi;
+    stage.querySelector(".pt-glb__nav--next").hidden = !multi;
+    stage.querySelector(".pt-glb__count").hidden = !multi;
+  }
+  function stepGallery(d) { gIdx = (gIdx + d + gList.length) % gList.length; renderGallery(); }
+  function closeGallery() { if (!glb) return; glb.hidden = true; document.body.style.overflow = ""; }
+  function openGallery(list, alt) {
+    gList = list; gIdx = 0;
+    if (!glb) {
+      glb = document.createElement("div"); glb.className = "pt-vlb"; glb.hidden = true;
+      glb.innerHTML = '<button class="pt-vlb__close" type="button" aria-label="Close">\u2715</button>' +
+        '<div class="pt-glb__stage">' +
+        '<button class="pt-glb__nav pt-glb__nav--prev" type="button" aria-label="Previous">\u2039</button>' +
+        '<img alt="" />' +
+        '<button class="pt-glb__nav pt-glb__nav--next" type="button" aria-label="Next">\u203a</button>' +
+        '<span class="pt-glb__count"></span></div>';
+      document.body.appendChild(glb);
+      glb.addEventListener("click", function (e) {
+        if (e.target === glb || e.target.classList.contains("pt-vlb__close")) { closeGallery(); return; }
+        if (e.target.classList.contains("pt-glb__nav--prev")) stepGallery(-1);
+        if (e.target.classList.contains("pt-glb__nav--next")) stepGallery(1);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (glb.hidden) return;
+        if (e.key === "Escape") closeGallery();
+        if (e.key === "ArrowLeft") stepGallery(-1);
+        if (e.key === "ArrowRight") stepGallery(1);
+      });
+    }
+    glb.querySelector("img").alt = alt || "";
+    renderGallery();
+    glb.hidden = false; document.body.style.overflow = "hidden";
+  }
+
   /* click routing */
   tiles.forEach(function (t) {
     t.addEventListener("click", function (e) {
       if (t.getAttribute("href")) return;
       e.preventDefault();
+      var gal = t.getAttribute("data-gallery");
+      if (gal) {
+        var img = t.querySelector("img");
+        openGallery(gal.split("|"), img ? img.alt : "");
+        return;
+      }
       var id = t.getAttribute("data-id");
       if (!id) return;
       if (CASE_IDS.indexOf(id) > -1) { location.href = "/en/realizacja/?v=" + id; return; }
