@@ -157,6 +157,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   width:min(1240px,100%); height:min(82vh,900px); }
 .pt-glb__stage img { max-width:100%; max-height:100%; width:auto; height:auto; border-radius:6px;
   box-shadow:0 30px 80px rgba(0,0,0,.55); }
+.pt-glb__yt { width:min(1240px,100%); aspect-ratio:16/9; max-height:100%; border-radius:6px; overflow:hidden; background:#000;
+  box-shadow:0 30px 80px rgba(0,0,0,.55); }
+.pt-glb__yt iframe { width:100%; height:100%; border:0; display:block; }
+.pt-glb__stage img[hidden], .pt-glb__yt[hidden] { display:none; }
 .pt-glb__nav { position:absolute; top:50%; transform:translateY(-50%); width:52px; height:52px;
   display:grid; place-items:center; border-radius:50%; border:1px solid rgba(255,255,255,.28);
   background:rgba(0,0,0,.45); color:#fff; font-size:22px; cursor:pointer; transition:background .2s,border-color .2s; }
@@ -195,12 +199,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <aside class="pt-side">
     <span class="pt-side__label">Kategorie</span>
     <div class="pt-side__list" id="pt-filters">
-      <button class="pt-navlink is-on" type="button" data-filter="all">Wszystko <span class="n">{50}</span></button>
-      <button class="pt-navlink" type="button" data-filter="video">Wideo <span class="n">{22}</span></button>
+      <button class="pt-navlink is-on" type="button" data-filter="all">Wszystko <span class="n">{51}</span></button>
+      <button class="pt-navlink" type="button" data-filter="video">Wideo <span class="n">{23}</span></button>
       <button class="pt-navlink" type="button" data-filter="eventy">Eventy <span class="n">{03}</span></button>
       <button class="pt-navlink" type="button" data-filter="foto">Fotografia <span class="n">{12}</span></button>
       <button class="pt-navlink" type="button" data-filter="animacje">Animacje <span class="n">{03}</span></button>
-      <button class="pt-navlink" type="button" data-filter="grafika">Grafika <span class="n">{10}</span></button>
+      <button class="pt-navlink" type="button" data-filter="grafika">Grafika <span class="n">{11}</span></button>
     </div>
   </aside>
 
@@ -219,6 +223,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pt-media"><img src="../assets/portfolio/primespot/pjur-blue-square-1.jpg" alt="PrimeSpot" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
     <div class="pt-cap"><span class="pt-cap__tags">Przystań Jurata · Kampania Meta Ads</span></div>
     <h3 class="pt-title">PrimeSpot</h3>
+  </a>
+  <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img" href="../realizacja-soho-form/">
+    <div class="pt-media"><img src="../assets/portfolio/soho-form/soho-fotel.webp" alt="Soho Form – logo, księga znaku i strona internetowa" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Logo, księga znaku · Strona WWW</span></div>
+    <h3 class="pt-title">Soho Form</h3>
   </a>
   <a class="pt-tile" data-ratio="square" data-cats="grafika" data-media="img" href="../realizacja-kapka/">
     <div class="pt-media"><img src="../assets/portfolio/kapka/kapka-logo.jpg" alt="Kapka Cafe – logo i identyfikacja wizualna kawiarni" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Case study</span><span class="pt-media__open" aria-hidden="true">→</span></div>
@@ -275,9 +284,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pt-cap"><span class="pt-cap__tags">Animacja 3D · Wideo</span></div>
     <h3 class="pt-title">VTS Group</h3>
   </a>
-  <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../assets/portfolio/nfm/nfm-1.avif|../assets/portfolio/nfm/nfm-2.avif|../assets/portfolio/nfm/nfm-3.avif|../assets/portfolio/nfm/nfm-4.webp|../assets/portfolio/nfm/nfm-5.webp">
-    <div class="pt-media"><img src="../assets/portfolio/nfm/nfm-1.avif" alt="NFM – fotografia wydarzenia" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Fotografia</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Fotografia wydarzenia</span></div>
+  <a class="pt-tile" data-ratio="wide" data-cats="foto video" data-media="img" data-gallery="yt:HiDdlydRXWU|../assets/portfolio/nfm/nfm-1.avif|../assets/portfolio/nfm/nfm-2.avif|../assets/portfolio/nfm/nfm-3.avif|../assets/portfolio/nfm/nfm-4.webp|../assets/portfolio/nfm/nfm-5.webp">
+    <div class="pt-media"><img src="../assets/portfolio/nfm/nfm-1.avif" alt="NFM – fotografia i wideo z wydarzenia" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Foto + Wideo</span><span class="pt-media__open" aria-hidden="true">▶</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Fotografia i&nbsp;wideo z&nbsp;wydarzenia</span></div>
     <h3 class="pt-title">NFM</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="video" data-media="yt" data-id="tPSlDvHGSH0">
@@ -441,9 +450,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3 class="pt-title">EXLANTIX ES</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../assets/portfolio/milo/milo-1.jpg|../assets/portfolio/milo/milo-2.jpg|../assets/portfolio/milo/milo-3.jpg|../assets/portfolio/milo/milo-4.jpg|../assets/portfolio/milo/milo-5.jpg">
-    <div class="pt-media"><img src="../assets/portfolio/milo/milo-1.jpg" alt="Milo – fotografia architektury i wnętrz" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Fotografia</span></div>
-    <div class="pt-cap"><span class="pt-cap__tags">Architektura i&nbsp;wnętrza</span></div>
-    <h3 class="pt-title">Milo</h3>
+    <div class="pt-media"><img src="../assets/portfolio/milo/milo-1.jpg" alt="Milo Lubiatowo – fotografia architektury i wnętrz obiektu" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Fotografia</span></div>
+    <div class="pt-cap"><span class="pt-cap__tags">Obiekt wypoczynkowy · Architektura i&nbsp;wnętrza</span></div>
+    <h3 class="pt-title">Milo Lubiatowo</h3>
   </a>
   <a class="pt-tile" data-ratio="wide" data-cats="foto" data-media="img" data-gallery="../assets/portfolio/netto/netto-1.jpg|../assets/portfolio/netto/netto-2.jpg|../assets/portfolio/netto/netto-3.jpg">
     <div class="pt-media"><img src="../assets/portfolio/netto/netto-1.jpg" alt="Netto – fotografia architektury sklepu" loading="lazy" /><span class="pt-media__badge"><span class="d"></span>Fotografia</span></div>
@@ -516,7 +525,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var glb = null, gList = [], gIdx = 0;
   function renderGallery() {
     var stage = glb.querySelector(".pt-glb__stage");
-    stage.querySelector("img").src = gList[gIdx];
+    var item = gList[gIdx], img = stage.querySelector("img"), yt = stage.querySelector(".pt-glb__yt");
+    if (item.indexOf("yt:") === 0) {
+      img.hidden = true; img.removeAttribute("src"); yt.hidden = false;
+      yt.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + item.slice(3) + '?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    } else {
+      yt.hidden = true; yt.innerHTML = ""; img.hidden = false; img.src = item;
+    }
     stage.querySelector(".pt-glb__count").textContent = String(gIdx + 1).padStart(2, "0") + " / " + String(gList.length).padStart(2, "0");
     var multi = gList.length > 1;
     stage.querySelector(".pt-glb__nav--prev").hidden = !multi;
@@ -524,7 +539,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     stage.querySelector(".pt-glb__count").hidden = !multi;
   }
   function stepGallery(d) { gIdx = (gIdx + d + gList.length) % gList.length; renderGallery(); }
-  function closeGallery() { if (!glb) return; glb.hidden = true; document.body.style.overflow = ""; }
+  function closeGallery() { if (!glb) return; glb.hidden = true; glb.querySelector(".pt-glb__yt").innerHTML = ""; document.body.style.overflow = ""; }
   function openGallery(list, alt) {
     gList = list; gIdx = 0;
     if (!glb) {
@@ -532,7 +547,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       glb.innerHTML = '<button class="pt-vlb__close" type="button" aria-label="Zamknij">\u2715</button>' +
         '<div class="pt-glb__stage">' +
         '<button class="pt-glb__nav pt-glb__nav--prev" type="button" aria-label="Poprzednie">\u2039</button>' +
-        '<img alt="" />' +
+        '<img alt="" />' + '<div class="pt-glb__yt" hidden></div>' +
         '<button class="pt-glb__nav pt-glb__nav--next" type="button" aria-label="Nast\u0119pne">\u203a</button>' +
         '<span class="pt-glb__count"></span></div>';
       document.body.appendChild(glb);

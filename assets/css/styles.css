@@ -3869,3 +3869,22 @@ img.card__video { background: var(--bg-2); }
 }
 
 .team__grid--photos .team-card__photo .tc-ini--front { z-index: 2; inset: 4% 0 auto 0; }
+
+/* ===== Service detail — układ dwukolumnowy (UX/UI, Strony) ===== */
+.sd__split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,8fr);column-gap:clamp(40px,6vw,120px);align-items:start;padding-block:clamp(72px,11vh,136px)}
+.sd__blk.sd__split:first-child{padding-top:clamp(56px,8vh,96px)}
+.sd__splitL{position:sticky;top:clamp(96px,12vh,132px)}
+.sd__split .sd__blkh{flex-direction:column;align-items:flex-start;gap:18px;margin:0}
+.sd__split .sd__blkh h2{font-size:clamp(28px,3.2vw,50px);line-height:1.02;text-wrap:balance}
+.sd__splitR>:first-child{margin-top:0}
+.sd__splitR .fmt-lead{font-size:clamp(28px,3vw,46px);line-height:1.06}
+.sd__splitR .fmt-p{max-width:62ch;font-size:clamp(16px,1.18vw,19px);line-height:1.66;margin-top:20px}
+.sd__splitR .fmt-lead+.fmt-p{margin-top:28px}
+.sd__splitR .sd__tags{margin-top:30px!important}
+.sd__splitR .sd__more{margin-top:40px}
+.sd__splitR .sd__steps{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.sd__splitR .svcA{border-top:1px solid var(--line)}
+@media(max-width:1000px){
+  .sd__split{grid-template-columns:minmax(0,1fr);row-gap:28px;padding-block:clamp(56px,8vh,88px)}
+  .sd__splitL{position:static}
+}

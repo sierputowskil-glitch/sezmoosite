@@ -273,3 +273,14 @@
 
 /* reduced motion: settle parallax/scan */
 @media (prefers-reduced-motion: reduce){ .cs-shot img{ transform: none !important; } }
+
+/* ===== Cover z mockupem urządzenia (np. Soho Form) ===== */
+.cs-hero--device .cs-hero__media{background:radial-gradient(60% 70% at 74% 48%,#2a3a3c 0%,#121414 72%)}
+.cs-hero--device .cs-hero__media::after{background:linear-gradient(180deg,transparent 60%,var(--bg) 100%)}
+.cs-hero--device .cs-hero__media img{position:absolute;right:0;left:auto;top:50%;transform:translateY(-50%);width:min(50%,1100px);height:auto;object-fit:contain;filter:none}
+.cs-hero--device .cs-hero__inner>*{max-width:46%}
+@media(max-width:1100px){
+ .cs-hero--device .cs-hero__media img{top:clamp(84px,12vh,120px);right:50%;transform:translateX(50%);width:min(92%,720px)}
+ .cs-hero--device .cs-hero__inner{padding-top:calc(min(92vw,720px)*.62 + clamp(84px,12vh,120px))}
+ .cs-hero--device .cs-hero__inner>*{max-width:100%}
+}
