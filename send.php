@@ -145,6 +145,11 @@ $message = trim((string)($_POST['message'] ?? ''));
 $message = str_replace("\0", '', $message);
 $message = mb_substr($message, 0, 5000);
 $consent = isset($_POST['consent']);
+$package = $clean('package', 40);
+$allowedPackage = ['30h', '60h', '120h', '250h', 'Nie wiem – doradźcie'];
+if ($package !== '' && !in_array($package, $allowedPackage, true)) {
+    $package = '';
+}
 $lang    = ($clean('lang', 4) === 'en') ? 'en' : 'pl';
 $origin  = $clean('form-name', 40) === 'abonament' ? 'abonament' : 'kontakt';
 
@@ -218,6 +223,7 @@ if (preg_match('~https?://~i', $name)) {
 $when = date('Y-m-d H:i:s');
 $companyLine = $company !== '' ? "Firma           : {$company}\n" : '';
 $originLine  = $origin === 'abonament' ? "Formularz       : abonament\n" : '';
+$packageLine = $package !== '' ? "Pakiet          : {$package}\n" : '';
 
 $body = <<<TXT
 Nowe zapytanie z formularza na sezmoo.com
@@ -226,7 +232,7 @@ Imię i nazwisko : {$name}
 {$companyLine}E-mail          : {$email}
 Telefon         : {$phone}
 Obszar          : {$need}
-Język formularza: {$lang}
+{$packageLine}Język formularza: {$lang}
 
 Wiadomość:
 {$message}
