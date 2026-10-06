@@ -61,7 +61,7 @@ button{font:inherit;cursor:pointer}
 .h1,.h2{font-weight:720;font-stretch:104%;letter-spacing:-.02em;line-height:1.06;text-wrap:balance}
 .h1{font-size:clamp(40px,5.6vw,84px)}
 .h2{font-size:clamp(32px,4.4vw,64px)}
-.em{font-weight:820;font-stretch:112%;text-decoration:underline;text-decoration-color:var(--y);text-decoration-thickness:.13em;text-underline-offset:.2em;text-decoration-skip-ink:none}
+.em{font-weight:820;font-stretch:112%}
 .lead{font-size:clamp(17px,1.4vw,20px);line-height:1.5;color:var(--fg-dim);max-width:560px}
 
 /* buttons (jak na sezmoo.com) */
@@ -167,6 +167,12 @@ button{font:inherit;cursor:pointer}
 .pack__t{font-size:clamp(20px,1.9vw,26px);font-weight:800;letter-spacing:-.015em;line-height:1.15}
 .pack__d{font-size:17px;line-height:1.45;color:var(--fg-dim);margin-top:6px}
 .pack--hi .pack__d{color:#3a3228}
+.pack--top{z-index:2;padding-block:44px;transform:rotate(-.8deg) scale(1.02)!important;box-shadow:0 18px 40px rgb(0 0 0 / .22)}
+.pack__badge{position:absolute;top:-14px;left:calc(var(--pad) + 60px);background:#0A0806;color:#ffd200;font-family:var(--font-mono,monospace);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px}
+.pack__cta{margin-top:14px;white-space:nowrap}
+.pack{grid-template-columns:minmax(max-content,.9fr) minmax(0,1.3fr) auto}
+.pack__h{white-space:nowrap}
+@media (max-width:760px){.pack__badge{left:28px}}
 .pack__p{text-align:right}
 .pack__p .mono{font-size:11px;letter-spacing:.2em}
 .pack__p b{display:block;font-size:clamp(20px,2vw,26px);font-weight:800;letter-spacing:-.015em;margin-top:4px}
@@ -174,7 +180,7 @@ button{font:inherit;cursor:pointer}
 .packs__foot p{font-size:clamp(28px,3vw,44px);letter-spacing:-.015em;line-height:1.1}
 @media (max-width:760px){
   .packs{margin-inline:-20px}
-  .pack{grid-template-columns:1fr;gap:6px;padding:26px 28px}
+  .pack{grid-template-columns:1fr!important;gap:6px;padding:26px 28px}
   .pack__p{text-align:left;margin-top:10px}
 }
 
@@ -236,6 +242,10 @@ button{font:inherit;cursor:pointer}
 .tm__no{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--fg-faint)}
 .tm h3{font-size:clamp(19px,1.6vw,24px);font-weight:800;font-stretch:112%;letter-spacing:-.02em;line-height:1}
 .tm__r{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;line-height:1.45;color:var(--fg-dim)}
+.team-sec .tm{background:#14110d;border-color:rgba(243,239,233,.12)}
+.team-sec .tm__ph{background:#1c1813;border-bottom-color:rgba(243,239,233,.12)}
+.team-sec .tm__no{color:rgba(243,239,233,.45)}
+.team-sec .tm__r,.team-sec .sec__head .mono{color:rgba(243,239,233,.7)}
 @media (max-width:980px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* proces */
@@ -423,8 +433,8 @@ button{font:inherit;cursor:pointer}
     <ul class="packs">
       <li class="pack"><p class="pack__h">30h</p><div><h3 class="pack__t">Dla mniejszych potrzeb</h3><p class="pack__d">Regularne grafiki i krótkie formy wideo co miesiąc.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b></div></li>
       <li class="pack"><p class="pack__h">60h</p><div><h3 class="pack__t">Dla regularnych działań</h3><p class="pack__d">Stały content do social mediów plus sesje i rolki.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b></div></li>
-      <li class="pack"><p class="pack__h">120h</p><div><h3 class="pack__t">Dla rozwoju marki</h3><p class="pack__d">Filmy, sesje i pełna obsługa contentu we wszystkich kanałach.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b></div></li>
-      <li class="pack pack--hi"><p class="pack__h">250h</p><div><h3 class="pack__t">Dla dużych projektów</h3><p class="pack__d">Pełny zewnętrzny dział produkcji dla Twojej marki.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b></div></li>
+      <li class="pack pack--hi pack--top"><span class="pack__badge">Najczęściej wybierany</span><p class="pack__h">120h</p><div><h3 class="pack__t">Dla rozwoju marki</h3><p class="pack__d">Filmy, sesje i&nbsp;pełna obsługa contentu we&nbsp;wszystkich kanałach. Twój zewnętrzny dział marketingu w&nbsp;pełnym wymiarze.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b><a class="btn btn--ink pack__cta" href="#kontakt" data-cta="pack-120">Chcę pakiet 120h <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></li>
+      <li class="pack"><p class="pack__h">250h</p><div><h3 class="pack__t">Dla dużych projektów</h3><p class="pack__d">Pełny zewnętrzny dział produkcji dla Twojej marki.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b></div></li>
     </ul>
     <div class="packs__foot">
       <p>Jaki pakiet jest dla Ciebie?</p>
@@ -515,27 +525,29 @@ button{font:inherit;cursor:pointer}
 </section>
 
 <!-- ZESPÓŁ -->
-<section class="sec" aria-labelledby="team-h" style="padding-top:0">
+<section class="sec dark team-sec" aria-labelledby="team-h" style="padding-top:clamp(110px,11vw,150px)">
+  <svg class="tear" fill="#F5F3EF" aria-hidden="true"><use href="#tear"/></svg>
   <div class="shell">
     <div class="sec__head">
-      <h2 class="h2" id="team-h">Poznaj ludzi <span class="em">za Twoimi projektami.</span></h2>
+      <h2 class="h2" id="team-h">Poznaj zespół, który <span class="em">zrealizuje Twoje projekty.</span></h2>
       <p class="mono">Stały zespół · Gdańsk / PL</p>
     </div>
     <ul class="team">
       <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/maciej-tyma.webp" alt="Maciej Tyma" width="600" height="466" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·01</span><h3>Maciej Tyma</h3><p class="tm__r">Founder · Fotograf i producent wideo</p></div></li>
-      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/pawel-wyszomirski.webp" alt="Paweł Wyszomirski" width="600" height="457" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·02</span><h3>Paweł Wyszomirski</h3><p class="tm__r">Reżyser</p></div></li>
-      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/hubert-fudala.webp" alt="Hubert Fudała" width="600" height="457" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·03</span><h3>Hubert Fudała</h3><p class="tm__r">Operator kamery i montażysta</p></div></li>
-      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/radoslaw-schenk.webp" alt="Radosław Schenk" width="600" height="466" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·04</span><h3>Radosław Schenk</h3><p class="tm__r">Operator kamery i montażysta</p></div></li>
-      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/kamil-mroz.webp" alt="Kamil Mróz" width="600" height="457" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·05</span><h3>Kamil Mróz</h3><p class="tm__r">Operator kamery i montażysta</p></div></li>
+      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/hubert-fudala.webp" alt="Hubert Fudała" width="600" height="457" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·02</span><h3>Hubert Fudała</h3><p class="tm__r">Operator kamery i montażysta</p></div></li>
+      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/radoslaw-schenk.webp" alt="Radosław Schenk" width="600" height="466" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·03</span><h3>Radosław Schenk</h3><p class="tm__r">Operator kamery i montażysta</p></div></li>
+      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/kamil-mroz.webp" alt="Kamil Mróz" width="600" height="457" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·04</span><h3>Kamil Mróz</h3><p class="tm__r">Operator kamery i montażysta</p></div></li>
+      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/olga-urbanska.webp" alt="Olga Urbańska" width="600" height="456" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·05</span><h3>Olga Urbańska</h3><p class="tm__r">Project &amp; Digital Marketing Manager</p></div></li>
       <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/lukasz-sierputowski.webp" alt="Łukasz Sierputowski" width="600" height="457" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·06</span><h3>Łukasz Sierputowski</h3><p class="tm__r">Grafik, web designer</p></div></li>
-      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/olga-urbanska.webp" alt="Olga Urbańska" width="600" height="456" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·07</span><h3>Olga Urbańska</h3><p class="tm__r">Project &amp; Digital Marketing Manager</p></div></li>
+      <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/pawel-wyszomirski.webp" alt="Paweł Wyszomirski" width="600" height="457" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·07</span><h3>Paweł Wyszomirski</h3><p class="tm__r">Reżyser</p></div></li>
       <li class="tm"><div class="tm__ph"><img src="../assets/abonament/team/dakar.webp" alt="Dakar, pies studia SEZMOO" width="600" height="456" loading="lazy" /></div><div class="tm__b"><span class="tm__no">T·08</span><h3>Dakar</h3><p class="tm__r">Ochrona</p></div></li>
     </ul>
   </div>
 </section>
 
 <!-- PROCES -->
-<section class="sec" aria-labelledby="steps-h" style="padding-top:0">
+<section class="sec" aria-labelledby="steps-h" style="padding-top:clamp(110px,11vw,150px)">
+  <svg class="tear" fill="#0A0806" aria-hidden="true"><use href="#tear"/></svg>
   <div class="shell">
     <h2 class="h2" id="steps-h" style="margin-bottom:clamp(32px,4vw,48px)">Jak wygląda <span class="em">pierwszy krok?</span></h2>
     <ol class="steps">
@@ -598,7 +610,7 @@ button{font:inherit;cursor:pointer}
         <div class="cfield">
           <label for="ab-package">Pakiet</label>
           <select id="ab-package" name="package">
-            <option>Nie wiem – doradźcie</option><option>30h</option><option>60h</option><option>120h</option><option>250h</option>
+            <option>Nie wiem – doradźcie</option><option>30h</option><option>60h</option><option selected>120h</option><option>250h</option>
           </select>
         </div>
       </div>
@@ -642,5 +654,6 @@ button{font:inherit;cursor:pointer}
 })();
 </script>
 <script src="../assets/abonament/form.js" defer></script>
+<script>document.querySelectorAll('[data-cta="pack-120"]').forEach(function(b){b.addEventListener("click",function(){var s=document.getElementById("ab-package");if(s)s.value="120h";});});</script>
 </body>
 </html>

@@ -41,6 +41,7 @@
 .cs-hero__frame span:nth-child(2){ top:-1px; right:-1px; border-left:0; border-bottom:0; }
 .cs-hero__frame span:nth-child(3){ bottom:-1px; left:-1px; border-right:0; border-top:0; }
 .cs-hero__frame span:nth-child(4){ bottom:-1px; right:-1px; border-left:0; border-top:0; }
+.cs-hero__hud, .cs-hero__frame { display: none !important; }
 
 .cs-hero__inner { position: relative; z-index: 3; padding-block: clamp(40px, 7vh, 96px); width: 100%; }
 .cs-hero__back {

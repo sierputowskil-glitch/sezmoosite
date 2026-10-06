@@ -620,8 +620,9 @@
       const out = [];
       const pl = new Map();
       let bands, batch;
-      const fresh = () => { bands = [0, 0, 0, 0]; batch = []; out.push(batch); };
-      const col = (b) => (b * 3 + 1) + " / " + (b * 3 + 4);
+      const NB = Number(reel.getAttribute("data-bands")) || 4, BW = 12 / NB;
+      const fresh = () => { bands = new Array(NB).fill(0); batch = []; out.push(batch); };
+      const col = (b) => (b * BW + 1) + " / " + (b * BW + 1 + BW);
       fresh();
       cards.forEach((c) => {
         if (isPortrait(c)) {
@@ -642,6 +643,7 @@
     }
 
     function syncHud() {
+      if (prevBtn && prevBtn.parentElement) prevBtn.parentElement.style.display = batches.length > 1 ? "" : "none";
       if (countEl) countEl.innerHTML = "<b>" + String(curBatch + 1).padStart(2, "0") + "</b> / " + String(batches.length).padStart(2, "0");
       if (dotsWrap) [...dotsWrap.children].forEach((d, i) => d.classList.toggle("is-on", i === curBatch));
     }

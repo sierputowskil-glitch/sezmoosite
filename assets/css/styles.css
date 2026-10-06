@@ -3829,8 +3829,9 @@ img.card__video { background: var(--bg-2); }
   font-size: clamp(76px, 12vw, 168px);
   line-height: .8; letter-spacing: -.05em;
   white-space: nowrap;
-  color: transparent;
-  -webkit-text-stroke: 2px #ffd200;
+  color: #161719;
+  -webkit-text-stroke: 4px #ffd200;
+  paint-order: stroke fill;
   opacity: 0;
   z-index: 0;
   pointer-events: none;
@@ -3862,7 +3863,7 @@ img.card__video { background: var(--bg-2); }
 @media (max-width: 420px){
   .team__grid--photos { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .team__grid--photos .team-card__photo { aspect-ratio: 4/4.1; }
-  .tc-ini { -webkit-text-stroke-width: 1.5px; }
+  .tc-ini { -webkit-text-stroke-width: 3px; }
 }
 @media (prefers-reduced-motion: reduce){
   .tc-ini, .tc-ph { transition: none; }
