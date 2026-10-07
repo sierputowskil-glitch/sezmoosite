@@ -60,6 +60,10 @@ button{font:inherit;cursor:pointer}
 /* headings */
 .h1,.h2{font-weight:720;font-stretch:104%;letter-spacing:-.02em;line-height:1.06;text-wrap:balance}
 .h1{font-size:clamp(40px,5.6vw,84px)}
+.hero .h1{font-size:clamp(44px,6.2vw,96px);font-weight:820;font-stretch:112%;letter-spacing:-.03em;line-height:.98}
+.hero .h1 .thin{display:block;font-weight:380;font-stretch:100%;letter-spacing:-.025em;margin-top:.08em}
+.hl{background:var(--y);color:var(--on-y);padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.btn--xl{min-height:64px;padding:0 36px;font-size:15px}
 .h2{font-size:clamp(32px,4.4vw,64px)}
 .em{font-weight:820;font-stretch:112%}
 .lead{font-size:clamp(17px,1.4vw,20px);line-height:1.5;color:var(--fg-dim);max-width:560px}
@@ -104,7 +108,9 @@ button{font:inherit;cursor:pointer}
 .hero__micro{font-size:15px;color:var(--fg-dim);line-height:1.4}
 .hero__media{position:relative;aspect-ratio:1/1.02;min-height:320px}
 .hero__frame{position:absolute;inset:30px 0 0 0;border-radius:4px;overflow:hidden;background:var(--ink-2)}
-.hero__frame video,.hero__frame img{width:100%;height:100%;object-fit:cover}
+.hero__frame{container-type:size}
+.hero__frame img{width:100%;height:100%;object-fit:cover}
+.hero__frame iframe{position:absolute;top:50%;left:50%;width:max(100%,177.78cqh);height:max(100%,56.25cqw);transform:translate(-50%,-50%);border:0;pointer-events:none}
 .hero__tc{position:absolute;left:14px;top:48px;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink-fg);background:rgb(10 8 6 / .6);padding:5px 9px;border-radius:3px;z-index:2}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--y);flex:none}
 .hero__tc .dot{animation:rec 1.6s infinite}
@@ -177,7 +183,7 @@ button{font:inherit;cursor:pointer}
 .pack__p .mono{font-size:11px;letter-spacing:.2em}
 .pack__p b{display:block;font-size:clamp(20px,2vw,26px);font-weight:800;letter-spacing:-.015em;margin-top:4px}
 .packs__foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:clamp(48px,6vw,72px)}
-.packs__foot p{font-size:clamp(28px,3vw,44px);letter-spacing:-.015em;line-height:1.1}
+.packs__foot p{font-size:clamp(24px,2.6vw,38px);letter-spacing:-.015em;line-height:1.15;max-width:720px;text-wrap:pretty}
 @media (max-width:760px){
   .packs{margin-inline:-20px}
   .pack{grid-template-columns:1fr!important;gap:6px;padding:26px 28px}
@@ -189,7 +195,11 @@ button{font:inherit;cursor:pointer}
 .dark .lead,.dark .muted{color:var(--ink-dim)}
 .works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none}
 .work__img{position:relative;aspect-ratio:3/2;border-radius:4px;overflow:hidden;background:var(--ink-2)}
-.work__img img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) brightness(.92)}
+.work__img img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) brightness(.92);transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s}
+.work{display:block}
+.work:hover .work__img img{transform:scale(1.04);filter:none}
+.work__meta h3{transition:color .3s}
+.work:hover h3{color:var(--y)}
 .work__tag{position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;background:var(--y);color:var(--on-y);padding:5px 9px;border-radius:2px}
 .work__meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:14px}
 .work__meta h3{font-size:22px;font-weight:800;letter-spacing:-.015em;font-stretch:108%}
@@ -213,6 +223,11 @@ button{font:inherit;cursor:pointer}
 .scope__img img{width:100%;height:100%;object-fit:cover}
 .scope h3{font-size:24px;font-weight:800;letter-spacing:-.015em;margin-top:18px}
 .scope p{color:var(--fg-dim);font-size:16px;margin-top:6px}
+@media (min-width:981px){.scope li:nth-child(even){margin-top:56px}}
+.works__more{display:flex;justify-content:center;margin-top:clamp(40px,5vw,64px)}
+.btn--ghost-y{border-color:var(--y);color:var(--y)}
+.btn--ghost-y:hover{background:var(--y);color:var(--on-y)}
+.dark .em.y{color:var(--y)}
 .scope__note{margin-top:28px;font-size:15px;color:var(--fg-dim);max-width:760px}
 @media (max-width:980px){.scope{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.scope{grid-template-columns:1fr}.scope__img{aspect-ratio:3/2}}
@@ -280,9 +295,9 @@ button{font:inherit;cursor:pointer}
 .cinfo a,.cinfo p{display:block;margin-top:8px;font-size:clamp(19px,1.7vw,25px);font-weight:700;font-stretch:104%;letter-spacing:-.01em}
 .cinfo a:hover{color:var(--y)}
 .cform{border:1px solid var(--ink-line);border-radius:5px;background:var(--ink-2);padding:clamp(22px,3vw,38px);display:grid;gap:16px;position:relative}
-.cform__row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cform__row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:end}
 .cfield{display:flex;flex-direction:column;gap:9px}
-.cfield label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+.cfield label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
 .cfield input,.cfield select,.cfield textarea{width:100%;background:var(--ink);border:1px solid var(--ink-line);border-radius:4px;padding:14px 16px;color:var(--ink-fg);font-family:var(--display);font-size:16px}
 .cfield select{appearance:none;padding-right:44px;background-image:linear-gradient(45deg,transparent 50%,var(--y) 50%),linear-gradient(135deg,var(--y) 50%,transparent 50%);background-position:calc(100% - 21px) 50%,calc(100% - 15px) 50%;background-size:6px 6px;background-repeat:no-repeat}
 .cfield textarea{min-height:120px;resize:vertical}
@@ -313,7 +328,7 @@ button{font:inherit;cursor:pointer}
   body{padding-bottom:calc(78px + env(safe-area-inset-bottom,0px))}
 }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Abonament marketingowy SEZMOO","serviceType":"Stała produkcja wideo, foto i grafiki w pakiecie godzin","url":"https://sezmoo.com/abonament/","inLanguage":"pl-PL","areaServed":{"@type":"Country","name":"Polska"},"provider":{"@type":"Organization","name":"SEZMOO","url":"https://sezmoo.com/","logo":"https://sezmoo.com/assets/brand/sezmoo-logo-by.svg","email":"biuro@sezmoo.com","telephone":"+48739260450","address":{"@type":"PostalAddress","streetAddress":"Zeusa 34","postalCode":"80-299","addressLocality":"Gdańsk","addressCountry":"PL"}},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Pakiety godzin","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pakiet 30h","description":"Dla mniejszych potrzeb: regularne grafiki i krótkie formy wideo co miesiąc."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pakiet 60h","description":"Dla regularnych działań: stały content do social mediów plus sesje i rolki."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pakiet 120h","description":"Dla rozwoju marki: filmy, sesje i pełna obsługa contentu."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pakiet 250h","description":"Dla dużych projektów: pełny zewnętrzny dział produkcji."}}]}},{"@type":"FAQPage","inLanguage":"pl-PL","mainEntity":[{"@type":"Question","name":"Ile kosztuje abonament?","acceptedAnswer":{"@type":"Answer","text":"Wycena jest indywidualna i zależy od pakietu godzin oraz zakresu. Po krótkim briefie dostajesz konkretną kwotę miesięczną wraz z listą tego, co się w niej zawiera. Pracujemy z budżetami od 4 000 zł miesięcznie."}},{"@type":"Question","name":"Co, jeśli w danym miesiącu potrzebuję czegoś innego?","acceptedAnswer":{"@type":"Answer","text":"Godziny nie są przypisane do jednej usługi. W jednym miesiącu może to być dzień zdjęciowy i montaż, w kolejnym sesja produktowa i paczka grafik na social media. Zakres ustalamy w planie na najbliższe tygodnie."}},{"@type":"Question","name":"Czy abonament to umowa na dłużej?","acceptedAnswer":{"@type":"Answer","text":"Zwykle umawiamy się na dłuższą współpracę, bo abonament działa wtedy, gdy materiały powstają w stałym rytmie. Minimalny okres i warunki wypowiedzenia ustalamy indywidualnie przy wycenie."}},{"@type":"Question","name":"Skąd wiem, na co poszły godziny z pakietu?","acceptedAnswer":{"@type":"Answer","text":"Każdy miesiąc kończy się zestawieniem: lista materiałów, które powstały, i liczba godzin przy każdym z nich, wysyłane razem z fakturą. W trakcie miesiąca postęp zadań widzisz w ClickUp, a priorytety zatwierdzasz przed produkcją."}},{"@type":"Question","name":"Czy możecie przejąć cały marketing?","acceptedAnswer":{"@type":"Answer","text":"Tak. Działamy jako zewnętrzny dział marketingu albo jako zaplecze produkcyjne dla wewnętrznego zespołu klienta. Kampanie płatne i duże koncepty kreatywne prowadzimy jako osobne projekty."}},{"@type":"Question","name":"Czy pracujecie poza Trójmiastem?","acceptedAnswer":{"@type":"Answer","text":"Baza jest w Gdańsku, a realizacje prowadzimy w całej Polsce i za granicą."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Abonament marketingowy SEZMOO","serviceType":"Stała produkcja wideo, foto i grafiki w pakiecie godzin","url":"https://sezmoo.com/abonament/","inLanguage":"pl-PL","areaServed":{"@type":"Country","name":"Polska"},"provider":{"@type":"Organization","name":"SEZMOO","url":"https://sezmoo.com/","logo":"https://sezmoo.com/assets/brand/sezmoo-logo-by.svg","email":"biuro@sezmoo.com","telephone":"+48739260450","address":{"@type":"PostalAddress","streetAddress":"Zeusa 34","postalCode":"80-299","addressLocality":"Gdańsk","addressCountry":"PL"}},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Pakiety godzin","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pakiet 30h","description":"Dla mniejszych potrzeb: regularne grafiki i krótkie formy wideo co miesiąc."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pakiet 60h","description":"Dla regularnych działań: stały content do social mediów plus sesje i rolki."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pakiet 120h","description":"Dla rozwoju marki: filmy, sesje i pełna obsługa contentu."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pakiet 250h","description":"Dla dużych projektów: pełny zewnętrzny dział produkcji."}}]}},{"@type":"FAQPage","inLanguage":"pl-PL","mainEntity":[{"@type":"Question","name":"Ile kosztuje abonament?","acceptedAnswer":{"@type":"Answer","text":"Wycena jest indywidualna i zależy od pakietu godzin oraz zakresu. Po krótkim briefie dostajesz konkretną kwotę miesięczną wraz z listą tego, co się w niej zawiera. Pracujemy z budżetami od 8 100 zł miesięcznie."}},{"@type":"Question","name":"Co, jeśli w danym miesiącu potrzebuję czegoś innego?","acceptedAnswer":{"@type":"Answer","text":"Godziny nie są przypisane do jednej usługi. W jednym miesiącu może to być dzień zdjęciowy i montaż, w kolejnym sesja produktowa i paczka grafik na social media. Zakres ustalamy w planie na najbliższe tygodnie."}},{"@type":"Question","name":"Czy abonament to umowa na dłużej?","acceptedAnswer":{"@type":"Answer","text":"Tak, nastawiamy się na dłuższą współpracę – abonament przynosi najlepsze efekty, gdy materiały powstają w stałym, przewidywalnym rytmie. Zaczynamy od 3-miesięcznego okresu próbnego. Szczegółowe warunki i minimalny okres umowy ustalamy indywidualnie na etapie wyceny."}},{"@type":"Question","name":"Skąd wiem, na co poszły godziny z pakietu?","acceptedAnswer":{"@type":"Answer","text":"Każdy miesiąc kończy się zestawieniem: lista materiałów, które powstały, i liczba godzin przy każdym z nich, wysyłane razem z fakturą. W trakcie miesiąca postęp zadań widzisz w ClickUp, a priorytety zatwierdzasz przed produkcją."}},{"@type":"Question","name":"Czy możecie przejąć cały marketing?","acceptedAnswer":{"@type":"Answer","text":"Tak. Działamy jako zewnętrzny dział marketingu albo jako zaplecze produkcyjne dla wewnętrznego zespołu klienta. Kampanie płatne i duże koncepty kreatywne prowadzimy jako osobne projekty."}},{"@type":"Question","name":"Czy pracujecie poza Trójmiastem?","acceptedAnswer":{"@type":"Answer","text":"Baza jest w Gdańsku, a realizacje prowadzimy w całej Polsce i za granicą."}}]}]}</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -347,7 +362,7 @@ button{font:inherit;cursor:pointer}
   <div class="shell hero__grid">
     <div class="hero__copy">
       <p class="mono">Abonament · grafika / wideo / fotografia</p>
-      <h1 class="h1">Twój dział <span class="em">marketingu</span> nie musi być na etacie.</h1>
+      <h1 class="h1">Twój dział marketingu <span class="thin">nie musi być <span class="hl">na&nbsp;etacie.</span></span></h1>
       <p class="lead">Stały zespół wideo, foto i grafiki z Gdańska. Kupujesz pakiet godzin w miesiącu i sam decydujesz, na co go przeznaczyć: raz film, raz sesja, raz kampania graficzna.</p>
       <ul class="hero__bul">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Dedykowany zespół</b> – bez szukania podwykonawców i pilnowania terminów.</span></li>
@@ -355,17 +370,16 @@ button{font:inherit;cursor:pointer}
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Własne studio i sprzęt</b> – oraz archiwizacja wszystkich materiałów.</span></li>
       </ul>
       <div class="hero__cta">
-        <a class="btn btn--y" href="#kontakt" data-cta="hero">Porozmawiajmy o abonamencie <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--y btn--xl" href="#kontakt" data-cta="hero">Bezpłatna rozmowa brief – 30&nbsp;min <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <p class="hero__micro">Niezobowiązująca rozmowa.<br />Odpowiadamy w ciągu 24h.</p>
       </div>
     </div>
     <div class="hero__media">
       <div class="hero__frame">
-        <video autoplay muted loop playsinline preload="metadata" poster="../assets/abonament/showreel-poster.webp" aria-label="Fragment realizacji SEZMOO: trailer Audi RS5">
-          <source src="../assets/video/audi-rs5-trailer.mp4" type="video/mp4" />
-        </video>
+        <img src="../assets/abonament/showreel-poster.webp" alt="" aria-hidden="true" />
+        <iframe src="https://www.youtube-nocookie.com/embed/YkWCkew6OGg?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=YkWCkew6OGg&amp;playsinline=1&amp;modestbranding=1&amp;rel=0&amp;iv_load_policy=3&amp;disablekb=1&amp;fs=0" title="SEZMOO showreel" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" tabindex="-1" loading="eager"></iframe>
       </div>
-      <span class="hero__tc"><span class="dot"></span>AUDI RS5 · TRAILER</span>
+      <span class="hero__tc"><span class="dot"></span>SEZMOO · SHOWREEL 2026</span>
       <svg class="hero__tear" fill="#F5F3EF" aria-hidden="true"><use href="#tear"/></svg>
       <p class="hero__strip"><span>Może być</span><b>w abonamencie.</b></p>
     </div>
@@ -375,27 +389,6 @@ button{font:inherit;cursor:pointer}
       <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Dedykowany zespół</b> – bez szukania podwykonawców i pilnowania terminów.</span></li>
       <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Pełna elastyczność</b> – wideo, foto i design w ramach jednej umowy.</span></li>
       <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Własne studio i sprzęt</b> – oraz archiwizacja wszystkich materiałów.</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- LOGOTYPY -->
-<section class="logos" aria-labelledby="logos-h">
-  <div class="shell">
-    <div class="logos__top"><h2 class="mono" id="logos-h">Zaufali nam</h2><p class="mono">B2B · automotive · przemysł · deweloperzy</p></div>
-    <ul class="logos__grid">
-      <li><img src="../assets/clients/audi.svg" alt="Audi" width="126" height="40" loading="lazy" /></li>
-      <li><img class="logo--wide" src="../assets/clients/byd.svg" alt="BYD" width="246" height="20" loading="lazy" /></li>
-      <li><span class="logos__word">Netto</span></li>
-      <li><img src="../assets/clients/omoda-jaecoo.svg" alt="OMODA &amp; JAECOO" width="118" height="28" loading="lazy" /></li>
-      <li><img class="logo--wide" src="../assets/clients/cherry.svg" alt="Chery" width="262" height="20" loading="lazy" /></li>
-      <li><img src="../assets/clients/vls.svg" alt="VLS" width="70" height="38" loading="lazy" /></li>
-      <li><img class="logo--wide" src="../assets/clients/doraco.svg" alt="Doraco" width="119" height="20" loading="lazy" /></li>
-      <li><img src="../assets/clients/velo-bank.svg" alt="VeloBank" width="34" height="40" loading="lazy" /></li>
-      <li><span class="logos__word">Baltic Towers</span></li>
-      <li><img src="../assets/clients/q4rail.svg" alt="Q4rail" width="120" height="34" loading="lazy" /></li>
-      <li><img src="../assets/clients/2track.svg" alt="2track" width="50" height="40" loading="lazy" /></li>
-      <li><img src="../assets/clients/life-dom-seniora.svg" alt="Life Dom Seniora" width="82" height="40" loading="lazy" /></li>
     </ul>
   </div>
 </section>
@@ -420,6 +413,18 @@ button{font:inherit;cursor:pointer}
   </div>
 </section>
 
+<!-- PROCES -->
+<section class="sec" aria-labelledby="steps-h" style="padding-top:0">
+  <div class="shell">
+    <h2 class="h2" id="steps-h" style="margin-bottom:clamp(32px,4vw,48px)">Jak wygląda <span class="em">pierwszy krok?</span></h2>
+    <ol class="steps">
+      <li><b>01</b><h3>Bezpłatna rozmowa</h3><p>Do&nbsp;30 minut: poznajemy Twoje potrzeby i&nbsp;cele.</p></li>
+      <li><b>02</b><h3>Dobór pakietu</h3><p>Proponujemy pakiet godzin albo wycenę projektu testowego.</p></li>
+      <li><b>03</b><h3>Realizacja</h3><p>Produkujemy i przekazujemy gotowe materiały.</p></li>
+    </ol>
+  </div>
+</section>
+
 <!-- PAKIETY -->
 <section class="sec" id="pakiety" aria-labelledby="packs-h">
   <div class="shell">
@@ -432,13 +437,13 @@ button{font:inherit;cursor:pointer}
     </div>
     <ul class="packs">
       <li class="pack"><p class="pack__h">30h</p><div><h3 class="pack__t">Dla mniejszych potrzeb</h3><p class="pack__d">Regularne grafiki i krótkie formy wideo co miesiąc.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b></div></li>
-      <li class="pack"><p class="pack__h">60h</p><div><h3 class="pack__t">Dla regularnych działań</h3><p class="pack__d">Stały content do social mediów plus sesje i rolki.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b></div></li>
-      <li class="pack pack--hi pack--top"><span class="pack__badge">Najczęściej wybierany</span><p class="pack__h">120h</p><div><h3 class="pack__t">Dla rozwoju marki</h3><p class="pack__d">Filmy, sesje i&nbsp;pełna obsługa contentu we&nbsp;wszystkich kanałach. Twój zewnętrzny dział marketingu w&nbsp;pełnym wymiarze.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b><a class="btn btn--ink pack__cta" href="#kontakt" data-cta="pack-120">Chcę pakiet 120h <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></li>
+      <li class="pack pack--hi pack--top"><span class="pack__badge">Najczęściej wybierany</span><p class="pack__h">60h</p><div><h3 class="pack__t">Dla regularnych działań</h3><p class="pack__d">Stały content do&nbsp;social mediów plus sesje i&nbsp;rolki.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b><a class="btn btn--ink pack__cta" href="#kontakt" data-cta="pack-60">Chcę pakiet 60h <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></li>
+      <li class="pack"><p class="pack__h">120h</p><div><h3 class="pack__t">Dla rozwoju marki</h3><p class="pack__d">Filmy, sesje i&nbsp;pełna obsługa contentu we&nbsp;wszystkich kanałach. Twój zewnętrzny dział marketingu w&nbsp;pełnym wymiarze.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b></div></li>
       <li class="pack"><p class="pack__h">250h</p><div><h3 class="pack__t">Dla dużych projektów</h3><p class="pack__d">Pełny zewnętrzny dział produkcji dla Twojej marki.</p></div><div class="pack__p"><span class="mono">Miesięcznie</span><b>Wycena indywidualna</b></div></li>
     </ul>
     <div class="packs__foot">
-      <p>Jaki pakiet jest dla Ciebie?</p>
-      <a class="btn btn--ink" href="#kontakt" data-cta="packages">Pomożemy dobrać pakiet <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p>Darmowa konsultacja pozwoli Ci dowiedzieć się, jaki pakiet jest dla&nbsp;Ciebie.</p>
+      <a class="btn btn--y btn--xl" href="#kontakt" data-cta="packages">Umów się <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -448,17 +453,18 @@ button{font:inherit;cursor:pointer}
   <svg class="tear" fill="#F5F3EF" aria-hidden="true"><use href="#tear"/></svg>
   <div class="shell">
     <div class="sec__head">
-      <h2 class="h2" id="works-h">Zobacz, jak tworzymy <span class="em">dla naszych klientów.</span></h2>
+      <h2 class="h2" id="works-h">Zobacz, co stworzyliśmy dla <span class="em y">naszych klientów.</span></h2>
       <p class="mono muted">Wideo / foto / grafika / eventy</p>
     </div>
     <ul class="works">
-      <li><div class="work__img"><img src="../assets/abonament/realizacja-denza.webp" alt="Premiera DENZA Z9 GT – realizacja eventowa SEZMOO" width="900" height="600" loading="lazy" /><span class="work__tag">EVENT</span></div><div class="work__meta"><h3>DENZA</h3><p>Premiera Z9 GT</p></div></li>
-      <li><div class="work__img"><img src="../assets/abonament/realizacja-audi-rs5.webp" alt="Audi RS5 – studyjna sesja zdjęciowa" width="900" height="600" loading="lazy" /><span class="work__tag">FOTO</span></div><div class="work__meta"><h3>Audi RS5</h3><p>Sesja studyjna</p></div></li>
-      <li><div class="work__img"><img src="../assets/abonament/realizacja-baltic-towers.webp" alt="Baltic Towers – fotografia produkcji przemysłowej" width="900" height="600" loading="lazy" /><span class="work__tag">FOTO</span></div><div class="work__meta"><h3>Baltic Towers</h3><p>Produkcja</p></div></li>
-      <li><div class="work__img"><img src="../assets/abonament/realizacja-primespot.webp" alt="PrimeSpot – kreacje do kampanii Meta Ads" width="900" height="471" loading="lazy" /><span class="work__tag">KAMPANIA</span></div><div class="work__meta"><h3>PrimeSpot</h3><p>Kampania Meta Ads</p></div></li>
-      <li><div class="work__img"><img src="../assets/abonament/realizacja-soho-form.webp" alt="Soho Form – branding i strona internetowa" width="900" height="506" loading="lazy" /><span class="work__tag">GRAFIKA</span></div><div class="work__meta"><h3>Soho Form</h3><p>Branding / WWW</p></div></li>
-      <li><div class="work__img"><img src="../assets/abonament/realizacja-doraco-tvp.webp" alt="DORACO – realizacja dla TVP" width="900" height="674" loading="lazy" /><span class="work__tag">WIDEO</span></div><div class="work__meta"><h3>DORACO</h3><p>Realizacja dla TVP</p></div></li>
+      <li><a class="work" href="../realizacja-denza/" data-cta="work-denza"><div class="work__img"><img src="../assets/abonament/realizacja-denza.webp" alt="Premiera DENZA Z9 GT – stoisko i goście podczas eventu, fotorelacja SEZMOO" width="900" height="600" loading="lazy" /><span class="work__tag">EVENT</span></div><div class="work__meta"><h3>DENZA</h3><p>Premiera Z9 GT</p></div></a></li>
+      <li><a class="work" href="../portfolio/" data-cta="work-audi-rs5"><div class="work__img"><img src="../assets/abonament/realizacja-audi-rs5.webp" alt="Audi RS5 – studyjna sesja zdjęciowa" width="900" height="600" loading="lazy" /><span class="work__tag">FOTO + WIDEO</span></div><div class="work__meta"><h3>Audi RS5</h3><p>Sesja studyjna</p></div></a></li>
+      <li><a class="work" href="../realizacja-baltic-towers-rekrutacja/" data-cta="work-baltic-towers"><div class="work__img"><img src="../assets/abonament/realizacja-baltic-towers.webp" alt="Baltic Towers – fotografia produkcji przemysłowej" width="900" height="600" loading="lazy" /><span class="work__tag">FOTO + WIDEO</span></div><div class="work__meta"><h3>Baltic Towers</h3><p>Produkcja</p></div></a></li>
+      <li><a class="work" href="../realizacja-primespot/" data-cta="work-primespot"><div class="work__img"><img src="../assets/abonament/realizacja-primespot.webp" alt="PrimeSpot – kreacje reklamowe do kampanii Meta Ads dla inwestycji w Jastarni" width="1200" height="800" loading="lazy" /><span class="work__tag">KAMPANIA</span></div><div class="work__meta"><h3>PrimeSpot</h3><p>Kampania Meta Ads</p></div></a></li>
+      <li><a class="work" href="../realizacja-soho-form/" data-cta="work-soho-form"><div class="work__img"><img src="../assets/abonament/realizacja-soho-form.webp" alt="Soho Form – branding i strona internetowa" width="900" height="506" loading="lazy" /><span class="work__tag">GRAFIKA</span></div><div class="work__meta"><h3>Soho Form</h3><p>Branding / WWW</p></div></a></li>
+      <li><a class="work" href="../realizacja-doraco-hala-tvp/" data-cta="work-doraco-tvp"><div class="work__img"><img src="../assets/abonament/realizacja-doraco-tvp.webp" alt="DORACO – realizacja dla TVP" width="900" height="674" loading="lazy" /><span class="work__tag">WIDEO</span></div><div class="work__meta"><h3>DORACO</h3><p>Realizacja dla TVP</p></div></a></li>
     </ul>
+    <div class="works__more"><a class="btn btn--ghost-y btn--xl" href="../portfolio/" data-cta="portfolio">Zobacz nasze portfolio <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
@@ -467,15 +473,15 @@ button{font:inherit;cursor:pointer}
   <svg class="tear" fill="#0A0806" aria-hidden="true"><use href="#tear"/></svg>
   <div class="shell">
     <div class="sec__head">
-      <h2 class="h2" id="why-h">Święty spokój. <span class="em">Projekty dowiezione.</span></h2>
-      <p class="lead">Zamiast szukać kilku podwykonawców i pilnować, żeby się dogadali, masz jeden zespół, który zna Twoją markę i pracuje dla niej co miesiąc.</p>
+      <h2 class="h2" id="why-h">Dlaczego abonament <span class="em hl">SEZMOO?</span></h2>
+      <p class="lead">Zamiast szukać kilku podwykonawców i&nbsp;spinać ich kalendarze oraz umowy, masz jeden zespół, który zna Twoją markę i&nbsp;pracuje dla niej co miesiąc.</p>
     </div>
     <ul class="why__grid">
       <li><span class="mono">01</span><h3>14 lat i stały zespół</h3><p>Nie ma ryzyka, że twórca zniknie w trakcie realizacji.</p></li>
       <li><span class="mono">02</span><h3>Jasne rozliczenie</h3><p>Stała kwota miesięczna, a do faktury zestawienie: co powstało i ile godzin zajęło.</p></li>
-      <li><span class="mono">03</span><h3>Dedykowany opiekun</h3><p>Jedna osoba kontaktowa, która prowadzi Twoje zlecenia.</p></li>
-      <li><span class="mono">04</span><h3>Własne studio i sprzęt</h3><p>Szybsze realizacje i poprawki bez wynajmowania zaplecza.</p></li>
-      <li><span class="mono">05</span><h3>Regularny content</h3><p>Materiały powstają co miesiąc, a nie zrywami przy kampaniach.</p></li>
+      <li><span class="mono">03</span><h3>Dedykowany opiekun</h3><p>Do Twojej marki przypisujemy jedną osobę, która jest z&nbsp;Tobą w&nbsp;stałym kontakcie i&nbsp;prowadzi Twoje zlecenia.</p></li>
+      <li><span class="mono">04</span><h3>Własny sprzęt</h3><p>Szybsze realizacje z&nbsp;profesjonalnym wyposażeniem.</p></li>
+      <li><span class="mono">05</span><h3>Regularna produkcja</h3><p>Nie musisz się obawiać braku materiałów do&nbsp;publikacji. Dostarczamy Twój content systematycznie.</p></li>
       <li><span class="mono">06</span><h3>Podgląd w ClickUp</h3><p>Postęp zadań widzisz na bieżąco, a priorytety zatwierdzasz przed produkcją.</p></li>
     </ul>
   </div>
@@ -484,12 +490,15 @@ button{font:inherit;cursor:pointer}
 <!-- ZAKRES -->
 <section class="sec" aria-labelledby="scope-h" style="padding-top:0">
   <div class="shell">
-    <h2 class="h2" id="scope-h" style="margin-bottom:clamp(32px,4vw,48px)">Jeden zespół. <span class="em">Pełne spektrum.</span></h2>
+    <div class="sec__head">
+      <h2 class="h2" id="scope-h">Kompleksowa produkcja <span class="em">pod jednym adresem.</span></h2>
+      <p class="lead">Jeden zespół. Pełna produkcja wizualna. Zamawiasz abonament, a&nbsp;my dostarczamy komplet materiałów foto, wideo, graficznych i&nbsp;WWW.</p>
+    </div>
     <ul class="scope">
-      <li><div class="scope__img"><img src="../assets/abonament/zakres-wideo.webp" alt="Operator SEZMOO podczas produkcji wideo" width="600" height="900" loading="lazy" /></div><h3>Wideo</h3><p>Filmy, rolki, relacje, ujęcia z drona i montaż.</p></li>
-      <li><div class="scope__img"><img src="../assets/abonament/zakres-foto.webp" alt="Sesja zdjęciowa samochodu w studio" width="900" height="600" loading="lazy" /></div><h3>Fotografia</h3><p>Sesje wizerunkowe, produktowe i eventowe.</p></li>
-      <li><div class="scope__img"><img src="../assets/abonament/zakres-grafika.webp" alt="Projekt identyfikacji wizualnej na ekranie komputera" width="900" height="786" loading="lazy" /></div><h3>Grafika i WWW</h3><p>Grafiki do social mediów, materiały sprzedażowe, druk, aktualizacje strony i landing page.</p></li>
-      <li><div class="scope__img"><img src="../assets/abonament/zakres-social.webp" alt="Kreacja reklamowa do social media" width="900" height="900" loading="lazy" /></div><h3>Social media</h3><p>Strategia contentu, posty, stories i publikacje.</p></li>
+      <li><div class="scope__img"><img src="../assets/abonament/zakres-wideo.webp" alt="Konferencja DORACO – publiczność podczas eventu, realizacja wideo i foto SEZMOO" width="720" height="900" loading="lazy" /></div><h3>Wideo</h3><p>Filmy, rolki, relacje, ujęcia z drona i montaż.</p></li>
+      <li><div class="scope__img"><img src="../assets/abonament/zakres-foto.webp" alt="Reflektor LED Audi RS5 w czerwonym świetle – studyjna sesja zdjęciowa samochodu SEZMOO" width="720" height="900" loading="lazy" /></div><h3>Fotografia</h3><p>Sesje wizerunkowe, produktowe i eventowe.</p></li>
+      <li><div class="scope__img"><img src="../assets/abonament/zakres-grafika.webp" alt="Strona internetowa Soho Form na monitorze – projekt WWW SEZMOO" width="720" height="900" loading="lazy" /></div><h3>Grafika i WWW</h3><p>Grafiki do social mediów, materiały sprzedażowe, druk, aktualizacje strony i landing page.</p></li>
+      <li><div class="scope__img"><img src="../assets/abonament/zakres-social.webp" alt="Grafika do social media BESTUNE T77 dla Plichta – kreacja SEZMOO" width="720" height="900" loading="lazy" /></div><h3>Social media</h3><p>Strategia contentu, posty, stories i publikacje.</p></li>
     </ul>
     <p class="scope__note">Poza pakietem godzin, jako osobne projekty: key visuale i duże koncepty kampanii, katalogi, animacje 3D oraz prowadzenie kampanii płatnych.</p>
   </div>
@@ -500,15 +509,37 @@ button{font:inherit;cursor:pointer}
   <div class="shell fit">
     <div class="fit__box fit__box--y">
       <p class="mono">Dla kogo</p>
-      <h2 class="h2">Z kim budujemy długoterminową współpracę?</h2>
+      <h2 class="h2">Czy abonamenty SEZMOO są dla&nbsp;Ciebie?</h2>
       <p>Średnie i duże firmy B2B, dyrektorzy i managerowie marketingu, branża przemysłowa i marki, które potrzebują stałego dopływu wideo, foto i designu.</p>
-      <p><b>Realizujemy pakiety z budżetem od 4&nbsp;000&nbsp;zł miesięcznie.</b></p>
+      <p><b>Realizujemy pakiety z&nbsp;budżetem od&nbsp;8&nbsp;100&nbsp;zł miesięcznie.</b></p>
     </div>
     <div class="fit__box fit__box--o">
-      <p class="mono">Kiedy to nie dla Ciebie</p>
-      <h2 class="h2">Szukasz jednorazowego montażu na już?</h2>
-      <p class="muted">Jeśli potrzebujesz prostej, jednorazowej usługi albo najtańszego wykonawcy, lepiej sprawdzi się freelancer. My dajemy stały zespół in-house, własne studio i pełne zaplecze sprzętowe.</p>
+      <p class="mono">Jednorazowy projekt?</p>
+      <h2 class="h2">Potrzebujesz pojedynczej realizacji?</h2>
+      <p class="muted">Realizujemy także jednorazowe projekty – od&nbsp;dużych wideo po&nbsp;wdrożenia WWW. Zobacz nasze dotychczasowe prace i&nbsp;sprawdź pełną ofertę na&nbsp;naszej stronie głównej.</p>
+      <div><a class="btn btn--ink" href="../" data-cta="home">Odwiedź SEZMOO <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
     </div>
+  </div>
+</section>
+
+<!-- LOGOTYPY -->
+<section class="logos" aria-labelledby="logos-h">
+  <div class="shell">
+    <div class="logos__top"><h2 class="mono" id="logos-h">Zaufali nam</h2><p class="mono">Wideo / foto / grafika</p></div>
+    <ul class="logos__grid">
+      <li><img src="../assets/clients/audi.svg" alt="Audi" width="126" height="40" loading="lazy" /></li>
+      <li><img class="logo--wide" src="../assets/clients/byd.svg" alt="BYD" width="246" height="20" loading="lazy" /></li>
+      <li><span class="logos__word">Netto</span></li>
+      <li><img src="../assets/clients/omoda-jaecoo.svg" alt="OMODA &amp; JAECOO" width="118" height="28" loading="lazy" /></li>
+      <li><img class="logo--wide" src="../assets/clients/cherry.svg" alt="Chery" width="262" height="20" loading="lazy" /></li>
+      <li><img src="../assets/clients/vls.svg" alt="VLS" width="70" height="38" loading="lazy" /></li>
+      <li><img class="logo--wide" src="../assets/clients/doraco.svg" alt="Doraco" width="119" height="20" loading="lazy" /></li>
+      <li><img src="../assets/clients/velo-bank.svg" alt="VeloBank" width="34" height="40" loading="lazy" /></li>
+      <li><span class="logos__word">Baltic Towers</span></li>
+      <li><img src="../assets/clients/q4rail.svg" alt="Q4rail" width="120" height="34" loading="lazy" /></li>
+      <li><img src="../assets/clients/2track.svg" alt="2track" width="50" height="40" loading="lazy" /></li>
+      <li><img src="../assets/clients/life-dom-seniora.svg" alt="Life Dom Seniora" width="82" height="40" loading="lazy" /></li>
+    </ul>
   </div>
 </section>
 
@@ -545,27 +576,15 @@ button{font:inherit;cursor:pointer}
   </div>
 </section>
 
-<!-- PROCES -->
-<section class="sec" aria-labelledby="steps-h" style="padding-top:clamp(110px,11vw,150px)">
-  <svg class="tear" fill="#0A0806" aria-hidden="true"><use href="#tear"/></svg>
-  <div class="shell">
-    <h2 class="h2" id="steps-h" style="margin-bottom:clamp(32px,4vw,48px)">Jak wygląda <span class="em">pierwszy krok?</span></h2>
-    <ol class="steps">
-      <li><b>01</b><h3>Bezpłatna rozmowa</h3><p>15 minut: poznajemy Twoje potrzeby i cele.</p></li>
-      <li><b>02</b><h3>Dobór pakietu</h3><p>Proponujemy pakiet godzin albo wycenę projektu testowego.</p></li>
-      <li><b>03</b><h3>Realizacja</h3><p>Produkujemy i przekazujemy gotowe materiały.</p></li>
-    </ol>
-  </div>
-</section>
-
 <!-- FAQ -->
-<section class="sec" aria-labelledby="faq-h" style="padding-top:0">
+<section class="sec" aria-labelledby="faq-h" style="padding-top:clamp(110px,11vw,150px)">
+  <svg class="tear" fill="#0A0806" aria-hidden="true"><use href="#tear"/></svg>
   <div class="shell faq">
     <h2 class="h2" id="faq-h">Najczęściej <span class="em">zadawane pytania.</span></h2>
     <div class="faq__list">
-      <details open><summary>Ile kosztuje abonament?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Wycena jest indywidualna i zależy od pakietu godzin oraz zakresu. Po krótkim briefie dostajesz konkretną kwotę miesięczną wraz z listą tego, co się w niej zawiera. Pracujemy z budżetami od 4&nbsp;000&nbsp;zł miesięcznie.</p></details>
+      <details open><summary>Ile kosztuje abonament?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Wycena jest indywidualna i zależy od pakietu godzin oraz zakresu. Po krótkim briefie dostajesz konkretną kwotę miesięczną wraz z listą tego, co się w niej zawiera. Pracujemy z&nbsp;budżetami od&nbsp;8&nbsp;100&nbsp;zł miesięcznie.</p></details>
       <details><summary>Co, jeśli w danym miesiącu potrzebuję czegoś innego?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Godziny nie są przypisane do jednej usługi. W jednym miesiącu może to być dzień zdjęciowy i montaż, w kolejnym sesja produktowa i paczka grafik na social media. Zakres ustalamy w planie na najbliższe tygodnie.</p></details>
-      <details><summary>Czy abonament to umowa na dłużej?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Zwykle umawiamy się na dłuższą współpracę, bo abonament działa wtedy, gdy materiały powstają w stałym rytmie. Minimalny okres i warunki wypowiedzenia ustalamy indywidualnie przy wycenie.</p></details>
+      <details><summary>Czy abonament to umowa na dłużej?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Tak, nastawiamy się na&nbsp;dłuższą współpracę – abonament przynosi najlepsze efekty, gdy materiały powstają w&nbsp;stałym, przewidywalnym rytmie.<br /><br />Dajemy Ci jednak pełne bezpieczeństwo na&nbsp;start: zaczynamy od&nbsp;3-miesięcznego okresu próbnego. W&nbsp;tym czasie my poznajemy Twoją markę od&nbsp;podszewki, a&nbsp;Ty sprawdzasz, jak pracuje się z&nbsp;naszym zespołem. Szczegółowe warunki i&nbsp;minimalny okres umowy ustalamy indywidualnie na&nbsp;etapie wyceny.</p></details>
       <details><summary>Skąd wiem, na co poszły godziny z pakietu?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Każdy miesiąc kończy się zestawieniem: lista materiałów, które powstały, i liczba godzin przy każdym z nich, wysyłane razem z fakturą. W trakcie miesiąca postęp zadań widzisz w ClickUp, a priorytety zatwierdzasz przed produkcją.</p></details>
       <details><summary>Czy możecie przejąć cały marketing?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Tak. Działamy jako zewnętrzny dział marketingu albo jako zaplecze produkcyjne dla wewnętrznego zespołu klienta. Kampanie płatne i duże koncepty kreatywne prowadzimy jako osobne projekty.</p></details>
       <details><summary>Czy pracujecie poza Trójmiastem?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Baza jest w Gdańsku, a realizacje prowadzimy w całej Polsce i za granicą.</p></details>
@@ -601,7 +620,7 @@ button{font:inherit;cursor:pointer}
       </div>
       <div class="cform__row">
         <div class="cfield">
-          <label for="ab-need">Czego potrzebujesz najczęściej?</label>
+          <label for="ab-need">Obszar</label>
           <select id="ab-need" name="need" required>
             <option value="">Wybierz obszar</option>
             <option>Wideo / motion</option><option>Foto</option><option>Grafika</option><option>Social media</option><option>Wszystko po trochu</option>
@@ -610,7 +629,7 @@ button{font:inherit;cursor:pointer}
         <div class="cfield">
           <label for="ab-package">Pakiet</label>
           <select id="ab-package" name="package">
-            <option>Nie wiem – doradźcie</option><option>30h</option><option>60h</option><option selected>120h</option><option>250h</option>
+            <option>Nie wiem – doradźcie</option><option>30h</option><option selected>60h</option><option>120h</option><option>250h</option>
           </select>
         </div>
       </div>
@@ -654,6 +673,6 @@ button{font:inherit;cursor:pointer}
 })();
 </script>
 <script src="../assets/abonament/form.js" defer></script>
-<script>document.querySelectorAll('[data-cta="pack-120"]').forEach(function(b){b.addEventListener("click",function(){var s=document.getElementById("ab-package");if(s)s.value="120h";});});</script>
+<script>document.querySelectorAll('[data-cta="pack-60"]').forEach(function(b){b.addEventListener("click",function(){var s=document.getElementById("ab-package");if(s)s.value="60h";});});</script>
 </body>
 </html>
