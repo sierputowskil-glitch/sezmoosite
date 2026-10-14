@@ -2872,15 +2872,15 @@ img.card__video { background: var(--bg-2); }
 }
 .logo-cellc:hover::after, .logo-cellc:focus-visible::after { width: 30px; }
 .logo-mark, .logo-rings {
-  height: clamp(14px, 1.25vw, 18px); width: auto; max-width: 84px; object-fit: contain;
+  height: calc(var(--k,1) * clamp(26px,2.2vw,34px)); width: auto; max-width: none; object-fit: contain;
   filter: brightness(0) invert(1); opacity: .48; transition: opacity .4s var(--ease), transform .4s var(--ease);
 }
-.logo-rings { height: clamp(14px, 1.25vw, 18px); max-width: 84px; }
+.logo-rings { height: calc(var(--k,1) * clamp(26px,2.2vw,34px)); max-width: none; }
 .logo-cellc:hover .logo-mark, .logo-cellc:hover .logo-rings { opacity: 1; transform: scale(1.06); }
 /* LIGHT theme: recolor the (white-tuned) marquee logos to black so they read on the off-white ground */
 :root[data-theme="light"] .logo-mark, :root[data-theme="light"] .logo-rings { filter: brightness(0); }
 .logo-word {
-  font-weight: 800; font-stretch: 104%; font-size: clamp(12px, 1vw, 15px);
+  font-weight: 800; font-stretch: 104%; font-size: clamp(17px, 1.5vw, 22px);
   letter-spacing: .005em; color: var(--fg-faint); transition: color .4s var(--ease);
   white-space: nowrap; text-align: center;
 }

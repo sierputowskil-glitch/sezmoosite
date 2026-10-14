@@ -8,6 +8,8 @@
 declare(strict_types=1);
 
 return [
+    '/abonament' => 'https://abonamenty.sezmoo.com/',
+    '/abonament/' => 'https://abonamenty.sezmoo.com/',
     '/identyfikacja-wizualna' => '/uslugi-marketingowe/identyfikacja-wizualna/',
     '/identyfikacja-wizualna/' => '/uslugi-marketingowe/identyfikacja-wizualna/',
     '/uslugi' => '/uslugi-marketingowe/',
