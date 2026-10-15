@@ -1,0 +1,13 @@
+---
+import BaseLayout from './../../../layouts/BaseLayout.astro';
+const pageHtml = "<section class=\"sub-hero shell\"><div class=\"sub-hero__grid\"><div><span class=\"eyebrow reveal\"><span class=\"tick\"></span>About SEZMOO</span><h1 class=\"reveal\">A production team for visual campaigns.</h1><p class=\"sub-hero__lead reveal\" data-d=\"1\">We work as an external creative-production team: from concept and shooting to content packages for social, web, events and campaigns.</p></div><div class=\"sub-panel reveal\" data-d=\"1\"><span class=\"sub-panel__label\">Based in Gdańsk</span><p>We produce video, graphic and digital assets for brands that need regular, coherent visual communication.</p></div></div></section>\n<section class=\"sub-section shell\"><div class=\"sub-head reveal\"><h2>How we work.</h2><span>[ STUDIO ]</span></div><div class=\"sub-grid\"><article class=\"sub-card reveal\"><h3>Channel-first thinking</h3><p>We plan content around where it will actually be published and measured.</p></article><article class=\"sub-card reveal\" data-d=\"1\"><h3>Production speed</h3><p>Small team, clear decisions and practical deliverables.</p></article><article class=\"sub-card reveal\" data-d=\"2\"><h3>Complete output</h3><p>Video is the axis, but campaigns need supporting formats too.</p></article></div><div class=\"sub-cta reveal\"><div><h2>Meet the team.</h2><p>See the people behind the camera, edit and visual system.</p></div><a href=\"../../en/#team\" class=\"btn btn--primary\"><span class=\"ico\"></span><span class=\"lbl\">Go to team</span></a></div></section>";
+---
+
+<BaseLayout
+  lang="en"
+  title="About us | SEZMOO"
+  description="SEZMOO is a creative production studio from Gdańsk working with video, content and campaign materials."
+  canonical="https://sezmoo.com/en/about-us/"
+>
+  <Fragment set:html={pageHtml} />
+</BaseLayout>
