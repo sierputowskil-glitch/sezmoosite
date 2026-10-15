@@ -1,0 +1,39 @@
+---
+/**
+ * Case study / realizacja pages — always loads case-study.css.
+ */
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  lang?: 'pl' | 'en';
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogType?: string;
+  ogLocale?: string;
+  keywords?: string;
+  jsonLd?: string | Record<string, unknown> | Array<Record<string, unknown>>;
+  hreflangPl?: string;
+  hreflangEn?: string;
+  altHref?: string;
+  brandHref?: string;
+  bodyClass?: string;
+  bodyId?: string;
+  extraHead?: string;
+  pageScripts?: string;
+}
+
+const props = Astro.props;
+const caseCss = '<link rel="stylesheet" href="/assets/css/case-study.css" />';
+const extraHead = [caseCss, props.extraHead].filter(Boolean).join('\n');
+---
+
+<BaseLayout
+  {...props}
+  extraHead={extraHead}
+  bodyClass={[props.bodyClass, 'case-study-page'].filter(Boolean).join(' ')}
+>
+  <slot />
+</BaseLayout>

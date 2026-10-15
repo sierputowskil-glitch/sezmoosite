@@ -1,0 +1,34 @@
+---
+/**
+ * Marketing service pages (PL /uslugi-marketingowe/**, EN /en/services/**).
+ * Thin chrome over BaseLayout — keeps CSS classes and SEO props page-owned.
+ */
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  lang?: 'pl' | 'en';
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogType?: string;
+  ogLocale?: string;
+  keywords?: string;
+  jsonLd?: string | Record<string, unknown> | Array<Record<string, unknown>>;
+  hreflangPl?: string;
+  hreflangEn?: string;
+  altHref?: string;
+  brandHref?: string;
+  bodyClass?: string;
+  bodyId?: string;
+  extraHead?: string;
+  pageScripts?: string;
+}
+
+const props = Astro.props;
+---
+
+<BaseLayout {...props} bodyClass={[props.bodyClass, 'service-page'].filter(Boolean).join(' ')}>
+  <slot />
+</BaseLayout>

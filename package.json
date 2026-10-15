@@ -20,7 +20,8 @@
     "format:check": "prettier --check .",
     "migrate:pages": "node scripts/migrate-html-to-astro.mjs",
     "dev:functions": "wrangler pages dev ./dist --compatibility-date=2026-10-15 --compatibility-flags=nodejs_compat",
-    "cf:typegen": "wrangler types"
+    "cf:typegen": "wrangler types",
+    "unstring:pages": "node scripts/unstring-pagehtml.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",
