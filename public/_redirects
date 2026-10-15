@@ -1,8 +1,12 @@
 # Cloudflare Pages redirects (from redirects.htaccess + redirects.php)
 # https://developers.cloudflare.com/pages/configuration/redirects/
-
-/abonament    https://abonamenty.sezmoo.com/  301
-/abonament/   https://abonamenty.sezmoo.com/  301
+#
+# NOTE — /abonament/: legacy CyberFolks sent this to https://abonamenty.sezmoo.com/.
+# Astro now serves the marketing page + ContactForm at /abonament/ (and /en/retainer/).
+# Do not re-add the external 301 or the form page will never be reached on CF Pages.
+#
+# NOTE — /artykul/: legacy always 301 → /blog/. An unlisted sample post still builds at
+# /artykul/ for local `astro preview` (no _redirects), but on CF Pages this redirect wins.
 
 /blog.html    /blog/    301
 /artykul.html /blog/    301
