@@ -59,6 +59,7 @@ linki/
 /scripts/*
 !/scripts/migrate-html-to-astro.mjs
 !/scripts/sync-public-assets.mjs
+!/scripts/unstring-pagehtml.mjs
 
 # Copied from assets/ by npm run sync:assets (do not commit the copy)
 /public/assets/
