@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { pageUrl } from '../lib/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const path = `/${post.id}/`;
+const canonical = pageUrl(path);
+const title = post.data.title.includes('SEZMOO')
+  ? post.data.title
+  : `${post.data.title} | SEZMOO`;
+---
+
+<ArticleLayout
+  lang={post.data.lang}
+  title={title}
+  description={post.data.description}
+  canonical={canonical}
+  ogTitle={post.data.ogTitle || title}
+  ogDescription={post.data.ogDescription || post.data.description}
+>
+  <Fragment set:html={post.body} />
+</ArticleLayout>

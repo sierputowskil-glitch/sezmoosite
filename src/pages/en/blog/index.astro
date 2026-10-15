@@ -1,14 +1,14 @@
 ---
-import BaseLayout from './../../../layouts/BaseLayout.astro';
-const pageHtml = "<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-KJFG8DZL\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n\n<p><a href=\"../../blog/\">Go to the SEZMOO blog →</a></p>";
-const pageScriptsHtml = "<script>location.replace(\"../../blog/\");</script>";
+/**
+ * EN blog alias — content is PL-first; redirect to /blog/.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { pageUrl } from '../../../lib/site';
+
+const canonical = pageUrl('/blog/');
+const pageScripts = `<script>location.replace("/blog/");</script>`;
 ---
 
-<BaseLayout
-  lang="en"
-  title="Blog – SEZMOO"
-  canonical="https://sezmoo.com/blog/"
-  pageScripts={pageScriptsHtml}
->
-  <Fragment set:html={pageHtml} />
+<BaseLayout lang="en" title="Blog – SEZMOO" canonical={canonical} pageScripts={pageScripts}>
+  <p><a href="/blog/">Go to the SEZMOO blog →</a></p>
 </BaseLayout>
