@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 /**
- * Fala 4: extract article `pageHtml` dumps into src/content/blog/*.md
- * and remove the old src/pages/<slug>/index.astro string dumps.
+ * ONE-SHOT MIGRATOR (Fala 4) — do not run in CI or day-to-day DX.
+ * Blog content now lives in src/content/blog/; re-running may overwrite edits.
  *
- * Usage:
+ * Extracted article `pageHtml` dumps into src/content/blog/*.md and removed
+ * the old src/pages/<slug>/index.astro string dumps.
+ *
+ * Usage (manual only):
  *   node scripts/migrate-blog-to-content.mjs [--dry] [--keep-pages]
  */
 import fs from 'node:fs';

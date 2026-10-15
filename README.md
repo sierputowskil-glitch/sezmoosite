@@ -9,6 +9,7 @@ Legacy CyberFolks HTML/PHP snapshot lives on branch [`legacy/cyberfolks-html`](h
 | Layer | Choice |
 | --- | --- |
 | Pages | Astro (`src/pages`, static output) |
+| Blog | `src/content/blog/` + `src/pages/[slug].astro` |
 | Assets | Root `assets/` → synced to `public/assets/` before `dev`/`build` |
 | Contact API | `functions/api/contact.ts` (CF Pages Function) |
 | Rate limit | Cloudflare KV binding `CONTACT_RATE_LIMIT` (falls back to in-memory if unbound) |
@@ -46,12 +47,13 @@ Put Turnstile + SMTP secrets in `.dev.vars` (see `.dev.vars.example`).
 | `npm run format` | Prettier write |
 | `npm run sync:assets` | Copy `assets/` → `public/assets/` (real files, not symlink) |
 | `npm run dev:functions` | Wrangler Pages Dev over `dist/` |
+| `migrate:*` / `unstring:*` | **One-shot migrators** — not for CI; see `scripts/*.mjs` headers |
 
 ## Environment
 
 **Public (build-time, `.env` / CI):**
 
-- `PUBLIC_SITE_URL` — canonical origin (`https://sezmoo.com` or GH Pages origin)
+- `PUBLIC_SITE_URL` — canonical origin (`https://sezmoo.com` or GH Pages origin). Local `.env` may use `http://localhost:4321`; **prod CI must bake `https://sezmoo.com`** (see `.github/workflows/cf-pages-prod.yml`).
 - `PUBLIC_BASE_PATH` — `/` in prod; `/sezmoosite` (repo name) on GH Pages staging
 - `PUBLIC_TURNSTILE_SITE_KEY` — Turnstile site key
 - `PUBLIC_CONTACT_API_URL` — `/api/contact` on CF; **leave empty on GH Pages staging** (form posts are disabled)
@@ -59,6 +61,16 @@ Put Turnstile + SMTP secrets in `.dev.vars` (see `.dev.vars.example`).
 **Secrets (`.dev.vars` / CF dashboard — not in git):**
 
 - `TURNSTILE_SECRET_KEY`, `SMTP_PASS`, and optional SMTP_* / `MAIL_TO` (defaults also in `wrangler.toml` `[vars]`)
+
+Verify a prod-like local build:
+
+```bash
+PUBLIC_SITE_URL=https://sezmoo.com PUBLIC_BASE_PATH=/ \
+  PUBLIC_CONTACT_API_URL=/api/contact \
+  PUBLIC_TURNSTILE_SITE_KEY=… \
+  npm run check && npm run build
+# Then: rg -n 'localhost' dist/ | head   # should be empty for canonicals/og
+```
 
 ## Hosting
 
@@ -78,6 +90,18 @@ Workflow: `.github/workflows/gh-pages-staging.yml`.
 - `PUBLIC_CONTACT_API_URL` is set to empty so the contact form does **not** pretend `/api/contact` works
 - Use staging for layout/content checks; test the form with `npm run dev:functions` or production
 
+## Cutover checklist (DNS / Cloudflare)
+
+Do these in the CF dashboard / DNS host — not automated by this repo:
+
+1. **KV** — create `CONTACT_RATE_LIMIT` (+ preview), paste IDs into `wrangler.toml` (`REPLACE_WITH_KV_*`), bind the same name on the Pages project.
+2. **Secrets** — Pages project → Settings → Variables: `TURNSTILE_SECRET_KEY`, `SMTP_PASS` (+ any SMTP_* / `MAIL_TO` overrides).
+3. **Turnstile** — allowlist production host `sezmoo.com` (and `www` if used); staging/preview hosts as needed. Site key → `PUBLIC_TURNSTILE_SITE_KEY` in the prod workflow / build env.
+4. **DNS** — point apex/`www` to Cloudflare Pages (CNAME / custom domain on the project). Keep TTL low during cutover.
+5. **Form smoke test** — after deploy: submit `/#kontakt` and `/abonament/#kontakt` (or `/en/retainer/`) with a real Turnstile token; confirm mail delivery and rate-limit headers.
+6. **Redirects** — `public/_redirects` ships with the deploy; confirm `/artykul/` → `/blog/`, DE → EN, and that `/abonament/` serves the Astro page (not the old external abonamenty host).
+7. **Canonicals** — spot-check `link rel="canonical"` and `og:url` on home + one article = `https://sezmoo.com/...` (no localhost).
+
 ## Cloudflare KV (contact rate limit)
 
 1. Create namespaces:
@@ -93,6 +117,13 @@ Workflow: `.github/workflows/gh-pages-staging.yml`.
 
 Until IDs are real, the Function falls back to an in-isolate `Map` (weaker across isolates).
 
+## URL notes
+
+- **Parity target:** ~140 `index.html` paths (legacy `legacy/cyberfolks-html` vs `dist/` after build).
+- **`/artykul/`:** production redirect → `/blog/` (legacy). Unlisted sample content may still exist for local preview; CF `_redirects` wins in production.
+- **`/abonament/`:** served by Astro (ContactForm). Legacy external redirect to `abonamenty.sezmoo.com` was removed for cutover.
+- Phone everywhere: **+48 739 260 450** (`src/lib/site.ts`, footers, mobile bar in `assets/js/app.js`).
+
 ## DX
 
 - Prettier + `prettier-plugin-astro`
@@ -102,15 +133,11 @@ Until IDs are real, the Function falls back to an in-isolate `Map` (weaker acros
 ## Repo layout
 
 ```
-assets/           # source static assets (CSS, JS, images, video)
-public/           # robots, _redirects, _headers, 404; assets copied at build
-src/pages/        # Astro routes (migrated HTML)
-src/content/blog/ # reserved for future content collections
-functions/        # CF Pages Functions (contact API)
+assets/              # source static assets (CSS, JS, images, video)
+public/              # robots, _redirects, _headers, 404; assets copied at build
+src/pages/           # Astro routes
+src/content/blog/    # article collection (SEO posts)
+src/components/      # Footer, ContactForm, …
+functions/           # CF Pages Functions (contact API)
+scripts/             # sync-public-assets + one-shot migrators
 ```
-
-## Out of scope / next (Fala 2+)
-
-- Full page rewrite from design system
-- Blog migration into `src/content` collections
-- DNS cutover

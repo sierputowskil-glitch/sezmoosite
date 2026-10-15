@@ -18,9 +18,9 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "migrate:pages": "node scripts/migrate-html-to-astro.mjs",
     "dev:functions": "wrangler pages dev ./dist --compatibility-date=2026-10-15 --compatibility-flags=nodejs_compat",
     "cf:typegen": "wrangler types",
+    "migrate:pages": "node scripts/migrate-html-to-astro.mjs",
     "unstring:pages": "node scripts/unstring-pagehtml.mjs",
     "migrate:blog": "node scripts/migrate-blog-to-content.mjs"
   },

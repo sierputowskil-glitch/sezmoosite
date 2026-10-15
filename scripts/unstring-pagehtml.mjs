@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 /**
- * Fala 3: convert `const pageHtml` + `<Fragment set:html>` dumps into real Astro markup.
+ * ONE-SHOT MIGRATOR (Fala 3) — do not run in CI or day-to-day DX.
+ * Pages are already Astro markup; re-running may clobber hand edits.
  *
- * Usage:
+ * Converted `const pageHtml` + `<Fragment set:html>` dumps into real Astro markup.
+ *
+ * Usage (manual only):
  *   node scripts/unstring-pagehtml.mjs [--dry] [glob-or-path...]
  *
  * Default targets: services, portfolio, case studies, retainers, about/privacy.

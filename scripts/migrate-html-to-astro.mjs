@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 /**
- * One-shot / re-runnable migrator: legacy HTML index pages (+ a few flat .html)
- * into src/pages/*.astro wrapping BaseLayout, preserving URL slugs.
+ * ONE-SHOT MIGRATOR (Fala 1–2) — do not run in CI or day-to-day DX.
+ * Kept for archaeology / re-import from a legacy HTML tree if needed.
+ *
+ * Legacy HTML index pages (+ a few flat .html) → src/pages/*.astro wrapping
+ * BaseLayout, preserving URL slugs.
  *
  * Skips vendor, node_modules, public, dist, src.
- * Does not delete legacy HTML (PHP form still works until cutover).
  */
 import fs from 'node:fs';
 import path from 'node:path';
