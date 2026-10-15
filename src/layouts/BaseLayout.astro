@@ -1,0 +1,178 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  lang?: 'pl' | 'en';
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogType?: string;
+  ogLocale?: string;
+  keywords?: string;
+  jsonLd?: string | Record<string, unknown> | Array<Record<string, unknown>>;
+  hreflangPl?: string;
+  hreflangEn?: string;
+  altHref?: string;
+  brandHref?: string;
+  bodyClass?: string;
+  bodyId?: string;
+  extraHead?: string;
+  includeFooter?: boolean;
+  pageScripts?: string;
+}
+
+const {
+  lang = 'pl',
+  title,
+  description = '',
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogType = 'website',
+  ogLocale = lang === 'pl' ? 'pl_PL' : 'en_US',
+  keywords,
+  jsonLd,
+  hreflangPl,
+  hreflangEn,
+  altHref,
+  brandHref,
+  bodyClass = '',
+  bodyId = 'top',
+  extraHead = '',
+  includeFooter = true,
+  pageScripts = '',
+} = Astro.props;
+
+const siteUrl = (import.meta.env.PUBLIC_SITE_URL || 'https://sezmoo.com').replace(/\/$/, '');
+const contactApi =
+  import.meta.env.PUBLIC_CONTACT_API_URL || '/api/contact';
+const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
+const canon = canonical || new URL(Astro.url.pathname, siteUrl + '/').href;
+const ogImg = `${siteUrl}/assets/og-image.png`;
+
+const jsonLdBlocks: string[] = [];
+if (typeof jsonLd === 'string' && jsonLd.trim()) {
+  jsonLdBlocks.push(jsonLd);
+} else if (jsonLd && typeof jsonLd === 'object') {
+  jsonLdBlocks.push(JSON.stringify(jsonLd));
+}
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google Tag Manager -->
+  <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KJFG8DZL');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/favicon.png" sizes="any" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#16130e" />
+  <meta property="og:image" content={ogImg} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={ogImg} />
+  {hreflangPl && <link rel="alternate" hreflang="pl" href={hreflangPl} />}
+  {hreflangEn && <link rel="alternate" hreflang="en" href={hreflangEn} />}
+  {(hreflangPl || hreflangEn) && (
+    <link rel="alternate" hreflang="x-default" href={hreflangPl || hreflangEn} />
+  )}
+  <script is:inline>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  {description && <meta name="description" content={description} />}
+  {keywords && <meta name="keywords" content={keywords} />}
+  <link rel="canonical" href={canon} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:locale" content={ogLocale} />
+  <meta property="og:site_name" content="SEZMOO" />
+  <meta property="og:title" content={ogTitle || title} />
+  {ogDescription || description ? (
+    <meta property="og:description" content={ogDescription || description} />
+  ) : null}
+  <meta property="og:url" content={canon} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://i.ytimg.com" />
+  <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  {jsonLdBlocks.map((block) => (
+    <script type="application/ld+json" set:html={block} />
+  ))}
+  {extraHead && <Fragment set:html={extraHead} />}
+  <script is:inline define:vars={{ turnstileKey, contactApi }}>
+    window.__SEZMOO__ = {
+      turnstileSiteKey: turnstileKey,
+      contactApiUrl: contactApi,
+    };
+  </script>
+</head>
+<body id={bodyId} class={bodyClass}>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-KJFG8DZL"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+    ></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="grain"></div>
+  <div class="vignette"></div>
+  <div class="cursor">PLAY</div>
+  <div class="cursor-dot"></div>
+  <div class="scrubber"><div class="scrubber__fill"><span class="scrubber__head"></span></div></div>
+  <canvas class="flow-bg-canvas" id="flow-bg-canvas" aria-hidden="true"></canvas>
+
+  <div class="floating-socials" aria-label="Social media">
+    <a href="https://www.instagram.com/sezmoo/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+    <a href="https://www.facebook.com/sezmooagencja" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+    <a href="https://www.youtube.com/@sezmooagency" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+    <a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+  </div>
+  <a class="scroll-top" href="#top" aria-label={lang === 'pl' ? 'Przewiń do góry' : 'Back to top'}>↑</a>
+
+  <Nav lang={lang} altHref={altHref} brandHref={brandHref} />
+
+  <main>
+    <slot />
+    {includeFooter && <Footer lang={lang} />}
+  </main>
+
+  <script src="/assets/js/flowing-background.js" is:inline></script>
+  <script src="/assets/js/app.js" is:inline></script>
+  <script is:inline>
+  (function () {
+    var root = document.documentElement;
+    var opts = [].slice.call(document.querySelectorAll('[data-theme-set]'));
+    function apply(t) {
+      root.setAttribute('data-theme', t);
+      try { localStorage.setItem('sezmoo-theme', t); } catch (e) {}
+      opts.forEach(function (b) {
+        var on = b.getAttribute('data-theme-set') === t;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
+    opts.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-theme-set')); });
+    });
+    apply(root.getAttribute('data-theme') || 'dark');
+  })();
+  </script>
+  {pageScripts && <Fragment set:html={pageScripts} />}
+</body>
+</html>

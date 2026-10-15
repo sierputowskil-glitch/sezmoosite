@@ -1,0 +1,72 @@
+---
+interface Props {
+  lang?: 'pl' | 'en';
+  /** Absolute path of the alternate-language page (with trailing slash), or home hash */
+  altHref?: string;
+  brandHref?: string;
+}
+const {
+  lang = 'pl',
+  altHref = lang === 'pl' ? '/en/' : '/',
+  brandHref = lang === 'pl' ? '/#hero' : '/en/#hero',
+} = Astro.props;
+
+const isPl = lang === 'pl';
+const home = isPl ? '/' : '/en/';
+---
+
+<nav class="nav">
+  <a class="brand" href={brandHref} aria-label="SEZMOO">
+    <img class="brand__logo" src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+  </a>
+  <div class="nav__menu" id="main-menu">
+    {isPl ? (
+      <>
+        <a href="/portfolio/">Portfolio</a>
+        <a href="/uslugi-marketingowe/">Usługi</a>
+        <a href={`${home}#team`}>Zespół</a>
+        <a href={`${home}#opinie`}>Opinie</a>
+        <a href="/blog/">Blog</a>
+        <a href={`${home}#kontakt`}>Kontakt</a>
+      </>
+    ) : (
+      <>
+        <a href="/en/portfolio-en/">Portfolio</a>
+        <a href="/en/services/">Services</a>
+        <a href={`${home}#team`}>Team</a>
+        <a href={`${home}#opinie`}>Testimonials</a>
+        <a href="/blog/">Blog</a>
+        <a href={`${home}#kontakt`}>Contact</a>
+      </>
+    )}
+  </div>
+  <div class="nav__right">
+    <div class="nav__tc"><span class="live">●&nbsp;REC</span><span class="label" data-tc>00:00:12:08</span></div>
+    <div class="nav__theme" role="group" aria-label="Motyw / Theme">
+      <button class="nav__theme-opt" data-theme-set="dark" type="button" aria-label="Ciemny motyw">DARK</button>
+      <button class="nav__theme-opt" data-theme-set="light" type="button" aria-label="Jasny motyw">LIGHT</button>
+    </div>
+    <div class="nav__lang" role="group" aria-label="Język / Language">
+      {isPl ? (
+        <>
+          <a class="nav__lang-opt is-active" href={brandHref} aria-current="page">PL</a>
+          <a class="nav__lang-opt" href={altHref}>EN</a>
+        </>
+      ) : (
+        <>
+          <a class="nav__lang-opt" href={altHref}>PL</a>
+          <a class="nav__lang-opt is-active" href={brandHref} aria-current="page">EN</a>
+        </>
+      )}
+    </div>
+    <button
+      class="nav__burger"
+      type="button"
+      aria-label={isPl ? 'Otwórz menu' : 'Open menu'}
+      aria-expanded="false"
+      aria-controls="main-menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,25 @@
+# Cloudflare Pages — local `wrangler pages dev` + dashboard deploy
+name = "sezmoo"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-15"
+compatibility_flags = ["nodejs_compat"]
+
+# Secrets (dashboard / `wrangler pages secret put` / `.dev.vars`):
+#   TURNSTILE_SECRET_KEY
+#   SMTP_PASS
+#
+# Optional vars (can also live in dashboard):
+#   SMTP_HOST=smtp.cyberfolks.pl
+#   SMTP_PORT=587
+#   SMTP_USER=no-reply@sezmoo.com
+#   SMTP_FROM=no-reply@sezmoo.com
+#   SMTP_FROM_NAME=SEZMOO
+#   MAIL_TO=biuro@sezmoo.com
+
+[vars]
+SMTP_HOST = "smtp.cyberfolks.pl"
+SMTP_PORT = "587"
+SMTP_USER = "no-reply@sezmoo.com"
+SMTP_FROM = "no-reply@sezmoo.com"
+SMTP_FROM_NAME = "SEZMOO"
+MAIL_TO = "biuro@sezmoo.com"

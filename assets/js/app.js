@@ -1023,13 +1023,21 @@
 
   function getSiteKey() {
     if (siteKeyPromise) return siteKeyPromise;
-    siteKeyPromise = fetch("/public-config.php", { cache: "no-store" })
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        var k = d && d.turnstileSiteKey ? String(d.turnstileSiteKey) : "";
-        if (!k || k === "0x4AAAAA..." || k.indexOf("...") !== -1) throw new Error("no-sitekey");
-        return k;
-      });
+    siteKeyPromise = Promise.resolve().then(function () {
+      var fromEnv = (window.__SEZMOO__ && window.__SEZMOO__.turnstileSiteKey)
+        ? String(window.__SEZMOO__.turnstileSiteKey)
+        : "";
+      if (fromEnv && fromEnv !== "0x4AAAAA..." && fromEnv.indexOf("...") === -1) {
+        return fromEnv;
+      }
+      return fetch("/public-config.php", { cache: "no-store" })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          var k = d && d.turnstileSiteKey ? String(d.turnstileSiteKey) : "";
+          if (!k || k === "0x4AAAAA..." || k.indexOf("...") !== -1) throw new Error("no-sitekey");
+          return k;
+        });
+    });
     return siteKeyPromise;
   }
 
@@ -1210,7 +1218,10 @@
 
       runChallenge()
         .then(function () {
-          return fetch(f.getAttribute("action") || "/send.php", {
+          var endpoint = (window.__SEZMOO__ && window.__SEZMOO__.contactApiUrl)
+            || f.getAttribute("action")
+            || "/api/contact";
+          return fetch(endpoint, {
             method: "POST",
             body: new FormData(f)
           });

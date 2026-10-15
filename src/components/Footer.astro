@@ -1,0 +1,75 @@
+---
+interface Props {
+  lang?: 'pl' | 'en';
+}
+const { lang = 'pl' } = Astro.props;
+const isPl = lang === 'pl';
+---
+
+<footer class="footer shell">
+  <div class="footer__panel">
+    <div class="footer__top">
+      <a class="footer__brand" href="#top" aria-label="SEZMOO">
+        <img src="/assets/brand/sezmoo-logo-wy.svg" alt="SEZMOO" />
+      </a>
+      <div class="footer__statement">
+        {isPl ? (
+          <>
+            <span>AGENCJA KREATYWNA · GDAŃSK · TRÓJMIASTO</span>
+            <p>Offline i&nbsp;online marketing w&nbsp;jednym miejscu.</p>
+          </>
+        ) : (
+          <>
+            <span>CREATIVE AGENCY · GDAŃSK · TRICITY</span>
+            <p>Offline and online marketing in one place.</p>
+          </>
+        )}
+      </div>
+    </div>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <span class="footer__label">{isPl ? 'Kontakt' : 'Contact'}</span>
+        <a href="mailto:biuro@sezmoo.com">biuro@sezmoo.com</a>
+        <a href="tel:+48502260450">+48 502 260 450</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Studio</span>
+        {isPl ? (
+          <>
+            <a href="/portfolio/">Realizacje</a>
+            <a href="/uslugi-marketingowe/">Usługi</a>
+            <a href="/#team">Zespół</a>
+            <a href="/#opinie">Opinie</a>
+            <a href="/blog/">Blog</a>
+          </>
+        ) : (
+          <>
+            <a href="/en/portfolio-en/">Work</a>
+            <a href="/en/services/">Services</a>
+            <a href="/en/#team">Team</a>
+            <a href="/en/#opinie">Testimonials</a>
+            <a href="/blog/">Blog</a>
+          </>
+        )}
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Social</span>
+        <a href="https://www.instagram.com/sezmoo/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/sezmooagencja" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.youtube.com/@sezmooagency" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/company/sezmoo/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">{isPl ? 'Adres' : 'Address'}</span>
+        <p>Zeusa 34<br />80-299 Gdańsk</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 SEZMOO · {isPl ? 'WSZELKIE PRAWA ZASTRZEŻONE' : 'ALL RIGHTS RESERVED'}</span>
+      <a class="footer__legal" href={isPl ? '/polityka-prywatnosci/' : '/en/privacy-policy/'}>
+        {isPl ? 'Polityka prywatności' : 'Privacy policy'}
+      </a>
+      <a href="#top">{isPl ? 'Do góry' : 'Back to top'}</a>
+    </div>
+  </div>
+</footer>

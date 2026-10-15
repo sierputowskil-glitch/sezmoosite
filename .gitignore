@@ -50,10 +50,14 @@ $RECYCLE.BIN/
 .env
 .env.*
 !.env.example
+.dev.vars
 config.local.php
 logs/
-scripts/
 linki/
+
+# Legacy local helper scripts (keep Astro migrator)
+/scripts/*
+!/scripts/migrate-html-to-astro.mjs
 
 # Apache — local only; do not commit
 .htaccess
@@ -62,3 +66,5 @@ linki/
 node_modules/
 dist/
 .cache/
+.astro/
+.wrangler/
