@@ -1,0 +1,38 @@
+---
+/**
+ * Blog / SEO article chrome — BaseLayout + article body slot.
+ * Body HTML lives in the content collection; this layout owns SEO props.
+ */
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  lang?: 'pl' | 'en';
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogType?: string;
+  ogLocale?: string;
+  keywords?: string;
+  jsonLd?: string | Record<string, unknown> | Array<Record<string, unknown>>;
+  hreflangPl?: string;
+  hreflangEn?: string;
+  altHref?: string;
+  brandHref?: string;
+  bodyClass?: string;
+  bodyId?: string;
+  extraHead?: string;
+  pageScripts?: string;
+}
+
+const props = Astro.props;
+---
+
+<BaseLayout
+  {...props}
+  ogType={props.ogType || 'article'}
+  bodyClass={[props.bodyClass, 'article-page'].filter(Boolean).join(' ')}
+>
+  <slot />
+</BaseLayout>

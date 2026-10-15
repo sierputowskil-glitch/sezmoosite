@@ -58,6 +58,7 @@ linki/
 # Local helper scripts (keep tracked tooling)
 /scripts/*
 !/scripts/migrate-html-to-astro.mjs
+!/scripts/migrate-blog-to-content.mjs
 !/scripts/sync-public-assets.mjs
 !/scripts/unstring-pagehtml.mjs
 

@@ -1,18 +1,28 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-/**
- * Hybrid blog scaffold for Fala 2+ — not populated yet.
- * Pages still live under src/pages; migrate to collections later.
- */
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    pubDate: z.coerce.date().optional(),
-    draft: z.boolean().default(false),
+    /** Publication date (UTC noon to avoid TZ off-by-one in listings). */
+    date: z.coerce.date(),
+    /** Filter key used on /blog/ topic chips. */
+    topic: z.enum(['strategy', 'production', 'social']),
+    /** Display label in meta row, e.g. STRATEGIA. */
+    topicLabel: z.string().optional(),
     lang: z.enum(['pl', 'en']).default('pl'),
+    draft: z.boolean().default(false),
+    /** When false, page still builds at /slug/ but is omitted from /blog/ listings. */
+    listed: z.boolean().default(true),
+    featured: z.boolean().default(false),
+    heroImage: z.string().optional(),
+    heroAlt: z.string().optional(),
+    heroCaption: z.string().optional(),
+    readingTime: z.number().int().positive().optional(),
+    ogTitle: z.string().optional(),
+    ogDescription: z.string().optional(),
   }),
 });
 
