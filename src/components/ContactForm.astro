@@ -1,0 +1,132 @@
+---
+/**
+ * Shared contact form (home + reusable).
+ * Posts to PUBLIC_CONTACT_API_URL via app.js (window.__SEZMOO__.contactApiUrl).
+ * Empty API URL = staging disabled message (handled client-side).
+ */
+interface Props {
+  lang?: 'pl' | 'en';
+  /** Optional id override when multiple forms could appear */
+  formId?: string;
+  class?: string;
+}
+
+const { lang = 'pl', formId = 'contact-form', class: className = 'cform reveal' } = Astro.props;
+const isPl = lang === 'pl';
+
+const contactApiRaw = import.meta.env.PUBLIC_CONTACT_API_URL;
+const contactApi =
+  contactApiRaw === undefined || contactApiRaw === null
+    ? '/api/contact'
+    : String(contactApiRaw);
+
+const privacyHref = isPl ? '/polityka-prywatnosci/' : '/en/privacy-policy/';
+
+const copy = isPl
+  ? {
+      honeypot: 'Nie wypełniaj:',
+      name: 'Imię i nazwisko',
+      namePh: 'Jan Kowalski',
+      phone: 'Telefon',
+      email: 'E-mail',
+      emailPh: 'ty@firma.pl',
+      need: 'Czego potrzebujesz?',
+      needPh: 'Wybierz obszar',
+      needs: [
+        'Wideo / motion',
+        'Kampania / content',
+        'Social media',
+        'Design / grafika',
+        'Strona / landing page',
+        'Nie wiem, chcę pogadać',
+      ],
+      message: 'Wiadomość',
+      messagePh: 'Opowiedz nam o projekcie...',
+      consentBefore: 'Wyrażam zgodę na\u00a0przetwarzanie moich danych w\u00a0celu kontaktu, zgodnie z\u00a0',
+      consentLink: 'polityką prywatności',
+      consentAfter: ' SEZMOO.',
+      submit: 'Wyślij wiadomość',
+      note: '● REC · Odpowiadamy w\u00a0ciągu 24h',
+    }
+  : {
+      honeypot: "Don't fill this:",
+      name: 'Full name',
+      namePh: 'John Smith',
+      phone: 'Phone',
+      email: 'E-mail',
+      emailPh: 'you@company.com',
+      need: 'What do you need?',
+      needPh: 'Choose an area',
+      needs: [
+        'Video / motion',
+        'Campaign / content',
+        'Social media',
+        'Design / graphics',
+        'Website / landing page',
+        "Not sure, let's talk",
+      ],
+      message: 'Message',
+      messagePh: 'Tell us about your project...',
+      consentBefore:
+        "I agree to the processing of my data for contact purposes, in line with SEZMOO's ",
+      consentLink: 'privacy policy',
+      consentAfter: '.',
+      submit: 'Send message',
+      note: '● REC · We reply within 24h',
+    };
+---
+
+<form
+  class={className}
+  data-d="1"
+  id={formId}
+  name="contact"
+  method="POST"
+  action={contactApi || '#'}
+  novalidate
+>
+  <input type="hidden" name="lang" value={lang} />
+  <p hidden aria-hidden="true">
+    <label
+      >{copy.honeypot}
+      <input name="bot-field" tabindex="-1" autocomplete="off" /></label
+    >
+  </p>
+  <div class="cform__row">
+    <div class="cfield">
+      <label for="cf-name">{copy.name}</label>
+      <input id="cf-name" name="name" type="text" placeholder={copy.namePh} required />
+    </div>
+    <div class="cfield">
+      <label for="cf-phone">{copy.phone}</label>
+      <input id="cf-phone" name="phone" type="tel" placeholder="+48 ..." />
+    </div>
+  </div>
+  <div class="cfield">
+    <label for="cf-email">{copy.email}</label>
+    <input id="cf-email" name="email" type="email" placeholder={copy.emailPh} required />
+  </div>
+  <div class="cfield">
+    <label for="cf-need">{copy.need}</label>
+    <select id="cf-need" name="need" required>
+      <option value="">{copy.needPh}</option>
+      {copy.needs.map((opt) => <option>{opt}</option>)}
+    </select>
+  </div>
+  <div class="cfield">
+    <label for="cf-msg">{copy.message}</label>
+    <textarea id="cf-msg" name="message" placeholder={copy.messagePh} minlength="10" required
+    ></textarea>
+  </div>
+  <label class="cconsent">
+    <input type="checkbox" name="consent" value="1" required />
+    <span>
+      {copy.consentBefore}<a href={privacyHref} target="_blank" rel="noopener">{copy.consentLink}</a
+      >{copy.consentAfter}
+    </span>
+  </label>
+  <button class="btn btn--primary" type="submit"
+    ><span class="ico"></span><span class="lbl">{copy.submit}</span></button
+  >
+  <p class="cform__note" id="cf-note">{copy.note}</p>
+</form>
