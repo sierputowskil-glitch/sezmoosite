@@ -1,14 +1,365 @@
 ---
-import BaseLayout from './../../../layouts/BaseLayout.astro';
-const pageHtml = "<div class=\"sd\">\n<section class=\"sd__hero shell\">\n  <span class=\"sd__kick reveal\"><i></i>Usługi</span>\n  <h1 class=\"sd__h1 reveal\">Obsługa <span style=\"color:#ffd200\">social media.</span></h1>\n  <p class=\"sd__lead reveal\" data-d=\"1\"><b>Obsługa social media łączy kompetencje całego zespołu SEZMOO.</b></p>\n  <p class=\"sd__lead reveal\" data-d=\"1\">Dzięki własnemu zapleczu foto, wideo i&nbsp;graficznemu możemy prowadzić komunikację i&nbsp;jednocześnie tworzyć materiały, których ta komunikacja potrzebuje.</p>\n  <div class=\"sd__facts reveal\" data-d=\"2\">\n    <div class=\"sd__fact\"><span>Zakres</span><strong>Strategia · content · Ads</strong></div>\n    <div class=\"sd__fact\"><span>Copywriting</span><strong>Teksty po&nbsp;naszej stronie</strong></div>\n    <div class=\"sd__fact\"><span>Kontakt</span><strong>Jeden project manager</strong></div>\n    <div class=\"sd__fact\"><span>Dane</span><strong>Analiza i&nbsp;raporty</strong></div>\n  </div>\n  <figure class=\"sd__reel reveal\" data-d=\"1\">\n    <img src=\"/assets/work/byd.jpg\" alt=\"BYD Plichta\" loading=\"eager\" fetchpriority=\"high\" />\n    <figcaption><b>BYD Plichta</b><span>Social wideo / launch content</span></figcaption>\n  </figure>\n</section>\n<div class=\"sd__body shell\">\n  <div>\n    <section class=\"sd__blk\" id=\"sd-zakres\">\n      <div class=\"sd__blkh reveal\"><h2>Co robimy</h2></div>\n      <details class=\"sd__g reveal\" open><summary><h3>Strategia social media</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Planujemy kierunek komunikacji marki w&nbsp;social media – od&nbsp;grup odbiorców i&nbsp;języka marki po&nbsp;filary contentowe i&nbsp;sposób wykorzystania poszczególnych kanałów.</p><div class=\"sd__tags\"><span>Strategia social media</span><span>Audyt</span><span>Grupy docelowe</span><span>Tone of voice</span><span>Filary komunikacji</span><span>Koncepcja contentu</span></div></div></details>\n      <details class=\"sd__g reveal\" open><summary><h3>Prowadzenie social media</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Przejmujemy regularną obsługę profili – planujemy komunikację, przygotowujemy harmonogram, publikujemy treści i&nbsp;dbamy o&nbsp;bieżące działania na&nbsp;kanałach.</p><div class=\"sd__tags\"><span>Prowadzenie social media</span><span>Harmonogram publikacji</span><span>Publikacja postów</span><span>Planowanie treści</span><span>Moderacja</span><span>Community management</span></div></div></details>\n      <details class=\"sd__g reveal\" open><summary><h3>Tworzenie contentu</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Content tworzymy we&nbsp;własnym zespole – od&nbsp;pomysłu i&nbsp;copywritingu po&nbsp;grafikę, fotografię, reels i&nbsp;większe produkcje wideo.</p><div class=\"sd__tags\"><span>Copywriting</span><span>Reels</span><span>Fotografia</span><span>Wideo</span><span>Grafika</span><span>Stories</span><span>Karuzele</span><span>Animacje</span></div></div></details>\n      <details class=\"sd__g reveal\"><summary><h3>Publikacja i&nbsp;moderacja</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Dbamy o&nbsp;to, żeby przygotowany content faktycznie trafił na&nbsp;kanały – zgodnie z&nbsp;harmonogramem, formatem i&nbsp;specyfiką danej platformy. Prowadzimy również bieżącą moderację i&nbsp;komunikację z&nbsp;odbiorcami.</p><div class=\"sd__tags\"><span>Publikacja</span><span>Planowanie postów</span><span>Moderacja komentarzy</span><span>Wiadomości</span><span>Community management</span><span>Monitoring</span></div></div></details>\n      <details class=\"sd__g reveal\"><summary><h3>Raportowanie i&nbsp;optymalizacja</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Analizujemy wyniki publikowanych treści i&nbsp;wykorzystujemy dane do&nbsp;planowania kolejnych działań oraz rozwoju komunikacji.</p><div class=\"sd__tags\"><span>Raporty</span><span>Analityka</span><span>Zasięg</span><span>Zaangażowanie</span><span>Wyniki contentu</span><span>Optymalizacja</span></div></div></details>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-proces\">\n      <div class=\"sd__blkh reveal\"><h2>Od planu do&nbsp;<span style=\"color:#ffd200\">publikacji.</span></h2></div>\n      <div class=\"sd__steps\">\n        <div class=\"sd__step reveal\"><h3>Strategia</h3><p>Ustalamy kierunek, cele i&nbsp;sposób komunikacji.</p></div>\n        <div class=\"sd__step reveal\"><h3>Harmonogram</h3><p>Planujemy tematy i&nbsp;publikacje na&nbsp;kolejny okres.</p></div>\n        <div class=\"sd__step reveal\"><h3>Content</h3><p>Tworzymy copy, grafikę, foto i&nbsp;wideo.</p></div>\n        <div class=\"sd__step reveal\"><h3>Publikacja i&nbsp;moderacja</h3><p>Prowadzimy kanały i&nbsp;bieżącą komunikację.</p></div>\n        <div class=\"sd__step reveal\"><h3>Analiza</h3><p>Sprawdzamy wyniki i&nbsp;planujemy kolejne działania.</p></div>\n      </div>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-zespol\">\n      <div class=\"sd__blkh reveal\"><h2>Wszystko w&nbsp;jednym <span style=\"color:#ffd200\">zespole.</span></h2></div>\n      <div class=\"sd__steps\">\n        <div class=\"sd__step reveal\"><h3>Social media</h3><p>Strategia, harmonogram, publikacja i&nbsp;moderacja.</p></div>\n        <div class=\"sd__step reveal\"><h3>Copywriting</h3><p>Posty, kampanie i&nbsp;scenariusze.</p></div>\n        <div class=\"sd__step reveal\"><h3>Design</h3><p>Grafiki, karuzele i&nbsp;animacje.</p></div>\n        <div class=\"sd__step reveal\"><h3>Foto</h3><p>Sesje produktowe, wizerunkowe i&nbsp;eventowe.</p></div>\n        <div class=\"sd__step reveal\"><h3>Wideo</h3><p>Reels, reklamy i&nbsp;produkcje contentowe.</p></div>\n      </div>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-work\">\n      <div class=\"sd__blkh reveal\"><h2>Realizacje</h2></div>\n      <div class=\"sd__work\">\n        <a class=\"sd__wi reveal\" href=\"../../portfolio/?cat=grafika#pt-grid\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/plichta/oj-omoda7-1.jpg\" alt=\"Plichta – Content · Social media\" loading=\"lazy\" /></div><span>Content · Social media</span><h3>Plichta ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../realizacja-primespot/\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/primespot/pjur-blue-story-1.jpg\" alt=\"PrimeSpot – Stories · Kampania\" loading=\"lazy\" /></div><span>Stories · Kampania</span><h3>PrimeSpot ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../realizacja/?v=tvTuMX3mxG4\"><div class=\"sd__wm\"><img src=\"/assets/work/baltic-robert-2.avif\" alt=\"Baltic Towers – Employer branding · Wideo\" loading=\"lazy\" /></div><span>Employer branding · Wideo</span><h3>Baltic Towers ↗</h3></a>\n      </div>\n      <div class=\"sd__more reveal\">\n        <a class=\"is-lead\" href=\"../../portfolio/#pt-grid\">Całe portfolio ↗</a>\n        <a href=\"../../portfolio/?cat=video#pt-grid\">Wideo</a>\n        <a href=\"../../portfolio/?cat=animacje#pt-grid\">Animacje</a>\n        <a href=\"../../portfolio/?cat=eventy#pt-grid\">Eventy</a>\n        <a href=\"../../portfolio/?cat=grafika#pt-grid\">Grafika</a>\n      </div>\n    </section>\n  </div>\n</div>\n</div>";
+import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import { pageUrl } from '../../../lib/site';
+
+const lang = 'pl' as const;
+const canonical = pageUrl('/uslugi-marketingowe/obsluga-social-media/');
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Obsługa social media",
+  "serviceType": "Obsługa social media",
+  "url": "https://sezmoo.com/uslugi-marketingowe/obsluga-social-media/",
+  "inLanguage": "pl-PL",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Polska"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SEZMOO",
+    "url": "https://sezmoo.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gdańsk",
+      "addressCountry": "PL"
+    },
+    "email": "biuro@sezmoo.com",
+    "telephone": "+48739260450"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Obsługa social media",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Strategia social media",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Strategia social media"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audyt"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Grupy docelowe"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tone of voice"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Filary komunikacji"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Koncepcja contentu"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Prowadzenie social media",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Prowadzenie social media"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Harmonogram publikacji"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Publikacja postów"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Planowanie treści"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Moderacja"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Community management"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Tworzenie contentu",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Copywriting"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reels"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fotografia"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wideo"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Grafika"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stories"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Karuzele"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Animacje"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Publikacja i moderacja",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Publikacja"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Planowanie postów"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Moderacja komentarzy"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wiadomości"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Community management"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Monitoring"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Raportowanie i optymalizacja",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Raporty"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Analityka"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Zasięg"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Zaangażowanie"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wyniki contentu"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optymalizacja"
+            }
+          }
+        ]
+      }
+    ]
+  }
+};
 ---
 
-<BaseLayout
-  lang="pl"
+<ServiceLayout
+  lang={lang}
   title="Social media i kampanie płatne (Ads) dla marek | SEZMOO"
   description="Obsługa social media w SEZMOO: strategia, prowadzenie profili, produkcja contentu, publikacja i moderacja oraz raportowanie. Foto, wideo i grafika z własnego zespołu. Gdańsk."
-  canonical="https://sezmoo.com/uslugi-marketingowe/obsluga-social-media/"
-  jsonLd={"{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Obsługa social media\",\"serviceType\":\"Obsługa social media\",\"url\":\"https://sezmoo.com/uslugi-marketingowe/obsluga-social-media/\",\"inLanguage\":\"pl-PL\",\"areaServed\":{\"@type\":\"Country\",\"name\":\"Polska\"},\"provider\":{\"@type\":\"Organization\",\"name\":\"SEZMOO\",\"url\":\"https://sezmoo.com/\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Gdańsk\",\"addressCountry\":\"PL\"},\"email\":\"biuro@sezmoo.com\",\"telephone\":\"+48502260450\"},\"hasOfferCatalog\":{\"@type\":\"OfferCatalog\",\"name\":\"Obsługa social media\",\"itemListElement\":[{\"@type\":\"OfferCatalog\",\"name\":\"Strategia social media\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Strategia social media\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Audyt\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Grupy docelowe\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Tone of voice\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Filary komunikacji\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Koncepcja contentu\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Prowadzenie social media\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Prowadzenie social media\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Harmonogram publikacji\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Publikacja postów\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Planowanie treści\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Moderacja\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Community management\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Tworzenie contentu\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Copywriting\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Reels\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Fotografia\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Wideo\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Grafika\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Stories\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Karuzele\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Animacje\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Publikacja i moderacja\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Publikacja\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Planowanie postów\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Moderacja komentarzy\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Wiadomości\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Community management\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Monitoring\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Raportowanie i optymalizacja\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Raporty\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Analityka\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Zasięg\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Zaangażowanie\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Wyniki contentu\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Optymalizacja\"}}]}]}}"}
+  canonical={canonical}
+  jsonLd={jsonLd}
 >
-  <Fragment set:html={pageHtml} />
-</BaseLayout>
+<div class="sd">
+<section class="sd__hero shell">
+  <span class="sd__kick reveal"><i></i>Usługi</span>
+  <h1 class="sd__h1 reveal">Obsługa <span style="color:#ffd200">social media.</span></h1>
+  <p class="sd__lead reveal" data-d="1"><b>Obsługa social media łączy kompetencje całego zespołu SEZMOO.</b></p>
+  <p class="sd__lead reveal" data-d="1">Dzięki własnemu zapleczu foto, wideo i&nbsp;graficznemu możemy prowadzić komunikację i&nbsp;jednocześnie tworzyć materiały, których ta komunikacja potrzebuje.</p>
+  <div class="sd__facts reveal" data-d="2">
+    <div class="sd__fact"><span>Zakres</span><strong>Strategia · content · Ads</strong></div>
+    <div class="sd__fact"><span>Copywriting</span><strong>Teksty po&nbsp;naszej stronie</strong></div>
+    <div class="sd__fact"><span>Kontakt</span><strong>Jeden project manager</strong></div>
+    <div class="sd__fact"><span>Dane</span><strong>Analiza i&nbsp;raporty</strong></div>
+  </div>
+  <figure class="sd__reel reveal" data-d="1">
+    <img src="/assets/work/byd.jpg" alt="BYD Plichta" loading="eager" fetchpriority="high" />
+    <figcaption><b>BYD Plichta</b><span>Social wideo / launch content</span></figcaption>
+  </figure>
+</section>
+<div class="sd__body shell">
+  <div>
+    <section class="sd__blk" id="sd-zakres">
+      <div class="sd__blkh reveal"><h2>Co robimy</h2></div>
+      <details class="sd__g reveal" open><summary><h3>Strategia social media</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Planujemy kierunek komunikacji marki w&nbsp;social media – od&nbsp;grup odbiorców i&nbsp;języka marki po&nbsp;filary contentowe i&nbsp;sposób wykorzystania poszczególnych kanałów.</p><div class="sd__tags"><span>Strategia social media</span><span>Audyt</span><span>Grupy docelowe</span><span>Tone of voice</span><span>Filary komunikacji</span><span>Koncepcja contentu</span></div></div></details>
+      <details class="sd__g reveal" open><summary><h3>Prowadzenie social media</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Przejmujemy regularną obsługę profili – planujemy komunikację, przygotowujemy harmonogram, publikujemy treści i&nbsp;dbamy o&nbsp;bieżące działania na&nbsp;kanałach.</p><div class="sd__tags"><span>Prowadzenie social media</span><span>Harmonogram publikacji</span><span>Publikacja postów</span><span>Planowanie treści</span><span>Moderacja</span><span>Community management</span></div></div></details>
+      <details class="sd__g reveal" open><summary><h3>Tworzenie contentu</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Content tworzymy we&nbsp;własnym zespole – od&nbsp;pomysłu i&nbsp;copywritingu po&nbsp;grafikę, fotografię, reels i&nbsp;większe produkcje wideo.</p><div class="sd__tags"><span>Copywriting</span><span>Reels</span><span>Fotografia</span><span>Wideo</span><span>Grafika</span><span>Stories</span><span>Karuzele</span><span>Animacje</span></div></div></details>
+      <details class="sd__g reveal"><summary><h3>Publikacja i&nbsp;moderacja</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Dbamy o&nbsp;to, żeby przygotowany content faktycznie trafił na&nbsp;kanały – zgodnie z&nbsp;harmonogramem, formatem i&nbsp;specyfiką danej platformy. Prowadzimy również bieżącą moderację i&nbsp;komunikację z&nbsp;odbiorcami.</p><div class="sd__tags"><span>Publikacja</span><span>Planowanie postów</span><span>Moderacja komentarzy</span><span>Wiadomości</span><span>Community management</span><span>Monitoring</span></div></div></details>
+      <details class="sd__g reveal"><summary><h3>Raportowanie i&nbsp;optymalizacja</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Analizujemy wyniki publikowanych treści i&nbsp;wykorzystujemy dane do&nbsp;planowania kolejnych działań oraz rozwoju komunikacji.</p><div class="sd__tags"><span>Raporty</span><span>Analityka</span><span>Zasięg</span><span>Zaangażowanie</span><span>Wyniki contentu</span><span>Optymalizacja</span></div></div></details>
+    </section>
+    <section class="sd__blk" id="sd-proces">
+      <div class="sd__blkh reveal"><h2>Od planu do&nbsp;<span style="color:#ffd200">publikacji.</span></h2></div>
+      <div class="sd__steps">
+        <div class="sd__step reveal"><h3>Strategia</h3><p>Ustalamy kierunek, cele i&nbsp;sposób komunikacji.</p></div>
+        <div class="sd__step reveal"><h3>Harmonogram</h3><p>Planujemy tematy i&nbsp;publikacje na&nbsp;kolejny okres.</p></div>
+        <div class="sd__step reveal"><h3>Content</h3><p>Tworzymy copy, grafikę, foto i&nbsp;wideo.</p></div>
+        <div class="sd__step reveal"><h3>Publikacja i&nbsp;moderacja</h3><p>Prowadzimy kanały i&nbsp;bieżącą komunikację.</p></div>
+        <div class="sd__step reveal"><h3>Analiza</h3><p>Sprawdzamy wyniki i&nbsp;planujemy kolejne działania.</p></div>
+      </div>
+    </section>
+    <section class="sd__blk" id="sd-zespol">
+      <div class="sd__blkh reveal"><h2>Wszystko w&nbsp;jednym <span style="color:#ffd200">zespole.</span></h2></div>
+      <div class="sd__steps">
+        <div class="sd__step reveal"><h3>Social media</h3><p>Strategia, harmonogram, publikacja i&nbsp;moderacja.</p></div>
+        <div class="sd__step reveal"><h3>Copywriting</h3><p>Posty, kampanie i&nbsp;scenariusze.</p></div>
+        <div class="sd__step reveal"><h3>Design</h3><p>Grafiki, karuzele i&nbsp;animacje.</p></div>
+        <div class="sd__step reveal"><h3>Foto</h3><p>Sesje produktowe, wizerunkowe i&nbsp;eventowe.</p></div>
+        <div class="sd__step reveal"><h3>Wideo</h3><p>Reels, reklamy i&nbsp;produkcje contentowe.</p></div>
+      </div>
+    </section>
+    <section class="sd__blk" id="sd-work">
+      <div class="sd__blkh reveal"><h2>Realizacje</h2></div>
+      <div class="sd__work">
+        <a class="sd__wi reveal" href="/portfolio/?cat=grafika#pt-grid"><div class="sd__wm"><img src="/assets/portfolio/plichta/oj-omoda7-1.jpg" alt="Plichta – Content · Social media" loading="lazy" /></div><span>Content · Social media</span><h3>Plichta ↗</h3></a>
+        <a class="sd__wi reveal" href="/realizacja-primespot/"><div class="sd__wm"><img src="/assets/portfolio/primespot/pjur-blue-story-1.jpg" alt="PrimeSpot – Stories · Kampania" loading="lazy" /></div><span>Stories · Kampania</span><h3>PrimeSpot ↗</h3></a>
+        <a class="sd__wi reveal" href="/realizacja/?v=tvTuMX3mxG4"><div class="sd__wm"><img src="/assets/work/baltic-robert-2.avif" alt="Baltic Towers – Employer branding · Wideo" loading="lazy" /></div><span>Employer branding · Wideo</span><h3>Baltic Towers ↗</h3></a>
+      </div>
+      <div class="sd__more reveal">
+        <a class="is-lead" href="/portfolio/#pt-grid">Całe portfolio ↗</a>
+        <a href="/portfolio/?cat=video#pt-grid">Wideo</a>
+        <a href="/portfolio/?cat=animacje#pt-grid">Animacje</a>
+        <a href="/portfolio/?cat=eventy#pt-grid">Eventy</a>
+        <a href="/portfolio/?cat=grafika#pt-grid">Grafika</a>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+</ServiceLayout>

@@ -1,14 +1,446 @@
 ---
-import BaseLayout from './../../../layouts/BaseLayout.astro';
-const pageHtml = "<div class=\"sd\">\n<section class=\"sd__hero shell\">\n  <span class=\"sd__kick reveal\"><i></i>Usługi</span>\n  <h1 class=\"sd__h1 reveal\">Produkcja <span style=\"color:#ffd200\">reklamowa.</span></h1>\n  <p class=\"sd__lead reveal\" data-d=\"1\"><b>Projektujemy, produkujemy i&nbsp;montujemy materiały reklamowe oraz oznakowanie przestrzeni.</b> Od&nbsp;szyldów, kasetonów i&nbsp;liter przestrzennych po&nbsp;druk wielkoformatowy, okleiny, systemy informacji wizualnej i&nbsp;materiały eventowe.</p>\n  <p class=\"sd__lead reveal\" data-d=\"1\">Łączymy projekt graficzny z&nbsp;zapleczem produkcyjnym, dzięki czemu prowadzimy realizację od&nbsp;pomysłu i&nbsp;przygotowania plików po&nbsp;wykonanie i&nbsp;montaż.</p>\n  <div class=\"sd__facts reveal\" data-d=\"2\">\n    <div class=\"sd__fact\"><span>Projekt + produkcja</span><strong>Koncepcja i&nbsp;wykonanie</strong></div>\n    <div class=\"sd__fact\"><span>Druk + obróbka</span><strong>Mały i&nbsp;wielki format</strong></div>\n    <div class=\"sd__fact\"><span>Montaż</span><strong>Na&nbsp;miejscu realizacji</strong></div>\n    <div class=\"sd__fact\"><span>Lokalizacja</span><strong>Gdańsk i&nbsp;cała Polska</strong></div>\n  </div>\n  <figure class=\"sd__reel reveal\" data-d=\"1\">\n    <img src=\"/assets/work/captains-club-ext.avif\" alt=\"Captain's Club\" loading=\"eager\" fetchpriority=\"high\" />\n    <figcaption><b>Captain's Club</b><span>Oznakowanie / ekspozycja obiektu</span></figcaption>\n  </figure>\n</section>\n<div class=\"sd__body shell\">\n  <div>\n    <section class=\"sd__blk\" id=\"sd-zakres\">\n      <div class=\"sd__blkh reveal\"><h2>Co produkujemy</h2></div>\n      <details class=\"sd__g reveal\" open><summary><h3>Szyldy, kasetony i&nbsp;litery przestrzenne</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Projektujemy i&nbsp;produkujemy oznakowanie zewnętrzne i&nbsp;wewnętrzne: szyldy i&nbsp;kasetony reklamowe, litery przestrzenne, logotypy i&nbsp;elementy świetlne.</p><div class=\"sd__tags\"><span>Szyldy reklamowe</span><span>Kasetony</span><span>Litery przestrzenne</span><span>Logotypy 3D</span><span>Neony LED</span><span>Reklama świetlna</span><span>Tablice firmowe</span></div></div></details>\n      <details class=\"sd__g reveal\" open><summary><h3>Druk wielkoformatowy i&nbsp;reklama zewnętrzna</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Produkujemy materiały reklamowe do&nbsp;ekspozycji zewnętrznej i&nbsp;wewnętrznej – od&nbsp;banerów i&nbsp;plakatów po&nbsp;wielkoformatowe wydruki i&nbsp;systemy ekspozycyjne.</p><div class=\"sd__tags\"><span>Druk wielkoformatowy</span><span>Banery</span><span>Billboardy</span><span>Plakaty</span><span>Siatki mesh</span><span>Roll-upy</span><span>Ścianki reklamowe</span><span>Potykacze</span></div></div></details>\n      <details class=\"sd__g reveal\" open><summary><h3>Oklejanie i&nbsp;reklama na&nbsp;powierzchniach</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Projektujemy, produkujemy i&nbsp;aplikujemy folie reklamowe na&nbsp;witrynach, szybach, ścianach i&nbsp;innych powierzchniach.</p><div class=\"sd__tags\"><span>Oklejanie witryn</span><span>Oklejanie szyb</span><span>Folie reklamowe</span><span>Folie mrożone</span><span>Naklejki</span><span>Grafika na ścianach</span><span>Folie dekoracyjne</span><span>Oklejanie samochodów</span></div></div></details>\n      <details class=\"sd__g reveal\"><summary><h3>Oznakowanie przestrzeni</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Tworzymy kompleksowe systemy oznakowania biur, obiektów komercyjnych i&nbsp;przestrzeni przemysłowych – od&nbsp;identyfikacji pomieszczeń po&nbsp;systemy nawigacji i&nbsp;wayfinding.</p><div class=\"sd__tags\"><span>Oznakowanie firm</span><span>Oznakowanie biur</span><span>Wayfinding</span><span>Tablice informacyjne</span><span>Tablice kierunkowe</span><span>Oznakowanie pomieszczeń</span><span>Systemy informacji wizualnej</span></div></div></details>\n      <details class=\"sd__g reveal\"><summary><h3>Materiały POS i&nbsp;ekspozycyjne</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Produkujemy materiały wspierające sprzedaż i&nbsp;ekspozycję marki w&nbsp;punktach handlowych, showroomach, salonach i&nbsp;przestrzeniach usługowych.</p><div class=\"sd__tags\"><span>Materiały POS</span><span>Stojaki</span><span>Displaye</span><span>Ekspozytory</span><span>Tabliczki</span><span>Materiały promocyjne</span><span>Elementy ekspozycyjne</span></div></div></details>\n      <details class=\"sd__g reveal\"><summary><h3>Produkcja eventowa</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Produkujemy elementy oprawy wydarzeń – od&nbsp;ścianek i&nbsp;oznakowania po&nbsp;sceny, zabudowy, wydruki oraz branding przestrzeni eventowej.</p><div class=\"sd__tags\"><span>Ścianki eventowe</span><span>Sceny</span><span>Zabudowy</span><span>Branding eventu</span><span>Oznakowanie</span><span>Wydruki</span><span>Elementy scenografii</span></div></div></details>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-proces\">\n      <div class=\"sd__blkh reveal\"><h2>Możliwości <span style=\"color:#ffd200\">produkcyjne.</span></h2></div>\n      <div class=\"sd__steps\">\n        <div class=\"sd__step reveal\"><h3>Druk</h3><p>Mały i&nbsp;wielki format, materiały reklamowe i&nbsp;ekspozycyjne.</p></div>\n        <div class=\"sd__step reveal\"><h3>Folie i&nbsp;aplikacja</h3><p>Okleiny, witryny, szyby, ściany i&nbsp;powierzchnie reklamowe.</p></div>\n        <div class=\"sd__step reveal\"><h3>Reklama przestrzenna</h3><p>Kasetony, szyldy, litery przestrzenne i&nbsp;elementy świetlne.</p></div>\n        <div class=\"sd__step reveal\"><h3>Produkcja konstrukcji</h3><p>Ścianki, zabudowy, elementy POS i&nbsp;rozwiązania niestandardowe.</p></div>\n        <div class=\"sd__step reveal\"><h3>Montaż</h3><p>Transport, instalacja i&nbsp;wdrożenie materiałów w&nbsp;docelowej przestrzeni.</p></div>\n      </div>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-work\">\n      <div class=\"sd__blkh reveal\"><h2>Realizacje</h2></div>\n      <div class=\"sd__work\">\n        <a class=\"sd__wi reveal\" href=\"../../realizacja-world-of-warships/\"><div class=\"sd__wm\"><img src=\"/assets/work/captains-club-1.avif\" alt=\"World of Warships – Zabudowa · Event\" loading=\"lazy\" /></div><span>Zabudowa · Event</span><h3>World of Warships ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../realizacja-kapka/\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/kapka/kapka-witryna.jpg\" alt=\"Kapka Cafe – Oklejanie witryny · Lokal\" loading=\"lazy\" /></div><span>Oklejanie witryny · Lokal</span><h3>Kapka Cafe ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../realizacja-exlantix/\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-16.jpg\" alt=\"EXLANTIX – Oprawa przestrzeni · Premiera\" loading=\"lazy\" /></div><span>Oprawa przestrzeni · Premiera</span><h3>EXLANTIX ↗</h3></a>\n      </div>\n      <div class=\"sd__more reveal\">\n        <a class=\"is-lead\" href=\"../../portfolio/#pt-grid\">Całe portfolio ↗</a>\n        <a href=\"../../portfolio/?cat=video#pt-grid\">Wideo</a>\n        <a href=\"../../portfolio/?cat=animacje#pt-grid\">Animacje</a>\n        <a href=\"../../portfolio/?cat=eventy#pt-grid\">Eventy</a>\n        <a href=\"../../portfolio/?cat=grafika#pt-grid\">Grafika</a>\n      </div>\n    </section>\n  </div>\n</div>\n</div>";
+import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import { pageUrl } from '../../../lib/site';
+
+const lang = 'pl' as const;
+const canonical = pageUrl('/uslugi-marketingowe/produkcja-reklamowa/');
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Produkcja reklamowa",
+  "serviceType": "Produkcja reklamowa",
+  "url": "https://sezmoo.com/uslugi-marketingowe/produkcja-reklamowa/",
+  "inLanguage": "pl-PL",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Polska"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SEZMOO",
+    "url": "https://sezmoo.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gdańsk",
+      "addressCountry": "PL"
+    },
+    "email": "biuro@sezmoo.com",
+    "telephone": "+48739260450"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Produkcja reklamowa",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Szyldy, kasetony i litery przestrzenne",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Szyldy reklamowe"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kasetony"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Litery przestrzenne"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Logotypy 3D"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Neony LED"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reklama świetlna"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tablice firmowe"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Druk wielkoformatowy i reklama zewnętrzna",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Druk wielkoformatowy"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Banery"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Billboardy"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plakaty"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Siatki mesh"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roll-upy"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ścianki reklamowe"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Potykacze"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Oklejanie i reklama na powierzchniach",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oklejanie witryn"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oklejanie szyb"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Folie reklamowe"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Folie mrożone"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Naklejki"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Grafika na ścianach"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Folie dekoracyjne"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oklejanie samochodów"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Oznakowanie przestrzeni",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oznakowanie firm"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oznakowanie biur"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wayfinding"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tablice informacyjne"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tablice kierunkowe"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oznakowanie pomieszczeń"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Systemy informacji wizualnej"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Materiały POS i ekspozycyjne",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Materiały POS"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stojaki"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Displaye"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ekspozytory"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tabliczki"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Materiały promocyjne"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Elementy ekspozycyjne"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Produkcja eventowa",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ścianki eventowe"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sceny"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Zabudowy"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Branding eventu"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oznakowanie"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wydruki"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Elementy scenografii"
+            }
+          }
+        ]
+      }
+    ]
+  }
+};
 ---
 
-<BaseLayout
-  lang="pl"
+<ServiceLayout
+  lang={lang}
   title="Produkcja reklamowa: kasetony, ledony, litery przestrzenne | SEZMOO"
   description="Produkcja reklamowa w SEZMOO: szyldy, kasetony, litery przestrzenne, druk wielkoformatowy, oklejanie, oznakowanie przestrzeni, materiały POS i produkcja eventowa. Gdańsk, cała Polska."
-  canonical="https://sezmoo.com/uslugi-marketingowe/produkcja-reklamowa/"
-  jsonLd={"{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Produkcja reklamowa\",\"serviceType\":\"Produkcja reklamowa\",\"url\":\"https://sezmoo.com/uslugi-marketingowe/produkcja-reklamowa/\",\"inLanguage\":\"pl-PL\",\"areaServed\":{\"@type\":\"Country\",\"name\":\"Polska\"},\"provider\":{\"@type\":\"Organization\",\"name\":\"SEZMOO\",\"url\":\"https://sezmoo.com/\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Gdańsk\",\"addressCountry\":\"PL\"},\"email\":\"biuro@sezmoo.com\",\"telephone\":\"+48502260450\"},\"hasOfferCatalog\":{\"@type\":\"OfferCatalog\",\"name\":\"Produkcja reklamowa\",\"itemListElement\":[{\"@type\":\"OfferCatalog\",\"name\":\"Szyldy, kasetony i litery przestrzenne\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Szyldy reklamowe\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Kasetony\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Litery przestrzenne\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Logotypy 3D\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Neony LED\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Reklama świetlna\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Tablice firmowe\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Druk wielkoformatowy i reklama zewnętrzna\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Druk wielkoformatowy\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Banery\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Billboardy\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Plakaty\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Siatki mesh\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Roll-upy\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Ścianki reklamowe\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Potykacze\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Oklejanie i reklama na powierzchniach\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Oklejanie witryn\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Oklejanie szyb\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Folie reklamowe\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Folie mrożone\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Naklejki\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Grafika na ścianach\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Folie dekoracyjne\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Oklejanie samochodów\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Oznakowanie przestrzeni\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Oznakowanie firm\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Oznakowanie biur\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Wayfinding\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Tablice informacyjne\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Tablice kierunkowe\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Oznakowanie pomieszczeń\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Systemy informacji wizualnej\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Materiały POS i ekspozycyjne\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Materiały POS\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Stojaki\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Displaye\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Ekspozytory\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Tabliczki\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Materiały promocyjne\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Elementy ekspozycyjne\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Produkcja eventowa\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Ścianki eventowe\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Sceny\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Zabudowy\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Branding eventu\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Oznakowanie\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Wydruki\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Elementy scenografii\"}}]}]}}"}
+  canonical={canonical}
+  jsonLd={jsonLd}
 >
-  <Fragment set:html={pageHtml} />
-</BaseLayout>
+<div class="sd">
+<section class="sd__hero shell">
+  <span class="sd__kick reveal"><i></i>Usługi</span>
+  <h1 class="sd__h1 reveal">Produkcja <span style="color:#ffd200">reklamowa.</span></h1>
+  <p class="sd__lead reveal" data-d="1"><b>Projektujemy, produkujemy i&nbsp;montujemy materiały reklamowe oraz oznakowanie przestrzeni.</b> Od&nbsp;szyldów, kasetonów i&nbsp;liter przestrzennych po&nbsp;druk wielkoformatowy, okleiny, systemy informacji wizualnej i&nbsp;materiały eventowe.</p>
+  <p class="sd__lead reveal" data-d="1">Łączymy projekt graficzny z&nbsp;zapleczem produkcyjnym, dzięki czemu prowadzimy realizację od&nbsp;pomysłu i&nbsp;przygotowania plików po&nbsp;wykonanie i&nbsp;montaż.</p>
+  <div class="sd__facts reveal" data-d="2">
+    <div class="sd__fact"><span>Projekt + produkcja</span><strong>Koncepcja i&nbsp;wykonanie</strong></div>
+    <div class="sd__fact"><span>Druk + obróbka</span><strong>Mały i&nbsp;wielki format</strong></div>
+    <div class="sd__fact"><span>Montaż</span><strong>Na&nbsp;miejscu realizacji</strong></div>
+    <div class="sd__fact"><span>Lokalizacja</span><strong>Gdańsk i&nbsp;cała Polska</strong></div>
+  </div>
+  <figure class="sd__reel reveal" data-d="1">
+    <img src="/assets/work/captains-club-ext.avif" alt="Captain's Club" loading="eager" fetchpriority="high" />
+    <figcaption><b>Captain's Club</b><span>Oznakowanie / ekspozycja obiektu</span></figcaption>
+  </figure>
+</section>
+<div class="sd__body shell">
+  <div>
+    <section class="sd__blk" id="sd-zakres">
+      <div class="sd__blkh reveal"><h2>Co produkujemy</h2></div>
+      <details class="sd__g reveal" open><summary><h3>Szyldy, kasetony i&nbsp;litery przestrzenne</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Projektujemy i&nbsp;produkujemy oznakowanie zewnętrzne i&nbsp;wewnętrzne: szyldy i&nbsp;kasetony reklamowe, litery przestrzenne, logotypy i&nbsp;elementy świetlne.</p><div class="sd__tags"><span>Szyldy reklamowe</span><span>Kasetony</span><span>Litery przestrzenne</span><span>Logotypy 3D</span><span>Neony LED</span><span>Reklama świetlna</span><span>Tablice firmowe</span></div></div></details>
+      <details class="sd__g reveal" open><summary><h3>Druk wielkoformatowy i&nbsp;reklama zewnętrzna</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Produkujemy materiały reklamowe do&nbsp;ekspozycji zewnętrznej i&nbsp;wewnętrznej – od&nbsp;banerów i&nbsp;plakatów po&nbsp;wielkoformatowe wydruki i&nbsp;systemy ekspozycyjne.</p><div class="sd__tags"><span>Druk wielkoformatowy</span><span>Banery</span><span>Billboardy</span><span>Plakaty</span><span>Siatki mesh</span><span>Roll-upy</span><span>Ścianki reklamowe</span><span>Potykacze</span></div></div></details>
+      <details class="sd__g reveal" open><summary><h3>Oklejanie i&nbsp;reklama na&nbsp;powierzchniach</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Projektujemy, produkujemy i&nbsp;aplikujemy folie reklamowe na&nbsp;witrynach, szybach, ścianach i&nbsp;innych powierzchniach.</p><div class="sd__tags"><span>Oklejanie witryn</span><span>Oklejanie szyb</span><span>Folie reklamowe</span><span>Folie mrożone</span><span>Naklejki</span><span>Grafika na ścianach</span><span>Folie dekoracyjne</span><span>Oklejanie samochodów</span></div></div></details>
+      <details class="sd__g reveal"><summary><h3>Oznakowanie przestrzeni</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Tworzymy kompleksowe systemy oznakowania biur, obiektów komercyjnych i&nbsp;przestrzeni przemysłowych – od&nbsp;identyfikacji pomieszczeń po&nbsp;systemy nawigacji i&nbsp;wayfinding.</p><div class="sd__tags"><span>Oznakowanie firm</span><span>Oznakowanie biur</span><span>Wayfinding</span><span>Tablice informacyjne</span><span>Tablice kierunkowe</span><span>Oznakowanie pomieszczeń</span><span>Systemy informacji wizualnej</span></div></div></details>
+      <details class="sd__g reveal"><summary><h3>Materiały POS i&nbsp;ekspozycyjne</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Produkujemy materiały wspierające sprzedaż i&nbsp;ekspozycję marki w&nbsp;punktach handlowych, showroomach, salonach i&nbsp;przestrzeniach usługowych.</p><div class="sd__tags"><span>Materiały POS</span><span>Stojaki</span><span>Displaye</span><span>Ekspozytory</span><span>Tabliczki</span><span>Materiały promocyjne</span><span>Elementy ekspozycyjne</span></div></div></details>
+      <details class="sd__g reveal"><summary><h3>Produkcja eventowa</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Produkujemy elementy oprawy wydarzeń – od&nbsp;ścianek i&nbsp;oznakowania po&nbsp;sceny, zabudowy, wydruki oraz branding przestrzeni eventowej.</p><div class="sd__tags"><span>Ścianki eventowe</span><span>Sceny</span><span>Zabudowy</span><span>Branding eventu</span><span>Oznakowanie</span><span>Wydruki</span><span>Elementy scenografii</span></div></div></details>
+    </section>
+    <section class="sd__blk" id="sd-proces">
+      <div class="sd__blkh reveal"><h2>Możliwości <span style="color:#ffd200">produkcyjne.</span></h2></div>
+      <div class="sd__steps">
+        <div class="sd__step reveal"><h3>Druk</h3><p>Mały i&nbsp;wielki format, materiały reklamowe i&nbsp;ekspozycyjne.</p></div>
+        <div class="sd__step reveal"><h3>Folie i&nbsp;aplikacja</h3><p>Okleiny, witryny, szyby, ściany i&nbsp;powierzchnie reklamowe.</p></div>
+        <div class="sd__step reveal"><h3>Reklama przestrzenna</h3><p>Kasetony, szyldy, litery przestrzenne i&nbsp;elementy świetlne.</p></div>
+        <div class="sd__step reveal"><h3>Produkcja konstrukcji</h3><p>Ścianki, zabudowy, elementy POS i&nbsp;rozwiązania niestandardowe.</p></div>
+        <div class="sd__step reveal"><h3>Montaż</h3><p>Transport, instalacja i&nbsp;wdrożenie materiałów w&nbsp;docelowej przestrzeni.</p></div>
+      </div>
+    </section>
+    <section class="sd__blk" id="sd-work">
+      <div class="sd__blkh reveal"><h2>Realizacje</h2></div>
+      <div class="sd__work">
+        <a class="sd__wi reveal" href="/realizacja-world-of-warships/"><div class="sd__wm"><img src="/assets/work/captains-club-1.avif" alt="World of Warships – Zabudowa · Event" loading="lazy" /></div><span>Zabudowa · Event</span><h3>World of Warships ↗</h3></a>
+        <a class="sd__wi reveal" href="/realizacja-kapka/"><div class="sd__wm"><img src="/assets/portfolio/kapka/kapka-witryna.jpg" alt="Kapka Cafe – Oklejanie witryny · Lokal" loading="lazy" /></div><span>Oklejanie witryny · Lokal</span><h3>Kapka Cafe ↗</h3></a>
+        <a class="sd__wi reveal" href="/realizacja-exlantix/"><div class="sd__wm"><img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-16.jpg" alt="EXLANTIX – Oprawa przestrzeni · Premiera" loading="lazy" /></div><span>Oprawa przestrzeni · Premiera</span><h3>EXLANTIX ↗</h3></a>
+      </div>
+      <div class="sd__more reveal">
+        <a class="is-lead" href="/portfolio/#pt-grid">Całe portfolio ↗</a>
+        <a href="/portfolio/?cat=video#pt-grid">Wideo</a>
+        <a href="/portfolio/?cat=animacje#pt-grid">Animacje</a>
+        <a href="/portfolio/?cat=eventy#pt-grid">Eventy</a>
+        <a href="/portfolio/?cat=grafika#pt-grid">Grafika</a>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+</ServiceLayout>
