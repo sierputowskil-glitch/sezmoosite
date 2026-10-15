@@ -1,7 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import OptImage from '../../components/OptImage.astro';
+import YtBg from '../../components/YtBg.astro';
 import '../../styles/home.css';
+
+import workExlantix from '../../../assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg';
+import workWow from '../../../assets/work/captains-club-int.webp';
+import workK2 from '../../../assets/portfolio/k2/k2-hodowla-pstraga-zdjecie-z-drona-baseny.webp';
+import workBaltic from '../../../assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-01.jpg';
+import workDoraco from '../../../assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-01.jpg';
+import workSoho from '../../../assets/portfolio/soho-form/soho-cover.webp';
 
 const lang = 'en' as const;
 const siteUrl = (import.meta.env.PUBLIC_SITE_URL || Astro.site?.toString() || 'https://sezmoo.com').replace(/\/$/, '');
@@ -55,14 +64,7 @@ const jsonLd = {
   <div class="hero__reel">
     <div class="frame-media"></div>
     <div class="hero__video">
-      <div class="yt-bg">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/YkWCkew6OGg?autoplay=1&mute=1&controls=0&loop=1&playlist=YkWCkew6OGg&playsinline=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&origin=https://sezmoo.com"
-          title="SEZMOO showreel"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          referrerpolicy="strict-origin-when-cross-origin"
-          loading="eager"></iframe>
-      </div>
+      <YtBg videoId="YkWCkew6OGg" title="SEZMOO showreel" priority="hero" />
     </div>
   </div>
   <div class="hero__grad"></div>
@@ -101,7 +103,7 @@ const jsonLd = {
 
     <a class="card reveal" href="/realizacja-exlantix/" data-cats="eventy" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg" alt="EXLANTIX brand launch in Gdańsk – event, photo and video" loading="lazy" />
+        <OptImage class="card__video" src={workExlantix} alt="EXLANTIX brand launch in Gdańsk – event, photo and video" widths={[640, 960, 1280, 1600]} sizes="(max-width: 768px) 90vw, (max-width: 1100px) 48vw, 34vw" quality={86} />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__tc"><span class="rd"></span>TC 00:10:00</div>
         <div class="card__live">▶ EVENT</div>
@@ -112,7 +114,7 @@ const jsonLd = {
     </a>
 <a class="card reveal" href="/realizacja-world-of-warships/" data-cats="eventy" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="/assets/work/captains-club-int.avif" alt="World of Warships" loading="lazy" />
+        <OptImage class="card__video" src={workWow} alt="World of Warships" widths={[640, 960, 1280, 1600]} sizes="(max-width: 768px) 90vw, (max-width: 1100px) 48vw, 34vw" quality={86} />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__tc"><span class="rd"></span>TC 00:23:57</div>
         <div class="card__live">▶ EVENT</div>
@@ -123,7 +125,7 @@ const jsonLd = {
     </a>
 <a class="card reveal" href="/en/realizacja-k2/" data-cats="grafika" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="/assets/portfolio/k2/k2-hodowla-pstraga-zdjecie-z-drona-baseny.webp" alt="K2 Fish Farm – rebrand, website, photography and drone film" loading="lazy" />
+        <OptImage class="card__video" src={workK2} alt="K2 Fish Farm – rebrand, website, photography and drone film" widths={[640, 960, 1280, 1600]} sizes="(max-width: 768px) 90vw, (max-width: 1100px) 48vw, 34vw" quality={86} />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__tc"><span class="rd"></span>TC 00:14:02</div>
         <div class="card__live">▶ CASE</div>
@@ -134,7 +136,7 @@ const jsonLd = {
     </a>
 <a class="card reveal" href="/en/realizacja-baltic-towers-rekrutacja/" data-cats="video" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-01.jpg" alt="Baltic Towers – recruitment campaign, film and production photography" loading="lazy" />
+        <OptImage class="card__video" src={workBaltic} alt="Baltic Towers – recruitment campaign, film and production photography" widths={[640, 960, 1280, 1600]} sizes="(max-width: 768px) 90vw, (max-width: 1100px) 48vw, 34vw" quality={86} />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__tc"><span class="rd"></span>TC 00:09:41</div>
         <div class="card__live">▶ CASE</div>
@@ -145,7 +147,7 @@ const jsonLd = {
     </a>
 <a class="card reveal" href="/en/realizacja-doraco-hala-tvp/" data-cats="video" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-01.jpg" alt="DORACO – TVP studio hall, film and drone photography" loading="lazy" />
+        <OptImage class="card__video" src={workDoraco} alt="DORACO – TVP studio hall, film and drone photography" widths={[640, 960, 1280, 1600]} sizes="(max-width: 768px) 90vw, (max-width: 1100px) 48vw, 34vw" quality={86} />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__tc"><span class="rd"></span>TC 00:09:41</div>
         <div class="card__live">▶ CASE</div>
@@ -156,7 +158,7 @@ const jsonLd = {
     </a>
 <a class="card reveal" href="/en/realizacja-soho-form/" data-cats="grafika" data-cursor="link">
       <div class="card__media">
-        <img class="card__video" src="/assets/portfolio/soho-form/soho-fotel.webp" alt="Soho Form – logo, brand manual and website" loading="lazy" />
+        <OptImage class="card__video" src={workSoho} alt="Soho Form – logo, brand manual and website" widths={[640, 960, 1280, 1600]} sizes="(max-width: 768px) 90vw, (max-width: 1100px) 48vw, 34vw" quality={86} />
         <div class="card__scan"></div><div class="card__sweep"></div>
         <div class="card__tc"><span class="rd"></span>TC 00:21:37</div>
         <div class="card__live">▶ CASE</div>
@@ -264,14 +266,7 @@ const jsonLd = {
     <div class="studio__sticky reveal">
       <div class="studio__media is-vertical" data-parallax="26">
         <div class="frame-media" style="transform:translateY(var(--py,0))"></div>
-        <div class="yt-bg">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/b_MB9qpw6jE?autoplay=1&mute=1&controls=0&loop=1&playlist=b_MB9qpw6jE&playsinline=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&origin=https://sezmoo.com"
-            title="SEZMOO · zespół"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            referrerpolicy="strict-origin-when-cross-origin"
-            loading="lazy"></iframe>
-        </div>
+        <YtBg videoId="b_MB9qpw6jE" title="SEZMOO team" priority="lazy" />
         <div class="ovl">
           <div class="corners"><span></span><span></span><span></span><span></span></div>
           <div class="tc"><span class="d"></span><span data-tc>00:00:12:08</span></div>

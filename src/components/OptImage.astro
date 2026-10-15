@@ -1,0 +1,42 @@
+---
+/**
+ * Astro-optimized local image (sharp → AVIF/WebP + srcset).
+ * Import the file in the parent page and pass as `src`.
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  class?: string;
+  widths?: number[];
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  quality?: number;
+}
+
+const {
+  src,
+  alt,
+  class: className = '',
+  widths = [480, 768, 1200, 1600],
+  sizes = '(max-width: 768px) 100vw, 40vw',
+  loading = 'lazy',
+  fetchpriority,
+  quality = 78,
+} = Astro.props;
+---
+
+<Image
+  src={src}
+  alt={alt}
+  class={className}
+  widths={widths}
+  sizes={sizes}
+  loading={loading}
+  fetchpriority={fetchpriority}
+  quality={quality}
+  format="webp"
+/>

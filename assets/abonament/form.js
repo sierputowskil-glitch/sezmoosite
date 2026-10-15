@@ -49,13 +49,15 @@
   });
 
   function getSiteKey() {
-    if (!siteKeyPromise) siteKeyPromise = fetch("/public-config.php", { cache: "no-store" })
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        var k = d && d.turnstileSiteKey ? String(d.turnstileSiteKey) : "";
+    if (!siteKeyPromise) {
+      siteKeyPromise = Promise.resolve().then(function () {
+        var k = (window.__SEZMOO__ && window.__SEZMOO__.turnstileSiteKey)
+          ? String(window.__SEZMOO__.turnstileSiteKey)
+          : "";
         if (!k || k.indexOf("...") !== -1) throw new Error("no-sitekey");
         return k;
       });
+    }
     return siteKeyPromise;
   }
   function loadApi() {

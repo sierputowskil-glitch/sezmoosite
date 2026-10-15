@@ -21,5 +21,15 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+    },
+  },
+  vite: {
+    server: {
+      fs: { allow: ['..'] },
+    },
+  },
   integrations: [sitemap()],
 });

@@ -270,7 +270,7 @@
     document.body.appendChild(bar);
   })();
 
-  /* ---------- SCRUBBER (page progress) ---------- */
+  /* ---------- SCRUBBER (page progress) — desktop only ---------- */
   const fill = document.querySelector(".scrubber__fill");
   const head = document.querySelector(".scrubber__head");
   function updateScrub() {
@@ -280,7 +280,7 @@
     fill.style.width = p + "%";
     head.style.left = p + "%";
   }
-  if (fill && head) {
+  if (fill && head && fine && !reduce) {
     updateScrub();
     window.addEventListener("scroll", updateScrub, { passive: true });
     window.addEventListener("resize", updateScrub);
@@ -1030,13 +1030,7 @@
       if (fromEnv && fromEnv !== "0x4AAAAA..." && fromEnv.indexOf("...") === -1) {
         return fromEnv;
       }
-      return fetch("/public-config.php", { cache: "no-store" })
-        .then(function (r) { return r.json(); })
-        .then(function (d) {
-          var k = d && d.turnstileSiteKey ? String(d.turnstileSiteKey) : "";
-          if (!k || k === "0x4AAAAA..." || k.indexOf("...") !== -1) throw new Error("no-sitekey");
-          return k;
-        });
+      throw new Error("no-sitekey");
     });
     return siteKeyPromise;
   }

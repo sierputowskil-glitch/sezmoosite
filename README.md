@@ -55,8 +55,11 @@ Put Turnstile + SMTP secrets in `.dev.vars` (see `.dev.vars.example`).
 
 - `PUBLIC_SITE_URL` — canonical origin (`https://sezmoo.com` or GH Pages origin). Local `.env` may use `http://localhost:4321`; **prod CI must bake `https://sezmoo.com`** (see `.github/workflows/cf-pages-prod.yml`).
 - `PUBLIC_BASE_PATH` — `/` in prod; `/sezmoosite` (repo name) on GH Pages staging
-- `PUBLIC_TURNSTILE_SITE_KEY` — Turnstile site key
+- `PUBLIC_TURNSTILE_SITE_KEY` — real site key in prod CI; on **`astro dev`** the app forces Cloudflare invisible dummy `1x00000000000000000000BB` (always pass)
 - `PUBLIC_CONTACT_API_URL` — `/api/contact` on CF; **leave empty on GH Pages staging** (form posts are disabled)
+- `PUBLIC_ENABLE_GTM` — set `true` **only in prod CI**; omit locally and on GH Pages staging (no GTM)
+
+Local form API (`.dev.vars`): use Turnstile dummy secret `1x0000000000000000000000000000000AA` with the invisible sitekey above.
 
 **Secrets (`.dev.vars` / CF dashboard — not in git):**
 
@@ -67,6 +70,7 @@ Verify a prod-like local build:
 ```bash
 PUBLIC_SITE_URL=https://sezmoo.com PUBLIC_BASE_PATH=/ \
   PUBLIC_CONTACT_API_URL=/api/contact \
+  PUBLIC_ENABLE_GTM=true \
   PUBLIC_TURNSTILE_SITE_KEY=… \
   npm run check && npm run build
 # Then: rg -n 'localhost' dist/ | head   # should be empty for canonicals/og

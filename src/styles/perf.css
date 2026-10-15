@@ -1,0 +1,16 @@
+/* Hide desktop-only chrome on coarse pointers / reduced motion */
+@media (hover: none), (pointer: coarse) {
+  .cursor,
+  .cursor-dot,
+  .scrubber,
+  .flow-bg-canvas {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-bg-canvas,
+  .scrubber {
+    display: none !important;
+  }
+}

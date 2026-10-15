@@ -28,6 +28,15 @@ interface Props {
 const props = Astro.props;
 ---
 
-<BaseLayout {...props} bodyClass={[props.bodyClass, 'portfolio-page'].filter(Boolean).join(' ')}>
+<BaseLayout
+  {...props}
+  bodyClass={[props.bodyClass, 'portfolio-page'].filter(Boolean).join(' ')}
+  pageScripts={[
+    props.pageScripts,
+    '<script src="/assets/js/portfolio-page.js" defer></script>',
+  ]
+    .filter(Boolean)
+    .join('\n')}
+>
   <slot />
 </BaseLayout>
