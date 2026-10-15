@@ -47,8 +47,12 @@ const {
 } = Astro.props;
 
 const siteUrl = (import.meta.env.PUBLIC_SITE_URL || 'https://sezmoo.com').replace(/\/$/, '');
+// Empty string = form disabled (GH Pages staging has no Pages Functions).
+const contactApiRaw = import.meta.env.PUBLIC_CONTACT_API_URL;
 const contactApi =
-  import.meta.env.PUBLIC_CONTACT_API_URL || '/api/contact';
+  contactApiRaw === undefined || contactApiRaw === null
+    ? '/api/contact'
+    : String(contactApiRaw);
 const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 const canon = canonical || new URL(Astro.url.pathname, siteUrl + '/').href;
 const ogImg = `${siteUrl}/assets/og-image.png`;
@@ -87,7 +91,7 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
   {(hreflangPl || hreflangEn) && (
     <link rel="alternate" hreflang="x-default" href={hreflangPl || hreflangEn} />
   )}
-  <script is:inline>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <script is:inline>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(_e){}</script>
   <title>{title}</title>
   <meta name="title" content={title} />
   {description && <meta name="description" content={description} />}
@@ -160,7 +164,7 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     var opts = [].slice.call(document.querySelectorAll('[data-theme-set]'));
     function apply(t) {
       root.setAttribute('data-theme', t);
-      try { localStorage.setItem('sezmoo-theme', t); } catch (e) {}
+      try { localStorage.setItem('sezmoo-theme', t); } catch (_e) {}
       opts.forEach(function (b) {
         var on = b.getAttribute('data-theme-set') === t;
         b.classList.toggle('is-active', on);

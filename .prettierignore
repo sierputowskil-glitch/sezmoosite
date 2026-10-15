@@ -1,0 +1,9 @@
+dist
+node_modules
+.astro
+.wrangler
+public/assets
+assets
+package-lock.json
+*.min.js
+*.min.css

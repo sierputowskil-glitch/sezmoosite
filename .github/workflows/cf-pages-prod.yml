@@ -15,9 +15,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version-file: '.nvmrc'
           cache: npm
       - run: npm ci
+      - name: Astro check
+        run: npm run check
       - name: Build Astro (prod root)
         env:
           PUBLIC_SITE_URL: https://sezmoo.com

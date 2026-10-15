@@ -7,6 +7,6 @@
     },
     "types": ["astro/client"]
   },
-  "include": ["src/**/*", "functions/**/*", "astro.config.mjs"],
-  "exclude": ["dist", "node_modules", "public"]
+  "include": ["src/**/*", "astro.config.mjs"],
+  "exclude": ["dist", "node_modules", "public", "functions"]
 }

@@ -55,9 +55,13 @@ config.local.php
 logs/
 linki/
 
-# Legacy local helper scripts (keep Astro migrator)
+# Local helper scripts (keep tracked tooling)
 /scripts/*
 !/scripts/migrate-html-to-astro.mjs
+!/scripts/sync-public-assets.mjs
+
+# Copied from assets/ by npm run sync:assets (do not commit the copy)
+/public/assets/
 
 # Apache — local only; do not commit
 .htaccess

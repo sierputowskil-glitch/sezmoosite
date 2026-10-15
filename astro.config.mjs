@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 /**
  * Env-aware site + base for prod (CF Pages) vs staging (GitHub Pages).
@@ -20,10 +21,5 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
-  vite: {
-    server: {
-      // Keep legacy root HTML/PHP available during migration if needed
-      fs: { allow: ['..'] },
-    },
-  },
+  integrations: [sitemap()],
 });

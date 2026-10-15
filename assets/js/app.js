@@ -1218,9 +1218,16 @@
 
       runChallenge()
         .then(function () {
-          var endpoint = (window.__SEZMOO__ && window.__SEZMOO__.contactApiUrl)
-            || f.getAttribute("action")
-            || "/api/contact";
+          var endpoint = (window.__SEZMOO__ && window.__SEZMOO__.contactApiUrl);
+          if (endpoint === undefined || endpoint === null) {
+            endpoint = f.getAttribute("action") || "/api/contact";
+          }
+          // Empty string = staging / intentionally disabled (no CF Functions on GH Pages).
+          if (!endpoint) {
+            return Promise.reject(new Error(en
+              ? "Contact form is disabled on this staging preview. Use production or wrangler pages dev."
+              : "Formularz wyłączony na stagingu GH Pages. Użyj produkcji lub wrangler pages dev."));
+          }
           return fetch(endpoint, {
             method: "POST",
             body: new FormData(f)
@@ -1267,7 +1274,7 @@
             resetWidget();
           }
         })
-        .catch(function () {
+        .catch(function (err) {
           dlPush({
             event: "form_submit_error",
             form_id: meta.form_id,
@@ -1276,9 +1283,14 @@
             form_need: meta.form_need,
             error_type: "network"
           });
-          say(en
-            ? "\u25cf Something went wrong \u2014 email biuro@sezmoo.com"
-            : "\u25cf Co\u015b posz\u0142o nie tak \u2014 napisz na biuro@sezmoo.com");
+          var detail = err && err.message ? String(err.message) : "";
+          if (detail && /staging|wyłączony|disabled/i.test(detail)) {
+            say("\u25cf " + detail);
+          } else {
+            say(en
+              ? "\u25cf Something went wrong \u2014 email biuro@sezmoo.com"
+              : "\u25cf Co\u015b posz\u0142o nie tak \u2014 napisz na biuro@sezmoo.com");
+          }
           resetWidget();
         })
         .finally(function () {

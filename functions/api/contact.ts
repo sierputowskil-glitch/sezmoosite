@@ -2,7 +2,7 @@
  * POST /api/contact — Cloudflare Pages Function
  * Port of send.php: Turnstile, honeypot, validation, rate limit, SMTP.
  */
-import type { PagesFunction } from '@cloudflare/workers-types';
+import type { KVNamespace, PagesFunction } from '@cloudflare/workers-types';
 import { sendContactEmail } from '../lib/smtp';
 import { verifyTurnstile } from '../lib/turnstile';
 
@@ -15,12 +15,14 @@ export interface Env {
   SMTP_FROM?: string;
   SMTP_FROM_NAME?: string;
   MAIL_TO?: string;
+  /** Shared rate limit; bind via wrangler.toml / CF Pages dashboard. */
+  CONTACT_RATE_LIMIT?: KVNamespace;
 }
 
 const RATE_SECONDS = 20;
 const MAX_LINKS = 2;
 
-/** Best-effort in-isolate rate limit (not shared across isolates). */
+/** Fallback when KV is not bound (local / misconfigured). Not shared across isolates. */
 const rateBucket = new Map<string, number>();
 
 const ALLOWED_NEED = new Set([
@@ -84,9 +86,27 @@ function clientIp(request: Request): string {
   );
 }
 
-function checkRateLimit(ip: string, secret: string): boolean {
-  const key = `${ip}:${secret.slice(0, 8)}`;
+async function checkRateLimit(
+  kv: KVNamespace | undefined,
+  ip: string,
+  secret: string,
+): Promise<boolean> {
+  const key = `rl:${ip}:${secret.slice(0, 8)}`;
   const now = Date.now();
+
+  if (kv) {
+    const prev = await kv.get(key);
+    if (prev) {
+      const last = Number(prev);
+      if (Number.isFinite(last) && now - last < RATE_SECONDS * 1000) {
+        return false;
+      }
+    }
+    // KV min expirationTtl is 60s; window itself is RATE_SECONDS via timestamp check.
+    await kv.put(key, String(now), { expirationTtl: Math.max(60, RATE_SECONDS) });
+    return true;
+  }
+
   const last = rateBucket.get(key) || 0;
   if (now - last < RATE_SECONDS * 1000) return false;
   rateBucket.set(key, now);
@@ -132,17 +152,17 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     );
   }
 
-  if (!checkRateLimit(ip, tsSecret)) {
+  if (!(await checkRateLimit(env.CONTACT_RATE_LIMIT, ip, tsSecret))) {
     return fail('Za szybko — odczekaj chwilę.', 429);
   }
 
   const lang = clean(form.get('lang'), 4) === 'en' ? 'en' : 'pl';
-  let name = clean(form.get('name'), 120).replace(/\s+/gu, ' ');
+  const name = clean(form.get('name'), 120).replace(/\s+/gu, ' ');
   const email = clean(form.get('email'), 160);
   const phone = clean(form.get('phone'), 40);
   const company = clean(form.get('company'), 160);
-  let need = clean(form.get('need'), 80);
-  let message = String(form.get('message') ?? '')
+  const need = clean(form.get('need'), 80);
+  const message = String(form.get('message') ?? '')
     .replace(/\0/g, '')
     .trim()
     .slice(0, 5000);
