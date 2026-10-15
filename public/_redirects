@@ -1,0 +1,86 @@
+# Cloudflare Pages redirects (from redirects.htaccess + redirects.php)
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+/abonament    https://abonamenty.sezmoo.com/  301
+/abonament/   https://abonamenty.sezmoo.com/  301
+
+/blog.html    /blog/    301
+/artykul.html /blog/    301
+/artykul      /blog/    301
+/artykul/     /blog/    301
+
+/portfolio-lista-b.html /portfolio-lista-b/ 301
+/realizacja.html /realizacja/ 301
+/realizacja-denza.html /realizacja-denza/ 301
+/realizacja-exlantix.html /realizacja-exlantix/ 301
+/realizacja-kapka.html /realizacja-kapka/ 301
+/realizacja-primespot.html /realizacja-primespot/ 301
+/realizacja-world-of-warships.html /realizacja-world-of-warships/ 301
+/en/realizacja.html /en/realizacja/ 301
+/en/realizacja-kapka.html /en/realizacja-kapka/ 301
+/en/realizacja-primespot.html /en/realizacja-primespot/ 301
+
+/o-nas    /#team      301
+/o-nas/   /#team      301
+/uslugi   /uslugi-marketingowe/  301
+/uslugi/  /uslugi-marketingowe/  301
+/kontakt  /#kontakt   301
+/kontakt/ /#kontakt   301
+/identyfikacja-wizualna   /uslugi-marketingowe/identyfikacja-wizualna/  301
+/identyfikacja-wizualna/  /uslugi-marketingowe/identyfikacja-wizualna/  301
+
+/en/services/branding    /en/services/visual-identity/  301
+/en/services/branding/   /en/services/visual-identity/  301
+/en/services/digital-graphics    /en/services/graphic-design/  301
+/en/services/digital-graphics/   /en/services/graphic-design/  301
+
+# DE → EN
+/de    /en/  301
+/de/   /en/  301
+/de/uber-uns    /en/about-us/  301
+/de/uber-uns/   /en/about-us/  301
+/de/datenschutzrichtlinie    /en/privacy-policy/  301
+/de/datenschutzrichtlinie/   /en/privacy-policy/  301
+/de/portfolio-3    /en/portfolio-en/  301
+/de/portfolio-3/   /en/portfolio-en/  301
+/de/dienstleistungen    /en/services/  301
+/de/dienstleistungen/   /en/services/  301
+/de/dienstleistungen/2d-und-3d-animationen    /en/services/2d-and-3d-animations/  301
+/de/dienstleistungen/2d-und-3d-animationen/   /en/services/2d-and-3d-animations/  301
+/de/dienstleistungen/visuelle-identitat    /en/services/visual-identity/  301
+/de/dienstleistungen/visuelle-identitat/   /en/services/visual-identity/  301
+/de/dienstleistungen/social-media-betreuung    /en/services/social-media-management/  301
+/de/dienstleistungen/social-media-betreuung/   /en/services/social-media-management/  301
+/de/dienstleistungen/bezahlte-kampagnen    /en/services/paid-campaigns/  301
+/de/dienstleistungen/bezahlte-kampagnen/   /en/services/paid-campaigns/  301
+/de/dienstleistungen/werbematerialien    /en/services/promotional-items/  301
+/de/dienstleistungen/werbematerialien/   /en/services/promotional-items/  301
+/de/dienstleistungen/videoproduktion-reels    /en/services/video-production-reels/  301
+/de/dienstleistungen/videoproduktion-reels/   /en/services/video-production-reels/  301
+/de/dienstleistungen/fotografie    /en/services/photoghraphy/  301
+/de/dienstleistungen/fotografie/   /en/services/photoghraphy/  301
+/de/dienstleistungen/digitale-grafik    /en/services/graphic-design/  301
+/de/dienstleistungen/digitale-grafik/   /en/services/graphic-design/  301
+/de/dienstleistungen/webseiten-und-landing-pages    /en/services/websites-and-landing-pages/  301
+/de/dienstleistungen/webseiten-und-landing-pages/   /en/services/websites-and-landing-pages/  301
+/de/dienstleistungen/eventorganisation    /en/services/event-organization/  301
+/de/dienstleistungen/eventorganisation/   /en/services/event-organization/  301
+/de/*  /en/:splat  301
+
+# WP leftovers
+/category/*   /blog/  301
+/tag/*        /blog/  301
+/author/*     /blog/  301
+/feed         /blog/  301
+/feed/        /blog/  301
+/comments/feed /blog/ 301
+/comments/feed/ /blog/ 301
+/en/category/* /blog/ 301
+/en/tag/*      /blog/ 301
+/en/author/*   /blog/ 301
+/en/feed       /blog/ 301
+/en/feed/      /blog/ 301
+/sitemap_index.xml /sitemap.xml 301
+/page-sitemap.xml  /sitemap.xml 301
+/post-sitemap.xml  /sitemap.xml 301
+/category-sitemap.xml /sitemap.xml 301
