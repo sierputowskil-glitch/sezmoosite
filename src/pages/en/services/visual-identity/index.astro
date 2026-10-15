@@ -1,14 +1,292 @@
 ---
-import BaseLayout from './../../../../layouts/BaseLayout.astro';
-const pageHtml = "<div class=\"sd\">\n<section class=\"sd__hero shell\">\n  <span class=\"sd__kick reveal\"><i></i>Services</span>\n  <h1 class=\"sd__h1 reveal\">Visual <span style=\"color:#ffd200\">identity.</span></h1>\n  <p class=\"sd__lead reveal\" data-d=\"1\">Identity is not just a logo – it is <b>a set of decisions</b> that make a brand look the same on the website, in an ad, on an invoice and on the banner outside the building.</p>\n  <p class=\"sd__lead reveal\" data-d=\"1\">We design the mark, colours, typography and usage rules, then the starter material so the system enters daily work immediately.</p>\n  <div class=\"sd__facts reveal\" data-d=\"2\">\n    <div class=\"sd__fact\"><span>Scope</span><strong>Logo · system · guidelines</strong></div>\n    <div class=\"sd__fact\"><span>Output</span><strong>Brand book</strong></div>\n    <div class=\"sd__fact\"><span>Start</span><strong>Base material</strong></div>\n    <div class=\"sd__fact\"><span>Growth</span><strong>Rollout into campaigns</strong></div>\n  </div>\n  <figure class=\"sd__reel reveal\" data-d=\"1\">\n    <img src=\"/assets/work/captains-club-1.avif\" alt=\"Captain's Club\" loading=\"eager\" fetchpriority=\"high\" />\n    <figcaption><b>Captain's Club</b><span>Event identity / visual system</span></figcaption>\n  </figure>\n</section>\n<div class=\"sd__body shell\">\n  <div>\n    <section class=\"sd__blk\" id=\"sd-zakres\">\n      <div class=\"sd__blkh reveal\"><h2>What we do</h2></div>\n      <details class=\"sd__g reveal\" open><summary><h3>The mark &amp; variants</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Logo design with working versions: horizontal, vertical, simplified, monochrome and a symbol for small sizes.</p><div class=\"sd__tags\"><span>Logo design</span><span>Logo variants</span><span>Symbol</span><span>Monochrome version</span><span>Clear space</span><span>Minimum size</span></div></div></details>\n      <details class=\"sd__g reveal\" open><summary><h3>Visual system</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Colour, typography, grids, graphic and photographic style – the rules that hold the brand together.</p><div class=\"sd__tags\"><span>Colour palette</span><span>Typography</span><span>Grids and layouts</span><span>Photography style</span><span>Graphic elements</span><span>Iconography</span></div></div></details>\n      <details class=\"sd__g reveal\"><summary><h3>Brand book</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>A document with usage rules: what is allowed, what is not and how the brand should look in practice.</p><div class=\"sd__tags\"><span>Brand book</span><span>Brand guidelines</span><span>Usage rules</span><span>Application examples</span><span>File versions</span><span>Guide for suppliers</span></div></div></details>\n      <details class=\"sd__g reveal\"><summary><h3>Starter material</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>The first set of carriers so the new identity works from day one: stationery, social, documents and signage.</p><div class=\"sd__tags\"><span>Business cards</span><span>Letterhead</span><span>Social templates</span><span>Company deck</span><span>Signage</span><span>Sales material</span></div></div></details>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-proces\">\n      <div class=\"sd__blkh reveal\"><h2>How we work</h2></div>\n      <div class=\"sd__steps\">\n        <div class=\"sd__step reveal\"><h3>Discovery</h3><p>We talk about the brand, the market and the competition.</p></div>\n        <div class=\"sd__step reveal\"><h3>Directions</h3><p>We show several visual routes, not one option.</p></div>\n        <div class=\"sd__step reveal\"><h3>The mark</h3><p>We refine the logo and its working versions.</p></div>\n        <div class=\"sd__step reveal\"><h3>System</h3><p>We set colour, typography and the rules.</p></div>\n        <div class=\"sd__step reveal\"><h3>Rollout</h3><p>We take the identity onto real carriers.</p></div>\n      </div>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-work\">\n      <div class=\"sd__blkh reveal\"><h2>Selected work</h2></div>\n      <div class=\"sd__work\">\n        <a class=\"sd__wi reveal\" href=\"../../../en/realizacja-kapka/\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/kapka/kapka-logo.jpg\" alt=\"Kapka Cafe – Logo · Identity\" loading=\"lazy\" /></div><span>Logo · Identity</span><h3>Kapka Cafe ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../../en/realizacja-soho-form/\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/soho-form/soho-cover.webp\" alt=\"Soho Form – Logo · Brand manual\" loading=\"lazy\" /></div><span>Logo · Brand manual</span><h3>Soho Form ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../../en/portfolio-en/?cat=grafika#pt-grid\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/el-molo/el-molo-restauracja-projekt-logo.avif\" alt=\"El Molo – Logo · Restaurant\" loading=\"lazy\" /></div><span>Logo · Restaurant</span><h3>El Molo ↗</h3></a>\n      </div>\n      <div class=\"sd__more reveal\">\n        <a class=\"is-lead\" href=\"../../../en/portfolio-en/#pt-grid\">Full portfolio ↗</a>\n        <a href=\"../../../en/portfolio-en/?cat=video#pt-grid\">Video</a>\n        <a href=\"../../../en/portfolio-en/?cat=animacje#pt-grid\">Animation</a>\n        <a href=\"../../../en/portfolio-en/?cat=eventy#pt-grid\">Events</a>\n        <a href=\"../../../en/portfolio-en/?cat=grafika#pt-grid\">Graphics</a>\n      </div>\n    </section>\n  </div>\n</div>\n</div>";
+import ServiceLayout from '../../../../layouts/ServiceLayout.astro';
+import { pageUrl } from '../../../../lib/site';
+
+const lang = 'en' as const;
+const canonical = pageUrl('/en/services/visual-identity/');
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Visual identity",
+  "serviceType": "Visual identity",
+  "url": "https://sezmoo.com/en/services/visual-identity/",
+  "inLanguage": "en",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Poland"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SEZMOO",
+    "url": "https://sezmoo.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gdańsk",
+      "addressCountry": "PL"
+    },
+    "email": "biuro@sezmoo.com",
+    "telephone": "+48739260450"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Visual identity",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "The mark & variants",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Logo design"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Logo variants"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Symbol"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Monochrome version"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Clear space"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Minimum size"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Visual system",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Colour palette"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Typography"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Grids and layouts"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Photography style"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Graphic elements"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Iconography"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Brand book",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brand book"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brand guidelines"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Usage rules"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Application examples"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "File versions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Guide for suppliers"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Starter material",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business cards"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Letterhead"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Social templates"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Company deck"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Signage"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sales material"
+            }
+          }
+        ]
+      }
+    ]
+  }
+};
 ---
 
-<BaseLayout
-  lang="en"
+<ServiceLayout
+  lang={lang}
   title="Brand identity | SEZMOO"
   description="Identity is not just a logo – it is a set of decisions that make a brand look the same on the website, in an ad, on an invoice and on the banner outside"
-  canonical="https://sezmoo.com/en/services/visual-identity/"
-  jsonLd={"{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Visual identity\",\"serviceType\":\"Visual identity\",\"url\":\"https://sezmoo.com/en/services/visual-identity/\",\"inLanguage\":\"en\",\"areaServed\":{\"@type\":\"Country\",\"name\":\"Poland\"},\"provider\":{\"@type\":\"Organization\",\"name\":\"SEZMOO\",\"url\":\"https://sezmoo.com/\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Gdańsk\",\"addressCountry\":\"PL\"},\"email\":\"biuro@sezmoo.com\",\"telephone\":\"+48502260450\"},\"hasOfferCatalog\":{\"@type\":\"OfferCatalog\",\"name\":\"Visual identity\",\"itemListElement\":[{\"@type\":\"OfferCatalog\",\"name\":\"The mark & variants\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Logo design\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Logo variants\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Symbol\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Monochrome version\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Clear space\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Minimum size\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Visual system\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Colour palette\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Typography\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Grids and layouts\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Photography style\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Graphic elements\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Iconography\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Brand book\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Brand book\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Brand guidelines\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Usage rules\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Application examples\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"File versions\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Guide for suppliers\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Starter material\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Business cards\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Letterhead\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Social templates\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Company deck\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Signage\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Sales material\"}}]}]}}"}
+  canonical={canonical}
+  jsonLd={jsonLd}
 >
-  <Fragment set:html={pageHtml} />
-</BaseLayout>
+<div class="sd">
+<section class="sd__hero shell">
+  <span class="sd__kick reveal"><i></i>Services</span>
+  <h1 class="sd__h1 reveal">Visual <span style="color:#ffd200">identity.</span></h1>
+  <p class="sd__lead reveal" data-d="1">Identity is not just a logo – it is <b>a set of decisions</b> that make a brand look the same on the website, in an ad, on an invoice and on the banner outside the building.</p>
+  <p class="sd__lead reveal" data-d="1">We design the mark, colours, typography and usage rules, then the starter material so the system enters daily work immediately.</p>
+  <div class="sd__facts reveal" data-d="2">
+    <div class="sd__fact"><span>Scope</span><strong>Logo · system · guidelines</strong></div>
+    <div class="sd__fact"><span>Output</span><strong>Brand book</strong></div>
+    <div class="sd__fact"><span>Start</span><strong>Base material</strong></div>
+    <div class="sd__fact"><span>Growth</span><strong>Rollout into campaigns</strong></div>
+  </div>
+  <figure class="sd__reel reveal" data-d="1">
+    <img src="/assets/work/captains-club-1.avif" alt="Captain's Club" loading="eager" fetchpriority="high" />
+    <figcaption><b>Captain's Club</b><span>Event identity / visual system</span></figcaption>
+  </figure>
+</section>
+<div class="sd__body shell">
+  <div>
+    <section class="sd__blk" id="sd-zakres">
+      <div class="sd__blkh reveal"><h2>What we do</h2></div>
+      <details class="sd__g reveal" open><summary><h3>The mark &amp; variants</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Logo design with working versions: horizontal, vertical, simplified, monochrome and a symbol for small sizes.</p><div class="sd__tags"><span>Logo design</span><span>Logo variants</span><span>Symbol</span><span>Monochrome version</span><span>Clear space</span><span>Minimum size</span></div></div></details>
+      <details class="sd__g reveal" open><summary><h3>Visual system</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Colour, typography, grids, graphic and photographic style – the rules that hold the brand together.</p><div class="sd__tags"><span>Colour palette</span><span>Typography</span><span>Grids and layouts</span><span>Photography style</span><span>Graphic elements</span><span>Iconography</span></div></div></details>
+      <details class="sd__g reveal"><summary><h3>Brand book</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>A document with usage rules: what is allowed, what is not and how the brand should look in practice.</p><div class="sd__tags"><span>Brand book</span><span>Brand guidelines</span><span>Usage rules</span><span>Application examples</span><span>File versions</span><span>Guide for suppliers</span></div></div></details>
+      <details class="sd__g reveal"><summary><h3>Starter material</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>The first set of carriers so the new identity works from day one: stationery, social, documents and signage.</p><div class="sd__tags"><span>Business cards</span><span>Letterhead</span><span>Social templates</span><span>Company deck</span><span>Signage</span><span>Sales material</span></div></div></details>
+    </section>
+    <section class="sd__blk" id="sd-proces">
+      <div class="sd__blkh reveal"><h2>How we work</h2></div>
+      <div class="sd__steps">
+        <div class="sd__step reveal"><h3>Discovery</h3><p>We talk about the brand, the market and the competition.</p></div>
+        <div class="sd__step reveal"><h3>Directions</h3><p>We show several visual routes, not one option.</p></div>
+        <div class="sd__step reveal"><h3>The mark</h3><p>We refine the logo and its working versions.</p></div>
+        <div class="sd__step reveal"><h3>System</h3><p>We set colour, typography and the rules.</p></div>
+        <div class="sd__step reveal"><h3>Rollout</h3><p>We take the identity onto real carriers.</p></div>
+      </div>
+    </section>
+    <section class="sd__blk" id="sd-work">
+      <div class="sd__blkh reveal"><h2>Selected work</h2></div>
+      <div class="sd__work">
+        <a class="sd__wi reveal" href="/en/realizacja-kapka/"><div class="sd__wm"><img src="/assets/portfolio/kapka/kapka-logo.jpg" alt="Kapka Cafe – Logo · Identity" loading="lazy" /></div><span>Logo · Identity</span><h3>Kapka Cafe ↗</h3></a>
+        <a class="sd__wi reveal" href="/en/realizacja-soho-form/"><div class="sd__wm"><img src="/assets/portfolio/soho-form/soho-cover.webp" alt="Soho Form – Logo · Brand manual" loading="lazy" /></div><span>Logo · Brand manual</span><h3>Soho Form ↗</h3></a>
+        <a class="sd__wi reveal" href="/en/portfolio-en/?cat=grafika#pt-grid"><div class="sd__wm"><img src="/assets/portfolio/el-molo/el-molo-restauracja-projekt-logo.avif" alt="El Molo – Logo · Restaurant" loading="lazy" /></div><span>Logo · Restaurant</span><h3>El Molo ↗</h3></a>
+      </div>
+      <div class="sd__more reveal">
+        <a class="is-lead" href="/en/portfolio-en/#pt-grid">Full portfolio ↗</a>
+        <a href="/en/portfolio-en/?cat=video#pt-grid">Video</a>
+        <a href="/en/portfolio-en/?cat=animacje#pt-grid">Animation</a>
+        <a href="/en/portfolio-en/?cat=eventy#pt-grid">Events</a>
+        <a href="/en/portfolio-en/?cat=grafika#pt-grid">Graphics</a>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+</ServiceLayout>

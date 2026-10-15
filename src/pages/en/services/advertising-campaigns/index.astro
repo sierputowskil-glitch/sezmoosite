@@ -1,13 +1,43 @@
 ---
-import BaseLayout from './../../../../layouts/BaseLayout.astro';
-const pageHtml = "<section class=\"sub-hero shell\">\n    <div class=\"sub-hero__grid\">\n      <div>\n        <span class=\"eyebrow reveal\"><span class=\"tick\"></span>Advertising campaigns</span>\n        <h1 class=\"reveal\">Campaigns that get seen.</h1>\n        <p class=\"sub-hero__lead reveal\" data-d=\"1\">Concept, creatives and formats for advertising campaigns across video, social and display.</p>\n        <div class=\"sub-hero__meta reveal\" data-d=\"2\"><span>Concept</span><span>Creatives</span><span>Formats</span><span>Media</span></div>\n      </div>\n      <div class=\"sub-panel reveal\" data-d=\"1\">\n        <span class=\"sub-panel__label\">One idea, many placements</span>\n        <p>We plan campaigns so a single concept adapts cleanly to every channel and format.</p>\n      </div>\n    </div>\n  </section>\n  <section class=\"sub-section shell\">\n    <div class=\"service-output\">\n      <div class=\"service-output__intro reveal\">\n        <span class=\"eyebrow\"><span class=\"tick\"></span>Scope</span>\n        <h2 class=\"sec-title\">What we deliver.</h2>\n        <p>From the core idea to the export set: we prepare campaign creatives ready for the channels you run.</p>\n        <div class=\"service-next\"><a href=\"../../../en/services/\">All services</a><a href=\"../../../en/portfolio-en/\">Portfolio</a><a href=\"../../../en/#opinie\">Testimonials</a><a href=\"../../../blog/\">Blog</a><a href=\"../../../en/#kontakt\">Contact</a></div>\n      </div>\n      <div class=\"service-output__grid\"><div class=\"service-output__item reveal\" data-d=\"0\"><span>01</span><h3>Campaign concept</h3><p>A leading idea that holds the whole campaign together.</p></div><div class=\"service-output__item reveal\" data-d=\"1\"><span>02</span><h3>Key creatives</h3><p>Hero visuals and video that anchor the message.</p></div><div class=\"service-output__item reveal\" data-d=\"2\"><span>03</span><h3>Format set</h3><p>Cutdowns and sizes for each placement.</p></div><div class=\"service-output__item reveal\" data-d=\"0\"><span>04</span><h3>Rollout pack</h3><p>Everything ready for publication and paid media.</p></div></div>\n    </div>\n  </section>\n  <section class=\"sub-section shell\">\n    <div class=\"sub-cta reveal\"><div><h2>Let’s scope the formats.</h2><p>Tell us where the material has to work. We’ll propose a sensible production scope and a package ready to publish.</p></div><a href=\"../../../en/#kontakt\" class=\"btn btn--primary\"><span class=\"ico\"></span><span class=\"lbl\">Get in touch</span></a></div>\n  </section>";
+import ServiceLayout from '../../../../layouts/ServiceLayout.astro';
+import { pageUrl } from '../../../../lib/site';
+
+const lang = 'en' as const;
+const canonical = pageUrl('/en/services/advertising-campaigns/');
 ---
 
-<BaseLayout
-  lang="en"
+<ServiceLayout
+  lang={lang}
   title="Advertising campaigns | SEZMOO"
   description="Advertising campaigns at SEZMOO: concept, creatives and formats for video, social and display. One idea adapted cleanly to every channel and placement."
-  canonical="https://sezmoo.com/en/services/advertising-campaigns/"
+  canonical={canonical}
 >
-  <Fragment set:html={pageHtml} />
-</BaseLayout>
+<section class="sub-hero shell">
+    <div class="sub-hero__grid">
+      <div>
+        <span class="eyebrow reveal"><span class="tick"></span>Advertising campaigns</span>
+        <h1 class="reveal">Campaigns that get seen.</h1>
+        <p class="sub-hero__lead reveal" data-d="1">Concept, creatives and formats for advertising campaigns across video, social and display.</p>
+        <div class="sub-hero__meta reveal" data-d="2"><span>Concept</span><span>Creatives</span><span>Formats</span><span>Media</span></div>
+      </div>
+      <div class="sub-panel reveal" data-d="1">
+        <span class="sub-panel__label">One idea, many placements</span>
+        <p>We plan campaigns so a single concept adapts cleanly to every channel and format.</p>
+      </div>
+    </div>
+  </section>
+  <section class="sub-section shell">
+    <div class="service-output">
+      <div class="service-output__intro reveal">
+        <span class="eyebrow"><span class="tick"></span>Scope</span>
+        <h2 class="sec-title">What we deliver.</h2>
+        <p>From the core idea to the export set: we prepare campaign creatives ready for the channels you run.</p>
+        <div class="service-next"><a href="/en/services/">All services</a><a href="/en/portfolio-en/">Portfolio</a><a href="/en/#opinie">Testimonials</a><a href="/blog/">Blog</a><a href="/en/#kontakt">Contact</a></div>
+      </div>
+      <div class="service-output__grid"><div class="service-output__item reveal" data-d="0"><span>01</span><h3>Campaign concept</h3><p>A leading idea that holds the whole campaign together.</p></div><div class="service-output__item reveal" data-d="1"><span>02</span><h3>Key creatives</h3><p>Hero visuals and video that anchor the message.</p></div><div class="service-output__item reveal" data-d="2"><span>03</span><h3>Format set</h3><p>Cutdowns and sizes for each placement.</p></div><div class="service-output__item reveal" data-d="0"><span>04</span><h3>Rollout pack</h3><p>Everything ready for publication and paid media.</p></div></div>
+    </div>
+  </section>
+  <section class="sub-section shell">
+    <div class="sub-cta reveal"><div><h2>Let’s scope the formats.</h2><p>Tell us where the material has to work. We’ll propose a sensible production scope and a package ready to publish.</p></div><a href="/en/#kontakt" class="btn btn--primary"><span class="ico"></span><span class="lbl">Get in touch</span></a></div>
+  </section>
+</ServiceLayout>

@@ -1,13 +1,292 @@
 ---
-import BaseLayout from './../../../../layouts/BaseLayout.astro';
-const pageHtml = "<div class=\"sd\">\n<section class=\"sd__hero shell\">\n  <span class=\"sd__kick reveal\"><i></i>Services</span>\n  <h1 class=\"sd__h1 reveal\"><span style=\"color:#ffd200\">Photography.</span></h1>\n  <p class=\"sd__lead reveal\" data-d=\"1\"><b>Photography is one of the longest-working assets a brand has</b> – it goes on the website, into ads, social media and sales material, often staying in use for years.</p>\n  <p class=\"sd__lead reveal\" data-d=\"1\">We shoot product, brand, event, automotive and architectural sessions – as a standalone production or alongside video, on the same set.</p>\n  <div class=\"sd__facts reveal\" data-d=\"2\">\n    <div class=\"sd__fact\"><span>Setup</span><strong>Studio and on location</strong></div>\n    <div class=\"sd__fact\"><span>Drone</span><strong>Ground and aerial</strong></div>\n    <div class=\"sd__fact\"><span>Type</span><strong>Product, brand, event</strong></div>\n    <div class=\"sd__fact\"><span>Location</span><strong>Gdańsk, Poland and Europe</strong></div>\n  </div>\n  <figure class=\"sd__reel reveal\" data-d=\"1\">\n    <img src=\"/assets/photo/audi-sesja.avif\" alt=\"Audi\" loading=\"eager\" fetchpriority=\"high\" />\n    <figcaption><b>Audi</b><span>Session / automotive detail</span></figcaption>\n  </figure>\n</section>\n<div class=\"sd__body shell\">\n  <div>\n    <section class=\"sd__blk\" id=\"sd-zakres\">\n      <div class=\"sd__blkh reveal\"><h2>What we shoot</h2></div>\n      <details class=\"sd__g reveal\" open><summary><h3>Product &amp; e-commerce</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Product photography on clean backgrounds and in set – for e-commerce, product presentation, sales material and campaigns.</p><div class=\"sd__tags\"><span>Product photography</span><span>Packshot</span><span>Product detail</span><span>Lifestyle</span><span>E-commerce photos</span><span>Catalogue photos</span></div></div></details>\n      <details class=\"sd__g reveal\" open><summary><h3>Brand &amp; business</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Company and team sessions, business portraits, photos for LinkedIn, recruitment material and employer branding.</p><div class=\"sd__tags\"><span>Brand session</span><span>Business portrait</span><span>Team photos</span><span>Employer branding</span><span>LinkedIn photos</span><span>Company reportage</span></div></div></details>\n      <details class=\"sd__g reveal\" open><summary><h3>Events &amp; reportage</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Event photography: conferences, trade fairs, launches and company events – people, atmosphere and documentation ready to publish.</p><div class=\"sd__tags\"><span>Event photography</span><span>Conferences</span><span>Trade fairs</span><span>Launches</span><span>Company events</span><span>Social media recap</span></div></div></details>\n      <details class=\"sd__g reveal\" open><summary><h3>Architecture &amp; interiors</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Photos of developments, interiors, buildings and commercial spaces – for sales material, the website and listing portals.</p><div class=\"sd__tags\"><span>Architecture</span><span>Interiors</span><span>Developments</span><span>Hotels and hospitality</span><span>Commercial buildings</span><span>Property photos</span></div></div></details>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-proces\">\n      <div class=\"sd__blkh reveal\"><h2>Our photography <span style=\"color:#ffd200\">capabilities.</span></h2></div>\n      <div class=\"sd__steps\">\n        <div class=\"sd__step reveal\"><h3>Photography</h3><p>Product, advertising, business, brand and event sessions.</p></div>\n        <div class=\"sd__step reveal\"><h3>Studio</h3><p>Controlled light, product photography, packshots and brand sessions.</p></div>\n        <div class=\"sd__step reveal\"><h3>On location</h3><p>Sessions at your premises, in the city, in interiors and outdoors.</p></div>\n        <div class=\"sd__step reveal\"><h3>Drone photography</h3><p>Aerial shots of developments, property, industry, events and automotive.</p></div>\n        <div class=\"sd__step reveal\"><h3>Post-production</h3><p>Selection, colour correction, retouch and delivery-ready files.</p></div>\n      </div>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-work\">\n      <div class=\"sd__blkh reveal\"><h2>Selected work</h2></div>\n      <div class=\"sd__work\">\n        <a class=\"sd__wi reveal\" href=\"../../../realizacja-exlantix/\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-18.jpg\" alt=\"EXLANTIX – Event · Photography\" loading=\"lazy\" /></div><span>Event · Photography</span><h3>EXLANTIX ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../../realizacja-denza/\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/denza/denza-z9-gt-premiera-fotografia-06.jpg\" alt=\"DENZA – Launch · Photography\" loading=\"lazy\" /></div><span>Launch · Photography</span><h3>DENZA ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../../en/portfolio-en/?cat=foto#pt-grid\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/nfm/nfm-fotografia-wydarzenia-01.avif\" alt=\"NFM – NFM · Event photography\" loading=\"lazy\" /></div><span>NFM · Event photography</span><h3>NFM ↗</h3></a>\n      </div>\n      <div class=\"sd__more reveal\">\n        <a class=\"is-lead\" href=\"../../../en/portfolio-en/#pt-grid\">Full portfolio ↗</a>\n        <a href=\"../../../en/portfolio-en/?cat=video#pt-grid\">Video</a>\n        <a href=\"../../../en/portfolio-en/?cat=animacje#pt-grid\">Animation</a>\n        <a href=\"../../../en/portfolio-en/?cat=eventy#pt-grid\">Events</a>\n        <a href=\"../../../en/portfolio-en/?cat=grafika#pt-grid\">Graphics</a>\n      </div>\n    </section>\n  </div>\n</div>\n</div>";
+import ServiceLayout from '../../../../layouts/ServiceLayout.astro';
+import { pageUrl } from '../../../../lib/site';
+
+const lang = 'en' as const;
+const canonical = pageUrl('/en/services/photoghraphy/');
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Photography",
+  "serviceType": "Photography",
+  "url": "https://sezmoo.com/en/services/photoghraphy/",
+  "inLanguage": "en",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Poland"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SEZMOO",
+    "url": "https://sezmoo.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gdańsk",
+      "addressCountry": "PL"
+    },
+    "email": "biuro@sezmoo.com",
+    "telephone": "+48739260450"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Photography",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Product & e-commerce",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Product photography"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Packshot"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Product detail"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lifestyle"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-commerce photos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Catalogue photos"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Brand & business",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brand session"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business portrait"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Team photos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Employer branding"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "LinkedIn photos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Company reportage"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Events & reportage",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Event photography"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conferences"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Trade fairs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Launches"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Company events"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Social media recap"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Architecture & interiors",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Architecture"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Interiors"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Developments"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hotels and hospitality"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial buildings"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Property photos"
+            }
+          }
+        ]
+      }
+    ]
+  }
+};
 ---
 
-<BaseLayout
-  lang="en"
+<ServiceLayout
+  lang={lang}
   title="Photography – SEZMOO"
   description="Photography is usually the longest-working asset a brand has – it goes on the website, into ads, social media and sales material, and stays there for"
-  jsonLd={"{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Photography\",\"serviceType\":\"Photography\",\"url\":\"https://sezmoo.com/en/services/photoghraphy/\",\"inLanguage\":\"en\",\"areaServed\":{\"@type\":\"Country\",\"name\":\"Poland\"},\"provider\":{\"@type\":\"Organization\",\"name\":\"SEZMOO\",\"url\":\"https://sezmoo.com/\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Gdańsk\",\"addressCountry\":\"PL\"},\"email\":\"biuro@sezmoo.com\",\"telephone\":\"+48502260450\"},\"hasOfferCatalog\":{\"@type\":\"OfferCatalog\",\"name\":\"Photography\",\"itemListElement\":[{\"@type\":\"OfferCatalog\",\"name\":\"Product & e-commerce\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Product photography\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Packshot\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Product detail\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Lifestyle\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"E-commerce photos\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Catalogue photos\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Brand & business\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Brand session\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Business portrait\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Team photos\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Employer branding\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"LinkedIn photos\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Company reportage\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Events & reportage\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Event photography\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Conferences\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Trade fairs\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Launches\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Company events\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Social media recap\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Architecture & interiors\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Architecture\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Interiors\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Developments\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Hotels and hospitality\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Commercial buildings\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Property photos\"}}]}]}}"}
+  canonical={canonical}
+  jsonLd={jsonLd}
 >
-  <Fragment set:html={pageHtml} />
-</BaseLayout>
+<div class="sd">
+<section class="sd__hero shell">
+  <span class="sd__kick reveal"><i></i>Services</span>
+  <h1 class="sd__h1 reveal"><span style="color:#ffd200">Photography.</span></h1>
+  <p class="sd__lead reveal" data-d="1"><b>Photography is one of the longest-working assets a brand has</b> – it goes on the website, into ads, social media and sales material, often staying in use for years.</p>
+  <p class="sd__lead reveal" data-d="1">We shoot product, brand, event, automotive and architectural sessions – as a standalone production or alongside video, on the same set.</p>
+  <div class="sd__facts reveal" data-d="2">
+    <div class="sd__fact"><span>Setup</span><strong>Studio and on location</strong></div>
+    <div class="sd__fact"><span>Drone</span><strong>Ground and aerial</strong></div>
+    <div class="sd__fact"><span>Type</span><strong>Product, brand, event</strong></div>
+    <div class="sd__fact"><span>Location</span><strong>Gdańsk, Poland and Europe</strong></div>
+  </div>
+  <figure class="sd__reel reveal" data-d="1">
+    <img src="/assets/photo/audi-sesja.avif" alt="Audi" loading="eager" fetchpriority="high" />
+    <figcaption><b>Audi</b><span>Session / automotive detail</span></figcaption>
+  </figure>
+</section>
+<div class="sd__body shell">
+  <div>
+    <section class="sd__blk" id="sd-zakres">
+      <div class="sd__blkh reveal"><h2>What we shoot</h2></div>
+      <details class="sd__g reveal" open><summary><h3>Product &amp; e-commerce</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Product photography on clean backgrounds and in set – for e-commerce, product presentation, sales material and campaigns.</p><div class="sd__tags"><span>Product photography</span><span>Packshot</span><span>Product detail</span><span>Lifestyle</span><span>E-commerce photos</span><span>Catalogue photos</span></div></div></details>
+      <details class="sd__g reveal" open><summary><h3>Brand &amp; business</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Company and team sessions, business portraits, photos for LinkedIn, recruitment material and employer branding.</p><div class="sd__tags"><span>Brand session</span><span>Business portrait</span><span>Team photos</span><span>Employer branding</span><span>LinkedIn photos</span><span>Company reportage</span></div></div></details>
+      <details class="sd__g reveal" open><summary><h3>Events &amp; reportage</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Event photography: conferences, trade fairs, launches and company events – people, atmosphere and documentation ready to publish.</p><div class="sd__tags"><span>Event photography</span><span>Conferences</span><span>Trade fairs</span><span>Launches</span><span>Company events</span><span>Social media recap</span></div></div></details>
+      <details class="sd__g reveal" open><summary><h3>Architecture &amp; interiors</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Photos of developments, interiors, buildings and commercial spaces – for sales material, the website and listing portals.</p><div class="sd__tags"><span>Architecture</span><span>Interiors</span><span>Developments</span><span>Hotels and hospitality</span><span>Commercial buildings</span><span>Property photos</span></div></div></details>
+    </section>
+    <section class="sd__blk" id="sd-proces">
+      <div class="sd__blkh reveal"><h2>Our photography <span style="color:#ffd200">capabilities.</span></h2></div>
+      <div class="sd__steps">
+        <div class="sd__step reveal"><h3>Photography</h3><p>Product, advertising, business, brand and event sessions.</p></div>
+        <div class="sd__step reveal"><h3>Studio</h3><p>Controlled light, product photography, packshots and brand sessions.</p></div>
+        <div class="sd__step reveal"><h3>On location</h3><p>Sessions at your premises, in the city, in interiors and outdoors.</p></div>
+        <div class="sd__step reveal"><h3>Drone photography</h3><p>Aerial shots of developments, property, industry, events and automotive.</p></div>
+        <div class="sd__step reveal"><h3>Post-production</h3><p>Selection, colour correction, retouch and delivery-ready files.</p></div>
+      </div>
+    </section>
+    <section class="sd__blk" id="sd-work">
+      <div class="sd__blkh reveal"><h2>Selected work</h2></div>
+      <div class="sd__work">
+        <a class="sd__wi reveal" href="/realizacja-exlantix/"><div class="sd__wm"><img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-18.jpg" alt="EXLANTIX – Event · Photography" loading="lazy" /></div><span>Event · Photography</span><h3>EXLANTIX ↗</h3></a>
+        <a class="sd__wi reveal" href="/realizacja-denza/"><div class="sd__wm"><img src="/assets/portfolio/denza/denza-z9-gt-premiera-fotografia-06.jpg" alt="DENZA – Launch · Photography" loading="lazy" /></div><span>Launch · Photography</span><h3>DENZA ↗</h3></a>
+        <a class="sd__wi reveal" href="/en/portfolio-en/?cat=foto#pt-grid"><div class="sd__wm"><img src="/assets/portfolio/nfm/nfm-fotografia-wydarzenia-01.avif" alt="NFM – NFM · Event photography" loading="lazy" /></div><span>NFM · Event photography</span><h3>NFM ↗</h3></a>
+      </div>
+      <div class="sd__more reveal">
+        <a class="is-lead" href="/en/portfolio-en/#pt-grid">Full portfolio ↗</a>
+        <a href="/en/portfolio-en/?cat=video#pt-grid">Video</a>
+        <a href="/en/portfolio-en/?cat=animacje#pt-grid">Animation</a>
+        <a href="/en/portfolio-en/?cat=eventy#pt-grid">Events</a>
+        <a href="/en/portfolio-en/?cat=grafika#pt-grid">Graphics</a>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+</ServiceLayout>

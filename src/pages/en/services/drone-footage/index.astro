@@ -1,14 +1,271 @@
 ---
-import BaseLayout from './../../../../layouts/BaseLayout.astro';
-const pageHtml = "<div class=\"sd\">\n<section class=\"sd__hero shell\">\n  <span class=\"sd__kick reveal\"><i></i>Services</span>\n  <h1 class=\"sd__h1 reveal\">Drone <span style=\"color:#ffd200\">footage.</span></h1>\n  <p class=\"sd__lead reveal\" data-d=\"1\">We treat aerials as <b>part of the film</b>, not decoration – we fly when the shot from above genuinely adds something to the edit.</p>\n  <p class=\"sd__lead reveal\" data-d=\"1\">We shoot drone photo and video for investments, industry, automotive, events and brand material. The flight plan is set together with the shooting plan.</p>\n  <div class=\"sd__facts reveal\" data-d=\"2\">\n    <div class=\"sd__fact\"><span>Scope</span><strong>Aerial video and photo</strong></div>\n    <div class=\"sd__fact\"><span>Gear</span><strong>Owned, 4K</strong></div>\n    <div class=\"sd__fact\"><span>Flights</span><strong>Fully compliant</strong></div>\n    <div class=\"sd__fact\"><span>Base</span><strong>Gdańsk · all of Poland</strong></div>\n  </div>\n  <figure class=\"sd__reel reveal\" data-d=\"1\">\n    <img src=\"/assets/photo/pruszcz-park-4.avif\" alt=\"Pruszcz Park\" loading=\"eager\" fetchpriority=\"high\" />\n    <figcaption><b>Pruszcz Park</b><span>Aerial footage / investment</span></figcaption>\n  </figure>\n</section>\n<div class=\"sd__body shell\">\n  <div>\n    <section class=\"sd__blk\" id=\"sd-zakres\">\n      <div class=\"sd__blkh reveal\"><h2>What we film</h2></div>\n      <details class=\"sd__g reveal\" open><summary><h3>Property &amp; investments</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>We show the scale of an investment, estate, plant or plot – from construction progress to the finished building in its surroundings.</p><div class=\"sd__tags\"><span>Housing estates</span><span>Construction progress</span><span>Development land</span><span>Plants and halls</span><span>Premium property</span><span>Site context</span></div></div></details>\n      <details class=\"sd__g reveal\" open><summary><h3>Automotive</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>Driving shots, fly-overs and model presentations – frames that build a premium look for the brand.</p><div class=\"sd__tags\"><span>Driving shots</span><span>Fly-over</span><span>Model presentation</span><span>Showroom and yard</span><span>Automotive events</span></div></div></details>\n      <details class=\"sd__g reveal\"><summary><h3>Events</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>We capture the scale of an event from the air: the crowd, the stage and the space you cannot see from the ground.</p><div class=\"sd__tags\"><span>Aerial aftermovie</span><span>Festivals</span><span>Trade fairs</span><span>Sports events</span><span>Concerts</span></div></div></details>\n      <details class=\"sd__g reveal\"><summary><h3>Industry &amp; infrastructure</h3><span class=\"sd__pm\"></span></summary><div class=\"sd__gin\"><p>We document plants, ports, infrastructure and installations – for brand material and visual inspection.</p><div class=\"sd__tags\"><span>Manufacturing plants</span><span>Port and logistics</span><span>Road infrastructure</span><span>Solar farms</span><span>Visual inspection</span></div></div></details>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-proces\">\n      <div class=\"sd__blkh reveal\"><h2>How we work</h2></div>\n      <div class=\"sd__steps\">\n        <div class=\"sd__step reveal\"><h3>Scouting</h3><p>We check the location, airspace and flying conditions.</p></div>\n        <div class=\"sd__step reveal\"><h3>Permits</h3><p>We settle zones, clearances and safety rules.</p></div>\n        <div class=\"sd__step reveal\"><h3>Flight</h3><p>Fly-overs, push-ins, reveals and frames prepared for the edit.</p></div>\n        <div class=\"sd__step reveal\"><h3>Aerial stills</h3><p>Aerial photography for sales material and the website.</p></div>\n        <div class=\"sd__step reveal\"><h3>Into the edit</h3><p>Footage ready to cut together with film and social media.</p></div>\n      </div>\n    </section>\n    <section class=\"sd__blk\" id=\"sd-work\">\n      <div class=\"sd__blkh reveal\"><h2>Selected work</h2></div>\n      <div class=\"sd__work\">\n        <a class=\"sd__wi reveal\" href=\"../../../en/portfolio-en/?cat=video#pt-grid\"><div class=\"sd__wm\"><img src=\"/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-02.jpg\" alt=\"DORACO – TVP studio · Aerial\" loading=\"lazy\" /></div><span>TVP studio · Aerial</span><h3>DORACO ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../../en/portfolio-en/?cat=video#pt-grid\"><div class=\"sd__wm\"><img src=\"/assets/work/landrover.jpg\" alt=\"Land Rover – Automotive · Off-road\" loading=\"lazy\" /></div><span>Automotive · Off-road</span><h3>Land Rover ↗</h3></a>\n        <a class=\"sd__wi reveal\" href=\"../../../en/realizacja/?v=tvTuMX3mxG4\"><div class=\"sd__wm\"><img src=\"/assets/work/baltic-robert-3.avif\" alt=\"Baltic Towers – Investment · Video\" loading=\"lazy\" /></div><span>Investment · Video</span><h3>Baltic Towers ↗</h3></a>\n      </div>\n      <div class=\"sd__more reveal\">\n        <a class=\"is-lead\" href=\"../../../en/portfolio-en/#pt-grid\">Full portfolio ↗</a>\n        <a href=\"../../../en/portfolio-en/?cat=video#pt-grid\">Video</a>\n        <a href=\"../../../en/portfolio-en/?cat=animacje#pt-grid\">Animation</a>\n        <a href=\"../../../en/portfolio-en/?cat=eventy#pt-grid\">Events</a>\n        <a href=\"../../../en/portfolio-en/?cat=grafika#pt-grid\">Graphics</a>\n      </div>\n    </section>\n  </div>\n</div>\n</div>";
+import ServiceLayout from '../../../../layouts/ServiceLayout.astro';
+import { pageUrl } from '../../../../lib/site';
+
+const lang = 'en' as const;
+const canonical = pageUrl('/en/services/drone-footage/');
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Drone footage",
+  "serviceType": "Drone footage",
+  "url": "https://sezmoo.com/en/services/drone-footage/",
+  "inLanguage": "en",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Poland"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SEZMOO",
+    "url": "https://sezmoo.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gdańsk",
+      "addressCountry": "PL"
+    },
+    "email": "biuro@sezmoo.com",
+    "telephone": "+48739260450"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Drone footage",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Property & investments",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Housing estates"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Construction progress"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Development land"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plants and halls"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Premium property"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Site context"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Automotive",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Driving shots"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fly-over"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Model presentation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Showroom and yard"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automotive events"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Events",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aerial aftermovie"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Festivals"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Trade fairs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sports events"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Concerts"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Industry & infrastructure",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Manufacturing plants"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Port and logistics"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Road infrastructure"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Solar farms"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Visual inspection"
+            }
+          }
+        ]
+      }
+    ]
+  }
+};
 ---
 
-<BaseLayout
-  lang="en"
+<ServiceLayout
+  lang={lang}
   title="Drone footage | SEZMOO"
   description="We treat aerials as part of the film, not decoration – we fly when the shot from above genuinely adds something to the edit. We shoot drone photo and"
-  canonical="https://sezmoo.com/en/services/drone-footage/"
-  jsonLd={"{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Drone footage\",\"serviceType\":\"Drone footage\",\"url\":\"https://sezmoo.com/en/services/drone-footage/\",\"inLanguage\":\"en\",\"areaServed\":{\"@type\":\"Country\",\"name\":\"Poland\"},\"provider\":{\"@type\":\"Organization\",\"name\":\"SEZMOO\",\"url\":\"https://sezmoo.com/\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Gdańsk\",\"addressCountry\":\"PL\"},\"email\":\"biuro@sezmoo.com\",\"telephone\":\"+48502260450\"},\"hasOfferCatalog\":{\"@type\":\"OfferCatalog\",\"name\":\"Drone footage\",\"itemListElement\":[{\"@type\":\"OfferCatalog\",\"name\":\"Property & investments\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Housing estates\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Construction progress\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Development land\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Plants and halls\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Premium property\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Site context\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Automotive\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Driving shots\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Fly-over\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Model presentation\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Showroom and yard\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Automotive events\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Events\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Aerial aftermovie\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Festivals\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Trade fairs\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Sports events\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Concerts\"}}]},{\"@type\":\"OfferCatalog\",\"name\":\"Industry & infrastructure\",\"itemListElement\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Manufacturing plants\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Port and logistics\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Road infrastructure\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Solar farms\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Visual inspection\"}}]}]}}"}
+  canonical={canonical}
+  jsonLd={jsonLd}
 >
-  <Fragment set:html={pageHtml} />
-</BaseLayout>
+<div class="sd">
+<section class="sd__hero shell">
+  <span class="sd__kick reveal"><i></i>Services</span>
+  <h1 class="sd__h1 reveal">Drone <span style="color:#ffd200">footage.</span></h1>
+  <p class="sd__lead reveal" data-d="1">We treat aerials as <b>part of the film</b>, not decoration – we fly when the shot from above genuinely adds something to the edit.</p>
+  <p class="sd__lead reveal" data-d="1">We shoot drone photo and video for investments, industry, automotive, events and brand material. The flight plan is set together with the shooting plan.</p>
+  <div class="sd__facts reveal" data-d="2">
+    <div class="sd__fact"><span>Scope</span><strong>Aerial video and photo</strong></div>
+    <div class="sd__fact"><span>Gear</span><strong>Owned, 4K</strong></div>
+    <div class="sd__fact"><span>Flights</span><strong>Fully compliant</strong></div>
+    <div class="sd__fact"><span>Base</span><strong>Gdańsk · all of Poland</strong></div>
+  </div>
+  <figure class="sd__reel reveal" data-d="1">
+    <img src="/assets/photo/pruszcz-park-4.avif" alt="Pruszcz Park" loading="eager" fetchpriority="high" />
+    <figcaption><b>Pruszcz Park</b><span>Aerial footage / investment</span></figcaption>
+  </figure>
+</section>
+<div class="sd__body shell">
+  <div>
+    <section class="sd__blk" id="sd-zakres">
+      <div class="sd__blkh reveal"><h2>What we film</h2></div>
+      <details class="sd__g reveal" open><summary><h3>Property &amp; investments</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>We show the scale of an investment, estate, plant or plot – from construction progress to the finished building in its surroundings.</p><div class="sd__tags"><span>Housing estates</span><span>Construction progress</span><span>Development land</span><span>Plants and halls</span><span>Premium property</span><span>Site context</span></div></div></details>
+      <details class="sd__g reveal" open><summary><h3>Automotive</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>Driving shots, fly-overs and model presentations – frames that build a premium look for the brand.</p><div class="sd__tags"><span>Driving shots</span><span>Fly-over</span><span>Model presentation</span><span>Showroom and yard</span><span>Automotive events</span></div></div></details>
+      <details class="sd__g reveal"><summary><h3>Events</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>We capture the scale of an event from the air: the crowd, the stage and the space you cannot see from the ground.</p><div class="sd__tags"><span>Aerial aftermovie</span><span>Festivals</span><span>Trade fairs</span><span>Sports events</span><span>Concerts</span></div></div></details>
+      <details class="sd__g reveal"><summary><h3>Industry &amp; infrastructure</h3><span class="sd__pm"></span></summary><div class="sd__gin"><p>We document plants, ports, infrastructure and installations – for brand material and visual inspection.</p><div class="sd__tags"><span>Manufacturing plants</span><span>Port and logistics</span><span>Road infrastructure</span><span>Solar farms</span><span>Visual inspection</span></div></div></details>
+    </section>
+    <section class="sd__blk" id="sd-proces">
+      <div class="sd__blkh reveal"><h2>How we work</h2></div>
+      <div class="sd__steps">
+        <div class="sd__step reveal"><h3>Scouting</h3><p>We check the location, airspace and flying conditions.</p></div>
+        <div class="sd__step reveal"><h3>Permits</h3><p>We settle zones, clearances and safety rules.</p></div>
+        <div class="sd__step reveal"><h3>Flight</h3><p>Fly-overs, push-ins, reveals and frames prepared for the edit.</p></div>
+        <div class="sd__step reveal"><h3>Aerial stills</h3><p>Aerial photography for sales material and the website.</p></div>
+        <div class="sd__step reveal"><h3>Into the edit</h3><p>Footage ready to cut together with film and social media.</p></div>
+      </div>
+    </section>
+    <section class="sd__blk" id="sd-work">
+      <div class="sd__blkh reveal"><h2>Selected work</h2></div>
+      <div class="sd__work">
+        <a class="sd__wi reveal" href="/en/portfolio-en/?cat=video#pt-grid"><div class="sd__wm"><img src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-02.jpg" alt="DORACO – TVP studio · Aerial" loading="lazy" /></div><span>TVP studio · Aerial</span><h3>DORACO ↗</h3></a>
+        <a class="sd__wi reveal" href="/en/portfolio-en/?cat=video#pt-grid"><div class="sd__wm"><img src="/assets/work/landrover.jpg" alt="Land Rover – Automotive · Off-road" loading="lazy" /></div><span>Automotive · Off-road</span><h3>Land Rover ↗</h3></a>
+        <a class="sd__wi reveal" href="/en/realizacja/?v=tvTuMX3mxG4"><div class="sd__wm"><img src="/assets/work/baltic-robert-3.avif" alt="Baltic Towers – Investment · Video" loading="lazy" /></div><span>Investment · Video</span><h3>Baltic Towers ↗</h3></a>
+      </div>
+      <div class="sd__more reveal">
+        <a class="is-lead" href="/en/portfolio-en/#pt-grid">Full portfolio ↗</a>
+        <a href="/en/portfolio-en/?cat=video#pt-grid">Video</a>
+        <a href="/en/portfolio-en/?cat=animacje#pt-grid">Animation</a>
+        <a href="/en/portfolio-en/?cat=eventy#pt-grid">Events</a>
+        <a href="/en/portfolio-en/?cat=grafika#pt-grid">Graphics</a>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+</ServiceLayout>
