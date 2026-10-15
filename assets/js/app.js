@@ -220,7 +220,7 @@
     bar.setAttribute("aria-label", T.abar);
 
     // 1 · Phone
-    bar.appendChild(makeItem({ href: "tel:+48502260450", svg: ICO.phone, label: T.phone, aria: T.aphone }));
+    bar.appendChild(makeItem({ href: "tel:+48739260450", svg: ICO.phone, label: T.phone, aria: T.aphone }));
 
     // 2 · E-mail
     bar.appendChild(makeItem({ href: "mailto:biuro@sezmoo.com", svg: ICO.mail, label: T.mail, aria: T.amail }));
