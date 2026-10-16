@@ -1,4 +1,4 @@
-/** Video case studies keyed by CDN video id — PL + EN copy. */
+/** Video case studies keyed by CDN / YouTube video id — PL + EN copy. Public URLs use `slug`. */
 import videoManifest from '../../assets/video/yt/manifest.json';
 
 export type CaseStudyLang = 'pl' | 'en';
@@ -26,6 +26,8 @@ export interface CaseStudyCopy {
 
 export interface CaseStudy {
   videoId: string;
+  /** URL segment under /realizacja/{slug}/ */
+  slug: string;
   pl: CaseStudyCopy;
   en: CaseStudyCopy;
 }
@@ -52,6 +54,7 @@ export const CASE_STUDY_ORDER: readonly string[] = [
 export const CASE_STUDIES: Record<string, CaseStudy> = {
   'WG5ufZMfjQ8': {
     videoId: 'WG5ufZMfjQ8',
+    slug: 'audi-rs5-trailer',
     pl: {
       title: "Trailer RS5",
       accent: "RS5.",
@@ -104,6 +107,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   '4DTDakWPmfM': {
     videoId: '4DTDakWPmfM',
+    slug: 'tryb-wiosna',
     pl: {
       title: "#TrybWiosna",
       accent: "Wiosna.",
@@ -156,6 +160,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'Hdnf6zcn3bA': {
     videoId: 'Hdnf6zcn3bA',
+    slug: 'jaecoo-8-modny-tata',
     pl: {
       title: "JAECOO 8 × Modny Tata",
       accent: "Tata.",
@@ -208,6 +213,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'c_5toy1IhIs': {
     videoId: 'c_5toy1IhIs',
+    slug: 'audi-rs3',
     pl: {
       title: "Żółte RS3",
       accent: "RS3.",
@@ -260,6 +266,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'X8-hf_cyZxE': {
     videoId: 'X8-hf_cyZxE',
+    slug: 'byd-dolphin-kamila',
     pl: {
       title: "Dolphin z Kamilą",
       accent: "Dolphin.",
@@ -312,6 +319,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'O5iF7SxqX1I': {
     videoId: 'O5iF7SxqX1I',
+    slug: 'modny-tata-padel',
     pl: {
       title: "Modny Tata, Padel",
       accent: "Padel.",
@@ -364,6 +372,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'jco18tIaCT0': {
     videoId: 'jco18tIaCT0',
+    slug: 'crt',
     pl: {
       title: "CRT",
       accent: "CRT.",
@@ -416,6 +425,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'NHEIfdgr9mI': {
     videoId: 'NHEIfdgr9mI',
+    slug: 'izipak',
     pl: {
       title: "IZIPAK",
       accent: "IZIPAK.",
@@ -468,6 +478,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'wVy04YYnbRM': {
     videoId: 'wVy04YYnbRM',
+    slug: 'pisf',
     pl: {
       title: "PISF",
       accent: "PISF.",
@@ -520,6 +531,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'iknT-xURZag': {
     videoId: 'iknT-xURZag',
+    slug: 'gdansk-miastem-kultury',
     pl: {
       title: "Gdańsk Miastem Kultury",
       accent: "Kultury.",
@@ -572,6 +584,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'tvTuMX3mxG4': {
     videoId: 'tvTuMX3mxG4',
+    slug: 'baltic-towers-otwarcie',
     pl: {
       title: "Baltic Towers",
       accent: "Towers.",
@@ -624,6 +637,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'lD11UTII6Ko': {
     videoId: 'lD11UTII6Ko',
+    slug: 'dzien-mamy-modna-mama',
     pl: {
       title: "Dzień Mamy z Modną Mamą",
       accent: "Mamą.",
@@ -676,6 +690,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   '7HZN5VCTvoo': {
     videoId: '7HZN5VCTvoo',
+    slug: 'dolphin-g-animacja',
     pl: {
       title: "Animacja Dolphin G",
       accent: "Dolphin G.",
@@ -728,6 +743,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'lOwJMPKMdYA': {
     videoId: 'lOwJMPKMdYA',
+    slug: 'baltic-bhp',
     pl: {
       title: "Baltic BHP",
       accent: "BHP.",
@@ -780,6 +796,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
   },
   'WszuntCE51c': {
     videoId: 'WszuntCE51c',
+    slug: 'baltic-model-fabryki',
     pl: {
       title: "Baltic Model Fabryki",
       accent: "3D.",
@@ -836,6 +853,10 @@ export function getCaseStudy(id: string): CaseStudy | undefined {
   return CASE_STUDIES[id];
 }
 
+export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
+  return Object.values(CASE_STUDIES).find((s) => s.slug === slug);
+}
+
 export function getCaseStudyCopy(id: string, lang: CaseStudyLang): CaseStudyCopy | undefined {
   return CASE_STUDIES[id]?.[lang];
 }
@@ -846,15 +867,28 @@ export function getNextCaseStudyId(id: string): string | undefined {
   return CASE_STUDY_ORDER[(idx + 1) % CASE_STUDY_ORDER.length];
 }
 
-export function caseStudyPaths(lang: CaseStudyLang): { params: { id: string }; props: { study: CaseStudy; lang: CaseStudyLang } }[] {
+/** videoId → public slug (for redirects / portfolio). */
+export function caseStudySlug(id: string): string | undefined {
+  return CASE_STUDIES[id]?.slug;
+}
+
+/** All videoId → slug pairs for legacy URL redirects. */
+export function caseStudyIdRedirects(): { id: string; slug: string }[] {
+  return CASE_STUDY_ORDER.map((id) => ({ id, slug: CASE_STUDIES[id].slug }));
+}
+
+export function caseStudyPaths(lang: CaseStudyLang): { params: { slug: string }; props: { study: CaseStudy; lang: CaseStudyLang } }[] {
   return CASE_STUDY_ORDER.map((id) => ({
-    params: { id },
+    params: { slug: CASE_STUDIES[id].slug },
     props: { study: CASE_STUDIES[id], lang },
   }));
 }
 
-export function caseStudyHref(id: string, lang: CaseStudyLang): string {
-  return lang === 'en' ? `/en/realizacja/${id}/` : `/realizacja/${id}/`;
+/** Public case URL — pass videoId or CaseStudy. */
+export function caseStudyHref(idOrStudy: string | CaseStudy, lang: CaseStudyLang): string {
+  const slug = typeof idOrStudy === 'string' ? CASE_STUDIES[idOrStudy]?.slug : idOrStudy.slug;
+  if (!slug) throw new Error(`Unknown case study: ${typeof idOrStudy === 'string' ? idOrStudy : idOrStudy.videoId}`);
+  return lang === 'en' ? `/en/realizacja/${slug}/` : `/realizacja/${slug}/`;
 }
 
 export function posterPath(id: string): string {

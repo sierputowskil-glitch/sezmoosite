@@ -1,34 +1,34 @@
 ---
-import CaseStudyPage from '../../../components/case-study/CaseStudyPage.astro';
+import CaseStudyPage from '../../../../components/case-study/CaseStudyPage.astro';
 import {
   caseStudyHref,
   caseStudyPaths,
   cdnVideoContentUrl,
   posterPath,
   type CaseStudy,
-} from '../../../data/case-studies';
-import CaseStudyLayout from '../../../layouts/CaseStudyLayout.astro';
-import { pageUrl } from '../../../lib/site';
+} from '../../../../data/case-studies';
+import CaseStudyLayout from '../../../../layouts/CaseStudyLayout.astro';
+import { pageUrl } from '../../../../lib/site';
 
 export function getStaticPaths() {
-  return caseStudyPaths('pl');
+  return caseStudyPaths('en');
 }
 
 interface Props {
   study: CaseStudy;
-  lang: 'pl';
+  lang: 'en';
 }
 
 const { study } = Astro.props;
-const lang = 'pl' as const;
+const lang = 'en' as const;
 const id = study.videoId;
-const copy = study.pl;
-const canonical = pageUrl(caseStudyHref(id, lang));
-const hreflangPl = canonical;
-const hreflangEn = pageUrl(caseStudyHref(id, 'en'));
+const copy = study.en;
+const canonical = pageUrl(caseStudyHref(study, lang));
+const hreflangPl = pageUrl(caseStudyHref(study, 'pl'));
+const hreflangEn = canonical;
 const thumb = pageUrl(posterPath(id));
 
-const title = `${copy.title} · realizacja wideo | SEZMOO`;
+const title = `${copy.title} · video case study | SEZMOO`;
 const description = copy.lead;
 
 const jsonLd = {
@@ -63,7 +63,7 @@ const extraHeadHtml = `<style>
   jsonLd={jsonLd}
   hreflangPl={hreflangPl}
   hreflangEn={hreflangEn}
-  altHref={caseStudyHref(id, 'en')}
+  altHref={caseStudyHref(study, 'pl')}
   extraHead={extraHeadHtml}
 >
   <CaseStudyPage lang={lang} study={study} />

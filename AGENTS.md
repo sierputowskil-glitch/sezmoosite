@@ -122,8 +122,8 @@ Contact API locally needs `npm run build` then `npm run dev:functions`, with Tur
 
 ### Case studies (copy + routes)
 
-- **Data-driven video cases:** copy in `src/data/case-studies.ts` (PL + EN per YouTube `videoId`). URLs: `/realizacja/{id}/` and `/en/realizacja/{id}/` via `src/pages/realizacja/[id]/` (no new Astro file per id).
-- **Order / next-nav:** `CASE_STUDY_ORDER` in the same file — update when inserting.
+- **Data-driven video cases:** copy in `src/data/case-studies.ts` (PL + EN per YouTube `videoId` + public `slug`). URLs: `/realizacja/{slug}/` and `/en/realizacja/{slug}/` via `src/pages/realizacja/[slug]/` (no new Astro file per case). Legacy `/realizacja/{videoId}/` and `?v=` redirect to the slug.
+- **Order / next-nav:** `CASE_STUDY_ORDER` (videoIds) in the same file — update when inserting; keep `slug` unique and title-derived.
 - **Legacy one-off shells** still exist as `src/pages/realizacja-*/` (and EN mirrors) for non-standard layouts; prefer the `[id]` pipeline for new video cases.
 - Player uses `data-video="{ytId}"` → `assets/js/cdn-video-map.js` → MP4 on Hostido CDN (`cdn.sezmoo.com`). Posters stay on Pages: `/assets/video/yt/posters/{id}.webp`.
 
@@ -163,11 +163,11 @@ Do **not** ship large MP4s in the Pages deploy (`sync:assets` skips `assets/vide
    ```
    Needs **ffmpeg** + **cwebp**. Pulls a frame from the CDN MP4 (fallback: `i.ytimg.com` maxres/hq). Writes `assets/video/yt/posters/{id}.webp`.
 
-7. **Site copy** — add `CASE_STUDIES[id]` (PL + EN) and append id to `CASE_STUDY_ORDER`. Mirror an existing entry (`short: true` for 9:16). Fields: `title`, `client`, `cat`, `kv`, `lead`, `intro`, `context[]`, `steps[]`.
+7. **Site copy** — add `CASE_STUDIES[id]` with `slug` (kebab title), PL + EN, and append id to `CASE_STUDY_ORDER`. Mirror an existing entry (`short: true` for 9:16). Fields: `slug`, `title`, `client`, `cat`, `kv`, `lead`, `intro`, `context[]`, `steps[]`. Add `_redirects` from `/realizacja/{id}/` → `/realizacja/{slug}/` (PL + EN).
 
-8. **Optional portfolio cards** — homepage / `portfolio/` / `portfolio-lista-b/` are still hand-authored; add a card with the new poster if the case should appear in listings.
+8. **Optional portfolio cards** — homepage / `portfolio/` / `portfolio-lista-b/` are still hand-authored; add a card with `data-case="1"`, `data-slug`, `href="/realizacja/{slug}/"` and the new poster if the case should appear in listings.
 
-9. **Verify** — `npm run check`; open `/realizacja/{id}/`, confirm poster + play hits CDN (not YouTube embed). Do not commit local MP4s (CDN only); commit queue/manifest/posters/map + `case-studies.ts`.
+9. **Verify** — `npm run check`; open `/realizacja/{slug}/`, confirm poster + play hits CDN (not YouTube embed). Do not commit local MP4s (CDN only); commit queue/manifest/posters/map + `case-studies.ts`.
 
 ### Service & marketing pages
 

@@ -1,24 +1,24 @@
 ---
-import { CASE_STUDY_ORDER } from '../../../data/case-studies';
+import { caseStudyIdRedirects } from '../../../data/case-studies';
 import CaseStudyLayout from '../../../layouts/CaseStudyLayout.astro';
 import { pageUrl } from '../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/realizacja/');
-const knownIds = JSON.stringify([...CASE_STUDY_ORDER]);
+const idToSlug = Object.fromEntries(caseStudyIdRedirects().map(({ id, slug }) => [id, slug]));
 const extraHeadHtml = `<style>
 .rz-empty { min-height:70vh; display:grid; place-items:center; text-align:center; padding:0 24px; }
 .rz-empty h1 { font-weight:760; font-stretch:106%; font-size:clamp(28px,5vw,52px); line-height:1.02; }
 .rz-empty p { color:var(--fg-dim); margin-top:14px; }
 .rz-empty a { color:var(--rec); }
 </style>`;
-/** Compat: old /en/realizacja/?v=YOUTUBE_ID → /en/realizacja/YOUTUBE_ID/ */
+/** Compat: legacy /en/realizacja/?v=YOUTUBE_ID → /en/realizacja/{slug}/ */
 const pageScriptsHtml = `<script>
 (function(){
-  var known=${knownIds};
+  var map=${JSON.stringify(idToSlug)};
   var v=new URLSearchParams(location.search).get('v');
-  if(v&&known.indexOf(v)!==-1){
-    location.replace('/en/realizacja/'+encodeURIComponent(v)+'/');
+  if(v&&map[v]){
+    location.replace('/en/realizacja/'+encodeURIComponent(map[v])+'/');
   }
 })();
 </script>`;

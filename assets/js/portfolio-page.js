@@ -189,16 +189,17 @@
     document.body.style.overflow = "hidden";
   }
 
-  /* click routing — data-case → /realizacja/{id}/; other video → CDN modal; hrefs navigate */
+  /* click routing — data-case → /realizacja/{slug}/; other video → CDN modal; hrefs navigate */
   tiles.forEach(function (t) {
     t.addEventListener("click", function (e) {
       var id = t.getAttribute("data-id");
       var isVideo = t.getAttribute("data-media") === "video" && id;
-      // Video case-study tiles (legacy data-case) → static Astro routes
+      // Video case-study tiles → slug URL (prefer href; fallback data-slug)
       if (isVideo && t.getAttribute("data-case") === "1") {
         if (!t.getAttribute("href")) {
           e.preventDefault();
-          location.href = (en ? "/en/realizacja/" : "/realizacja/") + id + "/";
+          var slug = t.getAttribute("data-slug") || id;
+          location.href = (en ? "/en/realizacja/" : "/realizacja/") + slug + "/";
         }
         return;
       }
