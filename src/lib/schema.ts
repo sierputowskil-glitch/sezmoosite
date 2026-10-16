@@ -236,3 +236,73 @@ export function videoObjectJsonLd(opts: {
     publisher: sezmooOrganization({ site, includeAddress: false }),
   };
 }
+
+export type ServiceCatalogOffer = { name: string; description?: string };
+export type ServiceCatalogGroup = {
+  name: string;
+  description?: string;
+  items?: ServiceCatalogOffer[];
+};
+
+function offerNode(item: ServiceCatalogOffer): Record<string, unknown> {
+  return {
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: item.name,
+      ...(item.description ? { description: item.description } : {}),
+    },
+  };
+}
+
+/** Service + nested OfferCatalog. Canonical/url from pageUrl(); provider is SEZMOO Gdańsk. */
+export function serviceJsonLd(opts: {
+  name: string;
+  serviceType?: string;
+  canonical: string;
+  lang?: 'pl' | 'en';
+  catalogName?: string;
+  catalog?: ServiceCatalogGroup[];
+}): Record<string, unknown> {
+  const site = getSiteUrl();
+  const catalog = opts.catalog || [];
+  const nested = catalog.some((g) => g.items && g.items.length > 0);
+
+  let itemListElement: Record<string, unknown>[] = [];
+  if (catalog.length) {
+    itemListElement = nested
+      ? catalog.map((g) =>
+          g.items && g.items.length
+            ? {
+                '@type': 'OfferCatalog',
+                name: g.name,
+                itemListElement: g.items.map(offerNode),
+              }
+            : offerNode({ name: g.name, description: g.description }),
+        )
+      : catalog.map((g) => offerNode({ name: g.name, description: g.description }));
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: opts.name,
+    serviceType: opts.serviceType || opts.name,
+    url: opts.canonical,
+    inLanguage: opts.lang === 'en' ? 'en' : 'pl-PL',
+    areaServed: {
+      '@type': 'Country',
+      name: opts.lang === 'en' ? 'Poland' : 'Polska',
+    },
+    provider: sezmooOrganization({ site }),
+    ...(itemListElement.length
+      ? {
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: opts.catalogName || opts.name,
+            itemListElement,
+          },
+        }
+      : {}),
+  };
+}

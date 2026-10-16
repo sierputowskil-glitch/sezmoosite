@@ -1,0 +1,180 @@
+---
+import AssetImage from '../AssetImage.astro';
+import ContactForm from '../ContactForm.astro';
+import type { ServiceBlock } from '../../data/services/types';
+import type { ServiceLang } from '../../data/services';
+
+interface Props {
+  block: ServiceBlock;
+  lang: ServiceLang;
+}
+
+const { block, lang } = Astro.props;
+---
+
+{
+  block.type === 'details' && (
+    <>
+      {block.leadHtml && (
+        <p class="sd__lead reveal" style="margin-top:0" set:html={block.leadHtml} />
+      )}
+      {block.items.map((item) => (
+        <details class="sd__g reveal" open={item.open || undefined}>
+          <summary>
+            <h3 set:html={item.title} />
+            <span class="sd__pm"></span>
+          </summary>
+          <div class="sd__gin">
+            <p set:html={item.body} />
+            {item.tags && item.tags.length > 0 && (
+              <div class="sd__tags">
+                {item.tags.map((t) => (
+                  <span>{t}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        </details>
+      ))}
+      {block.note && <p class="sd__note reveal" set:html={block.note} />}
+    </>
+  )
+}
+{
+  block.type === 'steps' && (
+    <div class="sd__steps">
+      {block.items.map((s) => (
+        <div class="sd__step reveal">
+          <h3 set:html={s.title} />
+          <p set:html={s.text} />
+        </div>
+      ))}
+    </div>
+  )
+}
+{
+  block.type === 'vars' && (
+    <>
+      <div class="sd__vars">
+        {block.items.map((v) => (
+          <a class="sd__var reveal" href={v.href}>
+            <i>{v.n}</i>
+            <h3 set:html={v.title} />
+            <p set:html={v.text} />
+            <em>↗</em>
+          </a>
+        ))}
+      </div>
+      {block.note && <p class="sd__note reveal" set:html={block.note} />}
+    </>
+  )
+}
+{
+  block.type === 'work' && (
+    <>
+      <div class="sd__work">
+        {block.items.map((w) => (
+          <a class="sd__wi reveal" href={w.href}>
+            <div class="sd__wm">
+              <AssetImage
+                src={w.src}
+                alt={w.alt}
+                loading="lazy"
+                decoding="async"
+                widths={[400, 720, 1080]}
+                sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw"
+                quality={72}
+              />
+            </div>
+            <span set:html={w.kicker} />
+            <h3 set:html={w.title} />
+          </a>
+        ))}
+      </div>
+      {block.more.length > 0 && (
+        <div class="sd__more reveal">
+          {block.more.map((m) => (
+            <a class:list={[m.lead && 'is-lead']} href={m.href} set:html={m.label} />
+          ))}
+        </div>
+      )}
+    </>
+  )
+}
+{
+  block.type === 'prose' && (
+    <>
+      {block.paras.map((p, i) =>
+        i === 0 ? (
+          <h3 class="fmt-lead reveal" set:html={p} />
+        ) : (
+          <p class="fmt-p reveal" set:html={p} />
+        ),
+      )}
+      {block.more && block.more.length > 0 && (
+        <div class="sd__more reveal">
+          {block.more.map((m) => (
+            <a class:list={[m.lead && 'is-lead']} href={m.href} set:html={m.label} />
+          ))}
+        </div>
+      )}
+      {block.tags && block.tags.length > 0 && (
+        <div class="sd__tags reveal" style="margin-top:20px">
+          {block.tags.map((t) => (
+            <span>{t}</span>
+          ))}
+        </div>
+      )}
+    </>
+  )
+}
+{
+  block.type === 'faq' &&
+    block.items.map((item) => (
+      <details class="sd__g reveal" open={item.open || undefined}>
+        <summary>
+          <h3 set:html={item.title} />
+          <span class="sd__pm"></span>
+        </summary>
+        <div class="sd__gin">
+          <p set:html={item.body} />
+        </div>
+      </details>
+    ))
+}
+{
+  block.type === 'form' && (
+    <>
+      {block.leadHtml && (
+        <p class="sd__lead reveal" style="margin-top:0" set:html={block.leadHtml} />
+      )}
+      <ContactForm lang={lang} formId={block.formId} />
+    </>
+  )
+}
+{
+  block.type === 'related' && (
+    <>
+      <div class="svcA" style="margin-top:0">
+        {block.rows.map((r) => (
+          <a class="svcA__row reveal" href={r.href}>
+            <span class="svcA__no">{r.no}</span>
+            <h3 class="svcA__t" set:html={r.title} />
+            <p class="svcA__d" set:html={r.desc} />
+            <span class="svcA__go">↗</span>
+          </a>
+        ))}
+      </div>
+      <div class="sub-cta reveal">
+        <div>
+          <h2 set:html={block.ctaTitle} />
+          <p set:html={block.ctaP} />
+        </div>
+        <a href={block.ctaHref} class="btn btn--primary">
+          <span class="ico"></span>
+          <span class="lbl" set:html={block.ctaLabel} />
+        </a>
+      </div>
+    </>
+  )
+}

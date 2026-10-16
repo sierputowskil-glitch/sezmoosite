@@ -12,7 +12,7 @@ Static marketing site for **SEZMOO** (Gdańsk creative / production agency):
 - **Languages:** PL (default routes) + EN under `/en/…`
 - **Legacy:** pre-Astro HTML on branch `legacy/cyberfolks-html` — do not mix that tree into `main` casually
 
-Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `PHONE_TEL`). Keep footers, contact, and `assets/js/app.js` in sync when changing it.
+Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `PHONE_TEL`). Keep footers, contact, and `assets/js/form.js` / `core.js` in sync when changing it.
 
 ## Non-negotiables
 
@@ -32,10 +32,11 @@ Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `
 | `src/pages/en/` | English mirrors |
 | `src/content/blog/` | Blog Markdown collection |
 | `src/content.config.ts` | Blog Zod schema — update when adding frontmatter fields |
-| `src/components/` | Shared UI (`Nav`, `Footer`, `ContactForm`, `BlogArticle`, …) |
+| `src/components/` | Shared UI (`Nav`, `Footer`, `ContactForm`, `BlogArticle`, `ServicePage`, …) |
 | `src/layouts/` | `BaseLayout`, `ArticleLayout`, `ServiceLayout`, `CaseStudyLayout`, `PortfolioLayout` |
 | `src/data/case-studies.ts` | Case-study PL/EN copy keyed by YouTube / CDN video id |
-| `src/lib/` | `site.ts` (URLs, phone, media CDN), `blog.ts` (listings helpers) |
+| `src/data/services/` | Service PL/EN copy + block structure (`types.ts`, `pages/*.ts`) |
+| `src/lib/` | `site.ts` (URLs, phone, media CDN), `blog.ts`, `schema.ts` (JSON-LD objects) |
 | `assets/` | CSS, JS, images, video posters/manifest — source of truth |
 | `public/` | `_redirects`, `_headers`, `robots.txt`, `404.html`; assets appear after sync |
 | `functions/` | CF Pages Functions only (contact + rate limit) |
@@ -62,11 +63,27 @@ Contact API locally needs `npm run build` then `npm run dev:functions`, with Tur
 
 ### Astro pages
 
-- Prefer existing layouts: services → `ServiceLayout`, articles → `ArticleLayout` + `BlogArticle`, case studies → `CaseStudyLayout` / `CaseStudyPage`.
+- Prefer existing layouts: services → `ServiceLayout` + `ServicePage`, articles → `ArticleLayout` + `BlogArticle`, case studies → `CaseStudyLayout` / `CaseStudyPage`.
 - Set `lang`, `title`, `description`, `canonical` via `pageUrl('/path/')`. Pass `hreflangPl` / `hreflangEn` when a PL↔EN pair exists.
 - Reuse `ContactForm`, `AssetImage` / `OptImage`, `Footer`, `Nav` — do not duplicate chrome.
-- Service pages often ship JSON-LD (`Service`, `FAQPage`) in frontmatter/`extraHead` — keep provider data consistent (SEZMOO, Gdańsk, `biuro@sezmoo.com`, phone).
+- **JSON-LD as objects only** — pass `jsonLd` (object or array) into the layout. Build via `src/lib/schema.ts` (`serviceJsonLd`, `faqPageJsonLd`, `blogPostingJsonLd`, `sezmooOrganization`). Never dump `<script type="application/ld+json">` into `extraHead`. Provider data stays SEZMOO, Gdańsk, `biuro@sezmoo.com`, phone from `site.ts`.
 - Preserve design system: CSS variables and classes from `assets/css` + layout inline styles; fonts are Archivo Variable + Space Mono (`src/styles/fonts.css`). Do not swap to Inter/system defaults.
+
+### Site JS (`assets/js/`)
+
+Edit source here, not `public/assets/`. Vite-hashed imports from layouts/pages.
+
+| File | Loads | Role |
+| --- | --- | --- |
+| `app.js` | `BaseLayout` | Barrel: `core.js` + `form.js` |
+| `core.js` | via `app.js` | Nav, logo, Lenis, reveal, anchors, sub-hero intro, mobile bar |
+| `form.js` | via `app.js` | Contact / retainer Turnstile (`#retainer-form`, `form.cform`) |
+| `home.js` | `index.astro` + `en/index.astro` only | Hero video, reel, timeline, pack, team, hover-play |
+| `portfolio-page.js` | `PortfolioLayout` | Listing filters / lightbox |
+| `cdn-video-map.js` | `BaseLayout` | CDN `data-video` map (home, services, cases) |
+| `flowing-background.js` | lazy public URL | Desktop FX — leave as-is |
+
+Do not dump homepage or portfolio logic back into `app.js`. Case-study play stays in `CaseStudyLayout` inline.
 
 ### Assets & media
 
@@ -171,10 +188,19 @@ Do **not** ship large MP4s in the Pages deploy (`sync:assets` skips `assets/vide
 
 ### Service & marketing pages
 
-- PL: `src/pages/uslugi-marketingowe/<slug>/index.astro`
-- EN: `src/pages/en/services/…` (mirror structure of existing EN services)
-- Keep meta titles brand-suffixed (`| SEZMOO`), descriptions unique, JSON-LD in sync with visible claims.
-- Homepage and large marketing HTML often use `&nbsp;` / typographic spacing — preserve polish of adjacent copy when editing.
+Data-driven like video case studies — **do not fork full HTML** per language.
+
+- **Copy + blocks:** `src/data/services/pages/<pl-slug>.ts` (`pl` + `en` on one `ServiceDef`). Register in `src/data/services/index.ts` `SERVICES`.
+- **Template:** `src/components/service/ServicePage.astro` + `ServiceBlockBody.astro` (`sd__*` classes). JSON-LD from copy via `serviceJsonLd` / FAQ from `copy.faq` or `type: 'faq'` blocks.
+- **Thin routes only:**
+  - PL: `src/pages/uslugi-marketingowe/<plSlug>/index.astro` → `serviceByPlSlug('…')` + `<ServicePage def={def} lang="pl" />`
+  - EN: `src/pages/en/services/<enSlug>/index.astro` → `serviceByEnSlug('…')` + `lang="en"`
+- Keep meta titles brand-suffixed (`| SEZMOO`), descriptions unique, schema catalog/FAQ in sync with visible claims. Preserve `&nbsp;` / typographic HTML in copy strings.
+- **Hubs** `/uslugi-marketingowe/` and `/en/services/` are still hand-authored (not `ServicePage`).
+- **Exceptions (do not force-fit):**
+  - `/uslugi-marketingowe/kampanie-reklamowe/` — client redirect to `kampanie-platne`
+  - `/en/services/advertising-campaigns/` — legacy `sub-hero` / `service-output` layout
+- Homepage marketing HTML is still page-owned (`index.astro` / `en/index.astro` + `home.js`).
 
 ### Redirects & SEO
 
@@ -198,7 +224,7 @@ Do **not** ship large MP4s in the Pages deploy (`sync:assets` skips `assets/vide
 
 1. Read this file + the nearest existing file of the same type (sibling page / post / case study).
 2. Make the smallest change that satisfies the request.
-3. For content: validate frontmatter against `content.config.ts`; keep TOC ids ↔ heading ids.
+3. For content: validate frontmatter against `content.config.ts`; keep TOC ids ↔ heading ids. For services: edit `src/data/services/pages/*.ts`, not duplicated markup in both language trees.
 4. For UI: reuse layouts/components; keep PL/EN pairs and hreflang aligned when both exist.
 5. Verify with `npm run check` (and `npm run build` if touching routes, redirects, or env-sensitive meta).
 6. Do not commit unless the user asks; never push unless asked.

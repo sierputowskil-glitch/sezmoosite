@@ -1,0 +1,212 @@
+---
+/**
+ * Shared service template: hero + typed blocks + JSON-LD objects.
+ * Copy lives in src/data/services; PL/EN share this markup.
+ */
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { faqPageJsonLd, serviceJsonLd } from '../../lib/schema';
+import { mediaUrl, pageUrl } from '../../lib/site';
+import {
+  serviceAltPath,
+  serviceCopy,
+  servicePath,
+  type ServiceDef,
+  type ServiceLang,
+} from '../../data/services';
+import type { ServiceBlock } from '../../data/services/types';
+import ServiceBlockBody from './ServiceBlockBody.astro';
+
+interface Props {
+  def: ServiceDef;
+  lang: ServiceLang;
+}
+
+const { def, lang } = Astro.props;
+const copy = serviceCopy(def, lang);
+const path = servicePath(def, lang);
+const canonical = pageUrl(path);
+const altHref = serviceAltPath(def, lang);
+const hreflangPl = pageUrl(servicePath(def, 'pl'));
+const hreflangEn = pageUrl(servicePath(def, 'en'));
+
+const serviceLd = serviceJsonLd({
+  name: copy.schemaName,
+  serviceType: copy.schemaType,
+  canonical,
+  lang,
+  catalogName: copy.catalogName,
+  catalog: copy.catalog,
+});
+
+const faqItems =
+  copy.faq ||
+  copy.blocks
+    .filter((b): b is Extract<ServiceBlock, { type: 'faq' }> => b.type === 'faq')
+    .flatMap((b) =>
+      b.items.map((item) => ({
+        question: item.title.replace(/&nbsp;/g, ' ').replace(/<[^>]+>/g, ''),
+        answer: item.body.replace(/&nbsp;/g, ' ').replace(/<[^>]+>/g, ''),
+      })),
+    );
+
+const jsonLd = faqItems.length
+  ? [serviceLd, faqPageJsonLd(faqItems, lang)]
+  : serviceLd;
+---
+
+<ServiceLayout
+  lang={lang}
+  title={copy.title}
+  description={copy.description}
+  canonical={canonical}
+  ogTitle={copy.ogTitle}
+  ogDescription={copy.ogDescription}
+  jsonLd={jsonLd}
+  hreflangPl={hreflangPl}
+  hreflangEn={hreflangEn}
+  altHref={altHref}
+>
+  <div class="sd">
+    <section class="sd__hero shell">
+      <span class="sd__kick reveal"><i></i><Fragment set:html={copy.kick} /></span>
+      <h1 class="sd__h1 reveal" set:html={copy.h1Html} />
+      {copy.leads.map((lead) => (
+        <p class="sd__lead reveal" data-d="1" set:html={lead} />
+      ))}
+      {copy.facts.length > 0 && (
+        <div class="sd__facts reveal" data-d="2">
+          {copy.facts.map((f) => (
+            <div class="sd__fact">
+              <span set:html={f.label} />
+              <strong set:html={f.value} />
+            </div>
+          ))}
+        </div>
+      )}
+      {copy.ctas && copy.ctas.length > 0 && (
+        <div class="sd__cta reveal" data-d="2">
+          {copy.ctas.map((c) => (
+            <a class:list={['btn', c.primary && 'btn--primary']} href={c.href}>
+              {c.primary && <span class="ico" />}
+              <span class="lbl" set:html={c.label} />
+            </a>
+          ))}
+        </div>
+      )}
+      {copy.reel && copy.reel.kind === 'img' && (
+        <figure class="sd__reel reveal" data-d="1" style={copy.reel.figureStyle}>
+          <img
+            src={copy.reel.src}
+            srcset={copy.reel.srcset}
+            sizes={copy.reel.sizes}
+            width={copy.reel.width}
+            height={copy.reel.height}
+            alt={copy.reel.alt}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            style={copy.reel.imgStyle}
+          />
+          {(copy.reel.captionBold || copy.reel.caption) && (
+            <figcaption style={copy.reel.captionStyle}>
+              {copy.reel.captionBold && <b set:html={copy.reel.captionBold} />}
+              {copy.reel.caption && <span set:html={copy.reel.caption} />}
+            </figcaption>
+          )}
+        </figure>
+      )}
+      {copy.reel && copy.reel.kind === 'video' && (
+        <figure class="sd__reel reveal" data-d="1">
+          <video
+            src={mediaUrl(copy.reel.mediaPath)}
+            muted
+            loop
+            playsinline
+            autoplay
+            preload="metadata"
+            aria-label={copy.reel.label}
+          />
+          {(copy.reel.captionBold || copy.reel.caption) && (
+            <figcaption>
+              {copy.reel.captionBold && <b set:html={copy.reel.captionBold} />}
+              {copy.reel.caption && <span set:html={copy.reel.caption} />}
+            </figcaption>
+          )}
+        </figure>
+      )}
+    </section>
+    <div class="sd__body shell">
+      <div>
+        {copy.blocks.map((block) => (
+          <section class:list={['sd__blk', 'split' in block && block.split && 'sd__split']} id={block.id}>
+            {block.type === 'format' ? (
+              <>
+                <h3 class="fmt-lead reveal" set:html={block.leadHtml} />
+                {block.paras.map((p) => (
+                  <p class="fmt-p reveal" set:html={p} />
+                ))}
+                <div class="fmt-wrap">
+                  <div class="fmt2 reveal">
+                    <div class="fmt2__hud">
+                      <span><span class="dot"></span><Fragment set:html={block.hudLeft} /></span>
+                      <span set:html={block.hudRight} />
+                    </div>
+                    <div class="fmt2__master">
+                      <div class="fmt2__sprk"></div>
+                      <div class="fmt2__frames"><i></i><i></i><i></i><i></i><i></i></div>
+                      <div class="fmt2__sprk"></div>
+                      <span class="fmt2__mlbl" set:html={block.masterLabel} />
+                    </div>
+                    <div class="fmt2__split" set:html={block.splitLabel} />
+                    <div class="fmt2__outs">
+                      {block.outs.map((o) => (
+                        <div class="fmt2__out">
+                          <span class:list={['fmt2__shape', o.shape]}></span>
+                          <div>
+                            <span class="r" set:html={o.ratio} />
+                            <h4 set:html={o.title} />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div class="fmt-copy reveal">
+                    <span class="fmt-copy__kick"><i></i><Fragment set:html={block.copyKick} /></span>
+                    <h4 class="fmt-copy__title" set:html={block.copyTitle} />
+                    <p class="fmt-copy__p" set:html={block.copyP} />
+                    <a class="fmt-copy__cta" href={block.copyCtaHref} set:html={block.copyCta} />
+                  </div>
+                </div>
+              </>
+            ) : 'split' in block && block.split ? (
+              <>
+                <div class="sd__splitL">
+                  <div class="sd__blkh reveal">
+                    {'kick' in block && block.kick && (
+                      <span class="sd__kick"><i></i><Fragment set:html={block.kick} /></span>
+                    )}
+                    {'headingHtml' in block && block.headingHtml && (
+                      <h2 set:html={block.headingHtml} />
+                    )}
+                  </div>
+                </div>
+                <div class="sd__splitR">
+                  <ServiceBlockBody block={block} lang={lang} />
+                </div>
+              </>
+            ) : (
+              <>
+                {'headingHtml' in block && block.headingHtml && (
+                  <div class="sd__blkh reveal">
+                    <h2 set:html={block.headingHtml} />
+                  </div>
+                )}
+                <ServiceBlockBody block={block} lang={lang} />
+              </>
+            )}
+          </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</ServiceLayout>
