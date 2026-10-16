@@ -12,7 +12,7 @@
     "predev": "npm run sync:assets",
     "dev": "astro dev",
     "prebuild": "npm run sync:assets",
-    "build": "astro build",
+    "build": "astro build && node scripts/flatten-sitemap.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "lint": "eslint .",

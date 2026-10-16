@@ -8,4 +8,4 @@ Disallow: /sezmoo-site/
 Disallow: /sezmoo-ds/
 Disallow: /uploads/
 
-Sitemap: https://sezmoo.com/sitemap-index.xml
+Sitemap: https://sezmoo.com/sitemap.xml

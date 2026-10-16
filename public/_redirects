@@ -22,14 +22,20 @@
 /artykul      /blog/    301
 /artykul/     /blog/    301
 
-/portfolio-lista-b.html /portfolio-lista-b/ 301
-/realizacja.html /realizacja/ 301
+# Experimental portfolio layout B → canonical portfolio
+/portfolio-lista-b.html /portfolio/ 301
+/portfolio-lista-b      /portfolio/ 301
+/portfolio-lista-b/     /portfolio/ 301
+
+# Sitemap: Astro emits index + chunks; postbuild flattens to sitemap.xml
+/sitemap-index.xml /sitemap.xml 301
+/sitemap-0.xml     /sitemap.xml 301
+
 /realizacja-denza.html /realizacja-denza/ 301
 /realizacja-exlantix.html /realizacja-exlantix/ 301
 /realizacja-kapka.html /realizacja-kapka/ 301
 /realizacja-primespot.html /realizacja-primespot/ 301
 /realizacja-world-of-warships.html /realizacja-world-of-warships/ 301
-/en/realizacja.html /en/realizacja/ 301
 /en/realizacja-kapka.html /en/realizacja-kapka/ 301
 /en/realizacja-primespot.html /en/realizacja-primespot/ 301
 
@@ -94,6 +100,14 @@
 /realizacja/WszuntCE51c/   /realizacja/baltic-model-fabryki/  301
 /en/realizacja/WszuntCE51c    /en/realizacja/baltic-model-fabryki/  301
 /en/realizacja/WszuntCE51c/   /en/realizacja/baltic-model-fabryki/  301
+
+# Video case hub (after id→slug rules) → portfolio; slug pages stay under /realizacja/{slug}/
+/realizacja.html /portfolio/ 301
+/realizacja      /portfolio/ 301
+/realizacja/     /portfolio/ 301
+/en/realizacja.html /en/portfolio-en/ 301
+/en/realizacja      /en/portfolio-en/ 301
+/en/realizacja/     /en/portfolio-en/ 301
 
 /o-nas    /#team      301
 /o-nas/   /#team      301

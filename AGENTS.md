@@ -165,7 +165,7 @@ Do **not** ship large MP4s in the Pages deploy (`sync:assets` skips `assets/vide
 
 7. **Site copy** — add `CASE_STUDIES[id]` with `slug` (kebab title), PL + EN, and append id to `CASE_STUDY_ORDER`. Mirror an existing entry (`short: true` for 9:16). Fields: `slug`, `title`, `client`, `cat`, `kv`, `lead`, `intro`, `context[]`, `steps[]`. Add `_redirects` from `/realizacja/{id}/` → `/realizacja/{slug}/` (PL + EN).
 
-8. **Optional portfolio cards** — homepage / `portfolio/` / `portfolio-lista-b/` are still hand-authored; add a card with `data-case="1"`, `data-slug`, `href="/realizacja/{slug}/"` and the new poster if the case should appear in listings.
+8. **Optional portfolio cards** — homepage / `portfolio/` are still hand-authored; add a card with `data-case="1"`, `data-slug`, `href="/realizacja/{slug}/"` and the new poster if the case should appear in listings. (`/portfolio-lista-b/` and hub `/realizacja/` 301 → portfolio.)
 
 9. **Verify** — `npm run check`; open `/realizacja/{slug}/`, confirm poster + play hits CDN (not YouTube embed). Do not commit local MP4s (CDN only); commit queue/manifest/posters/map + `case-studies.ts`.
 

@@ -67,6 +67,7 @@ linki/
 !/scripts/download-ytultra.mjs
 !/scripts/unstring-pagehtml.mjs
 !/scripts/patch-cloudflare-smtp.mjs
+!/scripts/flatten-sitemap.mjs
 
 # Copied from assets/ by npm run sync:assets (do not commit the copy)
 /public/assets/
