@@ -61,6 +61,7 @@ linki/
 !/scripts/migrate-blog-to-content.mjs
 !/scripts/sync-public-assets.mjs
 !/scripts/unstring-pagehtml.mjs
+!/scripts/patch-cloudflare-smtp.mjs
 
 # Copied from assets/ by npm run sync:assets (do not commit the copy)
 /public/assets/

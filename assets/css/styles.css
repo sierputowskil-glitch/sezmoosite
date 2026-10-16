@@ -2987,6 +2987,22 @@ img.card__video { background: var(--bg-2); }
 .cfield textarea { resize: vertical; min-height: 120px; }
 .cfield input:focus, .cfield textarea:focus, .cfield select:focus { outline: none; border-color: var(--rec); background-color: var(--bg-3); }
 .cfield input::placeholder, .cfield textarea::placeholder { color: var(--fg-faint); }
+/* Kill Chrome/Safari autofill blue wash — keep dark field colors */
+.cfield input:-webkit-autofill,
+.cfield input:-webkit-autofill:hover,
+.cfield input:-webkit-autofill:focus,
+.cfield textarea:-webkit-autofill,
+.cfield textarea:-webkit-autofill:hover,
+.cfield textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--fg);
+  caret-color: var(--fg);
+  box-shadow: 0 0 0 1000px var(--bg-2) inset;
+  transition: background-color 99999s ease-in-out 0s;
+}
+.cfield input:-webkit-autofill:focus,
+.cfield textarea:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px var(--bg-3) inset;
+}
 .cconsent { display: flex; gap: 12px; align-items: flex-start; font-size: 12.5px; color: var(--fg-faint); line-height: 1.55; }
 .cconsent a { color: var(--rec); text-decoration: underline; text-underline-offset: 2px; }
 .cconsent a:hover { color: var(--fg); }

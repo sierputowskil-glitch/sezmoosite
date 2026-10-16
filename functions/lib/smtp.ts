@@ -38,6 +38,7 @@ export async function sendContactEmail(
   }
 
   try {
+    // Body line endings: patched in scripts/patch-cloudflare-smtp.mjs (bare LF → CRLF).
     await sendMail(
       {
         host,

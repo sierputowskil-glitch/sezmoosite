@@ -1057,6 +1057,7 @@
     }
 
     var NAME_RE = /^[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ][A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ'’\-]*(?:\s+[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ][A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻżÀ-ÖØ-öø-ÿ'’\-]*)+$/;
+    // Keep phone validation in JS only — HTML pattern uses unicodeSets (v) where ()/- break.
     var PHONE_RE = /^\+?[0-9][0-9\s\-()]{6,18}[0-9]$/;
     var nameInput = f.querySelector('input[name="name"]');
     var phoneInput = f.querySelector('input[name="phone"]');
@@ -1078,7 +1079,7 @@
       phoneInput.setAttribute("maxlength", "40");
       phoneInput.setAttribute("autocomplete", "tel");
       phoneInput.setAttribute("inputmode", "tel");
-      phoneInput.setAttribute("pattern", "\\+?[0-9][0-9\\s\\-()]{6,18}[0-9]");
+      phoneInput.removeAttribute("pattern");
       phoneInput.setAttribute(
         "title",
         en ? "Phone number, e.g. +48 500 000 000" : "Numer telefonu, np. +48 500 000 000"

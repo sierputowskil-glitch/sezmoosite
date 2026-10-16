@@ -263,8 +263,7 @@ ${message}
 
 ---
 Zgoda RODO: TAK (checkbox zaznaczony)
-Data        : ${when}
-IP          : ${ip}`;
+Data        : ${when}`;
 
   const subject = `Nowe zapytanie ze strony sezmoo.com — ${name}`;
   const sent = await sendContactEmail(
