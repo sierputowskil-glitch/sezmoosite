@@ -22,6 +22,21 @@ const blog = defineCollection({
     heroImage: z.string().optional(),
     heroAlt: z.string().optional(),
     heroCaption: z.string().optional(),
+    /** Sidebar TOC — labels/ids for in-article anchors. */
+    toc: z
+      .array(
+        z.object({
+          id: z.string(),
+          label: z.string(),
+        }),
+      )
+      .optional(),
+    tocLabel: z.string().optional(),
+    /** Override default end-of-article CTA (defaults live in BlogArticle). */
+    ctaTitle: z.string().optional(),
+    ctaHref: z.string().optional(),
+    ctaLabel: z.string().optional(),
+    showCta: z.boolean().default(true),
     readingTime: z.number().int().positive().optional(),
     ogTitle: z.string().optional(),
     ogDescription: z.string().optional(),

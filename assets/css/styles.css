@@ -1758,8 +1758,19 @@ section { position: relative; }
   margin-top: clamp(50px,8vh,96px);
 }
 .article__content section + section { margin-top: clamp(42px,6vh,70px); }
-.article__content section[id] {
+.article__content section[id],
+.article__content h2[id],
+.article__content [id] {
   scroll-margin-top: 110px;
+}
+/* Markdown bodies: space between H2 sections (no <section> wrappers). */
+.article__content > h2 {
+  margin-top: clamp(42px,6vh,70px);
+}
+.article__content > h2:first-child,
+.article__content > .reveal:first-child + h2,
+.article__content > [id]:first-child + h2 {
+  margin-top: 0;
 }
 .article__content h2 {
   font-weight: 800;

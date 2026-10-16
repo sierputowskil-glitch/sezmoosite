@@ -14,16 +14,12 @@ ogTitle: "10 lat World of Warships. Gaming Room i Event na 10-lecie. | SEZMOO"
 ogDescription: "SEZMOO × Wargaming × Muzeum MW: Captain’s Club i event na 10-lecie World of Warships w Gdyni – od kontenera po strefę gracza."
 lead: "SEZMOO Creative Agency × Wargaming × Muzeum Marynarki Wojennej w Gdyni × World of Warships – Captain’s Club"
 heroCaption: "SEZMOO / BLOG"
+toc:
+  - id: "wstep"
+    label: "Wstęp"
 ---
 
-<div class="article__layout">
-      <aside class="article__aside reveal">
-        <span>W artykule</span>
-        <a href="#wstep">Wstęp</a>
-      </aside>
-
-      <div class="article__content">
-        <section id="wstep" class="reveal">
+<section id="wstep" class="reveal">
 <figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="683" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890236-1024x683.jpg" alt="" class="wp-image-2574" style="aspect-ratio:16/9;object-fit:cover" /></figure>
 
 <p><strong>SEZMOO Creative Agency × Wargaming × Muzeum Marynarki Wojennej w Gdyni × World of Warships – Captain’s Club</strong></p>
@@ -96,10 +92,3 @@ heroCaption: "SEZMOO / BLOG"
 <li>Strona oficjalna World of Warships EU: <em>Odwiedź Strefę Gracza World of Warships w Muzeum Marynarki Wojennej</em> <a href="https://worldofwarships.eu/pl/news/general-news/wows-gaming-room-gdynia/?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">worldofwarships.eu</a></li>
 </ul>
 </section>
-
-        <div class="article__cta reveal">
-          <h2>Chcesz podobny efekt dla&nbsp;marki?</h2>
-          <a href="/#kontakt">Porozmawiajmy</a>
-        </div>
-      </div>
-    </div>

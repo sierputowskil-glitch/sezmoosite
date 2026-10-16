@@ -1,8 +1,12 @@
 ---
 /**
- * Shared blog article chrome (back link, meta, title, lead, hero).
- * Post body (TOC + content + CTA) is passed as the default slot.
+ * Shared blog article chrome: header, hero, TOC aside, content slot, CTA.
  */
+interface TocItem {
+  id: string;
+  label: string;
+}
+
 interface Props {
   title: string;
   metaLine: string;
@@ -12,6 +16,12 @@ interface Props {
   heroCaption?: string;
   backHref?: string;
   backLabel?: string;
+  toc?: TocItem[];
+  tocLabel?: string;
+  ctaTitle?: string;
+  ctaHref?: string;
+  ctaLabel?: string;
+  showCta?: boolean;
 }
 
 const {
@@ -23,6 +33,12 @@ const {
   heroCaption = 'SEZMOO / BLOG',
   backHref = '/blog/',
   backLabel = '← Wróć do\u00a0bloga',
+  toc = [],
+  tocLabel = 'W artykule',
+  ctaTitle = 'Chcesz podobny efekt dla\u00a0marki?',
+  ctaHref = '/#kontakt',
+  ctaLabel = 'Porozmawiajmy',
+  showCta = true,
 } = Astro.props;
 ---
 
@@ -49,5 +65,30 @@ const {
     ) : null
   }
 
-  <slot />
+  <div class="article__layout">
+    {
+      toc.length > 0 ? (
+        <aside class="article__aside reveal">
+          <span>{tocLabel}</span>
+          {toc.map((item) => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </aside>
+      ) : (
+        <aside class="article__aside" aria-hidden="true"></aside>
+      )
+    }
+
+    <div class="article__content">
+      <slot />
+      {
+        showCta ? (
+          <div class="article__cta reveal">
+            <h2 set:html={ctaTitle} />
+            <a href={ctaHref}>{ctaLabel}</a>
+          </div>
+        ) : null
+      }
+    </div>
+  </div>
 </article>

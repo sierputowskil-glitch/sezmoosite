@@ -14,17 +14,14 @@ ogTitle: "Dlaczego Twoja firma potrzebuje spójnego brandingu? | SEZMOO"
 ogDescription: "Spójny branding pomaga wyróżnić firmę wśród szumu komunikatów. Sprawdź, dlaczego porządkuje sprzedaż, wizerunek i codzienną pracę marketingu."
 lead: "Dlaczego Twoja firma potrzebuje spójnego brandingu? W świecie, w którym odbiorcy są bombardowani tysiącami komunikatów każdego dnia, to spójna marka przyciąga uwagę i buduje zaufanie. Tymczasem wiele firm wciąż traktuje branding jako jednorazowy projekt – logo, kolor, font i gotowe. A to ogromny błąd. Jeśli chcesz, by Twoja firma była zapamiętana, budziła profesjonalne skojarzenia i […]"
 heroCaption: "SEZMOO / BLOG"
+toc:
+  - id: "dlaczego-twoja-firma-potrzebuje-spojnego-brandingu"
+    label: "Dlaczego Twoja firma potrzebuje spójnego brandingu?"
 ---
 
-<div class="article__layout">
-      <aside class="article__aside reveal">
-        <span>W artykule</span>
-        <a href="#dlaczego-twoja-firma-potrzebuje-spojnego-brandingu">Dlaczego Twoja firma potrzebuje spójnego brandingu?</a>
-      </aside>
-
-      <div class="article__content">
-        <section id="dlaczego-twoja-firma-potrzebuje-spojnego-brandingu" class="reveal">
+<section id="dlaczego-twoja-firma-potrzebuje-spojnego-brandingu" class="reveal">
           <h2>Dlaczego Twoja firma potrzebuje spójnego brandingu?</h2>
+
 <p>W świecie, w którym odbiorcy są bombardowani tysiącami komunikatów każdego dnia, to <strong>spójna marka</strong> przyciąga uwagę i buduje zaufanie. Tymczasem wiele firm wciąż traktuje branding jako jednorazowy projekt – logo, kolor, font i gotowe. A to ogromny błąd.</p>
 
 <p>Jeśli chcesz, by Twoja firma była zapamiętana, budziła profesjonalne skojarzenia i ułatwiała sprzedaż, potrzebujesz <strong>spójnego, strategicznego brandingu</strong>. Dlaczego to takie ważne? Już tłumaczymy.</p>
@@ -103,10 +100,3 @@ heroCaption: "SEZMOO / BLOG"
 
 <p>W SEZMOO pomagamy firmom tworzyć i rozwijać marki, które robią wrażenie i sprzedają. Chcesz wiedzieć, jak możemy pomóc Twojej? Skontaktuj się z nami!</p>
         </section>
-
-        <div class="article__cta reveal">
-          <h2>Chcesz podobny efekt dla&nbsp;marki?</h2>
-          <a href="/#kontakt">Porozmawiajmy</a>
-        </div>
-      </div>
-    </div>

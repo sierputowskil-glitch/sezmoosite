@@ -14,16 +14,12 @@ ogTitle: "Jak przygotować pliki do druku? Checklista | SEZMOO"
 ogDescription: "Checklista przygotowania plików do druku: spady, kolory, rozdzielczość i formaty – żeby uniknąć niespodzianek w drukarni."
 lead: "Profesjonalnie przygotowany plik do druku to podstawa, jeśli chcesz mieć pewność, że Twoje materiały reklamowe będą wyglądać dokładnie tak, jak zaplanowano. Niezależnie od tego, czy drukujesz ulotki, katalogi, wizytówki czy billboardy – odpowiednie przygotowanie grafiki pozwala uniknąć błędów, opóźnień i dodatkowych kosztów."
 heroCaption: "SEZMOO / BLOG"
+toc:
+  - id: "wstep"
+    label: "Wstęp"
 ---
 
-<div class="article__layout">
-      <aside class="article__aside reveal">
-        <span>W artykule</span>
-        <a href="#wstep">Wstęp</a>
-      </aside>
-
-      <div class="article__content">
-        <section id="wstep" class="reveal">
+<section id="wstep" class="reveal">
 <h3 class="wp-block-heading">Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej</h3>
 
 <p>Profesjonalnie przygotowany plik do druku to podstawa, jeśli chcesz mieć pewność, że Twoje materiały reklamowe będą wyglądać dokładnie tak, jak zaplanowano. Niezależnie od tego, czy drukujesz ulotki, katalogi, wizytówki czy billboardy – odpowiednie przygotowanie grafiki pozwala uniknąć błędów, opóźnień i dodatkowych kosztów.</p>
@@ -96,10 +92,3 @@ heroCaption: "SEZMOO / BLOG"
 
 <p>Jeśli chcesz, aby Twój projekt graficzny wyglądał perfekcyjnie po wydruku – zadbaj o każdy z wymienionych punktów. Profesjonalne <strong>przygotowanie pliku do druku</strong> pozwala uniknąć problemów, zmniejszyć ryzyko błędów i przyspieszyć realizację.</p>
 </section>
-
-        <div class="article__cta reveal">
-          <h2>Chcesz podobny efekt dla&nbsp;marki?</h2>
-          <a href="/#kontakt">Porozmawiajmy</a>
-        </div>
-      </div>
-    </div>

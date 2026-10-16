@@ -14,17 +14,14 @@ ogTitle: "Aktualne wymiary grafik social media 2025 | SEZMOO"
 ogDescription: "Aktualne wymiary grafik na social media 2025 – Instagram, Facebook, LinkedIn, TikTok. Przewodnik ze szablonami do pobrania."
 lead: "Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025 – szablony do pobrania"
 heroCaption: "SEZMOO / BLOG"
+toc:
+  - id: "dlaczego-wymiary-grafik-sa-wazne"
+    label: "Dlaczego Wymiary Grafik Są Ważne?"
 ---
 
-<div class="article__layout">
-      <aside class="article__aside reveal">
-        <span>W artykule</span>
-        <a href="#dlaczego-wymiary-grafik-sa-wazne">Dlaczego Wymiary Grafik Są Ważne?</a>
-      </aside>
-
-      <div class="article__content">
-        <section id="dlaczego-wymiary-grafik-sa-wazne" class="reveal">
+<section id="dlaczego-wymiary-grafik-sa-wazne" class="reveal">
           <h2>Dlaczego Wymiary Grafik Są Ważne?</h2>
+
 <p>W świecie mediów społecznościowych estetyka i przejrzystość treści mają kluczowe znaczenie. Nieprawidłowe wymiary grafik mogą prowadzić do ich przycinania, rozciągania lub utraty jakości, co negatywnie wpływa na odbiór marki. Dostosowanie grafik do aktualnych wymagań każdej platformy zapewnia lepsze zaangażowanie i profesjonalny wygląd.</p>
 
 <p>Odpowiednio zoptymalizowane grafiki nie tylko wpływają na estetykę, ale także poprawiają <strong>pozycjonowanie w social media</strong>. Algorytmy platform premiują treści angażujące użytkowników – czyli takie, które są dobrze widoczne, odpowiednio skrojone pod formaty i zoptymalizowane pod urządzenia mobilne. Wysoka jakość grafik poprawia CTR (Click-Through Rate), co bezpośrednio wpływa na większy zasięg organiczny.</p>
@@ -123,10 +120,3 @@ heroCaption: "SEZMOO / BLOG"
 
 <p>Zaktualizuj swoje grafiki i wyróżnij się w social media! Jeśli masz pytania lub potrzebujesz indywidualnych projektów – skontaktuj się z nami!</p>
         </section>
-
-        <div class="article__cta reveal">
-          <h2>Chcesz podobny efekt dla&nbsp;marki?</h2>
-          <a href="/#kontakt">Porozmawiajmy</a>
-        </div>
-      </div>
-    </div>
