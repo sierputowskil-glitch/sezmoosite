@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../components/AssetImage.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { pageUrl } from '../../lib/site';
 import {
@@ -73,14 +74,14 @@ const pageScripts = `<script>
           <div class="blog-feature__media">
             <div class="frame-media">
               {featured.data.heroImage ? (
-                <img
+                <AssetImage
                   src={featured.data.heroImage}
                   alt={featured.data.heroAlt || featured.data.title}
-                  width="1200"
-                  height="800"
                   loading="eager"
                   fetchpriority="high"
-                  decoding="async"
+                  widths={[640, 960, 1200, 1600]}
+                  sizes="(max-width: 1050px) 100vw, 48vw"
+                  quality={78}
                 />
               ) : null}
             </div>

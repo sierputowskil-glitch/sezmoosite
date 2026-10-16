@@ -2,6 +2,8 @@
 /**
  * Shared blog article chrome: header, hero, TOC aside, content slot, CTA.
  */
+import AssetImage from '../AssetImage.astro';
+
 interface TocItem {
   id: string;
   label: string;
@@ -58,7 +60,15 @@ const {
     heroImage ? (
       <div class="article__media reveal">
         <div class="frame-media">
-          <img src={heroImage} alt={heroAlt || title} loading="eager" />
+          <AssetImage
+            src={heroImage}
+            alt={heroAlt || title}
+            loading="eager"
+            fetchpriority="high"
+            widths={[720, 1080, 1440, 1800]}
+            sizes="(max-width: 1050px) 100vw, min(1200px, 72vw)"
+            quality={78}
+          />
         </div>
         <span>{heroCaption}</span>
       </div>

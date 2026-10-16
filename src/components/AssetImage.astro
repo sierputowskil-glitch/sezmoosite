@@ -1,0 +1,58 @@
+---
+/**
+ * Public `/assets/...` path → astro:assets (AVIF/WebP + srcset).
+ * Falls back to a plain <img> when the file is outside the optimizable set.
+ */
+import type { ImageMetadata } from 'astro';
+import OptImage from './OptImage.astro';
+import { resolveLocalImage } from '../lib/local-image';
+
+interface Props {
+  src: string | ImageMetadata;
+  alt: string;
+  class?: string;
+  widths?: number[];
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  quality?: number;
+}
+
+const {
+  src,
+  alt,
+  class: className = '',
+  widths,
+  sizes,
+  loading = 'lazy',
+  fetchpriority,
+  quality,
+} = Astro.props;
+
+const meta = typeof src === 'string' ? await resolveLocalImage(src) : src;
+const publicSrc = typeof src === 'string' ? src : undefined;
+---
+
+{
+  meta ? (
+    <OptImage
+      src={meta}
+      alt={alt}
+      class={className}
+      widths={widths}
+      sizes={sizes}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      quality={quality}
+    />
+  ) : publicSrc ? (
+    <img
+      src={publicSrc}
+      alt={alt}
+      class={className || undefined}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      decoding="async"
+    />
+  ) : null
+}

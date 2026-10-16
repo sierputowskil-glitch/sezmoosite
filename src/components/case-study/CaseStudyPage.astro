@@ -3,6 +3,7 @@
  * Static video case-study page body (hero → meta → context → steps → film → next).
  * Preserves existing CSS class names from the legacy client-rendered RZ pages.
  */
+import AssetImage from '../AssetImage.astro';
 import {
   CASE_STUDIES,
   caseStudyHref,
@@ -70,7 +71,15 @@ const ui =
 
 <header class="cs-hero" data-screen-label="Case · Cover">
   <div class="cs-hero__media">
-    <img src={thumb} alt={copy.title} />
+    <AssetImage
+      src={thumb}
+      alt={copy.title}
+      loading="eager"
+      fetchpriority="high"
+      widths={[720, 1080, 1440, 1920]}
+      sizes="100vw"
+      quality={72}
+    />
   </div>
   <div class="cs-hero__frame" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="cs-hero__hud">
@@ -153,7 +162,13 @@ const ui =
         tabindex="0"
         aria-label={ui.playAria}
       >
-        <img src={thumb} alt={ui.frameAlt} />
+        <AssetImage
+          src={thumb}
+          alt={ui.frameAlt}
+          widths={[640, 960, 1280, 1600]}
+          sizes="(max-width: 900px) 100vw, min(1100px, 70vw)"
+          quality={72}
+        />
         <div class="cs-film__play"><span class="cs-film__btn" aria-hidden="true"></span></div>
         <div class="cs-film__meta">
           <span class="rec">● REC</span>
@@ -167,7 +182,13 @@ const ui =
 </section>
 
 <a class="cs-next bleed" href={nextHref} data-cursor="link" aria-label={ui.nextAria}>
-  <img src={posterPath(nextId)} alt={nx.title} />
+  <AssetImage
+    src={posterPath(nextId)}
+    alt={nx.title}
+    widths={[720, 1080, 1440, 1920]}
+    sizes="100vw"
+    quality={70}
+  />
   <div class="cs-next__inner shell">
     <span class="cs-next__k">{ui.nextK}</span>
     <span class="cs-next__title">{nx.title} <span class="arrow">→</span></span>
