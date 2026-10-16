@@ -5,7 +5,6 @@ import { pageUrl } from '../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/realizacja-baltic-towers-rekrutacja/');
-const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs-film__frame');if(!f)return;function play(){var id=f.getAttribute('data-yt');if(!id||f.querySelector('iframe,video'))return;var s=window.__SEZMOO__;if(s&&s.mountYtEmbed){s.mountYtEmbed(f,id);return;}if(s&&s.expectCmp)return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';i.allow='autoplay; fullscreen; picture-in-picture';i.setAttribute('allowfullscreen','');f.appendChild(i);}f.addEventListener('click',play);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();play();}});})();\n</script>";
 ---
 
 <CaseStudyLayout
@@ -13,7 +12,6 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
   title="Baltic Towers · Recruitment campaign · SEZMOO case study"
   description="SEZMOO case study: Baltic Towers recruitment campaign – social media film and photography of wind tower production."
   canonical={canonical}
-  pageScripts={pageScriptsHtml}
 >
 <header class="cs-hero" data-screen-label="Case · Cover">
   <div class="cs-hero__media"><AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-01.jpg" alt="Baltic Towers production hall – recruitment campaign" loading="eager" fetchpriority="high" widths={[720, 1080, 1440, 1920]} sizes="100vw" quality={72} /></div>

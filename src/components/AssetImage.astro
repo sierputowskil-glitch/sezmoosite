@@ -16,6 +16,7 @@ interface Props {
   sizes?: string;
   loading?: 'lazy' | 'eager';
   fetchpriority?: 'high' | 'low' | 'auto';
+  decoding?: 'async' | 'auto' | 'sync';
   quality?: number;
 }
 
@@ -28,6 +29,7 @@ const {
   sizes,
   loading = 'lazy',
   fetchpriority,
+  decoding = 'async',
   quality,
 } = Astro.props;
 
@@ -46,6 +48,7 @@ const publicSrc = typeof src === 'string' ? src : undefined;
       sizes={sizes}
       loading={loading}
       fetchpriority={fetchpriority}
+      decoding={decoding}
       quality={quality}
     />
   ) : publicSrc ? (
@@ -56,7 +59,7 @@ const publicSrc = typeof src === 'string' ? src : undefined;
       style={style}
       loading={loading}
       fetchpriority={fetchpriority}
-      decoding="async"
+      decoding={decoding}
     />
   ) : null
 }

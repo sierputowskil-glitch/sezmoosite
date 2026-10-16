@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../../../components/AssetImage.astro';
 import ServiceLayout from '../../../../layouts/ServiceLayout.astro';
 import { pageUrl } from '../../../../lib/site';
 
@@ -450,9 +451,9 @@ const jsonLd = {
     <section class="sd__blk" id="sd-work">
       <div class="sd__blkh reveal"><h2>Selected work</h2></div>
       <div class="sd__work">
-        <a class="sd__wi reveal" href="/en/realizacja-primespot/"><div class="sd__wm"><img src="/assets/portfolio/primespot/pjur-blue-square-1.jpg" alt="PrimeSpot – Creative · Campaign" loading="lazy" /></div><span>Creative · Campaign</span><h3>PrimeSpot ↗</h3></a>
-        <a class="sd__wi reveal" href="/en/portfolio-en/?cat=grafika#pt-grid"><div class="sd__wm"><img src="/assets/portfolio/szymichowski/szymichowski-pruszcz-park-katalog-inwestycji-01.avif" alt="Szymichowski – Catalogue · Print" loading="lazy" /></div><span>Catalogue · Print</span><h3>Szymichowski ↗</h3></a>
-        <a class="sd__wi reveal" href="/en/realizacja-soho-form/"><div class="sd__wm"><img src="/assets/portfolio/soho-form/soho-cover.webp" alt="Soho Form – Logo · Brand manual" loading="lazy" /></div><span>Logo · Brand manual</span><h3>Soho Form ↗</h3></a>
+        <a class="sd__wi reveal" href="/en/realizacja-primespot/"><div class="sd__wm"><AssetImage src="/assets/portfolio/primespot/pjur-blue-square-1.jpg" alt="PrimeSpot – Creative · Campaign" loading="lazy" decoding="async" widths={[400, 720, 1080]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw" quality={72} /></div><span>Creative · Campaign</span><h3>PrimeSpot ↗</h3></a>
+        <a class="sd__wi reveal" href="/en/portfolio-en/?cat=grafika#pt-grid"><div class="sd__wm"><AssetImage src="/assets/portfolio/szymichowski/szymichowski-pruszcz-park-katalog-inwestycji-01.avif" alt="Szymichowski – Catalogue · Print" loading="lazy" decoding="async" widths={[400, 720, 1080]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw" quality={72} /></div><span>Catalogue · Print</span><h3>Szymichowski ↗</h3></a>
+        <a class="sd__wi reveal" href="/en/realizacja-soho-form/"><div class="sd__wm"><AssetImage src="/assets/portfolio/soho-form/soho-cover.webp" alt="Soho Form – Logo · Brand manual" loading="lazy" decoding="async" widths={[400, 720, 1080]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw" quality={72} /></div><span>Logo · Brand manual</span><h3>Soho Form ↗</h3></a>
       </div>
       <div class="sd__more reveal">
         <a class="is-lead" href="/en/portfolio-en/#pt-grid">Full portfolio ↗</a>

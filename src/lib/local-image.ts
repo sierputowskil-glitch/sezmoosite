@@ -5,7 +5,7 @@
 import type { ImageMetadata } from 'astro';
 
 const modules = import.meta.glob<{ default: ImageMetadata }>(
-  '../../assets/{blog,portfolio,work,video/yt/posters}/**/*.{jpeg,jpg,png,webp,avif}',
+  '../../assets/{blog,portfolio,work,photo,team,clients,video/yt/posters}/**/*.{jpeg,jpg,png,webp,avif}',
 );
 
 function toGlobKey(publicPath: string): string {

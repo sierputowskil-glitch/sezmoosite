@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../../components/AssetImage.astro';
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
 import { pageUrl } from '../../../lib/site';
 
@@ -267,9 +268,9 @@ const jsonLd = {
     <section class="sd__blk" id="sd-work">
       <div class="sd__blkh reveal"><h2>Realizacje</h2></div>
       <div class="sd__work">
-        <a class="sd__wi reveal" href="/portfolio/?cat=animacje#pt-grid"><div class="sd__wm"><img src="/assets/work/animacja-3d.jpg" alt="Baltic 3D" loading="lazy" /></div><span>Model fabryki · Animacja 3D</span><h3>Baltic 3D ↗</h3></a>
-        <a class="sd__wi reveal" href="/portfolio/?cat=animacje#pt-grid"><div class="sd__wm"><img src="/assets/work/audi-a6-etron.jpg" alt="Audi A6 e-tron" loading="lazy" /></div><span>Motion · Premiera</span><h3>Audi A6 e-tron ↗</h3></a>
-        <a class="sd__wi reveal" href="/realizacja-world-of-warships/"><div class="sd__wm"><img src="/assets/work/warships-container.avif" alt="World of Warships" loading="lazy" /></div><span>Event content · Motion</span><h3>World of Warships ↗</h3></a>
+        <a class="sd__wi reveal" href="/portfolio/?cat=animacje#pt-grid"><div class="sd__wm"><AssetImage src="/assets/work/animacja-3d.jpg" alt="Baltic 3D" loading="lazy" decoding="async" widths={[400, 720, 1080]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw" quality={72} /></div><span>Model fabryki · Animacja 3D</span><h3>Baltic 3D ↗</h3></a>
+        <a class="sd__wi reveal" href="/portfolio/?cat=animacje#pt-grid"><div class="sd__wm"><AssetImage src="/assets/work/audi-a6-etron.jpg" alt="Audi A6 e-tron" loading="lazy" decoding="async" widths={[400, 720, 1080]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw" quality={72} /></div><span>Motion · Premiera</span><h3>Audi A6 e-tron ↗</h3></a>
+        <a class="sd__wi reveal" href="/realizacja-world-of-warships/"><div class="sd__wm"><AssetImage src="/assets/work/warships-container.avif" alt="World of Warships" loading="lazy" decoding="async" widths={[400, 720, 1080]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw" quality={72} /></div><span>Event content · Motion</span><h3>World of Warships ↗</h3></a>
       </div>
       <div class="sd__more reveal">
         <a class="is-lead" href="/portfolio/#pt-grid">Całe portfolio ↗</a>

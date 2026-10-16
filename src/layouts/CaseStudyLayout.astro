@@ -36,4 +36,37 @@ const extraHead = [caseCss, props.extraHead].filter(Boolean).join('\n');
   bodyClass={[props.bodyClass, 'case-study-page'].filter(Boolean).join(' ')}
 >
   <slot />
+  {/* Shared film play — replaces per-page pageScriptsHtml string injection */}
+  <script is:inline>
+    (function () {
+      var f = document.querySelector('.cs-film__frame');
+      if (!f) return;
+      function play() {
+        var id = f.getAttribute('data-yt');
+        if (!id || f.querySelector('iframe,video')) return;
+        var s = window.__SEZMOO__;
+        if (s && s.mountYtEmbed) {
+          s.mountYtEmbed(f, id);
+          return;
+        }
+        if (s && s.expectCmp) return;
+        var ifr = document.createElement('iframe');
+        ifr.src =
+          'https://www.youtube-nocookie.com/embed/' +
+          id +
+          '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+        ifr.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+        ifr.setAttribute('allowfullscreen', '');
+        ifr.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;';
+        f.appendChild(ifr);
+      }
+      f.addEventListener('click', play);
+      f.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          play();
+        }
+      });
+    })();
+  </script>
 </BaseLayout>

@@ -5,7 +5,6 @@ import { pageUrl } from '../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/realizacja-k2/');
-const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs-film__frame');if(!f)return;function play(){var id=f.getAttribute('data-yt');if(!id||f.querySelector('iframe,video'))return;var s=window.__SEZMOO__;if(s&&s.mountYtEmbed){s.mountYtEmbed(f,id);return;}if(s&&s.expectCmp)return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';i.allow='autoplay; fullscreen; picture-in-picture';i.setAttribute('allowfullscreen','');f.appendChild(i);}f.addEventListener('click',play);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();play();}});})();\n</script>";
 ---
 
 <CaseStudyLayout
@@ -13,7 +12,6 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
   title="K2 Fish Farm · Rebranding, website, photo & drone · SEZMOO case study"
   description="SEZMOO case study: logo refresh, brand guidelines, new website, photography, drone film and a presentation template for K2 Fish Farm, a rainbow trout producer in Poland."
   canonical={canonical}
-  pageScripts={pageScriptsHtml}
 >
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">

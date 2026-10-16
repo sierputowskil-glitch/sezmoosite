@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../../components/AssetImage.astro';
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
 import { pageUrl } from '../../../lib/site';
 
@@ -257,9 +258,9 @@ const jsonLd = {
       <div class="sd__splitL"><div class="sd__blkh reveal"><h2>Realizacje</h2></div></div>
       <div class="sd__splitR">
       <div class="sd__work">
-        <a class="sd__wi reveal" href="/realizacja-primespot/"><div class="sd__wm"><img src="/assets/portfolio/primespot/pjur-blue-wide-2.jpg" alt="PrimeSpot – Landing · Kampania" loading="lazy" /></div><span>Landing · Kampania</span><h3>PrimeSpot ↗</h3></a>
-        <a class="sd__wi reveal" href="/realizacja-world-of-warships/"><div class="sd__wm"><img src="/assets/work/captains-club-int.avif" alt="World of Warships – Event · Digital" loading="lazy" /></div><span>Event · Digital</span><h3>World of Warships ↗</h3></a>
-        <a class="sd__wi reveal" href="/realizacja-soho-form/"><div class="sd__wm"><img src="/assets/portfolio/soho-form/soho-mockup.webp" alt="Soho Form – UX/UI · Strona WWW" loading="lazy" /></div><span>UX/UI · Strona WWW</span><h3>Soho Form ↗</h3></a>
+        <a class="sd__wi reveal" href="/realizacja-primespot/"><div class="sd__wm"><AssetImage src="/assets/portfolio/primespot/pjur-blue-wide-2.jpg" alt="PrimeSpot – Landing · Kampania" loading="lazy" decoding="async" widths={[400, 720, 1080]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw" quality={72} /></div><span>Landing · Kampania</span><h3>PrimeSpot ↗</h3></a>
+        <a class="sd__wi reveal" href="/realizacja-world-of-warships/"><div class="sd__wm"><AssetImage src="/assets/work/captains-club-int.avif" alt="World of Warships – Event · Digital" loading="lazy" decoding="async" widths={[400, 720, 1080]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw" quality={72} /></div><span>Event · Digital</span><h3>World of Warships ↗</h3></a>
+        <a class="sd__wi reveal" href="/realizacja-soho-form/"><div class="sd__wm"><AssetImage src="/assets/portfolio/soho-form/soho-mockup.webp" alt="Soho Form – UX/UI · Strona WWW" loading="lazy" decoding="async" widths={[400, 720, 1080]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 40vw, 28vw" quality={72} /></div><span>UX/UI · Strona WWW</span><h3>Soho Form ↗</h3></a>
       </div>
       <div class="sd__more reveal">
         <a class="is-lead" href="/portfolio/#pt-grid">Całe portfolio ↗</a>
