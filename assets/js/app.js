@@ -58,7 +58,16 @@
         easing: (t) => 1 - Math.pow(1 - t, 3),
         smoothWheel: true,
         wheelMultiplier: 1,
-        touchMultiplier: 1.4
+        touchMultiplier: 1.4,
+        // CookieYes preference modal scrolls its own pane — don't chain to the page.
+        prevent: (node) =>
+          !!(
+            node &&
+            node.closest &&
+            node.closest(
+              '.cky-preference-body-wrapper, .cky-modal, .cky-preference-center, #cky-consent-container, [data-lenis-prevent]'
+            )
+          ),
       });
       window.__lenis = lenis;
       root.style.scrollBehavior = "auto";

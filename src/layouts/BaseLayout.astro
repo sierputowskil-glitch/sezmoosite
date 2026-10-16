@@ -226,10 +226,11 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     .cky-btn-accept,.cky-btn-accept-all,.cky-preference-center .cky-btn-accept,.cky-btn-save-preferences{background-color:#ffd200!important;border-color:#ffd200!important;color:#000!important}
     .cky-btn-reject,.cky-btn-reject-all,.cky-btn-customize,.cky-btn-preferences{background-color:transparent!important;border-color:#ffd200!important;color:#ffd200!important}
     .cky-modal,.cky-preference-center{background-color:#fff!important;border-color:#f4f4f4!important;color:#212121!important;border-radius:6px!important}
-    .cky-preference-body-wrapper{color-scheme:light!important;scrollbar-width:thin!important;scrollbar-color:#c8c8c8 #f4f4f4!important}
+    .cky-preference-body-wrapper{color-scheme:light!important;scrollbar-width:thin!important;scrollbar-color:#c8c8c8 #f4f4f4!important;overscroll-behavior:contain!important}
     .cky-preference-body-wrapper::-webkit-scrollbar{width:8px!important;height:8px!important;background:#f4f4f4!important}
     .cky-preference-body-wrapper::-webkit-scrollbar-track{background:#f4f4f4!important;border:none!important;box-shadow:none!important}
     .cky-preference-body-wrapper::-webkit-scrollbar-thumb{background:#c8c8c8!important;border-radius:999px!important;border:2px solid #f4f4f4!important;background-clip:padding-box!important;box-shadow:none!important}
+    html:has(.cky-modal.cky-modal-open),body:has(.cky-modal.cky-modal-open){overflow:hidden!important}
     .cky-switch input[type=checkbox]{background:#d0d5d2!important}
     .cky-switch input[type=checkbox]:checked{background:#ffd200!important}
     .cky-btn-revisit-wrapper{background-color:#ffd200!important}
@@ -262,6 +263,13 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
         var toggles = scope.querySelectorAll('.cky-switch input[type="checkbox"]');
         for (var k = 0; k < toggles.length; k++) {
           toggles[k].style.backgroundColor = toggles[k].checked ? Y : '#d0d5d2';
+        }
+        // Let Lenis ignore nested CookieYes scroll (attribute + closest() prevent)
+        var scrollers = scope.querySelectorAll(
+          '.cky-preference-body-wrapper, .cky-modal, .cky-preference-center'
+        );
+        for (var s = 0; s < scrollers.length; s++) {
+          scrollers[s].setAttribute('data-lenis-prevent', '');
         }
       }
       function boot() {

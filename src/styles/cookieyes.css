@@ -119,11 +119,22 @@
 /*
  * Scroll lives on .cky-preference-body-wrapper.
  * Site :root is color-scheme:dark → native scrollbar paints black; override here.
+ * overscroll-behavior + Lenis `prevent` stop wheel from scrolling the page underneath.
  */
 .cky-preference-body-wrapper {
   color-scheme: light !important;
   scrollbar-width: thin !important;
   scrollbar-color: #c8c8c8 #f4f4f4 !important;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Preferencje otwarte — nie scrolluj dokumentu pod overlayem */
+html:has(.cky-modal.cky-modal-open),
+html:has(.cky-preference-center[aria-hidden='false']),
+body:has(.cky-modal.cky-modal-open),
+body:has(.cky-preference-center[aria-hidden='false']) {
+  overflow: hidden !important;
 }
 
 .cky-preference-body-wrapper::-webkit-scrollbar {
