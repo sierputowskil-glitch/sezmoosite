@@ -215,8 +215,6 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
       expectCmp: !!enableGtm,
     };
   </script>
-  <script src="/assets/js/cdn-video-map.js?v=20261016o" defer is:inline></script>
-  <script src="/assets/js/yt-consent.js?v=20261016b" defer is:inline></script>
 </head>
 <body id={bodyId} class={bodyClass}>
   {enableGtm && gtmId && (
@@ -266,7 +264,12 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     } catch (_e) {}
   })();
   </script>
-  <script src="/assets/js/app.js?v=20261016g" defer is:inline></script>
+  {/* Vite-bundled site JS (hashed). Lenis + flowing-background stay public URLs. */}
+  <script>
+    import '../../assets/js/cdn-video-map.js';
+    import '../../assets/js/yt-consent.js';
+    import '../../assets/js/app.js';
+  </script>
   <script is:inline>
   /* YouTube bg: poster first; iframe only after CookieYes marketing consent.
      Touch / coarse pointer: poster only (no googlevideo on mobile). */

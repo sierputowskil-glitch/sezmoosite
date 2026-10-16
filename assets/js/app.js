@@ -48,10 +48,8 @@
   (function smoothScroll() {
     if (reduce || !fine) return; // native scroll on touch / reduced-motion
     const s = document.createElement("script");
-    // Match app.js even with cache-bust query (?v=…) — src$="app.js" would miss it.
-    var appTag = document.querySelector('script[src*="app.js"]');
-    var base = appTag ? appTag.getAttribute("src").replace(/app\.js(\?.*)?$/, "") : "/assets/js/";
-    s.src = base + "lenis.min.js";
+    // Public vendor copy (synced to /assets/js/); app itself is Vite-bundled.
+    s.src = "/assets/js/lenis.min.js";
     s.onload = function () {
       const L = window.Lenis || (window.lenis && window.lenis.Lenis);
       if (!L) return;
