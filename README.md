@@ -109,8 +109,8 @@ Do these in the CF dashboard / DNS host — not automated by this repo:
 2. **Secrets** — Pages project → Settings → Variables: `TURNSTILE_SECRET_KEY`, `SMTP_PASS` (+ any SMTP_* / `MAIL_TO` overrides).
 3. **Turnstile** — allowlist production host `sezmoo.com` (and `www` if used); staging/preview hosts as needed. Site key → `PUBLIC_TURNSTILE_SITE_KEY` in the prod workflow / build env.
 4. **DNS** — point apex/`www` to Cloudflare Pages (CNAME / custom domain on the project). Keep TTL low during cutover.
-5. **Form smoke test** — after deploy: submit `/#kontakt` and `/abonament/#kontakt` (or `/en/retainer/`) with a real Turnstile token; confirm mail delivery and rate-limit headers.
-6. **Redirects** — `public/_redirects` ships with the deploy; confirm `/artykul/` → `/blog/`, DE → EN, and that `/abonament/` serves the Astro page (not the old external abonamenty host).
+5. **Form smoke test** — after deploy: submit `/#kontakt` with a real Turnstile token; confirm mail delivery and rate-limit headers. Campaign LP form lives on `https://abonament.sezmoo.com/`.
+6. **Redirects** — `public/_redirects` ships with the deploy; confirm `/artykul/` → `/blog/`, DE → EN, and `/abonament/` → `https://abonament.sezmoo.com/`.
 7. **Canonicals** — spot-check `link rel="canonical"` and `og:url` on home + one article = `https://sezmoo.com/...` (no localhost).
 
 ## Cloudflare KV (contact rate limit)
@@ -132,7 +132,7 @@ Until IDs are real, the Function falls back to an in-isolate `Map` (weaker acros
 
 - **Parity target:** ~140 `index.html` paths (legacy `legacy/cyberfolks-html` vs `dist/` after build).
 - **`/artykul/`:** production redirect → `/blog/` (legacy). Unlisted sample content may still exist for local preview; CF `_redirects` wins in production.
-- **`/abonament/`:** served by Astro (ContactForm). Legacy external redirect to `abonamenty.sezmoo.com` was removed for cutover.
+- **`/abonament/` / `/en/retainer/`:** 301 → `https://abonament.sezmoo.com/` (separate campaign LP repo). Service page `/uslugi-marketingowe/abonamenty/` stays on this site.
 - Phone everywhere: **+48 739 260 450** (`src/lib/site.ts`, footers, mobile bar in `assets/js/app.js`).
 
 ## DX
