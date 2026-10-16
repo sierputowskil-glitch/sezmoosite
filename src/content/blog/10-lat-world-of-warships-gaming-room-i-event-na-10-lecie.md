@@ -19,76 +19,66 @@ toc:
     label: "Wstęp"
 ---
 
-<section id="wstep" class="reveal">
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="683" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890236-1024x683.jpg" alt="" class="wp-image-2574" style="aspect-ratio:16/9;object-fit:cover" /></figure>
+<div id="wstep" class="reveal"></div>
 
-<p><strong>SEZMOO Creative Agency × Wargaming × Muzeum Marynarki Wojennej w Gdyni × World of Warships – Captain’s Club</strong></p>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890236-1024x683.jpg)
 
-<p>Był to jeden z najbardziej złożonych projektów, jakie kiedykolwiek realizowaliśmy. Od pustego kontenera do w pełni wyposażonego pokoju gier – droga była długa i pełna wyzwań. Projekt pokoju gier został zaprojektowany przez<strong> Jarosława Chodoniuka</strong> i <strong>Agnieszkę Hincę</strong>, a Jarek zajął się całą konstrukcją.</p>
+Był to jeden z najbardziej złożonych projektów, jakie kiedykolwiek realizowaliśmy. Od pustego kontenera do w pełni wyposażonego pokoju gier – droga była długa i pełna wyzwań. Projekt pokoju gier został zaprojektowany przez** Jarosława Chodoniuka** i **Agnieszkę Hincę**, a Jarek zajął się całą konstrukcją.
 
-<p><strong>Agencja kreatywna SEZMOO</strong> zajęła się całym projektem – od koordynacji budowy, produkcji materiałów wideo przed wydarzeniem i dokumentacji fotograficznej i wideo, po organizację i przeprowadzenie samego wydarzenia inauguracyjnego. Nadal pracujemy nad postprodukcją, ale już teraz możemy powiedzieć, że efekt końcowy jest dokładnie taki, jak sobie wyobrażaliśmy.</p>
+**Agencja kreatywna SEZMOO** zajęła się całym projektem – od koordynacji budowy, produkcji materiałów wideo przed wydarzeniem i dokumentacji fotograficznej i wideo, po organizację i przeprowadzenie samego wydarzenia inauguracyjnego. Nadal pracujemy nad postprodukcją, ale już teraz możemy powiedzieć, że efekt końcowy jest dokładnie taki, jak sobie wyobrażaliśmy.
 
-<p>Wydarzenie inauguracyjne znalazło się w naszym kalendarzu zaledwie cztery tygodnie przed oficjalnym otwarciem. Było to ogromne wyzwanie, ale dzięki determinacji i pracy zespołowej wszystkich zaangażowanych osób udało nam się osiągnąć wyniki, z których jesteśmy naprawdę dumni.</p>
+Wydarzenie inauguracyjne znalazło się w naszym kalendarzu zaledwie cztery tygodnie przed oficjalnym otwarciem. Było to ogromne wyzwanie, ale dzięki determinacji i pracy zespołowej wszystkich zaangażowanych osób udało nam się osiągnąć wyniki, z których jesteśmy naprawdę dumni.
 
-<p>Chciałbym podziękować całemu zespołowi, który włożył w ten projekt swoje serce i energię. <strong>Hubert Fudała</strong> i Radek Schenk byli odpowiedzialni za produkcję wideo, Wojtek Rojek za fotografię, a <strong>Kamila Kamińska</strong> zorganizowała i koordynowała wydarzenie – naprawdę dała z siebie wszystko, aby wszystko przebiegło bez zakłóceń. <strong>Mateusz Borkowski</strong> wspierał nas od strony technicznej, <strong>Justyna Szramek </strong>pomagała w organizacji, a <strong>Łukasz Sierputowski</strong> stworzył wszystkie grafiki potrzebne zarówno do wydarzenia, jak i do samego <strong>Gaming Roomu</strong>. Wszyscy dali z siebie 200%.</p>
+Chciałbym podziękować całemu zespołowi, który włożył w ten projekt swoje serce i energię. **Hubert Fudała** i Radek Schenk byli odpowiedzialni za produkcję wideo, Wojtek Rojek za fotografię, a **Kamila Kamińska** zorganizowała i koordynowała wydarzenie – naprawdę dała z siebie wszystko, aby wszystko przebiegło bez zakłóceń. **Mateusz Borkowski** wspierał nas od strony technicznej, **Justyna Szramek **pomagała w organizacji, a **Łukasz Sierputowski** stworzył wszystkie grafiki potrzebne zarówno do wydarzenia, jak i do samego **Gaming Roomu**. Wszyscy dali z siebie 200%.
 
-<p>Szczególne podziękowania kierujemy do <strong>Klaudii Staskowskiej</strong> z Wargaming za zaufanie i doskonałą współpracę oraz do Grega K., który jako pierwszy zapoznał nas z tym projektem i sprawił, że wszystko stało się możliwe. Chciałbym również podziękować <strong>Krzysztofowi Mikulskiemu</strong> za jego cenny wkład, zaangażowanie i wsparcie podczas całego procesu.</p>
+Szczególne podziękowania kierujemy do **Klaudii Staskowskiej** z Wargaming za zaufanie i doskonałą współpracę oraz do Grega K., który jako pierwszy zapoznał nas z tym projektem i sprawił, że wszystko stało się możliwe. Chciałbym również podziękować **Krzysztofowi Mikulskiemu** za jego cenny wkład, zaangażowanie i wsparcie podczas całego procesu.
 
-<p>Jesteśmy również wdzięczni <strong>Muzeum Marynarki Wojennej w Gdyni </strong>za pomoc w realizacji tego wydarzenia i wsparcie podczas przygotowań.</p>
+Jesteśmy również wdzięczni **Muzeum Marynarki Wojennej w Gdyni **za pomoc w realizacji tego wydarzenia i wsparcie podczas przygotowań.
 
-<p>Wieczór otwarcia obfitował w niezapomniane atrakcje. <strong>Michał Milowicz</strong> wniósł niesamowitą energię i podzielił się miłymi słowami, a trio <strong>Jachimek–Tremiszewski</strong> wypełniło salę śmiechem dzięki swoim błyskotliwym improwizacjom.</p>
+Wieczór otwarcia obfitował w niezapomniane atrakcje. **Michał Milowicz** wniósł niesamowitą energię i podzielił się miłymi słowami, a trio **Jachimek–Tremiszewski** wypełniło salę śmiechem dzięki swoim błyskotliwym improwizacjom.
 
-<p>Wiem, że w projekt zaangażowanych było wiele innych osób – jeśli kogoś pominąłem, proszę przyjąć moje przeprosiny i podziękowania za każdy wkład, który przyczynił się do sukcesu tego przedsięwzięcia.</p>
+Wiem, że w projekt zaangażowanych było wiele innych osób – jeśli kogoś pominąłem, proszę przyjąć moje przeprosiny i podziękowania za każdy wkład, który przyczynił się do sukcesu tego przedsięwzięcia.
 
-<p>Projekt ten dowodzi, że agencja <strong>SEZMOO Creative Agency </strong>zyskuje coraz większe uznanie i pokazuje, że potrafimy podjąć się naprawdę kompleksowych wyzwań – od pierwszego pomysłu po efekt końcowy.</p>
+Projekt ten dowodzi, że agencja **SEZMOO Creative Agency **zyskuje coraz większe uznanie i pokazuje, że potrafimy podjąć się naprawdę kompleksowych wyzwań – od pierwszego pomysłu po efekt końcowy.
 
-<p>Wiemy już, że wraz z Jarekiem budujemy nową gałąź SEZMOO. Więcej szczegółów wkrótce. 💪</p>
+Wiemy już, że wraz z Jarekiem budujemy nową gałąź SEZMOO. Więcej szczegółów wkrótce. 💪
 
-<p>Zdjęcia: <strong>Wojtek Rojek</strong></p>
+Zdjęcia: **Wojtek Rojek**
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889858-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2579" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889858-1024x683.jpg" alt="" class="wp-image-2579" /></a></figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889858-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889704-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2578" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889704-1024x683.jpg" alt="Gaming Room Wolrd of Warships" class="wp-image-2578" /></a><figcaption class="wp-element-caption">Gaming Room Wolrd of Warships</figcaption></figure>
+![Gaming Room Wolrd of Warships](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889704-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890744-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2577" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890744-1024x683.jpg" alt="" class="wp-image-2577" /></a></figure>
+*Gaming Room Wolrd of Warships*
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890660-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2576" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890660-1024x683.jpg" alt="" class="wp-image-2576" /></a></figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890744-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890461-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2575" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890461-1024x683.jpg" alt="" class="wp-image-2575" /></a></figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890660-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890236-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2574" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890236-1024x683.jpg" alt="" class="wp-image-2574" /></a></figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890461-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889941-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2573" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889941-1024x683.jpg" alt="" class="wp-image-2573" /></a></figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890236-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889928-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2572" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889928-1024x683.jpg" alt="" class="wp-image-2572" /></a></figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889941-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889668-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2571" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889668-1024x683.jpg" alt="" class="wp-image-2571" /></a></figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889928-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725888973-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2570" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725888973-1024x683.jpg" alt="" class="wp-image-2570" /></a></figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725889668-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725888284-683x1024.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="683" height="1024" data-id="2569" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725888284-683x1024.jpg" alt="" class="wp-image-2569" /></a></figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725888973-1024x683.jpg)
 
-<figure class="wp-block-image size-large"><a href="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725887764-1024x683.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" width="1024" height="683" data-id="2568" src="/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725887764-1024x683.jpg" alt="" class="wp-image-2568" /></a></figure>
-</figure>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725888284-683x1024.jpg)
 
-<h6 class="wp-block-heading">W mediach o projekcie</h6>
+![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725887764-1024x683.jpg)
 
-<p>Poniżej kilka artykułów, które opisują 10-lecie <em>World of Warships</em> oraz otwarcie Strefy Gracza w Gdyni </p>
+<h3 id="w-mediach-o-projekcie">W mediach o projekcie</h3>
 
-<ul class="wp-block-list">
-<li>Benchmark: <em>Takich gier tworzonych z pasją wiele już nie zostało – World of Warships świętuje 10-lecie istnienia</em> <a href="https://www.benchmark.pl/testy_i_recenzje/world-of-warships-10-urodziny.html?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">Benchmark</a></li>
+Poniżej kilka artykułów, które opisują 10-lecie *World of Warships* oraz otwarcie Strefy Gracza w Gdyni
 
-<li>Trojmiasto: <em>Otwarcie Strefy Gracza – World of Warships</em> (informacja o wydarzeniu w Gdyni) <a href="https://www.trojmiasto.pl/imprezy/Otwarcie-Strefy-Gracza-World-of-Warships-imp581455.html?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">trojmiasto.pl</a></li>
-
-<li>Trojmiasto: <em>Do muzeum, żeby grać w grę? Strefa dla graczy w MMW w Gdyni</em> <a href="https://www.trojmiasto.pl/rozrywka/Do-muzeum-zeby-grac-w-gre-Strefa-dla-graczy-w-MMW-w-Gdyni-n208281.html?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">trojmiasto.pl</a></li>
-
-<li>Gry-Online: <em>10-lecie World of Warships. Gdynia doczekała się wyjątkowej Strefy</em> <a href="https://www.gry-online.pl/newsroom/10-lecie-world-of-warships-gdynia-doczekala-sie-wyjatkowej-strefy/z22ef05?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">GRY-Online.pl</a></li>
-
-<li>CD-Action: <em>10 lat World of Warships: nowa Strefa Gracza w Muzeum Marynarki Wojennej w Gdyni</em> (relacja) <a href="https://cdaction.pl/teksty/10-lat-world-of-warships-nowa-strefa-gracza-w-muzeum-marynarki-wojennej-w-gdyni-relacja/?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">CD-Action</a></li>
-
-<li>Defence24: <em>Muzeum MW ze stałą strefą dla graczy World of Warships</em> <a href="https://defence24.pl/wiadomosci/muzeum-mw-ze-stala-strefe-dla-graczy-world-of-warships?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">Defence24</a></li>
-
-<li>Strona oficjalna World of Warships EU: <em>Odwiedź Strefę Gracza World of Warships w Muzeum Marynarki Wojennej</em> <a href="https://worldofwarships.eu/pl/news/general-news/wows-gaming-room-gdynia/?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">worldofwarships.eu</a></li>
-</ul>
-</section>
+- Benchmark: *Takich gier tworzonych z pasją wiele już nie zostało – World of Warships świętuje 10-lecie istnienia* [Benchmark](https://www.benchmark.pl/testy_i_recenzje/world-of-warships-10-urodziny.html)
+- Trojmiasto: *Otwarcie Strefy Gracza – World of Warships* (informacja o wydarzeniu w Gdyni) [trojmiasto.pl](https://www.trojmiasto.pl/imprezy/Otwarcie-Strefy-Gracza-World-of-Warships-imp581455.html)
+- Trojmiasto: *Do muzeum, żeby grać w grę? Strefa dla graczy w MMW w Gdyni* [trojmiasto.pl](https://www.trojmiasto.pl/rozrywka/Do-muzeum-zeby-grac-w-gre-Strefa-dla-graczy-w-MMW-w-Gdyni-n208281.html)
+- Gry-Online: *10-lecie World of Warships. Gdynia doczekała się wyjątkowej Strefy* [GRY-Online.pl](https://www.gry-online.pl/newsroom/10-lecie-world-of-warships-gdynia-doczekala-sie-wyjatkowej-strefy/z22ef05)
+- CD-Action: *10 lat World of Warships: nowa Strefa Gracza w Muzeum Marynarki Wojennej w Gdyni* (relacja) [CD-Action](https://cdaction.pl/teksty/10-lat-world-of-warships-nowa-strefa-gracza-w-muzeum-marynarki-wojennej-w-gdyni-relacja/)
+- Defence24: *Muzeum MW ze stałą strefą dla graczy World of Warships* [Defence24](https://defence24.pl/wiadomosci/muzeum-mw-ze-stala-strefe-dla-graczy-world-of-warships)
+- Strona oficjalna World of Warships EU: *Odwiedź Strefę Gracza World of Warships w Muzeum Marynarki Wojennej* [worldofwarships.eu](https://worldofwarships.eu/pl/news/general-news/wows-gaming-room-gdynia/)

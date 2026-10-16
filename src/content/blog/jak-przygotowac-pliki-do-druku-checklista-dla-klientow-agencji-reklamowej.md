@@ -10,85 +10,84 @@ featured: false
 readingTime: 3
 heroImage: /assets/blog/jak-przygotowac-pliki-do-druku-checklista-dla-klientow-agencji-reklamowej.jpg
 heroAlt: Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej
-ogTitle: "Jak przygotować pliki do druku? Checklista | SEZMOO"
+ogTitle: "Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej | SEZMOO"
 ogDescription: "Checklista przygotowania plików do druku: spady, kolory, rozdzielczość i formaty – żeby uniknąć niespodzianek w drukarni."
 lead: "Profesjonalnie przygotowany plik do druku to podstawa, jeśli chcesz mieć pewność, że Twoje materiały reklamowe będą wyglądać dokładnie tak, jak zaplanowano. Niezależnie od tego, czy drukujesz ulotki, katalogi, wizytówki czy billboardy – odpowiednie przygotowanie grafiki pozwala uniknąć błędów, opóźnień i dodatkowych kosztów."
 heroCaption: "SEZMOO / BLOG"
 toc:
-  - id: "wstep"
-    label: "Wstęp"
+  - id: "jak-przygotowac-pliki-do-druku-checklista-dla-klientow-agencji-reklamowej"
+    label: "Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej"
+  - id: "wybierz-odpowiedni-format-pliku"
+    label: "Wybierz odpowiedni format pliku"
+  - id: "dodaj-spad"
+    label: "Dodaj spad"
+  - id: "ustal-marginesy-wewnetrzne-bezpieczna-strefa"
+    label: "Ustal marginesy wewnętrzne (bezpieczna strefa)"
+  - id: "ustaw-przestrzen-kolorystyczna-cmyk"
+    label: "Ustaw przestrzeń kolorystyczną CMYK"
+  - id: "zamien-czcionki-na-krzywe"
+    label: "Zamień czcionki na krzywe"
+  - id: "ustaw-odpowiednia-rozdzielczosc"
+    label: "Ustaw odpowiednią rozdzielczość"
+  - id: "dodaj-znaczniki-ciecia-i-pasery"
+    label: "Dodaj znaczniki cięcia i pasery"
+  - id: "co-przeslac-agencji-lub-drukarni"
+    label: "Co przesłać agencji lub drukarni?"
 ---
 
-<section id="wstep" class="reveal">
-<h3 class="wp-block-heading">Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej</h3>
+<h3 id="jak-przygotowac-pliki-do-druku-checklista-dla-klientow-agencji-reklamowej">Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej</h3>
 
-<p>Profesjonalnie przygotowany plik do druku to podstawa, jeśli chcesz mieć pewność, że Twoje materiały reklamowe będą wyglądać dokładnie tak, jak zaplanowano. Niezależnie od tego, czy drukujesz ulotki, katalogi, wizytówki czy billboardy – odpowiednie przygotowanie grafiki pozwala uniknąć błędów, opóźnień i dodatkowych kosztów.</p>
+W tym artykule znajdziesz praktyczną checklistę, która pomoże Ci dostarczyć agencji lub drukarni plik gotowy do produkcji
 
-<p>W tym artykule znajdziesz praktyczną checklistę, która pomoże Ci dostarczyć agencji lub drukarni plik gotowy do produkcji</p>
+<h3 id="wybierz-odpowiedni-format-pliku">Wybierz odpowiedni format pliku</h3>
 
-<h5 class="wp-block-heading">Wybierz odpowiedni format pliku</h5>
+Najlepszym formatem do druku jest **PDF**, najlepiej w standardzie **PDF/X-1a** – zapewnia on spójność plików i eliminuje większość błędów technicznych. Alternatywne opcje to:
 
-<p>Najlepszym formatem do druku jest <strong>PDF</strong>, najlepiej w standardzie <strong>PDF/X-1a</strong> – zapewnia on spójność plików i eliminuje większość błędów technicznych. Alternatywne opcje to:</p>
+- **AI (Adobe Illustrator)** – do edytowalnych projektów wektorowych
+- **TIFF / PSD** – dla projektów rastrowych, np. plakatów fotograficznych
 
-<ul class="wp-block-list">
-<li><strong>AI (Adobe Illustrator)</strong> – do edytowalnych projektów wektorowych<br></li>
+Unikaj plików **JPG, PNG** czy **Word/PowerPoint** – nie są przeznaczone do profesjonalnego druku.
 
-<li><strong>TIFF / PSD</strong> – dla projektów rastrowych, np. plakatów fotograficznych<br></li>
-</ul>
+<h3 id="dodaj-spad">Dodaj spad</h3>
 
-<p>Unikaj plików <strong>JPG, PNG</strong> czy <strong>Word/PowerPoint</strong> – nie są przeznaczone do profesjonalnego druku.</p>
+**Spady** to dodatkowy margines poza obszarem cięcia, zazwyczaj **3 mm z każdej strony**, który pozwala uniknąć białych krawędzi po przycięciu materiału.
 
-<h5 class="wp-block-heading">Dodaj spad</h5>
+Przykład: jeśli Twoja ulotka ma mieć 210×148 mm, to z dodanym spadem będzie miała 216×154 mm.
 
-<p><strong>Spady</strong> to dodatkowy margines poza obszarem cięcia, zazwyczaj <strong>3 mm z każdej strony</strong>, który pozwala uniknąć białych krawędzi po przycięciu materiału.</p>
+<h3 id="ustal-marginesy-wewnetrzne-bezpieczna-strefa">Ustal marginesy wewnętrzne (bezpieczna strefa)</h3>
 
-<p> Przykład: jeśli Twoja ulotka ma mieć 210&#215;148 mm, to z dodanym spadem będzie miała 216&#215;154 mm.</p>
+Wszystkie ważne elementy – teksty, logo, kody QR – powinny znajdować się minimum **5 mm od linii cięcia**, by nie zostały przypadkowo przycięte.
 
-<h5 class="wp-block-heading">Ustal marginesy wewnętrzne (bezpieczna strefa)</h5>
+<h3 id="ustaw-przestrzen-kolorystyczna-cmyk">Ustaw przestrzeń kolorystyczną CMYK</h3>
 
-<p>Wszystkie ważne elementy – teksty, logo, kody QR – powinny znajdować się minimum <strong>5 mm od linii cięcia</strong>, by nie zostały przypadkowo przycięte.</p>
+Kolory do druku powinny być ustawione w przestrzeni **CMYK**, nie **RGB**. RGB to tryb do ekranów – może dawać złudne, jaskrawe kolory, które nie będą wyglądać tak samo na papierze.
 
-<h5 class="wp-block-heading">Ustaw przestrzeń kolorystyczną CMYK</h5>
+<h3 id="zamien-czcionki-na-krzywe">Zamień czcionki na krzywe</h3>
 
-<p>Kolory do druku powinny być ustawione w przestrzeni <strong>CMYK</strong>, nie <strong>RGB</strong>. RGB to tryb do ekranów – może dawać złudne, jaskrawe kolory, które nie będą wyglądać tak samo na papierze.</p>
+Jeśli korzystasz z edytowalnych plików (AI, PDF), pamiętaj o:
 
-<h5 class="wp-block-heading">Zamień czcionki na krzywe</h5>
+- zamianie fontów na **krzywe** (outline)
+- lub ich **osadzeniu** w pliku
 
-<p>Jeśli korzystasz z edytowalnych plików (AI, PDF), pamiętaj o:</p>
+Unikniesz w ten sposób problemów z brakiem fontów w systemie drukarni.
 
-<ul class="wp-block-list">
-<li>zamianie fontów na <strong>krzywe</strong> (outline)<br></li>
+<h3 id="ustaw-odpowiednia-rozdzielczosc">Ustaw odpowiednią rozdzielczość</h3>
 
-<li>lub ich <strong>osadzeniu</strong> w pliku<br></li>
-</ul>
+Dla projektów drukowanych rozdzielczość powinna wynosić **300 dpi**. Pliki o niższej jakości (np. 72 dpi z internetu) będą rozmazane lub pikselowe po wydrukowaniu.
 
-<p>Unikniesz w ten sposób problemów z brakiem fontów w systemie drukarni.</p>
+<h3 id="dodaj-znaczniki-ciecia-i-pasery">Dodaj znaczniki cięcia i pasery</h3>
 
-<h5 class="wp-block-heading">Ustaw odpowiednią rozdzielczość</h5>
+Jeśli przygotowujesz plik samodzielnie w programie graficznym, zaznacz:
 
-<p>Dla projektów drukowanych rozdzielczość powinna wynosić <strong>300 dpi</strong>. Pliki o niższej jakości (np. 72 dpi z internetu) będą rozmazane lub pikselowe po wydrukowaniu.</p>
+- **znaczniki cięcia** (crop marks)
+- **pasery** i **znaczniki kolorystyczne** – ułatwiają kalibrację barw
 
-<h5 class="wp-block-heading">Dodaj znaczniki cięcia i pasery</h5>
+<h3 id="co-przeslac-agencji-lub-drukarni">Co przesłać agencji lub drukarni?</h3>
 
-<p>Jeśli przygotowujesz plik samodzielnie w programie graficznym, zaznacz:</p>
+Aby mieć pewność, że wszystko pójdzie gładko:
 
-<ul class="wp-block-list">
-<li><strong>znaczniki cięcia</strong> (crop marks)<br></li>
+- Główny plik produkcyjny (np. PDF z paserami i spadami)
+- Podglądowy plik JPG lub osobny PDF bez znaczników
+- Informację o formacie końcowym i papierze (jeśli zamawiasz druk)
 
-<li><strong>pasery</strong> i <strong>znaczniki kolorystyczne</strong> – ułatwiają kalibrację barw<br></li>
-</ul>
-
-<h5 class="wp-block-heading">Co przesłać agencji lub drukarni?</h5>
-
-<p>Aby mieć pewność, że wszystko pójdzie gładko:</p>
-
-<ul class="wp-block-list">
-<li>Główny plik produkcyjny (np. PDF z paserami i spadami)<br></li>
-
-<li>Podglądowy plik JPG lub osobny PDF bez znaczników<br></li>
-
-<li>Informację o formacie końcowym i papierze (jeśli zamawiasz druk)<br></li>
-</ul>
-
-<p>Jeśli chcesz, aby Twój projekt graficzny wyglądał perfekcyjnie po wydruku – zadbaj o każdy z wymienionych punktów. Profesjonalne <strong>przygotowanie pliku do druku</strong> pozwala uniknąć problemów, zmniejszyć ryzyko błędów i przyspieszyć realizację.</p>
-</section>
+Jeśli chcesz, aby Twój projekt graficzny wyglądał perfekcyjnie po wydruku – zadbaj o każdy z wymienionych punktów. Profesjonalne **przygotowanie pliku do druku** pozwala uniknąć problemów, zmniejszyć ryzyko błędów i przyspieszyć realizację.

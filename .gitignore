@@ -61,6 +61,7 @@ linki/
 !/scripts/migrate-blog-to-content.mjs
 !/scripts/migrate-blog-chrome.mjs
 !/scripts/migrate-blog-body.mjs
+!/scripts/migrate-blog-wp-remainders.mjs
 !/scripts/sync-public-assets.mjs
 !/scripts/fetch-yt-posters.mjs
 !/scripts/unstring-pagehtml.mjs
