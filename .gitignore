@@ -64,6 +64,7 @@ linki/
 !/scripts/migrate-blog-wp-remainders.mjs
 !/scripts/sync-public-assets.mjs
 !/scripts/fetch-yt-posters.mjs
+!/scripts/download-ytultra.mjs
 !/scripts/unstring-pagehtml.mjs
 !/scripts/patch-cloudflare-smtp.mjs
 

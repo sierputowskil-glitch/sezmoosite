@@ -120,11 +120,54 @@ Contact API locally needs `npm run build` then `npm run dev:functions`, with Tur
   ```
 - After adding a hero file under `assets/blog/`, run sync (or rely on `predev`/`prebuild`).
 
-### Case studies
+### Case studies (copy + routes)
 
-- Copy lives in `src/data/case-studies.ts` (PL + EN per `videoId`).
-- Route shells under `src/pages/realizacja*/` and `src/pages/en/realizacja*/` — follow an existing sibling page when adding a new case.
-- Order in nav/portfolio: `CASE_STUDY_ORDER`. Update both copy and order when inserting.
+- **Data-driven video cases:** copy in `src/data/case-studies.ts` (PL + EN per YouTube `videoId`). URLs: `/realizacja/{id}/` and `/en/realizacja/{id}/` via `src/pages/realizacja/[id]/` (no new Astro file per id).
+- **Order / next-nav:** `CASE_STUDY_ORDER` in the same file — update when inserting.
+- **Legacy one-off shells** still exist as `src/pages/realizacja-*/` (and EN mirrors) for non-standard layouts; prefer the `[id]` pipeline for new video cases.
+- Player uses `data-video="{ytId}"` → `assets/js/cdn-video-map.js` → MP4 on Hostido CDN (`cdn.sezmoo.com`). Posters stay on Pages: `/assets/video/yt/posters/{id}.webp`.
+
+### New video case study — pipeline
+
+Do **not** ship large MP4s in the Pages deploy (`sync:assets` skips `assets/video/**/*.mp4`). Flow:
+
+1. **YouTube id + slug**  
+   Pick the public YT id and a kebab slug (`audi-rs5-trailer`). Filename convention: `{id}__{slug}.mp4`.
+
+2. **Queue** — append to `assets/video/yt/queue.json`:
+   ```json
+   { "id": "WG5ufZMfjQ8", "slug": "audi-rs5-trailer", "file": "WG5ufZMfjQ8__audi-rs5-trailer.mp4" }
+   ```
+
+3. **Download tool + quality**  
+   - Tool: **`scripts/download-ytultra.mjs`** (`npm run fetch:yt-videos`) — ytultra API (`api.ytultra.com`), mux with **ffmpeg**.  
+   - Quality: prefers **1080p MP4**, then 720p → 480p → …; muxes matching **m4a** when the video stream is DASH-only.  
+   - Needs: Node 22+, `ffmpeg` / `ffprobe` on PATH.  
+   - Output: local `assets/video/yt/{id}__{slug}.mp4` + updates `assets/video/yt/manifest.json`.  
+   - Skips ids already in manifest with `ok: true`.
+
+4. **Upload to CDN (Hostido)**  
+   Put the file at:  
+   `https://cdn.sezmoo.com/video/yt/{id}__{slug}.mp4`  
+   (same path as `manifest.path`). Ensure the manifest entry has:
+   ```json
+   "cdn": "https://cdn.sezmoo.com/video/yt/{id}__{slug}.mp4"
+   ```
+
+5. **Regen client map**  
+   `npm run fetch:yt-videos` rewrites the `sez.cdnVideoMap` block in `assets/js/cdn-video-map.js` from manifest entries with `ok` + `cdn` (keeps `mountCdnVideo` helpers).
+
+6. **Poster (LCP / UI)**  
+   ```bash
+   npm run fetch:yt-posters
+   ```
+   Needs **ffmpeg** + **cwebp**. Pulls a frame from the CDN MP4 (fallback: `i.ytimg.com` maxres/hq). Writes `assets/video/yt/posters/{id}.webp`.
+
+7. **Site copy** — add `CASE_STUDIES[id]` (PL + EN) and append id to `CASE_STUDY_ORDER`. Mirror an existing entry (`short: true` for 9:16). Fields: `title`, `client`, `cat`, `kv`, `lead`, `intro`, `context[]`, `steps[]`.
+
+8. **Optional portfolio cards** — homepage / `portfolio/` / `portfolio-lista-b/` are still hand-authored; add a card with the new poster if the case should appear in listings.
+
+9. **Verify** — `npm run check`; open `/realizacja/{id}/`, confirm poster + play hits CDN (not YouTube embed). Do not commit local MP4s (CDN only); commit queue/manifest/posters/map + `case-studies.ts`.
 
 ### Service & marketing pages
 
