@@ -246,7 +246,6 @@
 .cs-film__meta .rec { color: var(--rec); }
 .cs-film__bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; z-index: 3; background: oklch(1 0 0 / .12); }
 .cs-film__bar i { display: block; height: 100%; width: 34%; background: var(--rec); box-shadow: 0 0 12px var(--rec-glow); }
-.cs-film__frame iframe,
 .cs-film__frame video.cdn-video {
   position: absolute; inset: 0; width: 100%; height: 100%; border: 0; z-index: 5;
 }

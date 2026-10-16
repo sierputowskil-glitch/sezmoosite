@@ -3,6 +3,7 @@ import CaseStudyPage from '../../../../components/case-study/CaseStudyPage.astro
 import {
   caseStudyHref,
   caseStudyPaths,
+  cdnVideoContentUrl,
   posterPath,
   type CaseStudy,
 } from '../../../../data/case-studies';
@@ -37,7 +38,7 @@ const jsonLd = {
   description: copy.lead || '',
   thumbnailUrl: thumb,
   uploadDate: '2025-01-01',
-  embedUrl: `https://www.youtube-nocookie.com/embed/${id}`,
+  contentUrl: cdnVideoContentUrl(id),
   publisher: {
     '@type': 'Organization',
     name: 'SEZMOO',

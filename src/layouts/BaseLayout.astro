@@ -267,59 +267,22 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
   {/* Vite-bundled site JS (hashed). Lenis + flowing-background stay public URLs. */}
   <script>
     import '../../assets/js/cdn-video-map.js';
-    import '../../assets/js/yt-consent.js';
     import '../../assets/js/app.js';
   </script>
   <script is:inline>
-  /* YouTube bg: poster first; iframe only after CookieYes marketing consent.
-     Touch / coarse pointer: poster only (no googlevideo on mobile). */
+  /* Background video: local poster first, then first-party CDN MP4 (no YouTube iframe).
+     Touch / coarse pointer: poster only. */
   (function () {
     var finePointer = false;
     try {
       finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches
         && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     } catch (_e) {}
-    function whenYtReady(fn) {
-      var s = window.__SEZMOO__;
-      if (s && typeof s.whenYtConsent === 'function') s.whenYtConsent(fn);
-      else if (!s || !s.expectCmp) fn();
-      else {
-        var n = 0;
-        var t = setInterval(function () {
-          n++;
-          s = window.__SEZMOO__;
-          if (s && typeof s.whenYtConsent === 'function') {
-            clearInterval(t);
-            s.whenYtConsent(fn);
-          } else if (n > 40) {
-            clearInterval(t);
-          }
-        }, 100);
-      }
-    }
     function applyPoster(el) {
       var poster = el.getAttribute('data-yt-poster');
       if (poster && !el.style.backgroundImage) {
         el.style.backgroundImage = 'url("' + poster + '")';
       }
-    }
-    function mountYtIframe(el, id) {
-      if (el.dataset.ytMounted) return;
-      el.dataset.ytMounted = '1';
-      var origin = el.getAttribute('data-yt-origin') || 'https://sezmoo.com';
-      var title = el.getAttribute('data-yt-title') || 'YouTube';
-      var ifr = document.createElement('iframe');
-      ifr.src =
-        'https://www.youtube-nocookie.com/embed/' +
-        id +
-        '?autoplay=1&mute=1&controls=0&loop=1&playlist=' +
-        id +
-        '&playsinline=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&origin=' +
-        encodeURIComponent(origin);
-      ifr.title = title;
-      ifr.allow = 'autoplay; encrypted-media; picture-in-picture';
-      ifr.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-      el.appendChild(ifr);
     }
     function mountCdnBg(el, id) {
       var s = window.__SEZMOO__;
@@ -346,21 +309,18 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
       var id = el.getAttribute('data-yt-id');
       if (!id) return;
       if (mountCdnBg(el, id)) return;
-      // Defer scripts may still be loading — brief poll, then YT fallback
       if (!window.__SEZMOO__ || !window.__SEZMOO__.cdnVideoMap) {
         var tries = 0;
         var t = setInterval(function () {
           tries++;
           if (mountCdnBg(el, id) || tries > 40) {
             clearInterval(t);
-            if (!el.dataset.ytMounted) {
-              whenYtReady(function () { mountYtIframe(el, id); });
-            }
+            if (!el.dataset.ytMounted) el.dataset.ytMounted = '1';
           }
         }, 50);
         return;
       }
-      whenYtReady(function () { mountYtIframe(el, id); });
+      el.dataset.ytMounted = '1';
     }
     function playBgMedia(el) {
       var v = el.querySelector('video');
@@ -377,7 +337,6 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
       else if (document.readyState === 'complete') setTimeout(fn, 1);
       else window.addEventListener('load', function () { setTimeout(fn, 1); });
     }
-    /** Lazy bg: mount + play only near viewport; pause when scrolled away. */
     function whenNear(el) {
       if (!('IntersectionObserver' in window)) {
         whenIdle(function () { mount(el); });
@@ -396,7 +355,6 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
             }
           });
         },
-        // Start slightly before visible; pause when scrolled away
         { rootMargin: '120px 0px', threshold: 0.15 }
       );
       io.observe(el);
@@ -409,15 +367,6 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
       }
       if (el.getAttribute('data-yt-priority') === 'hero') whenIdle(function () { mount(el); });
       else whenNear(el);
-    });
-    document.addEventListener('sezmoo:yt-consent', function (e) {
-      if (!e.detail || !e.detail.allowed) return;
-      document.querySelectorAll('[data-yt-bg]').forEach(function (el) {
-        if (el.dataset.ytMounted && el.querySelector('iframe, video')) return;
-        delete el.dataset.ytMounted;
-        if (el.getAttribute('data-yt-priority') === 'hero') mount(el);
-        else whenNear(el);
-      });
     });
   })();
   </script>

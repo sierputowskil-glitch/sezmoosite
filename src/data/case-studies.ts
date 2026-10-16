@@ -1,4 +1,5 @@
 /** Video case studies keyed by YouTube id — PL + EN copy. */
+import ytManifest from '../../assets/video/yt/manifest.json';
 
 export type CaseStudyLang = 'pl' | 'en';
 
@@ -858,4 +859,10 @@ export function caseStudyHref(id: string, lang: CaseStudyLang): string {
 
 export function posterPath(id: string): string {
   return `/assets/video/yt/posters/${id}.webp`;
+}
+
+/** Absolute CDN MP4 URL for a video id (YouTube key → first-party file). */
+export function cdnVideoContentUrl(id: string): string | undefined {
+  const entry = (ytManifest as Record<string, { cdn?: string }>)[id];
+  return entry?.cdn;
 }
