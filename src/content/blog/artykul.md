@@ -1,5 +1,7 @@
 ---
 title: Jak przygotować markę do dnia zdjęciowego?
+ogDescription: "Praktyczne wskazówki SEZMOO: jak przygotować markę do dnia zdjęciowego i produkcji wideo."
+ogTitle: "Jak przygotować markę do dnia zdjęciowego? | SEZMOO"
 description: "Praktyczne wskazówki SEZMOO: jak przygotować markę do dnia zdjęciowego i produkcji wideo."
 date: 2026-06-12
 topic: production

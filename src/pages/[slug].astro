@@ -17,9 +17,11 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const path = `/${post.id}/`;
 const canonical = pageUrl(path);
-const title = post.data.title.includes('SEZMOO')
-  ? post.data.title
-  : `${post.data.title} | SEZMOO`;
+const title = post.data.ogTitle
+  ? post.data.ogTitle
+  : post.data.title.includes('SEZMOO')
+    ? post.data.title
+    : `${post.data.title} | SEZMOO`;
 ---
 
 <ArticleLayout

@@ -71,7 +71,7 @@ Zdjęcia: **Wojtek Rojek**
 
 ![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725887764-1024x683.jpg)
 
-<h3 id="w-mediach-o-projekcie">W mediach o projekcie</h3>
+<h2 id="w-mediach-o-projekcie" class="reveal">W mediach o projekcie</h2>
 
 Poniżej kilka artykułów, które opisują 10-lecie *World of Warships* oraz otwarcie Strefy Gracza w Gdyni
 

@@ -35,11 +35,11 @@ toc:
     label: "Co przesłać agencji lub drukarni?"
 ---
 
-<h3 id="jak-przygotowac-pliki-do-druku-checklista-dla-klientow-agencji-reklamowej">Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej</h3>
+<h2 id="jak-przygotowac-pliki-do-druku-checklista-dla-klientow-agencji-reklamowej" class="reveal">Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej</h2>
 
 W tym artykule znajdziesz praktyczną checklistę, która pomoże Ci dostarczyć agencji lub drukarni plik gotowy do produkcji
 
-<h3 id="wybierz-odpowiedni-format-pliku">Wybierz odpowiedni format pliku</h3>
+<h2 id="wybierz-odpowiedni-format-pliku" class="reveal">Wybierz odpowiedni format pliku</h2>
 
 Najlepszym formatem do druku jest **PDF**, najlepiej w standardzie **PDF/X-1a** – zapewnia on spójność plików i eliminuje większość błędów technicznych. Alternatywne opcje to:
 
@@ -48,21 +48,21 @@ Najlepszym formatem do druku jest **PDF**, najlepiej w standardzie **PDF/X-1a** 
 
 Unikaj plików **JPG, PNG** czy **Word/PowerPoint** – nie są przeznaczone do profesjonalnego druku.
 
-<h3 id="dodaj-spad">Dodaj spad</h3>
+<h2 id="dodaj-spad" class="reveal">Dodaj spad</h2>
 
 **Spady** to dodatkowy margines poza obszarem cięcia, zazwyczaj **3 mm z każdej strony**, który pozwala uniknąć białych krawędzi po przycięciu materiału.
 
 Przykład: jeśli Twoja ulotka ma mieć 210×148 mm, to z dodanym spadem będzie miała 216×154 mm.
 
-<h3 id="ustal-marginesy-wewnetrzne-bezpieczna-strefa">Ustal marginesy wewnętrzne (bezpieczna strefa)</h3>
+<h2 id="ustal-marginesy-wewnetrzne-bezpieczna-strefa" class="reveal">Ustal marginesy wewnętrzne (bezpieczna strefa)</h2>
 
 Wszystkie ważne elementy – teksty, logo, kody QR – powinny znajdować się minimum **5 mm od linii cięcia**, by nie zostały przypadkowo przycięte.
 
-<h3 id="ustaw-przestrzen-kolorystyczna-cmyk">Ustaw przestrzeń kolorystyczną CMYK</h3>
+<h2 id="ustaw-przestrzen-kolorystyczna-cmyk" class="reveal">Ustaw przestrzeń kolorystyczną CMYK</h2>
 
 Kolory do druku powinny być ustawione w przestrzeni **CMYK**, nie **RGB**. RGB to tryb do ekranów – może dawać złudne, jaskrawe kolory, które nie będą wyglądać tak samo na papierze.
 
-<h3 id="zamien-czcionki-na-krzywe">Zamień czcionki na krzywe</h3>
+<h2 id="zamien-czcionki-na-krzywe" class="reveal">Zamień czcionki na krzywe</h2>
 
 Jeśli korzystasz z edytowalnych plików (AI, PDF), pamiętaj o:
 
@@ -71,18 +71,18 @@ Jeśli korzystasz z edytowalnych plików (AI, PDF), pamiętaj o:
 
 Unikniesz w ten sposób problemów z brakiem fontów w systemie drukarni.
 
-<h3 id="ustaw-odpowiednia-rozdzielczosc">Ustaw odpowiednią rozdzielczość</h3>
+<h2 id="ustaw-odpowiednia-rozdzielczosc" class="reveal">Ustaw odpowiednią rozdzielczość</h2>
 
 Dla projektów drukowanych rozdzielczość powinna wynosić **300 dpi**. Pliki o niższej jakości (np. 72 dpi z internetu) będą rozmazane lub pikselowe po wydrukowaniu.
 
-<h3 id="dodaj-znaczniki-ciecia-i-pasery">Dodaj znaczniki cięcia i pasery</h3>
+<h2 id="dodaj-znaczniki-ciecia-i-pasery" class="reveal">Dodaj znaczniki cięcia i pasery</h2>
 
 Jeśli przygotowujesz plik samodzielnie w programie graficznym, zaznacz:
 
 - **znaczniki cięcia** (crop marks)
 - **pasery** i **znaczniki kolorystyczne** – ułatwiają kalibrację barw
 
-<h3 id="co-przeslac-agencji-lub-drukarni">Co przesłać agencji lub drukarni?</h3>
+<h2 id="co-przeslac-agencji-lub-drukarni" class="reveal">Co przesłać agencji lub drukarni?</h2>
 
 Aby mieć pewność, że wszystko pójdzie gładko:
 

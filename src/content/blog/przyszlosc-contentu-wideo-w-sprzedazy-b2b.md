@@ -1,6 +1,6 @@
 ---
 title: Przyszłość contentu wideo w sprzedaży B2B
-description: "Przyszłość contentu wideo w sprzedaży B2B: krótszy proces decyzyjny, większe zaufanie i materiały, które realnie wspierają zespół handlowy."
+description: "Przyszłość contentu wideo w sprzedaży to krótszy proces decyzyjny, większe zaufanie i materiały, które realnie wspierają zespół handlowy w B2B i e-commerce"
 date: 2026-07-16
 topic: production
 topicLabel: PRODUKCJA
