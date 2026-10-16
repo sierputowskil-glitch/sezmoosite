@@ -6,6 +6,15 @@
 #
 # NOTE — /artykul/: legacy always 301 → /blog/. An unlisted sample post still builds at
 # /artykul/ for local `astro preview` (no _redirects), but on CF Pages this redirect wins.
+#
+# NOTE — ?portfolio= (legacy WP singles): _redirects cannot match query strings.
+# Zone Redirect Rule (dashboard): name "Legacy ?portfolio= → portfolio"
+#   When: (http.request.uri.query contains "portfolio=")
+#   Then: Dynamic 301, Preserve query string OFF
+#   Target:
+#     if(starts_with(http.request.uri.path, "/en"), "https://sezmoo.com/en/portfolio-en/",
+#       if(starts_with(http.request.uri.path, "/de"), "https://sezmoo.com/en/portfolio-en/",
+#         "https://sezmoo.com/portfolio/"))
 
 /abonament    https://abonament.sezmoo.com/  301
 /abonament/   https://abonament.sezmoo.com/  301
@@ -32,6 +41,10 @@
 /o-nas/   /#team      301
 /uslugi   /uslugi-marketingowe/  301
 /uslugi/  /uslugi-marketingowe/  301
+# Legacy /uslugi/<service>/ (GSC still ranks these); old slug grafika-digital → projektowanie-graficzne
+/uslugi/grafika-digital    /uslugi-marketingowe/projektowanie-graficzne/  301
+/uslugi/grafika-digital/   /uslugi-marketingowe/projektowanie-graficzne/  301
+/uslugi/*  /uslugi-marketingowe/:splat  301
 /kontakt  /#kontakt   301
 /kontakt/ /#kontakt   301
 /identyfikacja-wizualna   /uslugi-marketingowe/identyfikacja-wizualna/  301
@@ -88,6 +101,11 @@
 /en/author/*   /blog/ 301
 /en/feed       /blog/ 301
 /en/feed/      /blog/ 301
+/blog/page/*   /blog/  301
+/portfolio-category/*     /portfolio/  301
+/en/portfolio-category/*  /en/portfolio-en/  301
+/faq-category/*     /uslugi-marketingowe/  301
+/en/faq-category/*  /en/services/  301
 /sitemap_index.xml /sitemap.xml 301
 /page-sitemap.xml  /sitemap.xml 301
 /post-sitemap.xml  /sitemap.xml 301
