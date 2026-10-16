@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../components/AssetImage.astro';
 import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
 import { pageUrl } from '../../lib/site';
 
@@ -17,7 +18,7 @@ const pageScriptsHtml = "<script>\n/* Film facade — YouTube dopiero po zgodzie
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">
   <div class="cs-hero__media">
-    <img src="/assets/work/captains-club-ext.avif" alt="Captain's Club, podświetlony kontener World of Warships nocą w Gdyni" />
+    <AssetImage src="/assets/work/captains-club-ext.avif" alt="Captain's Club, podświetlony kontener World of Warships nocą w Gdyni" loading="eager" fetchpriority="high" widths={[720, 1080, 1440, 1920]} sizes="100vw" quality={72} />
   </div>
   <div class="cs-hero__frame" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="cs-hero__hud">
@@ -121,7 +122,7 @@ const pageScriptsHtml = "<script>\n/* Film facade — YouTube dopiero po zgodzie
   <div class="cs-row">
     <figure class="cs-shot cs-shot--wide reveal" data-parallax="30">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/work/warships-container.avif" alt="Kontener World of Warships za dnia przy Bulwarze w Gdyni" />
+        <AssetImage src="/assets/work/warships-container.avif" alt="Kontener World of Warships za dnia przy Bulwarze w Gdyni" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">EXT · Dzień</span>
       <span class="cs-shot__tc" data-tc>00:01:04:11</span>
@@ -131,14 +132,14 @@ const pageScriptsHtml = "<script>\n/* Film facade — YouTube dopiero po zgodzie
   <div class="cs-row cs-row--split">
     <figure class="cs-shot cs-shot--tall reveal" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/work/captains-club-int.avif" alt="Wnętrze Captain's Club, stanowiska gamingowe w kontenerze" />
+        <AssetImage src="/assets/work/captains-club-int.avif" alt="Wnętrze Captain's Club, stanowiska gamingowe w kontenerze" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">INT · Stanowiska</span>
       <span class="cs-shot__tc" data-tc>00:02:18:03</span>
     </figure>
     <figure class="cs-shot cs-shot--tall reveal" data-d="1" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/work/captains-club-1.avif" alt="Neon Captain's Club i ekran z rozgrywką World of Warships" />
+        <AssetImage src="/assets/work/captains-club-1.avif" alt="Neon Captain's Club i ekran z rozgrywką World of Warships" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">INT · Detal</span>
       <span class="cs-shot__tc" data-tc>00:03:41:22</span>
@@ -148,7 +149,7 @@ const pageScriptsHtml = "<script>\n/* Film facade — YouTube dopiero po zgodzie
   <div class="cs-row">
     <figure class="cs-shot cs-shot--full reveal" data-parallax="30">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/work/captains-club-ext.avif" alt="Captain's Club nocą, podświetlony kontener w barwach marki" />
+        <AssetImage src="/assets/work/captains-club-ext.avif" alt="Captain's Club nocą, podświetlony kontener w barwach marki" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">EXT · Noc</span>
       <span class="cs-shot__tc" data-tc>00:05:09:14</span>
@@ -166,7 +167,7 @@ const pageScriptsHtml = "<script>\n/* Film facade — YouTube dopiero po zgodzie
     <!-- Player: podmień data-yt na ID filmu z YouTube, aby aktywować odtwarzanie -->
     <div class="cs-film reveal" data-d="1" style="margin-top:clamp(30px,4vh,48px)">
       <div class="cs-film__frame" data-cursor="play" data-yt="" role="button" tabindex="0" aria-label="Odtwórz film Captain's Club">
-        <img src="/assets/work/captains-club-ext.avif" alt="Kadr otwierający film Captain's Club" />
+        <AssetImage src="/assets/work/captains-club-ext.avif" alt="Kadr otwierający film Captain's Club" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
         <div class="cs-film__play"><span class="cs-film__btn" aria-hidden="true"></span></div>
         <div class="cs-film__meta">
           <span class="rec">● REC</span>
@@ -193,7 +194,7 @@ const pageScriptsHtml = "<script>\n/* Film facade — YouTube dopiero po zgodzie
 <!-- ============ NEXT PROJECT ============ -->
 <!-- Podmień href na podstronę kolejnej realizacji, gdy powstanie -->
 <a class="cs-next bleed" href="/#work" data-cursor="link" aria-label="Następna realizacja, Audi RS">
-  <img src="/assets/work/audi-a6-etron.jpg" alt="Audi RS, premium film" />
+  <AssetImage src="/assets/work/audi-a6-etron.jpg" alt="Audi RS, premium film" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
   <div class="cs-next__inner shell">
     <span class="cs-next__k">Następna realizacja →</span>
     <span class="cs-next__title">Audi RS <span class="arrow">→</span></span>

@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../../components/AssetImage.astro';
 import CaseStudyLayout from '../../../layouts/CaseStudyLayout.astro';
 import { pageUrl } from '../../../lib/site';
 
@@ -15,7 +16,7 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
   pageScripts={pageScriptsHtml}
 >
 <header class="cs-hero" data-screen-label="Case · Cover">
-  <div class="cs-hero__media"><img src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-01.jpg" alt="TVP film studio hall built by DORACO – drone photo" /></div>
+  <div class="cs-hero__media"><AssetImage src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-01.jpg" alt="TVP film studio hall built by DORACO – drone photo" loading="eager" fetchpriority="high" widths={[720, 1080, 1440, 1920]} sizes="100vw" quality={72} /></div>
   <div class="cs-hero__hud"><span class="rec">FILM · PHOTO</span><span>DRONE</span><span>CONSTRUCTION / PL</span></div>
   <div class="cs-hero__inner shell">
     <a class="cs-hero__back" href="/en/portfolio-en/">← Portfolio / Work</a>
@@ -63,7 +64,7 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
     <p class="cs-body reveal" data-d="1" style="max-width:54ch;margin-top:20px">A showcase film combining drone footage with material shot on site.</p>
     <div class="cs-film reveal" data-d="1" style="margin-top:clamp(30px,4vh,48px)">
       <div class="cs-film__frame" data-cursor="play" data-yt="phXKtUNlDuM" role="button" tabindex="0" aria-label="Play the DORACO film – TVP studio hall">
-        <img src="/assets/video/yt/posters/phXKtUNlDuM.webp" alt="Play the DORACO film – TVP studio hall" />
+        <AssetImage src="/assets/video/yt/posters/phXKtUNlDuM.webp" alt="Play the DORACO film – TVP studio hall" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
         <div class="cs-film__play"><span class="cs-film__btn" aria-hidden="true"></span></div>
         <div class="cs-film__meta"><span class="rec">● REC</span><span>DORACO, TVP HALL</span></div>
         <div class="cs-film__bar"><i></i></div>
@@ -76,9 +77,9 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
   <div class="shell"><span class="cs-sec__no reveal">PHOTOGRAPHY · DRONE</span><h2 class="cs-sec__title reveal">The scale of the building<br>in one frame.</h2></div>
 </section>
 <section class="cs-gallery bleed" aria-label="PHOTOGRAPHY · DRONE">
-  <div class="cs-row"><figure class="cs-shot reveal" style="aspect-ratio:16/9"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-02.jpg" alt="TVP studio hall from above" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Top-down</span></figure></div>
-  <div class="cs-row cs-row--split"><figure class="cs-shot reveal" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-04.jpg" alt="TVP studio hall and surroundings – drone photography" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Setting</span></figure><figure class="cs-shot reveal" data-d="1" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-05.jpg" alt="Roof and structure of the TVP studio hall – DORACO" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Detail</span></figure></div>
-  <div class="cs-row cs-row--split"><figure class="cs-shot reveal" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-03.jpg" alt="TVP hall construction – drone photo, DORACO" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Build</span></figure><figure class="cs-shot reveal" data-d="1" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-01.jpg" alt="TVP film studio hall built by DORACO – drone photo" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Volume</span></figure></div>
+  <div class="cs-row"><figure class="cs-shot reveal" style="aspect-ratio:16/9"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-02.jpg" alt="TVP studio hall from above" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Top-down</span></figure></div>
+  <div class="cs-row cs-row--split"><figure class="cs-shot reveal" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-04.jpg" alt="TVP studio hall and surroundings – drone photography" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Setting</span></figure><figure class="cs-shot reveal" data-d="1" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-05.jpg" alt="Roof and structure of the TVP studio hall – DORACO" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Detail</span></figure></div>
+  <div class="cs-row cs-row--split"><figure class="cs-shot reveal" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-03.jpg" alt="TVP hall construction – drone photo, DORACO" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Build</span></figure><figure class="cs-shot reveal" data-d="1" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-01.jpg" alt="TVP film studio hall built by DORACO – drone photo" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Drone · Volume</span></figure></div>
 </section>
 
 <section class="cs-quote" aria-label="Quote">
@@ -89,7 +90,7 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
 </section>
 
 <a class="cs-next bleed" href="/en/portfolio-en/" data-cursor="link" aria-label="Back to portfolio">
-  <img src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-03.jpg" alt="" />
+  <AssetImage src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-03.jpg" alt="" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
   <div class="cs-next__inner shell"><span class="cs-next__k">See more →</span><span class="cs-next__title">Portfolio <span class="arrow">→</span></span><span class="cs-next__cat">All SEZMOO work</span></div>
 </a>
 </CaseStudyLayout>

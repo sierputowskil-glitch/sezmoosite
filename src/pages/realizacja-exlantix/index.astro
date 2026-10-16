@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../components/AssetImage.astro';
 import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
 import { pageUrl } from '../../lib/site';
 
@@ -17,7 +18,7 @@ const pageScriptsHtml = "<script>\n(function(){\n  var f = document.querySelecto
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">
   <div class="cs-hero__media">
-    <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg" alt="EXLANTIX ES na podeście, nocna scena przed Filharmonią Bałtycką w Gdańsku" />
+    <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg" alt="EXLANTIX ES na podeście, nocna scena przed Filharmonią Bałtycką w Gdańsku" loading="eager" fetchpriority="high" widths={[720, 1080, 1440, 1920]} sizes="100vw" quality={72} />
   </div>
   <div class="cs-hero__frame" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="cs-hero__hud">
@@ -116,7 +117,7 @@ const pageScriptsHtml = "<script>\n(function(){\n  var f = document.querySelecto
   <div class="cs-row">
     <figure class="cs-shot cs-shot--wide reveal" data-parallax="30">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-26.jpg" alt="Odsłonięcie czerwonego EXLANTIX ES na scenie o zmroku" loading="lazy" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-26.jpg" alt="Odsłonięcie czerwonego EXLANTIX ES na scenie o zmroku" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">EXT · Odsłonięcie</span>
       <span class="cs-shot__tc" data-tc>00:01:04:11</span>
@@ -126,14 +127,14 @@ const pageScriptsHtml = "<script>\n(function(){\n  var f = document.querySelecto
   <div class="cs-row cs-row--split">
     <figure class="cs-shot cs-shot--tall reveal" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-25.jpg" alt="EXLANTIX ET nocą na tle podświetlonego koła widokowego w Gdańsku" loading="lazy" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-25.jpg" alt="EXLANTIX ET nocą na tle podświetlonego koła widokowego w Gdańsku" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">EXT · Noc</span>
       <span class="cs-shot__tc" data-tc>00:02:18:03</span>
     </figure>
     <figure class="cs-shot cs-shot--tall reveal" data-d="1" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-24.jpg" alt="Prezentacja EXLANTIX ES z hostessami na scenie premierowej" loading="lazy" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-24.jpg" alt="Prezentacja EXLANTIX ES z hostessami na scenie premierowej" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">Scena · Prezentacja</span>
       <span class="cs-shot__tc" data-tc>00:03:41:22</span>
@@ -143,14 +144,14 @@ const pageScriptsHtml = "<script>\n(function(){\n  var f = document.querySelecto
   <div class="cs-row cs-row--split">
     <figure class="cs-shot cs-shot--tall reveal" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-18.jpg" alt="Prezentacja na scenie podczas gali EXLANTIX, ekran LED i publiczność" loading="lazy" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-18.jpg" alt="Prezentacja na scenie podczas gali EXLANTIX, ekran LED i publiczność" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">INT · Gala</span>
       <span class="cs-shot__tc" data-tc>00:04:52:07</span>
     </figure>
     <figure class="cs-shot cs-shot--tall reveal" data-d="1" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-04.jpg" alt="Uroczysta kolacja podczas premiery, obsługa cateringowa przy stołach" loading="lazy" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-04.jpg" alt="Uroczysta kolacja podczas premiery, obsługa cateringowa przy stołach" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">INT · Kolacja</span>
       <span class="cs-shot__tc" data-tc>00:05:33:18</span>
@@ -160,7 +161,7 @@ const pageScriptsHtml = "<script>\n(function(){\n  var f = document.querySelecto
   <div class="cs-row">
     <figure class="cs-shot cs-shot--full reveal" data-parallax="30">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg" alt="Czerwony EXLANTIX ES na podeście nocą, oświetlenie sceniczne" loading="lazy" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg" alt="Czerwony EXLANTIX ES na podeście nocą, oświetlenie sceniczne" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">EXT · Ekspozycja</span>
       <span class="cs-shot__tc" data-tc>00:06:09:14</span>
@@ -170,14 +171,14 @@ const pageScriptsHtml = "<script>\n(function(){\n  var f = document.querySelecto
   <div class="cs-row cs-row--split">
     <figure class="cs-shot cs-shot--tall reveal" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-07.jpg" alt="Wnętrze EXLANTIX, jasna skóra i centralny ekran" loading="lazy" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-07.jpg" alt="Wnętrze EXLANTIX, jasna skóra i centralny ekran" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">INT · Detal</span>
       <span class="cs-shot__tc" data-tc>00:07:21:05</span>
     </figure>
     <figure class="cs-shot cs-shot--tall reveal" data-d="1" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-11.jpg" alt="Zielony EXLANTIX ES na tle napisu GDAŃSK o zachodzie słońca" loading="lazy" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-11.jpg" alt="Zielony EXLANTIX ES na tle napisu GDAŃSK o zachodzie słońca" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">EXT · Miasto</span>
       <span class="cs-shot__tc" data-tc>00:08:44:20</span>
@@ -187,7 +188,7 @@ const pageScriptsHtml = "<script>\n(function(){\n  var f = document.querySelecto
   <div class="cs-row">
     <figure class="cs-shot cs-shot--full reveal" data-parallax="30">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-02.jpg" alt="Wejście do Polskiej Filharmonii Bałtyckiej z flagami EXLANTIX i Plichta" loading="lazy" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-02.jpg" alt="Wejście do Polskiej Filharmonii Bałtyckiej z flagami EXLANTIX i Plichta" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">EXT · Wejście</span>
       <span class="cs-shot__tc" data-tc>00:09:58:02</span>
@@ -204,7 +205,7 @@ const pageScriptsHtml = "<script>\n(function(){\n  var f = document.querySelecto
 
     <div class="cs-film reveal" data-d="1" style="margin-top:clamp(30px,4vh,48px)">
       <div class="cs-film__frame" data-cursor="play" data-yt="oWiVSRYtLoU" role="button" tabindex="0" aria-label="Odtwórz aftermovie z premiery EXLANTIX">
-        <img src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg" alt="Kadr otwierający aftermovie z premiery EXLANTIX" />
+        <AssetImage src="/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg" alt="Kadr otwierający aftermovie z premiery EXLANTIX" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
         <div class="cs-film__play"><span class="cs-film__btn" aria-hidden="true"></span></div>
         <div class="cs-film__meta">
           <span class="rec">● REC</span>
@@ -232,7 +233,7 @@ const pageScriptsHtml = "<script>\n(function(){\n  var f = document.querySelecto
 
 <!-- ============ NEXT PROJECT ============ -->
 <a class="cs-next bleed" href="/realizacja-world-of-warships/" data-cursor="link" aria-label="Następna realizacja, World of Warships">
-  <img src="/assets/work/captains-club-ext.avif" alt="World of Warships, Captain's Club" />
+  <AssetImage src="/assets/work/captains-club-ext.avif" alt="World of Warships, Captain's Club" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
   <div class="cs-next__inner shell">
     <span class="cs-next__k">Następna realizacja →</span>
     <span class="cs-next__title">World of Warships <span class="arrow">→</span></span>

@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../components/AssetImage.astro';
 import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
 import { pageUrl } from '../../lib/site';
 
@@ -15,7 +16,7 @@ const canonical = pageUrl('/realizacja-kapka/');
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">
   <div class="cs-hero__media">
-    <img src="/assets/portfolio/kapka/kapka-baner.jpg" alt="Maskotka Kapka Cafe, kropla kawy z kubkiem na wynos i kanapką, na tle palonych ziaren" />
+    <AssetImage src="/assets/portfolio/kapka/kapka-baner.jpg" alt="Maskotka Kapka Cafe, kropla kawy z kubkiem na wynos i kanapką, na tle palonych ziaren" loading="eager" fetchpriority="high" widths={[720, 1080, 1440, 1920]} sizes="100vw" quality={72} />
   </div>
   <div class="cs-hero__frame" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="cs-hero__hud">
@@ -87,7 +88,7 @@ const canonical = pageUrl('/realizacja-kapka/');
   <div class="cs-row" style="margin-top:clamp(28px,4vh,48px)">
     <figure class="cs-shot cs-shot--wide reveal" data-parallax="20" style="background:#f3e9d6">
       <div class="frame-media cs-shot__media" style="background:#f3e9d6">
-        <img src="/assets/portfolio/kapka/kapka-logo.jpg" alt="Logo Kapka Cafe: brązowy kubek na wynos trzymany przez dłoń obok napisu Kapka Cafe" loading="lazy" style="object-fit:contain" />
+        <AssetImage src="/assets/portfolio/kapka/kapka-logo.jpg" alt="Logo Kapka Cafe: brązowy kubek na wynos trzymany przez dłoń obok napisu Kapka Cafe" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} style="object-fit:contain" />
       </div>
       <span class="cs-shot__tag">Logo · Wersja podstawowa</span>
     </figure>
@@ -130,13 +131,13 @@ const canonical = pageUrl('/realizacja-kapka/');
   <div class="cs-row cs-row--split">
     <figure class="cs-shot cs-shot--tall reveal" data-parallax="24" style="background:#e7dcc6">
       <div class="frame-media cs-shot__media" style="background:#e7dcc6">
-        <img src="/assets/portfolio/kapka/kapka-maskotka.png" alt="Maskotka Kapka Cafe: uśmiechnięta kropla kawy z kubkiem na wynos" loading="lazy" style="object-fit:contain" />
+        <AssetImage src="/assets/portfolio/kapka/kapka-maskotka.png" alt="Maskotka Kapka Cafe: uśmiechnięta kropla kawy z kubkiem na wynos" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} style="object-fit:contain" />
       </div>
       <span class="cs-shot__tag">Maskotka · Kropla</span>
     </figure>
     <figure class="cs-shot cs-shot--tall reveal" data-d="1" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/kapka/kapka-menu.jpg" alt="Menu Kapka Cafe z cennikiem kaw, napojów i dodatków" loading="lazy" />
+        <AssetImage src="/assets/portfolio/kapka/kapka-menu.jpg" alt="Menu Kapka Cafe z cennikiem kaw, napojów i dodatków" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">Materiały · Menu</span>
     </figure>
@@ -145,7 +146,7 @@ const canonical = pageUrl('/realizacja-kapka/');
   <div class="cs-row">
     <figure class="cs-shot cs-shot--full reveal" data-parallax="30">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/kapka/kapka-baner.jpg" alt="Baner Kapka Cafe z maskotką-kroplą na tle palonych ziaren kawy" loading="lazy" />
+        <AssetImage src="/assets/portfolio/kapka/kapka-baner.jpg" alt="Baner Kapka Cafe z maskotką-kroplą na tle palonych ziaren kawy" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">Social · Baner FB</span>
     </figure>
@@ -154,13 +155,13 @@ const canonical = pageUrl('/realizacja-kapka/');
   <div class="cs-row cs-row--split">
     <figure class="cs-shot cs-shot--tall reveal" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/kapka/kapka-lokal.jpg" alt="Wnętrze Kapka Cafe: lada z przestrzennym logo i naklejka z maskotką na ścianie" loading="lazy" />
+        <AssetImage src="/assets/portfolio/kapka/kapka-lokal.jpg" alt="Wnętrze Kapka Cafe: lada z przestrzennym logo i naklejka z maskotką na ścianie" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">Lokal · Lada</span>
     </figure>
     <figure class="cs-shot cs-shot--tall reveal" data-d="1" data-parallax="24">
       <div class="frame-media cs-shot__media">
-        <img src="/assets/portfolio/kapka/kapka-witryna.jpg" alt="Witryna i szyld Kapka Cafe od strony ulicy" loading="lazy" />
+        <AssetImage src="/assets/portfolio/kapka/kapka-witryna.jpg" alt="Witryna i szyld Kapka Cafe od strony ulicy" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
       </div>
       <span class="cs-shot__tag">Lokal · Szyld</span>
     </figure>
@@ -179,7 +180,7 @@ const canonical = pageUrl('/realizacja-kapka/');
 
 <!-- ============ NEXT PROJECT ============ -->
 <a class="cs-next bleed" href="/portfolio/" data-cursor="link" aria-label="Wróć do portfolio">
-  <img src="/assets/portfolio/kapka/kapka-witryna.jpg" alt="Witryna Kapka Cafe" />
+  <AssetImage src="/assets/portfolio/kapka/kapka-witryna.jpg" alt="Witryna Kapka Cafe" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
   <div class="cs-next__inner shell">
     <span class="cs-next__k">Zobacz więcej →</span>
     <span class="cs-next__title">Portfolio <span class="arrow">→</span></span>

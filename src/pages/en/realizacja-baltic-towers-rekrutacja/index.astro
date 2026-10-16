@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../../components/AssetImage.astro';
 import CaseStudyLayout from '../../../layouts/CaseStudyLayout.astro';
 import { pageUrl } from '../../../lib/site';
 
@@ -15,7 +16,7 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
   pageScripts={pageScriptsHtml}
 >
 <header class="cs-hero" data-screen-label="Case · Cover">
-  <div class="cs-hero__media"><img src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-01.jpg" alt="Baltic Towers production hall – recruitment campaign" /></div>
+  <div class="cs-hero__media"><AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-01.jpg" alt="Baltic Towers production hall – recruitment campaign" loading="eager" fetchpriority="high" widths={[720, 1080, 1440, 1920]} sizes="100vw" quality={72} /></div>
   <div class="cs-hero__hud"><span class="rec">RECRUITMENT · VIDEO</span><span>PHOTO · SOCIAL</span><span>INDUSTRY / PL</span></div>
   <div class="cs-hero__inner shell">
     <a class="cs-hero__back" href="/en/portfolio-en/">← Portfolio / Work</a>
@@ -63,7 +64,7 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
     <p class="cs-body reveal" data-d="1" style="max-width:54ch;margin-top:20px">A film that shows the scale of the factory and the nature of the job in a few seconds. Ready to publish and promote in recruitment campaigns.</p>
     <div class="cs-film reveal" data-d="1" style="margin-top:clamp(30px,4vh,48px)">
       <div class="cs-film__frame" data-cursor="play" data-yt="eBcPwtZ0eOk" role="button" tabindex="0" aria-label="Play the Baltic Towers recruitment film" style="aspect-ratio:9/16;max-width:420px;margin-inline:auto">
-        <img src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-02.jpg" alt="Play the Baltic Towers recruitment film" />
+        <AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-02.jpg" alt="Play the Baltic Towers recruitment film" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
         <div class="cs-film__play"><span class="cs-film__btn" aria-hidden="true"></span></div>
         <div class="cs-film__meta"><span class="rec">● REC</span><span>BALTIC TOWERS, RECRUITMENT</span></div>
         <div class="cs-film__bar"><i></i></div>
@@ -76,9 +77,9 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
   <div class="shell"><span class="cs-sec__no reveal">PHOTOGRAPHY</span><h2 class="cs-sec__title reveal">People and the scale<br>of production.</h2></div>
 </section>
 <section class="cs-gallery bleed" aria-label="PHOTOGRAPHY">
-  <div class="cs-row"><figure class="cs-shot reveal" style="aspect-ratio:16/9"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-03.jpg" alt="Wind tower segments inside the Baltic Towers hall" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · Production</span></figure></div>
-  <div class="cs-row cs-row--split"><figure class="cs-shot reveal" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-04.jpg" alt="Welding at Baltic Towers – recruitment campaign photo" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · Process</span></figure><figure class="cs-shot reveal" data-d="1" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-05.jpg" alt="Inside the Baltic Towers factory in Gdańsk" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · Factory</span></figure></div>
-  <div class="cs-row cs-row--split"><figure class="cs-shot reveal" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-02.jpg" alt="Baltic Towers worker on the production line – industrial photography" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · People</span></figure><figure class="cs-shot reveal" data-d="1" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><img src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-01.jpg" alt="Baltic Towers production hall – wind tower segments" loading="lazy" /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · Hall</span></figure></div>
+  <div class="cs-row"><figure class="cs-shot reveal" style="aspect-ratio:16/9"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-03.jpg" alt="Wind tower segments inside the Baltic Towers hall" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · Production</span></figure></div>
+  <div class="cs-row cs-row--split"><figure class="cs-shot reveal" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-04.jpg" alt="Welding at Baltic Towers – recruitment campaign photo" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · Process</span></figure><figure class="cs-shot reveal" data-d="1" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-05.jpg" alt="Inside the Baltic Towers factory in Gdańsk" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · Factory</span></figure></div>
+  <div class="cs-row cs-row--split"><figure class="cs-shot reveal" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-02.jpg" alt="Baltic Towers worker on the production line – industrial photography" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · People</span></figure><figure class="cs-shot reveal" data-d="1" style="aspect-ratio:4/3"><div class="frame-media cs-shot__media"><AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-01.jpg" alt="Baltic Towers production hall – wind tower segments" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div><span class="cs-shot__tag" style="white-space:nowrap">Photo · Hall</span></figure></div>
 </section>
 
 <section class="cs-quote" aria-label="Quote">
@@ -89,7 +90,7 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
 </section>
 
 <a class="cs-next bleed" href="/en/portfolio-en/" data-cursor="link" aria-label="Back to portfolio">
-  <img src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-03.jpg" alt="" />
+  <AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-03.jpg" alt="" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
   <div class="cs-next__inner shell"><span class="cs-next__k">See more →</span><span class="cs-next__title">Portfolio <span class="arrow">→</span></span><span class="cs-next__cat">All SEZMOO work</span></div>
 </a>
 </CaseStudyLayout>

@@ -1,4 +1,5 @@
 ---
+import AssetImage from '../../../components/AssetImage.astro';
 import CaseStudyLayout from '../../../layouts/CaseStudyLayout.astro';
 import { pageUrl } from '../../../lib/site';
 
@@ -17,7 +18,7 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">
   <div class="cs-hero__media">
-    <img src="/assets/portfolio/primespot/pjur-blue-wide-1.jpg" alt="PrimeSpot Przystań Jurata campaign: evening visualisation of the development" />
+    <AssetImage src="/assets/portfolio/primespot/pjur-blue-wide-1.jpg" alt="PrimeSpot Przystań Jurata campaign: evening visualisation of the development" loading="eager" fetchpriority="high" widths={[720, 1080, 1440, 1920]} sizes="100vw" quality={72} />
   </div>
   <div class="cs-hero__frame" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="cs-hero__hud">
@@ -159,7 +160,7 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
   <div>
     <figure class="ad-post ad-post--feed reveal">
         <div class="ad-post__head"><span class="ad-post__av">PS</span><span class="ad-post__id"><span class="ad-post__name">primespot</span><span class="ad-post__spon">Sponsored · Meta Ads</span></span><span class="ad-post__more">•••</span></div>
-        <div class="ad-post__media"><img src="/assets/portfolio/primespot/pjur-blue-wide-2.jpg" alt="PrimeSpot Przystań Jurata, feed 1200×628" loading="lazy" /></div>
+        <div class="ad-post__media"><AssetImage src="/assets/portfolio/primespot/pjur-blue-wide-2.jpg" alt="PrimeSpot Przystań Jurata, feed 1200×628" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div>
         <div class="ad-post__bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.4-9.3-8.5C1 8.6 2.5 5.6 5.4 5.6c1.9 0 3 1 3.6 2 .6-1 1.7-2 3.6-2 2.9 0 4.4 3 2.7 5.9C19 15.6 12 20 12 20z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8 8 0 0 1-11.5 7.2L3 21l2.3-6.5A8 8 0 1 1 21 11.5z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg><span class="ad-post__cta">Learn more</span></div>
         <figcaption class="ad-cap">Feed · 1200 × 628</figcaption>
       </figure>
@@ -168,13 +169,13 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
   <div class="ad-grid ad-grid--2">
     <figure class="ad-post reveal">
         <div class="ad-post__head"><span class="ad-post__av">PS</span><span class="ad-post__id"><span class="ad-post__name">primespot</span><span class="ad-post__spon">Sponsored · Meta Ads</span></span><span class="ad-post__more">•••</span></div>
-        <div class="ad-post__media"><img src="/assets/portfolio/primespot/pjur-blue-square-1.jpg" alt="PrimeSpot, 1:1 format" loading="lazy" /></div>
+        <div class="ad-post__media"><AssetImage src="/assets/portfolio/primespot/pjur-blue-square-1.jpg" alt="PrimeSpot, 1:1 format" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div>
         <div class="ad-post__bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.4-9.3-8.5C1 8.6 2.5 5.6 5.4 5.6c1.9 0 3 1 3.6 2 .6-1 1.7-2 3.6-2 2.9 0 4.4 3 2.7 5.9C19 15.6 12 20 12 20z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8 8 0 0 1-11.5 7.2L3 21l2.3-6.5A8 8 0 1 1 21 11.5z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg><span class="ad-post__cta">Learn more</span></div>
         <figcaption class="ad-cap">Feed · 1:1</figcaption>
       </figure>
     <figure class="ad-post reveal">
         <div class="ad-post__head"><span class="ad-post__av">PS</span><span class="ad-post__id"><span class="ad-post__name">primespot</span><span class="ad-post__spon">Sponsored · Meta Ads</span></span><span class="ad-post__more">•••</span></div>
-        <div class="ad-post__media"><img src="/assets/portfolio/primespot/pjur-warm-square-1.jpg" alt="PrimeSpot, by the sea, 1:1 format" loading="lazy" /></div>
+        <div class="ad-post__media"><AssetImage src="/assets/portfolio/primespot/pjur-warm-square-1.jpg" alt="PrimeSpot, by the sea, 1:1 format" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div>
         <div class="ad-post__bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.4-9.3-8.5C1 8.6 2.5 5.6 5.4 5.6c1.9 0 3 1 3.6 2 .6-1 1.7-2 3.6-2 2.9 0 4.4 3 2.7 5.9C19 15.6 12 20 12 20z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8 8 0 0 1-11.5 7.2L3 21l2.3-6.5A8 8 0 1 1 21 11.5z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg><span class="ad-post__cta">Learn more</span></div>
         <figcaption class="ad-cap">Feed · 1:1</figcaption>
       </figure>
@@ -183,7 +184,7 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
   <div>
     <figure class="ad-post ad-post--feed reveal">
         <div class="ad-post__head"><span class="ad-post__av">PS</span><span class="ad-post__id"><span class="ad-post__name">primespot</span><span class="ad-post__spon">Sponsored · Meta Ads</span></span><span class="ad-post__more">•••</span></div>
-        <div class="ad-post__media"><img src="/assets/portfolio/primespot/pjur-warm-wide-1.jpg" alt="PrimeSpot, by the sea, Jastarnia, feed 1200×628" loading="lazy" /></div>
+        <div class="ad-post__media"><AssetImage src="/assets/portfolio/primespot/pjur-warm-wide-1.jpg" alt="PrimeSpot, by the sea, Jastarnia, feed 1200×628" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div>
         <div class="ad-post__bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.4-9.3-8.5C1 8.6 2.5 5.6 5.4 5.6c1.9 0 3 1 3.6 2 .6-1 1.7-2 3.6-2 2.9 0 4.4 3 2.7 5.9C19 15.6 12 20 12 20z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8 8 0 0 1-11.5 7.2L3 21l2.3-6.5A8 8 0 1 1 21 11.5z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg><span class="ad-post__cta">Learn more</span></div>
         <figcaption class="ad-cap">Feed · 1200 × 628</figcaption>
       </figure>
@@ -192,13 +193,13 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
   <div class="ad-grid ad-grid--2">
     <figure class="ad-post reveal">
         <div class="ad-post__head"><span class="ad-post__av">PS</span><span class="ad-post__id"><span class="ad-post__name">primespot</span><span class="ad-post__spon">Sponsored · Meta Ads</span></span><span class="ad-post__more">•••</span></div>
-        <div class="ad-post__media"><img src="/assets/portfolio/primespot/pjur-blue-45-2.jpg" alt="PrimeSpot, mobile 4:5 format" loading="lazy" /></div>
+        <div class="ad-post__media"><AssetImage src="/assets/portfolio/primespot/pjur-blue-45-2.jpg" alt="PrimeSpot, mobile 4:5 format" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div>
         <div class="ad-post__bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.4-9.3-8.5C1 8.6 2.5 5.6 5.4 5.6c1.9 0 3 1 3.6 2 .6-1 1.7-2 3.6-2 2.9 0 4.4 3 2.7 5.9C19 15.6 12 20 12 20z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8 8 0 0 1-11.5 7.2L3 21l2.3-6.5A8 8 0 1 1 21 11.5z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg><span class="ad-post__cta">Learn more</span></div>
         <figcaption class="ad-cap">Mobile · 4:5</figcaption>
       </figure>
     <figure class="ad-post reveal">
         <div class="ad-post__head"><span class="ad-post__av">PS</span><span class="ad-post__id"><span class="ad-post__name">primespot</span><span class="ad-post__spon">Sponsored · Meta Ads</span></span><span class="ad-post__more">•••</span></div>
-        <div class="ad-post__media"><img src="/assets/portfolio/primespot/pjur-warm-45-1.jpg" alt="PrimeSpot, by the sea, mobile 4:5 format" loading="lazy" /></div>
+        <div class="ad-post__media"><AssetImage src="/assets/portfolio/primespot/pjur-warm-45-1.jpg" alt="PrimeSpot, by the sea, mobile 4:5 format" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} /></div>
         <div class="ad-post__bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.4-9.3-8.5C1 8.6 2.5 5.6 5.4 5.6c1.9 0 3 1 3.6 2 .6-1 1.7-2 3.6-2 2.9 0 4.4 3 2.7 5.9C19 15.6 12 20 12 20z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8 8 0 0 1-11.5 7.2L3 21l2.3-6.5A8 8 0 1 1 21 11.5z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg><span class="ad-post__cta">Learn more</span></div>
         <figcaption class="ad-cap">Mobile · 4:5</figcaption>
       </figure>
@@ -217,7 +218,7 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
 
 <!-- ============ NEXT PROJECT ============ -->
 <a class="cs-next bleed" href="/en/portfolio-en/" data-cursor="link" aria-label="Back to portfolio">
-  <img src="/assets/portfolio/primespot/pjur-warm-wide-1.jpg" alt="PrimeSpot Przystań Jurata" />
+  <AssetImage src="/assets/portfolio/primespot/pjur-warm-wide-1.jpg" alt="PrimeSpot Przystań Jurata" loading="lazy" widths={[640, 960, 1280, 1600]} sizes="(max-width: 900px) 100vw, min(1100px, 85vw)" quality={72} />
   <div class="cs-next__inner shell">
     <span class="cs-next__k">See more →</span>
     <span class="cs-next__title">Portfolio <span class="arrow">→</span></span>

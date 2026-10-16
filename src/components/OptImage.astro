@@ -10,6 +10,7 @@ interface Props {
   src: ImageMetadata;
   alt: string;
   class?: string;
+  style?: string;
   widths?: number[];
   sizes?: string;
   loading?: 'lazy' | 'eager';
@@ -21,6 +22,7 @@ const {
   src,
   alt,
   class: className = '',
+  style,
   widths = [480, 768, 1200, 1600],
   sizes = '(max-width: 768px) 100vw, 40vw',
   loading = 'lazy',
@@ -33,6 +35,7 @@ const {
   src={src}
   alt={alt}
   class={className || undefined}
+  style={style}
   widths={widths}
   sizes={sizes}
   loading={loading}

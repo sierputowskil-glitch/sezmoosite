@@ -11,6 +11,7 @@ interface Props {
   src: string | ImageMetadata;
   alt: string;
   class?: string;
+  style?: string;
   widths?: number[];
   sizes?: string;
   loading?: 'lazy' | 'eager';
@@ -22,6 +23,7 @@ const {
   src,
   alt,
   class: className = '',
+  style,
   widths,
   sizes,
   loading = 'lazy',
@@ -39,6 +41,7 @@ const publicSrc = typeof src === 'string' ? src : undefined;
       src={meta}
       alt={alt}
       class={className}
+      style={style}
       widths={widths}
       sizes={sizes}
       loading={loading}
@@ -50,6 +53,7 @@ const publicSrc = typeof src === 'string' ? src : undefined;
       src={publicSrc}
       alt={alt}
       class={className || undefined}
+      style={style}
       loading={loading}
       fetchpriority={fetchpriority}
       decoding="async"
