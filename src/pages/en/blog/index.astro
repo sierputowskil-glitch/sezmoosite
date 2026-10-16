@@ -9,6 +9,15 @@ const canonical = pageUrl('/blog/');
 const pageScripts = `<script>location.replace("/blog/");</script>`;
 ---
 
-<BaseLayout lang="en" title="Blog – SEZMOO" canonical={canonical} pageScripts={pageScripts}>
-  <p><a href="/blog/">Go to the SEZMOO blog →</a></p>
+<BaseLayout
+  lang="en"
+  title="Blog · video, content & brand marketing | SEZMOO"
+  description="SEZMOO blog: practical notes on video production, social media content and brand marketing — from set and edit to the feed."
+  canonical={canonical}
+  pageScripts={pageScripts}
+>
+  <main class="shell" style="padding:clamp(100px,18vh,160px) 0 clamp(60px,10vh,100px)">
+    <h1>Blog</h1>
+    <p style="margin-top:14px;color:var(--fg-dim)"><a href="/blog/">Go to the SEZMOO blog →</a></p>
+  </main>
 </BaseLayout>

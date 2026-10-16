@@ -221,11 +221,19 @@
     document.body.style.overflow = "hidden";
   }
 
-  /* click routing — YT tiles → CDN modal; case-study hrefs keep navigation */
+  /* click routing — data-case → /realizacja/{id}/; other YT → CDN modal; hrefs navigate */
   tiles.forEach(function (t) {
     t.addEventListener("click", function (e) {
       var id = t.getAttribute("data-id");
       var isYt = t.getAttribute("data-media") === "yt" && id;
+      // Video case-study tiles (legacy data-case) → static Astro routes
+      if (isYt && t.getAttribute("data-case") === "1") {
+        if (!t.getAttribute("href")) {
+          e.preventDefault();
+          location.href = (en ? "/en/realizacja/" : "/realizacja/") + id + "/";
+        }
+        return;
+      }
       // Pure video tile (no case-study URL): always open CDN/lightbox modal
       if (isYt && !t.getAttribute("href")) {
         e.preventDefault();

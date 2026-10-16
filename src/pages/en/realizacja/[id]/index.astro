@@ -1,0 +1,91 @@
+---
+import CaseStudyPage from '../../../../components/case-study/CaseStudyPage.astro';
+import {
+  caseStudyHref,
+  caseStudyPaths,
+  posterPath,
+  type CaseStudy,
+} from '../../../../data/case-studies';
+import CaseStudyLayout from '../../../../layouts/CaseStudyLayout.astro';
+import { pageUrl } from '../../../../lib/site';
+
+export function getStaticPaths() {
+  return caseStudyPaths('en');
+}
+
+interface Props {
+  study: CaseStudy;
+  lang: 'en';
+}
+
+const { study } = Astro.props;
+const lang = 'en' as const;
+const id = study.youtubeId;
+const copy = study.en;
+const canonical = pageUrl(caseStudyHref(id, lang));
+const hreflangPl = pageUrl(caseStudyHref(id, 'pl'));
+const hreflangEn = canonical;
+const thumb = pageUrl(posterPath(id));
+
+const title = `${copy.title} · video case study | SEZMOO`;
+const description = copy.lead;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: copy.title,
+  description: copy.lead || '',
+  thumbnailUrl: thumb,
+  uploadDate: '2025-01-01',
+  embedUrl: `https://www.youtube-nocookie.com/embed/${id}`,
+  publisher: {
+    '@type': 'Organization',
+    name: 'SEZMOO',
+    url: 'https://sezmoo.com/',
+  },
+};
+
+const extraHeadHtml = `<style>
+.rz-film__frame.is-short { aspect-ratio:9/16; max-width:min(440px,90vw); margin-inline:auto; }
+</style>
+<link rel="preload" as="image" type="image/webp" href="${posterPath(id)}" fetchpriority="high" />`;
+
+const pageScriptsHtml = `<script>
+(function(){
+  var f=document.querySelector('.cs-film__frame');
+  if(!f)return;
+  var v=f.getAttribute('data-yt');
+  function play(){
+    if(!v||f.querySelector('iframe,video'))return;
+    var s=window.__SEZMOO__;
+    if(s&&s.mountYtEmbed){s.mountYtEmbed(f,v);return;}
+    if(s&&s.expectCmp)return;
+    var ifr=document.createElement('iframe');
+    ifr.src='https://www.youtube-nocookie.com/embed/'+v+'?autoplay=1&rel=0&modestbranding=1&playsinline=1&origin=https://sezmoo.com';
+    ifr.allow='autoplay; fullscreen; picture-in-picture; encrypted-media';
+    ifr.setAttribute('allowfullscreen','');
+    ifr.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;';
+    f.appendChild(ifr);
+  }
+  f.addEventListener('click',play);
+  f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();play();}});
+})();
+</script>`;
+---
+
+<CaseStudyLayout
+  lang={lang}
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogTitle={title}
+  ogDescription={description}
+  jsonLd={jsonLd}
+  hreflangPl={hreflangPl}
+  hreflangEn={hreflangEn}
+  altHref={caseStudyHref(id, 'pl')}
+  extraHead={extraHeadHtml}
+  pageScripts={pageScriptsHtml}
+>
+  <CaseStudyPage lang={lang} study={study} />
+</CaseStudyLayout>

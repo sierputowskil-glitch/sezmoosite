@@ -8,6 +8,9 @@ interface ImportMetaEnv {
   readonly PUBLIC_CONTACT_API_URL: string;
   /** Origin for large media (hero showreel). Default: https://cdn.sezmoo.com */
   readonly PUBLIC_MEDIA_BASE?: string;
+  /** Set `true` only in prod CI / staging smoke — never local by default. */
+  readonly PUBLIC_ENABLE_GTM?: string;
+  readonly PUBLIC_GTM_ID?: string;
 }
 
 interface ImportMeta {
@@ -19,4 +22,7 @@ interface Window {
     turnstileSiteKey?: string;
     contactApiUrl?: string;
   };
+  /** Guard so GTM bootstrap runs once. */
+  __SEZMOO_GTM__?: boolean;
+  dataLayer?: Record<string, unknown>[];
 }

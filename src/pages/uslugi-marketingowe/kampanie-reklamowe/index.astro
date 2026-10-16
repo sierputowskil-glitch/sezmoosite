@@ -1,16 +1,26 @@
 ---
+/**
+ * Alias → /uslugi-marketingowe/kampanie-platne/
+ */
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
 import { pageUrl } from '../../../lib/site';
 
 const lang = 'pl' as const;
-const canonical = pageUrl('/uslugi-marketingowe/kampanie-reklamowe/');
+const canonical = pageUrl('/uslugi-marketingowe/kampanie-platne/');
+const pageScripts = `<script>location.replace("/uslugi-marketingowe/kampanie-platne/");</script>`;
 ---
 
 <ServiceLayout
   lang={lang}
-  title="Kampanie płatne – SEZMOO"
-  description="Kampanie płatne SEZMOO: kreacje, formaty wideo, grafiki i landing pages pod reklamy."
+  title="Kampanie reklamowe online · Meta, Google, TikTok | SEZMOO"
+  description="Kampanie reklamowe SEZMOO: Meta Ads, Google Ads i TikTok Ads. Strategia, kreacje, landing page, prowadzenie i optymalizacja. Gdańsk."
   canonical={canonical}
+  pageScripts={pageScripts}
 >
-<p><a href="/uslugi-marketingowe/kampanie-platne/">Kampanie płatne – przejdź do strony usługi.</a></p>
+  <main class="shell" style="padding:clamp(100px,18vh,160px) 0 clamp(60px,10vh,100px)">
+    <h1>Kampanie reklamowe.</h1>
+    <p style="margin-top:14px;color:var(--fg-dim)">
+      <a href="/uslugi-marketingowe/kampanie-platne/">Kampanie płatne – przejdź do strony usługi →</a>
+    </p>
+  </main>
 </ServiceLayout>

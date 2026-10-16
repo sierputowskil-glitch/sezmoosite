@@ -176,16 +176,19 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     rel="stylesheet"
     href="/assets/css/styles.css?v=20261016o"
     media="print"
-    onload="this.media='all';document.documentElement.classList.add('html-css-ready')"
+    id="sezmoo-css"
   />
   <noscript>
     <link rel="stylesheet" href="/assets/css/styles.css?v=20261016o" />
   </noscript>
   <script is:inline>
     (function () {
-      var l = document.querySelector('link[href*="assets/css/styles.css"]');
+      var l = document.getElementById('sezmoo-css');
       if (!l) return;
-      function ready() { document.documentElement.classList.add('html-css-ready'); }
+      function ready() {
+        l.media = 'all';
+        document.documentElement.classList.add('html-css-ready');
+      }
       if (l.sheet) ready();
       else l.addEventListener('load', ready);
     })();
@@ -424,9 +427,9 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
   })();
   </script>
   {enableGtm && gtmId && (
-    <script is:inline define:vars={{ gtmId }}>
+    <script is:inline set:html={`
     (function () {
-      var GTM_ID = gtmId;
+      var GTM_ID = ${JSON.stringify(gtmId)};
       function loadGtm() {
         if (window.__SEZMOO_GTM__ || !GTM_ID) return;
         window.__SEZMOO_GTM__ = true;
@@ -448,7 +451,7 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
         });
       }
     })();
-    </script>
+    `} />
   )}
   {pageScripts && <Fragment set:html={pageScripts} />}
 </body>

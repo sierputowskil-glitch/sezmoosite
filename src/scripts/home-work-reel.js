@@ -9,7 +9,7 @@
   cards.forEach(function (card) {
     const id = card.getAttribute('data-yt');
     function go() {
-      if (id) location.href = 'realizacja/?v=' + id;
+      if (id) location.href = '/realizacja/' + id + '/';
     }
     card.addEventListener('click', go);
     card.addEventListener('keydown', function (e) {

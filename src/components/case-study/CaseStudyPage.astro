@@ -1,0 +1,176 @@
+---
+/**
+ * Static video case-study page body (hero → meta → context → steps → film → next).
+ * Preserves existing CSS class names from the legacy client-rendered RZ pages.
+ */
+import {
+  CASE_STUDIES,
+  caseStudyHref,
+  getNextCaseStudyId,
+  posterPath,
+  type CaseStudy,
+  type CaseStudyCopy,
+  type CaseStudyLang,
+} from '../../data/case-studies';
+
+interface Props {
+  lang: CaseStudyLang;
+  study: CaseStudy;
+}
+
+const { lang, study } = Astro.props;
+const id = study.youtubeId;
+const copy: CaseStudyCopy = study[lang];
+const thumb = posterPath(id);
+const ratio = copy.short ? '9:16' : '16:9';
+
+const titleWords = copy.title.trim().split(/\s+/);
+const lastWord = titleWords.pop() || copy.title;
+const titleLead = titleWords.length ? `${titleWords.join(' ')} ` : '';
+
+const nextId = getNextCaseStudyId(id)!;
+const nx = CASE_STUDIES[nextId][lang];
+const nextHref = caseStudyHref(nextId, lang);
+
+const ui =
+  lang === 'pl'
+    ? {
+        backHref: '/portfolio/#work-list',
+        backLabel: '← Portfolio / Realizacje',
+        metaAria: 'Dane projektu',
+        contextNo: 'KONTEKST',
+        approachNo: 'PODEJŚCIE',
+        approachTitleHtml: 'Jak to <span class="accent">zrobiliśmy.</span>',
+        filmNo: 'EFEKT',
+        filmTitleHtml: 'Zobacz realizację<br>w <span class="accent">ruchu.</span>',
+        playAria: `Odtwórz film ${copy.title}`,
+        frameAlt: `Kadr, ${copy.title}`,
+        nextK: 'Następna realizacja →',
+        nextAria: `Następna realizacja, ${nx.title}`,
+        contextLabel: 'Kontekst',
+        approachLabel: 'Podejście',
+      }
+    : {
+        backHref: '/en/portfolio-en/',
+        backLabel: '← Portfolio / Work',
+        metaAria: 'Project details',
+        contextNo: 'CONTEXT',
+        approachNo: 'APPROACH',
+        approachTitleHtml: 'How we <span class="accent">did it.</span>',
+        filmNo: 'RESULT',
+        filmTitleHtml: 'See the work<br>in <span class="accent">motion.</span>',
+        playAria: `Play film ${copy.title}`,
+        frameAlt: `Frame, ${copy.title}`,
+        nextK: 'Next case study →',
+        nextAria: `Next case study, ${nx.title}`,
+        contextLabel: 'Context',
+        approachLabel: 'Approach',
+      };
+---
+
+<header class="cs-hero" data-screen-label="Case · Cover">
+  <div class="cs-hero__media">
+    <img src={thumb} alt={copy.title} />
+  </div>
+  <div class="cs-hero__frame" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="cs-hero__hud">
+    <span class="rec">REC · {ratio}</span>
+    <span data-tc>00:00:12:08</span>
+    <span>GDAŃSK / PL</span>
+  </div>
+  <div class="cs-hero__inner shell">
+    <a class="cs-hero__back" href={ui.backHref}>{ui.backLabel}</a>
+    <span class="eyebrow cs-hero__cat"><span class="tick"></span>{copy.cat}</span>
+    <h1 class="cs-title">
+      {titleLead}<span class="accent">{lastWord}.</span>
+    </h1>
+    <p class="cs-hero__sub">{copy.lead}</p>
+  </div>
+  <div class="cs-scroll" aria-hidden="true"><span>SCROLL</span><i></i></div>
+</header>
+
+<section class="cs-meta" aria-label={ui.metaAria}>
+  <div class="shell">
+    <div class="cs-meta__grid">
+      {
+        copy.kv.map(([k, v, small]) => (
+          <div class="cs-meta__cell">
+            <div class="cs-meta__k">{k}</div>
+            <div class="cs-meta__v">
+              {v}
+              <small>{small}</small>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="cs-sec" data-screen-label={ui.contextLabel}>
+  <div class="shell">
+    <span class="cs-sec__no reveal">{ui.contextNo}</span>
+    <div class="cs-intro__grid" style="margin-top:clamp(24px,3.6vh,46px)">
+      <p class="cs-lead reveal" set:html={copy.intro || copy.lead} />
+      <div class="cs-body reveal" data-d="1">
+        {copy.context.map((p) => <p set:html={p} />)}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-sec" data-screen-label={ui.approachLabel}>
+  <div class="shell">
+    <span class="cs-sec__no reveal">{ui.approachNo}</span>
+    <h2 class="cs-sec__title reveal" set:html={ui.approachTitleHtml} />
+    <div class="cs-steps">
+      {
+        copy.steps.map(([title, desc], i) => {
+          const n = i + 1 < 10 ? `0${i + 1}` : String(i + 1);
+          return (
+            <div class="cs-step reveal">
+              <div class="cs-step__no">{n}</div>
+              <div class="cs-step__title">{title}</div>
+              <div class="cs-step__desc" set:html={desc} />
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<section class="cs-sec" data-screen-label="Film">
+  <div class="shell">
+    <span class="cs-sec__no reveal">{ui.filmNo}</span>
+    <h2 class="cs-sec__title reveal" set:html={ui.filmTitleHtml} />
+    <div class="cs-film reveal" data-d="1" style="margin-top:clamp(30px,4vh,48px)">
+      <div
+        class:list={['cs-film__frame', 'rz-film__frame', { 'is-short': copy.short }]}
+        data-cursor="play"
+        data-yt={id}
+        role="button"
+        tabindex="0"
+        aria-label={ui.playAria}
+      >
+        <img src={thumb} alt={ui.frameAlt} />
+        <div class="cs-film__play"><span class="cs-film__btn" aria-hidden="true"></span></div>
+        <div class="cs-film__meta">
+          <span class="rec">● REC</span>
+          <span>{copy.client.toUpperCase()}</span>
+          <span>{ratio}</span>
+        </div>
+        <div class="cs-film__bar"><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a class="cs-next bleed" href={nextHref} data-cursor="link" aria-label={ui.nextAria}>
+  <img src={posterPath(nextId)} alt={nx.title} />
+  <div class="cs-next__inner shell">
+    <span class="cs-next__k">{ui.nextK}</span>
+    <span class="cs-next__title">{nx.title} <span class="arrow">→</span></span>
+    <span class="cs-next__cat">{nx.cat}</span>
+  </div>
+</a>
