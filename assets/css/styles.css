@@ -4,6 +4,7 @@
    ============================================================ */
 
 :root {
+  color-scheme: dark;
   /* Warm cinematic blacks */
   --bg:        oklch(0.10 0.004 60);
   --bg-2:      oklch(0.135 0.005 60);
@@ -2972,6 +2973,7 @@ img.card__video { background: var(--bg-2); }
 .cfield input, .cfield textarea, .cfield select {
   background: var(--bg-2); border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px;
   color: var(--fg); font-family: var(--font-display); font-size: 16px; width: 100%;
+  color-scheme: dark;
   transition: border-color .3s var(--ease), background .3s var(--ease);
 }
 .cfield select {
@@ -2987,21 +2989,30 @@ img.card__video { background: var(--bg-2); }
 .cfield textarea { resize: vertical; min-height: 120px; }
 .cfield input:focus, .cfield textarea:focus, .cfield select:focus { outline: none; border-color: var(--rec); background-color: var(--bg-3); }
 .cfield input::placeholder, .cfield textarea::placeholder { color: var(--fg-faint); }
-/* Kill Chrome/Safari autofill blue wash — keep dark field colors */
+/* Kill Chrome/Safari autofill blue/yellow wash — paint over with field colors */
 .cfield input:-webkit-autofill,
 .cfield input:-webkit-autofill:hover,
 .cfield input:-webkit-autofill:focus,
+.cfield input:-webkit-autofill:active,
 .cfield textarea:-webkit-autofill,
 .cfield textarea:-webkit-autofill:hover,
-.cfield textarea:-webkit-autofill:focus {
-  -webkit-text-fill-color: var(--fg);
+.cfield textarea:-webkit-autofill:focus,
+.cfield textarea:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--fg) !important;
   caret-color: var(--fg);
-  box-shadow: 0 0 0 1000px var(--bg-2) inset;
-  transition: background-color 99999s ease-in-out 0s;
+  border-color: var(--line) !important;
+  background-color: var(--bg-2) !important;
+  background-image: none !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-2) inset !important;
+  box-shadow: 0 0 0 1000px var(--bg-2) inset !important;
+  transition: background-color 99999s ease-out 0s, color 99999s ease-out 0s !important;
 }
 .cfield input:-webkit-autofill:focus,
 .cfield textarea:-webkit-autofill:focus {
-  box-shadow: 0 0 0 1000px var(--bg-3) inset;
+  border-color: var(--rec) !important;
+  background-color: var(--bg-3) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-3) inset !important;
+  box-shadow: 0 0 0 1000px var(--bg-3) inset !important;
 }
 .cconsent { display: flex; gap: 12px; align-items: flex-start; font-size: 12.5px; color: var(--fg-faint); line-height: 1.55; }
 .cconsent a { color: var(--rec); text-decoration: underline; text-underline-offset: 2px; }
@@ -3143,6 +3154,7 @@ img.card__video { background: var(--bg-2); }
    between flips to a warm off-white surface.
    ============================================================ */
 :root[data-theme="light"] {
+  color-scheme: light;
   --bg:        oklch(0.965 0.006 85);
   --bg-2:      oklch(0.930 0.007 85);
   --bg-3:      oklch(0.888 0.009 85);
@@ -3155,6 +3167,11 @@ img.card__video { background: var(--bg-2); }
      for the hero, final CTA and the big headline (--accent-hi) only */
   --rec:       oklch(0.47 0.006 70);
   --rec-glow:  rgb(120 116 108 / 0.22);
+}
+:root[data-theme="light"] .cfield input,
+:root[data-theme="light"] .cfield textarea,
+:root[data-theme="light"] .cfield select {
+  color-scheme: light;
 }
 :root[data-theme="light"] body { background: var(--bg); color: var(--fg); }
 /* the animated WebGL smoke is dark-only — drop it, use a flat light ground */
