@@ -165,7 +165,6 @@ export function homePageJsonLd(opts: {
           '@type': 'ImageObject',
           url: logo,
         },
-        priceRange: '$$',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Zeusa 34',
