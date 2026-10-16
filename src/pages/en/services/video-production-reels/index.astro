@@ -1,6 +1,8 @@
 ---
 import ServiceLayout from '../../../../layouts/ServiceLayout.astro';
-import { pageUrl } from '../../../../lib/site';
+import { mediaUrl, pageUrl } from '../../../../lib/site';
+
+const audiRs5Src = mediaUrl('video/audi-rs5-trailer.mp4');
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/services/video-production-reels/');
@@ -413,7 +415,7 @@ const jsonLd = {
     <div class="sd__fact"><span>Location</span><strong>Tricity · Poland · worldwide</strong></div>
   </div>
   <figure class="sd__reel reveal" data-d="1">
-    <video src="/assets/video/audi-rs5-trailer.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Audi RS5"></video>
+    <video src={audiRs5Src} muted loop playsinline autoplay preload="metadata" aria-label="Audi RS5"></video>
     <figcaption><b>Audi RS5</b><span>Premium film / reels / cutdowns</span></figcaption>
   </figure>
 </section>

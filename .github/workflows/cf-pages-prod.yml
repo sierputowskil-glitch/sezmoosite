@@ -27,6 +27,7 @@ jobs:
           PUBLIC_CONTACT_API_URL: /api/contact
           PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.PUBLIC_TURNSTILE_SITE_KEY }}
           PUBLIC_ENABLE_GTM: 'true'
+          PUBLIC_GTM_ID: GTM-KJFG8DZL
         run: npm run build
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

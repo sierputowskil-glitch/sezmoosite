@@ -31,9 +31,19 @@ const props = Astro.props;
 <BaseLayout
   {...props}
   bodyClass={[props.bodyClass, 'portfolio-page'].filter(Boolean).join(' ')}
+  extraHead={[
+    props.extraHead,
+    `<style>
+.pt-media video.cdn-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;z-index:2;pointer-events:none}
+.pt-vlb__frame video.cdn-video{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:6px;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.pt-glb__yt video.cdn-video{width:100%;height:100%;border:0;display:block;object-fit:contain;background:#000}
+</style>`,
+  ]
+    .filter(Boolean)
+    .join('\n')}
   pageScripts={[
     props.pageScripts,
-    '<script src="/assets/js/portfolio-page.js" defer></script>',
+    '<script src="/assets/js/portfolio-page.js?v=20261016n" defer></script>',
   ]
     .filter(Boolean)
     .join('\n')}

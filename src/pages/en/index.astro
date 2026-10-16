@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import OptImage from '../../components/OptImage.astro';
 import YtBg from '../../components/YtBg.astro';
+import HeroShowreel from '../../components/HeroShowreel.astro';
 import '../../styles/home.css';
 
 import workExlantix from '../../../assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg';
@@ -58,15 +59,13 @@ const jsonLd = {
   altHref="/"
   brandHref="/en/#hero"
   jsonLd={jsonLd}
-  extraHead={`<link rel="preload" as="image" href="https://i.ytimg.com/vi/YkWCkew6OGg/hqdefault.jpg" fetchpriority="high" />`}
+  extraHead={`<link rel="preload" as="image" type="image/webp" href="/assets/video/showreel-poster.webp?v=20261016k" fetchpriority="high" />`}
 >
 <!-- ============ 1 · HERO ============ -->
 <section class="hero" id="hero" data-screen-label="Hero">
   <div class="hero__reel">
     <div class="frame-media"></div>
-    <div class="hero__video">
-      <YtBg videoId="YkWCkew6OGg" title="SEZMOO showreel" priority="hero" />
-    </div>
+    <HeroShowreel title="SEZMOO showreel" />
   </div>
   <div class="hero__grad"></div>
 

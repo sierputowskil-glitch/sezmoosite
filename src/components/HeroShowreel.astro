@@ -1,0 +1,38 @@
+---
+/**
+ * Native hero background showreel — muted autoplay on desktop + mobile.
+ * MP4 from cdn.sezmoo.com; posters stay on Pages for LCP.
+ */
+import { mediaUrl } from '../lib/site';
+
+interface Props {
+  title?: string;
+}
+const { title = 'SEZMOO showreel' } = Astro.props;
+
+const videoSrc = mediaUrl('video/showreel.mp4');
+
+// Posters: same-origin on Pages (small) — better LCP than cross-origin CDN.
+const posterWebp = '/assets/video/showreel-poster.webp?v=20261016k';
+const posterJpg = '/assets/video/showreel-poster.jpg?v=20261016k';
+---
+
+<div
+  class="hero__video"
+  style={`background-image:url('${posterWebp}'),url('${posterJpg}')`}
+>
+  <video
+    id="hero-video"
+    muted
+    playsinline
+    loop
+    autoplay
+    preload="metadata"
+    poster={posterJpg}
+    aria-label={title}
+    disablePictureInPicture
+    disableRemotePlayback
+  >
+    <source src={videoSrc} type="video/mp4" />
+  </video>
+</div>

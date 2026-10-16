@@ -60,6 +60,7 @@ linki/
 !/scripts/migrate-html-to-astro.mjs
 !/scripts/migrate-blog-to-content.mjs
 !/scripts/sync-public-assets.mjs
+!/scripts/fetch-yt-posters.mjs
 !/scripts/unstring-pagehtml.mjs
 !/scripts/patch-cloudflare-smtp.mjs
 
@@ -76,8 +77,9 @@ dist/
 .astro/
 .wrangler/
 
-# Video masters live on cdn.sezmoo.com — keep posters + yt/manifest|queue in git
+# Video masters live on cdn.sezmoo.com — keep posters (webp) + yt/manifest|queue in git
 /assets/video/**/*.mp4
 /assets/video/yt/.tmp_*
+/assets/video/yt/posters/.check-*
 /assets/video/yt/download-report.json
 /assets/video/yt/retry-queue.json

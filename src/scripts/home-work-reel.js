@@ -29,20 +29,25 @@
       let timer = null;
       card.addEventListener('mouseenter', function () {
         timer = setTimeout(function () {
-          if (media.querySelector('iframe.card__prev')) return;
-          const ifr = document.createElement('iframe');
-          ifr.className = 'card__prev';
-          ifr.src =
-            'https://www.youtube-nocookie.com/embed/' +
-            id +
-            '?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=' +
-            id +
-            '&origin=https://sezmoo.com';
-          ifr.allow = 'autoplay; encrypted-media; picture-in-picture';
-          ifr.setAttribute('tabindex', '-1');
-          ifr.style.cssText =
-            'position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3;pointer-events:none;';
-          media.appendChild(ifr);
+          var s = window.__SEZMOO__;
+          var run = function () {
+            if (media.querySelector('iframe.card__prev')) return;
+            const ifr = document.createElement('iframe');
+            ifr.className = 'card__prev';
+            ifr.src =
+              'https://www.youtube-nocookie.com/embed/' +
+              id +
+              '?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=' +
+              id +
+              '&origin=https://sezmoo.com';
+            ifr.allow = 'autoplay; encrypted-media; picture-in-picture';
+            ifr.setAttribute('tabindex', '-1');
+            ifr.style.cssText =
+              'position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3;pointer-events:none;';
+            media.appendChild(ifr);
+          };
+          if (s && typeof s.whenYtConsent === 'function') s.whenYtConsent(run);
+          else if (!s || !s.expectCmp) run();
         }, 240);
       });
       card.addEventListener('mouseleave', function () {

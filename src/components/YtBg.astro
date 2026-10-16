@@ -1,7 +1,7 @@
 ---
 /**
- * Deferred YouTube background — poster first, iframe after idle / near viewport.
- * Keeps LCP text off the YouTube critical path on Slow 4G.
+ * Deferred background video — local poster first, CDN MP4 (or YT fallback) near viewport.
+ * Keeps LCP text off the video critical path on Slow 4G.
  */
 interface Props {
   videoId: string;
@@ -18,7 +18,7 @@ const {
   origin = 'https://sezmoo.com',
 } = Astro.props;
 
-const poster = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+const poster = `/assets/video/yt/posters/${videoId}.webp`;
 // Hero: poster in HTML so it can race with CSS. Lazy: set via JS near viewport.
 const heroPosterStyle = priority === 'hero' ? `background-image:url('${poster}')` : undefined;
 ---

@@ -4,7 +4,7 @@ import { pageUrl } from '../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/realizacja-doraco-hala-tvp/');
-const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs-film__frame');if(!f)return;function play(){var id=f.getAttribute('data-yt');if(!id||f.querySelector('iframe'))return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';i.allow='autoplay; fullscreen; picture-in-picture';i.setAttribute('allowfullscreen','');f.appendChild(i);}f.addEventListener('click',play);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();play();}});})();\n</script>";
+const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs-film__frame');if(!f)return;function play(){var id=f.getAttribute('data-yt');if(!id||f.querySelector('iframe,video'))return;var s=window.__SEZMOO__;if(s&&s.mountYtEmbed){s.mountYtEmbed(f,id);return;}if(s&&s.expectCmp)return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';i.allow='autoplay; fullscreen; picture-in-picture';i.setAttribute('allowfullscreen','');f.appendChild(i);}f.addEventListener('click',play);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();play();}});})();\n</script>";
 ---
 
 <CaseStudyLayout
@@ -63,7 +63,7 @@ const pageScriptsHtml = "<script>\n(function(){var f=document.querySelector('.cs
     <p class="cs-body reveal" data-d="1" style="max-width:54ch;margin-top:20px">A showcase film combining drone footage with material shot on site.</p>
     <div class="cs-film reveal" data-d="1" style="margin-top:clamp(30px,4vh,48px)">
       <div class="cs-film__frame" data-cursor="play" data-yt="phXKtUNlDuM" role="button" tabindex="0" aria-label="Play the DORACO film – TVP studio hall">
-        <img src="https://i.ytimg.com/vi/phXKtUNlDuM/maxresdefault.jpg" alt="Play the DORACO film – TVP studio hall" />
+        <img src="/assets/video/yt/posters/phXKtUNlDuM.webp" alt="Play the DORACO film – TVP studio hall" />
         <div class="cs-film__play"><span class="cs-film__btn" aria-hidden="true"></span></div>
         <div class="cs-film__meta"><span class="rec">● REC</span><span>DORACO, TVP HALL</span></div>
         <div class="cs-film__bar"><i></i></div>

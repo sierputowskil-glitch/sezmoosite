@@ -63,8 +63,9 @@ const turnstileKey = import.meta.env.DEV
   : import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 const canon = canonical || new URL(Astro.url.pathname, siteUrl + '/').href;
 const ogImg = `${siteUrl}/assets/og-image.png`;
-// GTM only when explicitly enabled (prod CI). Never local / GH Pages staging.
+// GTM only when explicitly enabled (prod CI / staging smoke). Never local by default.
 const enableGtm = import.meta.env.PUBLIC_ENABLE_GTM === 'true';
+const gtmId = (import.meta.env.PUBLIC_GTM_ID || 'GTM-KJFG8DZL').trim();
 
 const jsonLdBlocks: string[] = [];
 if (typeof jsonLd === 'string' && jsonLd.trim()) {
@@ -79,9 +80,12 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/assets/favicon.png" sizes="any" />
+  {/* Google Search: ICO/PNG ≥48px — SVG is not reliably used in SERP */}
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/assets/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <meta name="theme-color" content="#16130e" />
   <meta property="og:image" content={ogImg} />
   <meta property="og:image:width" content="1200" />
@@ -107,31 +111,52 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     <meta property="og:description" content={ogDescription || description} />
   ) : null}
   <meta property="og:url" content={canon} />
-  <link rel="preconnect" href="https://i.ytimg.com" />
   {/* No font preload: with font-display:optional, preload extends LCP render-delay on Slow 4G */}
   {/* Critical above-the-fold — full sheet loads async to unblock LCP */}
   <style is:inline>
-    :root{color-scheme:dark;--bg:oklch(.1 .004 60);--fg:oklch(.96 .006 80);--fg-dim:oklch(.74 .008 75);--rec:#ffd200;--on-accent:#17140a;--line:oklch(.27 .006 60);--font-display:"Archivo Variable",system-ui,sans-serif;--shell-pad:clamp(26px,4vw,56px);--maxw:1640px}
+    :root{color-scheme:dark;--bg:oklch(.1 .004 60);--fg:oklch(.96 .006 80);--fg-dim:oklch(.74 .008 75);--fg-faint:oklch(.55 .008 70);--rec:#ffd200;--on-accent:#17140a;--line:oklch(.27 .006 60);--line-soft:oklch(.27 .006 60 / .55);--font-display:"Archivo Variable",system-ui,sans-serif;--font-mono:"Space Mono",ui-monospace,monospace;--shell-pad:clamp(26px,4vw,56px);--maxw:1640px}
     *{box-sizing:border-box;margin:0;padding:0}
     html{overflow-x:clip}
-    body{background:var(--bg);color:var(--fg);font-family:system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
-    img,video,svg{display:block;max-width:100%}
+    body{background:var(--bg);color:var(--fg);font-family:var(--font-display);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
+    img,video,svg{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
+    button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     .shell{width:min(100% - var(--shell-pad) * 2,var(--maxw));margin-inline:auto}
-    .nav{position:fixed;inset:0 0 auto;z-index:50;height:72px}
+    /* Nav — must match full CSS or logo SVG paints at viewBox width ≈ viewport */
+    /* border-bottom must match final CSS — otherwise border-color transition flashes currentColor (cream line) */
+    .nav{position:fixed;inset:0 0 auto;z-index:9400;height:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px var(--shell-pad);background:transparent;border-bottom:1px solid transparent;transition:none}
+    .brand{display:flex;align-items:center;flex:0 0 auto;margin-right:auto}
+    .brand__logo{width:clamp(112px,10vw,154px);height:auto;max-width:154px}
+    .nav__right{display:flex;align-items:center;gap:16px;flex:0 0 auto;margin-left:auto}
+    .nav__tc{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;white-space:nowrap}
+    .nav__tc .live{color:var(--rec);font-weight:700}
+    .nav__theme,.nav__lang{display:inline-flex;align-items:center;border:1px solid var(--line-soft);border-radius:100px;overflow:hidden}
+    .nav__theme-opt,.nav__lang-opt{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;padding:6px 10px;color:var(--fg-dim)}
+    .nav__theme-opt.is-active,.nav__lang-opt.is-active{color:var(--on-accent);background:var(--rec)}
     /* Match mobile drawer (opacity:0) before full CSS — prevents CLS from menu links */
     .nav__menu{position:fixed;inset:0;opacity:0;visibility:hidden;pointer-events:none;z-index:95}
-    .nav__burger{display:block}
+    .nav__burger{display:grid;place-items:center;width:44px;height:44px;order:4}
+    .nav__burger span{display:block;width:22px;height:2px;background:var(--fg);margin:3px 0}
+    .nav__menu-logo,.nav__social{display:none}
     @media (min-width:1101px){
-      .nav__menu{position:static;inset:auto;opacity:1;visibility:visible;pointer-events:auto;display:flex}
+      .nav__menu{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);inset:auto;opacity:1;visibility:visible;pointer-events:auto;display:flex;align-items:center;gap:clamp(18px,2vw,38px)}
+      .nav__menu a{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-dim);padding:4px 0}
       .nav__burger{display:none}
     }
+    @media (max-width:1100px){
+      .nav__tc .label{display:none}
+    }
     .hero{position:relative;min-height:100svh;display:grid;align-content:end;padding:clamp(100px,14vh,160px) 0 clamp(48px,8vh,90px);overflow:clip}
-    .hero__reel,.hero__video,.yt-bg{position:absolute;inset:0}
-    .yt-bg{background-size:cover;background-position:center}
+    /* Do NOT absolute-position bare .yt-bg — without a relative parent it covers the viewport and IO mounts early */
+    .hero__reel,.hero__video{position:absolute;inset:0;overflow:hidden}
+    .hero__video{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#0a0a0c}
+    .hero__video video{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;opacity:0;pointer-events:none;filter:brightness(.78) saturate(1.05)}
+    .hero__video.is-playing video{opacity:1}
+    .studio__media{position:relative;aspect-ratio:9/16;max-height:min(82vh,860px);overflow:hidden;background:#0a0a0c}
+    .studio__media .yt-bg{position:absolute;inset:0;overflow:hidden;background-size:cover;background-position:center;background-repeat:no-repeat}
     .hero__grad{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,var(--bg) 8%,transparent 58%)}
     .hero__content{position:relative;z-index:5;width:100%}
-    .hero h1{font-weight:780;font-stretch:110%;font-size:clamp(34px,6.2vw,112px);line-height:.92;letter-spacing:-.02em;max-width:15ch}
+    .hero h1{font-family:var(--font-display);font-weight:780;font-stretch:110%;font-size:clamp(34px,6.2vw,112px);line-height:.92;letter-spacing:-.02em;max-width:15ch}
     .hero h1 .clip{display:block;overflow:hidden}
     .hero h1 .clip>span{display:block;transform:none}
     .hero h1 .accent{color:var(--rec)}
@@ -141,35 +166,49 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     .hero__sub{margin-top:16px;max-width:100%;font-size:clamp(15px,1.15vw,18px);color:var(--fg-dim);line-height:1.6}
     .hero__sub b{color:var(--fg);font-weight:700}
     .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(26px,4vh,44px)}
+    .hero__hud,.hero__corners,.hero__play{display:none}
     .btn{display:inline-flex;align-items:center;padding:17px 28px;border:1px solid var(--line);border-radius:100px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
     .btn--primary{background:var(--rec);border-color:var(--rec);color:var(--on-accent)}
-    .grain,.vignette,.cursor,.cursor-dot,.scrubber,.flow-bg-canvas,.floating-socials,.scroll-top{visibility:hidden}
+    /* Hide chrome until full CSS — no !important so styles.css can reveal */
+    .grain,.vignette,.cursor,.cursor-dot,.scrubber,.flow-bg-canvas,.floating-socials,.scroll-top{display:none}
   </style>
   <link
     rel="stylesheet"
-    href="/assets/css/styles.css?v=20261016e"
+    href="/assets/css/styles.css?v=20261016o"
     media="print"
-    onload="this.media='all'"
+    onload="this.media='all';document.documentElement.classList.add('html-css-ready')"
   />
   <noscript>
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20261016e" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20261016o" />
   </noscript>
+  <script is:inline>
+    (function () {
+      var l = document.querySelector('link[href*="assets/css/styles.css"]');
+      if (!l) return;
+      function ready() { document.documentElement.classList.add('html-css-ready'); }
+      if (l.sheet) ready();
+      else l.addEventListener('load', ready);
+    })();
+  </script>
   {jsonLdBlocks.map((block) => (
     <script type="application/ld+json" set:html={block} />
   ))}
   {extraHead && <Fragment set:html={extraHead} />}
-  <script is:inline define:vars={{ turnstileKey, contactApi }}>
+  <script is:inline define:vars={{ turnstileKey, contactApi, enableGtm }}>
     window.__SEZMOO__ = {
       turnstileSiteKey: turnstileKey,
       contactApiUrl: contactApi,
+      expectCmp: !!enableGtm,
     };
   </script>
+  <script src="/assets/js/cdn-video-map.js?v=20261016o" defer is:inline></script>
+  <script src="/assets/js/yt-consent.js?v=20261016b" defer is:inline></script>
 </head>
 <body id={bodyId} class={bodyClass}>
-  {enableGtm && (
+  {enableGtm && gtmId && (
     <noscript>
       <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KJFG8DZL"
+        src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
         height="0"
         width="0"
         style="display:none;visibility:hidden"
@@ -213,29 +252,43 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     } catch (_e) {}
   })();
   </script>
-  <script src="/assets/js/app.js?v=20261016f" defer is:inline></script>
+  <script src="/assets/js/app.js?v=20261016g" defer is:inline></script>
   <script is:inline>
-  /* Defer YouTube bg iframes — poster paints first (see YtBg.astro).
-     Touch / coarse pointer: poster only (no multi‑MB googlevideo on mobile). */
+  /* YouTube bg: poster first; iframe only after CookieYes marketing consent.
+     Touch / coarse pointer: poster only (no googlevideo on mobile). */
   (function () {
     var finePointer = false;
     try {
       finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches
         && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     } catch (_e) {}
+    function whenYtReady(fn) {
+      var s = window.__SEZMOO__;
+      if (s && typeof s.whenYtConsent === 'function') s.whenYtConsent(fn);
+      else if (!s || !s.expectCmp) fn();
+      else {
+        var n = 0;
+        var t = setInterval(function () {
+          n++;
+          s = window.__SEZMOO__;
+          if (s && typeof s.whenYtConsent === 'function') {
+            clearInterval(t);
+            s.whenYtConsent(fn);
+          } else if (n > 40) {
+            clearInterval(t);
+          }
+        }, 100);
+      }
+    }
     function applyPoster(el) {
       var poster = el.getAttribute('data-yt-poster');
       if (poster && !el.style.backgroundImage) {
         el.style.backgroundImage = 'url("' + poster + '")';
       }
     }
-    function mount(el) {
-      if (!el || el.dataset.ytMounted) return;
+    function mountYtIframe(el, id) {
+      if (el.dataset.ytMounted) return;
       el.dataset.ytMounted = '1';
-      applyPoster(el);
-      if (!finePointer) return;
-      var id = el.getAttribute('data-yt-id');
-      if (!id) return;
       var origin = el.getAttribute('data-yt-origin') || 'https://sezmoo.com';
       var title = el.getAttribute('data-yt-title') || 'YouTube';
       var ifr = document.createElement('iframe');
@@ -251,11 +304,63 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
       ifr.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
       el.appendChild(ifr);
     }
+    function mountCdnBg(el, id) {
+      var s = window.__SEZMOO__;
+      if (!s || !s.mountCdnVideo || !s.cdnVideoUrl || !s.cdnVideoUrl(id)) return false;
+      if (el.dataset.ytMounted) return true;
+      el.dataset.ytMounted = '1';
+      s.mountCdnVideo(el, id, {
+        muted: true,
+        loop: true,
+        autoplay: true,
+        preload: 'metadata',
+        className: 'yt-bg__video',
+        title: el.getAttribute('data-yt-title') || '',
+      });
+      return true;
+    }
+    function mount(el) {
+      if (!el || el.dataset.ytMounted) return;
+      applyPoster(el);
+      if (!finePointer) {
+        el.dataset.ytMounted = '1';
+        return;
+      }
+      var id = el.getAttribute('data-yt-id');
+      if (!id) return;
+      if (mountCdnBg(el, id)) return;
+      // Defer scripts may still be loading — brief poll, then YT fallback
+      if (!window.__SEZMOO__ || !window.__SEZMOO__.cdnVideoMap) {
+        var tries = 0;
+        var t = setInterval(function () {
+          tries++;
+          if (mountCdnBg(el, id) || tries > 40) {
+            clearInterval(t);
+            if (!el.dataset.ytMounted) {
+              whenYtReady(function () { mountYtIframe(el, id); });
+            }
+          }
+        }, 50);
+        return;
+      }
+      whenYtReady(function () { mountYtIframe(el, id); });
+    }
+    function playBgMedia(el) {
+      var v = el.querySelector('video');
+      if (!v) return;
+      var p = v.play();
+      if (p && typeof p.catch === 'function') p.catch(function () {});
+    }
+    function pauseBgMedia(el) {
+      var v = el.querySelector('video');
+      if (v && !v.paused) v.pause();
+    }
     function whenIdle(fn) {
       if ('requestIdleCallback' in window) requestIdleCallback(fn, { timeout: 2200 });
       else if (document.readyState === 'complete') setTimeout(fn, 1);
       else window.addEventListener('load', function () { setTimeout(fn, 1); });
     }
+    /** Lazy bg: mount + play only near viewport; pause when scrolled away. */
     function whenNear(el) {
       if (!('IntersectionObserver' in window)) {
         whenIdle(function () { mount(el); });
@@ -264,13 +369,18 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
       var io = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (e) {
-            if (!e.isIntersecting) return;
-            io.unobserve(e.target);
-            applyPoster(e.target);
-            mount(e.target);
+            var target = e.target;
+            if (e.isIntersecting) {
+              applyPoster(target);
+              if (!target.dataset.ytMounted) mount(target);
+              else playBgMedia(target);
+            } else {
+              pauseBgMedia(target);
+            }
           });
         },
-        { rootMargin: '240px 0px' }
+        // Start slightly before visible; pause when scrolled away
+        { rootMargin: '120px 0px', threshold: 0.15 }
       );
       io.observe(el);
     }
@@ -282,6 +392,15 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
       }
       if (el.getAttribute('data-yt-priority') === 'hero') whenIdle(function () { mount(el); });
       else whenNear(el);
+    });
+    document.addEventListener('sezmoo:yt-consent', function (e) {
+      if (!e.detail || !e.detail.allowed) return;
+      document.querySelectorAll('[data-yt-bg]').forEach(function (el) {
+        if (el.dataset.ytMounted && el.querySelector('iframe, video')) return;
+        delete el.dataset.ytMounted;
+        if (el.getAttribute('data-yt-priority') === 'hero') mount(el);
+        else whenNear(el);
+      });
     });
   })();
   </script>
@@ -304,12 +423,12 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     apply(root.getAttribute('data-theme') || 'dark');
   })();
   </script>
-  {enableGtm && (
-    <script is:inline>
+  {enableGtm && gtmId && (
+    <script is:inline define:vars={{ gtmId }}>
     (function () {
-      var GTM_ID = 'GTM-KJFG8DZL';
+      var GTM_ID = gtmId;
       function loadGtm() {
-        if (window.__SEZMOO_GTM__) return;
+        if (window.__SEZMOO_GTM__ || !GTM_ID) return;
         window.__SEZMOO_GTM__ = true;
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });

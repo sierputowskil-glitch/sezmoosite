@@ -112,26 +112,68 @@
     tcEls.forEach((el) => (el.textContent = tc(frame)));
   }
 
-  /* ---------- HERO background video: force muted autoplay + reveal on play ---------- */
+  /* ---------- HERO background video: muted autoplay (desktop + mobile) ---------- */
   (function heroVideo() {
     const wrap = document.querySelector(".hero__video");
     const video = document.getElementById("hero-video");
     if (!wrap || !video) return;
 
+    // Accessibility: keep poster only
+    if (reduce) {
+      try { video.pause(); } catch (_e) {}
+      video.removeAttribute("autoplay");
+      return;
+    }
+
     const reveal = () => wrap.classList.add("is-playing");
     const tryPlay = () => {
       video.muted = true;
+      video.defaultMuted = true;
+      video.setAttribute("muted", "");
       video.playsInline = true;
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
       const play = video.play();
-      if (play && play.catch) play.catch(() => {});
-    }
+      if (play && typeof play.then === "function") {
+        play.then(reveal).catch(() => {
+          // iOS / low-power: retry once on first user gesture
+          const unlock = () => {
+            video.play().then(reveal).catch(() => {});
+            window.removeEventListener("touchstart", unlock);
+            window.removeEventListener("click", unlock);
+          };
+          window.addEventListener("touchstart", unlock, { once: true, passive: true });
+          window.addEventListener("click", unlock, { once: true });
+        });
+      }
+    };
 
     video.addEventListener("playing", reveal);
     video.addEventListener("canplay", tryPlay, { once: true });
-    video.addEventListener("loadeddata", () => {
-      if (video.readyState >= 2) reveal();
-    }, { once: true });
-    tryPlay();
+    if (video.readyState >= 2) tryPlay();
+    else tryPlay();
+
+    // Pause when off-screen / tab hidden — saves CPU & data on mobile
+    const sync = () => {
+      if (document.hidden) {
+        video.pause();
+        return;
+      }
+      tryPlay();
+    };
+    document.addEventListener("visibilitychange", sync);
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting && !document.hidden) tryPlay();
+            else video.pause();
+          });
+        },
+        { threshold: 0.15 }
+      );
+      io.observe(wrap);
+    }
   })();
 
   /* ---------- NAV stuck state ---------- */

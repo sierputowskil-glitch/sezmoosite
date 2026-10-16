@@ -24,6 +24,7 @@
     "unstring:pages": "node scripts/unstring-pagehtml.mjs",
     "migrate:blog": "node scripts/migrate-blog-to-content.mjs",
     "optimize:lcp": "node scripts/optimize-lcp-heroes.mjs",
+    "fetch:yt-posters": "node scripts/fetch-yt-posters.mjs",
     "postinstall": "node scripts/patch-cloudflare-smtp.mjs"
   },
   "dependencies": {
