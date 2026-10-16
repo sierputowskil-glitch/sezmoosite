@@ -6,7 +6,8 @@
 @font-face {
   font-family: 'Archivo Variable';
   font-style: normal;
-  font-display: swap;
+  /* optional: avoid LCP waiting on ~180KB variable font on Slow 4G */
+  font-display: optional;
   font-weight: 100 900;
   font-stretch: 62% 125%;
   src: url('@fontsource-variable/archivo/files/archivo-latin-ext-standard-normal.woff2')
@@ -19,7 +20,7 @@
 @font-face {
   font-family: 'Archivo Variable';
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
   font-weight: 100 900;
   font-stretch: 62% 125%;
   src: url('@fontsource-variable/archivo/files/archivo-latin-standard-normal.woff2')

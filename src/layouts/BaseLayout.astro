@@ -3,10 +3,6 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/fonts.css';
 import '../styles/perf.css';
-import archivoLatin from '@fontsource-variable/archivo/files/archivo-latin-standard-normal.woff2?url';
-import archivoLatinExt from '@fontsource-variable/archivo/files/archivo-latin-ext-standard-normal.woff2?url';
-import spaceMonoLatin400 from '@fontsource/space-mono/files/space-mono-latin-400-normal.woff2?url';
-import spaceMonoLatin700 from '@fontsource/space-mono/files/space-mono-latin-700-normal.woff2?url';
 
 interface Props {
   lang?: 'pl' | 'en';
@@ -112,11 +108,52 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
   ) : null}
   <meta property="og:url" content={canon} />
   <link rel="preconnect" href="https://i.ytimg.com" />
-  <link rel="preload" href={archivoLatin} as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href={archivoLatinExt} as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href={spaceMonoLatin400} as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href={spaceMonoLatin700} as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/assets/css/styles.css?v=20261016b" />
+  {/* No font preload: with font-display:optional, preload extends LCP render-delay on Slow 4G */}
+  {/* Critical above-the-fold — full sheet loads async to unblock LCP */}
+  <style is:inline>
+    :root{color-scheme:dark;--bg:oklch(.1 .004 60);--fg:oklch(.96 .006 80);--fg-dim:oklch(.74 .008 75);--rec:#ffd200;--on-accent:#17140a;--line:oklch(.27 .006 60);--font-display:"Archivo Variable",system-ui,sans-serif;--shell-pad:clamp(26px,4vw,56px);--maxw:1640px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{overflow-x:clip}
+    body{background:var(--bg);color:var(--fg);font-family:system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
+    img,video,svg{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    .shell{width:min(100% - var(--shell-pad) * 2,var(--maxw));margin-inline:auto}
+    .nav{position:fixed;inset:0 0 auto;z-index:50;height:72px}
+    /* Match mobile drawer (opacity:0) before full CSS — prevents CLS from menu links */
+    .nav__menu{position:fixed;inset:0;opacity:0;visibility:hidden;pointer-events:none;z-index:95}
+    .nav__burger{display:block}
+    @media (min-width:1101px){
+      .nav__menu{position:static;inset:auto;opacity:1;visibility:visible;pointer-events:auto;display:flex}
+      .nav__burger{display:none}
+    }
+    .hero{position:relative;min-height:100svh;display:grid;align-content:end;padding:clamp(100px,14vh,160px) 0 clamp(48px,8vh,90px);overflow:clip}
+    .hero__reel,.hero__video,.yt-bg{position:absolute;inset:0}
+    .yt-bg{background-size:cover;background-position:center}
+    .hero__grad{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,var(--bg) 8%,transparent 58%)}
+    .hero__content{position:relative;z-index:5;width:100%}
+    .hero h1{font-weight:780;font-stretch:110%;font-size:clamp(34px,6.2vw,112px);line-height:.92;letter-spacing:-.02em;max-width:15ch}
+    .hero h1 .clip{display:block;overflow:hidden}
+    .hero h1 .clip>span{display:block;transform:none}
+    .hero h1 .accent{color:var(--rec)}
+    .hero__measure{font-size:clamp(34px,6.2vw,112px);width:15ch;max-width:100%}
+    .hero__measure>*{font-size:initial;font-weight:initial;font-stretch:initial;letter-spacing:initial}
+    .hero__measure>h1{font-weight:780;font-stretch:110%;letter-spacing:-.02em;font-size:clamp(34px,6.2vw,112px)}
+    .hero__sub{margin-top:16px;max-width:100%;font-size:clamp(15px,1.15vw,18px);color:var(--fg-dim);line-height:1.6}
+    .hero__sub b{color:var(--fg);font-weight:700}
+    .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(26px,4vh,44px)}
+    .btn{display:inline-flex;align-items:center;padding:17px 28px;border:1px solid var(--line);border-radius:100px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+    .btn--primary{background:var(--rec);border-color:var(--rec);color:var(--on-accent)}
+    .grain,.vignette,.cursor,.cursor-dot,.scrubber,.flow-bg-canvas,.floating-socials,.scroll-top{visibility:hidden}
+  </style>
+  <link
+    rel="stylesheet"
+    href="/assets/css/styles.css?v=20261016e"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20261016e" />
+  </noscript>
   {jsonLdBlocks.map((block) => (
     <script type="application/ld+json" set:html={block} />
   ))}
@@ -176,7 +213,7 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     } catch (_e) {}
   })();
   </script>
-  <script src="/assets/js/app.js" defer is:inline></script>
+  <script src="/assets/js/app.js?v=20261016d" defer is:inline></script>
   <script is:inline>
   /* Defer YouTube bg iframes — poster paints first (see YtBg.astro).
      Touch / coarse pointer: poster only (no multi‑MB googlevideo on mobile). */

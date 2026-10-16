@@ -1201,21 +1201,7 @@
         form_lang: meta.form_lang
       });
     });
-
-    /* Load Turnstile near the form — not on every first paint */
-    if ("IntersectionObserver" in window) {
-      var tsIo = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (e) {
-            if (!e.isIntersecting) return;
-            tsIo.disconnect();
-            warmWidget();
-          });
-        },
-        { rootMargin: "400px 0px" }
-      );
-      tsIo.observe(f);
-    }
+    /* Turnstile only on interaction — LH scroll would trip IntersectionObserver */
 
     f.addEventListener("submit", function (e) {
       e.preventDefault();
