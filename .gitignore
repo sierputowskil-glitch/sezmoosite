@@ -75,3 +75,9 @@ dist/
 .cache/
 .astro/
 .wrangler/
+
+# Video masters live on cdn.sezmoo.com — keep posters + yt/manifest|queue in git
+/assets/video/**/*.mp4
+/assets/video/yt/.tmp_*
+/assets/video/yt/download-report.json
+/assets/video/yt/retry-queue.json
