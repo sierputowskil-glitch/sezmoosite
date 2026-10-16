@@ -1,17 +1,30 @@
 ---
 import AssetImage from '../../components/AssetImage.astro';
 import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../lib/schema';
 import { pageUrl } from '../../lib/site';
 
 const lang = 'pl' as const;
 const canonical = pageUrl('/realizacja-world-of-warships/');
+
+const description =
+  "Case study SEZMOO: budowa Strefy Gracza (Captain's Club) w Muzeum Marynarki Wojennej w Gdyni i event otwierający 10-lecie World of Warships.";
+
+const jsonLd = creativeWorkJsonLd({
+  name: '10 lat World of Warships, Strefa Gracza',
+  description,
+  canonical,
+  image: '/assets/work/captains-club-ext.avif',
+  lang,
+});
 ---
 
 <CaseStudyLayout
   lang={lang}
   title="10 lat World of Warships, Strefa Gracza · Realizacja SEZMOO"
-  description="Case study SEZMOO: budowa Strefy Gracza (Captain"
+  description={description}
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">

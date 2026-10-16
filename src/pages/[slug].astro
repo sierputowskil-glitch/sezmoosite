@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BlogArticle from '../components/blog/BlogArticle.astro';
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import { blogMetaLine } from '../lib/blog';
+import { blogPostingJsonLd } from '../lib/schema';
 import { pageUrl } from '../lib/site';
 
 export async function getStaticPaths() {
@@ -22,6 +23,15 @@ const title = post.data.ogTitle
   : post.data.title.includes('SEZMOO')
     ? post.data.title
     : `${post.data.title} | SEZMOO`;
+
+const jsonLd = blogPostingJsonLd({
+  headline: post.data.title,
+  description: post.data.description || post.data.ogDescription,
+  canonical,
+  datePublished: post.data.date,
+  image: post.data.heroImage,
+  lang: post.data.lang,
+});
 ---
 
 <ArticleLayout
@@ -31,6 +41,8 @@ const title = post.data.ogTitle
   canonical={canonical}
   ogTitle={post.data.ogTitle || title}
   ogDescription={post.data.ogDescription || post.data.description}
+  ogType="article"
+  jsonLd={jsonLd}
 >
   <BlogArticle
     title={post.data.title}

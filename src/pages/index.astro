@@ -5,6 +5,7 @@ import ContactForm from '../components/ContactForm.astro';
 import OptImage from '../components/OptImage.astro';
 import VideoBg from '../components/VideoBg.astro';
 import HeroShowreel from '../components/HeroShowreel.astro';
+import { homePageJsonLd } from '../lib/schema';
 import '../styles/home.css';
 
 import workExlantix from '../../assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg';
@@ -20,31 +21,12 @@ const canonical = `${siteUrl}/`;
 const hreflangPl = `${siteUrl}/`;
 const hreflangEn = `${siteUrl}/en/`;
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'SEZMOO',
-  description: "Studio wideo i contentu z Gdańska. Produkcja filmów reklamowych, materiałów na social media, animacji 3D/2D i kampanii dla marek.",
-  url: canonical,
-  email: 'biuro@sezmoo.com',
-  telephone: '+48739260450',
-  image: `${siteUrl}/assets/brand/sezmoo-logo-wy.svg`,
-  priceRange: '$',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Zeusa 34',
-    postalCode: '80-299',
-    addressLocality: 'Gdańsk',
-    addressCountry: 'PL',
-  },
-  areaServed: 'PL',
-  sameAs: [
-    'https://www.instagram.com/sezmoo/',
-    'https://www.facebook.com/sezmooagencja',
-    'https://www.youtube.com/@sezmooagency',
-    'https://www.linkedin.com/company/sezmoo/',
-  ],
-};
+const jsonLd = homePageJsonLd({
+  lang,
+  canonical,
+  description:
+    'Studio wideo i contentu z Gdańska. Produkcja filmów reklamowych, materiałów na social media, animacji 3D/2D i kampanii dla marek.',
+});
 ---
 
 <BaseLayout

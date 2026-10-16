@@ -1,10 +1,41 @@
 ---
 import AssetImage from '../../../components/AssetImage.astro';
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import { faqPageJsonLd } from '../../../lib/schema';
 import { pageUrl } from '../../../lib/site';
 
 const lang = 'pl' as const;
 const canonical = pageUrl('/uslugi-marketingowe/projektowanie-ux-ui/');
+const faqJsonLd = faqPageJsonLd(
+  [
+    {
+      question: 'Czym różni się UX od UI?',
+      answer:
+        'UX to logika produktu: struktura, ścieżki i to, jak łatwo osiągnąć cel. UI to warstwa, którą widać – typografia, kolor i komponenty. Projektujemy oba, bo jedno bez drugiego nie działa.',
+    },
+    {
+      question: 'Mam już stronę. Da się ją poprawić bez budowania od zera?',
+      answer:
+        'Tak. Zaczynamy od audytu UX, pokazujemy miejsca, w których użytkownicy się gubią, i projektujemy zmiany w kolejności od tych, które dadzą najwięcej.',
+    },
+    {
+      question: 'W jakich narzędziach pracujecie?',
+      answer:
+        'W Figmie i całym pakiecie Adobe Creative Cloud – narzędzie dobieramy do zadania, a nie odwrotnie. Dostajesz dostęp do plików, prototypu i design systemu, bez zamkniętych formatów.',
+    },
+    {
+      question: 'Czy wdrożycie zaprojektowaną stronę?',
+      answer:
+        'Tak. Development prowadzimy u siebie – od WordPressa, przez React, po dowolną technologię dopasowaną do projektu. Szczegóły znajdziesz w usłudze Strony internetowe.',
+    },
+    {
+      question: 'Ile trwa projekt UX/UI?',
+      answer:
+        'To zależy od zakresu – landing page to inna skala niż sklep czy aplikacja. Termin i wycenę podajemy po briefie albo krótkim warsztacie.',
+    },
+  ],
+  lang,
+);
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -172,7 +203,7 @@ const jsonLd = {
   title="Projektowanie UX/UI stron, sklepów i aplikacji | SEZMOO"
   description="Projektujemy UX/UI stron, sklepów, aplikacji i produktów cyfrowych – user journey, architektura informacji, prototypy i design system gotowy do wdrożenia."
   canonical={canonical}
-  jsonLd={jsonLd}
+  jsonLd={[jsonLd, faqJsonLd]}
 >
 <div class="sd">
 <section class="sd__hero shell">

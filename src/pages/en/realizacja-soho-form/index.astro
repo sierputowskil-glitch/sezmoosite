@@ -1,10 +1,19 @@
 ---
 import AssetImage from '../../../components/AssetImage.astro';
 import CaseStudyLayout from '../../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../../lib/schema';
 import { pageUrl } from '../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/realizacja-soho-form/');
+
+const jsonLd = creativeWorkJsonLd({
+  name: 'Soho Form · Logo, brand manual & website',
+  description: 'SEZMOO case study: logo, brand manual and website for Soho Form, a maker of made-to-order upholstered furniture.',
+  canonical,
+  image: '/assets/portfolio/soho-form/soho-hero-laptop.webp',
+  lang,
+});
 ---
 
 <CaseStudyLayout
@@ -12,6 +21,7 @@ const canonical = pageUrl('/en/realizacja-soho-form/');
   title="Soho Form · Logo, brand manual & website · SEZMOO case study"
   description="SEZMOO case study: logo, brand manual and website for Soho Form, a maker of made-to-order upholstered furniture."
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <!-- ============ COVER ============ -->
 <header class="cs-hero cs-hero--device" data-screen-label="Case · Cover">

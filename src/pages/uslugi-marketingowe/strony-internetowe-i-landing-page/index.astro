@@ -1,10 +1,39 @@
 ---
 import AssetImage from '../../../components/AssetImage.astro';
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import { faqPageJsonLd } from '../../../lib/schema';
 import { pageUrl } from '../../../lib/site';
 
 const lang = 'pl' as const;
 const canonical = pageUrl('/uslugi-marketingowe/strony-internetowe-i-landing-page/');
+const faqJsonLd = faqPageJsonLd(
+  [
+    {
+      question: 'Z jakich technologii korzystacie?',
+      answer:
+        'Najczęściej z WordPressa i React, ale technologię dobieramy do projektu: liczy się interaktywność, szybkość, łatwość edycji i planowane integracje. Rekomendację dostajesz razem z wyceną.',
+    },
+    {
+      question: 'Czy sam będę mógł edytować stronę?',
+      answer: 'Tak. Każda strona ma panel do zarządzania treścią, a po starcie pokazujemy, jak z niego korzystać.',
+    },
+    {
+      question: 'Jak wygląda wdrożenie?',
+      answer:
+        'Budujemy stronę na serwerze testowym, sprawdzamy ją na różnych urządzeniach i przeglądarkach, a potem udostępniamy do akceptacji. Po odbiorze przenosimy ją na docelowy hosting, podpinamy domenę i ustawiamy przekierowania ze starych adresów.',
+    },
+    {
+      question: 'Czy zrobicie też projekt graficzny?',
+      answer:
+        'Tak – projekt powstaje w ramach usługi Projektowanie UX/UI. Jeden zespół od projektu po kod oznacza mniej przekazywania plików i mniej nieporozumień.',
+    },
+    {
+      question: 'Co jeśli po starcie pojawi się błąd?',
+      answer: 'Naprawiamy go. Zmiany wykraczające poza ustalony zakres wyceniamy osobno, zanim zaczniemy pracę.',
+    },
+  ],
+  lang,
+);
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -234,7 +263,7 @@ const jsonLd = {
   title="Strony internetowe i landing pages dla marek | SEZMOO"
   description="Strona jest miejscem, w którym kończy się cała reszta marketingu – jeśli nie prowadzi do kontaktu, reszta pracuje na pusto. Projektujemy i budujemy strony"
   canonical={canonical}
-  jsonLd={jsonLd}
+  jsonLd={[jsonLd, faqJsonLd]}
 >
 <div class="sd">
 <section class="sd__hero shell">

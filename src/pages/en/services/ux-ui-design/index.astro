@@ -1,10 +1,41 @@
 ---
 import AssetImage from '../../../../components/AssetImage.astro';
 import ServiceLayout from '../../../../layouts/ServiceLayout.astro';
+import { faqPageJsonLd } from '../../../../lib/schema';
 import { pageUrl } from '../../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/services/ux-ui-design/');
+const faqJsonLd = faqPageJsonLd(
+  [
+    {
+      question: 'What is the difference between UX and UI?',
+      answer:
+        'UX is the logic of the product: structure, flows and how easily people reach their goal. UI is the layer you see – typography, colour and components. We design both, because one does not work without the other.',
+    },
+    {
+      question: 'I already have a website. Can it be improved without starting over?',
+      answer:
+        'Yes. We start with a UX audit, show where users get lost and design changes in order of impact.',
+    },
+    {
+      question: 'Which tools do you use?',
+      answer:
+        'Figma and the full Adobe Creative Cloud suite – we pick the tool for the task, not the other way round. You get access to the files, the prototype and the design system, with no locked formats.',
+    },
+    {
+      question: 'Will you build the site you designed?',
+      answer:
+        'Yes. Development is done in-house – from WordPress, through React, to any technology the project needs. See our Websites service.',
+    },
+    {
+      question: 'How long does a UX/UI project take?',
+      answer:
+        'It depends on scope – a landing page is a different scale from a store or an app. We give a timeline and a quote after the brief or a short workshop.',
+    },
+  ],
+  lang,
+);
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -179,7 +210,7 @@ const jsonLd = {
   title="UX/UI design for websites, stores and apps | SEZMOO"
   description="We design UX/UI for websites, online stores, apps and digital products – user journeys, information architecture, prototypes and a design system ready for development."
   canonical={canonical}
-  jsonLd={jsonLd}
+  jsonLd={[jsonLd, faqJsonLd]}
 >
 <div class="sd">
 <section class="sd__hero shell">

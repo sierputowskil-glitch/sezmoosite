@@ -1,16 +1,39 @@
 ---
 import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { itemListJsonLd } from '../../lib/schema';
 import { pageUrl } from '../../lib/site';
 
 const lang = 'pl' as const;
 const canonical = pageUrl('/uslugi-marketingowe/');
+const description =
+  'Usługi marketingowe SEZMOO: produkcja wideo, social media, kampanie płatne, strony, grafika, fotografia, dron, eventy i materiały reklamowe.';
+
+const jsonLd = itemListJsonLd({
+  name: 'Usługi marketingowe SEZMOO',
+  description,
+  canonical,
+  lang,
+  items: [
+    { name: 'Abonamenty', url: pageUrl('/uslugi-marketingowe/abonamenty/') },
+    { name: 'Produkcja filmowa', url: pageUrl('/uslugi-marketingowe/produkcja-wideo-reels/') },
+    { name: 'Fotografia reklamowa', url: pageUrl('/uslugi-marketingowe/fotografia/') },
+    { name: 'Projektowanie graficzne', url: pageUrl('/uslugi-marketingowe/projektowanie-graficzne/') },
+    { name: 'Projektowanie UX/UI', url: pageUrl('/uslugi-marketingowe/projektowanie-ux-ui/') },
+    { name: 'Strony internetowe', url: pageUrl('/uslugi-marketingowe/strony-internetowe-i-landing-page/') },
+    { name: 'Social media', url: pageUrl('/uslugi-marketingowe/obsluga-social-media/') },
+    { name: 'Eventy', url: pageUrl('/uslugi-marketingowe/organizacja-eventow/') },
+    { name: 'Kampanie reklamowe', url: pageUrl('/uslugi-marketingowe/kampanie-platne/') },
+    { name: 'Produkcja reklamowa', url: pageUrl('/uslugi-marketingowe/produkcja-reklamowa/') },
+  ],
+});
 ---
 
 <ServiceLayout
   lang={lang}
   title="Usługi marketingowe · SEZMOO"
-  description="Usługi marketingowe SEZMOO: produkcja wideo, social media, kampanie płatne, strony, grafika, fotografia, dron, eventy i materiały reklamowe."
+  description={description}
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <section class="sub-hero shell service-hub">
   <div class="sub-hero__grid sub-hero__grid--solo">

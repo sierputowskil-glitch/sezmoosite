@@ -1,18 +1,32 @@
 ---
 import AssetImage from '../../components/AssetImage.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { pageUrl } from '../../lib/site';
 import {
   blogMetaLine,
   blogPath,
   getPublishedBlogPosts,
   type BlogPost,
 } from '../../lib/blog';
+import { itemListJsonLd } from '../../lib/schema';
+import { pageUrl } from '../../lib/site';
 
 const canonical = pageUrl('/blog/');
 const posts = await getPublishedBlogPosts('pl');
 const featured = posts.find((p) => p.data.featured) || posts[0];
 const rest = featured ? posts.filter((p) => p.id !== featured.id) : posts;
+const description =
+  'Blog SEZMOO: praktyczne notatki o produkcji wideo, contentu na social media i marketingu marek, z planu, montażu i feedu.';
+
+const jsonLd = itemListJsonLd({
+  name: 'Blog SEZMOO',
+  description,
+  canonical,
+  lang: 'pl',
+  items: posts.map((post) => ({
+    name: post.data.title,
+    url: pageUrl(blogPath(post)),
+  })),
+});
 
 function delayAttr(i: number): string | undefined {
   const d = i % 3;
@@ -45,8 +59,9 @@ const pageScripts = `<script>
 <BaseLayout
   lang="pl"
   title="Blog, produkcja wideo, content i marketing marek | SEZMOO"
-  description="Blog SEZMOO: praktyczne notatki o produkcji wideo, contentu na social media i marketingu marek, z planu, montażu i feedu."
+  description={description}
   canonical={canonical}
+  jsonLd={jsonLd}
   pageScripts={pageScripts}
 >
   <section class="blog blog--page shell" id="blog" data-screen-label="Blog">

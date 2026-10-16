@@ -1,10 +1,39 @@
 ---
 import AssetImage from '../../../../components/AssetImage.astro';
 import ServiceLayout from '../../../../layouts/ServiceLayout.astro';
+import { faqPageJsonLd } from '../../../../lib/schema';
 import { pageUrl } from '../../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/services/websites-and-landing-pages/');
+const faqJsonLd = faqPageJsonLd(
+  [
+    {
+      question: 'Which technologies do you use?',
+      answer:
+        'Most often WordPress and React, but we choose the technology per project: interactivity, speed, ease of editing and planned integrations all matter. You get our recommendation with the quote.',
+    },
+    {
+      question: 'Will I be able to edit the site myself?',
+      answer: 'Yes. Every site comes with a CMS, and after launch we show you how to use it.',
+    },
+    {
+      question: 'What does the build process look like?',
+      answer:
+        'We build the site on a staging server, test it across devices and browsers, then share it for approval. After sign-off we move it to your hosting, connect the domain and set up redirects from old URLs.',
+    },
+    {
+      question: 'Do you design the site too?',
+      answer:
+        'Yes – design is part of our UX/UI design service. One team from design to code means fewer handovers and fewer misunderstandings.',
+    },
+    {
+      question: 'What if a bug shows up after launch?',
+      answer: 'We fix it. Changes beyond the agreed scope are quoted separately before we start.',
+    },
+  ],
+  lang,
+);
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -234,7 +263,7 @@ const jsonLd = {
   title="Websites & landing pages for brands | SEZMOO"
   description="A website is where the rest of the marketing lands – if it does not lead to contact, everything upstream works for nothing. We design and build company"
   canonical={canonical}
-  jsonLd={jsonLd}
+  jsonLd={[jsonLd, faqJsonLd]}
 >
 <div class="sd">
 <section class="sd__hero shell">

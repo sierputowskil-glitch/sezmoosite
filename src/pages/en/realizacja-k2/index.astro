@@ -1,10 +1,19 @@
 ---
 import AssetImage from '../../../components/AssetImage.astro';
 import CaseStudyLayout from '../../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../../lib/schema';
 import { pageUrl } from '../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/realizacja-k2/');
+
+const jsonLd = creativeWorkJsonLd({
+  name: 'K2 Fish Farm · Rebranding, website, photo & drone',
+  description: 'SEZMOO case study: logo refresh, brand guidelines, new website, photography, drone film and a presentation template for K2 Fish Farm, a rainbow trout producer in Poland.',
+  canonical,
+  image: '/assets/portfolio/k2/k2-hodowla-pstraga-zdjecie-z-drona-baseny.webp',
+  lang,
+});
 ---
 
 <CaseStudyLayout
@@ -12,6 +21,7 @@ const canonical = pageUrl('/en/realizacja-k2/');
   title="K2 Fish Farm · Rebranding, website, photo & drone · SEZMOO case study"
   description="SEZMOO case study: logo refresh, brand guidelines, new website, photography, drone film and a presentation template for K2 Fish Farm, a rainbow trout producer in Poland."
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">

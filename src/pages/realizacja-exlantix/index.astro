@@ -1,10 +1,19 @@
 ---
 import AssetImage from '../../components/AssetImage.astro';
 import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../lib/schema';
 import { pageUrl } from '../../lib/site';
 
 const lang = 'pl' as const;
 const canonical = pageUrl('/realizacja-exlantix/');
+
+const jsonLd = creativeWorkJsonLd({
+  name: 'Premiera marki EXLANTIX w Gdańsku',
+  description: 'Case study SEZMOO: premiera marki EXLANTIX w Polskiej Filharmonii Bałtyckiej w Gdańsku. Koncepcja, scenografia zewnętrzna, technika sceniczna, reżyseria światła oraz produkcja foto i wideo.',
+  canonical,
+  image: '/assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg',
+  lang,
+});
 ---
 
 <CaseStudyLayout
@@ -12,6 +21,7 @@ const canonical = pageUrl('/realizacja-exlantix/');
   title="Premiera marki EXLANTIX w Gdańsku · Realizacja SEZMOO"
   description="Case study SEZMOO: premiera marki EXLANTIX w Polskiej Filharmonii Bałtyckiej w Gdańsku. Koncepcja, scenografia zewnętrzna, technika sceniczna, reżyseria światła oraz produkcja foto i wideo."
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">

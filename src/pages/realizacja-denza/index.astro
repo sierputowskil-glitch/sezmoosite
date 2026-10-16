@@ -1,10 +1,19 @@
 ---
 import AssetImage from '../../components/AssetImage.astro';
 import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../lib/schema';
 import { pageUrl } from '../../lib/site';
 
 const lang = 'pl' as const;
 const canonical = pageUrl('/realizacja-denza/');
+
+const jsonLd = creativeWorkJsonLd({
+  name: 'Premiera DENZA Z9 GT w Tokarach',
+  description: 'Case study SEZMOO: plenerowa premiera DENZA Z9 GT na polu golfowym w Tokarach pod Gdańskiem. Scenografia, ekspozycja modeli, oprawa eventu oraz produkcja foto i wideo.',
+  canonical,
+  image: '/assets/portfolio/denza/denza-z9-gt-premiera-fotografia-01.jpg',
+  lang,
+});
 ---
 
 <CaseStudyLayout
@@ -12,6 +21,7 @@ const canonical = pageUrl('/realizacja-denza/');
   title="Premiera DENZA Z9 GT w Tokarach · Realizacja SEZMOO"
   description="Case study SEZMOO: plenerowa premiera DENZA Z9 GT na polu golfowym w Tokarach pod Gdańskiem. Scenografia, ekspozycja modeli, oprawa eventu oraz produkcja foto i wideo."
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">

@@ -1,10 +1,19 @@
 ---
 import AssetImage from '../../components/AssetImage.astro';
 import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../lib/schema';
 import { pageUrl } from '../../lib/site';
 
 const lang = 'pl' as const;
 const canonical = pageUrl('/realizacja-doraco-hala-tvp/');
+
+const jsonLd = creativeWorkJsonLd({
+  name: 'DORACO · Hala zdjęciowa TVP · Film i foto',
+  description: 'Case study SEZMOO: film i zdjęcia z drona z budowy hali zdjęciowej TVP realizowanej przez DORACO.',
+  canonical,
+  image: '/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-01.jpg',
+  lang,
+});
 ---
 
 <CaseStudyLayout
@@ -12,6 +21,7 @@ const canonical = pageUrl('/realizacja-doraco-hala-tvp/');
   title="DORACO · Hala zdjęciowa TVP · Film i foto · Realizacja SEZMOO"
   description="Case study SEZMOO: film i zdjęcia z drona z budowy hali zdjęciowej TVP realizowanej przez DORACO."
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <header class="cs-hero" data-screen-label="Case · Cover">
   <div class="cs-hero__media"><AssetImage src="/assets/portfolio/doraco-tvp/doraco-hala-zdjeciowa-tvp-zdjecia-z-drona-01.jpg" alt="Hala zdjęciowa TVP zbudowana przez DORACO – zdjęcie z drona" loading="eager" fetchpriority="high" widths={[720, 1080, 1440, 1920]} sizes="100vw" quality={72} /></div>

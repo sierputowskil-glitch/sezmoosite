@@ -1,10 +1,19 @@
 ---
 import AssetImage from '../../components/AssetImage.astro';
 import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../lib/schema';
 import { pageUrl } from '../../lib/site';
 
 const lang = 'pl' as const;
 const canonical = pageUrl('/realizacja-k2/');
+
+const jsonLd = creativeWorkJsonLd({
+  name: 'Hodowla Ryb K2 · Rebranding, strona WWW, foto i dron',
+  description: 'Case study SEZMOO: odświeżenie logo, księga znaku, nowa strona internetowa, zdjęcia, film z drona i szablon prezentacji dla Hodowli Ryb K2 – producenta pstrąga tęczowego.',
+  canonical,
+  image: '/assets/portfolio/k2/k2-hodowla-pstraga-zdjecie-z-drona-baseny.webp',
+  lang,
+});
 ---
 
 <CaseStudyLayout
@@ -12,6 +21,7 @@ const canonical = pageUrl('/realizacja-k2/');
   title="Hodowla Ryb K2 · Rebranding, strona WWW, foto i dron · Realizacja SEZMOO"
   description="Case study SEZMOO: odświeżenie logo, księga znaku, nowa strona internetowa, zdjęcia, film z drona i szablon prezentacji dla Hodowli Ryb K2 – producenta pstrąga tęczowego."
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">

@@ -72,6 +72,10 @@ const gtmId = (import.meta.env.PUBLIC_GTM_ID || 'GTM-KJFG8DZL').trim();
 const jsonLdBlocks: string[] = [];
 if (typeof jsonLd === 'string' && jsonLd.trim()) {
   jsonLdBlocks.push(jsonLd);
+} else if (Array.isArray(jsonLd)) {
+  for (const block of jsonLd) {
+    if (block && typeof block === 'object') jsonLdBlocks.push(JSON.stringify(block));
+  }
 } else if (jsonLd && typeof jsonLd === 'object') {
   jsonLdBlocks.push(JSON.stringify(jsonLd));
 }

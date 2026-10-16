@@ -1,16 +1,39 @@
 ---
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import { itemListJsonLd } from '../../../lib/schema';
 import { pageUrl } from '../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/services/');
+const description =
+  'Video production, social media content, paid campaigns and landing pages by SEZMOO.';
+
+const jsonLd = itemListJsonLd({
+  name: 'SEZMOO services',
+  description,
+  canonical,
+  lang,
+  items: [
+    { name: 'Retainers', url: pageUrl('/en/services/retainers/') },
+    { name: 'Video', url: pageUrl('/en/services/video-production-reels/') },
+    { name: 'Photo', url: pageUrl('/en/services/photoghraphy/') },
+    { name: 'Graphic design', url: pageUrl('/en/services/graphic-design/') },
+    { name: 'UX/UI design', url: pageUrl('/en/services/ux-ui-design/') },
+    { name: 'Websites', url: pageUrl('/en/services/websites-and-landing-pages/') },
+    { name: 'Social media', url: pageUrl('/en/services/social-media-management/') },
+    { name: 'Events', url: pageUrl('/en/services/event-organization/') },
+    { name: 'Paid campaigns', url: pageUrl('/en/services/paid-campaigns/') },
+    { name: 'Advertising production', url: pageUrl('/en/services/advertising-production/') },
+  ],
+});
 ---
 
 <ServiceLayout
   lang={lang}
   title="Services | SEZMOO"
-  description="Video production, social media content, paid campaigns and landing pages by SEZMOO."
+  description={description}
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <section class="sub-hero shell service-hub">
     <div class="sub-hero__grid sub-hero__grid--solo">

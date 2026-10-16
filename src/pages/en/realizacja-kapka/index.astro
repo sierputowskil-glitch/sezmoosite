@@ -1,10 +1,19 @@
 ---
 import AssetImage from '../../../components/AssetImage.astro';
 import CaseStudyLayout from '../../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../../lib/schema';
 import { pageUrl } from '../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/realizacja-kapka/');
+
+const jsonLd = creativeWorkJsonLd({
+  name: 'Kapka Cafe · Logo & brand identity',
+  description: 'SEZMOO case study: logo, mascot and full brand identity for Kapka Cafe. Cup-and-hand mark, coffee-drop mascot, palette, menu, banner and in-store signage.',
+  canonical,
+  image: '/assets/portfolio/kapka/kapka-baner.jpg',
+  lang,
+});
 ---
 
 <CaseStudyLayout
@@ -12,6 +21,7 @@ const canonical = pageUrl('/en/realizacja-kapka/');
   title="Kapka Cafe · Logo & brand identity · SEZMOO case study"
   description="SEZMOO case study: logo, mascot and full brand identity for Kapka Cafe. Cup-and-hand mark, coffee-drop mascot, palette, menu, banner and in-store signage."
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">

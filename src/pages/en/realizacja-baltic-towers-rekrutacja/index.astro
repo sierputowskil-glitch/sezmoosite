@@ -1,10 +1,19 @@
 ---
 import AssetImage from '../../../components/AssetImage.astro';
 import CaseStudyLayout from '../../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../../lib/schema';
 import { pageUrl } from '../../../lib/site';
 
 const lang = 'en' as const;
 const canonical = pageUrl('/en/realizacja-baltic-towers-rekrutacja/');
+
+const jsonLd = creativeWorkJsonLd({
+  name: 'Baltic Towers · Recruitment campaign',
+  description: 'SEZMOO case study: Baltic Towers recruitment campaign – social media film and photography of wind tower production.',
+  canonical,
+  image: '/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-01.jpg',
+  lang,
+});
 ---
 
 <CaseStudyLayout
@@ -12,6 +21,7 @@ const canonical = pageUrl('/en/realizacja-baltic-towers-rekrutacja/');
   title="Baltic Towers · Recruitment campaign · SEZMOO case study"
   description="SEZMOO case study: Baltic Towers recruitment campaign – social media film and photography of wind tower production."
   canonical={canonical}
+  jsonLd={jsonLd}
 >
 <header class="cs-hero" data-screen-label="Case · Cover">
   <div class="cs-hero__media"><AssetImage src="/assets/portfolio/baltic-towers-foto/baltic-towers-fotografia-przemyslowa-produkcja-01.jpg" alt="Baltic Towers production hall – recruitment campaign" loading="eager" fetchpriority="high" widths={[720, 1080, 1440, 1920]} sizes="100vw" quality={72} /></div>
