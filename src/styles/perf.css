@@ -6,6 +6,12 @@
   .flow-bg-canvas {
     display: none !important;
   }
+  /* Skip reveal slide-up on touch — keeps FCP/LCP text painted */
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

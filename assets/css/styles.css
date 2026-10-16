@@ -461,6 +461,15 @@ main {
 .hero.is-in h1 .clip > span { animation: lineUp 1s var(--ease) both; }
 .hero.is-in h1 .clip:nth-child(2) > span { animation-delay: .12s; }
 @keyframes lineUp { to { transform: translateY(0); } }
+/* Mobile / reduced-motion: paint hero copy immediately (LCP is hero text) */
+@media (hover: none), (pointer: coarse) {
+  .hero h1 .clip > span { transform: none; }
+  .hero.is-in h1 .clip > span { animation: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 .clip > span { transform: none; }
+  .hero.is-in h1 .clip > span { animation: none; }
+}
 .hero h1 .accent { color: var(--rec); }
 /* wspólna miara: szerokość = 15ch fontu H1, więc lead ma dokładnie szerokość nagłówka */
 .hero__measure { font-family: inherit; font-weight: 780; font-stretch: 110%; letter-spacing: -0.02em;

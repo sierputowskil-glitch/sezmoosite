@@ -1181,7 +1181,16 @@
       });
     }
 
+    function warmWidget() {
+      ensureWidget().catch(function () {
+        say(en
+          ? "\u25cf Form protection failed to load \u2014 email biuro@sezmoo.com"
+          : "\u25cf Nie uda\u0142o si\u0119 za\u0142adowa\u0107 ochrony formularza \u2014 napisz na biuro@sezmoo.com");
+      });
+    }
+
     f.addEventListener("focusin", function () {
+      warmWidget();
       if (started) return;
       started = true;
       var meta = formMeta(f);
@@ -1193,11 +1202,20 @@
       });
     });
 
-    ensureWidget().catch(function () {
-      say(en
-        ? "\u25cf Form protection failed to load \u2014 email biuro@sezmoo.com"
-        : "\u25cf Nie uda\u0142o si\u0119 za\u0142adowa\u0107 ochrony formularza \u2014 napisz na biuro@sezmoo.com");
-    });
+    /* Load Turnstile near the form — not on every first paint */
+    if ("IntersectionObserver" in window) {
+      var tsIo = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            tsIo.disconnect();
+            warmWidget();
+          });
+        },
+        { rootMargin: "400px 0px" }
+      );
+      tsIo.observe(f);
+    }
 
     f.addEventListener("submit", function (e) {
       e.preventDefault();
