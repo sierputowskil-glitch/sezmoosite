@@ -8,7 +8,7 @@ Static marketing site for **SEZMOO** (Gdańsk creative / production agency):
 
 - **Astro 5**, `output: 'static'`, `trailingSlash: 'always'`, directory URLs
 - **Production:** Cloudflare Pages + Pages Function (`functions/api/contact.ts`)
-- **Staging:** Cloudflare (`sezmoo.websky.pro`) and optional GitHub Pages mirror (no contact API)
+- **Optional preview:** Cloudflare Pages `sezmoo-staging` (`*.pages.dev`) and GitHub Pages mirror (no contact API)
 - **Languages:** PL (default routes) + EN under `/en/…`
 - **Legacy:** pre-Astro HTML on branch `legacy/cyberfolks-html` — do not mix that tree into `main` casually
 

@@ -35,7 +35,7 @@ jobs:
           PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.PUBLIC_TURNSTILE_SITE_KEY }}
         run: npm run build
       # Artifact only needed when this run will deploy (main). feat/* is build-check only —
-      # CF staging (sezmoo.websky.pro) is the live preview; github-pages env allows main only.
+      # Optional CF preview: sezmoo-staging.pages.dev; github-pages env allows main only.
       - if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
