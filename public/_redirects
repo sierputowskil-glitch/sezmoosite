@@ -7,14 +7,10 @@
 # NOTE — /artykul/: legacy always 301 → /blog/. An unlisted sample post still builds at
 # /artykul/ for local `astro preview` (no _redirects), but on CF Pages this redirect wins.
 #
-# NOTE — ?portfolio= (legacy WP singles): _redirects cannot match query strings.
-# Zone Redirect Rule (dashboard): name "Legacy ?portfolio= → portfolio"
-#   When: (http.request.uri.query contains "portfolio=")
-#   Then: Dynamic 301, Preserve query string OFF
-#   Target:
-#     if(starts_with(http.request.uri.path, "/en"), "https://sezmoo.com/en/portfolio-en/",
-#       if(starts_with(http.request.uri.path, "/de"), "https://sezmoo.com/en/portfolio-en/",
-#         "https://sezmoo.com/portfolio/"))
+# NOTE — ?portfolio= (legacy WP singles): zone Single Redirect rules (not _redirects).
+#   EN/DE → https://sezmoo.com/en/portfolio-en/
+#   PL    → https://sezmoo.com/portfolio/
+#   When: http.request.uri.query contains "portfolio=" (+ path prefix for EN/DE)
 
 /abonament    https://abonament.sezmoo.com/  301
 /abonament/   https://abonament.sezmoo.com/  301
