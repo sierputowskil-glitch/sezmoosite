@@ -1,0 +1,168 @@
+# AGENTS.md — SEZMOO site
+
+Standards for AI agents and humans working in this repository. Prefer this file over guessing; for ops/deploy detail see [README.md](./README.md).
+
+## What this repo is
+
+Static marketing site for **SEZMOO** (Gdańsk creative / production agency):
+
+- **Astro 5**, `output: 'static'`, `trailingSlash: 'always'`, directory URLs
+- **Production:** Cloudflare Pages + Pages Function (`functions/api/contact.ts`)
+- **Staging:** Cloudflare (`sezmoo.websky.pro`) and optional GitHub Pages mirror (no contact API)
+- **Languages:** PL (default routes) + EN under `/en/…`
+- **Legacy:** pre-Astro HTML on branch `legacy/cyberfolks-html` — do not mix that tree into `main` casually
+
+Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `PHONE_TEL`). Keep footers, contact, and `assets/js/app.js` in sync when changing it.
+
+## Non-negotiables
+
+1. **Never commit secrets:** `.env`, `.dev.vars`, SMTP/Turnstile secrets. Use `.env.example` / `.dev.vars.example` only.
+2. **Edit source assets in `assets/`**, not `public/assets/`. `predev` / `prebuild` run `npm run sync:assets` (real copy, not symlink).
+3. **Trailing slashes** on all internal links (`/blog/`, `/uslugi-marketingowe/abonamenty/`). Match `astro.config.mjs`.
+4. **Canonicals / OG** must use `pageUrl()` / `PUBLIC_SITE_URL` — never hardcode `localhost` in shipped meta. Prod CI bakes `https://sezmoo.com`.
+5. **Do not reintroduce** `/abonament/` or `/en/retainer/` as on-site pages — they 301 to `https://abonament.sezmoo.com/` (separate campaign LP). Service page `/uslugi-marketingowe/abonamenty/` stays here.
+6. **One-shot migrators** (`npm run migrate:*`, `unstring:*`, many `scripts/*.mjs`) are historical — not for CI or routine edits. Prefer editing Astro/MD/TS directly.
+7. **Node ≥ 22** (`.nvmrc`). After substantive changes: `npm run check` (and `lint` when touching TS/Astro structure).
+
+## Layout (where to change what)
+
+| Path | Role |
+| --- | --- |
+| `src/pages/` | Routes (`index.astro`, services, case-study shells, `[slug].astro` for blog) |
+| `src/pages/en/` | English mirrors |
+| `src/content/blog/` | Blog Markdown collection |
+| `src/content.config.ts` | Blog Zod schema — update when adding frontmatter fields |
+| `src/components/` | Shared UI (`Nav`, `Footer`, `ContactForm`, `BlogArticle`, …) |
+| `src/layouts/` | `BaseLayout`, `ArticleLayout`, `ServiceLayout`, `CaseStudyLayout`, `PortfolioLayout` |
+| `src/data/case-studies.ts` | Case-study PL/EN copy keyed by YouTube / CDN video id |
+| `src/lib/` | `site.ts` (URLs, phone, media CDN), `blog.ts` (listings helpers) |
+| `assets/` | CSS, JS, images, video posters/manifest — source of truth |
+| `public/` | `_redirects`, `_headers`, `robots.txt`, `404.html`; assets appear after sync |
+| `functions/` | CF Pages Functions only (contact + rate limit) |
+| `scripts/` | Asset sync + one-off migrators / optimizers |
+
+## Commands
+
+```bash
+nvm use
+cp .env.example .env          # if missing
+cp .dev.vars.example .dev.vars
+npm ci
+npm run sync:assets
+npm run dev                   # http://localhost:4321
+npm run check                 # astro check
+npm run lint
+npm run build                 # → dist/
+npm run dev:functions         # Wrangler over dist/ for /api/contact
+```
+
+Contact API locally needs `npm run build` then `npm run dev:functions`, with Turnstile + SMTP in `.dev.vars`.
+
+## Code conventions
+
+### Astro pages
+
+- Prefer existing layouts: services → `ServiceLayout`, articles → `ArticleLayout` + `BlogArticle`, case studies → `CaseStudyLayout` / `CaseStudyPage`.
+- Set `lang`, `title`, `description`, `canonical` via `pageUrl('/path/')`. Pass `hreflangPl` / `hreflangEn` when a PL↔EN pair exists.
+- Reuse `ContactForm`, `AssetImage` / `OptImage`, `Footer`, `Nav` — do not duplicate chrome.
+- Service pages often ship JSON-LD (`Service`, `FAQPage`) in frontmatter/`extraHead` — keep provider data consistent (SEZMOO, Gdańsk, `biuro@sezmoo.com`, phone).
+- Preserve design system: CSS variables and classes from `assets/css` + layout inline styles; fonts are Archivo Variable + Space Mono (`src/styles/fonts.css`). Do not swap to Inter/system defaults.
+
+### Assets & media
+
+- Site images/CSS/JS: `assets/…` → synced to `/assets/…`.
+- Blog heroes: typically `/assets/blog/<slug>.webp` (file under `assets/blog/`).
+- MP4: Hostido CDN via `getMediaBase()` / `mediaUrl()` (`PUBLIC_MEDIA_BASE`, default `https://cdn.sezmoo.com`). Posters may stay on Pages for LCP.
+- Video case-study ids and posters: `assets/video/yt/manifest.json` (and related queue) — keep `case-studies.ts` `videoId`s aligned with the manifest / `CASE_STUDY_ORDER`.
+
+### TypeScript / quality
+
+- ESM (`"type": "module"`). Match existing import style and Prettier (`.prettierrc.json`, `prettier-plugin-astro`).
+- Do not expand scope: no drive-by refactors, no unsolicited README/docs unless asked.
+- Conventional commits when committing (`feat`, `fix`, `chore`, `docs`, `refactor`, `test`).
+
+## Content conventions
+
+### Blog (`src/content/blog/*.md`)
+
+- **URL:** `/{filename-without-extension}/` via `src/pages/[slug].astro` (not under `/blog/{slug}/`). Listing lives at `/blog/`.
+- **Filename = slug** (kebab-case PL SEO slug). Changing the filename changes the public URL — update internal links and redirects if needed.
+- **Schema** (`src/content.config.ts`): required `title`, `date`, `topic` ∈ `strategy` | `production` | `social`; optional `description`, `lead`, hero fields, `toc`, CTA overrides, OG overrides, `readingTime`, `lang` (`pl`|`en`, default `pl`).
+- **Flags:**
+  - `draft: true` — not built
+  - `listed: false` — builds at slug URL but omitted from `/blog/` listings (e.g. sample `/artykul/` locally; production `_redirects` sends `/artykul/` → `/blog/`)
+- **Body habits:**
+  - Section headings as `<h2 id="…" class="reveal">…</h2>` matching `toc[].id`
+  - Optional empty `<div id="wstep" class="reveal"></div>` for lead-only “Wstęp”
+  - Internal links to services with trailing slash, e.g. `/uslugi-marketingowe/obsluga-social-media/`
+  - Tone: practical B2B PL (or EN if `lang: en`), SEZMOO as agency voice — concrete, sales-aware, not fluff
+- **Frontmatter checklist for a new post:**
+  ```yaml
+  title: …
+  description: "…"          # meta + social fallback
+  date: YYYY-MM-DD
+  topic: strategy|production|social
+  topicLabel: STRATEGIA|PRODUKCJA|SOCIAL   # optional; defaults from topic
+  lang: pl
+  draft: false
+  listed: true
+  featured: false
+  readingTime: N
+  heroImage: /assets/blog/<slug>.webp
+  heroAlt: …
+  heroCaption: "SEZMOO / BLOG"
+  ogTitle: "… | SEZMOO"
+  ogDescription: "…"
+  lead: "…"
+  toc:
+    - id: "…"
+      label: "…"
+  ```
+- After adding a hero file under `assets/blog/`, run sync (or rely on `predev`/`prebuild`).
+
+### Case studies
+
+- Copy lives in `src/data/case-studies.ts` (PL + EN per `videoId`).
+- Route shells under `src/pages/realizacja*/` and `src/pages/en/realizacja*/` — follow an existing sibling page when adding a new case.
+- Order in nav/portfolio: `CASE_STUDY_ORDER`. Update both copy and order when inserting.
+
+### Service & marketing pages
+
+- PL: `src/pages/uslugi-marketingowe/<slug>/index.astro`
+- EN: `src/pages/en/services/…` (mirror structure of existing EN services)
+- Keep meta titles brand-suffixed (`| SEZMOO`), descriptions unique, JSON-LD in sync with visible claims.
+- Homepage and large marketing HTML often use `&nbsp;` / typographic spacing — preserve polish of adjacent copy when editing.
+
+### Redirects & SEO
+
+- Legacy paths: `public/_redirects` (Cloudflare). Prefer adding a redirect over leaving soft-404s for old WP/CyberFolks URLs.
+- Sitemap: `@astrojs/sitemap` at build — drafts/unlisted behavior follows collection filters in pages.
+- GTM: only when `PUBLIC_ENABLE_GTM=true` (prod CI). Do not enable in local defaults.
+
+## Env cheat sheet
+
+| Variable | Where | Notes |
+| --- | --- | --- |
+| `PUBLIC_SITE_URL` | `.env` / CI | Canonical origin |
+| `PUBLIC_BASE_PATH` | `.env` / CI | `/` prod; `/sezmoosite` GH Pages |
+| `PUBLIC_CONTACT_API_URL` | `.env` / CI | `/api/contact` on CF; **empty** on GH Pages |
+| `PUBLIC_TURNSTILE_SITE_KEY` | `.env` / CI | Dev forces Cloudflare dummy on `astro dev` |
+| `PUBLIC_ENABLE_GTM` | CI | `true` only in prod-like deploys |
+| `PUBLIC_MEDIA_BASE` | optional | CDN for MP4 |
+| Secrets | `.dev.vars` / CF | `TURNSTILE_SECRET_KEY`, `SMTP_*`, `MAIL_TO` |
+
+## Agent workflow (recommended)
+
+1. Read this file + the nearest existing file of the same type (sibling page / post / case study).
+2. Make the smallest change that satisfies the request.
+3. For content: validate frontmatter against `content.config.ts`; keep TOC ids ↔ heading ids.
+4. For UI: reuse layouts/components; keep PL/EN pairs and hreflang aligned when both exist.
+5. Verify with `npm run check` (and `npm run build` if touching routes, redirects, or env-sensitive meta).
+6. Do not commit unless the user asks; never push unless asked.
+
+## Out of scope / ask first
+
+- DNS, Cloudflare dashboard KV/secret cutover (documented in README — human ops)
+- Rewriting the whole design system or replacing CSS architecture
+- Running mass migrators against the live tree without an explicit request
+- Changing production GTM/Turnstile keys in CI workflows without confirmation
