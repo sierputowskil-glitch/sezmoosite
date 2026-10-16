@@ -80,13 +80,21 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {/* Theme BEFORE any paint — prevents dark→light FOUC when styles.css loads async */}
+  <script is:inline>
+    try {
+      var t = localStorage.getItem('sezmoo-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (_e) {}
+  </script>
   {/* Google Search: ICO/PNG ≥48px — SVG is not reliably used in SERP */}
   <link rel="icon" href="/favicon.ico" sizes="48x48" />
   <link rel="icon" href="/assets/favicon-48.png" type="image/png" sizes="48x48" />
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-  <meta name="theme-color" content="#16130e" />
+  <meta name="theme-color" content="#16130e" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f4f0e6" media="(prefers-color-scheme: light)" />
   <meta property="og:image" content={ogImg} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -97,7 +105,6 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
   {(hreflangPl || hreflangEn) && (
     <link rel="alternate" hreflang="x-default" href={hreflangPl || hreflangEn} />
   )}
-  <script is:inline>try{var t=localStorage.getItem('sezmoo-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(_e){}</script>
   <title>{title}</title>
   <meta name="title" content={title} />
   {description && <meta name="description" content={description} />}
@@ -114,7 +121,9 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
   {/* No font preload: with font-display:optional, preload extends LCP render-delay on Slow 4G */}
   {/* Critical above-the-fold — full sheet loads async to unblock LCP */}
   <style is:inline>
-    :root{color-scheme:dark;--bg:oklch(.1 .004 60);--fg:oklch(.96 .006 80);--fg-dim:oklch(.74 .008 75);--fg-faint:oklch(.55 .008 70);--rec:#ffd200;--on-accent:#17140a;--line:oklch(.27 .006 60);--line-soft:oklch(.27 .006 60 / .55);--font-display:"Archivo Variable",system-ui,sans-serif;--font-mono:"Space Mono",ui-monospace,monospace;--shell-pad:clamp(26px,4vw,56px);--maxw:1640px}
+    :root{color-scheme:dark;--bg:oklch(.1 .004 60);--bg-2:oklch(.135 .005 60);--fg:oklch(.96 .006 80);--fg-dim:oklch(.74 .008 75);--fg-faint:oklch(.55 .008 70);--rec:#ffd200;--on-accent:#17140a;--line:oklch(.27 .006 60);--line-soft:oklch(.27 .006 60 / .55);--font-display:"Archivo Variable",system-ui,sans-serif;--font-mono:"Space Mono",ui-monospace,monospace;--shell-pad:clamp(26px,4vw,56px);--maxw:1640px}
+    /* Must mirror styles.css light tokens — async sheet previously caused a global dark→light flash */
+    :root[data-theme="light"]{color-scheme:light;--bg:oklch(.965 .006 85);--bg-2:oklch(.930 .007 85);--fg:oklch(.235 .014 60);--fg-dim:oklch(.42 .014 60);--fg-faint:oklch(.545 .014 60);--rec:oklch(.47 .006 70);--on-accent:#17140a;--line:oklch(.80 .010 75);--line-soft:oklch(.80 .010 75 / .5)}
     *{box-sizing:border-box;margin:0;padding:0}
     html{overflow-x:clip}
     body{background:var(--bg);color:var(--fg);font-family:var(--font-display);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
@@ -135,8 +144,8 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     .nav__theme-opt.is-active,.nav__lang-opt.is-active{color:var(--on-accent);background:var(--rec)}
     /* Match mobile drawer (opacity:0) before full CSS — prevents CLS from menu links */
     .nav__menu{position:fixed;inset:0;opacity:0;visibility:hidden;pointer-events:none;z-index:95}
-    .nav__burger{display:grid;place-items:center;width:44px;height:44px;order:4}
-    .nav__burger span{display:block;width:22px;height:2px;background:var(--fg);margin:3px 0}
+    .nav__burger{display:grid;place-content:center;place-items:center;gap:5px;width:42px;height:42px;order:4}
+    .nav__burger span{display:block;width:20px;height:2px;margin:0;background:var(--fg)}
     .nav__menu-logo,.nav__social{display:none}
     @media (min-width:1101px){
       .nav__menu{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);inset:auto;opacity:1;visibility:visible;pointer-events:auto;display:flex;align-items:center;gap:clamp(18px,2vw,38px)}
@@ -169,29 +178,31 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     .hero__hud,.hero__corners,.hero__play{display:none}
     .btn{display:inline-flex;align-items:center;padding:17px 28px;border:1px solid var(--line);border-radius:100px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
     .btn--primary{background:var(--rec);border-color:var(--rec);color:var(--on-accent)}
+    /* Article critical — without this, hero img FOUCs under body text until styles.css applies */
+    .article{padding:clamp(110px,16vh,160px) 0 clamp(72px,12vh,120px)}
+    .article__head{max-width:52ch}
+    .article__title{font-weight:800;font-stretch:110%;font-size:clamp(34px,5vw,72px);line-height:1.02;letter-spacing:-.02em}
+    .article__lead{color:var(--fg-dim);font-size:clamp(17px,1.25vw,20px);line-height:1.65;margin-top:clamp(18px,3vh,28px)}
+    .article__media{position:relative;min-height:clamp(300px,50vw,620px);margin-top:clamp(38px,6vh,76px);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden;background:#0a0a0c}
+    .article__media .frame-media{position:absolute;inset:0}
+    .article__media .frame-media img{width:100%;height:100%;max-width:none;object-fit:cover;display:block}
+    .article__layout{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(28px,5vw,86px);margin-top:clamp(50px,8vh,96px)}
+    @media (min-width:1051px){.article__layout{grid-template-columns:240px minmax(0,760px)}}
+    /* Blog listing critical — featured img otherwise paints full-size above the fold before styles.css */
+    .blog--page{padding:clamp(110px,16vh,160px) 0 clamp(72px,12vh,120px)}
+    .blog-feature{display:grid;grid-template-columns:1fr;gap:1px;margin-top:clamp(28px,4vh,48px);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden;background:var(--line-soft);align-items:stretch}
+    @media (min-width:1051px){.blog-feature{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}}
+    .blog-feature__media{position:relative;min-width:0;width:100%;height:100%;min-height:clamp(260px,34vw,480px);overflow:hidden;background:#0a0a0c}
+    .blog-feature__media .frame-media{position:absolute;inset:0}
+    .blog-feature__media .frame-media img{width:100%;height:100%;max-width:none;object-fit:cover;display:block}
+    .blog-feature__body{background:var(--bg-2);padding:clamp(28px,4vw,62px);min-width:0}
     /* Hide chrome until full CSS — no !important so styles.css can reveal */
     .grain,.vignette,.cursor,.cursor-dot,.scrubber,.flow-bg-canvas,.floating-socials,.scroll-top{display:none}
   </style>
-  <link
-    rel="stylesheet"
-    href="/assets/css/styles.css?v=20261016p"
-    media="print"
-    id="sezmoo-css"
-  />
-  <noscript>
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20261016p" />
-  </noscript>
+  {/* Render-blocking — async media=print caused global FOUC (theme + blog featured img). */}
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261016t" />
   <script is:inline>
-    (function () {
-      var l = document.getElementById('sezmoo-css');
-      if (!l) return;
-      function ready() {
-        l.media = 'all';
-        document.documentElement.classList.add('html-css-ready');
-      }
-      if (l.sheet) ready();
-      else l.addEventListener('load', ready);
-    })();
+    document.documentElement.classList.add('html-css-ready');
   </script>
   {jsonLdBlocks.map((block) => (
     <script type="application/ld+json" set:html={block} />

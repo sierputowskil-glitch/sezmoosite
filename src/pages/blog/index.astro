@@ -43,7 +43,7 @@ const pageScripts = `<script>
 
 <BaseLayout
   lang="pl"
-  title="Blog, produkcja wideo, content i marketing marek | SEZMOO"
+  title="Blog, produkcja wideo, content i marketing marek | SEZMOO"
   description="Blog SEZMOO: praktyczne notatki o produkcji wideo, contentu na social media i marketingu marek, z planu, montażu i feedu."
   canonical={canonical}
   pageScripts={pageScripts}
@@ -76,7 +76,11 @@ const pageScripts = `<script>
                 <img
                   src={featured.data.heroImage}
                   alt={featured.data.heroAlt || featured.data.title}
+                  width="1200"
+                  height="800"
                   loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
                 />
               ) : null}
             </div>
