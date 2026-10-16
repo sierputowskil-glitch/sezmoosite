@@ -20,7 +20,7 @@ interface Props {
 }
 
 const { lang, study } = Astro.props;
-const id = study.youtubeId;
+const id = study.videoId;
 const copy: CaseStudyCopy = study[lang];
 const thumb = posterPath(id);
 const ratio = copy.short ? '9:16' : '16:9';
@@ -157,7 +157,7 @@ const ui =
       <div
         class:list={['cs-film__frame', 'rz-film__frame', { 'is-short': copy.short }]}
         data-cursor="play"
-        data-yt={id}
+        data-video={id}
         role="button"
         tabindex="0"
         aria-label={ui.playAria}

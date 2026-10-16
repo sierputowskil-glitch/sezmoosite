@@ -99,9 +99,6 @@
   background: var(--rec);
   border-color: var(--rec);
 }
-.work-reel .card[data-yt] {
-  cursor: pointer;
-}
 
 .svc__ico {
   display: block;

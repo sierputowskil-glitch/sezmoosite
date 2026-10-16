@@ -3,6 +3,7 @@
  * Case study / realizacja pages — always loads case-study.css.
  */
 import BaseLayout from './BaseLayout.astro';
+import caseStudyCssUrl from '../../assets/css/case-study.css?url';
 
 interface Props {
   lang?: 'pl' | 'en';
@@ -26,7 +27,7 @@ interface Props {
 }
 
 const props = Astro.props;
-const caseCss = '<link rel="stylesheet" href="/assets/css/case-study.css" />';
+const caseCss = `<link rel="stylesheet" href="${caseStudyCssUrl}" />`;
 const extraHead = [caseCss, props.extraHead].filter(Boolean).join('\n');
 ---
 
@@ -36,17 +37,17 @@ const extraHead = [caseCss, props.extraHead].filter(Boolean).join('\n');
   bodyClass={[props.bodyClass, 'case-study-page'].filter(Boolean).join(' ')}
 >
   <slot />
-  {/* Film play — first-party CDN MP4 only (no YouTube iframe). */}
+  {/* Film play — first-party CDN MP4 only. */}
   <script is:inline>
     (function () {
       var f = document.querySelector('.cs-film__frame');
       if (!f) return;
       function play() {
-        var id = f.getAttribute('data-yt');
+        var id = f.getAttribute('data-video');
         if (!id || f.querySelector('video.cdn-video')) return;
         var s = window.__SEZMOO__;
-        if (s && typeof s.mountYtEmbed === 'function') {
-          s.mountYtEmbed(f, id);
+        if (s && typeof s.mountVideoEmbed === 'function') {
+          s.mountVideoEmbed(f, id);
         }
       }
       f.addEventListener('click', play);

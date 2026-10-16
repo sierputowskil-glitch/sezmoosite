@@ -86,9 +86,9 @@
 
   /**
    * Play a video id in a container — CDN MP4 only (no YouTube iframe).
-   * Kept as mountYtEmbed for call-site compatibility (ids still use YT keys).
+   * Kept as mountVideoEmbed for call-site compatibility (ids still use YT keys).
    */
-  sez.mountYtEmbed = function (container, id, _query) {
+  sez.mountVideoEmbed = function (container, id, _query) {
     if (!container || !id) return null;
     if (container.querySelector('video.cdn-video')) return null;
     if (!sez.cdnVideoUrl(id)) return null;

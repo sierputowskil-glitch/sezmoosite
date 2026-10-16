@@ -3154,15 +3154,15 @@ img.card__video { background: var(--bg-2); }
 /* ============================================================
    BACKGROUND VIDEO — cover-fill any container (CDN MP4, no black bars)
    ============================================================ */
-.yt-bg {
+.video-bg {
   position: absolute; inset: 0; overflow: hidden;
   container-type: size; background: #000; z-index: 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.yt-bg video.cdn-video,
-.yt-bg video.yt-bg__video {
+.video-bg video.cdn-video,
+.video-bg video.video-bg__video {
   position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
   width:  max(100cqw, 100cqh * 16 / 9);
   height: max(100cqh, 100cqw * 9 / 16);
@@ -3179,7 +3179,7 @@ img.card__video { background: var(--bg-2); }
   border: 0; border-radius: 6px; background: #000;
   box-shadow: 0 30px 80px rgba(0,0,0,.55);
 }
-.pt-glb__yt video.cdn-video {
+.pt-glb__video video.cdn-video {
   width: 100%; height: 100%; border: 0; display: block;
   object-fit: contain; background: #000;
 }
@@ -3190,10 +3190,10 @@ video.cdn-video::-webkit-media-controls-enclosure {
 video.cdn-video::-webkit-media-controls-download-button {
   display: none !important;
 }
-/* Legacy YT bg (e.g. studio section) — keep visible without play gate */
-.hero__video:has(.yt-bg) { opacity: 1; }
-.hero__video .yt-bg { filter: brightness(0.78) saturate(1.05); }
-.studio__media .yt-bg { filter: brightness(0.78) saturate(1.05); }
+/* Studio / hero bg video — keep visible without play gate */
+.hero__video:has(.video-bg) { opacity: 1; }
+.hero__video .video-bg { filter: brightness(0.78) saturate(1.05); }
+.studio__media .video-bg { filter: brightness(0.78) saturate(1.05); }
 /* studio media becomes a vertical reel frame for the Short */
 .studio__media.is-vertical { aspect-ratio: 9 / 16; max-height: min(82vh, 860px); margin-inline: auto; }
 

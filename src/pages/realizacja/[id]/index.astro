@@ -21,7 +21,7 @@ interface Props {
 
 const { study } = Astro.props;
 const lang = 'pl' as const;
-const id = study.youtubeId;
+const id = study.videoId;
 const copy = study.pl;
 const canonical = pageUrl(caseStudyHref(id, lang));
 const hreflangPl = canonical;

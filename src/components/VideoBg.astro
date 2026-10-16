@@ -1,6 +1,6 @@
 ---
 /**
- * Deferred background video — local poster first, CDN MP4 (or YT fallback) near viewport.
+ * Deferred background video — local poster first, CDN MP4 near viewport.
  * Keeps LCP text off the video critical path on Slow 4G.
  */
 interface Props {
@@ -8,14 +8,12 @@ interface Props {
   title: string;
   /** hero: idle after first paint; lazy: IntersectionObserver */
   priority?: 'hero' | 'lazy';
-  origin?: string;
 }
 
 const {
   videoId,
   title,
   priority = 'lazy',
-  origin = 'https://sezmoo.com',
 } = Astro.props;
 
 const poster = `/assets/video/yt/posters/${videoId}.webp`;
@@ -24,12 +22,11 @@ const heroPosterStyle = priority === 'hero' ? `background-image:url('${poster}')
 ---
 
 <div
-  class="yt-bg"
-  data-yt-bg
-  data-yt-id={videoId}
-  data-yt-title={title}
-  data-yt-priority={priority}
-  data-yt-origin={origin}
-  data-yt-poster={poster}
+  class="video-bg"
+  data-video-bg
+  data-video-id={videoId}
+  data-video-title={title}
+  data-video-priority={priority}
+  data-video-poster={poster}
   style={heroPosterStyle}
 ></div>

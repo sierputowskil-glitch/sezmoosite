@@ -111,13 +111,13 @@
     var stage = glb.querySelector(".pt-glb__stage");
     var item = gList[gIdx],
       img = stage.querySelector("img"),
-      yt = stage.querySelector(".pt-glb__yt");
-    if (item.indexOf("yt:") === 0) {
+      yt = stage.querySelector(".pt-glb__video");
+    if (item.indexOf("vid:") === 0 || item.indexOf("yt:") === 0) {
       img.hidden = true;
       img.removeAttribute("src");
       yt.hidden = false;
       yt.innerHTML = "";
-      var gid = item.slice(3);
+      var gid = item.slice(item.indexOf(":") + 1);
       withCdn(gid, function () {
         if (!glb || glb.hidden) return;
         mountCdn(yt, gid, { controls: true, autoplay: true });
@@ -149,7 +149,7 @@
   function closeGallery() {
     if (!glb) return;
     glb.hidden = true;
-    glb.querySelector(".pt-glb__yt").innerHTML = "";
+    glb.querySelector(".pt-glb__video").innerHTML = "";
     document.body.style.overflow = "";
   }
   function openGallery(list, alt) {
@@ -164,7 +164,7 @@
         '<div class="pt-glb__stage">' +
         '<button class="pt-glb__nav pt-glb__nav--prev" type="button" aria-label="Poprzednie">\u2039</button>' +
         '<img alt="" />' +
-        '<div class="pt-glb__yt" hidden></div>' +
+        '<div class="pt-glb__video" hidden></div>' +
         '<button class="pt-glb__nav pt-glb__nav--next" type="button" aria-label="Nast\u0119pne">\u203a</button>' +
         '<span class="pt-glb__count"></span></div>';
       document.body.appendChild(glb);
@@ -193,9 +193,9 @@
   tiles.forEach(function (t) {
     t.addEventListener("click", function (e) {
       var id = t.getAttribute("data-id");
-      var isYt = t.getAttribute("data-media") === "yt" && id;
+      var isVideo = t.getAttribute("data-media") === "video" && id;
       // Video case-study tiles (legacy data-case) → static Astro routes
-      if (isYt && t.getAttribute("data-case") === "1") {
+      if (isVideo && t.getAttribute("data-case") === "1") {
         if (!t.getAttribute("href")) {
           e.preventDefault();
           location.href = (en ? "/en/realizacja/" : "/realizacja/") + id + "/";
@@ -203,7 +203,7 @@
         return;
       }
       // Pure video tile (no case-study URL): always open CDN/lightbox modal
-      if (isYt && !t.getAttribute("href")) {
+      if (isVideo && !t.getAttribute("href")) {
         e.preventDefault();
         openVideo(id, t.getAttribute("data-short") === "1");
         return;
@@ -224,7 +224,7 @@
   var canHover = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
   if (canHover) {
     tiles.forEach(function (t) {
-      if (t.getAttribute("data-media") !== "yt") return;
+      if (t.getAttribute("data-media") !== "video") return;
       var media = t.querySelector(".pt-media"),
         id = t.getAttribute("data-id"),
         timer = null;

@@ -1,5 +1,5 @@
-/** Video case studies keyed by YouTube id — PL + EN copy. */
-import ytManifest from '../../assets/video/yt/manifest.json';
+/** Video case studies keyed by CDN video id — PL + EN copy. */
+import videoManifest from '../../assets/video/yt/manifest.json';
 
 export type CaseStudyLang = 'pl' | 'en';
 
@@ -25,7 +25,7 @@ export interface CaseStudyCopy {
 }
 
 export interface CaseStudy {
-  youtubeId: string;
+  videoId: string;
   pl: CaseStudyCopy;
   en: CaseStudyCopy;
 }
@@ -51,7 +51,7 @@ export const CASE_STUDY_ORDER: readonly string[] = [
 
 export const CASE_STUDIES: Record<string, CaseStudy> = {
   'WG5ufZMfjQ8': {
-    youtubeId: 'WG5ufZMfjQ8',
+    videoId: 'WG5ufZMfjQ8',
     pl: {
       title: "Trailer RS5",
       accent: "RS5.",
@@ -103,7 +103,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   '4DTDakWPmfM': {
-    youtubeId: '4DTDakWPmfM',
+    videoId: '4DTDakWPmfM',
     pl: {
       title: "#TrybWiosna",
       accent: "Wiosna.",
@@ -155,7 +155,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'Hdnf6zcn3bA': {
-    youtubeId: 'Hdnf6zcn3bA',
+    videoId: 'Hdnf6zcn3bA',
     pl: {
       title: "JAECOO 8 × Modny Tata",
       accent: "Tata.",
@@ -207,7 +207,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'c_5toy1IhIs': {
-    youtubeId: 'c_5toy1IhIs',
+    videoId: 'c_5toy1IhIs',
     pl: {
       title: "Żółte RS3",
       accent: "RS3.",
@@ -259,7 +259,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'X8-hf_cyZxE': {
-    youtubeId: 'X8-hf_cyZxE',
+    videoId: 'X8-hf_cyZxE',
     pl: {
       title: "Dolphin z Kamilą",
       accent: "Dolphin.",
@@ -311,7 +311,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'O5iF7SxqX1I': {
-    youtubeId: 'O5iF7SxqX1I',
+    videoId: 'O5iF7SxqX1I',
     pl: {
       title: "Modny Tata, Padel",
       accent: "Padel.",
@@ -363,7 +363,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'jco18tIaCT0': {
-    youtubeId: 'jco18tIaCT0',
+    videoId: 'jco18tIaCT0',
     pl: {
       title: "CRT",
       accent: "CRT.",
@@ -415,7 +415,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'NHEIfdgr9mI': {
-    youtubeId: 'NHEIfdgr9mI',
+    videoId: 'NHEIfdgr9mI',
     pl: {
       title: "IZIPAK",
       accent: "IZIPAK.",
@@ -467,7 +467,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'wVy04YYnbRM': {
-    youtubeId: 'wVy04YYnbRM',
+    videoId: 'wVy04YYnbRM',
     pl: {
       title: "PISF",
       accent: "PISF.",
@@ -519,7 +519,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'iknT-xURZag': {
-    youtubeId: 'iknT-xURZag',
+    videoId: 'iknT-xURZag',
     pl: {
       title: "Gdańsk Miastem Kultury",
       accent: "Kultury.",
@@ -571,7 +571,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'tvTuMX3mxG4': {
-    youtubeId: 'tvTuMX3mxG4',
+    videoId: 'tvTuMX3mxG4',
     pl: {
       title: "Baltic Towers",
       accent: "Towers.",
@@ -623,7 +623,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'lD11UTII6Ko': {
-    youtubeId: 'lD11UTII6Ko',
+    videoId: 'lD11UTII6Ko',
     pl: {
       title: "Dzień Mamy z Modną Mamą",
       accent: "Mamą.",
@@ -675,7 +675,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   '7HZN5VCTvoo': {
-    youtubeId: '7HZN5VCTvoo',
+    videoId: '7HZN5VCTvoo',
     pl: {
       title: "Animacja Dolphin G",
       accent: "Dolphin G.",
@@ -727,7 +727,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'lOwJMPKMdYA': {
-    youtubeId: 'lOwJMPKMdYA',
+    videoId: 'lOwJMPKMdYA',
     pl: {
       title: "Baltic BHP",
       accent: "BHP.",
@@ -779,7 +779,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
   },
   'WszuntCE51c': {
-    youtubeId: 'WszuntCE51c',
+    videoId: 'WszuntCE51c',
     pl: {
       title: "Baltic Model Fabryki",
       accent: "3D.",
@@ -863,6 +863,6 @@ export function posterPath(id: string): string {
 
 /** Absolute CDN MP4 URL for a video id (YouTube key → first-party file). */
 export function cdnVideoContentUrl(id: string): string | undefined {
-  const entry = (ytManifest as Record<string, { cdn?: string }>)[id];
+  const entry = (videoManifest as Record<string, { cdn?: string }>)[id];
   return entry?.cdn;
 }
