@@ -12,22 +12,11 @@ heroImage: /assets/blog/animacja-3d-czy-film-produktowy.webp
 heroAlt: Animacja 3D czy film produktowy?
 ogTitle: "Animacja 3D czy film produktowy? | SEZMOO"
 ogDescription: "Animacja 3D czy film produktowy – sprawdź, które rozwiązanie lepiej sprzedaje, tłumaczy produkt i pasuje do celu kampanii oraz budżetu."
+lead: "Jeśli stoisz przed wyborem animacja 3D czy film produktowy, problem zwykle nie dotyczy samej estetyki. Chodzi o sprzedaż, zrozumienie produktu i tempo działania. Dobrze dobrany format potrafi skrócić ścieżkę decyzyjną klienta, a źle dobrany robi wrażenie tylko przez chwilę i nie dowozi wyniku."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 06.05.2026</span>
-      <h1 class="article__title reveal">Animacja 3D czy film produktowy?</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli stoisz przed wyborem animacja 3D czy film produktowy, problem zwykle nie dotyczy samej estetyki. Chodzi o sprzedaż, zrozumienie produktu i tempo działania. Dobrze dobrany format potrafi skrócić ścieżkę decyzyjną klienta, a źle dobrany robi wrażenie tylko przez chwilę i nie dowozi wyniku.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/animacja-3d-czy-film-produktowy.webp" alt="Animacja 3D czy film produktowy?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -105,4 +94,3 @@ ogDescription: "Animacja 3D czy film produktowy – sprawdź, które rozwiązani
         </div>
       </div>
     </div>
-  </article>

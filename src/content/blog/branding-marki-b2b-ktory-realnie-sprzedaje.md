@@ -12,22 +12,11 @@ heroImage: /assets/blog/branding-marki-b2b-ktory-realnie-sprzedaje.webp
 heroAlt: "Branding marki B2B, który realnie sprzedaje"
 ogTitle: "Branding marki B2B, który realnie sprzedaje | SEZMOO"
 ogDescription: "Branding marki B2B wpływa na sprzedaż, zaufanie i pozycję firmy. Sprawdź, jak budować markę, która wspiera handel i skraca decyzje."
+lead: "Jeśli Twoja firma sprzedaje dobrą usługę, ma sensowny produkt i dowozi jakość, a mimo to klienci dalej pytają głównie o cenę, problem często nie leży w ofercie. Bardzo często leży w tym, jak marka jest odbierana. Branding marki B2B nie jest dodatkiem do sprzedaży. To element, który porządkuje komunikację, wzmacnia wiarygodność i sprawia, że klient szybciej rozumie, dlaczego warto rozmawiać właśnie z Tobą."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 29.05.2026</span>
-      <h1 class="article__title reveal">Branding marki B2B, który realnie sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli Twoja firma sprzedaje dobrą usługę, ma sensowny produkt i dowozi jakość, a mimo to klienci dalej pytają głównie o cenę, problem często nie leży w ofercie. Bardzo często leży w tym, jak marka jest odbierana. Branding marki B2B nie jest dodatkiem do sprzedaży. To element, który porządkuje komunikację, wzmacnia wiarygodność i sprawia, że klient szybciej rozumie, dlaczego warto rozmawiać właśnie z Tobą.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/branding-marki-b2b-ktory-realnie-sprzedaje.webp" alt="Branding marki B2B, który realnie sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -111,4 +100,3 @@ ogDescription: "Branding marki B2B wpływa na sprzedaż, zaufanie i pozycję fir
         </div>
       </div>
     </div>
-  </article>

@@ -12,22 +12,11 @@ heroImage: /assets/blog/fotografia-produktowa-do-e-commerce.webp
 heroAlt: Fotografia produktowa do e commerce działa
 ogTitle: "Fotografia produktowa do e commerce działa | SEZMOO"
 ogDescription: "Fotografia produktowa do e commerce realnie wpływa na sprzedaż. Sprawdź, jak planować zdjęcia, które zwiększają konwersję i zwroty."
+lead: "Pierwsze wrażenie w sklepie internetowym trwa krócej niż kliknięcie. Klient widzi miniaturę, jedno zdjęcie na karcie produktu i w kilka sekund decyduje, czy chce iść dalej. Właśnie dlatego fotografia produktowa do e commerce nie jest dodatkiem do oferty, tylko jednym z jej najmocniejszych narzędzi sprzedażowych. Jeśli zdjęcia nie budują zaufania, nie pokazują detalu i nie pomagają ocenić produktu, marketing musi pracować dwa razy ciężej."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 04.07.2026</span>
-      <h1 class="article__title reveal">Fotografia produktowa do e commerce działa</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze wrażenie w sklepie internetowym trwa krócej niż kliknięcie. Klient widzi miniaturę, jedno zdjęcie na karcie produktu i w kilka sekund decyduje, czy chce iść dalej. Właśnie dlatego fotografia produktowa do e commerce nie jest dodatkiem do oferty, tylko jednym z jej najmocniejszych narzędzi sprzedażowych. Jeśli zdjęcia nie budują zaufania, nie pokazują detalu i nie pomagają ocenić produktu, marketing musi pracować dwa razy ciężej.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/fotografia-produktowa-do-e-commerce.webp" alt="Fotografia produktowa do e commerce działa" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -108,4 +97,3 @@ ogDescription: "Fotografia produktowa do e commerce realnie wpływa na sprzedaż
         </div>
       </div>
     </div>
-  </article>

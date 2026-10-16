@@ -12,22 +12,11 @@ heroImage: /assets/blog/animacja-3d-do-reklamy.webp
 heroAlt: "Animacja 3D do reklamy, która sprzedaje"
 ogTitle: "Animacja 3D do reklamy, która sprzedaje | SEZMOO"
 ogDescription: "Animacja 3D do reklamy pokazuje produkt, wyjaśnia jego wartość i zatrzymuje uwagę. Zobacz, kiedy działa i jak dobrze zaplanować produkcję dla Twojej marki."
+lead: "Produkt ma świetne parametry, ale na zdjęciu wygląda jak każdy inny? Właśnie w tym miejscu animacja 3D do reklamy robi różnicę. Pozwala pokazać detale niewidoczne dla kamery, rozłożyć mechanizm na części, zasymulować działanie urządzenia albo umieścić produkt w świecie, którego nie da się zbudować na planie zdjęciowym."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 05 MIN · 18.07.2026</span>
-      <h1 class="article__title reveal">Animacja 3D do reklamy, która sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Produkt ma świetne parametry, ale na zdjęciu wygląda jak każdy inny? Właśnie w tym miejscu animacja 3D do reklamy robi różnicę. Pozwala pokazać detale niewidoczne dla kamery, rozłożyć mechanizm na części, zasymulować działanie urządzenia albo umieścić produkt w świecie, którego nie da się zbudować na planie zdjęciowym.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/animacja-3d-do-reklamy.webp" alt="Animacja 3D do reklamy, która sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -98,4 +87,3 @@ ogDescription: "Animacja 3D do reklamy pokazuje produkt, wyjaśnia jego wartoś�
         </div>
       </div>
     </div>
-  </article>

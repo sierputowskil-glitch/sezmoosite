@@ -12,22 +12,11 @@ heroImage: /assets/blog/sesja-wizerunkowa-firmy.webp
 heroAlt: "Sesja wizerunkowa firmy, która pracuje na markę"
 ogTitle: "Sesja wizerunkowa firmy, która pracuje na markę | SEZMOO"
 ogDescription: "Sesja wizerunkowa firmy buduje zaufanie, porządkuje komunikację i daje gotowe materiały do sprzedaży, rekrutacji i social mediów."
+lead: "Pierwsze wrażenie marki coraz rzadziej powstaje w recepcji, sali konferencyjnej czy podczas spotkania handlowego. Najczęściej zaczyna się na stronie internetowej, w LinkedInie, w ofercie PDF albo w ogłoszeniu rekrutacyjnym. Właśnie dlatego sesja wizerunkowa firmy nie jest dziś dodatkiem do marketingu, tylko jego narzędziem roboczym. Dobre zdjęcia mają sprzedawać wiarygodność, porządkować przekaz i pokazywać, że za marką stoją konkretni ludzie, procesy i standard pracy."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 07 MIN · 22.06.2026</span>
-      <h1 class="article__title reveal">Sesja wizerunkowa firmy, która pracuje na markę</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze wrażenie marki coraz rzadziej powstaje w recepcji, sali konferencyjnej czy podczas spotkania handlowego. Najczęściej zaczyna się na stronie internetowej, w LinkedInie, w ofercie PDF albo w ogłoszeniu rekrutacyjnym. Właśnie dlatego sesja wizerunkowa firmy nie jest dziś dodatkiem do marketingu, tylko jego narzędziem roboczym. Dobre zdjęcia mają sprzedawać wiarygodność, porządkować przekaz i pokazywać, że za marką stoją konkretni ludzie, procesy i standard pracy.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/sesja-wizerunkowa-firmy.webp" alt="Sesja wizerunkowa firmy, która pracuje na markę" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -104,4 +93,3 @@ ogDescription: "Sesja wizerunkowa firmy buduje zaufanie, porządkuje komunikacj�
         </div>
       </div>
     </div>
-  </article>

@@ -12,22 +12,11 @@ heroImage: /assets/blog/marketing-outsourcing-kiedy-sie-oplaca.webp
 heroAlt: Marketing outsourcing – kiedy to się opłaca
 ogTitle: "Marketing outsourcing – kiedy to się opłaca | SEZMOO"
 ogDescription: "Marketing outsourcing pomaga firmom rosnąć bez budowy dużego zespołu. Sprawdź, kiedy się opłaca, co zyskujesz i na co uważać."
+lead: "W wielu firmach moment krytyczny wygląda podobnie: sprzedaż ma ambitne cele, marka potrzebuje lepszej widoczności, a marketing jest rozciągnięty między „trzeba coś wrzucić na social media”, kampanię rekrutacyjną, nową ofertę, stronę www i materiały dla handlowców. Właśnie wtedy marketing outsourcing przestaje być modnym hasłem, a zaczyna być rozsądną decyzją operacyjną."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 24.06.2026</span>
-      <h1 class="article__title reveal">Marketing outsourcing – kiedy to się opłaca</h1>
-      <p class="article__lead reveal" data-d="1">W wielu firmach moment krytyczny wygląda podobnie: sprzedaż ma ambitne cele, marka potrzebuje lepszej widoczności, a marketing jest rozciągnięty między „trzeba coś wrzucić na social media”, kampanię rekrutacyjną, nową ofertę, stronę www i materiały dla handlowców. Właśnie wtedy marketing outsourcing przestaje być modnym hasłem, a zaczyna być rozsądną decyzją operacyjną.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/marketing-outsourcing-kiedy-sie-oplaca.webp" alt="Marketing outsourcing – kiedy to się opłaca" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -108,4 +97,3 @@ ogDescription: "Marketing outsourcing pomaga firmom rosnąć bez budowy dużego 
         </div>
       </div>
     </div>
-  </article>

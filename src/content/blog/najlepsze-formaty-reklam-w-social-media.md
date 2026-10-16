@@ -12,22 +12,11 @@ heroImage: /assets/blog/najlepsze-formaty-reklam-w-social-media.webp
 heroAlt: Najlepsze formaty reklam w social media
 ogTitle: "Najlepsze formaty reklam w social media | SEZMOO"
 ogDescription: "Najlepsze formaty reklam w social media nie zawsze są oczywiste. Sprawdź, które kreacje realnie wspierają sprzedaż, zasięg i leady."
+lead: "W kampaniach social media najdroższy błąd rzadko dotyczy budżetu. Zwykle chodzi o zły format. Możesz mieć dobry produkt, sensowny target i poprawnie ustawioną kampanię, a mimo to przepalać środki, jeśli kreacja nie pasuje do celu. Dlatego pytanie o najlepsze formaty reklam w social media nie jest techniczne. To pytanie o wynik."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 06 MIN · 10.07.2026</span>
-      <h1 class="article__title reveal">Najlepsze formaty reklam w social media</h1>
-      <p class="article__lead reveal" data-d="1">W kampaniach social media najdroższy błąd rzadko dotyczy budżetu. Zwykle chodzi o zły format. Możesz mieć dobry produkt, sensowny target i poprawnie ustawioną kampanię, a mimo to przepalać środki, jeśli kreacja nie pasuje do celu. Dlatego pytanie o najlepsze formaty reklam w social media nie jest techniczne. To pytanie o wynik.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/najlepsze-formaty-reklam-w-social-media.webp" alt="Najlepsze formaty reklam w social media" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -110,4 +99,3 @@ ogDescription: "Najlepsze formaty reklam w social media nie zawsze są oczywiste
         </div>
       </div>
     </div>
-  </article>

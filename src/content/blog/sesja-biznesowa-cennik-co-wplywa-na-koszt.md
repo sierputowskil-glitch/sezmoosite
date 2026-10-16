@@ -12,22 +12,11 @@ heroImage: /assets/blog/sesja-biznesowa-cennik-co-wplywa-na-koszt.webp
 heroAlt: Sesja biznesowa cennik – co wpływa na koszt
 ogTitle: "Sesja biznesowa cennik – co wpływa na koszt | SEZMOO"
 ogDescription: "Sesja biznesowa cennik zależy od celu, zakresu i wdrożenia. Sprawdź, co realnie wpływa na koszt zdjęć dla firmy i jak wybrać pakiet."
+lead: "Gdy ktoś wpisuje w Google „sesja biznesowa cennik”, zwykle nie szuka samej liczby. Szuka odpowiedzi, ile trzeba zapłacić, żeby zdjęcia faktycznie pracowały na markę, sprzedaż albo rekrutację. I tu zaczyna się różnica między „kilkoma portretami” a materiałem, który da się wykorzystać na stronie, w social mediach , w kampanii i w komunikacji PR."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 02.07.2026</span>
-      <h1 class="article__title reveal">Sesja biznesowa cennik – co wpływa na koszt</h1>
-      <p class="article__lead reveal" data-d="1">Gdy ktoś wpisuje w Google „sesja biznesowa cennik”, zwykle nie szuka samej liczby. Szuka odpowiedzi, ile trzeba zapłacić, żeby zdjęcia faktycznie pracowały na markę, sprzedaż albo rekrutację. I tu zaczyna się różnica między „kilkoma portretami” a materiałem, który da się wykorzystać na stronie, w social mediach , w kampanii i w komunikacji PR.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/sesja-biznesowa-cennik-co-wplywa-na-koszt.webp" alt="Sesja biznesowa cennik – co wpływa na koszt" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -107,4 +96,3 @@ ogDescription: "Sesja biznesowa cennik zależy od celu, zakresu i wdrożenia. Sp
         </div>
       </div>
     </div>
-  </article>

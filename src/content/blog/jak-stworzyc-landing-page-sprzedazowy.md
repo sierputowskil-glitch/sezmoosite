@@ -12,22 +12,11 @@ heroImage: /assets/blog/jak-stworzyc-landing-page-sprzedazowy.webp
 heroAlt: Jak stworzyć landing page sprzedażowy
 ogTitle: "Jak stworzyć landing page sprzedażowy | SEZMOO"
 ogDescription: "Jak stworzyć landing page sprzedażowy, który nie tylko wygląda dobrze, ale realnie konwertuje? Poznaj układ, treści i błędy do uniknięcia."
+lead: "Dobry landing page widać po jednym: użytkownik nie zastanawia się, co ma zrobić dalej. Wie, gdzie jest, rozumie ofertę i dostaje konkretny powód, żeby kliknąć, zapisać się albo wysłać formularz. Jeśli pytasz, jak stworzyć landing page sprzedażowy, który faktycznie pracuje na wynik, zacznij nie od kolorów i animacji, ale od celu biznesowego."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 04.06.2026</span>
-      <h1 class="article__title reveal">Jak stworzyć landing page sprzedażowy</h1>
-      <p class="article__lead reveal" data-d="1">Dobry landing page widać po jednym: użytkownik nie zastanawia się, co ma zrobić dalej. Wie, gdzie jest, rozumie ofertę i dostaje konkretny powód, żeby kliknąć, zapisać się albo wysłać formularz. Jeśli pytasz, jak stworzyć landing page sprzedażowy, który faktycznie pracuje na wynik, zacznij nie od kolorów i animacji, ale od celu biznesowego.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-stworzyc-landing-page-sprzedazowy.webp" alt="Jak stworzyć landing page sprzedażowy" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -108,4 +97,3 @@ ogDescription: "Jak stworzyć landing page sprzedażowy, który nie tylko wyglą
         </div>
       </div>
     </div>
-  </article>

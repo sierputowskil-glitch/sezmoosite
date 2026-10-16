@@ -12,22 +12,11 @@ heroImage: /assets/blog/jak-przygotowac-firme-do-sesji-wizerunkowej.webp
 heroAlt: Jak przygotować firmę do sesji wizerunkowej
 ogTitle: "Jak przygotować firmę do sesji wizerunkowej | SEZMOO"
 ogDescription: "Sprawdź, jak przygotować firmę do sesji wizerunkowej, aby zdjęcia wspierały sprzedaż, rekrutację i spójny, profesjonalny obraz marki na każdym etapie."
+lead: "Zdjęcia do zakładki „O nas”, LinkedIna czy kampanii rekrutacyjnej nie powstają tylko po to, by dobrze wyglądać. Mają skrócić dystans, potwierdzić skalę działania i pomóc klientowi podjąć decyzję. Dlatego pytanie, jak przygotować firmę do sesji wizerunkowej , warto potraktować jak element komunikacji marki, a nie organizację kilku kadrów w kalendarzu."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 12.07.2026</span>
-      <h1 class="article__title reveal">Jak przygotować firmę do sesji wizerunkowej</h1>
-      <p class="article__lead reveal" data-d="1">Zdjęcia do zakładki „O nas”, LinkedIna czy kampanii rekrutacyjnej nie powstają tylko po to, by dobrze wyglądać. Mają skrócić dystans, potwierdzić skalę działania i pomóc klientowi podjąć decyzję. Dlatego pytanie, jak przygotować firmę do sesji wizerunkowej , warto potraktować jak element komunikacji marki, a nie organizację kilku kadrów w kalendarzu.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-przygotowac-firme-do-sesji-wizerunkowej.webp" alt="Jak przygotować firmę do sesji wizerunkowej" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -102,4 +91,3 @@ ogDescription: "Sprawdź, jak przygotować firmę do sesji wizerunkowej, aby zdj
         </div>
       </div>
     </div>
-  </article>

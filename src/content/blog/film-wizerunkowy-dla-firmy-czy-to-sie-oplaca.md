@@ -12,22 +12,11 @@ heroImage: /assets/blog/film-wizerunkowy-dla-firmy-czy-to-sie-oplaca.webp
 heroAlt: Film wizerunkowy dla firmy – czy to się opłaca?
 ogTitle: "Film wizerunkowy dla firmy – czy to się opłaca? | SEZMOO"
 ogDescription: "Film wizerunkowy dla firmy buduje zaufanie, wspiera sprzedaż i rekrutację. Sprawdź, kiedy warto go zrobić i jak wycisnąć z niego więcej."
+lead: "Są marki, które mówią o sobie dużo, a i tak trudno je zapamiętać. I są takie, które pokazują 60 sekund materiału i od razu wiadomo, z kim mamy do czynienia. Właśnie dlatego film wizerunkowy dla firmy nie jest dziś dodatkiem do komunikacji, tylko jednym z najszybszych sposobów na zbudowanie pierwszego wrażenia, które pracuje na sprzedaż, zaufanie i rozpoznawalność."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 26.04.2026</span>
-      <h1 class="article__title reveal">Film wizerunkowy dla firmy – czy to się opłaca?</h1>
-      <p class="article__lead reveal" data-d="1">Są marki, które mówią o sobie dużo, a i tak trudno je zapamiętać. I są takie, które pokazują 60 sekund materiału i od razu wiadomo, z kim mamy do czynienia. Właśnie dlatego film wizerunkowy dla firmy nie jest dziś dodatkiem do komunikacji, tylko jednym z najszybszych sposobów na zbudowanie pierwszego wrażenia, które pracuje na sprzedaż, zaufanie i rozpoznawalność.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/film-wizerunkowy-dla-firmy-czy-to-sie-oplaca.webp" alt="Film wizerunkowy dla firmy – czy to się opłaca?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -111,4 +100,3 @@ ogDescription: "Film wizerunkowy dla firmy buduje zaufanie, wspiera sprzedaż i 
         </div>
       </div>
     </div>
-  </article>

@@ -12,22 +12,11 @@ heroImage: /assets/blog/przewodnik-po-brandingu-dla-firm-w-praktyce.webp
 heroAlt: Przewodnik po brandingu dla firm w praktyce
 ogTitle: "Przewodnik po brandingu dla firm w praktyce | SEZMOO"
 ogDescription: "Przewodnik po brandingu dla firm: jak zbudować spójną markę, wyróżnić się na rynku i przełożyć komunikację na sprzedaż oraz zaufanie."
+lead: "Brand, który „jakoś wygląda”, ale nie pomaga w sprzedaży, rekrutacji ani budowaniu zaufania, jest po prostu kosztem. Ten przewodnik po brandingu dla firm powstał dla marek, które chcą uporządkować komunikację i zacząć traktować branding jak narzędzie biznesowe, a nie projekt estetyczny do odhaczenia."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 07 MIN · 14.06.2026</span>
-      <h1 class="article__title reveal">Przewodnik po brandingu dla firm w praktyce</h1>
-      <p class="article__lead reveal" data-d="1">Brand, który „jakoś wygląda”, ale nie pomaga w sprzedaży, rekrutacji ani budowaniu zaufania, jest po prostu kosztem. Ten przewodnik po brandingu dla firm powstał dla marek, które chcą uporządkować komunikację i zacząć traktować branding jak narzędzie biznesowe, a nie projekt estetyczny do odhaczenia.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/przewodnik-po-brandingu-dla-firm-w-praktyce.webp" alt="Przewodnik po brandingu dla firm w praktyce" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -110,4 +99,3 @@ ogDescription: "Przewodnik po brandingu dla firm: jak zbudować spójną markę,
         </div>
       </div>
     </div>
-  </article>

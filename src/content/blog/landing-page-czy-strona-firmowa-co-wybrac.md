@@ -12,22 +12,11 @@ heroImage: /assets/blog/landing-page-czy-strona-firmowa-co-wybrac.webp
 heroAlt: Landing page czy strona firmowa – co wybrać?
 ogTitle: "Landing page czy strona firmowa – co wybrać? | SEZMOO"
 ogDescription: "Landing page czy strona firmowa? Sprawdź, co lepiej wspiera sprzedaż, kampanie i wizerunek marki – i kiedy najlepiej połączyć oba rozwiązania."
+lead: "Jeśli zadajesz sobie pytanie: landing page czy strona firmowa, to najpewniej nie chodzi Ci o sam wygląd witryny. Chodzi o wynik. Więcej leadów, lepszą prezentację oferty, sensownie wydany budżet i mniej chaosu w marketingu. I właśnie od tego warto zacząć, bo wybór między jednym a drugim narzędziem nie jest kwestią mody, tylko celu biznesowego."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 27.05.2026</span>
-      <h1 class="article__title reveal">Landing page czy strona firmowa – co wybrać?</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli zadajesz sobie pytanie: landing page czy strona firmowa, to najpewniej nie chodzi Ci o sam wygląd witryny. Chodzi o wynik. Więcej leadów, lepszą prezentację oferty, sensownie wydany budżet i mniej chaosu w marketingu. I właśnie od tego warto zacząć, bo wybór między jednym a drugim narzędziem nie jest kwestią mody, tylko celu biznesowego.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/landing-page-czy-strona-firmowa-co-wybrac.webp" alt="Landing page czy strona firmowa – co wybrać?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -110,4 +99,3 @@ ogDescription: "Landing page czy strona firmowa? Sprawdź, co lepiej wspiera spr
         </div>
       </div>
     </div>
-  </article>

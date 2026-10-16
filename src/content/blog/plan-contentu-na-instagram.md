@@ -12,22 +12,11 @@ heroImage: /assets/blog/plan-contentu-na-instagram.webp
 heroAlt: "Plan contentu na Instagram, który wspiera sprzedaż"
 ogTitle: "Plan contentu na Instagram, który wspiera sprzedaż | SEZMOO"
 ogDescription: "Plan contentu na Instagram pomaga firmie publikować regularnie, budować rozpoznawalność i zamieniać uwagę odbiorców w konkretne zapytania sprzedażowe."
+lead: "Firmowy Instagram nie przegrywa dlatego, że brakuje mu ładnych grafik. Przegrywa wtedy, gdy każdy post powstaje osobno, w pośpiechu i bez odpowiedzi na pytanie: co ta publikacja ma zrobić dla marki? Dobrze przygotowany plan contentu na Instagram porządkuje komunikację, skraca czas akceptacji i sprawia, że treści pracują na rozpoznawalność, relację z odbiorcą oraz sprzedaż."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 06 MIN · 26.07.2026</span>
-      <h1 class="article__title reveal">Plan contentu na Instagram, który wspiera sprzedaż</h1>
-      <p class="article__lead reveal" data-d="1">Firmowy Instagram nie przegrywa dlatego, że brakuje mu ładnych grafik. Przegrywa wtedy, gdy każdy post powstaje osobno, w pośpiechu i bez odpowiedzi na pytanie: co ta publikacja ma zrobić dla marki? Dobrze przygotowany plan contentu na Instagram porządkuje komunikację, skraca czas akceptacji i sprawia, że treści pracują na rozpoznawalność, relację z odbiorcą oraz sprzedaż.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/plan-contentu-na-instagram.webp" alt="Plan contentu na Instagram, który wspiera sprzedaż" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -109,4 +98,3 @@ ogDescription: "Plan contentu na Instagram pomaga firmie publikować regularnie,
         </div>
       </div>
     </div>
-  </article>

@@ -12,22 +12,11 @@ heroImage: /assets/blog/ulotka-reklamowa-projekt-ktory-sprzedaje.webp
 heroAlt: "Ulotka reklamowa – projekt, który sprzedaje"
 ogTitle: "Ulotka reklamowa – projekt, który sprzedaje | SEZMOO"
 ogDescription: "Ulotka reklamowa projekt musi działać sprzedażowo. Sprawdź, co decyduje o skuteczności, czytelności i realnym zwrocie z druku."
+lead: "Jedna źle zaprojektowana ulotka potrafi zmarnować cały budżet kampanii lokalnej. Nie dlatego, że druk jest dziś nieskuteczny, ale dlatego, że zbyt często ulotka reklamowa projektowana jest pod gust, a nie pod wynik. Jeśli materiał ma trafić do ręki klienta i skłonić go do działania, musi pracować jak dobry handlowiec – szybko wyjaśniać, budować zaufanie i prowadzić do konkretnego kroku."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 04.05.2026</span>
-      <h1 class="article__title reveal">Ulotka reklamowa – projekt, który sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Jedna źle zaprojektowana ulotka potrafi zmarnować cały budżet kampanii lokalnej. Nie dlatego, że druk jest dziś nieskuteczny, ale dlatego, że zbyt często ulotka reklamowa projektowana jest pod gust, a nie pod wynik. Jeśli materiał ma trafić do ręki klienta i skłonić go do działania, musi pracować jak dobry handlowiec – szybko wyjaśniać, budować zaufanie i prowadzić do konkretnego kroku.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/ulotka-reklamowa-projekt-ktory-sprzedaje.webp" alt="Ulotka reklamowa – projekt, który sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -107,4 +96,3 @@ ogDescription: "Ulotka reklamowa projekt musi działać sprzedażowo. Sprawdź, 
         </div>
       </div>
     </div>
-  </article>

@@ -1,6 +1,6 @@
 ---
 title: 10 lat World of Warships. Gaming Room i Event na 10-lecie.
-description: SEZMOO Creative Agency × Wargaming × Muzeum Marynarki Wojennej w Gdyni × World of Warships – Captain’s Club Był to jeden z najbardziej złożonych projektów…
+description: "SEZMOO × Wargaming × Muzeum MW: Captain’s Club i event na 10-lecie World of Warships w Gdyni – od kontenera po strefę gracza."
 date: 2025-09-25
 topic: strategy
 topicLabel: STRATEGIA
@@ -11,23 +11,12 @@ readingTime: 3
 heroImage: /assets/blog/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie.jpg
 heroAlt: 10 lat World of Warships. Gaming Room i Event na 10-lecie.
 ogTitle: "10 lat World of Warships. Gaming Room i Event na 10-lecie. | SEZMOO"
-ogDescription: SEZMOO Creative Agency × Wargaming × Muzeum Marynarki Wojennej w Gdyni × World of Warships – Captain’s Club Był to jeden z najbardziej złożonych projektów…
+ogDescription: "SEZMOO × Wargaming × Muzeum MW: Captain’s Club i event na 10-lecie World of Warships w Gdyni – od kontenera po strefę gracza."
+lead: "SEZMOO Creative Agency × Wargaming × Muzeum Marynarki Wojennej w Gdyni × World of Warships – Captain’s Club"
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 03 MIN · 25.09.2025</span>
-      <h1 class="article__title reveal">10 lat World of Warships. Gaming Room i Event na 10-lecie.</h1>
-      <p class="article__lead reveal" data-d="1">SEZMOO Creative Agency × Wargaming × Muzeum Marynarki Wojennej w Gdyni × World of Warships – Captain’s Club</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie.jpg" alt="10 lat World of Warships. Gaming Room i Event na 10-lecie." loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -114,4 +103,3 @@ ogDescription: SEZMOO Creative Agency × Wargaming × Muzeum Marynarki Wojennej 
         </div>
       </div>
     </div>
-  </article>

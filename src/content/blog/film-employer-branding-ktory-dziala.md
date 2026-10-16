@@ -12,22 +12,11 @@ heroImage: /assets/blog/film-employer-branding-ktory-dziala.webp
 heroAlt: "Film employer branding, który działa"
 ogTitle: "Film employer branding, który działa | SEZMOO"
 ogDescription: "Film employer branding pomaga przyciągać kandydatów i wzmacniać markę pracodawcy. Sprawdź, jak tworzyć materiały, które dają efekt."
+lead: "Dobry kandydat nie zgłasza się dziś dlatego, że firma napisała „oferujemy stabilne zatrudnienie i miłą atmosferę”. Zgłasza się wtedy, gdy widzi ludzi, tempo pracy, styl komunikacji i sens tego, co robi organizacja. Właśnie dlatego film employer branding przestał być dodatkiem do zakładki Kariera. Dla wielu firm stał się jednym z najkrótszych połączeń między marką pracodawcy a realną decyzją kandydata."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 07 MIN · 25.05.2026</span>
-      <h1 class="article__title reveal">Film employer branding, który działa</h1>
-      <p class="article__lead reveal" data-d="1">Dobry kandydat nie zgłasza się dziś dlatego, że firma napisała „oferujemy stabilne zatrudnienie i miłą atmosferę”. Zgłasza się wtedy, gdy widzi ludzi, tempo pracy, styl komunikacji i sens tego, co robi organizacja. Właśnie dlatego film employer branding przestał być dodatkiem do zakładki Kariera. Dla wielu firm stał się jednym z najkrótszych połączeń między marką pracodawcy a realną decyzją kandydata.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/film-employer-branding-ktory-dziala.webp" alt="Film employer branding, który działa" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -108,4 +97,3 @@ ogDescription: "Film employer branding pomaga przyciągać kandydatów i wzmacni
         </div>
       </div>
     </div>
-  </article>

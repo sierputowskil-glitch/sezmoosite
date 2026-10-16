@@ -1,0 +1,53 @@
+---
+/**
+ * Shared blog article chrome (back link, meta, title, lead, hero).
+ * Post body (TOC + content + CTA) is passed as the default slot.
+ */
+interface Props {
+  title: string;
+  metaLine: string;
+  lead?: string;
+  heroImage?: string;
+  heroAlt?: string;
+  heroCaption?: string;
+  backHref?: string;
+  backLabel?: string;
+}
+
+const {
+  title,
+  metaLine,
+  lead,
+  heroImage,
+  heroAlt,
+  heroCaption = 'SEZMOO / BLOG',
+  backHref = '/blog/',
+  backLabel = '← Wróć do\u00a0bloga',
+} = Astro.props;
+---
+
+<article class="article shell">
+  <header class="article__head">
+    <a class="article__back reveal" href={backHref}>{backLabel}</a>
+    <span class="blog-post__meta reveal">{metaLine}</span>
+    <h1 class="article__title reveal">{title}</h1>
+    {lead ? (
+      <p class="article__lead reveal" data-d="1">
+        {lead}
+      </p>
+    ) : null}
+  </header>
+
+  {
+    heroImage ? (
+      <div class="article__media reveal">
+        <div class="frame-media">
+          <img src={heroImage} alt={heroAlt || title} loading="eager" />
+        </div>
+        <span>{heroCaption}</span>
+      </div>
+    ) : null
+  }
+
+  <slot />
+</article>

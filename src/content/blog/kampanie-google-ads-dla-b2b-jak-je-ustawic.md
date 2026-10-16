@@ -12,22 +12,11 @@ heroImage: /assets/blog/kampanie-google-ads-dla-b2b-jak-je-ustawic.webp
 heroAlt: Kampanie Google Ads dla B2B – jak je ustawić
 ogTitle: "Kampanie Google Ads dla B2B – jak je ustawić | SEZMOO"
 ogDescription: "Kampanie Google Ads dla B2B wymagają innego podejścia niż e-commerce. Sprawdź, jak planować lejki, słowa kluczowe i mierzyć leady."
+lead: "W B2B rzadko wygrywa ten, kto ma najwyższy budżet. Zwykle wygrywa firma, która lepiej rozumie intencję odbiorcy i potrafi przełożyć kliknięcie na realną szansę sprzedaży. Dlatego kampanie Google Ads dla B2B nie mogą być kopią działań z e-commerce. Tu liczy się jakość ruchu, trafność komunikatu i sensownie zaprojektowany proces od reklamy do kontaktu z handlowcem."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 18.06.2026</span>
-      <h1 class="article__title reveal">Kampanie Google Ads dla B2B – jak je ustawić</h1>
-      <p class="article__lead reveal" data-d="1">W B2B rzadko wygrywa ten, kto ma najwyższy budżet. Zwykle wygrywa firma, która lepiej rozumie intencję odbiorcy i potrafi przełożyć kliknięcie na realną szansę sprzedaży. Dlatego kampanie Google Ads dla B2B nie mogą być kopią działań z e-commerce. Tu liczy się jakość ruchu, trafność komunikatu i sensownie zaprojektowany proces od reklamy do kontaktu z handlowcem.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/kampanie-google-ads-dla-b2b-jak-je-ustawic.webp" alt="Kampanie Google Ads dla B2B – jak je ustawić" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -109,4 +98,3 @@ ogDescription: "Kampanie Google Ads dla B2B wymagają innego podejścia niż e-c
         </div>
       </div>
     </div>
-  </article>

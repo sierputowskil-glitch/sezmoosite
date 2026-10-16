@@ -12,22 +12,11 @@ heroImage: /assets/blog/strona-one-page-dla-firmy-kiedy-ma-sens.webp
 heroAlt: Strona one page dla firmy – kiedy ma sens?
 ogTitle: "Strona one page dla firmy – kiedy ma sens? | SEZMOO"
 ogDescription: "Strona one page dla firmy może sprzedawać skutecznie, jeśli pasuje do celu i modelu biznesu. Sprawdź, kiedy warto ją wdrożyć."
+lead: "Masz kilka sekund, żeby zatrzymać uwagę klienta. W wielu branżach to właśnie dlatego strona one page dla firmy działa lepiej niż rozbudowany serwis z pięcioma zakładkami, których nikt nie czyta. Jeśli komunikat jest prosty, oferta konkretna, a decyzja zakupowa nie wymaga długiego researchu, jedna dobrze zaprojektowana strona potrafi zrobić więcej niż duża witryna budowana na zapas."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 07 MIN · 06.07.2026</span>
-      <h1 class="article__title reveal">Strona one page dla firmy – kiedy ma sens?</h1>
-      <p class="article__lead reveal" data-d="1">Masz kilka sekund, żeby zatrzymać uwagę klienta. W wielu branżach to właśnie dlatego strona one page dla firmy działa lepiej niż rozbudowany serwis z pięcioma zakładkami, których nikt nie czyta. Jeśli komunikat jest prosty, oferta konkretna, a decyzja zakupowa nie wymaga długiego researchu, jedna dobrze zaprojektowana strona potrafi zrobić więcej niż duża witryna budowana na zapas.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/strona-one-page-dla-firmy-kiedy-ma-sens.webp" alt="Strona one page dla firmy – kiedy ma sens?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -116,4 +105,3 @@ ogDescription: "Strona one page dla firmy może sprzedawać skutecznie, jeśli p
         </div>
       </div>
     </div>
-  </article>

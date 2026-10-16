@@ -12,22 +12,11 @@ heroImage: /assets/blog/przyklad-landing-page-zwiekszajacego-leady.webp
 heroAlt: Przykład landing page zwiększającego leady
 ogTitle: "Przykład landing page zwiększającego leady | SEZMOO"
 ogDescription: "Zobacz przykład landing page zwiększającego leady i sprawdź, które elementy strony realnie obniżają koszt pozyskania kontaktu sprzedażowego dla B2B firm."
+lead: "Ruch z kampanii może wyglądać dobrze w raporcie, a sprzedaż nadal nie mieć z czego pracować. Najczęściej problemem nie jest sama reklama, tylko strona, na którą trafia odbiorca. Ten przykład landing page zwiększającego leady pokazuje, jak zamienić uwagę w konkretny kontakt – bez przeładowania strony efektami specjalnymi, długimi deklaracjami i formularzem, którego nikt nie chce wypełnić."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 20.07.2026</span>
-      <h1 class="article__title reveal">Przykład landing page zwiększającego leady</h1>
-      <p class="article__lead reveal" data-d="1">Ruch z kampanii może wyglądać dobrze w raporcie, a sprzedaż nadal nie mieć z czego pracować. Najczęściej problemem nie jest sama reklama, tylko strona, na którą trafia odbiorca. Ten przykład landing page zwiększającego leady pokazuje, jak zamienić uwagę w konkretny kontakt – bez przeładowania strony efektami specjalnymi, długimi deklaracjami i formularzem, którego nikt nie chce wypełnić.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/przyklad-landing-page-zwiekszajacego-leady.webp" alt="Przykład landing page zwiększającego leady" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -105,4 +94,3 @@ ogDescription: "Zobacz przykład landing page zwiększającego leady i sprawdź,
         </div>
       </div>
     </div>
-  </article>

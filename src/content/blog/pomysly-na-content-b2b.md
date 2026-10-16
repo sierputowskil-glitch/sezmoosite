@@ -12,22 +12,11 @@ heroImage: /assets/blog/pomysly-na-content-b2b.webp
 heroAlt: "Pomysły na content B2B, które wspierają sprzedaż"
 ogTitle: "Pomysły na content B2B, które wspierają sprzedaż | SEZMOO"
 ogDescription: "Pomysły na content B2B, które budują zaufanie, skracają drogę do rozmowy handlowej i dają zespołowi sprzedaży konkretne materiały do pracy każdego dnia."
+lead: "W B2B nie wygrywa firma, która publikuje najczęściej. Wygrywa ta, która w odpowiednim momencie daje klientowi argument ułatwiający decyzję. Dlatego pomysły na content B2B warto budować nie wokół przypadkowych formatów, lecz pytań, obiekcji i realnych sytuacji, z którymi odbiorca mierzy się przed zakupem."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 28.07.2026</span>
-      <h1 class="article__title reveal">Pomysły na content B2B, które wspierają sprzedaż</h1>
-      <p class="article__lead reveal" data-d="1">W B2B nie wygrywa firma, która publikuje najczęściej. Wygrywa ta, która w odpowiednim momencie daje klientowi argument ułatwiający decyzję. Dlatego pomysły na content B2B warto budować nie wokół przypadkowych formatów, lecz pytań, obiekcji i realnych sytuacji, z którymi odbiorca mierzy się przed zakupem.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/pomysly-na-content-b2b.webp" alt="Pomysły na content B2B, które wspierają sprzedaż" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -97,4 +86,3 @@ ogDescription: "Pomysły na content B2B, które budują zaufanie, skracają drog
         </div>
       </div>
     </div>
-  </article>

@@ -12,22 +12,11 @@ heroImage: /assets/blog/outsourcing-marketingu-b2b-kiedy-sie-oplaca.webp
 heroAlt: Outsourcing marketingu B2B – kiedy się opłaca?
 ogTitle: "Outsourcing marketingu B2B – kiedy się opłaca? | SEZMOO"
 ogDescription: "Outsourcing marketingu B2B pomaga rosnąć szybciej, obniża koszty i porządkuje działania. Sprawdź, kiedy naprawdę się opłaca firmie."
+lead: "Jeśli Twój zespół co tydzień wraca do tego samego problemu – brakuje czasu, ludzi albo kompetencji, żeby dowieźć marketing na poziomie, którego wymaga sprzedaż – outsourcing marketingu B2B zaczyna być realną decyzją biznesową, a nie tylko awaryjnym wsparciem. Zwłaszcza wtedy, gdy firma nie potrzebuje jednego specjalisty, tylko sprawnego połączenia strategii, kreacji i egzekucji."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 09.05.2026</span>
-      <h1 class="article__title reveal">Outsourcing marketingu B2B – kiedy się opłaca?</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli Twój zespół co tydzień wraca do tego samego problemu – brakuje czasu, ludzi albo kompetencji, żeby dowieźć marketing na poziomie, którego wymaga sprzedaż – outsourcing marketingu B2B zaczyna być realną decyzją biznesową, a nie tylko awaryjnym wsparciem. Zwłaszcza wtedy, gdy firma nie potrzebuje jednego specjalisty, tylko sprawnego połączenia strategii, kreacji i egzekucji.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/outsourcing-marketingu-b2b-kiedy-sie-oplaca.webp" alt="Outsourcing marketingu B2B – kiedy się opłaca?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -109,4 +98,3 @@ ogDescription: "Outsourcing marketingu B2B pomaga rosnąć szybciej, obniża kos
         </div>
       </div>
     </div>
-  </article>

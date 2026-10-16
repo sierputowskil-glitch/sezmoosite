@@ -12,22 +12,11 @@ heroImage: /assets/blog/projekt-katalogu-produktowego-ktory-sprzedaje.webp
 heroAlt: "Projekt katalogu produktowego, który sprzedaje"
 ogTitle: "Projekt katalogu produktowego, który sprzedaje | SEZMOO"
 ogDescription: "Projekt katalogu produktowego powinien wspierać sprzedaż, porządkować ofertę i wzmacniać markę. Sprawdź, co naprawdę działa."
+lead: "Katalog produktowy często trafia na biurko handlowca, do skrzynki mailowej klienta albo w ręce partnera biznesowego na targach. I właśnie wtedy wychodzi prawda. Jeśli projekt katalogu produktowego jest przypadkowy, oferta wygląda na chaotyczną, a decyzja zakupowa robi się trudniejsza. Jeśli katalog jest dobrze zaprojektowany, porządkuje komunikację, skraca drogę do zakupu i realnie wspiera sprzedaż."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 07 MIN · 03.05.2026</span>
-      <h1 class="article__title reveal">Projekt katalogu produktowego, który sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Katalog produktowy często trafia na biurko handlowca, do skrzynki mailowej klienta albo w ręce partnera biznesowego na targach. I właśnie wtedy wychodzi prawda. Jeśli projekt katalogu produktowego jest przypadkowy, oferta wygląda na chaotyczną, a decyzja zakupowa robi się trudniejsza. Jeśli katalog jest dobrze zaprojektowany, porządkuje komunikację, skraca drogę do zakupu i realnie wspiera sprzedaż.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/projekt-katalogu-produktowego-ktory-sprzedaje.webp" alt="Projekt katalogu produktowego, który sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -116,4 +105,3 @@ ogDescription: "Projekt katalogu produktowego powinien wspierać sprzedaż, porz
         </div>
       </div>
     </div>
-  </article>

@@ -12,22 +12,11 @@ heroImage: /assets/blog/jak-wykorzystac-reelsy-w-sprzedazy.webp
 heroAlt: Jak wykorzystać reelsy w sprzedaży skutecznie
 ogTitle: "Jak wykorzystać reelsy w sprzedaży skutecznie | SEZMOO"
 ogDescription: "Sprawdź, jak wykorzystać reelsy w sprzedaży, by przyciągać uwagę, budować zaufanie i zamieniać krótkie wideo w realne zapytania."
+lead: "Jeśli Twoje social media zbierają wyświetlenia, ale nie domykają sprzedaży, problem zwykle nie leży w samym formacie. Problem leży w tym, że marka nie wie, jak wykorzystać reelsy w sprzedaży tak, by pracowały na konkretny cel biznesowy, a nie tylko na zasięg. Reels ma dziś ogromny potencjał, ale dopiero wtedy, gdy staje się elementem procesu sprzedażowego, a nie przypadkową publikacją „bo trzeba coś wrzucić”."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 06 MIN · 02.06.2026</span>
-      <h1 class="article__title reveal">Jak wykorzystać reelsy w sprzedaży skutecznie</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli Twoje social media zbierają wyświetlenia, ale nie domykają sprzedaży, problem zwykle nie leży w samym formacie. Problem leży w tym, że marka nie wie, jak wykorzystać reelsy w sprzedaży tak, by pracowały na konkretny cel biznesowy, a nie tylko na zasięg. Reels ma dziś ogromny potencjał, ale dopiero wtedy, gdy staje się elementem procesu sprzedażowego, a nie przypadkową publikacją „bo trzeba coś wrzucić”.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-wykorzystac-reelsy-w-sprzedazy.webp" alt="Jak wykorzystać reelsy w sprzedaży skutecznie" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -105,4 +94,3 @@ ogDescription: "Sprawdź, jak wykorzystać reelsy w sprzedaży, by przyciągać 
         </div>
       </div>
     </div>
-  </article>

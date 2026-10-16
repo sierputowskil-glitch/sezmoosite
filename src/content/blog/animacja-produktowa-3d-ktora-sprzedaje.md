@@ -12,22 +12,11 @@ heroImage: /assets/blog/animacja-produktowa-3d-ktora-sprzedaje.webp
 heroAlt: "Animacja produktowa 3D, która sprzedaje"
 ogTitle: "Animacja produktowa 3D, która sprzedaje | SEZMOO"
 ogDescription: "Animacja produktowa 3D pokazuje produkt z każdej strony, upraszcza przekaz i wspiera sprzedaż. Sprawdź, kiedy naprawdę działa."
+lead: "Są produkty, których nie da się dobrze sprzedać jednym packshotem. Jeśli oferujesz urządzenie, element technologiczny, wyposażenie wnętrz, inwestycję deweloperską albo produkt z funkcją, którą trzeba zobaczyć w ruchu, statyczna grafika szybko dochodzi do ściany. Właśnie wtedy animacja produktowa 3D przestaje być dodatkiem, a zaczyna działać jak realne narzędzie sprzedażowe."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 29.04.2026</span>
-      <h1 class="article__title reveal">Animacja produktowa 3D, która sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Są produkty, których nie da się dobrze sprzedać jednym packshotem. Jeśli oferujesz urządzenie, element technologiczny, wyposażenie wnętrz, inwestycję deweloperską albo produkt z funkcją, którą trzeba zobaczyć w ruchu, statyczna grafika szybko dochodzi do ściany. Właśnie wtedy animacja produktowa 3D przestaje być dodatkiem, a zaczyna działać jak realne narzędzie sprzedażowe.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/animacja-produktowa-3d-ktora-sprzedaje.webp" alt="Animacja produktowa 3D, która sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -110,4 +99,3 @@ ogDescription: "Animacja produktowa 3D pokazuje produkt z każdej strony, uprasz
         </div>
       </div>
     </div>
-  </article>

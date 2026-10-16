@@ -12,22 +12,11 @@ heroImage: /assets/blog/landing-page-dla-kampanii-ktory-sprzedaje.webp
 heroAlt: "Landing page dla kampanii, który sprzedaje"
 ogTitle: "Landing page dla kampanii, który sprzedaje | SEZMOO"
 ogDescription: "Landing page dla kampanii powinien sprzedawać, nie tylko wyglądać. Zobacz, co naprawdę zwiększa konwersję i obniża koszt pozyskania leadów."
+lead: "Kampania rusza, budżet jest ustawiony, kreacje gotowe, a wyniki nadal nie dowożą. W wielu firmach problem nie leży w reklamie, tylko w miejscu, do którego ta reklama prowadzi. Landing page dla kampanii często bywa traktowany jak formalność, choć w praktyce to właśnie on decyduje, czy kliknięcie zamieni się w lead, zapytanie albo sprzedaż."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 16.05.2026</span>
-      <h1 class="article__title reveal">Landing page dla kampanii, który sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Kampania rusza, budżet jest ustawiony, kreacje gotowe, a wyniki nadal nie dowożą. W wielu firmach problem nie leży w reklamie, tylko w miejscu, do którego ta reklama prowadzi. Landing page dla kampanii często bywa traktowany jak formalność, choć w praktyce to właśnie on decyduje, czy kliknięcie zamieni się w lead, zapytanie albo sprzedaż.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/landing-page-dla-kampanii-ktory-sprzedaje.webp" alt="Landing page dla kampanii, który sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -111,4 +100,3 @@ ogDescription: "Landing page dla kampanii powinien sprzedawać, nie tylko wyglą
         </div>
       </div>
     </div>
-  </article>

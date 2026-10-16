@@ -1,6 +1,6 @@
 ---
-title: Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025
-description: Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025 – szablony do pobrania
+title: Aktualne wymiary grafik social media 2025
+description: "Aktualne wymiary grafik na social media 2025 – Instagram, Facebook, LinkedIn, TikTok. Przewodnik ze szablonami do pobrania."
 date: 2025-03-07
 topic: social
 topicLabel: SOCIAL
@@ -10,24 +10,13 @@ featured: false
 readingTime: 3
 heroImage: /assets/blog/aktualne-wymiary-grafik-social-media-2025.jpg
 heroAlt: Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025
-ogTitle: "Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025 | SEZMOO"
-ogDescription: Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025 – szablony do pobrania
+ogTitle: "Aktualne wymiary grafik social media 2025 | SEZMOO"
+ogDescription: "Aktualne wymiary grafik na social media 2025 – Instagram, Facebook, LinkedIn, TikTok. Przewodnik ze szablonami do pobrania."
+lead: "Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025 – szablony do pobrania"
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 03 MIN · 07.03.2025</span>
-      <h1 class="article__title reveal">Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025</h1>
-      <p class="article__lead reveal" data-d="1">Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025 – szablony do pobrania</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/aktualne-wymiary-grafik-social-media-2025.jpg" alt="Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 2025" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#dlaczego-wymiary-grafik-sa-wazne">Dlaczego Wymiary Grafik Są Ważne?</a>
@@ -141,4 +130,3 @@ ogDescription: Aktualne Wymiary Grafik na Social Media – Kompletny Przewodnik 
         </div>
       </div>
     </div>
-  </article>

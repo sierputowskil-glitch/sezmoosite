@@ -12,22 +12,11 @@ heroImage: /assets/blog/jak-zaplanowac-kampanie-employer-branding.webp
 heroAlt: Jak zaplanować kampanię employer branding
 ogTitle: "Jak zaplanować kampanię employer branding | SEZMOO"
 ogDescription: "Jak zaplanować kampanię employer branding, by przyciągać właściwych kandydatów, mierzyć efekty i realnie wspierać rekrutację oraz markę."
+lead: "Jeśli rekrutacja ciągnie się miesiącami, kandydaci odpadają po pierwszej rozmowie, a firma komunikuje się na zewnątrz inaczej niż wygląda od środka, to problem nie leży wyłącznie w ogłoszeniach o pracę. Właśnie wtedy pojawia się pytanie, jak zaplanować kampanię employer branding, która nie będzie tylko ładną akcją w social mediach, ale realnym wsparciem dla HR, managerów i biznesu."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 12.06.2026</span>
-      <h1 class="article__title reveal">Jak zaplanować kampanię employer branding</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli rekrutacja ciągnie się miesiącami, kandydaci odpadają po pierwszej rozmowie, a firma komunikuje się na zewnątrz inaczej niż wygląda od środka, to problem nie leży wyłącznie w ogłoszeniach o pracę. Właśnie wtedy pojawia się pytanie, jak zaplanować kampanię employer branding, która nie będzie tylko ładną akcją w social mediach, ale realnym wsparciem dla HR, managerów i biznesu.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-zaplanowac-kampanie-employer-branding.webp" alt="Jak zaplanować kampanię employer branding" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -107,4 +96,3 @@ ogDescription: "Jak zaplanować kampanię employer branding, by przyciągać wł
         </div>
       </div>
     </div>
-  </article>

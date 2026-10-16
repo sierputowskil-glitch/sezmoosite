@@ -12,22 +12,11 @@ heroImage: /assets/blog/fotografia-reklamowa-produktow-ktora-sprzedaje.webp
 heroAlt: "Fotografia reklamowa produktów, która sprzedaje"
 ogTitle: "Fotografia reklamowa produktów, która sprzedaje | SEZMOO"
 ogDescription: "Fotografia reklamowa produktów wpływa na sprzedaż, wizerunek i skuteczność kampanii. Sprawdź, co decyduje o efekcie i kiedy warto zlecić ją agencji."
+lead: "Pierwsze wrażenie produktu powstaje szybciej, niż klient zdąży przeczytać opis. Jeśli zdjęcie nie zatrzyma uwagi, nie pomoże nawet najlepszy copywriting. Dlatego fotografia reklamowa produktów nie jest dodatkiem do oferty, tylko realnym narzędziem sprzedaży i budowy marki."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 08.07.2026</span>
-      <h1 class="article__title reveal">Fotografia reklamowa produktów, która sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze wrażenie produktu powstaje szybciej, niż klient zdąży przeczytać opis. Jeśli zdjęcie nie zatrzyma uwagi, nie pomoże nawet najlepszy copywriting. Dlatego fotografia reklamowa produktów nie jest dodatkiem do oferty, tylko realnym narzędziem sprzedaży i budowy marki.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/fotografia-reklamowa-produktow-ktora-sprzedaje.webp" alt="Fotografia reklamowa produktów, która sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -111,4 +100,3 @@ ogDescription: "Fotografia reklamowa produktów wpływa na sprzedaż, wizerunek 
         </div>
       </div>
     </div>
-  </article>

@@ -12,22 +12,11 @@ heroImage: /assets/blog/obsluga-social-media-dla-firm-co-daje.webp
 heroAlt: Obsługa social media dla firm – co daje?
 ogTitle: "Obsługa social media dla firm – co daje? | SEZMOO"
 ogDescription: "Obsługa social media dla firm to więcej niż posty. Sprawdź, jak przekłada się na sprzedaż, wizerunek, rekrutację i spójną komunikację."
+lead: "Pierwszy sygnał ostrzegawczy zwykle wygląda niewinnie. Firma publikuje regularnie, ma estetyczne grafiki, czasem nawet niezłe zasięgi, a mimo to nie widzi realnego wpływu na sprzedaż, liczbę zapytań czy rozpoznawalność marki. Właśnie wtedy zaczyna się prawdziwa rozmowa o tym, czym powinna być obsługa social media dla firm – nie dodatkiem do marketingu, ale jego aktywną częścią."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 06 MIN · 17.05.2026</span>
-      <h1 class="article__title reveal">Obsługa social media dla firm – co daje?</h1>
-      <p class="article__lead reveal" data-d="1">Pierwszy sygnał ostrzegawczy zwykle wygląda niewinnie. Firma publikuje regularnie, ma estetyczne grafiki, czasem nawet niezłe zasięgi, a mimo to nie widzi realnego wpływu na sprzedaż, liczbę zapytań czy rozpoznawalność marki. Właśnie wtedy zaczyna się prawdziwa rozmowa o tym, czym powinna być obsługa social media dla firm – nie dodatkiem do marketingu, ale jego aktywną częścią.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/obsluga-social-media-dla-firm-co-daje.webp" alt="Obsługa social media dla firm – co daje?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -108,4 +97,3 @@ ogDescription: "Obsługa social media dla firm to więcej niż posty. Sprawdź, 
         </div>
       </div>
     </div>
-  </article>

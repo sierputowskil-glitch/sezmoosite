@@ -12,22 +12,11 @@ heroImage: /assets/blog/produkcja-reelsow-firmowych.webp
 heroAlt: "Produkcja reelsów firmowych, która działa"
 ogTitle: "Produkcja reelsów firmowych, która działa | SEZMOO"
 ogDescription: "Produkcja reelsów firmowych to nie moda, tylko narzędzie sprzedaży, wizerunku i rekrutacji. Zobacz, co naprawdę działa w krótkim wideo."
+lead: "Scroll trwa sekundę. Czasem mniej. Właśnie dlatego produkcja reelsów firmowych nie może opierać się na przypadku, modnym przejściu i przypadkowym trendzie z internetu. Jeśli krótki format ma pracować na markę, sprzedaż albo rekrutację, musi być zrobiony z pomysłem, tempem i celem biznesowym."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 07 MIN · 11.05.2026</span>
-      <h1 class="article__title reveal">Produkcja reelsów firmowych, która działa</h1>
-      <p class="article__lead reveal" data-d="1">Scroll trwa sekundę. Czasem mniej. Właśnie dlatego produkcja reelsów firmowych nie może opierać się na przypadku, modnym przejściu i przypadkowym trendzie z internetu. Jeśli krótki format ma pracować na markę, sprzedaż albo rekrutację, musi być zrobiony z pomysłem, tempem i celem biznesowym.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/produkcja-reelsow-firmowych.webp" alt="Produkcja reelsów firmowych, która działa" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -110,4 +99,3 @@ ogDescription: "Produkcja reelsów firmowych to nie moda, tylko narzędzie sprze
         </div>
       </div>
     </div>
-  </article>

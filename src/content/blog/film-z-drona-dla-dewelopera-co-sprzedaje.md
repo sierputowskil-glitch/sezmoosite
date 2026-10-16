@@ -12,22 +12,11 @@ heroImage: /assets/blog/film-z-drona-dla-dewelopera-co-sprzedaje.webp
 heroAlt: Film z drona dla dewelopera – co sprzedaje
 ogTitle: "Film z drona dla dewelopera – co sprzedaje | SEZMOO"
 ogDescription: "Film z drona dla dewelopera pokazuje skalę inwestycji, lokalizację i standard osiedla. Sprawdź, co naprawdę wpływa na sprzedaż mieszkań."
+lead: "Kupujący nie ogląda dziś samego mieszkania. Ocenia całe otoczenie, tempo budowy, układ inwestycji i to, czy projekt wygląda wiarygodnie. Właśnie dlatego film z drona dla dewelopera przestał być dodatkiem do kampanii, a zaczął pełnić rolę narzędzia sprzedażowego, które porządkuje przekaz i skraca drogę od zainteresowania do kontaktu."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 08.05.2026</span>
-      <h1 class="article__title reveal">Film z drona dla dewelopera – co sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Kupujący nie ogląda dziś samego mieszkania. Ocenia całe otoczenie, tempo budowy, układ inwestycji i to, czy projekt wygląda wiarygodnie. Właśnie dlatego film z drona dla dewelopera przestał być dodatkiem do kampanii, a zaczął pełnić rolę narzędzia sprzedażowego, które porządkuje przekaz i skraca drogę od zainteresowania do kontaktu.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/film-z-drona-dla-dewelopera-co-sprzedaje.webp" alt="Film z drona dla dewelopera – co sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -102,4 +91,3 @@ ogDescription: "Film z drona dla dewelopera pokazuje skalę inwestycji, lokaliza
         </div>
       </div>
     </div>
-  </article>

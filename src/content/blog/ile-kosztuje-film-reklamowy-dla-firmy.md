@@ -12,22 +12,11 @@ heroImage: /assets/blog/ile-kosztuje-film-reklamowy-dla-firmy.webp
 heroAlt: Ile kosztuje film reklamowy dla firmy?
 ogTitle: "Ile kosztuje film reklamowy dla firmy? | SEZMOO"
 ogDescription: "Ile kosztuje film reklamowy dla firmy? Sprawdź, co wpływa na cenę, jakie są widełki i jak zaplanować budżet bez przepalania środków."
+lead: "Budżet na wideo często rozjeżdża się już na etapie pierwszej rozmowy. Jedna firma słyszy 4 tysiące złotych, druga 40 tysięcy i obie pytają to samo – ile kosztuje film reklamowy dla firmy i skąd biorą się takie różnice? Odpowiedź jest prosta tylko z pozoru: cena nie wynika z samego „kręcenia”, ale z tego, co film ma realnie zrobić dla biznesu."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 19.05.2026</span>
-      <h1 class="article__title reveal">Ile kosztuje film reklamowy dla firmy?</h1>
-      <p class="article__lead reveal" data-d="1">Budżet na wideo często rozjeżdża się już na etapie pierwszej rozmowy. Jedna firma słyszy 4 tysiące złotych, druga 40 tysięcy i obie pytają to samo – ile kosztuje film reklamowy dla firmy i skąd biorą się takie różnice? Odpowiedź jest prosta tylko z pozoru: cena nie wynika z samego „kręcenia”, ale z tego, co film ma realnie zrobić dla biznesu.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/ile-kosztuje-film-reklamowy-dla-firmy.webp" alt="Ile kosztuje film reklamowy dla firmy?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -103,4 +92,3 @@ ogDescription: "Ile kosztuje film reklamowy dla firmy? Sprawdź, co wpływa na c
         </div>
       </div>
     </div>
-  </article>

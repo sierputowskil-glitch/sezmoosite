@@ -12,22 +12,11 @@ heroImage: /assets/blog/kampanie-paid-social-ktore-sprzedaja.webp
 heroAlt: "Kampanie paid social, które sprzedają"
 ogTitle: "Kampanie paid social, które sprzedają | SEZMOO"
 ogDescription: "Kampanie paid social pomagają szybciej docierać do klientów, testować kreacje i zwiększać sprzedaż. Sprawdź, co działa naprawdę."
+lead: "Budżet przepala się szybciej, niż zespół zdąży wyciągnąć wnioski. To jeden z najczęstszych problemów, z jakimi spotykają się firmy uruchamiające kampanie paid social bez jasnego celu, dobrych kreacji i sensownej analityki. Sama obecność w Meta, TikToku czy LinkedInie nie wystarcza. Liczy się to, czy reklama realnie wspiera sprzedaż, rekrutację albo rozpoznawalność marki."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 07 MIN · 30.06.2026</span>
-      <h1 class="article__title reveal">Kampanie paid social, które sprzedają</h1>
-      <p class="article__lead reveal" data-d="1">Budżet przepala się szybciej, niż zespół zdąży wyciągnąć wnioski. To jeden z najczęstszych problemów, z jakimi spotykają się firmy uruchamiające kampanie paid social bez jasnego celu, dobrych kreacji i sensownej analityki. Sama obecność w Meta, TikToku czy LinkedInie nie wystarcza. Liczy się to, czy reklama realnie wspiera sprzedaż, rekrutację albo rozpoznawalność marki.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/kampanie-paid-social-ktore-sprzedaja.webp" alt="Kampanie paid social, które sprzedają" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -108,4 +97,3 @@ ogDescription: "Kampanie paid social pomagają szybciej docierać do klientów, 
         </div>
       </div>
     </div>
-  </article>

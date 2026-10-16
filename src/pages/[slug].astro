@@ -1,6 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import BlogArticle from '../components/blog/BlogArticle.astro';
 import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { blogMetaLine } from '../lib/blog';
 import { pageUrl } from '../lib/site';
 
 export async function getStaticPaths() {
@@ -12,6 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+const { Content } = await render(post);
 const path = `/${post.id}/`;
 const canonical = pageUrl(path);
 const title = post.data.title.includes('SEZMOO')
@@ -27,5 +30,14 @@ const title = post.data.title.includes('SEZMOO')
   ogTitle={post.data.ogTitle || title}
   ogDescription={post.data.ogDescription || post.data.description}
 >
-  <Fragment set:html={post.body} />
+  <BlogArticle
+    title={post.data.title}
+    metaLine={blogMetaLine(post)}
+    lead={post.data.lead}
+    heroImage={post.data.heroImage}
+    heroAlt={post.data.heroAlt}
+    heroCaption={post.data.heroCaption}
+  >
+    <Content />
+  </BlogArticle>
 </ArticleLayout>

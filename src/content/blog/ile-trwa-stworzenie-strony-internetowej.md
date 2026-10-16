@@ -12,22 +12,11 @@ heroImage: /assets/blog/ile-trwa-stworzenie-strony-internetowej.webp
 heroAlt: Ile trwa stworzenie strony internetowej dla firmy?
 ogTitle: "Ile trwa stworzenie strony internetowej dla firmy? | SEZMOO"
 ogDescription: "Ile trwa stworzenie strony? Poznaj etapy, realne terminy i decyzje, które przyspieszają wdrożenie bez niepotrzebnych poprawek oraz sprawną publikację."
+lead: "Nowa kampania ma ruszyć za miesiąc, handlowcy potrzebują miejsca do kierowania klientów, a obecna witryna bardziej odstrasza, niż buduje zaufanie. W takiej sytuacji pytanie: ile trwa stworzenie strony nie jest ciekawostką techniczną. To kwestia terminu sprzedażowego, planu komunikacji i tego, czy firma zdąży wykorzystać ważny moment na rynku."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 05 MIN · 03.08.2026</span>
-      <h1 class="article__title reveal">Ile trwa stworzenie strony internetowej dla firmy?</h1>
-      <p class="article__lead reveal" data-d="1">Nowa kampania ma ruszyć za miesiąc, handlowcy potrzebują miejsca do kierowania klientów, a obecna witryna bardziej odstrasza, niż buduje zaufanie. W takiej sytuacji pytanie: ile trwa stworzenie strony nie jest ciekawostką techniczną. To kwestia terminu sprzedażowego, planu komunikacji i tego, czy firma zdąży wykorzystać ważny moment na rynku.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/ile-trwa-stworzenie-strony-internetowej.webp" alt="Ile trwa stworzenie strony internetowej dla firmy?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -98,4 +87,3 @@ ogDescription: "Ile trwa stworzenie strony? Poznaj etapy, realne terminy i decyz
         </div>
       </div>
     </div>
-  </article>

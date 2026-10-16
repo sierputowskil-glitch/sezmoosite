@@ -9,22 +9,11 @@ draft: false
 listed: false
 featured: false
 readingTime: 4
+lead: "Dzień zdjęciowy jest dużo spokojniejszy, kiedy marka wie, co ma pokazać, kto podejmuje decyzje i jak materiał będzie używany po montażu."
+heroCaption: "SEZMOO / PRODUCTION NOTES"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 04 MIN · 12.06.2026</span>
-      <h1 class="article__title reveal">Jak przygotować markę do dnia zdjęciowego?</h1>
-      <p class="article__lead reveal" data-d="1">Dzień zdjęciowy jest dużo spokojniejszy, kiedy marka wie, co ma pokazać, kto podejmuje decyzje i jak materiał będzie używany po montażu.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"></div>
-      <span>SEZMOO / PRODUCTION NOTES</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#brief">Brief</a>
@@ -61,4 +50,3 @@ readingTime: 4
         </div>
       </div>
     </div>
-  </article>

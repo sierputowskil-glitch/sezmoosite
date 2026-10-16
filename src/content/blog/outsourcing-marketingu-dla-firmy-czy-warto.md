@@ -12,22 +12,11 @@ heroImage: /assets/blog/outsourcing-marketingu-dla-firmy-czy-warto.webp
 heroAlt: Outsourcing marketingu dla firmy – czy warto?
 ogTitle: "Outsourcing marketingu dla firmy – czy warto? | SEZMOO"
 ogDescription: "Outsourcing marketingu dla firmy to sposób na szybsze wdrożenia, lepszą kontrolę kosztów i dostęp do specjalistów bez budowy zespołu."
+lead: "Gdy kampanie stoją, social media są prowadzone z doskoku, a każdy nowy materiał trzeba zamawiać u innego wykonawcy, marketing zaczyna bardziej męczyć niż sprzedawać. Właśnie wtedy outsourcing marketingu dla firmy przestaje być modnym hasłem, a staje się sensowną decyzją operacyjną. Nie chodzi tylko o oszczędność etatów. Chodzi o tempo, spójność i dostęp do kompetencji, których trudno zbudować we własnym zakresie bez dużego budżetu."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 23.04.2026</span>
-      <h1 class="article__title reveal">Outsourcing marketingu dla firmy – czy warto?</h1>
-      <p class="article__lead reveal" data-d="1">Gdy kampanie stoją, social media są prowadzone z doskoku, a każdy nowy materiał trzeba zamawiać u innego wykonawcy, marketing zaczyna bardziej męczyć niż sprzedawać. Właśnie wtedy outsourcing marketingu dla firmy przestaje być modnym hasłem, a staje się sensowną decyzją operacyjną. Nie chodzi tylko o oszczędność etatów. Chodzi o tempo, spójność i dostęp do kompetencji, których trudno zbudować we własnym zakresie bez dużego budżetu.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/outsourcing-marketingu-dla-firmy-czy-warto.webp" alt="Outsourcing marketingu dla firmy – czy warto?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -107,4 +96,3 @@ ogDescription: "Outsourcing marketingu dla firmy to sposób na szybsze wdrożeni
         </div>
       </div>
     </div>
-  </article>

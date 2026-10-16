@@ -12,22 +12,11 @@ heroImage: /assets/blog/agencja-kreatywna-czy-freelancer-marketingowy.webp
 heroAlt: Agencja kreatywna czy freelancer marketingowy?
 ogTitle: "Agencja kreatywna czy freelancer marketingowy? | SEZMOO"
 ogDescription: "Agencja kreatywna czy freelancer marketingowy? Sprawdź, kiedy lepiej postawić na jedną osobę, a kiedy na zespół, strategię i realizację."
+lead: "Jeśli zespół sprzedaży czeka na materiały, social media stoją, strona wymaga poprawek, a kampania ma ruszyć „na już”, pytanie agencja kreatywna czy freelancer marketingowy przestaje być teoretyczne. To decyzja operacyjna, która wpływa na tempo działań, jakość wykonania i to, ile osób po Twojej stronie będzie musiało spinać cały marketing."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 07 MIN · 14.05.2026</span>
-      <h1 class="article__title reveal">Agencja kreatywna czy freelancer marketingowy?</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli zespół sprzedaży czeka na materiały, social media stoją, strona wymaga poprawek, a kampania ma ruszyć „na już”, pytanie agencja kreatywna czy freelancer marketingowy przestaje być teoretyczne. To decyzja operacyjna, która wpływa na tempo działań, jakość wykonania i to, ile osób po Twojej stronie będzie musiało spinać cały marketing.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/agencja-kreatywna-czy-freelancer-marketingowy.webp" alt="Agencja kreatywna czy freelancer marketingowy?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -109,4 +98,3 @@ ogDescription: "Agencja kreatywna czy freelancer marketingowy? Sprawdź, kiedy l
         </div>
       </div>
     </div>
-  </article>

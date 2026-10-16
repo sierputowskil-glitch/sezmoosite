@@ -12,22 +12,11 @@ heroImage: /assets/blog/agencja-kreatywna-dla-firm-jak-wybrac-madrze.webp
 heroAlt: Agencja kreatywna dla firm – jak wybrać mądrze
 ogTitle: "Agencja kreatywna dla firm – jak wybrać mądrze | SEZMOO"
 ogDescription: "Agencja kreatywna dla firm może realnie wspierać sprzedaż, markę i rekrutację. Sprawdź, jak wybrać partnera, który dowozi efekty."
+lead: "Jeśli Twoja firma potrzebuje lepszych materiałów sprzedażowych, mocniejszej obecności online i szybszej realizacji kampanii, problem zwykle nie leży w braku pomysłów. Najczęściej brakuje zespołu, który potrafi połączyć strategię z produkcją i dowieźć całość bez ciągłego pilnowania. Właśnie dlatego agencja kreatywna dla firm coraz częściej pełni rolę zewnętrznego działu marketingu, a nie tylko wykonawcy pojedynczych grafik czy filmów."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 31.05.2026</span>
-      <h1 class="article__title reveal">Agencja kreatywna dla firm – jak wybrać mądrze</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli Twoja firma potrzebuje lepszych materiałów sprzedażowych, mocniejszej obecności online i szybszej realizacji kampanii, problem zwykle nie leży w braku pomysłów. Najczęściej brakuje zespołu, który potrafi połączyć strategię z produkcją i dowieźć całość bez ciągłego pilnowania. Właśnie dlatego agencja kreatywna dla firm coraz częściej pełni rolę zewnętrznego działu marketingu, a nie tylko wykonawcy pojedynczych grafik czy filmów.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/agencja-kreatywna-dla-firm-jak-wybrac-madrze.webp" alt="Agencja kreatywna dla firm – jak wybrać mądrze" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -110,4 +99,3 @@ ogDescription: "Agencja kreatywna dla firm może realnie wspierać sprzedaż, ma
         </div>
       </div>
     </div>
-  </article>

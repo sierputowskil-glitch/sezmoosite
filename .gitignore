@@ -59,6 +59,7 @@ linki/
 /scripts/*
 !/scripts/migrate-html-to-astro.mjs
 !/scripts/migrate-blog-to-content.mjs
+!/scripts/migrate-blog-chrome.mjs
 !/scripts/sync-public-assets.mjs
 !/scripts/fetch-yt-posters.mjs
 !/scripts/unstring-pagehtml.mjs

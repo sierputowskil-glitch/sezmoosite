@@ -12,22 +12,11 @@ heroImage: /assets/blog/przewodnik-po-firmowej-stronie-www.webp
 heroAlt: "Przewodnik po firmowej stronie WWW, która sprzedaje"
 ogTitle: "Przewodnik po firmowej stronie WWW, która sprzedaje | SEZMOO"
 ogDescription: "Przewodnik po firmowej stronie WWW: zobacz, jak zaplanować serwis, który buduje zaufanie, wspiera sprzedaż i ułatwia kontakt z marką oraz pozyskuje leady."
+lead: "Firmowa strona nie przegrywa dlatego, że ma zbyt mało animacji albo nie używa najnowszego trendu w designie. Przegrywa wtedy, gdy klient po kilku sekundach nie wie, czym zajmuje się firma, dlaczego ma jej zaufać i co zrobić dalej. Ten przewodnik po firmowej stronie www pomoże Ci potraktować serwis jak narzędzie sprzedażowe, a nie cyfrową wizytówkę postawioną „bo konkurencja też ma”."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 05.08.2026</span>
-      <h1 class="article__title reveal">Przewodnik po firmowej stronie WWW, która sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Firmowa strona nie przegrywa dlatego, że ma zbyt mało animacji albo nie używa najnowszego trendu w designie. Przegrywa wtedy, gdy klient po kilku sekundach nie wie, czym zajmuje się firma, dlaczego ma jej zaufać i co zrobić dalej. Ten przewodnik po firmowej stronie www pomoże Ci potraktować serwis jak narzędzie sprzedażowe, a nie cyfrową wizytówkę postawioną „bo konkurencja też ma”.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/przewodnik-po-firmowej-stronie-www.webp" alt="Przewodnik po firmowej stronie WWW, która sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -105,4 +94,3 @@ ogDescription: "Przewodnik po firmowej stronie WWW: zobacz, jak zaplanować serw
         </div>
       </div>
     </div>
-  </article>

@@ -12,22 +12,11 @@ heroImage: /assets/blog/ile-kosztuje-film-produktowy.webp
 heroAlt: Ile kosztuje film produktowy w 2026 roku?
 ogTitle: "Ile kosztuje film produktowy w 2026 roku? | SEZMOO"
 ogDescription: "Ile kosztuje film produktowy? Sprawdź, od czego zależy wycena, jakie są widełki cenowe i za co realnie płacisz przy produkcji wideo."
+lead: "Jeśli pytasz, ile kosztuje film produktowy, to najuczciwsza odpowiedź brzmi: to zależy od celu, skali i jakości, jakiej oczekujesz. Problem w tym, że na rynku pod hasłem „film produktowy” kryją się bardzo różne realizacje – od prostego packshota do kampanii sprzedażowej z aktorami, set designem i montażem w kilku formatach. Dlatego sama cena bez kontekstu niewiele mówi."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 20.06.2026</span>
-      <h1 class="article__title reveal">Ile kosztuje film produktowy w 2026 roku?</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli pytasz, ile kosztuje film produktowy, to najuczciwsza odpowiedź brzmi: to zależy od celu, skali i jakości, jakiej oczekujesz. Problem w tym, że na rynku pod hasłem „film produktowy” kryją się bardzo różne realizacje – od prostego packshota do kampanii sprzedażowej z aktorami, set designem i montażem w kilku formatach. Dlatego sama cena bez kontekstu niewiele mówi.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/ile-kosztuje-film-produktowy.webp" alt="Ile kosztuje film produktowy w 2026 roku?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -102,4 +91,3 @@ ogDescription: "Ile kosztuje film produktowy? Sprawdź, od czego zależy wycena,
         </div>
       </div>
     </div>
-  </article>

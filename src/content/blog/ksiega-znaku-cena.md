@@ -12,22 +12,11 @@ heroImage: /assets/blog/ksiega-znaku-cena.webp
 heroAlt: Księga znaku – cena i realny zakres prac
 ogTitle: "Księga znaku – cena i realny zakres prac | SEZMOO"
 ogDescription: "Księga znaku – cena zależy od zakresu, liczby nośników i poziomu detalu. Sprawdź, co wpływa na koszt i kiedy warto w nią zainwestować."
+lead: "Jeśli dostaliście wycenę na logo, a chwilę później pojawiła się osobna pozycja „księga znaku”, to pytanie o księga znaku cena pojawia się praktycznie od razu. I słusznie, bo tutaj nie płaci się za sam plik PDF, tylko za porządek w marce, mniej błędów w komunikacji i szybsze wdrażanie materiałów przez różne zespoły, dostawców i agencje."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 02.05.2026</span>
-      <h1 class="article__title reveal">Księga znaku – cena i realny zakres prac</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli dostaliście wycenę na logo, a chwilę później pojawiła się osobna pozycja „księga znaku”, to pytanie o księga znaku cena pojawia się praktycznie od razu. I słusznie, bo tutaj nie płaci się za sam plik PDF, tylko za porządek w marce, mniej błędów w komunikacji i szybsze wdrażanie materiałów przez różne zespoły, dostawców i agencje.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/ksiega-znaku-cena.webp" alt="Księga znaku – cena i realny zakres prac" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -109,4 +98,3 @@ ogDescription: "Księga znaku – cena zależy od zakresu, liczby nośników i p
         </div>
       </div>
     </div>
-  </article>

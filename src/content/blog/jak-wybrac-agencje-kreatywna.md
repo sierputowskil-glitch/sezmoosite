@@ -12,22 +12,11 @@ heroImage: /assets/blog/jak-wybrac-agencje-kreatywna.webp
 heroAlt: Jak wybrać agencję kreatywną bez pomyłki
 ogTitle: "Jak wybrać agencję kreatywną bez pomyłki | SEZMOO"
 ogDescription: "Jak wybrać agencję kreatywną, która dowiezie strategię, kreację i wyniki? Sprawdź, na co patrzeć, by nie przepalać budżetu."
+lead: "Pierwszy sygnał ostrzegawczy pojawia się zwykle nie w ofercie, tylko po kilku tygodniach współpracy. Dużo obietnic, ładny deck, a potem zaczyna się gaszenie pożarów, przesuwanie terminów i tłumaczenie, że „algorytm się zmienił”. Dlatego pytanie, jak wybrać agencję kreatywną, nie dotyczy wyłącznie estetyki. Chodzi o to, czy partner realnie wesprze sprzedaż, komunikację i tempo działania firmy."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 23.04.2026</span>
-      <h1 class="article__title reveal">Jak wybrać agencję kreatywną bez pomyłki</h1>
-      <p class="article__lead reveal" data-d="1">Pierwszy sygnał ostrzegawczy pojawia się zwykle nie w ofercie, tylko po kilku tygodniach współpracy. Dużo obietnic, ładny deck, a potem zaczyna się gaszenie pożarów, przesuwanie terminów i tłumaczenie, że „algorytm się zmienił”. Dlatego pytanie, jak wybrać agencję kreatywną, nie dotyczy wyłącznie estetyki. Chodzi o to, czy partner realnie wesprze sprzedaż, komunikację i tempo działania firmy.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-wybrac-agencje-kreatywna.webp" alt="Jak wybrać agencję kreatywną bez pomyłki" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -102,4 +91,3 @@ ogDescription: "Jak wybrać agencję kreatywną, która dowiezie strategię, kre
         </div>
       </div>
     </div>
-  </article>

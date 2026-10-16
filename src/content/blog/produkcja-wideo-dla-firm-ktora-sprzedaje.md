@@ -12,22 +12,11 @@ heroImage: /assets/blog/produkcja-wideo-dla-firm-ktora-sprzedaje.webp
 heroAlt: "Produkcja wideo dla firm, która sprzedaje"
 ogTitle: "Produkcja wideo dla firm, która sprzedaje | SEZMOO"
 ogDescription: "Produkcja wideo dla firm wspiera sprzedaż, rekrutację i wizerunek. Sprawdź, jak planować materiały, które realnie pracują na wynik."
+lead: "Pierwsze 3 sekundy materiału wideo często decydują o tym, czy odbiorca zostanie z marką, czy przewinie dalej. Dlatego produkcja wideo dla firm nie jest dziś dodatkiem do marketingu, tylko narzędziem, które ma konkretnie pracować na uwagę, zaufanie i wynik. Jeśli film wygląda dobrze, ale nie wspiera sprzedaży, rekrutacji albo komunikacji marki, to po prostu nie dowozi swojego zadania."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 13.05.2026</span>
-      <h1 class="article__title reveal">Produkcja wideo dla firm, która sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze 3 sekundy materiału wideo często decydują o tym, czy odbiorca zostanie z marką, czy przewinie dalej. Dlatego produkcja wideo dla firm nie jest dziś dodatkiem do marketingu, tylko narzędziem, które ma konkretnie pracować na uwagę, zaufanie i wynik. Jeśli film wygląda dobrze, ale nie wspiera sprzedaży, rekrutacji albo komunikacji marki, to po prostu nie dowozi swojego zadania.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/produkcja-wideo-dla-firm-ktora-sprzedaje.webp" alt="Produkcja wideo dla firm, która sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -104,4 +93,3 @@ ogDescription: "Produkcja wideo dla firm wspiera sprzedaż, rekrutację i wizeru
         </div>
       </div>
     </div>
-  </article>

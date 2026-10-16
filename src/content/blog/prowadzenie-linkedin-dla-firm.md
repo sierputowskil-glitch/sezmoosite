@@ -12,22 +12,11 @@ heroImage: /assets/blog/prowadzenie-linkedin-dla-firm.webp
 heroAlt: Prowadzenie LinkedIn dla firm – co działa
 ogTitle: "Prowadzenie LinkedIn dla firm – co działa | SEZMOO"
 ogDescription: "Prowadzenie LinkedIn dla firm to więcej niż publikacje. Zobacz, jak budować markę, wspierać sprzedaż i rekrutację bez działań na oślep."
+lead: "LinkedIn potrafi być dla firmy świetnym kanałem sprzedażowym albo martwą wizytówką z ostatnim postem sprzed dziewięciu miesięcy. Różnica zwykle nie wynika z algorytmu, tylko z tego, jak ustawione jest prowadzenie LinkedIn dla firm. Jeśli działania są przypadkowe, efekty też będą przypadkowe. Jeśli za profilem stoi plan, spójna komunikacja i regularna produkcja treści, platforma zaczyna realnie pracować na markę, leady i rekrutację."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 06 MIN · 05.05.2026</span>
-      <h1 class="article__title reveal">Prowadzenie LinkedIn dla firm – co działa</h1>
-      <p class="article__lead reveal" data-d="1">LinkedIn potrafi być dla firmy świetnym kanałem sprzedażowym albo martwą wizytówką z ostatnim postem sprzed dziewięciu miesięcy. Różnica zwykle nie wynika z algorytmu, tylko z tego, jak ustawione jest prowadzenie LinkedIn dla firm. Jeśli działania są przypadkowe, efekty też będą przypadkowe. Jeśli za profilem stoi plan, spójna komunikacja i regularna produkcja treści, platforma zaczyna realnie pracować na markę, leady i rekrutację.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/prowadzenie-linkedin-dla-firm.webp" alt="Prowadzenie LinkedIn dla firm – co działa" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -107,4 +96,3 @@ ogDescription: "Prowadzenie LinkedIn dla firm to więcej niż publikacje. Zobacz
         </div>
       </div>
     </div>
-  </article>

@@ -1,6 +1,6 @@
 ---
 title: Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej
-description: "Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej Profesjonalnie przygotowany plik do druku to podstawa, jeśli chcesz mieć pewność…"
+description: "Checklista przygotowania plików do druku: spady, kolory, rozdzielczość i formaty – żeby uniknąć niespodzianek w drukarni."
 date: 2025-05-14
 topic: strategy
 topicLabel: STRATEGIA
@@ -10,24 +10,13 @@ featured: false
 readingTime: 3
 heroImage: /assets/blog/jak-przygotowac-pliki-do-druku-checklista-dla-klientow-agencji-reklamowej.jpg
 heroAlt: Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej
-ogTitle: "Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej | SEZMOO"
-ogDescription: "Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej Profesjonalnie przygotowany plik do druku to podstawa, jeśli chcesz mieć pewność…"
+ogTitle: "Jak przygotować pliki do druku? Checklista | SEZMOO"
+ogDescription: "Checklista przygotowania plików do druku: spady, kolory, rozdzielczość i formaty – żeby uniknąć niespodzianek w drukarni."
+lead: "Profesjonalnie przygotowany plik do druku to podstawa, jeśli chcesz mieć pewność, że Twoje materiały reklamowe będą wyglądać dokładnie tak, jak zaplanowano. Niezależnie od tego, czy drukujesz ulotki, katalogi, wizytówki czy billboardy – odpowiednie przygotowanie grafiki pozwala uniknąć błędów, opóźnień i dodatkowych kosztów."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 03 MIN · 14.05.2025</span>
-      <h1 class="article__title reveal">Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej</h1>
-      <p class="article__lead reveal" data-d="1">Profesjonalnie przygotowany plik do druku to podstawa, jeśli chcesz mieć pewność, że Twoje materiały reklamowe będą wyglądać dokładnie tak, jak zaplanowano. Niezależnie od tego, czy drukujesz ulotki, katalogi, wizytówki czy billboardy – odpowiednie przygotowanie grafiki pozwala uniknąć błędów, opóźnień i dodatkowych kosztów.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-przygotowac-pliki-do-druku-checklista-dla-klientow-agencji-reklamowej.jpg" alt="Jak przygotować pliki do druku? Checklista dla klientów agencji reklamowej" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -114,4 +103,3 @@ ogDescription: "Jak przygotować pliki do druku? Checklista dla klientów agencj
         </div>
       </div>
     </div>
-  </article>

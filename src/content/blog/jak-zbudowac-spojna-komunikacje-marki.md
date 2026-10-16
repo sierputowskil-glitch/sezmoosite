@@ -12,22 +12,11 @@ heroImage: /assets/blog/jak-zbudowac-spojna-komunikacje-marki.webp
 heroAlt: Jak zbudować spójną komunikację marki
 ogTitle: "Jak zbudować spójną komunikację marki | SEZMOO"
 ogDescription: "Jak zbudować spójną komunikację marki, która wspiera sprzedaż, wzmacnia wizerunek i porządkuje działania marketingowe firmy."
+lead: "Jeśli Twoja marka w social media mówi jednym językiem, handlowiec drugim, a strona internetowa trzecim, klient widzi chaos – nie charakter. Właśnie dlatego pytanie, jak zbudować spójną komunikację marki, nie dotyczy wyłącznie wizerunku. Dotyczy sprzedaży, zaufania i tego, czy odbiorca od razu rozumie, z kim ma do czynienia."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 08.06.2026</span>
-      <h1 class="article__title reveal">Jak zbudować spójną komunikację marki</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli Twoja marka w social media mówi jednym językiem, handlowiec drugim, a strona internetowa trzecim, klient widzi chaos – nie charakter. Właśnie dlatego pytanie, jak zbudować spójną komunikację marki, nie dotyczy wyłącznie wizerunku. Dotyczy sprzedaży, zaufania i tego, czy odbiorca od razu rozumie, z kim ma do czynienia.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-zbudowac-spojna-komunikacje-marki.webp" alt="Jak zbudować spójną komunikację marki" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -103,4 +92,3 @@ ogDescription: "Jak zbudować spójną komunikację marki, która wspiera sprzed
         </div>
       </div>
     </div>
-  </article>

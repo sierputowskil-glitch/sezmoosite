@@ -12,22 +12,11 @@ heroImage: /assets/blog/landing-page-b2b-ktory-naprawde-sprzedaje.webp
 heroAlt: "Landing page B2B, który naprawdę sprzedaje"
 ogTitle: "Landing page B2B, który naprawdę sprzedaje | SEZMOO"
 ogDescription: "Landing page B2B ma zamieniać ruch w leady. Zobacz, co musi zawierać, jak prowadzić użytkownika i gdzie najczęściej firmy tracą konwersję."
+lead: "W kampanii B2B najdroższy nie jest klik. Najdroższe jest to, że ktoś wszedł na stronę, miał potencjał zakupowy i nie zrobił nic. Właśnie dlatego landing page B2B nie może być „ładną podstroną do reklamy”. Ma prowadzić użytkownika do konkretnej decyzji – zostawienia kontaktu, umówienia rozmowy, pobrania oferty albo zapisu na demo."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 06.06.2026</span>
-      <h1 class="article__title reveal">Landing page B2B, który naprawdę sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">W kampanii B2B najdroższy nie jest klik. Najdroższe jest to, że ktoś wszedł na stronę, miał potencjał zakupowy i nie zrobił nic. Właśnie dlatego landing page B2B nie może być „ładną podstroną do reklamy”. Ma prowadzić użytkownika do konkretnej decyzji – zostawienia kontaktu, umówienia rozmowy, pobrania oferty albo zapisu na demo.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/landing-page-b2b-ktory-naprawde-sprzedaje.webp" alt="Landing page B2B, który naprawdę sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -105,4 +94,3 @@ ogDescription: "Landing page B2B ma zamieniać ruch w leady. Zobacz, co musi zaw
         </div>
       </div>
     </div>
-  </article>

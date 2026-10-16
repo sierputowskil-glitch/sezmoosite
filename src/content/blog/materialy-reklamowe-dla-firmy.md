@@ -1,6 +1,6 @@
 ---
 title: "Materiały reklamowe dla firmy, które sprzedają"
-description: "Materiały reklamowe dla firmy, które wspierają sprzedaż: od strategii i projektu po produkcję. Sprawdź, jak wybierać formaty z mierzalnym efektem na rynku"
+description: "Materiały reklamowe dla firmy, które wspierają sprzedaż: od strategii i projektu po produkcję. Sprawdź, jak wybierać formaty z mierzalnym efektem."
 date: 2026-07-22
 topic: strategy
 topicLabel: STRATEGIA
@@ -11,23 +11,12 @@ readingTime: 6
 heroImage: /assets/blog/materialy-reklamowe-dla-firmy.webp
 heroAlt: "Materiały reklamowe dla firmy, które sprzedają"
 ogTitle: "Materiały reklamowe dla firmy, które sprzedają | SEZMOO"
-ogDescription: "Materiały reklamowe dla firmy, które wspierają sprzedaż: od strategii i projektu po produkcję. Sprawdź, jak wybierać formaty z mierzalnym efektem na rynku"
+ogDescription: "Materiały reklamowe dla firmy, które wspierają sprzedaż: od strategii i projektu po produkcję. Sprawdź, jak wybierać formaty z mierzalnym efektem."
+lead: "Katalog, roll-up i firmowa prezentacja potrafią wyglądać poprawnie, a mimo to nie robić nic dla sprzedaży. Problem rzadko leży wyłącznie w projekcie. Materiały reklamowe dla firmy działają wtedy, gdy odpowiadają na konkretną sytuację biznesową: pomagają handlowcowi domknąć rozmowę, ułatwiają klientowi porównanie oferty albo budują wiarygodność marki przed ważnym spotkaniem."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 22.07.2026</span>
-      <h1 class="article__title reveal">Materiały reklamowe dla firmy, które sprzedają</h1>
-      <p class="article__lead reveal" data-d="1">Katalog, roll-up i firmowa prezentacja potrafią wyglądać poprawnie, a mimo to nie robić nic dla sprzedaży. Problem rzadko leży wyłącznie w projekcie. Materiały reklamowe dla firmy działają wtedy, gdy odpowiadają na konkretną sytuację biznesową: pomagają handlowcowi domknąć rozmowę, ułatwiają klientowi porównanie oferty albo budują wiarygodność marki przed ważnym spotkaniem.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/materialy-reklamowe-dla-firmy.webp" alt="Materiały reklamowe dla firmy, które sprzedają" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -108,4 +97,3 @@ ogDescription: "Materiały reklamowe dla firmy, które wspierają sprzedaż: od 
         </div>
       </div>
     </div>
-  </article>

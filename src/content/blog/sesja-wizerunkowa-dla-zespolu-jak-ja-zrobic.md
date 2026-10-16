@@ -12,22 +12,11 @@ heroImage: /assets/blog/sesja-wizerunkowa-dla-zespolu-jak-ja-zrobic.webp
 heroAlt: Sesja wizerunkowa dla zespołu – jak ją zrobić
 ogTitle: "Sesja wizerunkowa dla zespołu – jak ją zrobić | SEZMOO"
 ogDescription: "Sesja wizerunkowa dla zespołu pomaga budować zaufanie, spójny employer branding i lepszą sprzedaż. Sprawdź, jak zaplanować ją dobrze."
+lead: "Pierwsze wrażenie bardzo często dzieje się jeszcze przed rozmową handlową, spotkaniem rekrutacyjnym czy wymianą maili. Klient wchodzi na stronę, sprawdza LinkedIna, zagląda do zakładki „o nas” i w kilka sekund ocenia, czy ma do czynienia z firmą poukładaną, nowoczesną i godną zaufania. Właśnie dlatego sesja wizerunkowa dla zespołu nie jest dziś dodatkiem „na kiedyś”, tylko narzędziem, które realnie wspiera sprzedaż, marketing i HR."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 28.04.2026</span>
-      <h1 class="article__title reveal">Sesja wizerunkowa dla zespołu – jak ją zrobić</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze wrażenie bardzo często dzieje się jeszcze przed rozmową handlową, spotkaniem rekrutacyjnym czy wymianą maili. Klient wchodzi na stronę, sprawdza LinkedIna, zagląda do zakładki „o nas” i w kilka sekund ocenia, czy ma do czynienia z firmą poukładaną, nowoczesną i godną zaufania. Właśnie dlatego sesja wizerunkowa dla zespołu nie jest dziś dodatkiem „na kiedyś”, tylko narzędziem, które realnie wspiera sprzedaż, marketing i HR.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/sesja-wizerunkowa-dla-zespolu-jak-ja-zrobic.webp" alt="Sesja wizerunkowa dla zespołu – jak ją zrobić" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -114,4 +103,3 @@ ogDescription: "Sesja wizerunkowa dla zespołu pomaga budować zaufanie, spójny
         </div>
       </div>
     </div>
-  </article>

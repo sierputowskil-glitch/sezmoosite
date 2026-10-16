@@ -12,22 +12,11 @@ heroImage: /assets/blog/ujecia-dronem-dla-firm-kiedy-daja-efekt.webp
 heroAlt: Ujęcia dronem dla firm – kiedy dają efekt
 ogTitle: "Ujęcia dronem dla firm – kiedy dają efekt | SEZMOO"
 ogDescription: "Ujęcia dronem dla firm pomagają sprzedawać, rekrutować i budować wizerunek. Sprawdź, kiedy warto je wdrożyć i jak wycisnąć z nich wynik."
+lead: "Pierwsze 3 sekundy materiału wideo często decydują o tym, czy odbiorca zostanie z marką, czy przewinie dalej. Właśnie dlatego ujęcia dronem dla firm przestały być dodatkiem „na efekt”, a coraz częściej są narzędziem do przyciągnięcia uwagi, pokazania skali i zbudowania bardziej wiarygodnego obrazu marki."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 21.05.2026</span>
-      <h1 class="article__title reveal">Ujęcia dronem dla firm – kiedy dają efekt</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze 3 sekundy materiału wideo często decydują o tym, czy odbiorca zostanie z marką, czy przewinie dalej. Właśnie dlatego ujęcia dronem dla firm przestały być dodatkiem „na efekt”, a coraz częściej są narzędziem do przyciągnięcia uwagi, pokazania skali i zbudowania bardziej wiarygodnego obrazu marki.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/ujecia-dronem-dla-firm-kiedy-daja-efekt.webp" alt="Ujęcia dronem dla firm – kiedy dają efekt" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -107,4 +96,3 @@ ogDescription: "Ujęcia dronem dla firm pomagają sprzedawać, rekrutować i bud
         </div>
       </div>
     </div>
-  </article>

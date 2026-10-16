@@ -12,22 +12,11 @@ heroImage: /assets/blog/jak-zwiekszyc-konwersje-landing-page-skutecznie.webp
 heroAlt: Jak zwiększyć konwersję landing page skutecznie
 ogTitle: "Jak zwiększyć konwersję landing page skutecznie | SEZMOO"
 ogDescription: "Jak zwiększyć konwersję landing page? Sprawdź, co realnie wpływa na wyniki: oferta, układ, CTA, formularz, szybkość i testy A/B."
+lead: "Landing page, który wygląda dobrze, nie zawsze sprzedaje. To częsty problem firm, które inwestują w kampanię, kreację i ruch, a potem zadają sobie pytanie, jak zwiększyć konwersję landing page, skoro użytkownicy klikają, ale nie zostawiają kontaktu ani nie kupują. Najczęściej problem nie leży w jednym elemencie, tylko w kilku drobnych tarciach, które razem obniżają wynik."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 07 MIN · 16.06.2026</span>
-      <h1 class="article__title reveal">Jak zwiększyć konwersję landing page skutecznie</h1>
-      <p class="article__lead reveal" data-d="1">Landing page, który wygląda dobrze, nie zawsze sprzedaje. To częsty problem firm, które inwestują w kampanię, kreację i ruch, a potem zadają sobie pytanie, jak zwiększyć konwersję landing page, skoro użytkownicy klikają, ale nie zostawiają kontaktu ani nie kupują. Najczęściej problem nie leży w jednym elemencie, tylko w kilku drobnych tarciach, które razem obniżają wynik.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-zwiekszyc-konwersje-landing-page-skutecznie.webp" alt="Jak zwiększyć konwersję landing page skutecznie" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -111,4 +100,3 @@ ogDescription: "Jak zwiększyć konwersję landing page? Sprawdź, co realnie wp
         </div>
       </div>
     </div>
-  </article>

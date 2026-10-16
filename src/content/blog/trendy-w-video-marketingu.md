@@ -12,22 +12,11 @@ heroImage: /assets/blog/trendy-w-video-marketingu.webp
 heroAlt: "Trendy w video marketingu, które sprzedają"
 ogTitle: "Trendy w video marketingu, które sprzedają | SEZMOO"
 ogDescription: "Trendy w video marketingu, które pomagają markom przyciągać uwagę, budować zaufanie i zamieniać oglądalność w konkretne wyniki sprzedażowe firm B2B."
+lead: "Pierwsze trzy sekundy materiału wideo mogą zdecydować, czy odbiorca pozna ofertę, czy przesunie ekran dalej. Dlatego trendy w video marketingu nie są dziś katalogiem efektownych przejść i modnych dźwięków. To odpowiedź na konkretne pytanie biznesowe: jak zatrzymać uwagę, zbudować wiarygodność i sprawić, by odbiorca wykonał następny krok?"
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 01.08.2026</span>
-      <h1 class="article__title reveal">Trendy w video marketingu, które sprzedają</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze trzy sekundy materiału wideo mogą zdecydować, czy odbiorca pozna ofertę, czy przesunie ekran dalej. Dlatego trendy w video marketingu nie są dziś katalogiem efektownych przejść i modnych dźwięków. To odpowiedź na konkretne pytanie biznesowe: jak zatrzymać uwagę, zbudować wiarygodność i sprawić, by odbiorca wykonał następny krok?</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/trendy-w-video-marketingu.webp" alt="Trendy w video marketingu, które sprzedają" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -106,4 +95,3 @@ ogDescription: "Trendy w video marketingu, które pomagają markom przyciągać 
         </div>
       </div>
     </div>
-  </article>

@@ -12,22 +12,11 @@ heroImage: /assets/blog/przewodnik-po-produkcji-reelsow-dla-firm.webp
 heroAlt: Przewodnik po produkcji reelsów dla firm
 ogTitle: "Przewodnik po produkcji reelsów dla firm | SEZMOO"
 ogDescription: "Przewodnik po produkcji reelsów dla firm – jak planować, nagrywać i montować krótkie wideo, które wspierają zasięg, markę i sprzedaż."
+lead: "Masz kilka sekund, żeby zatrzymać uwagę odbiorcy. Właśnie dlatego przewodnik po produkcji reelsów nie zaczyna się od aplikacji do montażu ani od wyboru modnej muzyki, tylko od prostego pytania: po co ten materiał ma powstać? Jeśli odpowiedź brzmi „żeby coś wrzucić”, efekt zwykle jest równie przypadkowy jak sam pomysł. Jeśli celem jest sprzedaż, rekrutacja, budowa marki albo zwiększenie zasięgu konkretnej usługi, reels zaczyna pracować na wynik, a nie tylko na wyświetlenia."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 07 MIN · 10.05.2026</span>
-      <h1 class="article__title reveal">Przewodnik po produkcji reelsów dla firm</h1>
-      <p class="article__lead reveal" data-d="1">Masz kilka sekund, żeby zatrzymać uwagę odbiorcy. Właśnie dlatego przewodnik po produkcji reelsów nie zaczyna się od aplikacji do montażu ani od wyboru modnej muzyki, tylko od prostego pytania: po co ten materiał ma powstać? Jeśli odpowiedź brzmi „żeby coś wrzucić”, efekt zwykle jest równie przypadkowy jak sam pomysł. Jeśli celem jest sprzedaż, rekrutacja, budowa marki albo zwiększenie zasięgu konkretnej usługi, reels zaczyna pracować na wynik, a nie tylko na wyświetlenia.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/przewodnik-po-produkcji-reelsow-dla-firm.webp" alt="Przewodnik po produkcji reelsów dla firm" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -107,4 +96,3 @@ ogDescription: "Przewodnik po produkcji reelsów dla firm – jak planować, nag
         </div>
       </div>
     </div>
-  </article>

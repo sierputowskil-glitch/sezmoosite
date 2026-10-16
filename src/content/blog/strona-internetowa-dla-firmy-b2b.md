@@ -12,22 +12,11 @@ heroImage: /assets/blog/strona-internetowa-dla-firmy-b2b.webp
 heroAlt: "Strona internetowa dla firmy B2B, która sprzedaje"
 ogTitle: "Strona internetowa dla firmy B2B, która sprzedaje | SEZMOO"
 ogDescription: "Strona internetowa dla firmy B2B ma wspierać sprzedaż, budować zaufanie i ułatwiać kontakt. Sprawdź, co naprawdę musi zawierać."
+lead: "Pierwsze 30 sekund na stronie często decyduje o tym, czy potencjalny klient wyśle zapytanie, czy wróci do wyników wyszukiwania i otworzy witrynę konkurencji. W relacjach B2B rzadko sprzedaje się impulsem. Tu liczy się zaufanie, jasna oferta i poczucie, że po drugiej stronie jest partner, który rozumie biznes. Dlatego strona internetowa dla firmy B2B nie może być tylko ładną wizytówką. Ma pracować na leady, rozmowy handlowe i decyzje zakupowe."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 20.05.2026</span>
-      <h1 class="article__title reveal">Strona internetowa dla firmy B2B, która sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze 30 sekund na stronie często decyduje o tym, czy potencjalny klient wyśle zapytanie, czy wróci do wyników wyszukiwania i otworzy witrynę konkurencji. W relacjach B2B rzadko sprzedaje się impulsem. Tu liczy się zaufanie, jasna oferta i poczucie, że po drugiej stronie jest partner, który rozumie biznes. Dlatego strona internetowa dla firmy B2B nie może być tylko ładną wizytówką. Ma pracować na leady, rozmowy handlowe i decyzje zakupowe.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/strona-internetowa-dla-firmy-b2b.webp" alt="Strona internetowa dla firmy B2B, która sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -116,4 +105,3 @@ ogDescription: "Strona internetowa dla firmy B2B ma wspierać sprzedaż, budowa�
         </div>
       </div>
     </div>
-  </article>

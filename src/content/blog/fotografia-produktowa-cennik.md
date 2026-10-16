@@ -12,22 +12,11 @@ heroImage: /assets/blog/fotografia-produktowa-cennik.webp
 heroAlt: Fotografia produktowa – cennik bez zgadywania
 ogTitle: "Fotografia produktowa – cennik bez zgadywania | SEZMOO"
 ogDescription: "Fotografia produktowa cennik bez niedomówień. Sprawdź, co wpływa na cenę zdjęć, kiedy warto dopłacić i jak porównać oferty sensownie."
+lead: "Jeśli wpisujesz w Google frazę fotografia produktowa cennik, najpewniej nie szukasz „jakichś zdjęć”. Szukasz konkretu: ile to kosztuje, skąd biorą się różnice w wycenach i czy droższa oferta faktycznie przełoży się na sprzedaż. I słusznie, bo w tym obszarze cena potrafi wahać się od kilkunastu do kilkuset złotych za ujęcie – a za tą rozpiętością stoją bardzo konkretne decyzje produkcyjne."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 27.04.2026</span>
-      <h1 class="article__title reveal">Fotografia produktowa – cennik bez zgadywania</h1>
-      <p class="article__lead reveal" data-d="1">Jeśli wpisujesz w Google frazę fotografia produktowa cennik, najpewniej nie szukasz „jakichś zdjęć”. Szukasz konkretu: ile to kosztuje, skąd biorą się różnice w wycenach i czy droższa oferta faktycznie przełoży się na sprzedaż. I słusznie, bo w tym obszarze cena potrafi wahać się od kilkunastu do kilkuset złotych za ujęcie – a za tą rozpiętością stoją bardzo konkretne decyzje produkcyjne.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/fotografia-produktowa-cennik.webp" alt="Fotografia produktowa – cennik bez zgadywania" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -110,4 +99,3 @@ ogDescription: "Fotografia produktowa cennik bez niedomówień. Sprawdź, co wp�
         </div>
       </div>
     </div>
-  </article>

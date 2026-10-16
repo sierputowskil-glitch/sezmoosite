@@ -12,22 +12,11 @@ heroImage: /assets/blog/brand-book-co-zawiera.webp
 heroAlt: Brand book – co zawiera i po co go mieć
 ogTitle: "Brand book – co zawiera i po co go mieć | SEZMOO"
 ogDescription: "Brand book – co zawiera, jak porządkuje komunikację i kiedy naprawdę się opłaca. Sprawdź, co powinien mieć dobry brand book marki."
+lead: "Logo wysłane w pięciu wersjach na mailu, trzy odcienie firmowego granatu krążące między działami i reklamy, które wyglądają tak, jakby robiły je trzy różne firmy – to zwykle moment, w którym pada pytanie: brand book co zawiera i czy faktycznie jest nam potrzebny? Jeśli marka rośnie, działa na kilku kanałach i angażuje więcej niż jedną osobę do komunikacji, odpowiedź najczęściej brzmi: tak."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 07 MIN · 01.05.2026</span>
-      <h1 class="article__title reveal">Brand book – co zawiera i po co go mieć</h1>
-      <p class="article__lead reveal" data-d="1">Logo wysłane w pięciu wersjach na mailu, trzy odcienie firmowego granatu krążące między działami i reklamy, które wyglądają tak, jakby robiły je trzy różne firmy – to zwykle moment, w którym pada pytanie: brand book co zawiera i czy faktycznie jest nam potrzebny? Jeśli marka rośnie, działa na kilku kanałach i angażuje więcej niż jedną osobę do komunikacji, odpowiedź najczęściej brzmi: tak.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/brand-book-co-zawiera.webp" alt="Brand book – co zawiera i po co go mieć" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -104,4 +93,3 @@ ogDescription: "Brand book – co zawiera, jak porządkuje komunikację i kiedy 
         </div>
       </div>
     </div>
-  </article>

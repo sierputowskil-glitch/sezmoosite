@@ -17,6 +17,8 @@ const blog = defineCollection({
     /** When false, page still builds at /slug/ but is omitted from /blog/ listings. */
     listed: z.boolean().default(true),
     featured: z.boolean().default(false),
+    /** Deck under the H1 (was duplicated inside each MD `<article>`). */
+    lead: z.string().optional(),
     heroImage: z.string().optional(),
     heroAlt: z.string().optional(),
     heroCaption: z.string().optional(),

@@ -12,22 +12,11 @@ heroImage: /assets/blog/identyfikacja-wizualna-dla-firmy-co-dziala.webp
 heroAlt: Identyfikacja wizualna dla firmy – co działa
 ogTitle: "Identyfikacja wizualna dla firmy – co działa | SEZMOO"
 ogDescription: "Identyfikacja wizualna dla firmy wpływa na sprzedaż, rozpoznawalność i spójność marki. Sprawdź, co naprawdę działa w praktyce."
+lead: "Pierwsze wrażenie klient wyrabia sobie szybciej, niż większość firm zdąży pokazać ofertę. Czasem wystarczy logo, kolorystyka strony, wygląd prezentacji handlowej albo sposób oznaczenia biura, żeby marka została odebrana jako profesjonalna albo przypadkowa. Dlatego identyfikacja wizualna dla firmy nie jest dodatkiem do marketingu. To jego podstawowe narzędzie operacyjne."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 23.05.2026</span>
-      <h1 class="article__title reveal">Identyfikacja wizualna dla firmy – co działa</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze wrażenie klient wyrabia sobie szybciej, niż większość firm zdąży pokazać ofertę. Czasem wystarczy logo, kolorystyka strony, wygląd prezentacji handlowej albo sposób oznaczenia biura, żeby marka została odebrana jako profesjonalna albo przypadkowa. Dlatego identyfikacja wizualna dla firmy nie jest dodatkiem do marketingu. To jego podstawowe narzędzie operacyjne.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/identyfikacja-wizualna-dla-firmy-co-dziala.webp" alt="Identyfikacja wizualna dla firmy – co działa" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -112,4 +101,3 @@ ogDescription: "Identyfikacja wizualna dla firmy wpływa na sprzedaż, rozpoznaw
         </div>
       </div>
     </div>
-  </article>

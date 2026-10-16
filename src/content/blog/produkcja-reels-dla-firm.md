@@ -12,22 +12,11 @@ heroImage: /assets/blog/produkcja-reels-dla-firm.webp
 heroAlt: "Produkcja – rolki dla firm, która sprzedaje"
 ogTitle: "Produkcja – rolki dla firm, która sprzedaje | SEZMOO"
 ogDescription: "Produkcja video, rolek dla firm pomaga zwiększać zasięg, wzmacniać markę i wspierać sprzedaż. Sprawdź, jak robić to skutecznie i bez chaosu."
+lead: "Pierwsze 2 sekundy decydują, czy ktoś zostanie z Twoją marką, czy przewinie dalej. Właśnie dlatego produkcja reels dla firm przestała być dodatkiem do komunikacji, a stała się jednym z najszybszych narzędzi do budowania uwagi, zaufania i sprzedaży. Problem nie polega dziś na tym, czy warto je robić, tylko jak robić je tak, żeby nie wyglądały jak kolejny przypadkowy film wrzucony „bo algorytm lubi wideo”."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 06 MIN · 25.04.2026</span>
-      <h1 class="article__title reveal">Produkcja – rolki dla firm, która sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze 2 sekundy decydują, czy ktoś zostanie z Twoją marką, czy przewinie dalej. Właśnie dlatego produkcja reels dla firm przestała być dodatkiem do komunikacji, a stała się jednym z najszybszych narzędzi do budowania uwagi, zaufania i sprzedaży. Problem nie polega dziś na tym, czy warto je robić, tylko jak robić je tak, żeby nie wyglądały jak kolejny przypadkowy film wrzucony „bo algorytm lubi wideo”.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/produkcja-reels-dla-firm.webp" alt="Produkcja – rolki dla firm, która sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -109,4 +98,3 @@ ogDescription: "Produkcja video, rolek dla firm pomaga zwiększać zasięg, wzma
         </div>
       </div>
     </div>
-  </article>

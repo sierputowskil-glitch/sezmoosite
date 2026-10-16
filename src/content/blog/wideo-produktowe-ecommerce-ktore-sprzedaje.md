@@ -12,22 +12,11 @@ heroImage: /assets/blog/wideo-produktowe-ecommerce-ktore-sprzedaje.webp
 heroAlt: "Wideo produktowe ecommerce, które sprzedaje"
 ogTitle: "Wideo produktowe ecommerce, które sprzedaje | SEZMOO"
 ogDescription: "Wideo produktowe ecommerce zwiększa sprzedaż, buduje zaufanie i skraca decyzję zakupową. Sprawdź, jak tworzyć materiały, które działają."
+lead: "Masz kilka sekund, zanim klient przewinie dalej, zamknie kartę albo wróci do porównywarki cen. Właśnie dlatego wideo produktowe ecommerce przestało być dodatkiem do karty produktu. Dziś często decyduje o tym, czy użytkownik zrozumie ofertę, zaufa marce i kliknie „dodaj do koszyka”. Zdjęcia nadal są ważne, ale to wideo pokazuje produkt w ruchu, w skali i w realnym użyciu – czyli tam, gdzie zaczyna się sprzedaż."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 28.06.2026</span>
-      <h1 class="article__title reveal">Wideo produktowe ecommerce, które sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Masz kilka sekund, zanim klient przewinie dalej, zamknie kartę albo wróci do porównywarki cen. Właśnie dlatego wideo produktowe ecommerce przestało być dodatkiem do karty produktu. Dziś często decyduje o tym, czy użytkownik zrozumie ofertę, zaufa marce i kliknie „dodaj do koszyka”. Zdjęcia nadal są ważne, ale to wideo pokazuje produkt w ruchu, w skali i w realnym użyciu – czyli tam, gdzie zaczyna się sprzedaż.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/wideo-produktowe-ecommerce-ktore-sprzedaje.webp" alt="Wideo produktowe ecommerce, które sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -112,4 +101,3 @@ ogDescription: "Wideo produktowe ecommerce zwiększa sprzedaż, buduje zaufanie 
         </div>
       </div>
     </div>
-  </article>

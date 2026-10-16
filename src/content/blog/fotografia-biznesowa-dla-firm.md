@@ -12,22 +12,11 @@ heroImage: /assets/blog/fotografia-biznesowa-dla-firm.webp
 heroAlt: "Fotografia biznesowa dla firm, która sprzedaje"
 ogTitle: "Fotografia biznesowa dla firm, która sprzedaje | SEZMOO"
 ogDescription: "Fotografia biznesowa dla firm wzmacnia wizerunek, rekrutację i sprzedaż. Sprawdź, jak zaplanować zdjęcia, które realnie pracują na markę."
+lead: "Pierwsze wrażenie nie dzieje się dziś w recepcji, tylko na stronie, w social mediach, w ofercie PDF i na LinkedIn. Dlatego fotografia biznesowa dla firm przestała być dodatkiem „na później”. Dobrze zrobione zdjęcia mają konkretną robotę do wykonania – budują zaufanie, porządkują komunikację i pomagają sprzedawać szybciej."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 26.06.2026</span>
-      <h1 class="article__title reveal">Fotografia biznesowa dla firm, która sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze wrażenie nie dzieje się dziś w recepcji, tylko na stronie, w social mediach, w ofercie PDF i na LinkedIn. Dlatego fotografia biznesowa dla firm przestała być dodatkiem „na później”. Dobrze zrobione zdjęcia mają konkretną robotę do wykonania – budują zaufanie, porządkują komunikację i pomagają sprzedawać szybciej.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/fotografia-biznesowa-dla-firm.webp" alt="Fotografia biznesowa dla firm, która sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -109,4 +98,3 @@ ogDescription: "Fotografia biznesowa dla firm wzmacnia wizerunek, rekrutację i 
         </div>
       </div>
     </div>
-  </article>

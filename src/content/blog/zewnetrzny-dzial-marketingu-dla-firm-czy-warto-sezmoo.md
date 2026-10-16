@@ -12,22 +12,11 @@ heroImage: /assets/blog/zewnetrzny-dzial-marketingu-dla-firm-czy-warto-sezmoo.we
 heroAlt: Zewnętrzny dział marketingu dla firm – czy warto?
 ogTitle: "Zewnętrzny dział marketingu dla firm – czy warto? | SEZMOO"
 ogDescription: "Zewnętrzny dział marketingu dla firm daje strategię, kreację i realizację bez kosztów etatu. Sprawdź, kiedy taki model naprawdę działa."
+lead: "Są firmy, które nie mają problemu z pomysłami. Mają problem z dowożeniem. Kampania stoi, bo nie ma grafik. Social media czekają, bo nikt nie przygotował wideo. Strona wymaga odświeżenia, ale projekt utknął między handlowcem, agencją i freelancerem. Właśnie dlatego zewnętrzny dział marketingu dla firm przestaje być wygodną opcją, a staje się po prostu rozsądnym modelem działania."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 07 MIN · 07.05.2026</span>
-      <h1 class="article__title reveal">Zewnętrzny dział marketingu dla firm – czy warto?</h1>
-      <p class="article__lead reveal" data-d="1">Są firmy, które nie mają problemu z pomysłami. Mają problem z dowożeniem. Kampania stoi, bo nie ma grafik. Social media czekają, bo nikt nie przygotował wideo. Strona wymaga odświeżenia, ale projekt utknął między handlowcem, agencją i freelancerem. Właśnie dlatego zewnętrzny dział marketingu dla firm przestaje być wygodną opcją, a staje się po prostu rozsądnym modelem działania.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/zewnetrzny-dzial-marketingu-dla-firm-czy-warto-sezmoo.webp" alt="Zewnętrzny dział marketingu dla firm – czy warto?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -112,4 +101,3 @@ ogDescription: "Zewnętrzny dział marketingu dla firm daje strategię, kreację
         </div>
       </div>
     </div>
-  </article>

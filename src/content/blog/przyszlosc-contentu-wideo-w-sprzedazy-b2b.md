@@ -1,6 +1,6 @@
 ---
 title: Przyszłość contentu wideo w sprzedaży B2B
-description: "Przyszłość contentu wideo w sprzedaży to krótszy proces decyzyjny, większe zaufanie i materiały, które realnie wspierają zespół handlowy w B2B i e-commerce"
+description: "Przyszłość contentu wideo w sprzedaży B2B: krótszy proces decyzyjny, większe zaufanie i materiały, które realnie wspierają zespół handlowy."
 date: 2026-07-16
 topic: production
 topicLabel: PRODUKCJA
@@ -12,22 +12,11 @@ heroImage: /assets/blog/przyszlosc-contentu-wideo-w-sprzedazy-b2b.webp
 heroAlt: Przyszłość contentu wideo w sprzedaży B2B
 ogTitle: "Przyszłość contentu wideo w sprzedaży B2B | SEZMOO"
 ogDescription: "Przyszłość contentu wideo w sprzedaży to krótszy proces decyzyjny, większe zaufanie i materiały, które realnie wspierają zespół handlowy w B2B i e-commerce"
+lead: "Kupujący nie chcą już czekać na prezentację handlową, żeby zobaczyć produkt, zrozumieć usługę albo ocenić kompetencje dostawcy. Chcą dostać odpowiedź od razu – na stronie, w kampanii, na LinkedInie lub w skrzynce mailowej. Dlatego przyszłość contentu wideo w sprzedaży nie polega na produkowaniu większej liczby filmów. Polega na tworzeniu materiałów, które zdejmują realne bariery z procesu zakupowego."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 05 MIN · 16.07.2026</span>
-      <h1 class="article__title reveal">Przyszłość contentu wideo w sprzedaży B2B</h1>
-      <p class="article__lead reveal" data-d="1">Kupujący nie chcą już czekać na prezentację handlową, żeby zobaczyć produkt, zrozumieć usługę albo ocenić kompetencje dostawcy. Chcą dostać odpowiedź od razu – na stronie, w kampanii, na LinkedInie lub w skrzynce mailowej. Dlatego przyszłość contentu wideo w sprzedaży nie polega na produkowaniu większej liczby filmów. Polega na tworzeniu materiałów, które zdejmują realne bariery z procesu zakupowego.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/przyszlosc-contentu-wideo-w-sprzedazy-b2b.webp" alt="Przyszłość contentu wideo w sprzedaży B2B" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -92,4 +81,3 @@ ogDescription: "Przyszłość contentu wideo w sprzedaży to krótszy proces dec
         </div>
       </div>
     </div>
-  </article>

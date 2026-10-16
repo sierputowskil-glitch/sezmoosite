@@ -12,22 +12,11 @@ heroImage: /assets/blog/agencja-reklamowa-produkcja-wideo.webp
 heroAlt: Agencja reklamowa a produkcja wideo
 ogTitle: "Agencja reklamowa a produkcja wideo | SEZMOO"
 ogDescription: "Agencja reklamowa i produkcja wideo w jednym miejscu to szybsze kampanie, spójny przekaz i mniej chaosu po stronie Twojego zespołu."
+lead: "Pierwsze 3 sekundy materiału wideo często decydują o tym, czy odbiorca zostanie z marką, czy przewinie dalej. Dlatego agencja reklamowa produkcja wideo to dziś nie dodatek do marketingu, ale jedno z jego najmocniejszych narzędzi. Problem zaczyna się wtedy, gdy film wygląda dobrze, ale nie wspiera sprzedaży, rekrutacji ani wizerunku. Sam obraz nie załatwia wyniku."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 06 MIN · 26.05.2026</span>
-      <h1 class="article__title reveal">Agencja reklamowa a produkcja wideo</h1>
-      <p class="article__lead reveal" data-d="1">Pierwsze 3 sekundy materiału wideo często decydują o tym, czy odbiorca zostanie z marką, czy przewinie dalej. Dlatego agencja reklamowa produkcja wideo to dziś nie dodatek do marketingu, ale jedno z jego najmocniejszych narzędzi. Problem zaczyna się wtedy, gdy film wygląda dobrze, ale nie wspiera sprzedaży, rekrutacji ani wizerunku. Sam obraz nie załatwia wyniku.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/agencja-reklamowa-produkcja-wideo.webp" alt="Agencja reklamowa a produkcja wideo" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -102,4 +91,3 @@ ogDescription: "Agencja reklamowa i produkcja wideo w jednym miejscu to szybsze 
         </div>
       </div>
     </div>
-  </article>

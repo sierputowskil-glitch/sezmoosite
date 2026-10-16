@@ -12,22 +12,11 @@ heroImage: /assets/blog/jak-wdrozyc-outsourcing-marketingu-b2b.webp
 heroAlt: Jak wdrożyć outsourcing marketingu B2B
 ogTitle: "Jak wdrożyć outsourcing marketingu B2B | SEZMOO"
 ogDescription: "Jak wdrożyć outsourcing marketingu B2B krok po kroku? Sprawdź, jak wybrać model współpracy, ustalić cele, zakres i mierzyć efekty."
+lead: "Gdy firma rośnie szybciej niż jej zaplecze marketingowe, pojawia się bardzo praktyczny problem: kampanie trzeba dowozić, materiały produkować, sprzedaż wspierać, a zespół wewnętrzny zwyczajnie nie ma już przepustowości. Właśnie wtedy pojawia się pytanie, jak wdrożyć outsourcing marketingu B2B tak, żeby nie dokładać sobie chaosu, tylko realnie przyspieszyć działania i poprawić wyniki."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 10.06.2026</span>
-      <h1 class="article__title reveal">Jak wdrożyć outsourcing marketingu B2B</h1>
-      <p class="article__lead reveal" data-d="1">Gdy firma rośnie szybciej niż jej zaplecze marketingowe, pojawia się bardzo praktyczny problem: kampanie trzeba dowozić, materiały produkować, sprzedaż wspierać, a zespół wewnętrzny zwyczajnie nie ma już przepustowości. Właśnie wtedy pojawia się pytanie, jak wdrożyć outsourcing marketingu B2B tak, żeby nie dokładać sobie chaosu, tylko realnie przyspieszyć działania i poprawić wyniki.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-wdrozyc-outsourcing-marketingu-b2b.webp" alt="Jak wdrożyć outsourcing marketingu B2B" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -104,4 +93,3 @@ ogDescription: "Jak wdrożyć outsourcing marketingu B2B krok po kroku? Sprawdź
         </div>
       </div>
     </div>
-  </article>

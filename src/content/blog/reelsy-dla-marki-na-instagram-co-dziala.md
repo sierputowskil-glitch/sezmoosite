@@ -12,22 +12,11 @@ heroImage: /assets/blog/reelsy-dla-marki-na-instagram-co-dziala.webp
 heroAlt: Reelsy dla marki na Instagram – co działa
 ogTitle: "Reelsy dla marki na Instagram – co działa | SEZMOO"
 ogDescription: "Reelsy dla marki na Instagram pomagają budować zasięg, zaufanie i sprzedaż. Sprawdź, jakie formaty naprawdę działają w firmowej komunikacji."
+lead: "Jeszcze kilka lat temu marka mogła opierać Instagram głównie na estetycznych zdjęciach. Dziś to za mało. Reelsy dla marki na Instagram stały się jednym z najszybszych sposobów na przyciągnięcie uwagi, pokazanie charakteru firmy i wsparcie sprzedaży bez przepalania budżetu na przypadkowe treści."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">SOCIAL · 06 MIN · 15.05.2026</span>
-      <h1 class="article__title reveal">Reelsy dla marki na Instagram – co działa</h1>
-      <p class="article__lead reveal" data-d="1">Jeszcze kilka lat temu marka mogła opierać Instagram głównie na estetycznych zdjęciach. Dziś to za mało. Reelsy dla marki na Instagram stały się jednym z najszybszych sposobów na przyciągnięcie uwagi, pokazanie charakteru firmy i wsparcie sprzedaży bez przepalania budżetu na przypadkowe treści.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/reelsy-dla-marki-na-instagram-co-dziala.webp" alt="Reelsy dla marki na Instagram – co działa" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -111,4 +100,3 @@ ogDescription: "Reelsy dla marki na Instagram pomagają budować zasięg, zaufan
         </div>
       </div>
     </div>
-  </article>

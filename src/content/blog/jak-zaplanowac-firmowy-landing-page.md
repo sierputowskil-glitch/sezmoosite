@@ -12,22 +12,11 @@ heroImage: /assets/blog/jak-zaplanowac-firmowy-landing-page.webp
 heroAlt: "Jak zaplanować firmowy landing page, który sprzedaje"
 ogTitle: "Jak zaplanować firmowy landing page, który sprzedaje | SEZMOO"
 ogDescription: "Sprawdź, jak zaplanować firmowy landing page, który prowadzi odbiorcę do działania, wspiera kampanię i dostarcza zespołowi wartościowe leady szybciej."
+lead: "Kampania rusza, budżet reklamowy pracuje, ruch na stronie rośnie – a formularz milczy. W wielu firmach problem nie leży w reklamie, tylko w miejscu, do którego reklama prowadzi. Wiedza o tym, jak zaplanować firmowy landing page , pozwala zamienić pojedynczą stronę w konkretny element procesu sprzedaży: taki, który porządkuje komunikat, odpowiada na obiekcje i kieruje odbiorcę do jednego działania."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 30.07.2026</span>
-      <h1 class="article__title reveal">Jak zaplanować firmowy landing page, który sprzedaje</h1>
-      <p class="article__lead reveal" data-d="1">Kampania rusza, budżet reklamowy pracuje, ruch na stronie rośnie – a formularz milczy. W wielu firmach problem nie leży w reklamie, tylko w miejscu, do którego reklama prowadzi. Wiedza o tym, jak zaplanować firmowy landing page , pozwala zamienić pojedynczą stronę w konkretny element procesu sprzedaży: taki, który porządkuje komunikat, odpowiada na obiekcje i kieruje odbiorcę do jednego działania.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/jak-zaplanowac-firmowy-landing-page.webp" alt="Jak zaplanować firmowy landing page, który sprzedaje" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -107,4 +96,3 @@ ogDescription: "Sprawdź, jak zaplanować firmowy landing page, który prowadzi 
         </div>
       </div>
     </div>
-  </article>

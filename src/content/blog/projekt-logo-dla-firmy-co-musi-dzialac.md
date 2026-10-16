@@ -12,22 +12,11 @@ heroImage: /assets/blog/projekt-logo-dla-firmy-co-musi-dzialac.webp
 heroAlt: Projekt logo dla firmy – co musi działać
 ogTitle: "Projekt logo dla firmy – co musi działać | SEZMOO"
 ogDescription: "Projekt logo dla firmy powinien wspierać sprzedaż, rozpoznawalność i spójny wizerunek. Sprawdź, co naprawdę ma znaczenie."
+lead: "Pierwszy sygnał, jaki wysyła marka, często pojawia się szybciej niż oferta, rozmowa handlowa czy prezentacja sprzedażowa. Właśnie dlatego projekt logo dla firmy nie jest drobnym elementem „na start”, tylko narzędziem, które wpływa na to, jak klient ocenia profesjonalizm, skalę i wiarygodność biznesu. Jeśli znak wygląda przypadkowo, cała marka zaczyna tracić na sile – nawet wtedy, gdy produkt lub usługa naprawdę są dobre."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 18.05.2026</span>
-      <h1 class="article__title reveal">Projekt logo dla firmy – co musi działać</h1>
-      <p class="article__lead reveal" data-d="1">Pierwszy sygnał, jaki wysyła marka, często pojawia się szybciej niż oferta, rozmowa handlowa czy prezentacja sprzedażowa. Właśnie dlatego projekt logo dla firmy nie jest drobnym elementem „na start”, tylko narzędziem, które wpływa na to, jak klient ocenia profesjonalizm, skalę i wiarygodność biznesu. Jeśli znak wygląda przypadkowo, cała marka zaczyna tracić na sile – nawet wtedy, gdy produkt lub usługa naprawdę są dobre.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/projekt-logo-dla-firmy-co-musi-dzialac.webp" alt="Projekt logo dla firmy – co musi działać" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -107,4 +96,3 @@ ogDescription: "Projekt logo dla firmy powinien wspierać sprzedaż, rozpoznawal
         </div>
       </div>
     </div>
-  </article>

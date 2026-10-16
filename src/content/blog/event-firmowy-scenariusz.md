@@ -12,22 +12,11 @@ heroImage: /assets/blog/event-firmowy-scenariusz.webp
 heroAlt: "Event firmowy – scenariusz, który działa"
 ogTitle: "Event firmowy – scenariusz, który działa | SEZMOO"
 ogDescription: "Event firmowy scenariusz to podstawa udanego wydarzenia. Sprawdź, jak zaplanować przebieg imprezy, uniknąć chaosu i dowieźć efekt."
+lead: "Zaczyna się niewinnie. Ktoś rzuca hasło: robimy event dla klientów, zespołu albo partnerów. Jest sala, jest termin, czasem nawet atrakcyjny budżet. A potem okazuje się, że bez dobrze rozpisanego planu całość opiera się na domysłach, telefonach w ostatniej chwili i prowadzącym, który nie wie, co dzieje się za 10 minut. Właśnie dlatego event firmowy scenariusz nie jest dodatkiem organizacyjnym, tylko dokumentem, który trzyma całe wydarzenie w ryzach."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">STRATEGIA · 06 MIN · 24.05.2026</span>
-      <h1 class="article__title reveal">Event firmowy – scenariusz, który działa</h1>
-      <p class="article__lead reveal" data-d="1">Zaczyna się niewinnie. Ktoś rzuca hasło: robimy event dla klientów, zespołu albo partnerów. Jest sala, jest termin, czasem nawet atrakcyjny budżet. A potem okazuje się, że bez dobrze rozpisanego planu całość opiera się na domysłach, telefonach w ostatniej chwili i prowadzącym, który nie wie, co dzieje się za 10 minut. Właśnie dlatego event firmowy scenariusz nie jest dodatkiem organizacyjnym, tylko dokumentem, który trzyma całe wydarzenie w ryzach.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/event-firmowy-scenariusz.webp" alt="Event firmowy – scenariusz, który działa" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -101,4 +90,3 @@ ogDescription: "Event firmowy scenariusz to podstawa udanego wydarzenia. Sprawd�
         </div>
       </div>
     </div>
-  </article>

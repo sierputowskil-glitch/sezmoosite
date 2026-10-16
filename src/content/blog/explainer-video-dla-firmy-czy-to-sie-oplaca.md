@@ -12,22 +12,11 @@ heroImage: /assets/blog/explainer-video-dla-firmy-czy-to-sie-oplaca.webp
 heroAlt: Explainer video dla firmy – czy to się opłaca?
 ogTitle: "Explainer video dla firmy – czy to się opłaca? | SEZMOO"
 ogDescription: "Explainer video dla firmy pomaga szybciej wyjaśnić ofertę, zwiększyć sprzedaż i wyróżnić markę. Sprawdź, kiedy naprawdę się opłaca."
+lead: "Masz kilka sekund, żeby ktoś zrozumiał, czym zajmuje się Twoja firma. Jeśli w tym czasie odbiorca nadal zastanawia się, co właściwie sprzedajesz, przewaga trafia do konkurencji. Właśnie dlatego explainer video dla firmy coraz częściej nie jest dodatkiem do komunikacji, tylko narzędziem, które realnie wspiera sprzedaż, marketing i onboarding klientów."
+heroCaption: "SEZMOO / BLOG"
 ---
 
-<article class="article shell">
-    <header class="article__head">
-      <a class="article__back reveal" href="/blog/">← Wróć do&nbsp;bloga</a>
-      <span class="blog-post__meta reveal">PRODUKCJA · 07 MIN · 30.04.2026</span>
-      <h1 class="article__title reveal">Explainer video dla firmy – czy to się opłaca?</h1>
-      <p class="article__lead reveal" data-d="1">Masz kilka sekund, żeby ktoś zrozumiał, czym zajmuje się Twoja firma. Jeśli w tym czasie odbiorca nadal zastanawia się, co właściwie sprzedajesz, przewaga trafia do konkurencji. Właśnie dlatego explainer video dla firmy coraz częściej nie jest dodatkiem do komunikacji, tylko narzędziem, które realnie wspiera sprzedaż, marketing i onboarding klientów.</p>
-    </header>
-
-    <div class="article__media reveal">
-      <div class="frame-media"><img src="/assets/blog/explainer-video-dla-firmy-czy-to-sie-oplaca.webp" alt="Explainer video dla firmy – czy to się opłaca?" loading="eager" /></div>
-      <span>SEZMOO / BLOG</span>
-    </div>
-
-    <div class="article__layout">
+<div class="article__layout">
       <aside class="article__aside reveal">
         <span>W artykule</span>
         <a href="#wstep">Wstęp</a>
@@ -116,4 +105,3 @@ ogDescription: "Explainer video dla firmy pomaga szybciej wyjaśnić ofertę, zw
         </div>
       </div>
     </div>
-  </article>
