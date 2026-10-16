@@ -1,6 +1,6 @@
 # SEZMOO site (Astro)
 
-Static marketing site built with **Astro 5**, hosted on **Cloudflare Pages** (production) with a **Pages Function** for the contact form. Optional previews: Cloudflare Pages project `sezmoo-staging` (`*.sezmoo-staging.pages.dev`) and GitHub Pages static mirror (no `/api/contact`).
+Static marketing site built with **Astro 5**, hosted on **Cloudflare Pages** (production) with a **Pages Function** for the contact form. Optional GitHub Pages static mirror (no `/api/contact`).
 
 Legacy CyberFolks HTML/PHP snapshot lives on branch [`legacy/cyberfolks-html`](https://github.com/sierputowskil-glitch/sezmoosite/tree/legacy/cyberfolks-html) (tip = pre-Astro `main`).
 
@@ -86,12 +86,6 @@ Workflow: `.github/workflows/cf-pages-prod.yml` (push to `main` / manual).
 - Deploy `dist/` + `functions/` via Wrangler
 - Configure secrets and KV binding in the CF dashboard (or `wrangler.toml`)
 
-### Optional — Cloudflare Pages preview (`sezmoo-staging`)
-
-- No custom domain (detached from `sezmoo.websky.pro`)
-- Deploy manually / via Wrangler: `npx wrangler pages deploy dist --project-name=sezmoo-staging --branch=staging`
-- Build with `PUBLIC_SITE_URL` set to the deployment `*.pages.dev` URL (or leave unset for local checks), `PUBLIC_BASE_PATH=/`, `PUBLIC_CONTACT_API_URL=/api/contact`
-
 ### Optional — GitHub Pages mirror
 
 Workflow: `.github/workflows/gh-pages-staging.yml`.
@@ -99,7 +93,7 @@ Workflow: `.github/workflows/gh-pages-staging.yml`.
 - On `feat/*`: **build + check only** (deploy skipped — `github-pages` env allows `main` only)
 - On `main`: static deploy to GitHub Pages
 - `PUBLIC_CONTACT_API_URL` is empty so the form does **not** pretend `/api/contact` works
-- Prefer prod / `*.pages.dev` for layout/content; test the form with `npm run dev:functions` or production
+- Prefer production for layout/content; test the form with `npm run dev:functions` or production
 
 ## Cutover checklist (DNS / Cloudflare)
 
