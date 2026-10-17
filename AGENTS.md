@@ -37,6 +37,7 @@ Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `
 | `src/data/case-studies.ts` | Case-study PL/EN copy keyed by YouTube / CDN video id |
 | `src/data/home.ts` | Homepage PL/EN copy (`HOME` / `homeCopy`) — do not fork `index.astro` HTML |
 | `src/data/services/` | Service PL/EN copy + hub chrome (`types.ts`, `pages/*.ts`, `hub.ts`) |
+| `src/data/longform/` | Branding / event / campaign cases (`/realizacja-{id}/`) — not the video `[slug]` pipeline |
 | `src/lib/` | `site.ts` (URLs, phone, media CDN), `blog.ts`, `schema.ts` (JSON-LD objects) |
 | `assets/` | CSS, JS, images, video posters/manifest — source of truth (`assets/css/portfolio.css`, `case-study.css`) |
 | `public/` | `_redirects`, `_headers`, `robots.txt`, `404.html`; assets appear after sync |
@@ -143,7 +144,7 @@ Do not dump homepage or portfolio logic back into `app.js`. Case-study play stay
 
 - **Data-driven video cases:** copy in `src/data/case-studies.ts` (PL + EN per YouTube `videoId` + public `slug`). URLs: `/realizacja/{slug}/` and `/en/realizacja/{slug}/` via `src/pages/realizacja/[slug]/` (no new Astro file per case). Legacy `/realizacja/{videoId}/` and `?v=` redirect to the slug.
 - **Order / next-nav:** `CASE_STUDY_ORDER` (videoIds) in the same file — update when inserting; keep `slug` unique and title-derived.
-- **Legacy one-off shells** still exist as `src/pages/realizacja-*/` (and EN mirrors) for non-standard layouts; prefer the `[id]` pipeline for new video cases.
+- **Longform cases** (branding / event / campaign, not YouTube-slug video): copy in `src/data/longform/pages/*.ts`, rendered by `LongformCasePage`. URLs stay `/realizacja-{id}/` (and `/en/realizacja-{id}/` when `en` exists). Thin routes under `src/pages/realizacja-*/`. PL-only today: denza, exlantix, world-of-warships. New video cases still go through `CASE_STUDIES` + `[slug]`.
 - Player uses `data-video="{ytId}"` → `assets/js/cdn-video-map.js` → MP4 on Hostido CDN (`cdn.sezmoo.com`). Posters stay on Pages: `/assets/video/yt/posters/{id}.webp`.
 
 ### New video case study — pipeline

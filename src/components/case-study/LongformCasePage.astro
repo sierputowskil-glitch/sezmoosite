@@ -1,0 +1,160 @@
+---
+/**
+ * Shared longform case template (branding / event / campaign).
+ * Copy lives in src/data/longform. Not the video [slug] pipeline.
+ */
+import AssetImage from '../AssetImage.astro';
+import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+import { creativeWorkJsonLd } from '../../lib/schema';
+import { pageUrl } from '../../lib/site';
+import {
+  longformAltPath,
+  longformCopy,
+  longformPath,
+  type LongformDef,
+  type LongformLang,
+} from '../../data/longform';
+import LongformBlocks from './LongformBlocks.astro';
+
+interface Props {
+  def: LongformDef;
+  lang: LongformLang;
+}
+
+const { def, lang } = Astro.props;
+const copy = longformCopy(def, lang);
+if (!copy) throw new Error(`Missing ${lang} copy for longform ${def.id}`);
+
+const path = longformPath(def, lang);
+const canonical = pageUrl(path);
+const hasEn = !!def.en;
+const hreflangPl = pageUrl(longformPath(def, 'pl'));
+const hreflangEn = hasEn ? pageUrl(longformPath(def, 'en')) : undefined;
+const altHref = hasEn ? longformAltPath(def, lang) : undefined;
+
+const jsonLd = creativeWorkJsonLd({
+  name: copy.schemaName,
+  description: copy.description,
+  canonical,
+  image: copy.hero.image,
+  lang,
+});
+
+const ui =
+  lang === 'pl'
+    ? {
+        backHref: '/portfolio/',
+        backLabel: '← Portfolio / Realizacje',
+        metaAria: 'Dane projektu',
+        quoteAria: 'Efekt końcowy',
+      }
+    : {
+        backHref: '/en/portfolio-en/',
+        backLabel: '← Portfolio / Work',
+        metaAria: 'Project details',
+        quoteAria: 'Result',
+      };
+
+const needsStories = copy.blocks.some((b) => b.type === 'stories');
+const heroWidths = [720, 1080, 1440, 1920];
+---
+
+<CaseStudyLayout
+  lang={lang}
+  title={copy.title}
+  description={copy.description}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  hreflangPl={hasEn ? hreflangPl : undefined}
+  hreflangEn={hreflangEn}
+  altHref={altHref}
+>
+  <header class:list={['cs-hero', copy.hero.device ? 'cs-hero--device' : undefined]} data-screen-label="Case · Cover">
+    <div class="cs-hero__media">
+      <AssetImage
+        src={copy.hero.image}
+        alt={copy.hero.alt}
+        loading="eager"
+        fetchpriority="high"
+        widths={heroWidths}
+        sizes="100vw"
+        quality={72}
+      />
+    </div>
+    {copy.hero.frame && (
+      <div class="cs-hero__frame" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    )}
+    <div class="cs-hero__hud">
+      {copy.hero.hud.map((h, i) =>
+        i === 0 ? <span class="rec">{h}</span> : <span>{h}</span>,
+      )}
+    </div>
+    <div class="cs-hero__inner shell">
+      <a class="cs-hero__back" href={copy.back?.href ?? ui.backHref}>{copy.back?.label ?? ui.backLabel}</a>
+      <span class="eyebrow cs-hero__cat"><span class="tick"></span><Fragment set:html={copy.hero.cat} /></span>
+      <h1 class="cs-title">
+        <Fragment set:html={copy.hero.titleLead} />
+        <span class="accent" set:html={copy.hero.titleAccent} />
+      </h1>
+      <p class="cs-hero__sub" set:html={copy.hero.sub} />
+    </div>
+    <div class="cs-scroll" aria-hidden="true"><span>SCROLL</span><i></i></div>
+  </header>
+
+  <section class="cs-meta" aria-label={ui.metaAria}>
+    <div class="shell">
+      <div class="cs-meta__grid">
+        {copy.meta.map((m) => (
+          <div class="cs-meta__cell">
+            <div class="cs-meta__k">{m.k}</div>
+            <div class="cs-meta__v">
+              {m.href ? (
+                <a href={m.href} target="_blank" rel="noopener" style="color:inherit">{m.v}</a>
+              ) : (
+                m.v
+              )}
+              {m.small && <small set:html={m.small} />}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <LongformBlocks blocks={copy.blocks} />
+
+  <section class="cs-quote" aria-label={ui.quoteAria}>
+    <div class="shell cs-sec">
+      <div class="cs-quote__inner reveal">
+        <blockquote>
+          <span class="mark">„</span>
+          <Fragment set:html={copy.quote.text} />
+          <span class="mark">”</span>
+        </blockquote>
+        <div class="cs-quote__by" set:html={copy.quote.by} />
+      </div>
+    </div>
+  </section>
+
+  <a class="cs-next bleed" href={copy.next.href} data-cursor="link" aria-label={copy.next.aria}>
+    <AssetImage
+      src={copy.next.image}
+      alt={copy.next.alt}
+      loading="lazy"
+      widths={[640, 960, 1280, 1600]}
+      sizes="(max-width: 900px) 100vw, min(1100px, 85vw)"
+      quality={72}
+    />
+    <div class="cs-next__inner shell">
+      <span class="cs-next__k">{copy.next.k}</span>
+      <span class="cs-next__title">{copy.next.title} <span class="arrow">→</span></span>
+      <span class="cs-next__cat">{copy.next.cat}</span>
+    </div>
+  </a>
+
+  {needsStories && (
+    <script>
+      import '../../../assets/js/ad-story.js';
+    </script>
+  )}
+</CaseStudyLayout>

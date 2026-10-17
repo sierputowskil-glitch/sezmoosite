@@ -1,0 +1,355 @@
+---
+import AssetImage from '../AssetImage.astro';
+import AdPostFig from './AdPostFig.astro';
+import type { LongformBlock } from '../../data/longform/types';
+
+interface Props {
+  blocks: LongformBlock[];
+}
+
+const { blocks } = Astro.props;
+
+const shotSizes = '(max-width: 900px) 100vw, min(1100px, 85vw)';
+const widths = [640, 960, 1280, 1600];
+---
+
+{
+  blocks.map((block) => {
+    if (block.type === 'intro') {
+      return (
+        <section class="cs-sec" data-screen-label={block.screen}>
+          <div class="shell">
+            <div class="cs-intro__grid">
+              <div class="reveal">
+                <span class="cs-sec__no" set:html={block.no} />
+                <h2 class="cs-sec__title" set:html={block.titleHtml} />
+              </div>
+              <div class="cs-body reveal" data-d="1">
+                {block.paras.map((p) => (
+                  <p set:html={p} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+    if (block.type === 'heading') {
+      return (
+        <section
+          class="cs-sec"
+          style={block.padTop0 ? 'padding-top:0' : block.padBottom0 ? 'padding-bottom:0' : undefined}
+          data-screen-label={block.screen}
+        >
+          <div class="shell">
+            <span class="cs-sec__no reveal" set:html={block.no} />
+            <h2 class="cs-sec__title reveal" set:html={block.titleHtml} />
+            {block.lead && (
+              <p class="cs-body reveal" data-d="1" style="max-width:58ch;margin-top:20px" set:html={block.lead} />
+            )}
+          </div>
+        </section>
+      );
+    }
+    if (block.type === 'steps') {
+      return (
+        <section class="cs-sec" style={block.padTop0 ? 'padding-top:0' : undefined} data-screen-label={block.screen}>
+          <div class="shell">
+            <span class="cs-sec__no reveal" set:html={block.no} />
+            <h2 class="cs-sec__title reveal" set:html={block.titleHtml} />
+            {block.lead && (
+              <p class="cs-body reveal" data-d="1" style="max-width:58ch;margin-top:20px" set:html={block.lead} />
+            )}
+            <div class="cs-steps">
+              {block.items.map((item) => (
+                <div class="cs-step reveal">
+                  <span class="cs-step__no">{item.no}</span>
+                  <h3 class="cs-step__title" set:html={item.title} />
+                  <p class="cs-step__desc" set:html={item.desc} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+    if (block.type === 'film') {
+      return (
+        <section class="cs-sec" data-screen-label={block.screen}>
+          <div class="shell">
+            <span class="cs-sec__no reveal" set:html={block.no} />
+            <h2 class="cs-sec__title reveal" set:html={block.titleHtml} />
+            {block.lead && (
+              <p class="cs-body reveal" data-d="1" style="max-width:54ch;margin-top:20px" set:html={block.lead} />
+            )}
+            <div class="cs-film reveal" data-d="1" style="margin-top:clamp(30px,4vh,48px)">
+              <div
+                class="cs-film__frame"
+                class:list={[{ 'is-short': block.short }]}
+                data-cursor="play"
+                data-video={block.videoId}
+                role="button"
+                tabindex="0"
+                aria-label={block.alt}
+                style={block.short ? 'aspect-ratio:9/16;max-width:420px;margin-inline:auto' : undefined}
+              >
+                <AssetImage src={block.poster} alt={block.alt} loading="lazy" widths={widths} sizes={shotSizes} quality={72} />
+                <div class="cs-film__play"><span class="cs-film__btn" aria-hidden="true"></span></div>
+                <div class="cs-film__meta">
+                  <span class="rec">● REC</span>
+                  <span>{block.recLabel}</span>
+                  {block.extras?.map((x) => (
+                    <span>{x}</span>
+                  ))}
+                </div>
+                <div class="cs-film__bar"><i></i></div>
+              </div>
+            </div>
+            {block.noteHtml && (
+              <p class="cs-body reveal" data-d="1" style="max-width:54ch;margin-top:26px" set:html={block.noteHtml} />
+            )}
+          </div>
+        </section>
+      );
+    }
+    if (block.type === 'gallery') {
+      return (
+        <section class="cs-gallery bleed" aria-label={block.aria} style={block.padTop0 ? 'padding-top:0' : undefined}>
+          {block.rows.map((row) => (
+            <div class:list={['cs-row', row.split ? 'cs-row--split' : undefined]}>
+              {row.shots.map((s) => (
+                <figure
+                  class:list={['cs-shot', 'reveal', s.figureClass, s.delay ? undefined : undefined]}
+                  data-d={s.delay ? '1' : undefined}
+                  data-parallax={s.parallax}
+                  style={[s.ratio ? `aspect-ratio:${s.ratio}` : '', s.bg ? `background:${s.bg}` : '', s.figureStyle || '']
+                    .filter(Boolean)
+                    .join(';')}
+                >
+                  <div
+                    class="frame-media cs-shot__media"
+                    style={[s.bg ? `background:${s.bg}` : '', s.contain ? 'display:grid;place-items:center' : '', s.scroll ? 'overflow-y:auto;overscroll-behavior:contain' : '', s.mediaStyle || '']
+                      .filter(Boolean)
+                      .join(';')}
+                    data-lenis-prevent={s.scroll ? '' : undefined}
+                  >
+                    <AssetImage
+                      src={s.src}
+                      alt={s.alt}
+                      loading="lazy"
+                      widths={widths}
+                      sizes={shotSizes}
+                      quality={72}
+                      style={s.imgStyle}
+                    />
+                  </div>
+                  <span class="cs-shot__tag" style="white-space:nowrap">{s.tag}</span>
+                  {s.tc && <span class="cs-shot__tc" data-tc={s.tc}>{s.tc}</span>}
+                </figure>
+              ))}
+            </div>
+          ))}
+        </section>
+      );
+    }
+    if (block.type === 'splitShots') {
+      return (
+        <section class="cs-sec" style={block.padTop0 ? 'padding-top:0' : undefined} aria-label={block.aria} data-screen-label={block.screen}>
+          <div class="shell">
+            <span class="cs-sec__no reveal" set:html={block.no} />
+            <h2 class="cs-sec__title reveal" set:html={block.titleHtml} />
+            {block.lead && (
+              <p class="cs-body reveal" data-d="1" style="max-width:58ch;margin-top:20px" set:html={block.lead} />
+            )}
+          </div>
+          <div class="cs-row cs-row--split" style="margin-top:clamp(28px,4vh,48px)">
+            {block.shots.map((s) => (
+              <figure
+                class:list={['cs-shot', 'reveal', s.figureClass]}
+                data-d={s.delay ? '1' : undefined}
+                style={[s.ratio ? `aspect-ratio:${s.ratio}` : '', s.bg ? `background:${s.bg}` : '']
+                  .filter(Boolean)
+                  .join(';')}
+              >
+                <div
+                  class="frame-media cs-shot__media"
+                  style={[s.bg ? `background:${s.bg}` : '', s.contain ? 'display:grid;place-items:center' : '']
+                    .filter(Boolean)
+                    .join(';')}
+                >
+                  <AssetImage
+                    src={s.src}
+                    alt={s.alt}
+                    loading="lazy"
+                    widths={widths}
+                    sizes={shotSizes}
+                    quality={72}
+                    style={s.imgStyle}
+                  />
+                </div>
+                <span class="cs-shot__tag" style="white-space:nowrap">{s.tag}</span>
+              </figure>
+            ))}
+          </div>
+        </section>
+      );
+    }
+    if (block.type === 'palette') {
+      return (
+        <section class="cs-sec" style={block.padTop0 ? 'padding-top:0' : undefined} data-screen-label={block.screen}>
+          <div class="shell">
+            {block.no ? <span class="cs-sec__no reveal" set:html={block.no} /> : null}
+            {block.titleHtml ? <h2 class="cs-sec__title reveal" set:html={block.titleHtml} /> : null}
+            <div class="reveal" style={`margin-top:clamp(28px,4vh,48px);display:grid;grid-template-columns:repeat(${Math.min(block.colors.length, 6)},minmax(0,1fr));gap:clamp(10px,1.4vw,20px)`}>
+              {block.colors.map((c) => (
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <div style={`aspect-ratio:16/9;background:${c.hex};border:1px solid var(--line-soft)`}></div>
+                  <div style="display:flex;justify-content:space-between;gap:8px;font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase">
+                    <span>{c.name}</span>
+                    <span style="color:var(--fg-dim)">{c.hex}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {(block.typeSampleHtml || block.typeNoteHtml) && (
+              <div class="reveal" style="margin-top:clamp(40px,6vh,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(24px,3vw,48px);align-items:end;border-top:1px solid var(--line-soft);padding-top:clamp(24px,3vh,40px)">
+                {block.typeSampleHtml && <Fragment set:html={block.typeSampleHtml} />}
+                {block.typeNoteHtml && <div class="cs-body" set:html={block.typeNoteHtml} />}
+              </div>
+            )}
+          </div>
+        </section>
+      );
+    }
+    if (block.type === 'stories') {
+      return (
+        <section class="cs-sec" style="padding-top:0" aria-label={block.screen} data-screen-label={block.screen}>
+          <div class="shell">
+            <span class="cs-sec__no reveal" set:html={block.no} />
+            <h2 class="cs-sec__title reveal" set:html={block.titleHtml} />
+          </div>
+          <div class="ad-grid ad-grid--phones reveal" style="margin-top:clamp(28px,4vh,48px)">
+            {
+              [
+                { frames: block.line1, cap: block.captions[0] },
+                { frames: block.line2, cap: block.captions[1] },
+              ].map((line) => (
+                <figure class="ad-phone ad-story reveal">
+                  <script type="application/json" class="ad-story__data" is:inline set:html={JSON.stringify(line.frames)} />
+                  <div class="ad-phone__screen">
+                    <img class="ad-story__img" alt="" loading="lazy" />
+                    <div class="ad-phone__ui">
+                      <div class="ad-phone__top ad-story__bars"></div>
+                      <div class="ad-phone__hdr">
+                        <span class="ad-phone__av">PS</span>
+                        <span>
+                          <span class="ad-phone__name">{block.name}</span>
+                          <span class="ad-phone__spon">{block.spon}</span>
+                        </span>
+                      </div>
+                      <span class="ad-phone__cta">{block.cta}</span>
+                    </div>
+                    <button class="ad-story__zone ad-story__prev" type="button" aria-label={block.prev}></button>
+                    <button class="ad-story__zone ad-story__next" type="button" aria-label={block.next}></button>
+                  </div>
+                  <figcaption class="ad-cap">{line.cap}</figcaption>
+                </figure>
+              ))
+            }
+          </div>
+          {block.afterHtml && (
+            <div class="shell">
+              <div class="cs-body reveal" data-d="1" style="max-width:70ch;margin-top:clamp(20px,3vh,34px)" set:html={block.afterHtml} />
+            </div>
+          )}
+        </section>
+      );
+    }
+    if (block.type === 'brandBook') {
+      const wide = block.spreads.filter((s) => s.wide);
+      const rest = block.spreads.filter((s) => !s.wide);
+      const spine =
+        'position:absolute;top:0;bottom:0;left:50%;width:6%;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(0,0,0,.18) 45%,rgba(0,0,0,.28) 50%,rgba(0,0,0,.18) 55%,transparent);pointer-events:none';
+      const spreadShadow = 'display:grid;grid-template-columns:1fr 1fr;box-shadow:0 30px 60px rgba(0,0,0,.45),0 4px 10px rgba(0,0,0,.3);position:relative';
+      const spread = (s: (typeof block.spreads)[number]) => (
+        <div class="reveal" style={`${spreadShadow};transform:rotate(${s.rotate})`}>
+          {s.pages.map((p) => (
+            <div style={`aspect-ratio:297/210;background:${p.bg};position:relative;display:grid;place-items:center;overflow:hidden`}>
+              {p.src && (
+                <AssetImage
+                  src={p.src}
+                  alt=""
+                  loading="lazy"
+                  widths={widths}
+                  sizes={shotSizes}
+                  quality={72}
+                  style={`width:${p.imgPct ?? '52%'};height:auto`}
+                />
+              )}
+              {p.heading && (
+                <div style="text-align:center;font-family:Poppins,var(--font-display);color:#fff">
+                  <div style="font-size:clamp(14px,1.6vw,24px)">{p.heading}</div>
+                  {p.sub && (
+                    <div style="font-size:clamp(7px,.6vw,9px);letter-spacing:.2em;text-transform:uppercase;margin-top:6px;opacity:.75">{p.sub}</div>
+                  )}
+                </div>
+              )}
+              <span
+                style={`position:absolute;left:5%;bottom:6%;font-family:var(--font-mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:${p.labelOnDark ? 'rgba(255,255,255,.6)' : 'rgba(30,59,31,.6)'}`}
+              >
+                {p.label}
+              </span>
+            </div>
+          ))}
+          <i style={spine}></i>
+        </div>
+      );
+      return (
+        <section class="cs-sec" style={block.padTop0 ? 'padding-top:0' : undefined} data-screen-label={block.screen}>
+          <div class="shell">
+            <span class="cs-sec__no reveal" set:html={block.no} />
+            <h2 class="cs-sec__title reveal" set:html={block.titleHtml} />
+            {block.lead && (
+              <p class="cs-body reveal" data-d="1" style="max-width:58ch;margin-top:20px" set:html={block.lead} />
+            )}
+          </div>
+          <div class="shell" style="margin-top:clamp(36px,5vh,64px);padding-block:clamp(36px,6vw,90px);background:#14110d;display:grid;gap:clamp(36px,5vw,72px)">
+            {wide.map((s) => (
+              <div style="width:min(88%,1100px);margin-inline:auto">{spread(s)}</div>
+            ))}
+            {rest.length > 0 && (
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(28px,4vw,56px);width:min(92%,1240px);margin-inline:auto">
+                {rest.map((s) => spread(s))}
+              </div>
+            )}
+          </div>
+        </section>
+      );
+    }
+    if (block.type === 'adPosts') {
+      return (
+        <section class="cs-sec cs-gallery" aria-label={block.aria}>
+          <div class="shell ad-grid" style="gap:clamp(28px,4vw,52px)">
+            {block.groups.map((group) =>
+              group.length === 1 ? (
+                <div>
+                  <AdPostFig post={group[0]} name={block.name} spon={block.spon} cta={block.cta} />
+                </div>
+              ) : (
+                <div class="ad-grid ad-grid--2">
+                  {group.map((post) => (
+                    <AdPostFig post={post} name={block.name} spon={block.spon} cta={block.cta} />
+                  ))}
+                </div>
+              ),
+            )}
+          </div>
+        </section>
+      );
+    }
+    if (block.type === 'html') {
+      return <Fragment set:html={block.html} />;
+    }
+    return null;
+  })
+}
