@@ -13,6 +13,7 @@ import { homePageJsonLd } from '../../lib/schema';
 import { pageUrl, PHONE_DISPLAY, PHONE_TEL } from '../../lib/site';
 import {
   HOME_CLIENTS,
+  SHOWREEL_POSTER_MOBILE_PRELOAD,
   SHOWREEL_POSTER_PRELOAD,
   STUDIO_VIDEO_ID,
   homeCopy,
@@ -80,7 +81,7 @@ const studioLead = copy.studio.paras.length > 1;
   altHref={copy.altHref}
   brandHref={copy.brandHref}
   jsonLd={jsonLd}
-  extraHead={`<link rel="preload" as="image" type="image/webp" href="${SHOWREEL_POSTER_PRELOAD}" fetchpriority="high" /><link rel="stylesheet" href="${homeCssHref}" />`}
+  extraHead={`<link rel="preload" as="image" type="image/webp" href="${SHOWREEL_POSTER_MOBILE_PRELOAD}" media="(max-width: 768px)" fetchpriority="high" /><link rel="preload" as="image" type="image/webp" href="${SHOWREEL_POSTER_PRELOAD}" media="(min-width: 769px)" fetchpriority="high" /><link rel="stylesheet" href="${homeCssHref}" />`}
 >
   <section class="hero" id="hero" data-screen-label="Hero">
     <div class="hero__reel">

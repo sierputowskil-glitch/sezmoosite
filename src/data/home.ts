@@ -158,7 +158,9 @@ export interface HomeCopy {
   };
 }
 
-export const SHOWREEL_POSTER_PRELOAD = '/assets/video/showreel-poster.webp?v=20261017a';
+/** Cache-busted hero posters (brightness baked in). Preload both with media. */
+export const SHOWREEL_POSTER_PRELOAD = '/assets/video/showreel-poster.webp?v=20261017b';
+export const SHOWREEL_POSTER_MOBILE_PRELOAD = '/assets/video/showreel-poster-m.webp?v=20261017b';
 export const STUDIO_VIDEO_ID = 'b_MB9qpw6jE';
 
 const TEAM_BASE: Omit<HomeTeamMember, 'role'>[] = [

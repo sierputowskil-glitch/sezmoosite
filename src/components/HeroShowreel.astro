@@ -3,6 +3,9 @@
  * Native hero background showreel — muted autoplay after LCP gate (see home.js).
  * Pattern: .docs/abonament_video_handoff.md — poster LCP, MP4 via data-src only.
  * CDN: showreel-16s.mp4 = 1080p; showreel-720-16s.mp4 = mobile; showreel-full.mp4 = master.
+ *
+ * Poster brightness/saturate are baked into the WebP (no CSS filter on the LCP img).
+ * Mobile gets a 1080w asset (~40KB) so the image can win LCP on Slow 4G.
  */
 import { mediaUrl } from '../lib/site';
 
@@ -13,19 +16,23 @@ const { title = 'SEZMOO showreel' } = Astro.props;
 
 const videoSrc = mediaUrl('video/showreel-16s.mp4');
 const videoSrcMobile = mediaUrl('video/showreel-720-16s.mp4');
-const posterWebp = '/assets/video/showreel-poster.webp?v=20261017a';
+const posterDesktop = '/assets/video/showreel-poster.webp?v=20261017b';
+const posterMobile = '/assets/video/showreel-poster-m.webp?v=20261017b';
 ---
 
 <div class="hero__video" data-bg-video data-bg-video-priority="hero">
-  <img
-    class="hero__poster"
-    src={posterWebp}
-    alt=""
-    width="1600"
-    height="900"
-    decoding="sync"
-    fetchpriority="high"
-  />
+  <picture>
+    <source media="(max-width: 768px)" srcset={posterMobile} type="image/webp" width="1080" height="608" />
+    <img
+      class="hero__poster"
+      src={posterDesktop}
+      alt=""
+      width="1600"
+      height="900"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </picture>
   <video
     id="hero-video"
     muted

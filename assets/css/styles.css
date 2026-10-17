@@ -415,7 +415,11 @@ main {
   width: 100%; height: 100%;
   max-width: none;
   object-fit: cover;
-  filter: brightness(0.78) saturate(1.05);
+  /* brightness/saturate baked into showreel-poster(-m).webp — keep LCP img filter-free */
+}
+.hero__video picture {
+  position: absolute; inset: 0;
+  display: block;
 }
 .hero__video video {
   position: absolute; inset: 0;
