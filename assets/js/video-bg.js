@@ -1,14 +1,27 @@
 /**
  * Background video: local poster first, then first-party CDN MP4 (no YouTube iframe).
- * Touch / coarse pointer: poster only. Depends on window.__SEZMOO__ from cdn-video-map.
+ * Desktop + mobile: mount when near viewport (muted autoplay).
+ * Save-Data / 2g / reduced-motion: poster only.
+ * Offscreen on touch: detach buffer so lazy images keep the pipe.
+ * Depends on window.__SEZMOO__ from cdn-video-map.
  */
 (function () {
   var finePointer = false;
+  var reduceMotion = false;
   try {
-    finePointer =
-      window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
-      !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   } catch (_e) {}
+
+  var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  var saveData = !!(conn && conn.saveData);
+  var slowNet = !!(
+    conn &&
+    (conn.effectiveType === '2g' ||
+      conn.effectiveType === 'slow-2g' ||
+      (typeof conn.downlink === 'number' && conn.downlink > 0 && conn.downlink < 0.7))
+  );
+  var posterOnly = reduceMotion || saveData || slowNet;
 
   function applyPoster(el) {
     var poster = el.getAttribute('data-video-poster');
@@ -20,13 +33,14 @@
   function mountCdnBg(el, id) {
     var s = window.__SEZMOO__;
     if (!s || !s.mountCdnVideo || !s.cdnVideoUrl || !s.cdnVideoUrl(id)) return false;
-    if (el.dataset.videoMounted) return true;
+    if (el.dataset.videoMounted === '1' && el.querySelector('video')) return true;
     el.dataset.videoMounted = '1';
     s.mountCdnVideo(el, id, {
       muted: true,
       loop: true,
       autoplay: true,
-      preload: 'metadata',
+      // Mobile: metadata first; browser still buffers for muted autoplay when playing.
+      preload: finePointer ? 'auto' : 'metadata',
       className: 'video-bg__video',
       title: el.getAttribute('data-video-title') || '',
     });
@@ -34,12 +48,15 @@
   }
 
   function mount(el) {
-    if (!el || el.dataset.videoMounted) return;
-    applyPoster(el);
-    if (!finePointer) {
-      el.dataset.videoMounted = '1';
+    if (!el || posterOnly) {
+      if (el) {
+        applyPoster(el);
+        el.dataset.videoMounted = '1';
+      }
       return;
     }
+    if (el.dataset.videoMounted === '1' && el.querySelector('video')) return;
+    applyPoster(el);
     var id = el.getAttribute('data-video-id');
     if (!id) return;
     if (mountCdnBg(el, id)) return;
@@ -60,6 +77,8 @@
   function playBgMedia(el) {
     var v = el.querySelector('video');
     if (!v) return;
+    v.muted = true;
+    v.playsInline = true;
     var p = v.play();
     if (p && typeof p.catch === 'function') p.catch(function () {});
   }
@@ -69,15 +88,35 @@
     if (v && !v.paused) v.pause();
   }
 
+  function detachBgMedia(el) {
+    var v = el.querySelector('video');
+    if (!v) return;
+    try {
+      v.pause();
+    } catch (_e) {}
+    v.removeAttribute('src');
+    while (v.firstChild) v.removeChild(v.firstChild);
+    try {
+      v.load();
+    } catch (_e2) {}
+    if (v.parentNode) v.parentNode.removeChild(v);
+    delete el.dataset.videoMounted;
+  }
+
   function whenIdle(fn) {
     if ('requestIdleCallback' in window) requestIdleCallback(fn, { timeout: 2200 });
     else if (document.readyState === 'complete') setTimeout(fn, 1);
-    else window.addEventListener('load', function () { setTimeout(fn, 1); });
+    else
+      window.addEventListener('load', function () {
+        setTimeout(fn, 1);
+      });
   }
 
   function whenNear(el) {
     if (!('IntersectionObserver' in window)) {
-      whenIdle(function () { mount(el); });
+      whenIdle(function () {
+        mount(el);
+      });
       return;
     }
     var io = new IntersectionObserver(
@@ -86,25 +125,32 @@
           var target = e.target;
           if (e.isIntersecting) {
             applyPoster(target);
-            if (!target.dataset.videoMounted) mount(target);
+            if (!target.querySelector('video')) mount(target);
             else playBgMedia(target);
           } else {
             pauseBgMedia(target);
+            // Touch: drop buffer so below-fold lazy media can use the pipe
+            if (!finePointer) detachBgMedia(target);
           }
         });
       },
-      { rootMargin: '120px 0px', threshold: 0.15 },
+      { rootMargin: '160px 0px', threshold: 0.12 },
     );
     io.observe(el);
   }
 
   document.querySelectorAll('[data-video-bg]').forEach(function (el) {
     applyPoster(el);
-    if (!finePointer) {
+    if (posterOnly) {
       el.dataset.videoMounted = '1';
       return;
     }
-    if (el.getAttribute('data-video-priority') === 'hero') whenIdle(function () { mount(el); });
-    else whenNear(el);
+    if (el.getAttribute('data-video-priority') === 'hero') {
+      whenIdle(function () {
+        mount(el);
+      });
+    } else {
+      whenNear(el);
+    }
   });
 })();
