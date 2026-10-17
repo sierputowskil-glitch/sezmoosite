@@ -1,0 +1,106 @@
+---
+/**
+ * Shared portfolio listing. Copy + tiles in src/data/portfolio.ts.
+ */
+import AssetImage from '../AssetImage.astro';
+import PortfolioLayout from '../../layouts/PortfolioLayout.astro';
+import { itemListJsonLd } from '../../lib/schema';
+import { pageUrl } from '../../lib/site';
+import { portfolioCopy, type PortfolioLang } from '../../data/portfolio';
+
+interface Props {
+  lang: PortfolioLang;
+}
+
+const { lang } = Astro.props;
+const copy = portfolioCopy(lang);
+const canonical = pageUrl(copy.path);
+const hreflangPl = pageUrl('/portfolio/');
+const hreflangEn = pageUrl('/en/portfolio-en/');
+const altHref = lang === 'pl' ? '/en/portfolio-en/' : '/portfolio/';
+
+const jsonLd = itemListJsonLd({
+  name: copy.schemaName,
+  description: copy.description,
+  canonical,
+  lang,
+  items: copy.schemaItems.map((it) => ({ name: it.name, url: pageUrl(it.path) })),
+});
+
+const tileWidths = [400, 720, 1080];
+const tileSizes = '(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 40vw';
+---
+
+<PortfolioLayout
+  lang={lang}
+  title={copy.title}
+  description={copy.description}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  hreflangPl={hreflangPl}
+  hreflangEn={hreflangEn}
+  altHref={altHref}
+>
+  <section class="pt-hero">
+    <div class="pt-hero__top">
+      <div>
+        <span class="eyebrow"><span class="tick"></span><span set:html={copy.eyebrow} /></span>
+        <h1 set:html={copy.h1Html} />
+      </div>
+    </div>
+  </section>
+
+  <div class="pt-shell">
+    <aside class="pt-side">
+      <span class="pt-side__label">{copy.filtersLabel}</span>
+      <div class="pt-side__list" id="pt-filters">
+        {
+          copy.filters.map((f, i) => (
+            <button
+              class:list={['pt-navlink', i === 0 && 'is-on']}
+              type="button"
+              data-filter={f.id}
+            >
+              {f.label} <span class="n">{f.count}</span>
+            </button>
+          ))
+        }
+      </div>
+    </aside>
+
+    <section class="pt-grid" id="pt-grid" data-screen-label="Portfolio kafle">
+      {
+        copy.tiles.map((t) => (
+          <a
+            class="pt-tile"
+            data-ratio={t.ratio}
+            data-cats={t.cats}
+            data-media={t.media}
+            href={t.href}
+            data-id={t.videoId}
+            data-slug={t.slug}
+            data-short={t.short ? '1' : undefined}
+            data-case={t.caseStudy ? '1' : undefined}
+            data-src={t.dataSrc}
+            data-gallery={t.gallery}
+          >
+            <div class="pt-media">
+              <AssetImage
+                src={t.src}
+                alt={t.alt}
+                loading="lazy"
+                widths={tileWidths}
+                sizes={tileSizes}
+                quality={72}
+              />
+              <span class="pt-media__badge"><span class="d"></span>{t.badge}</span>
+              {t.open && <span class="pt-media__open" aria-hidden="true">{t.open}</span>}
+            </div>
+            <div class="pt-cap"><span class="pt-cap__tags" set:html={t.tags} /></div>
+            <h3 class="pt-title">{t.title}</h3>
+          </a>
+        ))
+      }
+    </section>
+  </div>
+</PortfolioLayout>

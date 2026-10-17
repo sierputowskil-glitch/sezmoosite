@@ -1,0 +1,70 @@
+---
+/**
+ * Shared privacy / RODO article. Copy in src/data/privacy.ts.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { pageUrl } from '../../lib/site';
+import { privacyCopy, type PrivacyLang } from '../../data/privacy';
+
+interface Props {
+  lang: PrivacyLang;
+}
+
+const { lang } = Astro.props;
+const copy = privacyCopy(lang);
+const canonical = pageUrl(copy.path);
+const hreflangPl = pageUrl('/polityka-prywatnosci/');
+const hreflangEn = pageUrl('/en/privacy-policy/');
+const altHref = lang === 'pl' ? '/en/privacy-policy/' : '/polityka-prywatnosci/';
+---
+
+<BaseLayout
+  lang={lang}
+  title={copy.title}
+  description={copy.description}
+  canonical={canonical}
+  hreflangPl={hreflangPl}
+  hreflangEn={hreflangEn}
+  altHref={altHref}
+>
+  <article class="article shell">
+    <header class="article__head">
+      <a class="article__back reveal" href={copy.backHref}>{copy.backLabel}</a>
+      <span class="blog-post__meta reveal">{copy.meta}</span>
+      <h1 class="article__title reveal">{copy.h1}</h1>
+      <p class="article__lead reveal" data-d="1" set:html={copy.lead} />
+    </header>
+    <div class="article__layout">
+      <aside class="article__aside reveal">
+        <span>{copy.navLabel}</span>
+        {
+          copy.nav.map((n) => (
+            <a href={`#${n.id}`} set:html={n.label} />
+          ))
+        }
+      </aside>
+      <div class="article__content">
+        {
+          copy.sections.map((sec) => (
+            <section id={sec.id} class="reveal">
+              <h2 set:html={sec.titleHtml} />
+              {sec.paras.map((p) => (
+                <p set:html={p} />
+              ))}
+              {sec.list && (
+                <ul>
+                  {sec.list.map((li) => (
+                    <li set:html={li} />
+                  ))}
+                </ul>
+              )}
+              {sec.afterList?.map((p) => (
+                <p set:html={p} />
+              ))}
+            </section>
+          ))
+        }
+      </div>
+    </div>
+  </article>
+</BaseLayout>

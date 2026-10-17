@@ -32,10 +32,12 @@ Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `
 | `src/pages/en/` | English mirrors |
 | `src/content/blog/` | Blog Markdown collection |
 | `src/content.config.ts` | Blog Zod schema — update when adding frontmatter fields |
-| `src/components/` | Shared UI (`Nav`, `Footer`, `ContactForm`, `BlogArticle`, `ServicePage`, `HomePage`, `ServiceHub`, …) |
+| `src/components/` | Shared UI (`Nav`, `Footer`, `ContactForm`, `BlogArticle`, `ServicePage`, `HomePage`, `ServiceHub`, `PortfolioPage`, `PrivacyPage`, …) |
 | `src/layouts/` | `BaseLayout`, `ArticleLayout`, `ServiceLayout`, `CaseStudyLayout`, `PortfolioLayout` |
 | `src/data/case-studies.ts` | Case-study PL/EN copy keyed by YouTube / CDN video id |
 | `src/data/home.ts` | Homepage PL/EN copy (`HOME` / `homeCopy`) — do not fork `index.astro` HTML |
+| `src/data/portfolio.ts` | Portfolio listing PL/EN (`PORTFOLIO` / `portfolioCopy`) — tiles, filters, schema items |
+| `src/data/privacy.ts` | Privacy / RODO PL/EN (`PRIVACY` / `privacyCopy`) |
 | `src/data/services/` | Service PL/EN copy + hub chrome (`types.ts`, `pages/*.ts`, `hub.ts`) |
 | `src/data/longform/` | Branding / event / campaign cases (`/realizacja-{id}/`) — not the video `[slug]` pipeline |
 | `src/lib/` | `site.ts` (URLs, phone, media CDN), `blog.ts`, `schema.ts` (JSON-LD objects) |
@@ -191,7 +193,7 @@ Do **not** ship large MP4s in the Pages deploy (`sync:assets` skips `assets/vide
 
 7. **Site copy** — add `CASE_STUDIES[id]` with `slug` (kebab title), PL + EN, and append id to `CASE_STUDY_ORDER`. Mirror an existing entry (`short: true` for 9:16). Fields: `slug`, `title`, `client`, `cat`, `kv`, `lead`, `intro`, `context[]`, `steps[]`. Add `_redirects` from `/realizacja/{id}/` → `/realizacja/{slug}/` (PL + EN).
 
-8. **Optional portfolio cards** — homepage / `portfolio/` are still hand-authored; add a card with `data-case="1"`, `data-slug`, `href="/realizacja/{slug}/"` and the new poster if the case should appear in listings. (`/portfolio-lista-b/` and hub `/realizacja/` 301 → portfolio.)
+8. **Optional portfolio cards** — add a tile in `src/data/portfolio.ts` (`pl` + `en`) with `caseStudy: true`, `slug`, `href` (`/realizacja/{slug}/` or `/en/realizacja/{slug}/`), and the poster `src`. Homepage work grid stays in `src/data/home.ts`. (`/portfolio-lista-b/` and hub `/realizacja/` 301 → portfolio.)
 
 9. **Verify** — `npm run check`; open `/realizacja/{slug}/`, confirm poster + play hits CDN (not YouTube embed). Do not commit local MP4s (CDN only); commit queue/manifest/posters/map + `case-studies.ts`.
 
@@ -208,6 +210,8 @@ Data-driven like video case studies — **do not fork full HTML** per language.
 - **Hubs** `/uslugi-marketingowe/` and `/en/services/`: chrome in `src/data/services/hub.ts`; cards from `SERVICES` via `servicesForHub()` (`hubOrder`, `hubTitle`, `hubDesc` on each `ServiceDef` / `ServiceCopy`). Template: `src/components/service/ServiceHub.astro` + thin routes. **Not** `ServicePage` (that is a full service). Omit `hubOrder` to hide a service from the listing (curated 10 today). Alias 301 pages (`kampanie-reklamowe` / `advertising-campaigns`) stay out of `SERVICES`.
 - **Legacy aliases (not ServicePage):** `/uslugi-marketingowe/kampanie-reklamowe/` and `/en/services/advertising-campaigns/` 301 in `public/_redirects` to `kampanie-platne` / `paid-campaigns`. Thin Astro pages remain as local/preview `location.replace` fallbacks (canonicals point at the live service).
 - **Homepage:** copy + structure in `src/data/home.ts` (`pl` + `en`). Template: `src/components/home/HomePage.astro` (existing CSS classes, `home.css`, `home.js`, OptImage/AssetImage/VideoBg/HeroShowreel/ContactForm). Thin routes: `src/pages/index.astro` and `src/pages/en/index.astro` pass `lang` only. Do not duplicate PL/EN HTML. Language-only extras (e.g. EN format kit) stay in data; keep section ids for `home.js`.
+- **Portfolio listing:** copy + tiles in `src/data/portfolio.ts`. Template: `src/components/portfolio/PortfolioPage.astro` + `PortfolioLayout` (`portfolio.css`, `portfolio-page.js`). Thin routes: `/portfolio/` and `/en/portfolio-en/`. Keep filter counts in sync with visible tiles; bilingual longform hrefs use `/en/realizacja-…/` when an EN page exists.
+- **Privacy / RODO:** copy in `src/data/privacy.ts`. Template: `src/components/privacy/PrivacyPage.astro`. Thin routes: `/polityka-prywatnosci/` and `/en/privacy-policy/`.
 - Portfolio listing CSS: `assets/css/portfolio.css` imported from `PortfolioLayout` (`?url` stylesheet). Case-study CSS: `assets/css/case-study.css` via `CaseStudyLayout`. Do not dump page CSS into `extraHead` (preload links are OK).
 
 ### Redirects & SEO
@@ -232,7 +236,7 @@ Data-driven like video case studies — **do not fork full HTML** per language.
 
 1. Read this file + the nearest existing file of the same type (sibling page / post / case study).
 2. Make the smallest change that satisfies the request.
-3. For content: validate frontmatter against `content.config.ts`; keep TOC ids ↔ heading ids. For services: edit `src/data/services/pages/*.ts`. For homepage / hubs: edit `src/data/home.ts` and `src/data/services/` (incl. `hub.ts`, `hubOrder`), not duplicated PL/EN HTML.
+3. For content: validate frontmatter against `content.config.ts`; keep TOC ids ↔ heading ids. For services: edit `src/data/services/pages/*.ts`. For homepage / hubs / portfolio / privacy: edit `src/data/home.ts`, `src/data/portfolio.ts`, `src/data/privacy.ts`, and `src/data/services/` (incl. `hub.ts`, `hubOrder`), not duplicated PL/EN HTML.
 4. For UI: reuse layouts/components; keep PL/EN pairs and hreflang aligned when both exist.
 5. Verify with `npm run check` (and `npm run build` if touching routes, redirects, or env-sensitive meta).
 6. Do not commit unless the user asks; never push unless asked.
