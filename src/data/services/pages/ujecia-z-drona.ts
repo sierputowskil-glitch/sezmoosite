@@ -33,11 +33,7 @@ export const ujeciaZDrona: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/pruszcz-park-4-4b252b80-1280.webp",
-      "srcset": "/assets/optimized/lcp/pruszcz-park-4-4b252b80-800.webp 800w, /assets/optimized/lcp/pruszcz-park-4-4b252b80-1280.webp 1280w",
-      "sizes": "100vw",
-      "width": 1280,
-      "height": 760,
+      "src": "/assets/photo/pruszcz-park-4.avif",
       "alt": "Pruszcz Park",
       "captionBold": "Pruszcz Park",
       "caption": "Ujęcia lotnicze / inwestycja"
@@ -294,11 +290,7 @@ export const ujeciaZDrona: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/pruszcz-park-4-4b252b80-1280.webp",
-      "srcset": "/assets/optimized/lcp/pruszcz-park-4-4b252b80-800.webp 800w, /assets/optimized/lcp/pruszcz-park-4-4b252b80-1280.webp 1280w",
-      "sizes": "100vw",
-      "width": 1280,
-      "height": 760,
+      "src": "/assets/photo/pruszcz-park-4.avif",
       "alt": "Pruszcz Park",
       "captionBold": "Pruszcz Park",
       "caption": "Aerial footage / investment"

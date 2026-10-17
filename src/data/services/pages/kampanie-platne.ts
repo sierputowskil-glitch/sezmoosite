@@ -33,11 +33,7 @@ export const kampaniePlatne: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/audi-a6-etron-e7da300e-1280.webp",
-      "srcset": "/assets/optimized/lcp/audi-a6-etron-e7da300e-800.webp 800w, /assets/optimized/lcp/audi-a6-etron-e7da300e-1280.webp 1280w",
-      "sizes": "100vw",
-      "width": 1280,
-      "height": 853,
+      "src": "/assets/work/audi-a6-etron.jpg",
       "alt": "Audi A6 e-tron",
       "captionBold": "Audi A6 e-tron",
       "caption": "Premiera / digital campaign"
@@ -369,11 +365,7 @@ export const kampaniePlatne: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/audi-a6-etron-e7da300e-1280.webp",
-      "srcset": "/assets/optimized/lcp/audi-a6-etron-e7da300e-800.webp 800w, /assets/optimized/lcp/audi-a6-etron-e7da300e-1280.webp 1280w",
-      "sizes": "100vw",
-      "width": 1280,
-      "height": 853,
+      "src": "/assets/work/audi-a6-etron.jpg",
       "alt": "Audi A6 e-tron",
       "captionBold": "Audi A6 e-tron",
       "caption": "Launch / digital campaign"

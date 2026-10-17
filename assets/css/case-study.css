@@ -252,6 +252,12 @@
 .cs-film__frame video.cdn-video {
   object-fit: contain; background: #000;
 }
+.rz-film__frame.is-short,
+.cs-film__frame.is-short {
+  aspect-ratio: 9/16;
+  max-width: min(440px, 90vw);
+  margin-inline: auto;
+}
 
 /* ============== QUOTE ============== */
 .cs-quote { border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }

@@ -33,11 +33,7 @@ export const animacje2dI3d: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/vts-animacja-0c87eef9-800.webp",
-      "srcset": "/assets/optimized/lcp/vts-animacja-0c87eef9-800.webp 800w",
-      "sizes": "100vw",
-      "width": 800,
-      "height": 787,
+      "src": "/assets/work/vts-animacja.avif",
       "alt": "VTS Group",
       "captionBold": "VTS Group",
       "caption": "Animacja 3D / B2B content"
@@ -302,11 +298,7 @@ export const animacje2dI3d: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/vts-animacja-0c87eef9-800.webp",
-      "srcset": "/assets/optimized/lcp/vts-animacja-0c87eef9-800.webp 800w",
-      "sizes": "100vw",
-      "width": 800,
-      "height": 787,
+      "src": "/assets/work/vts-animacja.avif",
       "alt": "VTS Group",
       "captionBold": "VTS Group",
       "caption": "3D animation / B2B content"

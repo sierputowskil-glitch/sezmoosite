@@ -17,11 +17,8 @@ export interface ServiceCta {
 
 export interface ServiceReelImg {
   kind: 'img';
+  /** Public `/assets/…` source (work/photo/img/portfolio). Optimized via AssetImage. */
   src: string;
-  srcset?: string;
-  sizes?: string;
-  width?: number;
-  height?: number;
   alt: string;
   figureStyle?: string;
   imgStyle?: string;

@@ -3,6 +3,7 @@
  * Portfolio listing pages (filters, masonry tiles, lightbox scripts via pageScripts).
  */
 import BaseLayout from './BaseLayout.astro';
+import portfolioCssUrl from '../../assets/css/portfolio.css?url';
 
 interface Props {
   lang?: 'pl' | 'en';
@@ -26,21 +27,14 @@ interface Props {
 }
 
 const props = Astro.props;
+const portfolioCss = `<link rel="stylesheet" href="${portfolioCssUrl}" />`;
+const extraHead = [portfolioCss, props.extraHead].filter(Boolean).join('\n');
 ---
 
 <BaseLayout
   {...props}
   bodyClass={[props.bodyClass, 'portfolio-page'].filter(Boolean).join(' ')}
-  extraHead={[
-    props.extraHead,
-    `<style>
-.pt-media video.cdn-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;z-index:2;pointer-events:none}
-.pt-vlb__frame video.cdn-video{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:6px;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.55)}
-.pt-glb__video video.cdn-video{width:100%;height:100%;border:0;display:block;object-fit:contain;background:#000}
-</style>`,
-  ]
-    .filter(Boolean)
-    .join('\n')}
+  extraHead={extraHead}
   pageScripts={props.pageScripts}
 >
   <slot />

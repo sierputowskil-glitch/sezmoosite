@@ -17,6 +17,12 @@
 /en/retainer  https://abonament.sezmoo.com/  301
 /en/retainer/ https://abonament.sezmoo.com/  301
 
+# Legacy campaign aliases → paid campaigns (ServicePage)
+/uslugi-marketingowe/kampanie-reklamowe    /uslugi-marketingowe/kampanie-platne/  301
+/uslugi-marketingowe/kampanie-reklamowe/   /uslugi-marketingowe/kampanie-platne/  301
+/en/services/advertising-campaigns         /en/services/paid-campaigns/  301
+/en/services/advertising-campaigns/        /en/services/paid-campaigns/  301
+
 /blog.html    /blog/    301
 /artykul.html /blog/    301
 /artykul      /blog/    301

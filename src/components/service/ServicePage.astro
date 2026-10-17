@@ -3,6 +3,7 @@
  * Shared service template: hero + typed blocks + JSON-LD objects.
  * Copy lives in src/data/services; PL/EN share this markup.
  */
+import AssetImage from '../AssetImage.astro';
 import ServiceLayout from '../../layouts/ServiceLayout.astro';
 import { faqPageJsonLd, serviceJsonLd } from '../../lib/schema';
 import { mediaUrl, pageUrl } from '../../lib/site';
@@ -95,17 +96,16 @@ const jsonLd = faqItems.length
       )}
       {copy.reel && copy.reel.kind === 'img' && (
         <figure class="sd__reel reveal" data-d="1" style={copy.reel.figureStyle}>
-          <img
+          <AssetImage
             src={copy.reel.src}
-            srcset={copy.reel.srcset}
-            sizes={copy.reel.sizes}
-            width={copy.reel.width}
-            height={copy.reel.height}
             alt={copy.reel.alt}
             loading="eager"
             fetchpriority="high"
             decoding="async"
             style={copy.reel.imgStyle}
+            widths={[800, 1280, 1920]}
+            sizes="100vw"
+            quality={78}
           />
           {(copy.reel.captionBold || copy.reel.caption) && (
             <figcaption style={copy.reel.captionStyle}>

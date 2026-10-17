@@ -33,11 +33,7 @@ export const obslugaSocialMedia: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/byd-80646909-1280.webp",
-      "srcset": "/assets/optimized/lcp/byd-80646909-800.webp 800w, /assets/optimized/lcp/byd-80646909-1280.webp 1280w",
-      "sizes": "100vw",
-      "width": 1280,
-      "height": 853,
+      "src": "/assets/work/byd.jpg",
       "alt": "BYD Plichta",
       "captionBold": "BYD Plichta",
       "caption": "Social wideo / launch content"
@@ -377,11 +373,7 @@ export const obslugaSocialMedia: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/byd-80646909-1280.webp",
-      "srcset": "/assets/optimized/lcp/byd-80646909-800.webp 800w, /assets/optimized/lcp/byd-80646909-1280.webp 1280w",
-      "sizes": "100vw",
-      "width": 1280,
-      "height": 853,
+      "src": "/assets/work/byd.jpg",
       "alt": "BYD Plichta",
       "captionBold": "BYD Plichta",
       "caption": "Social video / launch content"

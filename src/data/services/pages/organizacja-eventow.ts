@@ -33,11 +33,7 @@ export const organizacjaEventow: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/balet-18ef815c-1920.webp",
-      "srcset": "/assets/optimized/lcp/balet-18ef815c-800.webp 800w, /assets/optimized/lcp/balet-18ef815c-1280.webp 1280w, /assets/optimized/lcp/balet-18ef815c-1920.webp 1920w",
-      "sizes": "100vw",
-      "width": 1920,
-      "height": 1080,
+      "src": "/assets/work/balet.avif",
       "alt": "Widowisko",
       "captionBold": "Widowisko",
       "caption": "Event / relacja live"
@@ -338,11 +334,7 @@ export const organizacjaEventow: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/balet-18ef815c-1920.webp",
-      "srcset": "/assets/optimized/lcp/balet-18ef815c-800.webp 800w, /assets/optimized/lcp/balet-18ef815c-1280.webp 1280w, /assets/optimized/lcp/balet-18ef815c-1920.webp 1920w",
-      "sizes": "100vw",
-      "width": 1920,
-      "height": 1080,
+      "src": "/assets/work/balet.avif",
       "alt": "Widowisko",
       "captionBold": "Widowisko",
       "caption": "Event / live coverage"

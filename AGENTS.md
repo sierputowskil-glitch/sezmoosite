@@ -37,7 +37,7 @@ Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `
 | `src/data/case-studies.ts` | Case-study PL/EN copy keyed by YouTube / CDN video id |
 | `src/data/services/` | Service PL/EN copy + block structure (`types.ts`, `pages/*.ts`) |
 | `src/lib/` | `site.ts` (URLs, phone, media CDN), `blog.ts`, `schema.ts` (JSON-LD objects) |
-| `assets/` | CSS, JS, images, video posters/manifest — source of truth |
+| `assets/` | CSS, JS, images, video posters/manifest — source of truth (`assets/css/portfolio.css`, `case-study.css`) |
 | `public/` | `_redirects`, `_headers`, `robots.txt`, `404.html`; assets appear after sync |
 | `functions/` | CF Pages Functions only (contact + rate limit) |
 | `scripts/` | Asset sync + one-off migrators / optimizers |
@@ -89,6 +89,7 @@ Do not dump homepage or portfolio logic back into `app.js`. Case-study play stay
 
 - Site images/CSS/JS: `assets/…` → synced to `/assets/…`.
 - Blog heroes: typically `/assets/blog/<slug>.webp` (file under `assets/blog/`).
+- **Service LCP / reel images:** store the real source under `assets/work/`, `assets/photo/`, `assets/img/`, or `assets/portfolio/` and render with `AssetImage` / `OptImage`. Do **not** point copy at `/assets/optimized/lcp/` (prebaked srcsets). `src/lib/local-image.ts` globs those folders. Heroes: `fetchpriority="high"` + `loading="eager"`.
 - MP4: Hostido CDN via `getMediaBase()` / `mediaUrl()` (`PUBLIC_MEDIA_BASE`, default `https://cdn.sezmoo.com`). Posters may stay on Pages for LCP.
 - Video case-study ids and posters: `assets/video/yt/manifest.json` (and related queue) — keep `case-studies.ts` `videoId`s aligned with the manifest / `CASE_STUDY_ORDER`.
 
@@ -197,10 +198,9 @@ Data-driven like video case studies — **do not fork full HTML** per language.
   - EN: `src/pages/en/services/<enSlug>/index.astro` → `serviceByEnSlug('…')` + `lang="en"`
 - Keep meta titles brand-suffixed (`| SEZMOO`), descriptions unique, schema catalog/FAQ in sync with visible claims. Preserve `&nbsp;` / typographic HTML in copy strings.
 - **Hubs** `/uslugi-marketingowe/` and `/en/services/` are still hand-authored (not `ServicePage`).
-- **Exceptions (do not force-fit):**
-  - `/uslugi-marketingowe/kampanie-reklamowe/` — client redirect to `kampanie-platne`
-  - `/en/services/advertising-campaigns/` — legacy `sub-hero` / `service-output` layout
+- **Legacy aliases (not ServicePage):** `/uslugi-marketingowe/kampanie-reklamowe/` and `/en/services/advertising-campaigns/` 301 in `public/_redirects` to `kampanie-platne` / `paid-campaigns`. Thin Astro pages remain as local/preview `location.replace` fallbacks (canonicals point at the live service).
 - Homepage marketing HTML is still page-owned (`index.astro` / `en/index.astro` + `home.js`).
+- Portfolio listing CSS: `assets/css/portfolio.css` imported from `PortfolioLayout` (`?url` stylesheet). Case-study CSS: `assets/css/case-study.css` via `CaseStudyLayout`. Do not dump page CSS into `extraHead` (preload links are OK).
 
 ### Redirects & SEO
 

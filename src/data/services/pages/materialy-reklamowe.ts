@@ -33,11 +33,7 @@ export const materialyReklamowe: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/audi-kartka-e83a2084-1920.webp",
-      "srcset": "/assets/optimized/lcp/audi-kartka-e83a2084-800.webp 800w, /assets/optimized/lcp/audi-kartka-e83a2084-1280.webp 1280w, /assets/optimized/lcp/audi-kartka-e83a2084-1920.webp 1920w",
-      "sizes": "100vw",
-      "width": 1920,
-      "height": 1920,
+      "src": "/assets/work/audi-kartka.jpg",
       "alt": "Audi",
       "captionBold": "Audi",
       "caption": "Premium print / materiały sprzedażowe"
@@ -306,11 +302,7 @@ export const materialyReklamowe: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/audi-kartka-e83a2084-1920.webp",
-      "srcset": "/assets/optimized/lcp/audi-kartka-e83a2084-800.webp 800w, /assets/optimized/lcp/audi-kartka-e83a2084-1280.webp 1280w, /assets/optimized/lcp/audi-kartka-e83a2084-1920.webp 1920w",
-      "sizes": "100vw",
-      "width": 1920,
-      "height": 1920,
+      "src": "/assets/work/audi-kartka.jpg",
       "alt": "Audi",
       "captionBold": "Audi",
       "caption": "Premium print / sales material"

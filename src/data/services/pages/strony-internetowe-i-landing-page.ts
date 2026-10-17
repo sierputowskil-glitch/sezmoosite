@@ -33,11 +33,7 @@ export const stronyInternetoweILandingPage: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/captains-club-ext-ab51c70e-1920.webp",
-      "srcset": "/assets/optimized/lcp/captains-club-ext-ab51c70e-800.webp 800w, /assets/optimized/lcp/captains-club-ext-ab51c70e-1280.webp 1280w, /assets/optimized/lcp/captains-club-ext-ab51c70e-1920.webp 1920w",
-      "sizes": "100vw",
-      "width": 1920,
-      "height": 1280,
+      "src": "/assets/work/captains-club-ext.avif",
       "alt": "Captain's Club",
       "captionBold": "Captain's Club",
       "caption": "Digital support / event page"
@@ -516,11 +512,7 @@ export const stronyInternetoweILandingPage: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/captains-club-ext-ab51c70e-1920.webp",
-      "srcset": "/assets/optimized/lcp/captains-club-ext-ab51c70e-800.webp 800w, /assets/optimized/lcp/captains-club-ext-ab51c70e-1280.webp 1280w, /assets/optimized/lcp/captains-club-ext-ab51c70e-1920.webp 1920w",
-      "sizes": "100vw",
-      "width": 1920,
-      "height": 1280,
+      "src": "/assets/work/captains-club-ext.avif",
       "alt": "Captain's Club",
       "captionBold": "Captain's Club",
       "caption": "Digital support / event page"

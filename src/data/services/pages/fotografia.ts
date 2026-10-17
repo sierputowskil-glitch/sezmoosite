@@ -33,11 +33,7 @@ export const fotografia: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/audi-sesja-195e5293-800.webp",
-      "srcset": "/assets/optimized/lcp/audi-sesja-195e5293-800.webp 800w",
-      "sizes": "100vw",
-      "width": 800,
-      "height": 533,
+      "src": "/assets/photo/audi-sesja.avif",
       "alt": "Audi",
       "captionBold": "Audi",
       "caption": "Sesja / automotive detail"
@@ -308,11 +304,7 @@ export const fotografia: ServiceDef = {
     ],
     "reel": {
       "kind": "img",
-      "src": "/assets/optimized/lcp/audi-sesja-195e5293-800.webp",
-      "srcset": "/assets/optimized/lcp/audi-sesja-195e5293-800.webp 800w",
-      "sizes": "100vw",
-      "width": 800,
-      "height": 533,
+      "src": "/assets/photo/audi-sesja.avif",
       "alt": "Audi",
       "captionBold": "Audi",
       "caption": "Session / automotive detail"
