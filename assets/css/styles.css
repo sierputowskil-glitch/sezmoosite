@@ -1229,6 +1229,47 @@ section { position: relative; }
 .studio__media .tc { position:absolute; bottom:16px; left:16px; z-index:3; font-family:var(--font-mono); font-size:11px; color:var(--fg);
   background: oklch(0.1 0.004 60 / .55); padding:4px 8px; border-radius:3px; display:flex; gap:7px; align-items:center; }
 .studio__media .tc .d{ width:7px;height:7px;border-radius:50%;background:var(--rec); animation:recPulse 1.5s infinite; }
+/* HTML play — last in DOM, above frame/video/ovl; card-like REC ring */
+.studio__play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 12;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: clamp(88px, 30%, 128px);
+  aspect-ratio: 1;
+  padding: 0;
+  border: 1px solid var(--rec);
+  border-radius: 50%;
+  background: rgb(255 210 0 / 0.18);
+  color: var(--rec);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.studio__play-ico {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 16px solid var(--rec);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  margin-left: 4px;
+}
+.studio__play-lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.studio__media.is-playing .studio__play { display: none !important; }
+@media (hover: hover) and (pointer: fine) {
+  .studio__media:not(.is-poster-only) .studio__play { display: none; }
+}
 
 .studio__title { font-weight:760; font-stretch:108%; font-size: clamp(32px,4.8vw,76px); line-height:1.02; letter-spacing:-.018em; text-wrap:balance; padding-bottom:.06em; }
 .studio__title .accent{ color: var(--rec); }
@@ -3182,36 +3223,24 @@ img.card__video { background: var(--bg-2); }
   border: 0; pointer-events: none;
   object-fit: cover;
 }
-/* Save-Data / 2g / reduced-motion: poster + explicit play (above decorative ovl) */
-.video-bg__play,
+/* Hero poster-only play (injected in home.js) */
 .hero__video__play {
   position: absolute; z-index: 6; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: clamp(56px, 12cqw, 88px); aspect-ratio: 1; border-radius: 50%;
-  border: 1px solid oklch(0.96 0.006 80 / 0.55);
-  background: oklch(0.96 0.006 80 / 0.12);
-  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  width: clamp(64px, 9vw, 100px); aspect-ratio: 1; border-radius: 50%;
+  border: 1px solid var(--rec);
+  background: rgb(255 210 0 / 0.16);
   cursor: pointer; padding: 0; margin: 0;
   display: grid; place-items: center;
   pointer-events: auto;
   touch-action: manipulation;
 }
-.video-bg__play::before,
 .hero__video__play::before {
   content: "";
-  border-left: 16px solid var(--fg);
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  margin-left: 4px;
-}
-.hero__video__play { width: clamp(64px, 9vw, 100px); }
-.hero__video__play::before {
-  border-left-width: 18px;
-  border-top-width: 12px;
-  border-bottom-width: 12px;
+  border-left: 18px solid var(--rec);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
   margin-left: 5px;
 }
-.video-bg.is-playing .video-bg__play,
-.studio__media.is-playing .video-bg__play,
 .hero__video.is-playing .hero__video__play { display: none; }
 /* Portfolio / lightbox — CDN <video> fills media frames */
 .pt-media video.cdn-video {

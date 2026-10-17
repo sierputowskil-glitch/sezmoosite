@@ -1,7 +1,7 @@
 /**
  * Background video: local poster first, then first-party CDN MP4 (no YouTube iframe).
  * Desktop + mobile: mount when near viewport (muted autoplay).
- * Save-Data / 2g / reduced-motion: poster + play button (tap to start).
+ * Save-Data / 2g / reduced-motion: poster + HTML [data-video-play] control.
  * Offscreen on touch: detach buffer so lazy images keep the pipe.
  * Depends on window.__SEZMOO__ from cdn-video-map.
  */
@@ -30,29 +30,15 @@
     }
   }
 
-  function playLabel(el) {
-    var t = el.getAttribute('data-video-title');
-    return t ? 'Play: ' + t : 'Play video';
+  function mediaHost(el) {
+    return el.closest('.studio__media') || el;
   }
 
-  function ensurePlayButton(el) {
-    // Prefer host .studio__media so the control sits above .ovl (z-index 2).
-    var host = el.closest('.studio__media') || el;
-    if (host.querySelector('.video-bg__play')) return;
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'video-bg__play';
-    btn.setAttribute('aria-label', playLabel(el));
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      el.dataset.forcePlay = '1';
-      delete el.dataset.videoMounted;
-      mount(el);
-      el.classList.add('is-playing');
-      host.classList.add('is-playing');
-    });
-    host.appendChild(btn);
+  function markPlaying(el) {
+    el.classList.add('is-playing');
+    var host = mediaHost(el);
+    host.classList.add('is-playing');
+    host.classList.remove('is-poster-only');
   }
 
   function mountCdnBg(el, id) {
@@ -68,7 +54,7 @@
       className: 'video-bg__video',
       title: el.getAttribute('data-video-title') || '',
     });
-    el.classList.add('is-playing');
+    markPlaying(el);
     return true;
   }
 
@@ -78,7 +64,7 @@
     var forced = el.dataset.forcePlay === '1';
     if (posterOnly && !forced) {
       el.dataset.videoMounted = '1';
-      ensurePlayButton(el);
+      mediaHost(el).classList.add('is-poster-only');
       return;
     }
     if (el.dataset.videoMounted === '1' && el.querySelector('video')) return;
@@ -127,6 +113,44 @@
     if (v.parentNode) v.parentNode.removeChild(v);
     delete el.dataset.videoMounted;
     el.classList.remove('is-playing');
+    mediaHost(el).classList.remove('is-playing');
+  }
+
+  function forcePlayFromControl(btn) {
+    var host = btn.closest('.studio__media') || btn.parentElement;
+    if (!host) return;
+    var el = host.querySelector('[data-video-bg]');
+    if (!el) return;
+    el.dataset.forcePlay = '1';
+    delete el.dataset.videoMounted;
+    mount(el);
+    markPlaying(el);
+  }
+
+  function bindPlayControls() {
+    document.querySelectorAll('[data-video-play]').forEach(function (btn) {
+      if (btn.dataset.boundPlay) return;
+      btn.dataset.boundPlay = '1';
+      btn.addEventListener(
+        'click',
+        function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          forcePlayFromControl(btn);
+        },
+        { passive: false },
+      );
+      // Some mobile WebViews swallow click on transformed ancestors — mirror on touchend.
+      btn.addEventListener(
+        'touchend',
+        function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          forcePlayFromControl(btn);
+        },
+        { passive: false },
+      );
+    });
   }
 
   function whenIdle(fn) {
@@ -152,7 +176,7 @@
           if (e.isIntersecting) {
             applyPoster(target);
             if (posterOnly && target.dataset.forcePlay !== '1') {
-              ensurePlayButton(target);
+              mediaHost(target).classList.add('is-poster-only');
               return;
             }
             if (!target.querySelector('video')) mount(target);
@@ -168,10 +192,12 @@
     io.observe(el);
   }
 
+  bindPlayControls();
+
   document.querySelectorAll('[data-video-bg]').forEach(function (el) {
     applyPoster(el);
     if (posterOnly) {
-      ensurePlayButton(el);
+      mediaHost(el).classList.add('is-poster-only');
       el.dataset.videoMounted = '1';
       return;
     }

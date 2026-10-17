@@ -264,10 +264,20 @@ const studioLead = copy.studio.paras.length > 1;
         <div class="studio__media is-vertical" data-parallax="26">
           <div class="frame-media" style="transform:translateY(var(--py,0))"></div>
           <VideoBg videoId={STUDIO_VIDEO_ID} title={copy.studio.videoTitle} priority="lazy" />
-          <div class="ovl">
+          <div class="ovl" aria-hidden="true">
             <div class="corners"><span></span><span></span><span></span><span></span></div>
             <div class="tc"><span class="d"></span><span data-tc>00:00:12:08</span></div>
           </div>
+          {/* Real control above .ovl — JS-injected play sat under overlays / failed hit-testing */}
+          <button
+            type="button"
+            class="studio__play"
+            data-video-play
+            aria-label={copy.studio.videoTitle ? `Play: ${copy.studio.videoTitle}` : 'Play video'}
+          >
+            <span class="studio__play-ico" aria-hidden="true"></span>
+            <span class="studio__play-lbl">PLAY</span>
+          </button>
         </div>
       </div>
       <div>
