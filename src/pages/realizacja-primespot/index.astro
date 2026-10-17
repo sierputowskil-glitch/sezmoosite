@@ -14,7 +14,18 @@ const jsonLd = creativeWorkJsonLd({
   image: '/assets/portfolio/primespot/pjur-blue-wide-1.jpg',
   lang,
 });
-const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__data\">[{\"src\":\"assets/portfolio/primespot/pjur-blue-story-1.jpg\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 1\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-01.jpg\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 2\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-02.png\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 3\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-03.png\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 4\"}]</script>\n<script type=\"application/json\" class=\"ad-story__data\">[{\"src\":\"assets/portfolio/primespot/pjur-warm-story-1.jpg\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 5\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-04.png\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 6\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-05.png\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 7\"}]</script>\n<script>/* ad-story player */\n(function(){\n  function initStory(st){\n    var data; try{ data=JSON.parse(st.querySelector('.ad-story__data').textContent);}catch(e){return;}\n    if(!data||!data.length) return;\n    var img=st.querySelector('.ad-story__img'), wrap=st.querySelector('.ad-story__bars'), cap=st.querySelector('.ad-story__cap');\n    var DUR=4200, idx=0, timer=null;\n    data.forEach(function(){ var i=document.createElement('i'); i.appendChild(document.createElement('b')); wrap.appendChild(i); });\n    var bars=[].slice.call(wrap.querySelectorAll('b'));\n    data.forEach(function(d){ var p=new Image(); p.src=d.src; });\n    function show(n){\n      idx=(n+data.length)%data.length;\n      img.src=data[idx].src; img.alt=data[idx].alt||''; if(cap&&data[idx].cap) cap.textContent=data[idx].cap;\n      bars.forEach(function(b,i){ b.style.transition='none'; b.style.width=(i<idx?'100%':'0%'); });\n      void wrap.offsetWidth;\n      var b=bars[idx]; if(b){ b.style.transition='width '+DUR+'ms linear'; b.style.width='100%'; }\n      clearTimeout(timer); timer=setTimeout(function(){ show(idx+1); }, DUR);\n    }\n    var nx=st.querySelector('.ad-story__next'), pv=st.querySelector('.ad-story__prev');\n    nx&&nx.addEventListener('click',function(){ show(idx+1); });\n    pv&&pv.addEventListener('click',function(){ show(idx-1); });\n    show(0);\n  }\n  function boot(){ document.querySelectorAll('.ad-story').forEach(initStory); }\n  if(document.readyState!=='loading') boot(); else document.addEventListener('DOMContentLoaded', boot);\n})();\n</script>\n<script type=\"application/json\" class=\"ad-story__data\">[{\"src\":\"assets/portfolio/primespot/pjur-blue-story-1.jpg\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 1\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-01.jpg\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 2\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-02.png\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 3\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-03.png\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 4\"}]</script>\n<script type=\"application/json\" class=\"ad-story__data\">[{\"src\":\"assets/portfolio/primespot/pjur-warm-story-1.jpg\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 5\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-04.png\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 6\"},{\"src\":\"assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-05.png\",\"alt\":\"PrimeSpot Przystań Jurata – kreacja Instagram Stories 7\"}]</script>";
+
+const storyLine1 = [
+  { src: '/assets/portfolio/primespot/pjur-blue-story-1.jpg', alt: 'PrimeSpot Przystań Jurata – kreacja Instagram Stories 1' },
+  { src: '/assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-01.jpg', alt: 'PrimeSpot Przystań Jurata – kreacja Instagram Stories 2' },
+  { src: '/assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-02.png', alt: 'PrimeSpot Przystań Jurata – kreacja Instagram Stories 3' },
+  { src: '/assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-03.png', alt: 'PrimeSpot Przystań Jurata – kreacja Instagram Stories 4' },
+];
+const storyLine2 = [
+  { src: '/assets/portfolio/primespot/pjur-warm-story-1.jpg', alt: 'PrimeSpot Przystań Jurata – kreacja Instagram Stories 5' },
+  { src: '/assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-04.png', alt: 'PrimeSpot Przystań Jurata – kreacja Instagram Stories 6' },
+  { src: '/assets/portfolio/primespot/primespot-przystan-jurata-instagram-stories-05.png', alt: 'PrimeSpot Przystań Jurata – kreacja Instagram Stories 7' },
+];
 ---
 
 <CaseStudyLayout
@@ -23,7 +34,6 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
   description="Case study SEZMOO: kampania Meta Ads dla inwestycji premium Przystań Jurata w Jastarni. Dwie linie kreatywne i pełen zestaw formatów: feed, 1:1, Stories 9:16 i 4:5."
   canonical={canonical}
   jsonLd={jsonLd}
-  pageScripts={pageScriptsHtml}
 >
 <!-- ============ COVER ============ -->
 <header class="cs-hero" data-screen-label="Case · Cover">
@@ -99,7 +109,7 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
   </div>
   <div class="ad-grid ad-grid--phones reveal" style="margin-top:clamp(28px,4vh,48px)">
     <figure class="ad-phone ad-story reveal">
-      
+      <script type="application/json" class="ad-story__data" is:inline set:html={JSON.stringify(storyLine1)} />
       <div class="ad-phone__screen">
         <img class="ad-story__img" alt="" loading="lazy" />
         <div class="ad-phone__ui">
@@ -113,7 +123,7 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
       <figcaption class="ad-cap">Linia 1 · Stories</figcaption>
     </figure>
     <figure class="ad-phone ad-story reveal">
-      
+      <script type="application/json" class="ad-story__data" is:inline set:html={JSON.stringify(storyLine2)} />
       <div class="ad-phone__screen">
         <img class="ad-story__img" alt="" loading="lazy" />
         <div class="ad-phone__ui">
@@ -235,4 +245,7 @@ const pageScriptsHtml = "<script type=\"application/json\" class=\"ad-story__dat
     <span class="cs-next__cat">Wszystkie realizacje SEZMOO</span>
   </div>
 </a>
+<script>
+  import '../../assets/js/ad-story.js';
+</script>
 </CaseStudyLayout>
