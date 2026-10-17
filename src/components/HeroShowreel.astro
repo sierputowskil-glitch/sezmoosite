@@ -2,7 +2,7 @@
 /**
  * Native hero background showreel — muted autoplay after LCP gate (see home.js).
  * Pattern: .docs/abonament_video_handoff.md — poster LCP, MP4 via data-src only.
- * CDN: showreel.mp4 = 1080p loop; showreel-720.mp4 = mobile; showreel-full.mp4 = master.
+ * CDN: showreel-16s.mp4 = 1080p; showreel-720-16s.mp4 = mobile; showreel-full.mp4 = master.
  */
 import { mediaUrl } from '../lib/site';
 
@@ -11,8 +11,8 @@ interface Props {
 }
 const { title = 'SEZMOO showreel' } = Astro.props;
 
-const videoSrc = mediaUrl('video/showreel.mp4');
-const videoSrcMobile = mediaUrl('video/showreel-720.mp4');
+const videoSrc = mediaUrl('video/showreel-16s.mp4');
+const videoSrcMobile = mediaUrl('video/showreel-720-16s.mp4');
 const posterWebp = '/assets/video/showreel-poster.webp?v=20261017a';
 ---
 
