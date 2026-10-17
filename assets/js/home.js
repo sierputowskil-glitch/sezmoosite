@@ -87,7 +87,7 @@
 
     const attachSrc = () => {
       if (attached || !gateOpen) return;
-      // Desktop / fine pointer → 1080p; touch → 720p loop (CDN showreel-720.mp4).
+      // Desktop / fine pointer → 1080p; touch → 720p loop (same-origin showreel).
       const srcMobile = video.getAttribute("data-src-mobile");
       const src = (!fine && srcMobile) || video.getAttribute("data-src");
       if (!src) return;
@@ -143,6 +143,27 @@
 
     video.addEventListener("playing", reveal);
     video.addEventListener("canplay", tryPlay, { once: true });
+    // If a stale build still points at CDN and Hostido returns challenge HTML, fall back once.
+    video.addEventListener("error", () => {
+      const failed =
+        video.currentSrc ||
+        (video.querySelector("source") && video.querySelector("source").src) ||
+        "";
+      if (!/cdn\.sezmoo\.com/i.test(failed) || video.dataset.localRetry) return;
+      video.dataset.localRetry = "1";
+      const local = fine
+        ? "/assets/video/showreel-16s.mp4"
+        : "/assets/video/showreel-720-16s.mp4";
+      try { video.pause(); } catch (_e) {}
+      while (video.firstChild) video.removeChild(video.firstChild);
+      video.removeAttribute("src");
+      const source = document.createElement("source");
+      source.src = local;
+      source.type = "video/mp4";
+      video.appendChild(source);
+      video.load();
+      tryPlay();
+    });
 
     if (posterOnly) {
       // Save-Data / 2g / reduced-motion: poster + visible play control

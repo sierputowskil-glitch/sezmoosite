@@ -83,8 +83,11 @@ dist/
 .wrangler/
 .docs/
 
-# Video masters live on cdn.sezmoo.com — keep posters (webp) + yt/manifest|queue in git
+# Video masters live on cdn.sezmoo.com — keep posters (webp) + yt/manifest|queue in git.
+# Exception: short hero showreels ship on Pages (same-origin; CDN ORB/challenge breaks autoplay).
 /assets/video/**/*.mp4
+!/assets/video/showreel-16s.mp4
+!/assets/video/showreel-720-16s.mp4
 /assets/video/yt/.tmp_*
 /assets/video/yt/posters/.check-*
 /assets/video/yt/download-report.json

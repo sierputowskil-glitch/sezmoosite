@@ -2,21 +2,23 @@
 /**
  * Native hero background showreel — muted autoplay after LCP gate (see home.js).
  * Pattern: .docs/abonament_video_handoff.md — poster LCP, MP4 via data-src only.
- * CDN: showreel-16s.mp4 = 1080p; showreel-720-16s.mp4 = mobile; showreel-full.mp4 = master.
+ *
+ * Hero MP4s are same-origin under /assets/video/ (synced by sync:assets). CDN
+ * Hostido returns bot-challenge HTML for some origins → Chrome ORB → stuck poster.
+ * Case-study YT files stay on cdn.sezmoo.com.
  *
  * Poster brightness is baked into the WebPs. Use srcset (not <picture>) so the
- * poster stays a sibling under <video> — a <picture> wrapper stacked above the
+ * poster stays a sibling of <video> — a <picture> wrapper stacked above the
  * playing MP4 and looked like broken desktop autoplay.
  */
-import { mediaUrl } from '../lib/site';
 
 interface Props {
   title?: string;
 }
 const { title = 'SEZMOO showreel' } = Astro.props;
 
-const videoSrc = mediaUrl('video/showreel-16s.mp4');
-const videoSrcMobile = mediaUrl('video/showreel-720-16s.mp4');
+const videoSrc = '/assets/video/showreel-16s.mp4';
+const videoSrcMobile = '/assets/video/showreel-720-16s.mp4';
 const posterDesktop = '/assets/video/showreel-poster.webp?v=20261017b';
 const posterMobile = '/assets/video/showreel-poster-m.webp?v=20261017b';
 ---

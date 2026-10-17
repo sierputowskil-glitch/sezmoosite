@@ -3,8 +3,10 @@
  * Copy media (+ a few public-URL JS vendors) from `assets/` → `public/assets/`.
  * Symlinks break on some Cloudflare / GitHub Pages deploys; this survives both.
  *
- * Synced: images, fonts, video posters / non-MP4 under video/, favicons, OG.
- * Skipped: CSS & Vite-bundled JS (imported via Astro), MP4 (CDN), optimized/lcp,
+ * Synced: images, fonts, video posters / non-MP4 under video/, favicons, OG,
+ * plus the short hero showreel MP4s (same-origin autoplay; CDN hotlink/ORB
+ * breaks localhost and some browsers). Case-study YT MP4s stay CDN-only.
+ * Skipped: CSS & Vite-bundled JS (imported via Astro), other MP4, optimized/lcp,
  * legacy partials.
  *
  * Public-URL vendors that stay synced: flowing-background.js, lenis.min.js.
@@ -23,10 +25,17 @@ const MEDIA_EXT =
 /** Lazy public-URL scripts (not Vite-bundled). */
 const PUBLIC_JS = new Set(['js/flowing-background.js', 'js/lenis.min.js']);
 
+/** Short hero loops shipped on Pages (not Hostido). */
+const PUBLIC_SHOWREEL_MP4 = new Set([
+  'video/showreel-16s.mp4',
+  'video/showreel-720-16s.mp4',
+]);
+
 /** Top-level dirs / files never copied. */
 const SKIP_PREFIXES = ['css/', 'optimized/', 'partials/'];
 
 function skipForCdn(rel) {
+  if (PUBLIC_SHOWREEL_MP4.has(rel)) return false;
   return /^video\/.+\.mp4$/i.test(rel);
 }
 
@@ -45,9 +54,10 @@ function shouldCopy(rel, isDir) {
     if (isDir) return true;
     return PUBLIC_JS.has(rel);
   }
-  // Video: posters / json / images — never MP4 (already filtered)
+  // Video: posters / json / images + whitelisted hero showreel MP4s
   if (rel === 'video' || rel.startsWith('video/')) {
     if (isDir) return true;
+    if (PUBLIC_SHOWREEL_MP4.has(rel)) return true;
     return MEDIA_EXT.test(rel) || /\.json$/i.test(rel);
   }
   // Everything else: media files + dirs that may contain them
@@ -91,5 +101,5 @@ if (existsSync(srcIco)) {
 }
 
 console.log(
-  'sync-public-assets: media + public JS → public/assets/ (skip css/bundled js/MP4/optimized)',
+  'sync-public-assets: media + public JS + hero showreel MP4 → public/assets/ (skip css/bundled js/other MP4/optimized)',
 );
