@@ -4,9 +4,12 @@ export const produkcjaReklamowa: ServiceDef = {
   "id": "produkcja-reklamowa",
   "plSlug": "produkcja-reklamowa",
   "enSlug": "advertising-production",
+  "hubOrder": 10,
   "pl": {
     "title": "Produkcja reklamowa: kasetony, ledony, litery przestrzenne | SEZMOO",
     "description": "Produkcja reklamowa w SEZMOO: szyldy, kasetony, litery przestrzenne, druk wielkoformatowy, oklejanie, oznakowanie przestrzeni, materiały POS i produkcja eventowa. Gdańsk, cała Polska.",
+    "hubTitle": "Produkcja reklamowa",
+    "hubDesc": "Kasetony, ledony, litery przestrzenne, wyklejanie i&nbsp;druk wielkoformatowy –&nbsp;od&nbsp;projektu po&nbsp;montaż.",
     "kick": "Usługi",
     "h1Html": "Produkcja <span style=\"color:#ffd200\">reklamowa.</span>",
     "leads": [
@@ -379,6 +382,8 @@ export const produkcjaReklamowa: ServiceDef = {
   "en": {
     "title": "Advertising production: light boxes, LED neons, 3D letters | SEZMOO",
     "description": "Advertising production at SEZMOO: signs, light boxes, 3D lettering, large-format print, vinyl wraps, wayfinding, POS material and event production. Gdańsk, Poland.",
+    "hubTitle": "Advertising production",
+    "hubDesc": "Light boxes, LED neons, 3D letters, window graphics and large-format print – from design to installation.",
     "kick": "Services",
     "h1Html": "Advertising <span style=\"color:#ffd200\">production.</span>",
     "leads": [

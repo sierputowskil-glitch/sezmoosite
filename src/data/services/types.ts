@@ -185,6 +185,10 @@ export interface ServiceCopy {
   description: string;
   ogTitle?: string;
   ogDescription?: string;
+  /** Short hub listing title (`/uslugi-marketingowe/`, `/en/services/`). */
+  hubTitle?: Html;
+  /** Hub listing blurb (HTML). */
+  hubDesc?: Html;
   kick: Html;
   h1Html: Html;
   leads: Html[];
@@ -203,6 +207,8 @@ export interface ServiceDef {
   id: string;
   plSlug: string;
   enSlug: string;
+  /** Curated hub list order. Omit to hide from `/uslugi-marketingowe/` / `/en/services/`. */
+  hubOrder?: number;
   pl: ServiceCopy;
   en: ServiceCopy;
 }

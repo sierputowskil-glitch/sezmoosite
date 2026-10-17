@@ -4,9 +4,12 @@ export const fotografia: ServiceDef = {
   "id": "fotografia",
   "plSlug": "fotografia",
   "enSlug": "photoghraphy",
+  "hubOrder": 3,
   "pl": {
     "title": "Fotografia – SEZMOO",
     "description": "Zdjęcia są zwykle najdłużej pracującym assetem marki – trafiają na stronę, do reklam, sociali i materiałów sprzedażowych, i zostają tam na lata.",
+    "hubTitle": "Fotografia reklamowa",
+    "hubDesc": "Sesje produktowe, wizerunkowe, biznesowe i&nbsp;eventowe oraz fotografia z&nbsp;drona.",
     "kick": "Usługi",
     "h1Html": "<span style=\"color:#ffd200\">Fotografia.</span>",
     "leads": [
@@ -278,6 +281,8 @@ export const fotografia: ServiceDef = {
   "en": {
     "title": "Photography – SEZMOO",
     "description": "Photography is usually the longest-working asset a brand has – it goes on the website, into ads, social media and sales material, and stays there for",
+    "hubTitle": "Photo",
+    "hubDesc": "Product, brand and event shoots plus drone footage.",
     "kick": "Services",
     "h1Html": "<span style=\"color:#ffd200\">Photography.</span>",
     "leads": [

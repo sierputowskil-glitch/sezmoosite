@@ -4,9 +4,12 @@ export const abonamenty: ServiceDef = {
   "id": "abonamenty",
   "plSlug": "abonamenty",
   "enSlug": "retainers",
+  "hubOrder": 1,
   "pl": {
     "title": "Abonament marketingowy – stała obsługa marketingu i produkcji | SEZMOO",
     "description": "Abonament marketingowy w SEZMOO: stała obsługa marketingu i produkcji w miesięcznym pakiecie godzin – wideo, fotografia, grafika i social media. Jeden zespół, jeden kontakt, przewidywalny budżet. Gdańsk, realizacje w całej Polsce.",
+    "hubTitle": "Abonamenty",
+    "hubDesc": "Potrzebujesz stałej współpracy?<br />Wszystkie nasze usługi mamy w&nbsp;opcji abonamentowej, dopasowanej do&nbsp;Twoich potrzeb.",
     "ogTitle": "Abonament marketingowy – stała obsługa marketingu | SEZMOO",
     "ogDescription": "Abonament marketingowy: produkcja filmowa, fotografia, grafika i social media w jednym miesięcznym pakiecie godzin. Jeden zespół, przewidywalny budżet.",
     "kick": "Abonament marketingowy",
@@ -346,6 +349,8 @@ export const abonamenty: ServiceDef = {
   "en": {
     "title": "Marketing retainer – ongoing marketing and production | SEZMOO",
     "description": "Marketing retainer at SEZMOO: ongoing marketing and production in a monthly package of hours – video, photography, design and social media. One team, one contact, a predictable budget. Gdańsk, projects across Poland.",
+    "hubTitle": "Retainers",
+    "hubDesc": "Need ongoing work?<br />Every service we offer is available on a monthly retainer, shaped around your needs.",
     "ogTitle": "Marketing retainer – ongoing marketing and production | SEZMOO",
     "ogDescription": "Video, photography, design and social media in one monthly package of production hours. One team, a predictable budget.",
     "kick": "Marketing retainer",

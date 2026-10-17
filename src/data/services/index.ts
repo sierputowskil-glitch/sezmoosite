@@ -52,3 +52,10 @@ export function servicePath(def: ServiceDef, lang: ServiceLang): string {
 export function serviceAltPath(def: ServiceDef, lang: ServiceLang): string {
   return servicePath(def, lang === 'en' ? 'pl' : 'en');
 }
+
+/** Hub listing: SERVICES with `hubOrder`, sorted. Alias 301 pages are not in SERVICES. */
+export function servicesForHub(): ServiceDef[] {
+  return SERVICES.filter((s) => s.hubOrder != null).sort(
+    (a, b) => (a.hubOrder as number) - (b.hubOrder as number),
+  );
+}

@@ -4,9 +4,12 @@ export const produkcjaWideoReels: ServiceDef = {
   "id": "produkcja-wideo-reels",
   "plSlug": "produkcja-wideo-reels",
   "enSlug": "video-production-reels",
+  "hubOrder": 2,
   "pl": {
     "title": "Produkcja wideo i foto dla marek, filmy, reels, dron | SEZMOO",
     "description": "Produkcja wideo to core SEZMOO i jeden z najmocniej rozwiniętych obszarów naszej agencji. Mamy własny sprzęt filmowy, zaplecze produkcyjne i stały zespół,",
+    "hubTitle": "Produkcja filmowa",
+    "hubDesc": "Filmy reklamowe, spoty reklamowe, rolki, filmy korporacyjne, relacje z&nbsp;eventów, ujęcia z&nbsp;drona i&nbsp;animacje 2D/3D.",
     "kick": "Usługi",
     "h1Html": "Produkcja <span style=\"color:#ffd200\">filmowa.</span>",
     "leads": [
@@ -429,6 +432,8 @@ export const produkcjaWideoReels: ServiceDef = {
   "en": {
     "title": "Film production for companies and brands | SEZMOO",
     "description": "Video production is the core of SEZMOO and one of the most developed areas of the agency. We own our film gear and production base, and a permanent team",
+    "hubTitle": "Video",
+    "hubDesc": "Commercials, spots, reels, event recaps and animation.",
     "kick": "Services",
     "h1Html": "Film <span style=\"color:#ffd200\">production.</span>",
     "leads": [

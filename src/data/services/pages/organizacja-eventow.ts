@@ -4,9 +4,12 @@ export const organizacjaEventow: ServiceDef = {
   "id": "organizacja-eventow",
   "plSlug": "organizacja-eventow",
   "enSlug": "event-organization",
+  "hubOrder": 8,
   "pl": {
     "title": "Organizacja eventów dla marek | SEZMOO",
     "description": "Organizacja eventów w SEZMOO: konferencje, targi, premiery, eventy firmowe i wydarzenia specjalne. Koncepcja, produkcja, scenografia, technika oraz foto i wideo. Gdańsk.",
+    "hubTitle": "Eventy",
+    "hubDesc": "Organizacja i&nbsp;obsługa eventów, premier, konferencji, targów i&nbsp;wydarzeń firmowych.",
     "kick": "Usługi",
     "h1Html": "Organizacja <span style=\"color:#ffd200\">eventów.</span>",
     "leads": [
@@ -308,6 +311,8 @@ export const organizacjaEventow: ServiceDef = {
   "en": {
     "title": "Event organisation for brands | SEZMOO",
     "description": "Event organisation at SEZMOO: conferences, trade fairs, launches, company events and special projects. Concept, production, set design, technical and photo/video. Gdańsk, Poland.",
+    "hubTitle": "Events",
+    "hubDesc": "Launches, conferences, trade fairs and business meetings.",
     "kick": "Services",
     "h1Html": "Event <span style=\"color:#ffd200\">organisation.</span>",
     "leads": [

@@ -32,10 +32,11 @@ Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `
 | `src/pages/en/` | English mirrors |
 | `src/content/blog/` | Blog Markdown collection |
 | `src/content.config.ts` | Blog Zod schema — update when adding frontmatter fields |
-| `src/components/` | Shared UI (`Nav`, `Footer`, `ContactForm`, `BlogArticle`, `ServicePage`, …) |
+| `src/components/` | Shared UI (`Nav`, `Footer`, `ContactForm`, `BlogArticle`, `ServicePage`, `HomePage`, `ServiceHub`, …) |
 | `src/layouts/` | `BaseLayout`, `ArticleLayout`, `ServiceLayout`, `CaseStudyLayout`, `PortfolioLayout` |
 | `src/data/case-studies.ts` | Case-study PL/EN copy keyed by YouTube / CDN video id |
-| `src/data/services/` | Service PL/EN copy + block structure (`types.ts`, `pages/*.ts`) |
+| `src/data/home.ts` | Homepage PL/EN copy (`HOME` / `homeCopy`) — do not fork `index.astro` HTML |
+| `src/data/services/` | Service PL/EN copy + hub chrome (`types.ts`, `pages/*.ts`, `hub.ts`) |
 | `src/lib/` | `site.ts` (URLs, phone, media CDN), `blog.ts`, `schema.ts` (JSON-LD objects) |
 | `assets/` | CSS, JS, images, video posters/manifest — source of truth (`assets/css/portfolio.css`, `case-study.css`) |
 | `public/` | `_redirects`, `_headers`, `robots.txt`, `404.html`; assets appear after sync |
@@ -197,9 +198,9 @@ Data-driven like video case studies — **do not fork full HTML** per language.
   - PL: `src/pages/uslugi-marketingowe/<plSlug>/index.astro` → `serviceByPlSlug('…')` + `<ServicePage def={def} lang="pl" />`
   - EN: `src/pages/en/services/<enSlug>/index.astro` → `serviceByEnSlug('…')` + `lang="en"`
 - Keep meta titles brand-suffixed (`| SEZMOO`), descriptions unique, schema catalog/FAQ in sync with visible claims. Preserve `&nbsp;` / typographic HTML in copy strings.
-- **Hubs** `/uslugi-marketingowe/` and `/en/services/` are still hand-authored (not `ServicePage`).
+- **Hubs** `/uslugi-marketingowe/` and `/en/services/`: chrome in `src/data/services/hub.ts`; cards from `SERVICES` via `servicesForHub()` (`hubOrder`, `hubTitle`, `hubDesc` on each `ServiceDef` / `ServiceCopy`). Template: `src/components/service/ServiceHub.astro` + thin routes. **Not** `ServicePage` (that is a full service). Omit `hubOrder` to hide a service from the listing (curated 10 today). Alias 301 pages (`kampanie-reklamowe` / `advertising-campaigns`) stay out of `SERVICES`.
 - **Legacy aliases (not ServicePage):** `/uslugi-marketingowe/kampanie-reklamowe/` and `/en/services/advertising-campaigns/` 301 in `public/_redirects` to `kampanie-platne` / `paid-campaigns`. Thin Astro pages remain as local/preview `location.replace` fallbacks (canonicals point at the live service).
-- Homepage marketing HTML is still page-owned (`index.astro` / `en/index.astro` + `home.js`).
+- **Homepage:** copy + structure in `src/data/home.ts` (`pl` + `en`). Template: `src/components/home/HomePage.astro` (existing CSS classes, `home.css`, `home.js`, OptImage/AssetImage/VideoBg/HeroShowreel/ContactForm). Thin routes: `src/pages/index.astro` and `src/pages/en/index.astro` pass `lang` only. Do not duplicate PL/EN HTML. Language-only extras (e.g. EN format kit) stay in data; keep section ids for `home.js`.
 - Portfolio listing CSS: `assets/css/portfolio.css` imported from `PortfolioLayout` (`?url` stylesheet). Case-study CSS: `assets/css/case-study.css` via `CaseStudyLayout`. Do not dump page CSS into `extraHead` (preload links are OK).
 
 ### Redirects & SEO
@@ -224,7 +225,7 @@ Data-driven like video case studies — **do not fork full HTML** per language.
 
 1. Read this file + the nearest existing file of the same type (sibling page / post / case study).
 2. Make the smallest change that satisfies the request.
-3. For content: validate frontmatter against `content.config.ts`; keep TOC ids ↔ heading ids. For services: edit `src/data/services/pages/*.ts`, not duplicated markup in both language trees.
+3. For content: validate frontmatter against `content.config.ts`; keep TOC ids ↔ heading ids. For services: edit `src/data/services/pages/*.ts`. For homepage / hubs: edit `src/data/home.ts` and `src/data/services/` (incl. `hub.ts`, `hubOrder`), not duplicated PL/EN HTML.
 4. For UI: reuse layouts/components; keep PL/EN pairs and hreflang aligned when both exist.
 5. Verify with `npm run check` (and `npm run build` if touching routes, redirects, or env-sensitive meta).
 6. Do not commit unless the user asks; never push unless asked.

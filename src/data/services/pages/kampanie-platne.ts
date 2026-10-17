@@ -4,9 +4,12 @@ export const kampaniePlatne: ServiceDef = {
   "id": "kampanie-platne",
   "plSlug": "kampanie-platne",
   "enSlug": "paid-campaigns",
+  "hubOrder": 9,
   "pl": {
     "title": "Kampanie płatne – SEZMOO",
     "description": "Kampanie reklamowe online w SEZMOO: Meta Ads, Google Ads i TikTok Ads. Strategia, kreacje, landing page, prowadzenie kampanii i optymalizacja wyników. Gdańsk, cała Polska.",
+    "hubTitle": "Kampanie reklamowe",
+    "hubDesc": "Google Ads, Meta Ads i&nbsp;TikTok Ads –&nbsp;strategia, kreacja, prowadzenie kampanii i&nbsp;analityka.",
     "kick": "Usługi",
     "h1Html": "Kampanie <span style=\"color:#ffd200\">płatne.</span>",
     "leads": [
@@ -339,6 +342,8 @@ export const kampaniePlatne: ServiceDef = {
   "en": {
     "title": "Paid Campaigns | SEZMOO",
     "description": "Online advertising campaigns at SEZMOO: Meta Ads, Google Ads and TikTok Ads. Strategy, creative, landing pages, campaign management and optimisation. Gdańsk, Poland.",
+    "hubTitle": "Paid campaigns",
+    "hubDesc": "Google, Meta and TikTok Ads – creative, setup, analytics.",
     "kick": "Services",
     "h1Html": "Paid <span style=\"color:#ffd200\">campaigns.</span>",
     "leads": [

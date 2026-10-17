@@ -4,9 +4,12 @@ export const projektowanieUxUi: ServiceDef = {
   "id": "projektowanie-ux-ui",
   "plSlug": "projektowanie-ux-ui",
   "enSlug": "ux-ui-design",
+  "hubOrder": 5,
   "pl": {
     "title": "Projektowanie UX/UI stron, sklepów i aplikacji | SEZMOO",
     "description": "Projektujemy UX/UI stron, sklepów, aplikacji i produktów cyfrowych – user journey, architektura informacji, prototypy i design system gotowy do wdrożenia.",
+    "hubTitle": "Projektowanie UX/UI",
+    "hubDesc": "User journey, architektura informacji, prototypy i&nbsp;design system dla stron, sklepów i&nbsp;aplikacji.",
     "kick": "Usługi",
     "h1Html": "Projektowanie <span style=\"color:#ffd200\">UX/UI.</span>",
     "leads": [
@@ -396,6 +399,8 @@ export const projektowanieUxUi: ServiceDef = {
   "en": {
     "title": "UX/UI design for websites, stores and apps | SEZMOO",
     "description": "We design UX/UI for websites, online stores, apps and digital products – user journeys, information architecture, prototypes and a design system ready for development.",
+    "hubTitle": "UX/UI design",
+    "hubDesc": "User journeys, information architecture, prototypes and design systems for websites, stores and apps.",
     "kick": "Services",
     "h1Html": "UX/UI <span style=\"color:#ffd200\">design.</span>",
     "leads": [

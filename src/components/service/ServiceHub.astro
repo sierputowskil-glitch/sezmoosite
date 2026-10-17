@@ -1,0 +1,121 @@
+---
+/**
+ * Service listing hub. Cards from SERVICES (`hubOrder` + hubTitle/hubDesc).
+ * Not ServicePage — this is a catalog, not a single service.
+ */
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { itemListJsonLd } from '../../lib/schema';
+import { pageUrl } from '../../lib/site';
+import {
+  serviceCopy,
+  servicePath,
+  servicesForHub,
+  type ServiceLang,
+} from '../../data/services';
+import { serviceHubCopy, serviceHubPath } from '../../data/services/hub';
+
+interface Props {
+  lang: ServiceLang;
+}
+
+const { lang } = Astro.props;
+const copy = serviceHubCopy(lang);
+const path = serviceHubPath(lang);
+const canonical = pageUrl(path);
+const hreflangPl = pageUrl(serviceHubPath('pl'));
+const hreflangEn = pageUrl(serviceHubPath('en'));
+const altHref = lang === 'en' ? '/uslugi-marketingowe/' : '/en/services/';
+
+const listed = servicesForHub();
+const jsonLd = itemListJsonLd({
+  name: copy.schemaName,
+  description: copy.description,
+  canonical,
+  lang,
+  items: listed.map((def) => {
+    const sc = serviceCopy(def, lang);
+    return {
+      name: (sc.hubTitle || sc.schemaName).replace(/<[^>]+>/g, ''),
+      url: pageUrl(servicePath(def, lang)),
+    };
+  }),
+});
+---
+
+<ServiceLayout
+  lang={lang}
+  title={copy.title}
+  description={copy.description}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  hreflangPl={hreflangPl}
+  hreflangEn={hreflangEn}
+  altHref={altHref}
+>
+  <section class="sub-hero shell service-hub">
+    <div class="sub-hero__grid sub-hero__grid--solo">
+      <div>
+        <span class="eyebrow reveal"><span class="tick"></span><Fragment set:html={copy.kick} /></span>
+        <h1 class="reveal" set:html={copy.h1} />
+      </div>
+    </div>
+  </section>
+  <section class="sub-section shell service-index" id={copy.listId}>
+    <div class="svcA">
+      {listed.map((def, i) => {
+        const sc = serviceCopy(def, lang);
+        const href = servicePath(def, lang);
+        const no = String(i + 1).padStart(2, '0');
+        return (
+          <a class="svcA__row reveal" href={href}>
+            <span class="svcA__no">{no}</span>
+            <h3 class="svcA__t" set:html={sc.hubTitle || sc.schemaName} />
+            {sc.hubDesc && <p class="svcA__d" set:html={sc.hubDesc} />}
+            <span class="svcA__go">↗</span>
+          </a>
+        );
+      })}
+    </div>
+    <div class="sub-cta reveal">
+      <div>
+        <h2 set:html={copy.ctaTitle} />
+        <p set:html={copy.ctaP} />
+      </div>
+      <a href={copy.ctaHref} class="btn btn--primary"
+        ><span class="ico"></span><span class="lbl" set:html={copy.ctaLabel} /></a
+      >
+    </div>
+  </section>
+  <section class="sub-section shell" id={copy.retainer.id}>
+    <div class="sd">
+      <div class="sec-head">
+        <span class="sd__kick reveal"><i></i><Fragment set:html={copy.retainer.kick} /></span>
+      </div>
+      <h2
+        class="sec-title reveal"
+        style="margin-top:clamp(10px,1.2vw,16px)"
+        set:html={copy.retainer.headingHtml}
+      />
+      <p
+        class="reveal"
+        style="max-width:62ch;margin:clamp(16px,1.8vw,22px) 0 0;font-size:clamp(15px,1.15vw,17px);line-height:1.62;color:var(--fg-dim)"
+        set:html={copy.retainer.leadHtml}
+      />
+      <div
+        class="sd__steps reveal"
+        style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(26px,3vw,38px)"
+      >
+        {copy.retainer.steps.map((step) => (
+          <div class="sd__step">
+            <h3 set:html={step.title} />
+            <p set:html={step.text} />
+          </div>
+        ))}
+      </div>
+      <div class="sd__more reveal">
+        <a class="is-lead" href={copy.retainer.moreLeadHref} set:html={copy.retainer.moreLead} />
+        <a href={copy.retainer.moreHref} set:html={copy.retainer.more} />
+      </div>
+    </div>
+  </section>
+</ServiceLayout>

@@ -4,9 +4,12 @@ export const obslugaSocialMedia: ServiceDef = {
   "id": "obsluga-social-media",
   "plSlug": "obsluga-social-media",
   "enSlug": "social-media-management",
+  "hubOrder": 7,
   "pl": {
     "title": "Social media i kampanie płatne (Ads) dla marek | SEZMOO",
     "description": "Obsługa social media w SEZMOO: strategia, prowadzenie profili, produkcja contentu, publikacja i moderacja oraz raportowanie. Foto, wideo i grafika z własnego zespołu. Gdańsk.",
+    "hubTitle": "Social media",
+    "hubDesc": "Strategia komunikacji, prowadzenie profili, tworzenie contentu, copywriting i&nbsp;publikacja.",
     "kick": "Usługi",
     "h1Html": "Obsługa <span style=\"color:#ffd200\">social media.</span>",
     "leads": [
@@ -347,6 +350,8 @@ export const obslugaSocialMedia: ServiceDef = {
   "en": {
     "title": "Social media & paid campaigns (Ads) | SEZMOO",
     "description": "Social media management at SEZMOO: strategy, running your channels, content production, publishing, moderation and reporting. Photo, video and design in-house. Gdańsk, Poland.",
+    "hubTitle": "Social media",
+    "hubDesc": "Content strategy, publishing and profile management.",
     "kick": "Services",
     "h1Html": "Social media <span style=\"color:#ffd200\">management.</span>",
     "leads": [

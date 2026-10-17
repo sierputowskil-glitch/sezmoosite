@@ -4,9 +4,12 @@ export const projektowanieGraficzne: ServiceDef = {
   "id": "projektowanie-graficzne",
   "plSlug": "projektowanie-graficzne",
   "enSlug": "graphic-design",
+  "hubOrder": 4,
   "pl": {
     "title": "Projektowanie graficzne i identyfikacja wizualna | SEZMOO",
     "description": "Projektowanie graficzne w SEZMOO: identyfikacja wizualna, key visuale, materiały reklamowe, grafika do social mediów, opakowania oraz grafika 2D i 3D. Gdańsk, realizacje w całej Polsce.",
+    "hubTitle": "Projektowanie graficzne",
+    "hubDesc": "Logo, key visuale, grafiki do&nbsp;social media, katalogi i&nbsp;materiały reklamowe.",
     "kick": "Usługi",
     "h1Html": "Projektowanie <span style=\"color:#ffd200\">graficzne.</span>",
     "leads": [
@@ -418,6 +421,8 @@ export const projektowanieGraficzne: ServiceDef = {
   "en": {
     "title": "Graphic design & visual identity | SEZMOO",
     "description": "Design decides whether a brand looks like a serious company or an accident – on the website, in ads, in the offer and on the packaging. We design",
+    "hubTitle": "Graphic design",
+    "hubDesc": "Logos, key visuals, social assets, catalogues and print.",
     "kick": "Services",
     "h1Html": "Graphic <span style=\"color:#ffd200\">design.</span>",
     "leads": [

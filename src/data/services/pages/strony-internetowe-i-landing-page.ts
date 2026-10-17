@@ -4,9 +4,12 @@ export const stronyInternetoweILandingPage: ServiceDef = {
   "id": "strony-internetowe-i-landing-page",
   "plSlug": "strony-internetowe-i-landing-page",
   "enSlug": "websites-and-landing-pages",
+  "hubOrder": 6,
   "pl": {
     "title": "Strony internetowe i landing pages dla marek | SEZMOO",
     "description": "Strona jest miejscem, w którym kończy się cała reszta marketingu – jeśli nie prowadzi do kontaktu, reszta pracuje na pusto. Projektujemy i budujemy strony",
+    "hubTitle": "Strony internetowe",
+    "hubDesc": "Strony firmowe, landing page’e i&nbsp;sklepy –&nbsp;development w&nbsp;WordPressie, React i&nbsp;dowolnej technologii.",
     "kick": "Usługi",
     "h1Html": "Strony i&nbsp;<span style=\"color:#ffd200\">landing pages.</span>",
     "leads": [
@@ -486,6 +489,8 @@ export const stronyInternetoweILandingPage: ServiceDef = {
   "en": {
     "title": "Websites & landing pages for brands | SEZMOO",
     "description": "A website is where the rest of the marketing lands – if it does not lead to contact, everything upstream works for nothing. We design and build company",
+    "hubTitle": "Websites",
+    "hubDesc": "Company sites, landing pages and online stores – built in WordPress, React or any other stack.",
     "kick": "Services",
     "h1Html": "Websites and <span style=\"color:#ffd200\">landing pages.</span>",
     "leads": [
