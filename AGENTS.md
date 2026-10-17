@@ -30,9 +30,10 @@ Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `
 | --- | --- |
 | `src/pages/` | Routes (`index.astro`, services, case-study shells, `[slug].astro` for blog) |
 | `src/pages/en/` | English mirrors |
-| `src/content/blog/` | Blog Markdown collection |
+| `src/content/blog/` | Blog Markdown collection (PL-only today) |
 | `src/content.config.ts` | Blog Zod schema — update when adding frontmatter fields |
-| `src/components/` | Shared UI (`Nav`, `Footer`, `ContactForm`, `BlogArticle`, `ServicePage`, `HomePage`, `ServiceHub`, `PortfolioPage`, `PrivacyPage`, …) |
+| `src/data/blog-listing.ts` | PL blog index chrome (`BLOG_LISTING`) — not post bodies |
+| `src/components/` | Shared UI (`Nav`, `Footer`, `ContactForm`, `BlogArticle`, `BlogListingPage`, `ServicePage`, `HomePage`, `ServiceHub`, `PortfolioPage`, `PrivacyPage`, …) |
 | `src/layouts/` | `BaseLayout`, `ArticleLayout`, `ServiceLayout`, `CaseStudyLayout`, `PortfolioLayout` |
 | `src/data/case-studies.ts` | Case-study PL/EN copy keyed by YouTube / CDN video id |
 | `src/data/home.ts` | Homepage PL/EN copy (`HOME` / `homeCopy`) — do not fork `index.astro` HTML |
@@ -113,7 +114,7 @@ Do not dump homepage or portfolio logic back into `app.js`. Case-study play stay
 
 ### Blog (`src/content/blog/*.md`)
 
-- **URL:** `/{filename-without-extension}/` via `src/pages/[slug].astro` (not under `/blog/{slug}/`). Listing lives at `/blog/`.
+- **URL:** `/{filename-without-extension}/` via `src/pages/[slug].astro` (not under `/blog/{slug}/`). Listing: `/blog/` → `BlogListingPage` + chrome in `src/data/blog-listing.ts` (PL-only). `/en/blog/` is a soft redirect to `/blog/` — do not build an EN listing until there are `lang: en` posts.
 - **Filename = slug** (kebab-case PL SEO slug). Changing the filename changes the public URL — update internal links and redirects if needed.
 - **Schema** (`src/content.config.ts`): required `title`, `date`, `topic` ∈ `strategy` | `production` | `social`; optional `description`, `lead`, hero fields, `toc`, CTA overrides, OG overrides, `readingTime`, `lang` (`pl`|`en`, default `pl`).
 - **Flags:**
@@ -236,7 +237,7 @@ Data-driven like video case studies — **do not fork full HTML** per language.
 
 1. Read this file + the nearest existing file of the same type (sibling page / post / case study).
 2. Make the smallest change that satisfies the request.
-3. For content: validate frontmatter against `content.config.ts`; keep TOC ids ↔ heading ids. For services: edit `src/data/services/pages/*.ts`. For homepage / hubs / portfolio / privacy: edit `src/data/home.ts`, `src/data/portfolio.ts`, `src/data/privacy.ts`, and `src/data/services/` (incl. `hub.ts`, `hubOrder`), not duplicated PL/EN HTML.
+3. For content: validate frontmatter against `content.config.ts`; keep TOC ids ↔ heading ids. For services: edit `src/data/services/pages/*.ts`. For homepage / hubs / portfolio / privacy / blog index: edit `src/data/home.ts`, `src/data/portfolio.ts`, `src/data/privacy.ts`, `src/data/blog-listing.ts`, and `src/data/services/` (incl. `hub.ts`, `hubOrder`), not duplicated PL/EN HTML.
 4. For UI: reuse layouts/components; keep PL/EN pairs and hreflang aligned when both exist.
 5. Verify with `npm run check` (and `npm run build` if touching routes, redirects, or env-sensitive meta).
 6. Do not commit unless the user asks; never push unless asked.

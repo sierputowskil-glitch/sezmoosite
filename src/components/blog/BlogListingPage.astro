@@ -1,0 +1,172 @@
+---
+/**
+ * PL blog index. Chrome in src/data/blog-listing.ts; posts from content collection.
+ * EN lives at /en/blog/ as a redirect to /blog/ — no EN listing.
+ */
+import AssetImage from '../AssetImage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  blogMetaLine,
+  blogPath,
+  getPublishedBlogPosts,
+  type BlogPost,
+} from '../../lib/blog';
+import { itemListJsonLd } from '../../lib/schema';
+import { pageUrl } from '../../lib/site';
+import { blogListingCopy } from '../../data/blog-listing';
+
+const copy = blogListingCopy();
+const canonical = pageUrl(copy.path);
+const posts = await getPublishedBlogPosts('pl');
+const featured = posts.find((p) => p.data.featured) || posts[0];
+const rest = featured ? posts.filter((p) => p.id !== featured.id) : posts;
+
+const jsonLd = itemListJsonLd({
+  name: copy.schemaName,
+  description: copy.description,
+  canonical,
+  lang: 'pl',
+  items: posts.map((post) => ({
+    name: post.data.title,
+    url: pageUrl(blogPath(post)),
+  })),
+});
+
+function delayAttr(i: number): string | undefined {
+  const d = i % 3;
+  return d === 0 ? undefined : String(d);
+}
+
+const pageScripts = `<script>
+(function () {
+  var filters = [].slice.call(document.querySelectorAll('[data-blog-filter]'));
+  var items = [].slice.call(document.querySelectorAll('[data-topic]'));
+  function apply(key) {
+    filters.forEach(function (a) {
+      a.classList.toggle('is-active', a.getAttribute('data-blog-filter') === key);
+    });
+    items.forEach(function (el) {
+      var show = key === 'all' || el.getAttribute('data-topic') === key;
+      el.hidden = !show;
+    });
+  }
+  filters.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      apply(a.getAttribute('data-blog-filter'));
+    });
+  });
+})();
+</script>`;
+---
+
+<BaseLayout
+  lang="pl"
+  title={copy.title}
+  description={copy.description}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  pageScripts={pageScripts}
+>
+  <section class="blog blog--page shell" id="blog" data-screen-label={copy.screenLabel}>
+    <div class="blog-hero">
+      <div>
+        <span class="eyebrow reveal"><span class="tick"></span>{copy.eyebrow}</span>
+        <h1 class="blog-hero__title reveal" set:html={copy.h1Html} />
+      </div>
+      <p class="blog-hero__copy reveal" data-d="1" set:html={copy.heroCopyHtml} />
+    </div>
+
+    <div class="blog-topics reveal">
+      {
+        copy.filters.map((f, i) => (
+          <a
+            href={`#${f.id}`}
+            class:list={[i === 0 && 'is-active']}
+            data-blog-filter={f.id}
+          >
+            {f.label}
+          </a>
+        ))
+      }
+    </div>
+
+    {
+      featured && (
+        <article class="blog-feature reveal" data-topic={featured.data.topic}>
+          <div class="blog-feature__media">
+            <div class="frame-media">
+              {featured.data.heroImage ? (
+                <AssetImage
+                  src={featured.data.heroImage}
+                  alt={featured.data.heroAlt || featured.data.title}
+                  loading="eager"
+                  fetchpriority="high"
+                  widths={[640, 960, 1200, 1600]}
+                  sizes="(max-width: 1050px) 100vw, 48vw"
+                  quality={78}
+                />
+              ) : null}
+            </div>
+            <span>{copy.featuredBadge}</span>
+          </div>
+          <div class="blog-feature__body">
+            <span class="blog-post__meta">{blogMetaLine(featured)}</span>
+            <h2>
+              <a class="blog-post__title" href={blogPath(featured)}>
+                {featured.data.title}
+              </a>
+            </h2>
+            <p>{featured.data.description}</p>
+            <a class="blog-feature__cta" href={blogPath(featured)}>
+              {copy.featuredCta}
+            </a>
+          </div>
+        </article>
+      )
+    }
+
+    <div class="blog-layout">
+      <div class="blog__list">
+        {
+          rest.map((post: BlogPost, i: number) => {
+            const d = delayAttr(i);
+            return (
+              <article
+                class="blog-post reveal"
+                data-topic={post.data.topic}
+                {...(d ? { 'data-d': d } : {})}
+              >
+                <span class="blog-post__meta">{blogMetaLine(post)}</span>
+                <h3>
+                  <a class="blog-post__title" href={blogPath(post)}>
+                    {post.data.title}
+                  </a>
+                </h3>
+                <p>{post.data.description}</p>
+                <a class="blog-post__more" href={blogPath(post)}>
+                  {copy.moreCta}
+                </a>
+              </article>
+            );
+          })
+        }
+      </div>
+
+      <aside class="blog-side reveal" data-d="1">
+        <span class="blog-side__label">{copy.sideLabel}</span>
+        {
+          copy.sideLinks.map((link) =>
+            link.filter ? (
+              <a href={link.href} data-blog-filter={link.filter}>
+                {link.label}
+              </a>
+            ) : (
+              <a href={link.href}>{link.label}</a>
+            ),
+          )
+        }
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
