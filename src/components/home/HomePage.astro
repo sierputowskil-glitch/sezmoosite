@@ -20,7 +20,7 @@ import {
   type HomePillarIcon,
   type HomeWorkId,
 } from '../../data/home';
-import '../../styles/home.css';
+import homeCssHref from '../../styles/home.css?url';
 
 import workExlantix from '../../../assets/portfolio/exlantix/exlantix-premiera-marki-gdansk-fotografia-21.jpg';
 import workWow from '../../../assets/work/captains-club-int.webp';
@@ -80,7 +80,7 @@ const studioLead = copy.studio.paras.length > 1;
   altHref={copy.altHref}
   brandHref={copy.brandHref}
   jsonLd={jsonLd}
-  extraHead={`<link rel="preload" as="image" type="image/webp" href="${SHOWREEL_POSTER_PRELOAD}" fetchpriority="high" />`}
+  extraHead={`<link rel="preload" as="image" type="image/webp" href="${SHOWREEL_POSTER_PRELOAD}" fetchpriority="high" /><link rel="stylesheet" href="${homeCssHref}" media="print" onload="this.setAttribute('media','all')" /><noscript><link rel="stylesheet" href="${homeCssHref}" /></noscript>`}
 >
   <section class="hero" id="hero" data-screen-label="Hero">
     <div class="hero__reel">

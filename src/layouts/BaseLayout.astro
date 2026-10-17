@@ -1,9 +1,11 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import '../styles/fonts.css';
-import '../styles/perf.css';
-import '../styles/cookieyes.css';
+// Load as URLs (async below) — side-effect imports were render-blocking and
+// delayed FCP/LCP even after styles.css was deferred.
+import fontsHref from '../styles/fonts.css?url';
+import perfHref from '../styles/perf.css?url';
+import cookieyesHref from '../styles/cookieyes.css?url';
 import stylesHref from '../../assets/css/styles.css?url';
 
 interface Props {
@@ -164,21 +166,24 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     .hero{position:relative;min-height:100svh;display:grid;align-content:end;padding:clamp(100px,14vh,160px) 0 clamp(48px,8vh,90px);overflow:clip}
     /* Do NOT absolute-position bare .video-bg — without a relative parent it covers the viewport and IO mounts early */
     .hero__reel,.hero__video{position:absolute;inset:0;overflow:hidden}
-    .hero__video{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#0a0a0c}
+    .hero__video{background-color:#0a0a0c}
+    .hero__poster{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;filter:brightness(.78) saturate(1.05)}
     .hero__video video{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;opacity:0;pointer-events:none;filter:brightness(.78) saturate(1.05)}
     .hero__video.is-playing video{opacity:1}
     .studio__media{position:relative;aspect-ratio:9/16;max-height:min(82vh,860px);overflow:hidden;background:#0a0a0c}
     .studio__media .video-bg{position:absolute;inset:0;overflow:hidden;background-size:cover;background-position:center;background-repeat:no-repeat}
     .hero__grad{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,var(--bg) 8%,transparent 58%)}
     .hero__content{position:relative;z-index:5;width:100%}
-    .hero h1{font-family:var(--font-display);font-weight:780;font-stretch:110%;font-size:clamp(34px,6.2vw,112px);line-height:.92;letter-spacing:-.02em;max-width:15ch}
-    .hero h1 .clip{display:block;overflow:hidden}
+    .hero h1{font-family:var(--font-display);font-weight:780;font-stretch:110%;font-size:clamp(34px,6.2vw,112px);line-height:.92;letter-spacing:-.02em;max-width:15ch;text-wrap:balance}
+    /* Match styles.css clip metrics so async sheet doesn't shift hero__content (CLS). */
+    .hero h1 .clip{display:block;overflow:hidden;padding-bottom:.14em;margin-bottom:-.14em}
     .hero h1 .clip>span{display:block;transform:none}
     .hero h1 .accent{color:var(--rec)}
-    .hero__measure{font-size:clamp(34px,6.2vw,112px);width:15ch;max-width:100%}
+    .hero__measure{font-family:inherit;font-weight:780;font-stretch:110%;letter-spacing:-.02em;font-size:clamp(34px,6.2vw,112px);width:15ch;max-width:100%}
     .hero__measure>*{font-size:initial;font-weight:initial;font-stretch:initial;letter-spacing:initial}
-    .hero__measure>h1{font-weight:780;font-stretch:110%;letter-spacing:-.02em;font-size:clamp(34px,6.2vw,112px)}
-    .hero__sub{margin-top:16px;max-width:100%;font-size:clamp(15px,1.15vw,18px);color:var(--fg-dim);line-height:1.6}
+    .hero__measure>h1{font-weight:780;font-stretch:110%;letter-spacing:-.02em;font-size:clamp(34px,6.2vw,112px);max-width:100%}
+    /* Must match styles.css — prior 16px/100% caused ~0.17 CLS when full sheet applied */
+    .hero__sub{margin-top:clamp(28px,4vh,44px);max-width:44ch;font-size:clamp(16px,1.4vw,21px);color:var(--fg-dim);line-height:1.5}
     .hero__sub b{color:var(--fg);font-weight:700}
     .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(26px,4vh,44px)}
     .hero__hud,.hero__corners,.hero__play{display:none}
@@ -205,8 +210,17 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     /* Hide chrome until full CSS — no !important so styles.css can reveal */
     .grain,.vignette,.cursor,.cursor-dot,.scrubber,.flow-bg-canvas,.floating-socials,.scroll-top{display:none}
   </style>
-  {/* Render-blocking Vite-hashed CSS (critical tokens above prevent FOUC). */}
-  <link rel="stylesheet" href={stylesHref} />
+  {/* Non-critical sheets async — critical CSS above covers ATF (hero/nav/article). */}
+  <link rel="stylesheet" href={fontsHref} media="print" onload="this.setAttribute('media','all')" />
+  <link rel="stylesheet" href={perfHref} media="print" onload="this.setAttribute('media','all')" />
+  <link rel="stylesheet" href={cookieyesHref} media="print" onload="this.setAttribute('media','all')" />
+  <link rel="stylesheet" href={stylesHref} media="print" onload="this.setAttribute('media','all')" />
+  <noscript>
+    <link rel="stylesheet" href={fontsHref} />
+    <link rel="stylesheet" href={perfHref} />
+    <link rel="stylesheet" href={cookieyesHref} />
+    <link rel="stylesheet" href={stylesHref} />
+  </noscript>
   <script is:inline>
     document.documentElement.classList.add('html-css-ready');
   </script>

@@ -2,6 +2,8 @@
 /**
  * Native hero background showreel — muted autoplay on desktop + mobile.
  * MP4 from cdn.sezmoo.com; posters stay on Pages for LCP.
+ * Real <img> poster (not CSS background) so LCP can select it; video src is
+ * attached in home.js after LCP/idle so the ~15MB MP4 stays off the critical path.
  */
 import { mediaUrl } from '../lib/site';
 
@@ -11,28 +13,28 @@ interface Props {
 const { title = 'SEZMOO showreel' } = Astro.props;
 
 const videoSrc = mediaUrl('video/showreel.mp4');
-
-// Posters: same-origin on Pages (small) — better LCP than cross-origin CDN.
-const posterWebp = '/assets/video/showreel-poster.webp?v=20261016k';
-const posterJpg = '/assets/video/showreel-poster.jpg?v=20261016k';
+const posterWebp = '/assets/video/showreel-poster.webp?v=20261017a';
 ---
 
-<div
-  class="hero__video"
-  style={`background-image:url('${posterWebp}'),url('${posterJpg}')`}
->
+<div class="hero__video">
+  <img
+    class="hero__poster"
+    src={posterWebp}
+    alt=""
+    width="1600"
+    height="900"
+    decoding="async"
+    fetchpriority="high"
+  />
   <video
     id="hero-video"
     muted
     playsinline
     loop
-    autoplay
-    preload="metadata"
-    poster={posterJpg}
+    preload="none"
+    data-src={videoSrc}
     aria-label={title}
     disablepictureinpicture
     disableRemotePlayback
-  >
-    <source src={videoSrc} type="video/mp4" />
-  </video>
+  ></video>
 </div>

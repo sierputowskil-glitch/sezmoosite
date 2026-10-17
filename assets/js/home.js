@@ -31,8 +31,10 @@
       return;
     }
 
+    let attached = false;
     const reveal = () => wrap.classList.add("is-playing");
     const tryPlay = () => {
+      if (!attached) return;
       video.muted = true;
       video.defaultMuted = true;
       video.setAttribute("muted", "");
@@ -54,10 +56,51 @@
       }
     };
 
+    const attachSrc = () => {
+      if (attached) return;
+      const src = video.getAttribute("data-src");
+      if (!src) return;
+      attached = true;
+      const source = document.createElement("source");
+      source.src = src;
+      source.type = "video/mp4";
+      video.appendChild(source);
+      video.load();
+      tryPlay();
+    };
+
     video.addEventListener("playing", reveal);
     video.addEventListener("canplay", tryPlay, { once: true });
-    if (video.readyState >= 2) tryPlay();
-    else tryPlay();
+
+    // Defer MP4 until after LCP + idle — poster stays the LCP candidate; ~15MB
+    // showreel must not contend with critical images/fonts.
+    const scheduleAttach = () => {
+      let done = false;
+      const run = () => {
+        if (done) return;
+        done = true;
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(attachSrc, { timeout: 2000 });
+        } else {
+          setTimeout(attachSrc, 600);
+        }
+      };
+      try {
+        const po = new PerformanceObserver((list) => {
+          if (list.getEntries().length) {
+            try { po.disconnect(); } catch (_e) {}
+            run();
+          }
+        });
+        po.observe({ type: "largest-contentful-paint", buffered: true });
+      } catch (_e) {
+        run();
+        return;
+      }
+      window.addEventListener("load", () => setTimeout(run, 2500), { once: true });
+      setTimeout(run, 5000);
+    };
+    scheduleAttach();
 
     // Pause when off-screen / tab hidden — saves CPU & data on mobile
     const sync = () => {
@@ -72,8 +115,10 @@
       const io = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
-            if (e.isIntersecting && !document.hidden) tryPlay();
-            else video.pause();
+            if (e.isIntersecting && !document.hidden) {
+              attachSrc();
+              tryPlay();
+            } else video.pause();
           });
         },
         { threshold: 0.15 }
@@ -87,6 +132,8 @@
     const h1 = document.querySelector(".hero h1");
     const sub = document.querySelector(".hero .hero__sub");
     if (!h1 || !sub) return;
+    // Inside .hero__measure the 15ch wrapper already matches H1 — JS maxWidth was CLS.
+    if (sub.closest(".hero__measure")) return;
     const lines = [...h1.querySelectorAll(".clip > span")];
     if (!lines.length) return;
     function fit() {

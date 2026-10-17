@@ -158,7 +158,7 @@ export interface HomeCopy {
   };
 }
 
-export const SHOWREEL_POSTER_PRELOAD = '/assets/video/showreel-poster.webp?v=20261016k';
+export const SHOWREEL_POSTER_PRELOAD = '/assets/video/showreel-poster.webp?v=20261017a';
 export const STUDIO_VIDEO_ID = 'b_MB9qpw6jE';
 
 const TEAM_BASE: Omit<HomeTeamMember, 'role'>[] = [

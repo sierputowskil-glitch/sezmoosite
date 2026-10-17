@@ -405,17 +405,22 @@ main {
 }
 .hero__reel .frame-media { position: absolute; inset: 0; }
 
-/* Local background video — poster always visible; video fades in on play */
+/* Local background video — <img> poster is the LCP candidate; video fades in on play */
 .hero__video {
   position: absolute; inset: 0; overflow: hidden; z-index: 1;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: #0a0a0c;
+}
+.hero__poster {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  max-width: none;
+  object-fit: cover;
+  filter: brightness(0.78) saturate(1.05);
 }
 .hero__video video {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
+  max-width: none;
   object-fit: cover;
   pointer-events: none;
   opacity: 0;
@@ -476,19 +481,9 @@ main {
   text-wrap: balance; max-width: 15ch;
 }
 .hero h1 .clip { display:block; overflow:hidden; padding-bottom:.14em; margin-bottom:-.14em; }
-.hero h1 .clip > span { display:block; transform: translateY(110%); }
-.hero.is-in h1 .clip > span { animation: lineUp 1s var(--ease) both; }
-.hero.is-in h1 .clip:nth-child(2) > span { animation-delay: .12s; }
-@keyframes lineUp { to { transform: translateY(0); } }
-/* Mobile / reduced-motion: paint hero copy immediately (LCP is hero text) */
-@media (hover: none), (pointer: coarse) {
-  .hero h1 .clip > span { transform: none; }
-  .hero.is-in h1 .clip > span { animation: none; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero h1 .clip > span { transform: none; }
-  .hero.is-in h1 .clip > span { animation: none; }
-}
+/* Paint H1 immediately for LCP — former translateY(110%) hid the headline until
+   .is-in, so PSI picked smaller CookieYes / hero__sub text as LCP. */
+.hero h1 .clip > span { display:block; transform: none; }
 .hero h1 .accent { color: var(--rec); }
 /* wspólna miara: szerokość = 15ch fontu H1, więc lead ma dokładnie szerokość nagłówka */
 .hero__measure { font-family: inherit; font-weight: 780; font-stretch: 110%; letter-spacing: -0.02em;

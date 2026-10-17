@@ -48,47 +48,58 @@
   /* ---------- Smooth momentum scrolling (Lenis) ---------- */
   (function smoothScroll() {
     if (reduce || !fine) return; // native scroll on touch / reduced-motion
-    const s = document.createElement("script");
-    // Public vendor copy (synced to /assets/js/); app itself is Vite-bundled.
-    s.src = "/assets/js/lenis.min.js";
-    s.onload = function () {
-      const L = window.Lenis || (window.lenis && window.lenis.Lenis);
-      if (!L) return;
-      const lenis = new L({
-        duration: 1.05,
-        easing: (t) => 1 - Math.pow(1 - t, 3),
-        smoothWheel: true,
-        wheelMultiplier: 1,
-        touchMultiplier: 1.4,
-        // CookieYes preference modal scrolls its own pane — don't chain to the page.
-        prevent: (node) =>
-          !!(
-            node &&
-            node.closest &&
-            node.closest(
-              '.cky-preference-body-wrapper, .cky-modal, .cky-preference-center, #cky-consent-container, [data-lenis-prevent]'
-            )
-          ),
-      });
-      window.__lenis = lenis;
-      root.style.scrollBehavior = "auto";
-      function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-      requestAnimationFrame(raf);
-      document.addEventListener("click", function (e) {
-        const a = e.target.closest && e.target.closest('a[href^="#"]');
-        if (!a) return;
-        const id = a.getAttribute("href");
-        if (!id || id.length < 2) return;
-        let target = null;
-        try { target = document.querySelector(id); } catch (_) { return; }
-        if (!target) return;
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        lenis.scrollTo(target, { offset: -anchorOffset() });
-      });
+    function loadLenis() {
+      if (document.getElementById("sez-lenis")) return;
+      const s = document.createElement("script");
+      s.id = "sez-lenis";
+      // Public vendor copy (synced to /assets/js/); app itself is Vite-bundled.
+      s.src = "/assets/js/lenis.min.js";
+      s.onload = function () {
+        const L = window.Lenis || (window.lenis && window.lenis.Lenis);
+        if (!L) return;
+        const lenis = new L({
+          duration: 1.05,
+          easing: (t) => 1 - Math.pow(1 - t, 3),
+          smoothWheel: true,
+          wheelMultiplier: 1,
+          touchMultiplier: 1.4,
+          // CookieYes preference modal scrolls its own pane — don't chain to the page.
+          prevent: (node) =>
+            !!(
+              node &&
+              node.closest &&
+              node.closest(
+                '.cky-preference-body-wrapper, .cky-modal, .cky-preference-center, #cky-consent-container, [data-lenis-prevent]'
+              )
+            ),
+        });
+        window.__lenis = lenis;
+        root.style.scrollBehavior = "auto";
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+        document.addEventListener("click", function (e) {
+          const a = e.target.closest && e.target.closest('a[href^="#"]');
+          if (!a) return;
+          const id = a.getAttribute("href");
+          if (!id || id.length < 2) return;
+          let target = null;
+          try { target = document.querySelector(id); } catch (_) { return; }
+          if (!target) return;
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          lenis.scrollTo(target, { offset: -anchorOffset() });
+        });
+      };
+      s.onerror = function () { /* keep native scroll */ };
+      document.head.appendChild(s);
+    }
+    // Native scroll first; Lenis after idle so it doesn't compete with LCP.
+    const schedule = () => {
+      if ("requestIdleCallback" in window) requestIdleCallback(loadLenis, { timeout: 2000 });
+      else setTimeout(loadLenis, 800);
     };
-    s.onerror = function () { /* keep native scroll */ };
-    document.head.appendChild(s);
+    if (document.readyState === "complete") schedule();
+    else window.addEventListener("load", schedule, { once: true });
   })();
 
   function anchorOffset() {
