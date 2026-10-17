@@ -210,19 +210,31 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     /* Hide chrome until full CSS — no !important so styles.css can reveal */
     .grain,.vignette,.cursor,.cursor-dot,.scrubber,.flow-bg-canvas,.floating-socials,.scroll-top{display:none}
   </style>
-  {/* Non-critical sheets async — critical CSS above covers ATF (hero/nav/article). */}
-  <link rel="stylesheet" href={fontsHref} media="print" onload="this.setAttribute('media','all')" />
-  <link rel="stylesheet" href={perfHref} media="print" onload="this.setAttribute('media','all')" />
-  <link rel="stylesheet" href={cookieyesHref} media="print" onload="this.setAttribute('media','all')" />
-  <link rel="stylesheet" href={stylesHref} media="print" onload="this.setAttribute('media','all')" />
+  {/* Main design system must stay render-blocking — async media=print sometimes
+      never fires onload (cached CSS), leaving below-the-fold with no layout. */}
+  <link rel="stylesheet" href={stylesHref} />
+  {/* Secondary sheets can stay async; failsafe forces media=all if onload skipped. */}
+  <link rel="stylesheet" href={fontsHref} media="print" onload="this.onload=null;this.setAttribute('media','all')" />
+  <link rel="stylesheet" href={perfHref} media="print" onload="this.onload=null;this.setAttribute('media','all')" />
+  <link rel="stylesheet" href={cookieyesHref} media="print" onload="this.onload=null;this.setAttribute('media','all')" />
   <noscript>
     <link rel="stylesheet" href={fontsHref} />
     <link rel="stylesheet" href={perfHref} />
     <link rel="stylesheet" href={cookieyesHref} />
-    <link rel="stylesheet" href={stylesHref} />
   </noscript>
   <script is:inline>
     document.documentElement.classList.add('html-css-ready');
+    // Cached print-media sheets can skip onload — promote any still-print after paint.
+    (function () {
+      function promote() {
+        document.querySelectorAll('link[rel="stylesheet"][media="print"]').forEach(function (l) {
+          l.setAttribute('media', 'all');
+        });
+      }
+      if (document.readyState === 'complete') setTimeout(promote, 0);
+      else window.addEventListener('load', function () { setTimeout(promote, 0); });
+      setTimeout(promote, 1200);
+    })();
   </script>
   {jsonLdBlocks.map((block) => (
     <script type="application/ld+json" set:html={block} />

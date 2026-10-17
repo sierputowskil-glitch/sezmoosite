@@ -156,7 +156,17 @@
     } else if (fine) {
       afterPoster(openGate);
     } else {
-      afterLcp(() => afterPoster(openGate));
+      // Mobile: after LCP + idle so lazy images below hero can claim bandwidth first
+      // (handoff: early showreel download starves work/team media).
+      afterLcp(() => {
+        afterPoster(() => {
+          if ("requestIdleCallback" in window) {
+            requestIdleCallback(openGate, { timeout: 3500 });
+          } else {
+            setTimeout(openGate, 1200);
+          }
+        });
+      });
     }
 
     document.addEventListener("visibilitychange", () => {
