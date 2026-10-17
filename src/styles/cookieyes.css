@@ -223,6 +223,13 @@ body:has(.cky-preference-center[aria-hidden='false']) {
   background-color: var(--cky-live-y) !important;
 }
 
+/* Clear mobile bottom dock (.mbar, 62px) */
+@media (max-width: 760px) {
+  .cky-revisit-bottom-left {
+    bottom: 65px !important;
+  }
+}
+
 /* —— Hide CookieYes branding —— */
 [data-cky-tag='powered-by'],
 [data-cky-tag='detail-powered-by'] {
