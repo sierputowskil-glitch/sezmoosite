@@ -21,7 +21,7 @@
   "YkWCkew6OGg": "https://cdn.sezmoo.com/video/yt/YkWCkew6OGg__showreel.mp4",
   "Z-KB8adO_Wk": "https://cdn.sezmoo.com/video/yt/Z-KB8adO_Wk__baltic-towers.mp4",
   "bCxvqDc8HYs": "https://cdn.sezmoo.com/video/yt/bCxvqDc8HYs__doraco-dron.mp4",
-  "b_MB9qpw6jE": "https://cdn.sezmoo.com/video/yt/b_MB9qpw6jE__zespol.mp4",
+  "b_MB9qpw6jE": "/assets/video/yt/b_MB9qpw6jE__zespol.mp4",
   "c_5toy1IhIs": "https://cdn.sezmoo.com/video/yt/c_5toy1IhIs__baltic-towers-load.mp4",
   "eBcPwtZ0eOk": "https://cdn.sezmoo.com/video/yt/eBcPwtZ0eOk__baltic-towers-rekrutacja.mp4",
   "foNjF4rmI6A": "https://cdn.sezmoo.com/video/yt/foNjF4rmI6A__gaja-park.mp4",

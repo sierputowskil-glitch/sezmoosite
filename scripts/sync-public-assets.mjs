@@ -25,10 +25,11 @@ const MEDIA_EXT =
 /** Lazy public-URL scripts (not Vite-bundled). */
 const PUBLIC_JS = new Set(['js/flowing-background.js', 'js/lenis.min.js']);
 
-/** Short hero loops shipped on Pages (not Hostido). */
+/** Homepage MP4s shipped on Pages (same-origin; CDN Imunify ORB breaks autoplay). */
 const PUBLIC_SHOWREEL_MP4 = new Set([
   'video/showreel-16s.mp4',
   'video/showreel-720-16s.mp4',
+  'video/yt/b_MB9qpw6jE__zespol.mp4',
 ]);
 
 /** Top-level dirs / files never copied. */

@@ -175,6 +175,11 @@ async function processOne(item) {
   return entry;
 }
 
+/** Homepage clips shipped on Pages (same-origin) — keep map off Hostido for these ids. */
+const PAGES_LOCAL_MP4 = {
+  b_MB9qpw6jE: '/assets/video/yt/b_MB9qpw6jE__zespol.mp4',
+};
+
 /** Replace only `sez.cdnVideoMap = {…}` in assets/js/cdn-video-map.js (keep mount helpers). */
 function regenerateCdnVideoMap() {
   const mapPath = join(ROOT, 'assets/js/cdn-video-map.js');
@@ -184,8 +189,11 @@ function regenerateCdnVideoMap() {
   }
   const lines = Object.keys(manifest)
     .sort()
-    .filter((id) => manifest[id]?.ok && manifest[id]?.cdn)
-    .map((id) => `  ${JSON.stringify(id)}: ${JSON.stringify(manifest[id].cdn)}`);
+    .filter((id) => manifest[id]?.ok && (manifest[id]?.cdn || PAGES_LOCAL_MP4[id]))
+    .map((id) => {
+      const url = PAGES_LOCAL_MP4[id] || manifest[id].cdn;
+      return `  ${JSON.stringify(id)}: ${JSON.stringify(url)}`;
+    });
   const existing = readFileSync(mapPath, 'utf8');
   const mapMatch = existing.match(/sez\.cdnVideoMap\s*=\s*\{[\s\S]*?\n  \};/);
   if (!mapMatch) {

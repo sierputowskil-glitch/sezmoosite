@@ -285,7 +285,9 @@
     "path": "video/yt/b_MB9qpw6jE__zespol.mp4",
     "cdn": "https://cdn.sezmoo.com/video/yt/b_MB9qpw6jE__zespol.mp4",
     "ok": true,
-    "bytes": 5754825
+    "bytes": 5754825,
+    "pages": "/assets/video/yt/b_MB9qpw6jE__zespol.mp4",
+    "note": "Homepage studio/team clip also shipped on Pages (Imunify ORB on CDN)"
   },
   "kCAxex9-oN4": {
     "id": "kCAxex9-oN4",

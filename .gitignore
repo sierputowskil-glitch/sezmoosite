@@ -88,6 +88,7 @@ dist/
 /assets/video/**/*.mp4
 !/assets/video/showreel-16s.mp4
 !/assets/video/showreel-720-16s.mp4
+!/assets/video/yt/b_MB9qpw6jE__zespol.mp4
 /assets/video/yt/.tmp_*
 /assets/video/yt/posters/.check-*
 /assets/video/yt/download-report.json
