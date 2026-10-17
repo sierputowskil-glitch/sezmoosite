@@ -49,8 +49,19 @@
 
     let attached = false;
     let gateOpen = false;
-    const reveal = () => wrap.classList.add("is-playing");
+    // Mobile: keep poster opaque until gesture — video opacity:1 covers the poster and
+    // drops it as LCP, so late CookieYes text becomes the LCP element (PSI ~6s).
+    let allowReveal = fine || posterOnly;
+    const reveal = () => {
+      if (!allowReveal) return;
+      wrap.classList.add("is-playing");
+    };
     const unreveal = () => wrap.classList.remove("is-playing");
+    const unlockReveal = () => {
+      if (allowReveal) return;
+      allowReveal = true;
+      if (attached && !video.paused) reveal();
+    };
 
     const tryPlay = () => {
       if (!attached) return;
@@ -64,6 +75,7 @@
       if (play && typeof play.then === "function") {
         play.then(reveal).catch(() => {
           const unlock = () => {
+            unlockReveal();
             video.play().then(reveal).catch(() => {});
             window.removeEventListener("touchstart", unlock);
             window.removeEventListener("click", unlock);
@@ -158,6 +170,11 @@
     } else {
       // Mobile: after LCP + idle so lazy images below hero can claim bandwidth first
       // (handoff: early showreel download starves work/team media).
+      // Buffer under the poster; fade-in only after scroll/tap (or 8s) so CMP can't steal LCP.
+      window.addEventListener("scroll", unlockReveal, { once: true, passive: true });
+      window.addEventListener("touchstart", unlockReveal, { once: true, passive: true });
+      window.addEventListener("keydown", unlockReveal, { once: true });
+      setTimeout(unlockReveal, 8000);
       afterLcp(() => {
         afterPoster(() => {
           if ("requestIdleCallback" in window) {

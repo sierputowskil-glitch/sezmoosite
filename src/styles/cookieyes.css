@@ -36,6 +36,22 @@
   color: var(--cky-live-text) !important;
 }
 
+/*
+ * Keep CMP paint area below full-bleed hero poster (~viewport) so a late
+ * banner cannot win LCP over img.hero__poster on mobile lab / CrUX.
+ */
+@media (max-width: 760px) {
+  .cky-consent-container .cky-consent-bar,
+  .cky-consent-container .cky-box {
+    max-width: min(100vw - 24px, 420px) !important;
+  }
+  .cky-notice-des,
+  .cky-notice-des p {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+}
+
 .cky-title,
 .cky-notice .cky-title {
   color: var(--cky-live-text) !important;

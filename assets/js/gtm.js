@@ -1,7 +1,12 @@
 /**
  * Idle-load GTM when BaseLayout sets window.__SEZMOO__.gtmId (prod CI only).
- * Wait until after LCP so CookieYes (loaded via GTM) is not the LCP element —
- * that alone was collapsing desktop PSI (CMP text @ ~8s).
+ *
+ * CookieYes | CMP fires on Consent Initialization as soon as gtm.js boots.
+ * LCP keeps updating until the first user input — so loading GTM on the *first*
+ * LCP entry still lets the CMP banner become the final LCP (lab ~6s).
+ *
+ * Wait until LCP has been stable, then boot GTM. Consent still appears within
+ * a hard cap so the banner is not deferred indefinitely.
  */
 (function () {
   var cfg = window.__SEZMOO__ || {};
@@ -9,6 +14,9 @@
   if (!GTM_ID) return;
 
   var loaded = false;
+  var SETTLE_MS = 2000;
+  var MIN_MS = 2500;
+  var MAX_MS = 7000;
 
   function loadGtm() {
     if (loaded) return;
@@ -23,48 +31,63 @@
     f.parentNode.insertBefore(j, f);
   }
 
-  function afterQuiet(cb) {
-    if ('requestIdleCallback' in window) requestIdleCallback(cb, { timeout: 2500 });
-    else setTimeout(cb, 1800);
+  function elapsed() {
+    var start = performance.timing ? performance.timing.navigationStart : Date.now();
+    return Date.now() - start;
   }
 
-  function scheduleAfterLcp() {
+  function scheduleLoad() {
+    var waitMin = Math.max(0, MIN_MS - elapsed());
+    var run = function () {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGtm, { timeout: 2000 });
+      } else {
+        setTimeout(loadGtm, 400);
+      }
+    };
+    if (waitMin > 0) setTimeout(run, waitMin);
+    else run();
+  }
+
+  function arm() {
     var settled = false;
+    var settleTimer = null;
     var finish = function () {
       if (settled) return;
       settled = true;
-      // One more frame so the real LCP candidate can paint before CMP mounts.
-      requestAnimationFrame(function () {
-        afterQuiet(loadGtm);
-      });
+      if (settleTimer) clearTimeout(settleTimer);
+      try {
+        if (po) po.disconnect();
+      } catch (_e) {}
+      scheduleLoad();
     };
 
+    var bump = function () {
+      if (settled) return;
+      if (settleTimer) clearTimeout(settleTimer);
+      settleTimer = setTimeout(finish, SETTLE_MS);
+    };
+
+    var po = null;
     try {
-      var po = new PerformanceObserver(function (list) {
-        if (list.getEntries().length) {
-          try {
-            po.disconnect();
-          } catch (_e) {}
-          finish();
-        }
+      po = new PerformanceObserver(function (list) {
+        if (list.getEntries().length) bump();
       });
       po.observe({ type: 'largest-contentful-paint', buffered: true });
+      // Buffered entries may already exist — start settle clock.
+      bump();
     } catch (_e) {
       finish();
       return;
     }
 
-    // Consent must still appear; never wait forever if LCP never fires.
-    window.addEventListener(
-      'load',
-      function () {
-        setTimeout(finish, 3500);
-      },
-      { once: true }
-    );
-    setTimeout(finish, 6000);
+    // Hard cap: CMP must still show for consent UX / compliance.
+    setTimeout(finish, MAX_MS);
   }
 
-  if (document.readyState === 'complete') scheduleAfterLcp();
-  else window.addEventListener('load', scheduleAfterLcp, { once: true });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', arm, { once: true });
+  } else {
+    arm();
+  }
 })();
