@@ -31,11 +31,9 @@ toc:
     label: "Kiedy warto odświeżyć istniejące logo"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dobre logo nie ma po prostu dobrze wyglądać. Ma działać w praktyce: na stronie, w social mediach, na materiałach sprzedażowych, w reklamie zewnętrznej, w prezentacji dla inwestora i na stopce maila handlowca. To różnica, którą widać szczególnie wtedy, gdy firma zaczyna rosnąć i potrzebuje identyfikacji, która nadąża za biznesem, a nie go spowalnia.
 
-<h2 id="projekt-logo-dla-firmy-to-decyzja-biznesowa" class="reveal">Projekt logo dla firmy to decyzja biznesowa</h2>
+## Projekt logo dla firmy to decyzja biznesowa {#projekt-logo-dla-firmy-to-decyzja-biznesowa}
 
 Wiele firm zaczyna od myślenia: potrzebujemy czegoś estetycznego. To zrozumiałe, ale zbyt wąskie. Logo ma znaczenie nie dlatego, że jest ozdobą, tylko dlatego, że porządkuje komunikację marki i ułatwia jej zapamiętanie.
 
@@ -43,7 +41,7 @@ Jeżeli działasz w konkurencyjnej branży, klient bardzo rzadko analizuje każd
 
 To nie znaczy, że samo logo sprzeda usługę. Nie sprzeda. Ale może mocno pomóc albo mocno przeszkodzić. Dobrze zaprojektowany znak wzmacnia wiarygodność i skraca dystans. Słaby – obniża zaufanie jeszcze przed pierwszym kontaktem z handlowcem.
 
-<h2 id="jak-wyglada-dobry-projekt-logo-dla-firmy" class="reveal">Jak wygląda dobry projekt logo dla firmy</h2>
+## Jak wygląda dobry projekt logo dla firmy {#jak-wyglada-dobry-projekt-logo-dla-firmy}
 
 Dobry znak jest czytelny, charakterystyczny i dopasowany do realiów marki. Brzmi prosto, ale tu właśnie pojawia się najwięcej błędów. Firmy często chcą zmieścić w logo zbyt wiele: historię marki, wszystkie wartości, branżę, lokalność, aspiracje i jeszcze „efekt wow”. W praktyce kończy się to znakiem przeciążonym i trudnym w użyciu.
 
@@ -57,7 +55,7 @@ Wiele znaków wygląda dobrze na ekranie projektanta, ale słabo radzi sobie w r
 
 To szczególnie ważne w firmach, które prowadzą działania wielokanałowe. Jeśli marka korzysta z wideo, materiałów reklamowych, [landing page’y](/uslugi-marketingowe/strony-internetowe-i-landing-page/), social mediów i kampanii sprzedażowych, logo musi być gotowe do pracy w różnych środowiskach. Inaczej zespół zaczyna obchodzić problem prowizorką, a spójność marki szybko się rozjeżdża.
 
-<h2 id="od-czego-zaczac-zanim-powstanie-logo" class="reveal">Od czego zacząć, zanim powstanie logo</h2>
+## Od czego zacząć, zanim powstanie logo {#od-czego-zaczac-zanim-powstanie-logo}
 
 Najgorszy scenariusz? Projektowanie znaku bez odpowiedzi na podstawowe pytania o markę. Wtedy rozmowa szybko schodzi na poziom: ten kolor mi się podoba, ta czcionka nie. To za mało, jeśli logo ma wspierać biznes.
 
@@ -71,7 +69,7 @@ Dobry brief nie jest formalnością. To narzędzie, które skraca drogę do traf
 
 To ważne, bo czasem klient mówi: chcemy wyglądać nowocześnie, a po chwili pokazuje przykłady bardzo zachowawcze. Albo deklaruje odwagę, ale boi się prostych, mocnych rozwiązań. Im lepiej uporządkowane założenia, tym mniejsze ryzyko, że projekt będzie estetyczny, ale nietrafiony.
 
-<h2 id="najczestsze-bledy-przy-projektowaniu-logo" class="reveal">Najczęstsze błędy przy projektowaniu logo</h2>
+## Najczęstsze błędy przy projektowaniu logo {#najczestsze-bledy-przy-projektowaniu-logo}
 
 Jednym z najpopularniejszych problemów jest pogoń za trendami. To, że dziś modne są określone gradienty, geometryczne sygnety czy minimalistyczne liternictwo, nie znaczy jeszcze, że będą dobre dla Twojej marki. Trend może pomóc, ale nie może zastąpić sensu.
 
@@ -79,7 +77,7 @@ Drugim błędem jest projektowanie wyłącznie pod własny gust. Właściciel fi
 
 Trzeci problem to brak myślenia systemowego. Sam znak [nie załatwia marki](/dlaczego-twoja-firma-potrzebuje-spojnego-brandingu/). Jeśli nie idzie za nim spójna typografia, kolorystyka, zasady użycia i kierunek komunikacyjny, szybko robi się bałagan. Dlatego w praktyce najlepsze efekty daje nie pojedynczy plik z logo, tylko przemyślana [identyfikacja wizualna](/uslugi-marketingowe/identyfikacja-wizualna/), którą da się wdrożyć w działaniach marketingowych i sprzedażowych.
 
-<h2 id="ile-powinien-kosztowac-projekt-logo-dla-firmy" class="reveal">Ile powinien kosztować projekt logo dla firmy</h2>
+## Ile powinien kosztować projekt logo dla firmy {#ile-powinien-kosztowac-projekt-logo-dla-firmy}
 
 To jedno z najczęściej zadawanych pytań i uczciwa odpowiedź brzmi: to zależy. Nie tylko od samego wykonania, ale od zakresu pracy, poziomu analizy i tego, czy mówimy o samym znaku, czy o pełnym systemie identyfikacji.
 
@@ -87,7 +85,7 @@ Najtańsze rozwiązania zwykle kuszą szybkością, ale często kończą się do
 
 Z drugiej strony nie każda marka potrzebuje od razu rozbudowanego brandbooka na kilkadziesiąt stron. Dla części firm wystarczy dobrze przemyślany znak z podstawowym zestawem zasad użycia i wersji do codziennej pracy. Kluczowe jest dopasowanie zakresu do etapu rozwoju biznesu i planów na najbliższe lata.
 
-<h2 id="kiedy-warto-odswiezyc-istniejace-logo" class="reveal">Kiedy warto odświeżyć istniejące logo</h2>
+## Kiedy warto odświeżyć istniejące logo {#kiedy-warto-odswiezyc-istniejace-logo}
 
 Nie każda zmiana musi oznaczać rewolucję. Czasem logo ma dobre fundamenty, ale wymaga uproszczenia, poprawy proporcji, nowej typografii albo lepszych wersji cyfrowych. To częsty przypadek w firmach, które rozwijały się szybciej niż ich komunikacja wizualna.
 
@@ -95,7 +93,7 @@ Sygnałem do zmian bywa też rozszerzenie oferty, wejście na nowy rynek albo re
 
 Dobra decyzja nie polega na tym, żeby zmienić wszystko dla samej zmiany. Polega na ocenie, czy obecne logo jeszcze pracuje na rzecz firmy, czy już tylko zajmuje miejsce.
 
-<h2 id="logo-powinno-pracowac-razem-z-marketingiem" class="reveal">Logo powinno pracować razem z marketingiem</h2>
+## Logo powinno pracować razem z marketingiem {#logo-powinno-pracowac-razem-z-marketingiem}
 
 Najlepsze efekty pojawiają się wtedy, gdy projekt logo dla firmy nie jest oderwany od reszty działań. Znak musi współgrać z komunikacją sprzedażową, obecnością w digitalu, materiałami employer brandingowymi, kreacjami reklamowymi i stroną internetową. W przeciwnym razie nawet dobry projekt traci siłę, bo funkcjonuje w chaosie.
 

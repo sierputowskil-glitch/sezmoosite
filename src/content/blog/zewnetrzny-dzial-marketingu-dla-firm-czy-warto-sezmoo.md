@@ -31,11 +31,9 @@ toc:
     label: "Jak rozpoznać dobrego partnera"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dla wielu organizacji największym wyzwaniem nie jest już samo „robienie marketingu”, tylko spięcie wszystkiego w jedną, sprawną całość. Strategia bez egzekucji nie sprzedaje. Estetyczne materiały bez celu biznesowego też nie. Potrzebny jest zespół, który rozumie markę, potrafi szybko produkować treści i jednocześnie patrzy na wynik.
 
-<h2 id="czym-naprawde-jest-zewnetrzny-dzial-marketingu-dla-firm" class="reveal">Czym naprawdę jest zewnętrzny dział marketingu dla firm</h2>
+## Czym naprawdę jest zewnętrzny dział marketingu dla firm {#czym-naprawde-jest-zewnetrzny-dzial-marketingu-dla-firm}
 
 To nie jest pojedyncza usługa ani doraźne wsparcie do jednego projektu. Zewnętrzny dział marketingu dla firm działa jak przedłużenie wewnętrznego zespołu albo jego pełna alternatywa. Zamiast zatrudniać osobno stratega, grafika, social media managera, specjalistę od kampanii, montażystę, fotografa czy web designera, firma dostaje dostęp do gotowego zaplecza kompetencji.
 
@@ -43,7 +41,7 @@ W praktyce chodzi o jeden partnera, który bierze odpowiedzialność za plan, kr
 
 Model zewnętrznego działu porządkuje ten proces. Daje spójność komunikacji i skraca drogę od briefu do gotowego działania.
 
-<h2 id="kiedy-taki-model-ma-najwiecej-sensu" class="reveal">Kiedy taki model ma najwięcej sensu</h2>
+## Kiedy taki model ma najwięcej sensu {#kiedy-taki-model-ma-najwiecej-sensu}
 
 Najczęściej wtedy, gdy firma rośnie szybciej niż jej zasoby marketingowe. Właściciel lub menedżer widzi, że potrzeby się mnożą: trzeba prowadzić [social media](/uslugi-marketingowe/obsluga-social-media/), przygotowywać kampanie sprzedażowe, aktualizować stronę, tworzyć materiały dla handlowców, obsługiwać działania employer brandingowe i jeszcze [dokumentować eventy](/uslugi-marketingowe/organizacja-eventow/) czy realizacje. Jedna osoba w marketingu nie udźwignie tego jakościowo, a budowa pełnego działu wewnętrznego to wysoki koszt i długi proces.
 
@@ -51,7 +49,7 @@ Drugi scenariusz to moment, w którym firma ma ludzi wewnątrz, ale brakuje jej 
 
 Trzeci przypadek jest bardzo praktyczny: marka potrzebuje działać szybciej. Rynek nie czeka, sezon sprzedażowy nie przesunie się o miesiąc, a kampania rekrutacyjna nie może wystartować „jak będzie gotowe”. Firmy wybierają ten model, kiedy chcą skrócić czas wdrożenia i przestać gasić pożary.
 
-<h2 id="co-firma-realnie-zyskuje" class="reveal">Co firma realnie zyskuje</h2>
+## Co firma realnie zyskuje {#co-firma-realnie-zyskuje}
 
 Największą przewagą nie jest sama oszczędność, choć ta też ma znaczenie. Chodzi o dostęp do kompetencji, których trudno zbudować wewnętrznie bez dużych inwestycji. Z dnia na dzień firma może korzystać z pracy ludzi od strategii, kreacji, wideo, designu, digitalu i kampanii płatnych, bez prowadzenia kilku rekrutacji i bez ryzyka, że cały plan zatrzyma się na jednym wakacie.
 
@@ -59,19 +57,19 @@ Druga korzyść to świeże spojrzenie. Zespół zewnętrzny nie siedzi w organi
 
 Trzecia sprawa to tempo. Jeśli po jednej stronie jest strategia, po drugiej produkcja, a po trzeciej media i egzekucja, projekty ruszają szybciej. Nie trzeba tłumaczyć briefu pięciu różnym dostawcom. Nie trzeba też za każdym razem zaczynać od zera, bo partner zna już firmę, cele i standard komunikacji.
 
-<h2 id="gdzie-firmy-najczesciej-traca-pieniadze-bez-takiego-wsparcia" class="reveal">Gdzie firmy najczęściej tracą pieniądze bez takiego wsparcia</h2>
+## Gdzie firmy najczęściej tracą pieniądze bez takiego wsparcia {#gdzie-firmy-najczesciej-traca-pieniadze-bez-takiego-wsparcia}
 
 Nie zawsze widać to w budżecie od razu. Koszt rozproszonego marketingu często chowa się w czasie i w nieskuteczności. Firma płaci za kampanię, ale kreacja jest przeciętna. Inwestuje w stronę, ale bez sensownej ścieżki użytkownika. Zleca wideo, które dobrze wygląda, ale niczego nie sprzedaje. Albo przygotowuje działania rekrutacyjne, które nie budują żadnego wyraźnego obrazu pracodawcy.
 
 To nie są drobne potknięcia. To efekt braku jednego ośrodka odpowiedzialności. Gdy każdy robi swój kawałek, ale nikt nie patrzy całościowo, marketing zaczyna kosztować więcej, niż powinien. Nie tylko finansowo. Także operacyjnie i wizerunkowo.
 
-<h2 id="zewnetrzny-dzial-marketingu-dla-firm-a-wewnetrzny-zespol" class="reveal">Zewnętrzny dział marketingu dla firm a wewnętrzny zespół</h2>
+## Zewnętrzny dział marketingu dla firm a wewnętrzny zespół {#zewnetrzny-dzial-marketingu-dla-firm-a-wewnetrzny-zespol}
 
 To nie jest pojedynek pod tytułem „jedno albo drugie”. W wielu firmach najlepszy model to połączenie obu rozwiązań. Wewnętrzny marketing zna organizację od środka, rozumie procesy, ludzi, priorytety zarządu i codzienne realia sprzedaży. Zewnętrzny partner daje skalę, specjalizacje i moce produkcyjne, których nie opłaca się trzymać na etacie.
 
 Jeśli jednak firma stoi przed wyborem od zera, warto spojrzeć uczciwie na liczby i potrzeby. Jeden etat nie zastąpi całego zespołu. A cały zespół to nie tylko pensje, ale też rekrutacja, wdrożenie, zarządzanie, urlopy, rotacja i ograniczenia kompetencyjne. Zewnętrzny model daje większą elastyczność, ale wymaga dobrej komunikacji i jasnych priorytetów. To nie działa na zasadzie „zróbcie nam marketing”. Działa wtedy, gdy po obu stronach jest konkret.
 
-<h2 id="jak-rozpoznac-dobrego-partnera" class="reveal">Jak rozpoznać dobrego partnera</h2>
+## Jak rozpoznać dobrego partnera {#jak-rozpoznac-dobrego-partnera}
 
 Nie po ładnej prezentacji. Dobrego partnera poznaje się po tym, czy potrafi połączyć kreatywność z odpowiedzialnością za wynik. Jeśli rozmowa kończy się wyłącznie na estetyce, jest ryzyko, że biznesowy cel zejdzie na dalszy plan. Marketing ma wyglądać dobrze, ale przede wszystkim ma działać.
 
@@ -79,7 +77,7 @@ Warto zwrócić uwagę, czy zespół potrafi obsłużyć różne formaty i kana�
 
 Znaczenie ma też sposób pracy. Czy partner umie przełożyć cele na harmonogram? Czy działa terminowo? Czy potrafi zaproponować rozwiązanie, a nie tylko czeka na szczegółowy brief? Dobra współpraca nie polega na tym, że klient zarządza agencją krok po kroku. Polega na tym, że ma po drugiej stronie zespół, który bierze temat i dowozi.
 
-<h2 id="jak-wyglada-dobra-wspolpraca-w-praktyce" class="reveal">Jak wygląda dobra współpraca w praktyce</h2>
+## Jak wygląda dobra współpraca w praktyce {#jak-wyglada-dobra-wspolpraca-w-praktyce}
 
 Na początku potrzebna jest diagnoza. Nie tylko tego, czego „brakuje”, ale też co już działa i czego nie warto ruszać. Czasem firma potrzebuje pełnej obsługi, a czasem jedynie mocnego wsparcia w kilku kluczowych obszarach, na przykład w kreacji, content production i kampaniach performance.
 
@@ -87,7 +85,7 @@ Potem przychodzi etap uporządkowania. Cele, grupy odbiorców, priorytety sprzed
 
 Dopiero na tej bazie buduje się rytm współpracy: plan działań, produkcję materiałów, publikacje, kampanie, aktualizacje strony czy obsługę konkretnych projektów. W dobrze ustawionym modelu klient nie musi codziennie pilnować szczegółów. Ma wiedzieć, co się dzieje, mieć wpływ na kierunek i widzieć efekty. Reszta powinna dziać się sprawnie.
 
-<h2 id="dlaczego-model-full-service-wygrywa-z-ukladaniem-wszystkiego" class="reveal">Dlaczego model full-service wygrywa z układaniem wszystkiego osobno</h2>
+## Dlaczego model full-service wygrywa z układaniem wszystkiego osobno {#dlaczego-model-full-service-wygrywa-z-ukladaniem-wszystkiego}
 
 Bo biznes nie potrzebuje dziś kolejnych kontaktów do podwykonawców. Potrzebuje partnera, który rozumie całość. Jeśli marka prowadzi kampanię, to od razu potrzebuje idei, key visuala, wideo, wersji do social mediów, wsparcia płatnego ruchu, materiałów dla handlowców i często jeszcze landing page’a. Rozbijanie tego na kilka niezależnych ekip rzadko kończy się szybciej albo taniej.
 
@@ -95,7 +93,7 @@ Model full-service daje coś jeszcze – odpowiedzialność za efekt końcowy. N
 
 Właśnie dlatego firmy coraz częściej szukają nie „agencji od czegoś”, tylko partnera do stałej obsługi. Tak działa też SEZMOO: łączy strategię, kreację i produkcję w jednym modelu, dzięki czemu klient nie musi wybierać między jakością a tempem działania.
 
-<h2 id="czy-to-rozwiazanie-dla-kazdej-firmy" class="reveal">Czy to rozwiązanie dla każdej firmy</h2>
+## Czy to rozwiązanie dla każdej firmy {#czy-to-rozwiazanie-dla-kazdej-firmy}
 
 Nie zawsze. Jeśli organizacja ma rozbudowany, doświadczony dział marketingu i potrzebuje tylko pojedynczych usług, pełny model zewnętrzny może być zwyczajnie zbyt szeroki. Podobnie wtedy, gdy firma nie ma gotowości do regularnej współpracy, szybkich decyzji i jasnego określania priorytetów. Nawet najlepszy partner nie naprawi wewnętrznego chaosu samą obecnością.
 

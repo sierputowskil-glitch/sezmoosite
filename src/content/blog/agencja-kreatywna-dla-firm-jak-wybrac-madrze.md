@@ -31,11 +31,9 @@ toc:
     label: "Gdzie firmy najczęściej tracą czas i budżet"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 To ważna różnica. Jedna rzecz to zamówić logo, rolkę albo landing page. Druga to zbudować system komunikacji, który wspiera sprzedaż, rekrutację i rozpoznawalność marki jednocześnie. Firmy, które rosną, zwykle nie potrzebują kolejnego podwykonawcy od jednego zadania. Potrzebują partnera, który rozumie biznes, działa sprawnie i bierze odpowiedzialność za efekt.
 
-<h2 id="czym-dzis-jest-agencja-kreatywna-dla-firm" class="reveal">Czym dziś jest agencja kreatywna dla firm</h2>
+## Czym dziś jest agencja kreatywna dla firm {#czym-dzis-jest-agencja-kreatywna-dla-firm}
 
 Jeszcze kilka lat temu wiele osób kojarzyło agencję kreatywną głównie z hasłem reklamowym, projektem graficznym albo kampanią wizerunkową. Dziś zakres oczekiwań jest dużo szerszy. Marka musi wyglądać dobrze, ale to za mało. Materiały mają sprzedawać, przyciągać uwagę, wspierać handlowców, budować zaufanie i działać w wielu kanałach naraz.
 
@@ -43,7 +41,7 @@ Dlatego nowoczesna agencja kreatywna dla firm łączy kilka kompetencji w jednym
 
 Z perspektywy firmy liczy się nie sam zakres usług, ale to, czy wszystkie elementy są spójne i czy da się nimi zarządzać bez angażowania pięciu różnych partnerów. Im więcej podmiotów na pokładzie, tym łatwiej o opóźnienia, rozjazdy komunikacyjne i rozmytą odpowiedzialność.
 
-<h2 id="kiedy-wspolpraca-z-agencja-naprawde-ma-sens" class="reveal">Kiedy współpraca z agencją naprawdę ma sens</h2>
+## Kiedy współpraca z agencją naprawdę ma sens {#kiedy-wspolpraca-z-agencja-naprawde-ma-sens}
 
 Nie każda firma potrzebuje od razu pełnej obsługi. Czasem wystarczy wsparcie projektowe przy nowej stronie albo kampanii produktowej. Są jednak sytuacje, w których agencja staje się realnym odciążeniem i przyspieszeniem.
 
@@ -51,7 +49,7 @@ Najczęściej dzieje się tak wtedy, gdy firma rośnie szybciej niż jej zaplecz
 
 Współpraca z agencją ma też sens, gdy marka przechodzi zmianę. Rebranding, wejście na nowy rynek, intensyfikacja sprzedaży, kampania rekrutacyjna czy otwarcie nowej inwestycji wymagają szybkiego spięcia wielu elementów. W takich momentach potrzebny jest partner, który nie zapyta wyłącznie o format pliku, ale też o cel biznesowy i priorytet działania.
 
-<h2 id="na-co-zwrocic-uwage-przy-wyborze-partnera" class="reveal">Na co zwrócić uwagę przy wyborze partnera</h2>
+## Na co zwrócić uwagę przy wyborze partnera {#na-co-zwrocic-uwage-przy-wyborze-partnera}
 
 Największy błąd? Wybór wyłącznie na podstawie estetyki portfolio. Ładne projekty są ważne, ale nie wystarczą. Dobra agencja musi rozumieć, po co dany materiał powstaje i jakie ma spełniać zadanie.
 
@@ -61,7 +59,7 @@ Warto też przyjrzeć się modelowi pracy. Czy agencja tylko odbiera brief i ods
 
 Istotne są również kompetencje produkcyjne. Jeśli agencja deklaruje kompleksowość, powinna umieć przejść od koncepcji do realizacji bez chaosu. Dotyczy to szczególnie treści wizualnych. Produkcja wideo, reelsów, sesji zdjęciowych, animacji czy materiałów do kampanii wymaga nie tylko kreatywności, ale też organizacji, terminowości i technicznej precyzji.
 
-<h2 id="full-service-czy-wyspecjalizowany-wykonawca" class="reveal">Full service czy wyspecjalizowany wykonawca</h2>
+## Full service czy wyspecjalizowany wykonawca {#full-service-czy-wyspecjalizowany-wykonawca}
 
 Tu nie ma jednej odpowiedzi dla wszystkich. Wszystko zależy od skali potrzeb i sposobu działania firmy.
 
@@ -71,7 +69,7 @@ Jeśli jednak zależy Ci na wygodzie, szybkości i spójności, lepiej sprawdza 
 
 W praktyce coraz więcej marek wybiera agencję jako zewnętrzny dział marketingu. To rozsądny wariant wtedy, gdy nie chcesz budować dużego zespołu in-house, ale oczekujesz dostępu do różnych specjalistów – od strategii i kreacji po produkcję i performance.
 
-<h2 id="jak-agencja-kreatywna-wplywa-na-sprzedaz" class="reveal">Jak agencja kreatywna wpływa na sprzedaż</h2>
+## Jak agencja kreatywna wpływa na sprzedaż {#jak-agencja-kreatywna-wplywa-na-sprzedaz}
 
 To temat, który warto nazwać wprost. Kreatywność nie jest celem samym w sobie. Ma pracować na wynik.
 
@@ -79,7 +77,7 @@ Dobra agencja wspiera sprzedaż na kilku poziomach. Najpierw porządkuje komunik
 
 To nie zawsze oznacza natychmiastowy wzrost leadów po tygodniu współpracy. Czasem efekt przychodzi szybciej, a czasem potrzebne jest uporządkowanie fundamentów. Jeśli marka ma niespójny wizerunek, słabe kreacje i przypadkową komunikację, najpierw trzeba to naprawić. Dopiero później łatwiej skalować kampanie i oczekiwać lepszych wyników sprzedażowych.
 
-<h2 id="gdzie-firmy-najczesciej-traca-czas-i-budzet" class="reveal">Gdzie firmy najczęściej tracą czas i budżet</h2>
+## Gdzie firmy najczęściej tracą czas i budżet {#gdzie-firmy-najczesciej-traca-czas-i-budzet}
 
 Najczęściej nie na samych działaniach, ale na rozproszeniu. Osobno grafik, osobno operator, osobno fotograf, osobno programista, osobno freelancer od reklam. Każdy robi swój fragment, ale nikt nie odpowiada za całość.
 
@@ -87,7 +85,7 @@ W takim modelu nawet dobre osoby nie gwarantują dobrego procesu. Pojawiają si�
 
 Dlatego firmy coraz częściej szukają partnera, który ogarnie więcej niż jeden obszar. Nie dlatego, że chcą mieć wszystko w jednym miejscu dla zasady. Chcą po prostu działać szybciej i bez operacyjnego chaosu.
 
-<h2 id="jak-wyglada-dobra-wspolpraca-w-praktyce" class="reveal">Jak wygląda dobra współpraca w praktyce</h2>
+## Jak wygląda dobra współpraca w praktyce {#jak-wyglada-dobra-wspolpraca-w-praktyce}
 
 Na początku potrzebna jest szczera diagnoza. Jakie są cele, gdzie marka ma dziś problem, jakie materiały już istnieją i czego realnie brakuje. Bez tego łatwo zamawiać działania, które wyglądają sensownie tylko na papierze.
 
@@ -95,7 +93,7 @@ Potem liczy się plan. Nie przeładowany prezentacją, tylko konkretny. Co robim
 
 W dalszym etapie najważniejsza jest egzekucja. Terminowość, jakość produkcji, szybki feedback i umiejętność reagowania, gdy zmienia się sytuacja. To właśnie tutaj widać, czy partner naprawdę wspiera biznes. W SEZMOO taki model współpracy opiera się na jednym założeniu – klient ma dostać nie tylko pomysł, ale gotowe rozwiązanie, które można od razu wdrożyć.
 
-<h2 id="czy-kazda-firma-potrzebuje-duzej-agencji" class="reveal">Czy każda firma potrzebuje dużej agencji</h2>
+## Czy każda firma potrzebuje dużej agencji {#czy-kazda-firma-potrzebuje-duzej-agencji}
 
 Niekoniecznie. Duża skala nie zawsze jest zaletą. Dla części firm lepszy będzie zespół zwinny, dostępny i nastawiony na szybkie działanie. Szczególnie jeśli projekty wymagają częstych zmian, krótkich terminów i stałego kontaktu.
 

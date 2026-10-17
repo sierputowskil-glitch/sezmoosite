@@ -31,11 +31,9 @@ toc:
     label: "Studio czy siedziba firmy"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dobrze zrobione zdjęcia zespołu porządkują komunikację marki. Pokazują ludzi stojących za usługą, skracają dystans i sprawiają, że firma przestaje być anonimowa. To szczególnie ważne w branżach, w których decyzja zakupowa opiera się na zaufaniu, kompetencjach i jakości współpracy, a nie wyłącznie na cenie.
 
-<h2 id="po-co-firmie-sesja-wizerunkowa-dla-zespolu" class="reveal">Po co firmie sesja wizerunkowa dla zespołu</h2>
+## Po co firmie sesja wizerunkowa dla zespołu {#po-co-firmie-sesja-wizerunkowa-dla-zespolu}
 
 Najprostsza odpowiedź brzmi: żeby wyglądać tak profesjonalnie, jak działa na co dzień. W praktyce wiele firm ma świetny produkt, dobry zespół i sensowną ofertę, ale wizualnie nadal komunikuje się zdjęciami sprzed kilku lat, przypadkowymi portretami z telefonów albo stockami. To psuje odbiór marki szybciej, niż się wydaje.
 
@@ -43,7 +41,7 @@ Sesja zespołowa pracuje na kilku poziomach jednocześnie. W sprzedaży buduje w
 
 Jest też jeszcze jeden aspekt – spójność. Jeśli handlowiec ma profesjonalne zdjęcie na LinkedInie, zarząd występuje w mediach z jednolitą oprawą, a zakładka zespołu na stronie wygląda nowocześnie, cała marka zyskuje na jakości. To detal, który wpływa na odbiór całości.
 
-<h2 id="kiedy-sesja-zdjeciowa-zespolu-naprawde-ma-sens" class="reveal">Kiedy sesja zdjęciowa zespołu naprawdę ma sens</h2>
+## Kiedy sesja zdjęciowa zespołu naprawdę ma sens {#kiedy-sesja-zdjeciowa-zespolu-naprawde-ma-sens}
 
 Nie każda firma potrzebuje od razu rozbudowanej produkcji z kilkoma planami zdjęciowymi. Ale są momenty, w których decyzja o sesji jest po prostu logiczna biznesowo.
 
@@ -51,7 +49,7 @@ Najczęściej dzieje się tak przy odświeżeniu strony internetowej, zmianie [i
 
 Warto też pomyśleć o sesji wtedy, gdy firma urosła. Jeśli zespół sprzed trzech lat wygląda już zupełnie inaczej, stare materiały przestają być aktualne. A nieaktualny wizerunek potrafi osłabić przekaz nawet wtedy, gdy oferta jest mocna.
 
-<h2 id="jak-wyglada-dobra-sesja-wizerunkowa-dla-zespolu" class="reveal">Jak wygląda dobra sesja wizerunkowa dla zespołu</h2>
+## Jak wygląda dobra sesja wizerunkowa dla zespołu {#jak-wyglada-dobra-sesja-wizerunkowa-dla-zespolu}
 
 Najlepsze sesje nie zaczynają się od ustawienia lamp, tylko od ustalenia celu. Inaczej fotografuje się kancelarię, inaczej software house, inaczej firmę produkcyjną, a jeszcze inaczej markę premium z sektora beauty czy nieruchomości. Zdjęcia muszą pasować do tego, jak chcecie być postrzegani i gdzie będą wykorzystywane.
 
@@ -59,7 +57,7 @@ Jeśli materiał ma pracować sprzedażowo, potrzebujecie ujęć, które pokazuj
 
 Dobra sesja zwykle łączy portrety indywidualne z ujęciami grupowymi oraz zdjęciami sytuacyjnymi. Same portrety są potrzebne, ale rzadko wystarczają. Marka wygląda pełniej wtedy, gdy oprócz twarzy pokazuje też kontekst – spotkanie zespołu, pracę przy projekcie, rozmowę z klientem, proces, przestrzeń biura lub produkcji.
 
-<h2 id="najczestszy-blad-ladne-zdjecia-bez-funkcji" class="reveal">Najczęstszy błąd: ładne zdjęcia bez funkcji</h2>
+## Najczęstszy błąd: ładne zdjęcia bez funkcji {#najczestszy-blad-ladne-zdjecia-bez-funkcji}
 
 Firmy czasem skupiają się wyłącznie na tym, żeby „było estetycznie”. Oczywiście estetyka ma znaczenie, ale sama atrakcyjność wizualna nie załatwia sprawy. Zdjęcia mają przede wszystkim działać.
 
@@ -67,7 +65,7 @@ Jeżeli portrety są efektowne, ale nie pasują do charakteru marki, powstaje zg
 
 Dlatego przed realizacją warto odpowiedzieć sobie na kilka prostych pytań: gdzie te zdjęcia będą używane, jaki mają budować odbiór i kto jest ich odbiorcą. To pozwala uniknąć produkcji, która dobrze wygląda tylko w folderze z plikami.
 
-<h2 id="przygotowanie-zespolu-ma-wieksze-znaczenie-niz-sie-wydaje" class="reveal">Przygotowanie zespołu ma większe znaczenie, niż się wydaje</h2>
+## Przygotowanie zespołu ma większe znaczenie, niż się wydaje {#przygotowanie-zespolu-ma-wieksze-znaczenie-niz-sie-wydaje}
 
 Nawet najlepszy fotograf nie naprawi chaosu organizacyjnego po stronie klienta. Jeśli sesja ma pójść sprawnie, zespół musi wiedzieć, po co jest robiona, jak będzie wyglądał dzień zdjęciowy i czego się od niego oczekuje.
 
@@ -75,7 +73,7 @@ W praktyce liczy się kilka rzeczy: spójny dress code, wcześniej ustalona kole
 
 Warto też zadbać o naturalność. Nie każdy pracownik czuje się swobodnie na sesji, dlatego scenariusz powinien być dopasowany do realiów firmy. Lepiej zrobić mniej póz, ale takich, które są wiarygodne, niż produkować serię sztucznych kadrów, których nikt później nie będzie chciał użyć.
 
-<h2 id="studio-czy-siedziba-firmy" class="reveal">Studio czy siedziba firmy</h2>
+## Studio czy siedziba firmy {#studio-czy-siedziba-firmy}
 
 To zależy od celu sesji. Studio daje pełną kontrolę nad światłem, tłem i powtarzalnością ujęć. Sprawdza się wtedy, gdy zależy wam na czystych portretach, spójnych kadrach dla całego zespołu i klasycznym, profesjonalnym efekcie.
 
@@ -83,7 +81,7 @@ Z kolei sesja w siedzibie firmy lepiej pokazuje kontekst i charakter organizacji
 
 Najlepszym rozwiązaniem bywa połączenie obu podejść. Kilka mocnych portretów studyjnych plus zdjęcia sytuacyjne w naturalnym środowisku dają materiał, który można wykorzystywać przez dłuższy czas i w różnych kanałach.
 
-<h2 id="jak-wykorzystac-zdjecia-zeby-nie-skonczyly-w-archiwum" class="reveal">Jak wykorzystać zdjęcia, żeby nie skończyły w archiwum</h2>
+## Jak wykorzystać zdjęcia, żeby nie skończyły w archiwum {#jak-wykorzystac-zdjecia-zeby-nie-skonczyly-w-archiwum}
 
 To jeden z najważniejszych etapów całego procesu. Sesja wizerunkowa dla zespołu powinna być zaplanowana nie tylko pod kątem realizacji, ale też późniejszego użycia. Inaczej łatwo wpaść w schemat: zrobimy zdjęcia, wrzucimy kilka na stronę i temat zamknięty.
 
@@ -91,7 +89,7 @@ Tymczasem dobrze przygotowany materiał można rozłożyć na wiele formatów. Z
 
 Jeśli sesja jest od początku projektowana pod konkretne zastosowania, rośnie jej realna wartość biznesowa. Właśnie dlatego tak dobrze działa współpraca z partnerem, który patrzy szerzej niż tylko przez pryzmat samego dnia zdjęciowego. W modelu pełnej obsługi, takim jak w SEZMOO, zdjęcia nie są oderwanym projektem, tylko elementem [większej komunikacji marki](/uslugi-marketingowe/).
 
-<h2 id="ile-kosztuje-i-od-czego-zalezy-budzet" class="reveal">Ile kosztuje i od czego zależy budżet</h2>
+## Ile kosztuje i od czego zależy budżet {#ile-kosztuje-i-od-czego-zalezy-budzet}
 
 Nie ma jednej stawki, która pasuje do każdej firmy. Budżet zależy od liczby osób, czasu trwania sesji, lokalizacji, stopnia produkcji, retuszu oraz zakresu materiału. Inaczej wycenia się szybkie portrety zarządu, a inaczej całodzienną realizację z kilkudziesięcioosobowym zespołem, kilkoma setami i zdjęciami sytuacyjnymi.
 
@@ -99,7 +97,7 @@ Warto patrzeć na koszt nie tylko przez pryzmat „ile za zdjęcia”, ale „na
 
 Oszczędzanie za wszelką cenę zwykle kończy się podwójną pracą. Tanie, przypadkowe zdjęcia szybko przestają spełniać swoją funkcję i trzeba je wymieniać. Lepiej zrobić materiał raz, ale tak, by był spójny, aktualny i gotowy do realnego użycia.
 
-<h2 id="jak-poznac-ze-sesja-byla-udana" class="reveal">Jak poznać, że sesja była udana</h2>
+## Jak poznać, że sesja była udana {#jak-poznac-ze-sesja-byla-udana}
 
 Nie tylko po tym, że zespół wygląda korzystnie. Udana sesja to taka, z której zdjęcia faktycznie trafiają do obiegu i wzmacniają markę. Jeśli handlowcy chętnie używają nowych portretów, dział marketingu ma z czego budować komunikację, a HR wykorzystuje materiał w rekrutacji, to znaczy, że projekt zadziałał.
 

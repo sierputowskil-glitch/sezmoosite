@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { remarkCustomHeadingId } from './src/lib/markdown/remark-custom-heading-id.ts';
+import { rehypeRevealHeadings } from './src/lib/markdown/rehype-reveal-headings.ts';
 
 /**
  * Env-aware site + base for prod (CF Pages) vs staging (GitHub Pages).
@@ -26,6 +28,10 @@ export default defineConfig({
     service: {
       entrypoint: 'astro/assets/services/sharp',
     },
+  },
+  markdown: {
+    remarkPlugins: [remarkCustomHeadingId],
+    rehypePlugins: [rehypeRevealHeadings],
   },
   vite: {
     server: {

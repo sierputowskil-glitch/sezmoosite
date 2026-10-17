@@ -31,11 +31,9 @@ toc:
     label: "Ustal proces od pomysłu do publikacji"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dla firmy Instagram nie powinien być katalogiem przypadkowych realizacji ani miejscem, które przypomina się zespołowi dopiero wtedy, gdy „trzeba coś wrzucić”. To kanał, w którym odbiorca szybko ocenia, czy marka zna swój fach, ma energię do działania i jest partnerem godnym zaufania. Plan pozwala budować ten obraz konsekwentnie, bez gaszenia komunikacyjnych pożarów pod koniec miesiąca.
 
-<h2 id="zacznij-od-celu-nie-od-formatu" class="reveal">Zacznij od celu, nie od formatu</h2>
+## Zacznij od celu, nie od formatu {#zacznij-od-celu-nie-od-formatu}
 
 Reels, karuzele, zdjęcia, stories – każdy z tych formatów może działać. Żaden nie jest jednak strategią sam w sobie. Zanim zespół zacznie wymyślać tematy, warto określić, jaki efekt biznesowy ma wspierać obecność marki na Instagramie w najbliższym kwartale.
 
@@ -43,7 +41,7 @@ Dla firmy usługowej celem może być więcej wartościowych zapytań ofertowych
 
 W praktyce dobrze jest ustalić jeden cel główny i dwa cele wspierające. Przykładowo: pozyskiwanie zapytań jako priorytet, budowanie eksperckości i wzmacnianie zaufania jako działania wspierające. Dzięki temu łatwiej ocenić, czy dany pomysł na post jest atrakcyjny tylko wizualnie, czy rzeczywiście przybliża markę do wyniku.
 
-<h2 id="plan-contentu-na-instagram-oparty-na-odbiorcy" class="reveal">Plan contentu na Instagram oparty na odbiorcy</h2>
+## Plan contentu na Instagram oparty na odbiorcy {#plan-contentu-na-instagram-oparty-na-odbiorcy}
 
 Menedżer marketingu, właściciel firmy, kandydat do pracy i klient końcowy nie zatrzymują się przy tych samych treściach z tych samych powodów. Dlatego opis grupy docelowej w stylu „kobiety i mężczyźni, 25-45 lat” nie wystarczy. Plan powinien wychodzić od realnych pytań, obaw i sytuacji zakupowych odbiorców.
 
@@ -53,7 +51,7 @@ Marka produktowa może mocniej pracować na emocji, użyciu produktu i społeczn
 
 Warto też nazwać bariery, które blokują decyzję. „To będzie za drogie”, „nie wiem, czy to działa w mojej branży”, „nie mam czasu wdrażać kolejnego rozwiązania” – takie wątpliwości są gotowymi tematami contentowymi. Dobra komunikacja nie omija oporu odbiorcy. Odpowiada na niego konkretem.
 
-<h2 id="zbuduj-filary-ktore-nie-wyczerpia-sie-po-tygodniu" class="reveal">Zbuduj filary, które nie wyczerpią się po tygodniu</h2>
+## Zbuduj filary, które nie wyczerpią się po tygodniu {#zbuduj-filary-ktore-nie-wyczerpia-sie-po-tygodniu}
 
 Największą wadą spontanicznej publikacji jest szybkie wyczerpanie pomysłów. Raz pokazujemy biuro, później zdjęcie produktu, potem grafikę z cytatem i znów wracamy do punktu wyjścia. Filary komunikacji rozwiązują ten problem, bo wyznaczają stałe obszary, które marka może rozwijać na wiele sposobów.
 
@@ -67,7 +65,7 @@ Dla większości firm dobrze działają następujące kierunki:
 
 Proporcje zależą od branży i etapu rozwoju marki. Firma z małą rozpoznawalnością potrzebuje więcej treści, które wyjaśniają, kim jest i dlaczego warto jej zaufać. Marka z silną społecznością może częściej publikować materiały angażujące i sprzedażowe. Ważne, aby konto nie było jednostronne. Sama oferta męczy, a sama inspiracja nie prowadzi do zapytań.
 
-<h2 id="zaplanuj-rytm-publikacji-ktory-da-sie-utrzymac" class="reveal">Zaplanuj rytm publikacji, który da się utrzymać</h2>
+## Zaplanuj rytm publikacji, który da się utrzymać {#zaplanuj-rytm-publikacji-ktory-da-sie-utrzymac}
 
 Lepiej publikować dwa dopracowane materiały tygodniowo przez pół roku niż pięć postów przez dwa tygodnie i później zniknąć na miesiąc. Regularność nie polega na wypełnianiu kalendarza za wszelką cenę. Polega na stworzeniu modelu pracy, który zespół jest w stanie dowieźć bez obniżania jakości.
 
@@ -75,7 +73,7 @@ Dla wielu firm rozsądny punkt startu to osiem do dwunastu publikacji miesięczn
 
 Kalendarz warto dzielić na treści planowane z wyprzedzeniem oraz miejsce na komunikację reaktywną. Pierwsza grupa obejmuje kampanie, premiery, sezonowość, ważne daty i filary marki. Druga pozwala wykorzystać nową realizację, opinię klienta, wydarzenie branżowe czy temat, który właśnie pojawił się w rozmowach z odbiorcami.
 
-<h2 id="dopasuj-format-do-zadania" class="reveal">Dopasuj format do zadania</h2>
+## Dopasuj format do zadania {#dopasuj-format-do-zadania}
 
 Reels często skutecznie docierają do nowych odbiorców, ale nie każdy komunikat potrzebuje dynamicznego montażu. Karuzela lepiej sprawdzi się przy procesie, porównaniu lub serii wskazówek. Pojedyncze zdjęcie może budować wizerunek, szczególnie gdy za nim stoi mocna historia. Stories są dobrym miejscem na krótszy kontakt, ankiety, kulisy i kierowanie odbiorcy do kolejnego kroku.
 
@@ -83,7 +81,7 @@ Format powinien wynikać z treści, a nie odwrotnie. Zamiast pytać „jaki reel
 
 W przypadku wideo liczą się pierwsze sekundy. Początek musi jasno sygnalizować temat lub napięcie: problem klienta, zaskakujący fakt, wynik realizacji, pytanie, które odbiorca naprawdę sobie zadaje. Estetyka jest ważna, lecz nie zastąpi czytelnego przekazu. Film bez konkretu może zebrać wyświetlenia i nadal nie wzmocnić marki.
 
-<h2 id="ustal-proces-od-pomyslu-do-publikacji" class="reveal">Ustal proces od pomysłu do publikacji</h2>
+## Ustal proces od pomysłu do publikacji {#ustal-proces-od-pomyslu-do-publikacji}
 
 Plan contentu staje się użyteczny dopiero wtedy, gdy wiadomo, kto i kiedy wykonuje kolejne zadania. W firmach najwięcej czasu nie zabiera samo tworzenie postów, ale zbieranie informacji, poprawki, brak materiałów i wieloetapowe akceptacje. Dlatego przy każdym temacie warto określić właściciela merytorycznego, format, potrzebne materiały, termin produkcji, osobę zatwierdzającą oraz cel publikacji.
 
@@ -91,7 +89,7 @@ Dobrym rozwiązaniem jest miesięczne spotkanie planujące i krótszy przegląd 
 
 Jeżeli firma nie ma własnego zespołu kreatywnego, sensownie jest połączyć strategię z produkcją w jednym procesie. Zdjęcia, reelsy, grafiki, copy i [kampanie płatne](/uslugi-marketingowe/kampanie-platne/) powinny wzajemnie się wzmacniać, zamiast powstawać u kilku nieskoordynowanych wykonawców. Właśnie na tym polega rola zewnętrznego działu marketingu – przejąć organizację, ale pozostawić klientowi kontrolę nad kierunkiem biznesowym.
 
-<h2 id="mierz-to-co-przybliza-do-wyniku" class="reveal">Mierz to, co przybliża do wyniku</h2>
+## Mierz to, co przybliża do wyniku {#mierz-to-co-przybliza-do-wyniku}
 
 Liczba obserwujących i polubień może wyglądać dobrze w raporcie, ale sama nie mówi, czy Instagram wspiera sprzedaż. Znacznie więcej mówią zapisy, udostępnienia, wejścia na profil, odpowiedzi na stories, wiadomości prywatne, [przejścia do formularza](/uslugi-marketingowe/strony-internetowe-i-landing-page/) oraz jakość pozyskanych kontaktów.
 

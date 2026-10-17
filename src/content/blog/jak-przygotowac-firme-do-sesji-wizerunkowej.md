@@ -31,11 +31,9 @@ toc:
     label: "Pomyśl o materiałach po sesji już przed sesją"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dobrze przygotowana sesja pokazuje nie tylko ludzi i biuro. Pokazuje sposób pracy, standard obsługi, technologię, energię zespołu oraz to, co odróżnia firmę od konkurencji. Im więcej konkretnych decyzji zapadnie przed dniem zdjęciowym, tym mniej przypadkowości w finalnych materiałach.
 
-<h2 id="zacznij-od-celu-nie-od-inspiracji" class="reveal">Zacznij od celu, nie od inspiracji</h2>
+## Zacznij od celu, nie od inspiracji {#zacznij-od-celu-nie-od-inspiracji}
 
 Pierwsze pytanie nie brzmi: „jakie zdjęcia chcemy mieć?”. Brzmi: „co zdjęcia mają dla nas zrobić?”. Innego materiału potrzebuje firma budująca zaufanie wśród klientów B2B, innego marka szukająca pracowników, a jeszcze innego deweloper, producent lub firma usługowa przygotowująca kampanię sprzedażową.
 
@@ -43,7 +41,7 @@ Jeżeli celem jest rekrutacja, na pierwszym planie powinny znaleźć się ludzie
 
 Przed sesją ustalcie, gdzie zdjęcia będą wykorzystywane przez najbliższe 6-12 miesięcy. [Strona internetowa](/uslugi-marketingowe/strony-internetowe-i-landing-page/), prezentacja handlowa, social media, ogłoszenia rekrutacyjne, materiały prasowe, reklama outdoorowa i stopki mailowe wymagają różnych kadrów oraz proporcji. To prosty krok, który chroni przed sytuacją, w której macie świetne zdjęcia, ale żadne nie pasuje do formatu kampanii.
 
-<h2 id="jak-przygotowac-firme-do-sesji-wizerunkowej-od-strony-komuni" class="reveal">Jak przygotować firmę do sesji wizerunkowej od strony komunikacji</h2>
+## Jak przygotować firmę do sesji wizerunkowej od strony komunikacji {#jak-przygotowac-firme-do-sesji-wizerunkowej-od-strony-komuni}
 
 Sesja nie powinna być zbiorem przypadkowych portretów. Potrzebuje krótkiego, konkretnego briefu. Nie musi mieć kilkunastu stron, ale powinien odpowiadać na kilka pytań: kim jesteście, do kogo mówicie, co odbiorca ma pomyśleć po kontakcie ze zdjęciami i czego zdecydowanie nie chcecie komunikować.
 
@@ -59,7 +57,7 @@ Wybierając uczestników, nie kierujcie się wyłącznie stanowiskiem. Szukajcie
 
 Każda osoba powinna wcześniej wiedzieć, po co bierze udział w sesji, jak długo potrwa jej udział i jakie kadry są planowane. Nie zostawiajcie tej informacji na pięć minut przed zdjęciami. Krótkie spotkanie organizacyjne lub mail z planem dnia ograniczy stres i pozwoli zespołowi wejść w kadr bez nerwowego pośpiechu.
 
-<h2 id="przygotuj-przestrzen-tak-jak-przygotowujesz-sie-na-wazne-spo" class="reveal">Przygotuj przestrzeń tak, jak przygotowujesz się na ważne spotkanie</h2>
+## Przygotuj przestrzeń tak, jak przygotowujesz się na ważne spotkanie {#przygotuj-przestrzen-tak-jak-przygotowujesz-sie-na-wazne-spo}
 
 Biuro, hala, sklep, restauracja czy plac budowy na zdjęciach pokażą znacznie więcej, niż widzicie na co dzień. Aparat wychwyci przewody, zużyte materiały, przypadkowe kartony, nieaktualne plakaty, puste kubki i niespójne oznakowanie. Nie oznacza to, że przestrzeń ma wyglądać sterylnie. Ma wyglądać wiarygodnie, ale świadomie.
 
@@ -69,7 +67,7 @@ Zwróćcie uwagę na elementy wrażliwe. Dane klientów na ekranach, dokumenty, 
 
 Jeśli sesja odbywa się w przestrzeni klienta, na produkcji lub w miejscu publicznym, wcześniej ustalcie dostęp, zasady bezpieczeństwa i zgodę na fotografowanie. Czas stracony na wejściu do lokalizacji potrafi rozbić harmonogram całego dnia.
 
-<h2 id="stylizacja-ma-wspierac-wiarygodnosc-nie-przebierac-zespol" class="reveal">Stylizacja ma wspierać wiarygodność, nie przebierać zespół</h2>
+## Stylizacja ma wspierać wiarygodność, nie przebierać zespół {#stylizacja-ma-wspierac-wiarygodnosc-nie-przebierac-zespol}
 
 Firmowe zdjęcia wyglądają najlepiej wtedy, gdy ludzie są ubrani odrobinę bardziej świadomie niż na zwykły dzień pracy, ale nadal jak oni sami. Jednolity dress code nie zawsze jest konieczny. Zależy od branży i charakteru marki. W firmie finansowej spójność może oznaczać klasyczne kroje i stonowane kolory. W agencji kreatywnej, gastronomii lub technologii większa swoboda może działać na korzyść materiału.
 
@@ -77,7 +75,7 @@ Najbezpieczniej poprosić uczestników o ubrania bez dużych napisów, przypadko
 
 Jeżeli kadry obejmują pracę fizyczną, produkcję lub gastronomię, zadbajcie o kompletne i czyste elementy stroju roboczego. Kask, fartuch, okulary ochronne czy odzież firmowa są nie tylko detalem wizualnym. Często potwierdzają profesjonalizm i standard działania firmy.
 
-<h2 id="zaplanuj-dzien-zdjeciowy-ale-zostaw-miejsce-na-naturalnosc" class="reveal">Zaplanuj dzień zdjęciowy, ale zostaw miejsce na naturalność</h2>
+## Zaplanuj dzień zdjęciowy, ale zostaw miejsce na naturalność {#zaplanuj-dzien-zdjeciowy-ale-zostaw-miejsce-na-naturalnosc}
 
 Dobry harmonogram obejmuje kolejność lokalizacji, uczestników, ujęcia grupowe, portrety, zdjęcia procesu oraz czas na zmiany organizacyjne. Dzięki temu nie wyrywacie ludzi ze spotkań bez uprzedzenia i nie czekacie pół godziny na osobę potrzebną do jednego kadru.
 
@@ -91,7 +89,7 @@ Najbardziej sztuczne zdjęcia powstają wtedy, gdy zespół siedzi przy wyłącz
 
 Nie chodzi o dokumentowanie każdej czynności jeden do jednego. Chodzi o stworzenie sytuacji, która wygląda i działa naturalnie. Ludzie łatwiej rozmawiają, gestykulują i reagują, gdy mają konkretny temat, a nie polecenie: „proszę wyglądać profesjonalnie”.
 
-<h2 id="pomysl-o-materialach-po-sesji-juz-przed-sesja" class="reveal">Pomyśl o materiałach po sesji już przed sesją</h2>
+## Pomyśl o materiałach po sesji już przed sesją {#pomysl-o-materialach-po-sesji-juz-przed-sesja}
 
 Zdjęcia powinny zostać dobrane i przygotowane pod realne kanały wykorzystania. Warto zaplanować zarówno szerokie kadry z miejscem na tekst, jak i pionowe ujęcia do social mediów, portrety ekspertów, detale oraz zdjęcia poziome do strony i prezentacji.
 

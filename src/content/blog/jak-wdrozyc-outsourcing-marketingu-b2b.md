@@ -31,11 +31,9 @@ toc:
     label: "Na co uważać przy wyborze partnera"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 To ważne zwłaszcza w firmach, które nie chcą budować rozbudowanego działu od zera albo potrzebują kompetencji, których nie opłaca się utrzymywać na etacie. Produkcja wideo, kampanie płatne, projektowanie, strategia komunikacji, landing page, obsługa social media – każdy z tych obszarów wymaga innych specjalistów. Outsourcing nie jest więc drogą na skróty. To sposób na zbudowanie sprawnego zaplecza marketingowego bez mnożenia etatów i bez żonglowania kilkoma podwykonawcami naraz.
 
-<h2 id="jak-wdrozyc-outsourcing-marketingu-b2b-bez-chaosu" class="reveal">Jak wdrożyć outsourcing marketingu B2B bez chaosu</h2>
+## Jak wdrożyć outsourcing marketingu B2B bez chaosu {#jak-wdrozyc-outsourcing-marketingu-b2b-bez-chaosu}
 
 Najczęstszy błąd na starcie jest prosty: firma szuka wykonawcy, zanim poukłada własne potrzeby. A potem oczekuje, że agencja „zrobi marketing”. Taki start zwykle kończy się rozproszonymi działaniami, dużą liczbą poprawek i poczuciem, że współpraca jest kosztowna, ale trudno wskazać, co dokładnie dowozi.
 
@@ -43,7 +41,7 @@ Dobre wdrożenie zaczyna się od odpowiedzi na trzy pytania. Po pierwsze, jaki c
 
 Jeśli sprzedajesz usługi lub produkty w modelu B2B, cele zwykle są dość konkretne. Chodzi o lepszą jakość leadów, mocniejsze materiały dla handlowców, spójny wizerunek marki, skuteczniejszą komunikację rekrutacyjną albo regularną obecność w kanałach, które do tej pory działały zrywami. Dopiero po takim uporządkowaniu można sensownie ustalić zakres współpracy.
 
-<h2 id="od-czego-zaczac-outsourcing-marketingu-b2b" class="reveal">Od czego zacząć outsourcing marketingu B2B</h2>
+## Od czego zacząć outsourcing marketingu B2B {#od-czego-zaczac-outsourcing-marketingu-b2b}
 
 Na początku warto oddzielić działania krytyczne od tych, które są tylko „dobrze mieć”. Nie każda firma potrzebuje od razu pełnej obsługi 360. Czasem lepszy jest start od jednego obszaru, na przykład kampanii lead generation i materiałów sprzedażowych. Innym razem potrzebny jest model pełniejszy, w którym zewnętrzny partner działa jak dział marketingu: planuje, tworzy, produkuje i wdraża.
 
@@ -53,7 +51,7 @@ Pierwszy to outsourcing punktowy, czyli zlecanie konkretnych zadań. Dobrze dzia
 
 Nie ma jednego właściwego wariantu dla wszystkich. Jeśli w organizacji jest silny marketing manager, model hybrydowy bywa bardzo efektywny. Jeśli jednak marketing jest rozproszony między zarząd, sprzedaż i przypadkowe zlecenia, pełniejszy outsourcing zwykle daje lepszy porządek i szybszą egzekucję.
 
-<h2 id="jak-przygotowac-firme-do-wspolpracy-z-agencja" class="reveal">Jak przygotować firmę do współpracy z agencją</h2>
+## Jak przygotować firmę do współpracy z agencją {#jak-przygotowac-firme-do-wspolpracy-z-agencja}
 
 Dobra współpraca nie zaczyna się od briefu na jedną kampanię, tylko od ustawienia zasad operacyjnych. Agencja może przejąć dużo, ale nie powinna zgadywać, kto akceptuje materiały, jakie są priorytety i jakie ograniczenia obowiązują markę.
 
@@ -63,7 +61,7 @@ Drugi element to uporządkowanie zasobów. Mowa o dotychczasowych materiałach, 
 
 Trzeci element to realistyczne oczekiwania. Jeśli firma przez dwa lata działała marketingowo reaktywnie, nie zmieni tego w dwa tygodnie. Szybkie efekty są możliwe, ale zwykle tam, gdzie wcześniej brakowało po prostu rąk do pracy. W obszarach strategicznych, pozycjonowaniu marki czy budowaniu regularnej obecności trzeba dać sobie trochę czasu.
 
-<h2 id="zakres-wspolpracy-trzeba-ustalic-precyzyjnie" class="reveal">Zakres współpracy trzeba ustalić precyzyjnie</h2>
+## Zakres współpracy trzeba ustalić precyzyjnie {#zakres-wspolpracy-trzeba-ustalic-precyzyjnie}
 
 W outsourcingu nie chodzi o to, by zlecić „wszystko”, tylko to, co faktycznie wymaga kompetencji, czasu i odpowiedzialności po stronie partnera. Zbyt szeroki, niedookreślony zakres często kończy się frustracją. Firma oczekuje inicjatywy w każdym obszarze, a agencja nie ma jasnych priorytetów ani ram.
 
@@ -71,7 +69,7 @@ Dlatego warto precyzyjnie ustalić, co wchodzi do współpracy w pierwszym etapi
 
 Dobrze działa też podział na obszary stałe i projektowe. Stałe to na przykład miesięczna obsługa kampanii, [social media](/uslugi-marketingowe/obsluga-social-media/), grafiki czy content. Projektowe to rebranding, sesja zdjęciowa, produkcja filmu, event albo nowa strona. Dzięki temu łatwiej utrzymać rytm współpracy, a jednocześnie elastycznie reagować na większe potrzeby biznesowe.
 
-<h2 id="kpi-ktore-maja-sens-w-marketingu-b2b" class="reveal">KPI, które mają sens w marketingu B2B</h2>
+## KPI, które mają sens w marketingu B2B {#kpi-ktore-maja-sens-w-marketingu-b2b}
 
 Jeśli outsourcing ma być oceniany uczciwie, trzeba ustalić mierniki dopasowane do celu. Problem w tym, że wiele firm miesza wskaźniki aktywności ze wskaźnikami efektu. Liczba postów czy liczba grafik jeszcze niczego nie przesądza.
 
@@ -79,7 +77,7 @@ W marketingu B2B warto patrzeć szerzej. Czasem kluczowa będzie liczba i jakoś
 
 To oznacza, że KPI powinny łączyć wynik biznesowy z efektywnością operacyjną. Jeśli partner zewnętrzny ma działać jak realne wsparcie, powinien nie tylko tworzyć materiały, ale też pomagać porządkować proces, proponować rozwiązania i reagować szybciej niż rozproszony układ kilku freelancerów.
 
-<h2 id="na-co-uwazac-przy-wyborze-partnera" class="reveal">Na co uważać przy wyborze partnera</h2>
+## Na co uważać przy wyborze partnera {#na-co-uwazac-przy-wyborze-partnera}
 
 Nie każda agencja nadaje się do outsourcingu w modelu B2B. Ładny portfel i sprawny handlowiec to za mało. Tu liczy się zdolność do pracy długoterminowej, rozumienie sprzedaży, umiejętność przełożenia strategii na konkretne materiały oraz kompetencje produkcyjne, które pozwalają dowozić bez ciągłego szukania kolejnych podwykonawców.
 
@@ -89,7 +87,7 @@ Dobrze też przyjrzeć się temu, jak agencja prowadzi komunikację już na etap
 
 W tym modelu dobrze sprawdza się współpraca z zespołem, który łączy strategię, kreację i produkcję w jednym miejscu. Dzięki temu mniej czasu idzie na koordynację, a więcej na działanie. To szczególnie ważne tam, gdzie liczy się tempo i spójność, czyli dokładnie tam, gdzie większość firm zaczyna myśleć o outsourcingu.
 
-<h2 id="wdrozenie-to-proces-nie-jednorazowe-zlecenie" class="reveal">Wdrożenie to proces, nie jednorazowe zlecenie</h2>
+## Wdrożenie to proces, nie jednorazowe zlecenie {#wdrozenie-to-proces-nie-jednorazowe-zlecenie}
 
 Pierwsze tygodnie współpracy są kluczowe, bo to wtedy powstaje rytm pracy. Dobrze, jeśli start obejmuje audyt obecnych działań, ustalenie priorytetów na pierwszy kwartał i harmonogram regularnych spotkań. Bez tego nawet dobry partner będzie działał reaktywnie.
 

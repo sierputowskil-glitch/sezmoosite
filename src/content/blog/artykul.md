@@ -24,19 +24,19 @@ ctaTitle: "Planujesz dzień zdjęciowy?"
 ctaHref: "/#cta"
 ---
 
-<h2 id="brief" class="reveal">Dobry brief skraca plan.</h2>
+## Dobry brief skraca plan. {#brief}
 
 Przed produkcją warto zebrać cel materiału, grupę odbiorców, najważniejsze komunikaty i przykłady estetyki, która pasuje do marki. To nie musi być wielki dokument. Wystarczy konkret, który pomaga podjąć decyzje na planie.
 
 Najlepsze produkcje zaczynają się od pytania: gdzie ten materiał będzie pracował? Inaczej planuje się film na stronę, inaczej serię rolek, a jeszcze inaczej kampanię płatną.
 
-<h2 id="plan" class="reveal">Ustal osoby, miejsca i ograniczenia.</h2>
+## Ustal osoby, miejsca i ograniczenia. {#plan}
 
 Lista osób decyzyjnych, dostępność lokacji, godziny światła, produkty do pokazania i formalne zgody potrafią zadecydować o tempie całego dnia. Im mniej improwizacji organizacyjnej, tym więcej miejsca na kreatywne ujęcia.
 
 > Plan zdjęciowy nie musi być sztywny. Musi być czytelny.
 
-<h2 id="deliverables" class="reveal">Myśl paczką formatów.</h2>
+## Myśl paczką formatów. {#deliverables}
 
 Z jednego dnia zdjęciowego można przygotować spot, rolki, cutdowny, przebitki do strony i materiały do reklam. Warunek jest prosty: trzeba zaplanować to przed nagraniem, a nie dopiero przy eksporcie.
 

@@ -31,11 +31,9 @@ toc:
     label: "Czy da się połączyć animację 3D i film produktowy"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 To dlatego pytanie nie brzmi, co wygląda nowocześniej, ale co lepiej zadziała w Twoim konkretnym przypadku. Innego materiału potrzebuje marka wprowadzająca nowy kosmetyk do e-commerce, a innego firma przemysłowa pokazująca technologię, której nie da się sensownie nagrać kamerą. Format ma pracować na cel biznesowy, nie odwrotnie.
 
-<h2 id="animacja-3d-czy-film-produktowy-od-czego-zalezy-wybor" class="reveal">Animacja 3D czy film produktowy – od czego zależy wybór</h2>
+## Animacja 3D czy film produktowy – od czego zależy wybór {#animacja-3d-czy-film-produktowy-od-czego-zalezy-wybor}
 
 Najpierw warto ustalić, co dokładnie ma zrobić materiał. Czy ma pokazać realny wygląd produktu, zwiększyć zaufanie i podbić konwersję w sklepie? A może ma wytłumaczyć mechanizm działania, budowę, wnętrze urządzenia albo proces, którego nie widać na zewnątrz?
 
@@ -43,7 +41,7 @@ Film produktowy najlepiej działa wtedy, gdy siłą produktu jest jego fizyczno�
 
 Animacja 3D ma przewagę tam, gdzie kamera przestaje wystarczać. Możesz zajrzeć do środka produktu, rozłożyć go na części, pokazać przekrój, ruch mechanizmów, przepływ powietrza, działanie warstw, a nawet zaprezentować obiekt, który jeszcze nie istnieje fizycznie. To ogromna przewaga przy produktach technologicznych, medycznych, przemysłowych i deweloperskich.
 
-<h2 id="kiedy-film-produktowy-sprzedaje-lepiej" class="reveal">Kiedy film produktowy sprzedaje lepiej</h2>
+## Kiedy film produktowy sprzedaje lepiej {#kiedy-film-produktowy-sprzedaje-lepiej}
 
 Film produktowy buduje wiarygodność szybciej, bo pokazuje coś prawdziwego. Widz nie musi się zastanawiać, czy render jest wierny. Widzi realny obiekt, realne światło, realne użycie. To szczególnie ważne w branżach, w których decyzja zakupowa opiera się na zaufaniu do jakości wykonania, wyglądu i detalu.
 
@@ -53,7 +51,7 @@ Jest też kwestia emocji. Film łatwiej osadzić w scenariuszu, który pokazuje 
 
 To jednak nie znaczy, że film zawsze jest prostszy. Jeśli produkt ma skomplikowaną powierzchnię, odbicia, wiele wariantów albo wymaga dużej liczby lokacji, plan zdjęciowy potrafi być kosztowny i organizacyjnie wymagający. Dochodzą próbki, stylizacja, scenografia, transport, harmonogram i powtórki. Efekt może być świetny, ale trzeba to dobrze zaplanować.
 
-<h2 id="kiedy-animacja-3d-ma-przewage" class="reveal">Kiedy animacja 3D ma przewagę</h2>
+## Kiedy animacja 3D ma przewagę {#kiedy-animacja-3d-ma-przewage}
 
 Animacja 3D jest mocna tam, gdzie trzeba coś wyjaśnić, uprościć albo pokazać w sposób niemożliwy dla kamery. Jeżeli produkt ma skomplikowaną konstrukcję, wiele funkcji lub działa w środowisku trudnym do sfilmowania, 3D daje pełną kontrolę nad przekazem. Możesz pokazać dokładnie to, co ma zostać zapamiętane, bez ograniczeń planu zdjęciowego.
 
@@ -63,7 +61,7 @@ Animacja 3D bywa też bardziej opłacalna przy produktach występujących w wiel
 
 Jest jednak warunek. 3D musi być zrobione naprawdę dobrze. Słaba animacja nie wygląda nowocześnie – wygląda sztucznie. A jeśli materiał ma wspierać sprzedaż, każdy detal, od tekstur po ruch kamery, musi pracować na wiarygodność. Tu nie ma miejsca na efekt dla samego efektu.
 
-<h2 id="animacja-3d-czy-film-produktowy-w-zaleznosci-od-celu" class="reveal">Animacja 3D czy film produktowy w zależności od celu</h2>
+## Animacja 3D czy film produktowy w zależności od celu {#animacja-3d-czy-film-produktowy-w-zaleznosci-od-celu}
 
 Jeśli celem jest szybkie zwiększenie atrakcyjności oferty w e-commerce, kampanii performance albo social media, film produktowy często daje szybszy i bardziej intuicyjny efekt. Pokazuje produkt takim, jaki klient faktycznie dostanie. To ogranicza niepewność i wspiera decyzję zakupową.
 
@@ -73,7 +71,7 @@ Przy targach, prezentacjach inwestorskich i materiałach dla handlowców wybór 
 
 W rekrutacji i employer brandingu film produktowy można dodatkowo połączyć z obrazem firmy, ludzi i procesu. Animacja 3D tego nie zastąpi. Z kolei w branżach technicznych sama kamera nie pokaże wszystkiego, co warto sprzedać. Tu często wygrywa łączenie formatów.
 
-<h2 id="najczestszy-blad-wybor-wedlug-mody-nie-celu" class="reveal">Najczęstszy błąd – wybór według mody, nie celu</h2>
+## Najczęstszy błąd – wybór według mody, nie celu {#najczestszy-blad-wybor-wedlug-mody-nie-celu}
 
 Wiele firm pyta najpierw o koszt albo o to, co teraz lepiej wygląda. To zrozumiałe, ale mało skuteczne. Format nie powinien wynikać z trendu, tylko z roli materiału w całym lejku. Inny materiał pracuje na uwagę, inny na zrozumienie, a jeszcze inny na domknięcie sprzedaży.
 
@@ -81,7 +79,7 @@ Jeśli klient widzi produkt po raz pierwszy, możesz potrzebować czegoś efekto
 
 Dlatego sensownie jest patrzeć na materiał nie jak na pojedynczą produkcję, tylko element większego systemu komunikacji. Jeden format rzadko załatwia wszystko.
 
-<h2 id="czy-da-sie-polaczyc-animacje-3d-i-film-produktowy" class="reveal">Czy da się połączyć animację 3D i film produktowy</h2>
+## Czy da się połączyć animację 3D i film produktowy {#czy-da-sie-polaczyc-animacje-3d-i-film-produktowy}
 
 Tak – i bardzo często to jest najlepsza odpowiedź. Film produktowy daje prawdę, emocję i kontekst. Animacja 3D dopowiada to, czego kamera nie pokaże. Razem tworzą materiał, który nie tylko wygląda profesjonalnie, ale też realnie wspiera sprzedaż.
 
@@ -91,7 +89,7 @@ To podejście daje też większą elastyczność mediową. Z jednej produkcji mo
 
 Właśnie dlatego model full-service ma przewagę. Gdy strategia, kreacja i produkcja są skoordynowane, łatwiej zdecydować, czy lepszy będzie plan zdjęciowy, 3D czy miks obu rozwiązań. W SEZMOO patrzymy na to przez pryzmat celu biznesowego, a nie samej formy, bo materiał ma pracować w kampanii, a nie tylko dobrze wyglądać w portfolio.
 
-<h2 id="jak-podjac-dobra-decyzje-przed-produkcja" class="reveal">Jak podjąć dobrą decyzję przed produkcją</h2>
+## Jak podjąć dobrą decyzję przed produkcją {#jak-podjac-dobra-decyzje-przed-produkcja}
 
 Zanim zamówisz materiał, odpowiedz sobie na kilka praktycznych pytań. Czy produkt już istnieje fizycznie? Czy jego przewaga jest widoczna z zewnątrz? Czy trzeba pokazać mechanizm działania? Gdzie materiał będzie emitowany i jak długo ma pracować? Czy potrzebujesz wielu wersji i adaptacji?
 

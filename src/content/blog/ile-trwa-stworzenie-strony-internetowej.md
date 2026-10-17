@@ -29,11 +29,9 @@ toc:
     label: "Termin strony a efekt biznesowy"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Krótka odpowiedź brzmi: prosty [landing page](/uslugi-marketingowe/strony-internetowe-i-landing-page/) może powstać w 2-3 tygodnie, strona firmowa zwykle zajmuje 4-7 tygodni, a rozbudowany serwis lub e-commerce od 2 do nawet 5 miesięcy. Dłuższa odpowiedź jest bardziej użyteczna, bo sam zakres nie przesądza o terminie. Najwięcej czasu potrafią zabrać decyzje, treści, akceptacje i poprawki wprowadzane już po rozpoczęciu projektu.
 
-<h2 id="ile-trwa-stworzenie-strony-w-zaleznosci-od-typu-projektu" class="reveal">Ile trwa stworzenie strony w zależności od typu projektu?</h2>
+## Ile trwa stworzenie strony w zależności od typu projektu? {#ile-trwa-stworzenie-strony-w-zaleznosci-od-typu-projektu}
 
 Landing page dla jednej usługi, kampanii rekrutacyjnej lub premiery produktu jest najszybszym wariantem. Jeśli marka ma gotowe materiały, ofertę i jeden jasno określony cel konwersji, projekt, copywriting, wdrożenie oraz testy da się zamknąć w 10-15 dni roboczych. Warunek jest prosty: jedna osoba po stronie klienta podejmuje decyzje sprawnie i nie zmienia założeń po każdym etapie.
 
@@ -43,7 +41,7 @@ Serwis z wieloma kategoriami usług, bazą wiedzy, rozbudowanymi realizacjami, w
 
 Sklep internetowy lub platforma z konfiguratorami, płatnościami, logistyką, systemem ERP czy indywidualnymi funkcjami to projekt na 10-20 tygodni, czasem dłużej. Nie warto traktować go jak większej wizytówki. Każda integracja oznacza dodatkowe scenariusze testowe, a błędy w procesie zakupu mają bezpośredni wpływ na przychód.
 
-<h2 id="co-naprawde-wydluza-realizacje-strony" class="reveal">Co naprawdę wydłuża realizację strony?</h2>
+## Co naprawdę wydłuża realizację strony? {#co-naprawde-wydluza-realizacje-strony}
 
 Kodowanie rzadko jest największym problemem. Dobrze zaplanowane wdrożenie postępuje przewidywalnie. Termin zaczyna się rozjeżdżać wtedy, gdy projekt rusza bez materiałów, jasnej oferty i osoby, która może zatwierdzać kolejne kroki.
 
@@ -53,7 +51,7 @@ Drugim problemem są zmieniające się oczekiwania. Projektowanie strony od zera
 
 Czas wydłużają też wieloosobowe akceptacje. Gdy swoje uwagi przekazuje właściciel firmy, marketing, sprzedaż i osoba odpowiedzialna za produkt, warto wcześniej ustalić, kto ma głos decydujący. Zestaw sprzecznych komentarzy nie poprawia strony. Zwykle uruchamia kolejną rundę pracy bez realnego postępu.
 
-<h2 id="etapy-ktore-decyduja-o-terminie" class="reveal">Etapy, które decydują o terminie</h2>
+## Etapy, które decydują o terminie {#etapy-ktore-decyduja-o-terminie}
 
 Dobry projekt nie zaczyna się od pytania o kolor przycisku. Najpierw trzeba ustalić, po co firma inwestuje w stronę. Czy ma zdobywać leady, wspierać rekrutację, tłumaczyć złożoną ofertę, prezentować realizacje, czy może stanowić zaplecze kampanii płatnej? Jedna strona może realizować kilka celów, ale trzeba określić ich hierarchię.
 
@@ -69,7 +67,7 @@ Projekt graficzny powinien wynikać z marki i funkcji strony, a nie z chwilowej 
 
 Po akceptacji projektu zespół wdraża widoki, przygotowuje wersję mobilną, formularze, analitykę i podstawowe ustawienia techniczne. Następnie testuje stronę na różnych urządzeniach, sprawdza szybkość, działanie wysyłki zapytań, przekierowania oraz elementy wymagane przed publikacją. Ten etap wygląda mniej efektownie niż projektowanie, ale to on chroni firmę przed utratą leadów po starcie.
 
-<h2 id="jak-przyspieszyc-stworzenie-strony-bez-skracania-jakosci" class="reveal">Jak przyspieszyć stworzenie strony bez skracania jakości?</h2>
+## Jak przyspieszyć stworzenie strony bez skracania jakości? {#jak-przyspieszyc-stworzenie-strony-bez-skracania-jakosci}
 
 Najszybszy projekt to nie ten, w którym pomija się etapy. To ten, w którym przed startem są gotowe odpowiedzi na najważniejsze pytania. Warto wyznaczyć jednego koordynatora, który zbiera feedback wewnątrz firmy i przekazuje jedną, uporządkowaną listę uwag. Dzięki temu agencja nie musi interpretować kilku wersji tej samej decyzji.
 
@@ -84,7 +82,7 @@ Nie wszystko musi być dopięte w pierwszym dniu. Jeśli jednak firma wie, czego
 
 Warto też odróżnić wersję startową od listy życzeń na przyszłość. Jeśli kluczowe są oferta, realizacje, formularz i dobra prezentacja marki, można uruchomić skuteczną stronę wcześniej, a rozbudowane funkcje rozwijać po zebraniu danych od użytkowników. To rozsądniejsze niż zatrzymywanie publikacji przez jeden moduł, którego biznesowa wartość nie została jeszcze potwierdzona.
 
-<h2 id="termin-strony-a-efekt-biznesowy" class="reveal">Termin strony a efekt biznesowy</h2>
+## Termin strony a efekt biznesowy {#termin-strony-a-efekt-biznesowy}
 
 Presja czasu jest zrozumiała, zwłaszcza gdy zbliża się targi, rekrutacja, premiera inwestycji lub start kampanii. Jednak „strona na szybko” nie powinna oznaczać przypadkowej strony. Nawet przy krótkim terminie trzeba ochronić trzy rzeczy: jasną ofertę, wyraźne wezwania do działania i wiarygodne materiały wizualne.
 

@@ -31,11 +31,9 @@ toc:
     label: "Zwróć uwagę na zaplecze produkcyjne"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dobra agencja nie jest tylko dostawcą grafik, filmów czy kampanii. W praktyce staje się przedłużeniem zespołu marketingu, czasem wręcz jego zewnętrzną wersją. I właśnie z tej perspektywy warto ją oceniać – nie po tym, jak mówi o kreatywności, ale po tym, jak organizuje pracę, rozumie cele i dowozi efekt.
 
-<h2 id="jak-wybrac-agencje-kreatywna-gdy-liczy-sie-wynik" class="reveal">Jak wybrać agencję kreatywną, gdy liczy się wynik</h2>
+## Jak wybrać agencję kreatywną, gdy liczy się wynik {#jak-wybrac-agencje-kreatywna-gdy-liczy-sie-wynik}
 
 Jeśli Twoja firma potrzebuje regularnych działań marketingowych, nie kupujesz pojedynczego projektu. Kupujesz sposób współpracy. To różnica, która decyduje o tym, czy za trzy miesiące będziesz mieć spójny system komunikacji, czy zbiór przypadkowych materiałów od kilku podwykonawców.
 
@@ -43,7 +41,7 @@ Na starcie warto zadać sobie jedno konkretne pytanie: czego naprawdę potrzebuj
 
 Tu pojawia się pierwszy trade-off. Wyspecjalizowany butik kreatywny może być świetny w kampanii wizerunkowej, ale niekoniecznie poprowadzi sprawnie działania 360. Z kolei agencja full-service daje większą wygodę i spójność, ale trzeba sprawdzić, czy rzeczywiście ma kompetencje in-house, czy tylko składa projekt z zewnętrznych podwykonawców. Sam zakres usług nie jest jeszcze przewagą. Przewagą jest dopiero umiejętność spięcia ich w jeden proces.
 
-<h2 id="portfolio-mowi-duzo-ale-nie-wszystko" class="reveal">Portfolio mówi dużo, ale nie wszystko</h2>
+## Portfolio mówi dużo, ale nie wszystko {#portfolio-mowi-duzo-ale-nie-wszystko}
 
 Większość firm zaczyna od portfolio i słusznie. Tyle że portfolio łatwo przecenić. Ładne realizacje są ważne, bo pokazują poziom wykonania, wyczucie estetyki i doświadczenie w różnych formatach. Problem pojawia się wtedy, gdy decyzja zapada wyłącznie na podstawie wizualnej atrakcyjności.
 
@@ -51,7 +49,7 @@ Dużo ważniejsze jest to, czy portfolio pokazuje myślenie biznesowe. Czy proje
 
 Dobrze też patrzeć na powtarzalność jakości. Jedna świetna realizacja może być efektem wyjątkowego briefu albo jednorazowego składu projektowego. Jeśli wysoki poziom widać w wielu projektach, dla różnych klientów i w różnych kanałach, to znacznie lepszy znak.
 
-<h2 id="rozmowa-sprzedazowa-powinna-byc-konkretna" class="reveal">Rozmowa sprzedażowa powinna być konkretna</h2>
+## Rozmowa sprzedażowa powinna być konkretna {#rozmowa-sprzedazowa-powinna-byc-konkretna}
 
 Jeśli po pierwszym spotkaniu nadal nie wiesz, jak miałaby wyglądać współpraca, to zwykle nie jest dobry znak. Profesjonalna agencja nie zasypuje Cię modnymi hasłami. Zadaje precyzyjne pytania o cele, proces decyzyjny, budżet, terminy, zasoby po Twojej stronie i wcześniejsze doświadczenia.
 
@@ -59,7 +57,7 @@ Warto zwrócić uwagę, czy agencja potrafi zakwestionować Twoje założenia. T
 
 Kompetentna agencja powinna umieć powiedzieć: ten kierunek ma sens, ale tu trzeba dopracować strategię; ten format będzie efektowny, ale nie dowiezie wyniku bez wsparcia mediowego; ten budżet wystarczy na start, ale nie na pełny rollout. Taka szczerość oszczędza czas i pieniądze.
 
-<h2 id="jak-wybrac-agencje-kreatywna-do-dlugiej-wspolpracy" class="reveal">Jak wybrać agencję kreatywną do długiej współpracy</h2>
+## Jak wybrać agencję kreatywną do długiej współpracy {#jak-wybrac-agencje-kreatywna-do-dlugiej-wspolpracy}
 
 Przy jednorazowym zleceniu wiele da się „dowieźć siłą”. Przy stałej obsłudze wygrywa organizacja. Dlatego przed decyzją sprawdź, jak wygląda model pracy. Kto jest po stronie agencji odpowiedzialny za projekt? Czy masz jedną osobę kontaktową? Jak często odbywają się statusy? Jak wygląda akceptacja materiałów? Co dzieje się, gdy trzeba szybko uruchomić dodatkowe działania?
 
@@ -67,7 +65,7 @@ To nie są detale operacyjne. To fundament współpracy. Nawet bardzo kreatywny 
 
 W firmach, które rosną szybko, szczególnie dobrze sprawdza się model [jednego partnera](/uslugi-marketingowe/abonamenty/) do wielu obszarów. Nie dlatego, że „wszyscy robią wszystko”, tylko dlatego, że strategia, content, design i produkcja działają w jednym rytmie. Gdy jedna ekipa rozumie markę, cele sprzedażowe i kalendarz komunikacji, łatwiej o spójność i szybsze wdrożenia.
 
-<h2 id="cena-ma-znaczenie-ale-zly-model-kosztuje-wiecej" class="reveal">Cena ma znaczenie, ale zły model kosztuje więcej</h2>
+## Cena ma znaczenie, ale zły model kosztuje więcej {#cena-ma-znaczenie-ale-zly-model-kosztuje-wiecej}
 
 Jedna z najczęstszych pomyłek przy wyborze agencji to porównywanie wyłącznie stawek. Taniej nie znaczy korzystniej. Jeśli niższa cena oznacza brak strategii, słaby project management albo konieczność angażowania dodatkowych wykonawców, całkowity koszt projektu szybko rośnie.
 
@@ -75,7 +73,7 @@ Z drugiej strony wysoka wycena też nie gwarantuje jakości. Czasem płacisz za 
 
 Dobra agencja potrafi też uczciwie powiedzieć, kiedy nie warto przepłacać. Nie każda marka potrzebuje od razu dużej kampanii 360. Czasem lepszy będzie szybki pakiet sprzedażowy: mocny [landing page](/uslugi-marketingowe/strony-internetowe-i-landing-page/), kilka formatów reklamowych, zdjęcia produktowe i krótkie wideo do kampanii. Liczy się dopasowanie skali działań do etapu biznesu.
 
-<h2 id="zwroc-uwage-na-zaplecze-produkcyjne" class="reveal">Zwróć uwagę na zaplecze produkcyjne</h2>
+## Zwróć uwagę na zaplecze produkcyjne {#zwroc-uwage-na-zaplecze-produkcyjne}
 
 Wiele problemów zaczyna się tam, gdzie kończy się prezentacja kreatywna, a zaczyna egzekucja. Pomysł jest dobry, ale realizacja okazuje się rozbita między kilka podmiotów. Efekt? Dłuższy czas, więcej poprawek, mniej kontroli nad jakością.
 
@@ -83,7 +81,7 @@ Jeśli Twoja firma regularnie potrzebuje contentu, kampanii i materiałów sprze
 
 Dla wielu firm właśnie ten element robi największą różnicę. Marketing nie przegrywa dziś tylko na strategii. Przegrywa też na tempie. Jeśli konkurencja jest w stanie w tydzień przygotować kampanię, nagrać [reelsy](/uslugi-marketingowe/obsluga-social-media/), odpalić ads i postawić landing, a Ty przez trzy tygodnie zbierasz wyceny od różnych wykonawców, to problem nie leży w kreatywności, tylko w modelu współpracy.
 
-<h2 id="po-czym-poznac-ze-agencja-naprawde-rozumie-biznes" class="reveal">Po czym poznać, że agencja naprawdę rozumie biznes</h2>
+## Po czym poznać, że agencja naprawdę rozumie biznes {#po-czym-poznac-ze-agencja-naprawde-rozumie-biznes}
 
 Najlepsze agencje nie mówią wyłącznie o zasięgach, estetyce i trendach. Rozmawiają o leadach, sprzedaży, retencji, rekrutacji, rozpoznawalności marki i przewagach konkurencyjnych. Rozumieją, że materiał wideo może wspierać handlowców, social media mogą pomóc w employer brandingu, a dobra identyfikacja wizualna ułatwia domykanie sprzedaży, bo buduje wiarygodność.
 

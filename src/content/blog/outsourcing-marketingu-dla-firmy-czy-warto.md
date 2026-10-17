@@ -31,15 +31,13 @@ toc:
     label: "Jak wybrać partnera do outsourcingu marketingu"
 ---
 
-<div id="wstep" class="reveal"></div>
-
-<h2 id="na-czym-naprawde-polega-outsourcing-marketingu-dla-firmy" class="reveal">Na czym naprawdę polega outsourcing marketingu dla firmy</h2>
+## Na czym naprawdę polega outsourcing marketingu dla firmy {#na-czym-naprawde-polega-outsourcing-marketingu-dla-firmy}
 
 W praktyce to przekazanie części lub całości działań marketingowych zewnętrznemu partnerowi, który bierze odpowiedzialność za strategię, kreację i wykonanie. Dla jednej firmy będzie to tylko prowadzenie kampanii reklamowych i social media. Dla innej – pełna obsługa jako zewnętrzny dział marketingu, obejmująca content, wideo, grafikę, stronę internetową, działania sprzedażowe, employer branding i wsparcie eventów.
 
 Największa różnica między zwykłym zlecaniem pojedynczych prac a pełnym outsourcingiem polega na tym, że nie kupujesz tylko „usługi”. Kupujesz zespół, proces i zdolność dowożenia efektów. To ważne, bo marketing rzadko działa dobrze w kawałkach. Świetny film nie pomoże, jeśli nie ma dystrybucji. Dobra kampania nie sprzeda, jeśli [landing page](/uslugi-marketingowe/strony-internetowe-i-landing-page/) nie domyka ruchu. Ładna identyfikacja nie zrobi wyniku, jeśli komunikacja marki jest niespójna.
 
-<h2 id="kiedy-outsourcing-ma-wiecej-sensu-niz-budowa-wlasnego-dzialu" class="reveal">Kiedy outsourcing ma więcej sensu niż budowa własnego działu</h2>
+## Kiedy outsourcing ma więcej sensu niż budowa własnego działu {#kiedy-outsourcing-ma-wiecej-sensu-niz-budowa-wlasnego-dzialu}
 
 To nie jest rozwiązanie dla każdej organizacji w tym samym momencie. Jeśli firma ma rozbudowany dział marketingu, wewnętrzne studio i poukładane procesy, wsparcie zewnętrzne może być potrzebne tylko projektowo. Ale w wielu przypadkach outsourcing po prostu wygrywa.
 
@@ -47,7 +45,7 @@ Najczęściej dzieje się tak wtedy, gdy firma rośnie szybciej niż jej zaplecz
 
 Drugim scenariuszem jest chaos wykonawczy. Firma współpracuje z grafikiem osobno, kampanie ustawia freelancer, stroną zajmuje się software house, a zdjęcia robi jeszcze ktoś inny. Efekt? Dużo koordynacji, mało spójności i częste przepalanie budżetu. Outsourcing porządkuje ten układ, bo odpowiedzialność jest skupiona w jednym miejscu.
 
-<h2 id="co-firma-realnie-zyskuje" class="reveal">Co firma realnie zyskuje</h2>
+## Co firma realnie zyskuje {#co-firma-realnie-zyskuje}
 
 Najbardziej oczywista korzyść to dostęp do specjalistów bez budowania pełnego działu in-house. Tyle że to dopiero początek. Dobrze poukładany outsourcing daje też większą przewidywalność i łatwiejsze zarządzanie działaniami.
 
@@ -57,7 +55,7 @@ Druga korzyść to szybkość. Zewnętrzny zespół ma gotowy warsztat, procesy 
 
 Trzecia sprawa to świeże spojrzenie. Zespół zewnętrzny nie jest uwikłany w wewnętrzne przyzwyczajenia firmy. Częściej widzi, gdzie komunikacja jest zbyt zachowawcza, gdzie marka wygląda przeciętnie i które działania nie mają już sensu. To bywa niewygodne, ale często właśnie wtedy zaczyna się realna poprawa wyników.
 
-<h2 id="gdzie-outsourcing-marketingu-dla-firmy-sprawdza-sie-najlepie" class="reveal">Gdzie outsourcing marketingu dla firmy sprawdza się najlepiej</h2>
+## Gdzie outsourcing marketingu dla firmy sprawdza się najlepiej {#gdzie-outsourcing-marketingu-dla-firmy-sprawdza-sie-najlepie}
 
 Najlepiej działa tam, gdzie liczy się jednocześnie strategia i egzekucja. Czyli nie tylko „wymyślcie nam kampanię”, ale też „zróbcie materiały, uruchomcie działania i pilnujcie wyniku”. W takim modelu firma nie musi rozdzielać odpowiedzialności między kilka podmiotów.
 
@@ -65,7 +63,7 @@ Szczególnie dobrze sprawdza się to w firmach, które potrzebują regularnej pr
 
 Dobry model outsourcingowy obejmuje zwykle kilka obszarów naraz: strategię komunikacji, kreację, content, produkcję foto-wideo, [kampanie płatne](/uslugi-marketingowe/kampanie-platne/), social media, projektowanie materiałów oraz wsparcie stron i landing page. Tylko wtedy marka jest naprawdę spójna, a działania wzajemnie się wzmacniają.
 
-<h2 id="kiedy-outsourcing-nie-bedzie-najlepszym-wyborem" class="reveal">Kiedy outsourcing nie będzie najlepszym wyborem</h2>
+## Kiedy outsourcing nie będzie najlepszym wyborem {#kiedy-outsourcing-nie-bedzie-najlepszym-wyborem}
 
 Warto powiedzieć to wprost – outsourcing nie naprawi wszystkiego. Jeśli firma nie ma jasno określonych celów, nie potrafi podejmować decyzji i traktuje marketing wyłącznie jako koszt, współpraca z agencją też będzie trudna. Zewnętrzny partner nie zastąpi decyzyjności po stronie klienta.
 
@@ -73,7 +71,7 @@ Problem pojawia się też wtedy, gdy oczekiwania są nierealne. Jeśli firma chc
 
 Bywa też tak, że część kompetencji lepiej zostawić wewnątrz firmy. Dotyczy to szczególnie organizacji, które mają silne struktury sprzedażowe, rozbudowany dział produktu albo własne kompetencje strategiczne. Wtedy najlepszy model to nie pełne oddanie marketingu na zewnątrz, tylko podział ról – część zespołu pracuje in-house, a część jest outsourcowana.
 
-<h2 id="jak-wybrac-partnera-do-outsourcingu-marketingu" class="reveal">Jak wybrać partnera do outsourcingu marketingu</h2>
+## Jak wybrać partnera do outsourcingu marketingu {#jak-wybrac-partnera-do-outsourcingu-marketingu}
 
 Tu najłatwiej popełnić kosztowny błąd. Wiele firm wybiera dostawcę po estetyce portfolio albo najniższej cenie. To za mało. Marketing ma działać, a nie tylko dobrze wyglądać na prezentacji.
 
@@ -83,7 +81,7 @@ Druga rzecz to zakres kompetencji. Jeśli firma potrzebuje realnego wsparcia 360
 
 Warto też zwrócić uwagę na model współpracy. Czy jest jasny podział odpowiedzialności? Kto prowadzi projekt? Jak wygląda obieg akceptacji? Jak często odbywają się statusy? Co jest w abonamencie, a co wymaga osobnej wyceny? Im mniej niedopowiedzeń na starcie, tym mniej frustracji później.
 
-<h2 id="ile-to-kosztuje-i-dlaczego-cena-nie-powinna-byc-jedynym-kryt" class="reveal">Ile to kosztuje i dlaczego cena nie powinna być jedynym kryterium</h2>
+## Ile to kosztuje i dlaczego cena nie powinna być jedynym kryterium {#ile-to-kosztuje-i-dlaczego-cena-nie-powinna-byc-jedynym-kryt}
 
 Pytanie o koszt pada zwykle bardzo szybko i słusznie. Tyle że sam cennik niewiele mówi bez kontekstu. Tani wykonawca, który wymaga ciągłego prowadzenia za rękę i dowozi niespójne materiały, bywa dużo droższy niż partner, który bierze temat kompleksowo i oszczędza czas zespołu klienta.
 
@@ -91,7 +89,7 @@ Warto patrzeć nie tylko na miesięczny abonament czy stawkę projektową, ale n
 
 Dla wielu firm właśnie tu outsourcing okazuje się najbardziej opłacalny. Zamiast utrzymywać kilka etatów, inwestować w narzędzia, studio i procesy, korzystają z gotowego zaplecza. To szczególnie atrakcyjne wtedy, gdy potrzeby marketingowe są duże, ale zmienne w czasie.
 
-<h2 id="jak-wyglada-dobra-wspolpraca-w-praktyce" class="reveal">Jak wygląda dobra współpraca w praktyce</h2>
+## Jak wygląda dobra współpraca w praktyce {#jak-wyglada-dobra-wspolpraca-w-praktyce}
 
 Najlepsze efekty daje model partnerski, a nie relacja „klient zleca, agencja wykonuje”. Firma wnosi znajomość produktu, rynku i klientów. Partner marketingowy wnosi strategię, kreatywność, egzekucję i perspektywę z zewnątrz. Gdy te dwie strony naprawdę współpracują, marketing zaczyna wspierać biznes, a nie tylko produkować komunikaty.
 

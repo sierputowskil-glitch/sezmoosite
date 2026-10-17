@@ -40,7 +40,7 @@ Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `
 | `src/data/privacy.ts` | Privacy / RODO PL/EN (`PRIVACY` / `privacyCopy`) |
 | `src/data/services/` | Service PL/EN copy + hub chrome (`types.ts`, `pages/*.ts`, `hub.ts`) |
 | `src/data/longform/` | Branding / event / campaign cases (`/realizacja-{id}/`) — not the video `[slug]` pipeline |
-| `src/lib/` | `site.ts` (URLs, phone, media CDN), `blog.ts`, `schema.ts` (JSON-LD objects) |
+| `src/lib/` | `site.ts` (URLs, phone, media CDN), `blog.ts`, `schema.ts` (JSON-LD objects), `markdown/` (remark/rehype for blog) |
 | `assets/` | CSS, JS, images, video posters/manifest — source of truth (`assets/css/portfolio.css`, `case-study.css`) |
 | `public/` | `_redirects`, `_headers`, `robots.txt`, `404.html`; assets appear after sync |
 | `functions/` | CF Pages Functions only (contact + rate limit) |
@@ -120,9 +120,9 @@ Do not dump homepage or portfolio logic back into `app.js`. Case-study play stay
   - `draft: true` — not built
   - `listed: false` — builds at slug URL but omitted from `/blog/` listings (e.g. sample `/artykul/` locally; production `_redirects` sends `/artykul/` → `/blog/`)
 - **Body habits:**
-  - Section headings as `<h2 id="…" class="reveal">…</h2>` matching `toc[].id`
-  - Optional empty `<div id="wstep" class="reveal"></div>` for lead-only “Wstęp”
-  - Internal links to services with trailing slash, e.g. `/uslugi-marketingowe/obsluga-social-media/`
+  - Pure Markdown — no raw HTML headings. Sections as `## Title {#id}` (and `###` when needed); `{#id}` must match `toc[].id`. `remarkCustomHeadingId` + `rehypeRevealHeadings` in `astro.config.mjs` emit `id` + `class="reveal"`.
+  - Lead-only “Wstęp” in TOC: use `id: wstep` in frontmatter — `BlogArticle` injects the empty `#wstep` anchor (do not put a `<div id="wstep">` in the body).
+  - Internal links as Markdown with trailing slash, e.g. `[abonament](/uslugi-marketingowe/abonamenty/)`
   - Tone: practical B2B PL (or EN if `lang: en`), SEZMOO as agency voice — concrete, sales-aware, not fluff
 - **Frontmatter checklist for a new post:**
   ```yaml

@@ -31,11 +31,9 @@ toc:
     label: "Jak mierzyć skuteczność bez patrzenia tylko na lajki"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Paid social działa dobrze wtedy, gdy nie jest traktowany jak osobny kanał od „wrzucenia reklamy”, tylko jako element większego procesu. Kampania ma przyciągnąć uwagę, ale też poprowadzić odbiorcę dalej – do formularza, kontaktu, zakupu albo zapamiętania marki. Bez tego zostają wyświetlenia, kliknięcia i złudne poczucie, że coś się dzieje.
 
-<h2 id="czym-naprawde-sa-kampanie-paid-social" class="reveal">Czym naprawdę są kampanie paid social</h2>
+## Czym naprawdę są kampanie paid social {#czym-naprawde-sa-kampanie-paid-social}
 
 Kampanie paid social to płatne działania reklamowe prowadzone w mediach społecznościowych. Brzmi prosto, ale w praktyce chodzi o znacznie więcej niż ustawienie grupy odbiorców i wrzucenie grafiki z hasłem sprzedażowym. To kanał, który łączy precyzyjne targetowanie, szybkie testy i bardzo duży wpływ kreacji na wynik.
 
@@ -43,7 +41,7 @@ W przeciwieństwie do wielu innych formatów reklamowych tutaj użytkownik nie s
 
 Dlatego skuteczne kampanie paid social opierają się na trzech filarach: dobrej strategii, mocnej kreacji i sprawnej optymalizacji. Gdy brakuje jednego z nich, wyniki zwykle są przeciętne. Można mieć świetny materiał wideo, ale źle dobrany cel kampanii. Można dobrze ustawić reklamę, ale prowadzić ruch na słaby landing page. Można też mieć sensowną ofertę, ale komunikować ją językiem, który nikogo nie obchodzi.
 
-<h2 id="kiedy-kampanie-paid-social-maja-sens-biznesowy" class="reveal">Kiedy kampanie paid social mają sens biznesowy</h2>
+## Kiedy kampanie paid social mają sens biznesowy {#kiedy-kampanie-paid-social-maja-sens-biznesowy}
 
 Nie każda firma potrzebuje ich w tej samej skali, ale dla wielu marek to najszybszy sposób, by zdobyć uwagę właściwych odbiorców. Szczególnie wtedy, gdy trzeba działać szybko, testować komunikaty albo wspierać kilka celów jednocześnie.
 
@@ -51,7 +49,7 @@ Ten kanał sprawdza się dobrze przy wprowadzaniu nowej usługi, promocji oferty
 
 Jest jednak jedno ważne „to zależy”. Paid social nie naprawi słabej oferty ani chaosu w procesie sprzedażowym. Jeśli reklama dowozi zapytania, ale handlowiec odpowiada po trzech dniach, problem nie leży w kampanii. Jeśli landing page ładuje się zbyt długo albo formularz odstrasza liczbą pól, koszt pozyskania leada wzrośnie niezależnie od jakości targetowania.
 
-<h2 id="od-czego-zaczynac-kampanie-paid-social" class="reveal">Od czego zaczynać kampanie paid social</h2>
+## Od czego zaczynać kampanie paid social {#od-czego-zaczynac-kampanie-paid-social}
 
 Punktem wyjścia nie powinno być pytanie „na jakiej platformie się reklamować?”, tylko „co ma się wydarzyć po kampanii?”. Dla jednych będzie to sprzedaż produktu, dla innych pozyskanie kontaktów, ruch na stronie, zapis na wydarzenie albo wzrost liczby aplikacji do pracy. Cel musi być konkretny, bo od niego zależy cały układ działań.
 
@@ -59,7 +57,7 @@ Dopiero potem warto dobrać kanał. Meta zwykle dobrze sprawdza się tam, gdzie 
 
 Na tym etapie wiele firm popełnia podstawowy błąd – próbuje mówić do wszystkich. Tymczasem lepiej przygotować kilka wersji komunikatu dla różnych segmentów niż jedną reklamę „dla każdego”. Inaczej rozmawia się z osobą, która pierwszy raz styka się z marką, a inaczej z kimś, kto już oglądał ofertę i potrzebuje tylko konkretnego argumentu do decyzji.
 
-<h2 id="kreacja-decyduje-szybciej-niz-targetowanie" class="reveal">Kreacja decyduje szybciej niż targetowanie</h2>
+## Kreacja decyduje szybciej niż targetowanie {#kreacja-decyduje-szybciej-niz-targetowanie}
 
 Platformy reklamowe są dziś na tyle rozwinięte, że samym ustawieniem grup odbiorców trudno zbudować przewagę. Coraz częściej wygrywa to, co odbiorca zobaczy i przeczyta. Kreacja nie jest dodatkiem do kampanii. To jej silnik.
 
@@ -67,7 +65,7 @@ Dobra reklama w social mediach nie musi być „ładna” w katalogowym sensie. 
 
 Najlepsze efekty dają zwykle kreacje przygotowane pod konkretną platformę i etap lejka. Inny materiał działa na zimny ruch, inny w remarketingu. Inny komunikat przyciąga uwagę właściciela firmy, inny HR managera, a jeszcze inny osobę odpowiedzialną za marketing. Właśnie dlatego tak ważne jest, żeby strategia, produkcja i performance nie były od siebie odklejone.
 
-<h2 id="co-najczesciej-psuje-wynik-kampanii" class="reveal">Co najczęściej psuje wynik kampanii</h2>
+## Co najczęściej psuje wynik kampanii {#co-najczesciej-psuje-wynik-kampanii}
 
 Najrzadziej problemem jest sam system reklamowy. Znacznie częściej zawodzi przygotowanie. Firmy ruszają z kampanią bez jasnej oferty, bez planu testów albo bez materiałów, które nadają się do środowiska social mediów. Potem pojawia się rozczarowanie, bo budżet schodzi, a efekt jest słaby.
 
@@ -75,7 +73,7 @@ Częstym błędem jest też ocenianie kampanii zbyt wcześnie albo wyłącznie p
 
 W praktyce problemem bywa również brak spójności między reklamą a miejscem docelowym. Jeśli reklama obiecuje konkretną korzyść, a landing page mówi ogólnikami, odbiorca odpada. Jeśli kreacja jest dynamiczna i nowoczesna, a strona wygląda jak z innej epoki, wiarygodność spada. Kampania paid social nie działa w próżni.
 
-<h2 id="jak-mierzyc-skutecznosc-bez-patrzenia-tylko-na-lajki" class="reveal">Jak mierzyć skuteczność bez patrzenia tylko na lajki</h2>
+## Jak mierzyć skuteczność bez patrzenia tylko na lajki {#jak-mierzyc-skutecznosc-bez-patrzenia-tylko-na-lajki}
 
 Wynik kampanii trzeba rozumieć w kontekście celu. Przy sprzedaży liczy się przychód, ROAS, koszt zakupu i jakość ruchu. Przy leadach – liczba kontaktów, ich jakość, koszt pozyskania i skuteczność zamknięcia sprzedaży. Przy employer brandingu – nie tylko zasięg, ale też liczba wejść na ofertę pracy, koszt aplikacji i dopasowanie kandydatów.
 
@@ -83,7 +81,7 @@ To ważne, bo social media łatwo produkują metryki, które dobrze wyglądają 
 
 Dobre raportowanie powinno pokazywać nie tylko wynik, ale też decyzje. Co testowano, co zadziałało, co należy wyłączyć, gdzie warto dołożyć budżet, a gdzie poprawić kreację lub stronę docelową. Bez tego kampania staje się serią losowych ruchów zamiast procesu optymalizacji.
 
-<h2 id="kampanie-paid-social-a-wspolpraca-z-jedna-agencja" class="reveal">Kampanie paid social a współpraca z jedną agencją</h2>
+## Kampanie paid social a współpraca z jedną agencją {#kampanie-paid-social-a-wspolpraca-z-jedna-agencja}
 
 Wielu marketerów i właścicieli firm zna ten scenariusz: jedna firma odpowiada za reklamy, druga za wideo, trzecia za landing page, a po drodze jeszcze ktoś prowadzi social media. Efekt? Dużo koordynacji, mało tempa i trudność w znalezieniu realnej przyczyny problemu, gdy wynik nie dowozi.
 
@@ -91,7 +89,7 @@ Przy paid social to szczególnie kosztowne, bo ten kanał wymaga szybkiej reakcj
 
 Dlatego model, w którym strategia, kreacja, produkcja i egzekucja są w jednym miejscu, zwykle daje większą kontrolę i lepsze tempo działania. Nie chodzi tylko o wygodę. Chodzi o wynik. Gdy zespół patrzy jednocześnie na ofertę, kreację, media i stronę docelową, łatwiej znaleźć dźwignię wzrostu. Właśnie w tym kierunku pracujemy jako zewnętrzny dział marketingu – tak, żeby kampanie nie były oderwanym działaniem, tylko częścią większego systemu, który ma sprzedawać.
 
-<h2 id="jak-podejsc-do-budzetu-zeby-nie-przepalac-srodkow" class="reveal">Jak podejść do budżetu, żeby nie przepalać środków</h2>
+## Jak podejść do budżetu, żeby nie przepalać środków {#jak-podejsc-do-budzetu-zeby-nie-przepalac-srodkow}
 
 Nie ma jednej kwoty, od której kampania „zaczyna działać”. Wszystko zależy od branży, konkurencji, celu i jakości materiałów. Są jednak dwie zasady, które sprawdzają się niemal zawsze. Po pierwsze, budżet musi dać przestrzeń na testy. Po drugie, nie warto skalować kampanii, która nie ma jeszcze potwierdzonego modelu działania.
 

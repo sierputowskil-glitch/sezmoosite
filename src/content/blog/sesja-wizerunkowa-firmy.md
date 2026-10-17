@@ -31,11 +31,9 @@ toc:
     label: "Ile zdjęć, jaki styl i czy zawsze warto robić wszystko naraz"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 W praktyce wiele firm odkłada ten temat latami. Powód jest prosty – zdjęcia zespołu są przypadkowe, biuro zmienia się szybciej niż materiały, a komunikacja wizualna nie nadąża za rozwojem biznesu. Efekt? Marka wygląda gorzej, niż działa. A to kosztuje – wizerunkowo, sprzedażowo i rekrutacyjnie.
 
-<h2 id="czym-naprawde-jest-sesja-wizerunkowa-firmy" class="reveal">Czym naprawdę jest sesja wizerunkowa firmy</h2>
+## Czym naprawdę jest sesja wizerunkowa firmy {#czym-naprawde-jest-sesja-wizerunkowa-firmy}
 
 Sesja wizerunkowa firmy to zaplanowana produkcja zdjęciowa, która pokazuje markę w sposób spójny z jej pozycjonowaniem, branżą i celami biznesowymi. Nie chodzi wyłącznie o portrety pracowników. Równie ważne są zdjęcia zarządu, zespołów, przestrzeni, procesu pracy, detali, relacji z klientem czy atmosfery organizacji.
 
@@ -43,7 +41,7 @@ Dobra sesja nie kończy się na estetyce. Ma odpowiadać na konkretne pytania od
 
 Właśnie tu pojawia się najważniejsza różnica między zwykłym fotografowaniem a materiałem wizerunkowym dla biznesu. W firmie każdy kadr powinien pracować na cel. Raz będzie to wsparcie sprzedaży, innym razem employer branding, kampania outdoorowa, social media albo prezentacja dla inwestora. Jedna sesja może zasilić wiele kanałów, ale tylko wtedy, gdy od początku jest przemyślana strategicznie.
 
-<h2 id="kiedy-sesja-wizerunkowa-firmy-ma-najwiekszy-sens" class="reveal">Kiedy sesja wizerunkowa firmy ma największy sens</h2>
+## Kiedy sesja wizerunkowa firmy ma największy sens {#kiedy-sesja-wizerunkowa-firmy-ma-najwiekszy-sens}
 
 Najlepszy moment na realizację nie zawsze jest wtedy, gdy „w końcu wypada zrobić nowe zdjęcia”. Znacznie częściej impulsem powinien być konkretny etap rozwoju firmy. Rebranding, nowa strona, wejście na nowy rynek, rozbudowa zespołu, start działań employer brandingowych czy intensyfikacja sprzedaży B2B – to sytuacje, w których stare materiały błyskawicznie zaczynają ciążyć marce.
 
@@ -51,7 +49,7 @@ Widać to szczególnie w firmach, które rosną szybciej niż ich komunikacja. M
 
 Sesja ma też sens wtedy, gdy firma chce przestać bazować na stockach. Zdjęcia kupione z banków obrazów bywają wygodne, ale rzadko budują wiarygodność. Pokazują „jakąś firmę”, nie Twoją. A w komunikacji B2B autentyczność jest walutą – szczególnie tam, gdzie decyzje opierają się na zaufaniu do ludzi i sposobu pracy.
 
-<h2 id="co-powinno-znalezc-sie-w-dobrze-zaplanowanej-sesji" class="reveal">Co powinno znaleźć się w dobrze zaplanowanej sesji</h2>
+## Co powinno znaleźć się w dobrze zaplanowanej sesji {#co-powinno-znalezc-sie-w-dobrze-zaplanowanej-sesji}
 
 Zakres sesji zależy od branży, modelu sprzedaży i kanałów komunikacji. Inaczej fotografuje się kancelarię, inaczej firmę produkcyjną, a jeszcze inaczej software house czy dewelopera. Są jednak elementy, które najczęściej mają realną wartość biznesową.
 
@@ -63,7 +61,7 @@ Trzeci obszar to przestrzeń i detale. W wielu branżach biuro, hala, showroom, 
 
 Jeśli firma działa produktowo, sensowne jest rozszerzenie sesji o packshoty lub zdjęcia produktu w użyciu. Jeśli stawia na komunikację ekspercką, dobrze zaplanować kadry do publikacji i materiałów edukacyjnych. Jeżeli zależy jej na rekrutacji, trzeba uwzględnić kulturę pracy, relacje i atmosferę. Tu nie ma jednego słusznego scenariusza – jest za to jedna zasada: materiał ma odpowiadać na realne potrzeby marketingu i sprzedaży.
 
-<h2 id="jak-przygotowac-sesje-zeby-nie-skonczyla-sie-na-ladnych-zdje" class="reveal">Jak przygotować sesję, żeby nie skończyła się na ładnych zdjęciach</h2>
+## Jak przygotować sesję, żeby nie skończyła się na ładnych zdjęciach {#jak-przygotowac-sesje-zeby-nie-skonczyla-sie-na-ladnych-zdje}
 
 Najczęstszy błąd? Organizowanie sesji od strony logistycznej, a nie komunikacyjnej. Firma rezerwuje termin, ustawia ludzi i liczy, że fotograf „coś wyciągnie”. Da się wtedy zrobić poprawne kadry, ale trudno stworzyć materiał, który będzie spójny i użyteczny przez wiele miesięcy.
 
@@ -73,7 +71,7 @@ Równie ważna jest spójność z [identyfikacją wizualną](/uslugi-marketingow
 
 Trzeba też zadbać o przygotowanie ludzi. Dla większości pracowników udział w sesji nie jest codziennością, więc stres potrafi być widoczny na zdjęciach. Dlatego dobrze działa jasny plan dnia, wskazówki dotyczące ubioru, prosty scenariusz i sprawna organizacja na planie. Im mniej chaosu, tym lepszy efekt i krótszy czas realizacji.
 
-<h2 id="sesja-wizerunkowa-firmy-a-sprzedaz-i-rekrutacja" class="reveal">Sesja wizerunkowa firmy a sprzedaż i rekrutacja</h2>
+## Sesja wizerunkowa firmy a sprzedaż i rekrutacja {#sesja-wizerunkowa-firmy-a-sprzedaz-i-rekrutacja}
 
 Wizerunek firmowy często bywa traktowany miękko, jak coś „na później”, gdy zostanie budżet. To podejście rzadko się opłaca. Zdjęcia są jednym z pierwszych nośników jakości, z jakimi styka się klient lub kandydat. Jeśli marka wygląda amatorsko, musi później dużo mocniej pracować argumentami, by odzyskać zaufanie.
 
@@ -81,7 +79,7 @@ W sprzedaży dobrze przygotowane zdjęcia wzmacniają ofertę. Handlowiec wysył
 
 W rekrutacji działa podobny mechanizm. Kandydaci chcą zobaczyć, do jakiego środowiska pracy mają wejść. Stockowe zdjęcia z uśmiechniętymi modelami już tego nie załatwiają. Liczy się autentyczny obraz zespołu i kultury organizacyjnej. Zwłaszcza tam, gdzie firma konkuruje o specjalistów i chce przyciągać ludzi nie tylko wynagrodzeniem, ale także jakością współpracy.
 
-<h2 id="ile-zdjec-jaki-styl-i-czy-zawsze-warto-robic-wszystko-naraz" class="reveal">Ile zdjęć, jaki styl i czy zawsze warto robić wszystko naraz</h2>
+## Ile zdjęć, jaki styl i czy zawsze warto robić wszystko naraz {#ile-zdjec-jaki-styl-i-czy-zawsze-warto-robic-wszystko-naraz}
 
 To zależy od skali potrzeb. Czasem wystarczy kompaktowa sesja dla zarządu i kilku kluczowych działów. Innym razem lepszym rozwiązaniem jest większa produkcja obejmująca kilka lokalizacji, zdjęcia reportażowe, ujęcia produktowe i materiały pionowe pod reelsy czy kampanie social media. Problem zaczyna się wtedy, gdy firma chce „za jednym zamachem” zrobić wszystko, ale bez priorytetów.
 
@@ -89,7 +87,7 @@ W praktyce lepiej myśleć modułowo. Najpierw podstawowy bank zdjęć do strony
 
 Coraz częściej warto też [łączyć fotografię z wideo](/uslugi-marketingowe/fotografia/). To szczególnie sensowne wtedy, gdy firma prowadzi [aktywne social media](/uslugi-marketingowe/obsluga-social-media/), rekrutuje, tworzy landing page’e lub przygotowuje kampanie performance. Jeden dzień zdjęciowy może dostarczyć materiał do wielu formatów, o ile całość jest dobrze wyreżyserowana i zaplanowana przez zespół, który rozumie zarówno produkcję, jak i marketingowe wykorzystanie contentu.
 
-<h2 id="jak-rozpoznac-ze-sesja-zostala-zrobiona-dobrze" class="reveal">Jak rozpoznać, że sesja została zrobiona dobrze</h2>
+## Jak rozpoznać, że sesja została zrobiona dobrze {#jak-rozpoznac-ze-sesja-zostala-zrobiona-dobrze}
 
 Po tym, że nie kończy życia w jednym folderze po publikacji zakładki „o nas”. Dobra sesja pracuje długo i w różnych miejscach. Wchodzi na stronę, do ofert, do prezentacji sprzedażowych, do kampanii płatnych, na profile pracowników, do materiałów prasowych i ogłoszeń o pracę. Zespół chętnie z niej korzysta, bo zdjęcia są naturalne, aktualne i po prostu użyteczne.
 

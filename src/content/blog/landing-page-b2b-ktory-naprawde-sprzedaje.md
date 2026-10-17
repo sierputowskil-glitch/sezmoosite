@@ -31,11 +31,9 @@ toc:
     label: "Jak mierzyć, czy landing page działa"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 W praktyce wiele firm wpada w ten sam schemat. Inwestują w kampanie, content, social media i sprzedaż outbound, a potem kierują ruch na stronę, która mówi za dużo, za szeroko albo zbyt ogólnie. Efekt jest prosty: odbiorca nie widzi od razu, dla kogo jest oferta, jaki problem rozwiązuje i co ma zrobić dalej. A w B2B okno decyzyjne bywa krótkie, nawet jeśli sam proces zakupu trwa miesiącami.
 
-<h2 id="czym-rozni-sie-landing-page-b2b-od-zwyklej-strony-firmowej" class="reveal">Czym różni się landing page B2B od zwykłej strony firmowej</h2>
+## Czym różni się landing page B2B od zwykłej strony firmowej {#czym-rozni-sie-landing-page-b2b-od-zwyklej-strony-firmowej}
 
 Strona firmowa ma pokazać markę szerzej. Opowiada o firmie, usługach, zespole, realizacjach i wartościach. To potrzebne, ale nie zawsze wystarcza do domknięcia konkretnego ruchu z kampanii. [Landing page](/uslugi-marketingowe/strony-internetowe-i-landing-page/) działa inaczej. Ma jeden cel, jedną główną ścieżkę i ograniczoną liczbę decyzji po stronie użytkownika.
 
@@ -43,7 +41,7 @@ W B2B ta różnica jest szczególnie ważna, bo odbiorca rzadko kupuje impulsywn
 
 Jeśli kierujesz reklamę do dyrektora marketingu, właściciela firmy albo HR managera, nie możesz wysłać każdego na tę samą, uniwersalną podstronę. Inne są motywacje, inne pytania i inne kryteria oceny. Dobra strona lądowania w B2B skraca dystans między komunikatem kampanii a realnym problemem odbiorcy.
 
-<h2 id="co-musi-zawierac-skuteczny-landing-page-b2b" class="reveal">Co musi zawierać skuteczny landing page B2B</h2>
+## Co musi zawierać skuteczny landing page B2B {#co-musi-zawierac-skuteczny-landing-page-b2b}
 
 Pierwszy ekran powinien załatwiać trzy sprawy od razu. Użytkownik ma zobaczyć, co oferujesz, dla kogo to jest i jaki jest następny krok. Bez zgadywania. Bez przewijania w poszukiwaniu sensu. Bez zdań, które brzmią dobrze, ale nic nie znaczą biznesowo.
 
@@ -55,7 +53,7 @@ Dalej potrzebne są dowody. W B2B samo zapewnienie, że jesteś skuteczny, nie w
 
 Formularz także ma znaczenie większe, niż wielu firmom się wydaje. Zbyt długi obniża konwersję. Zbyt krótki czasem obniża jakość leadów. Dlatego nie ma jednego słusznego układu. Jeśli oferujesz szybką konsultację, wystarczy imię, e-mail i telefon. Jeśli mówimy o bardziej złożonej usłudze, można dodać pole dotyczące potrzeb lub budżetu. Trzeba jednak pamiętać, że każdy kolejny krok kosztuje użytkownika uwagę.
 
-<h2 id="dlaczego-wiele-stron-nie-konwertuje" class="reveal">Dlaczego wiele stron nie konwertuje</h2>
+## Dlaczego wiele stron nie konwertuje {#dlaczego-wiele-stron-nie-konwertuje}
 
 Najczęstszy problem to brak jednego komunikatu. Strona próbuje sprzedać wszystko naraz: strategię, branding, kampanie, stronę www, produkcję wideo i jeszcze konsulting. Z perspektywy firmy to może być pełna oferta. Z perspektywy odbiorcy – informacyjny korek.
 
@@ -65,7 +63,7 @@ Trzeci problem to niedopasowanie do źródła ruchu. Użytkownik kliknął rekla
 
 Czwarty błąd to estetyka bez hierarchii. Nawet bardzo dobrze zaprojektowana strona może nie działać, jeśli nie prowadzi wzroku. Użytkownik musi wiedzieć, co przeczytać najpierw, gdzie znaleźć najważniejsze informacje i jak wykonać kolejny krok. Design ma wspierać decyzję, nie rywalizować z nią.
 
-<h2 id="jak-projektowac-landing-page-b2b-pod-realny-proces-decyzyjny" class="reveal">Jak projektować landing page B2B pod realny proces decyzyjny</h2>
+## Jak projektować landing page B2B pod realny proces decyzyjny {#jak-projektowac-landing-page-b2b-pod-realny-proces-decyzyjny}
 
 W B2B rzadko sprzedajesz tylko usługę. Sprzedajesz też spokój, przewidywalność i sprawną współpracę. Dlatego na stronie warto odpowiadać nie tylko na pytanie „co robicie?”, ale też „jak to wygląda w praktyce?”.
 
@@ -75,7 +73,7 @@ W części branż ważna będzie też segmentacja. Inaczej wygląda landing page
 
 To samo dotyczy oferty. Czasem lepiej promować jeden precyzyjny pakiet niż pełne spektrum usług. Jeśli celem kampanii jest pozyskanie leadów na [obsługę social media](/uslugi-marketingowe/obsluga-social-media/), nie trzeba na pierwszym planie eksponować eventów czy animacji. Szerokość kompetencji jest atutem, ale na landing page’u najpierw musi wygrać klarowność.
 
-<h2 id="landing-page-b2b-a-content-kreacja-i-kampania" class="reveal">Landing page B2B a content, kreacja i kampania</h2>
+## Landing page B2B a content, kreacja i kampania {#landing-page-b2b-a-content-kreacja-i-kampania}
 
 Strona lądowania nie działa w próżni. Jej wynik zależy od tego, co obiecujesz wcześniej i jakie oczekiwanie budujesz reklamą, mailingiem czy działaniem sprzedażowym. Jeśli kreacja jest agresywna, a strona bardzo zachowawcza, pojawia się zgrzyt. Jeśli reklama mówi o konkretnym efekcie, a landing rozwadnia przekaz, spada wiarygodność.
 
@@ -83,7 +81,7 @@ Dlatego najlepsze efekty daje myślenie całościowe. Komunikat kampanii, warstw
 
 W praktyce oznacza to prostszy proces, mniej strat na przekazywaniu briefów i większą spójność komunikacji. Jeśli zespół rozumie i reklamę, i stronę, i materiały sprzedażowe, łatwiej zbudować lejek, który nie urywa się po pierwszym kliknięciu. Właśnie w takim modelu działa SEZMOO – jako zewnętrzny dział marketingu, który nie kończy pracy na samym projekcie graficznym.
 
-<h2 id="jak-mierzyc-czy-landing-page-dziala" class="reveal">Jak mierzyć, czy landing page działa</h2>
+## Jak mierzyć, czy landing page działa {#jak-mierzyc-czy-landing-page-dziala}
 
 Sama liczba wejść niewiele mówi. Najpierw trzeba ustalić, co jest konwersją i jaki ruch sprowadzasz. Inaczej ocenia się stronę pod kampanię leadową dla usługi o wysokiej wartości, a inaczej landing pod zapis na webinar czy pobranie katalogu.
 
@@ -91,7 +89,7 @@ Patrz nie tylko na współczynnik konwersji, ale też na jakość leadów. Czase
 
 Warto analizować również zachowanie użytkowników: gdzie odpadają, jak daleko scrollują, czy klikają główne CTA, czy wracają do góry strony. Te dane pokazują, czy problemem jest komunikat, układ treści, forma kontaktu czy zwyczajnie niedopasowana obietnica. Optymalizacja landing page’a to proces, nie jednorazowe „zrobione”.
 
-<h2 id="co-dzis-naprawde-podnosi-konwersje" class="reveal">Co dziś naprawdę podnosi konwersję</h2>
+## Co dziś naprawdę podnosi konwersję {#co-dzis-naprawde-podnosi-konwersje}
 
 Najlepiej działają strony, które są konkretne i wiarygodne. Nie przeładowane. Nie pisane pod wszystkich. Takie, które od pierwszych sekund pokazują, że rozumiesz sytuację klienta i masz sposób, by ją poprawić.
 

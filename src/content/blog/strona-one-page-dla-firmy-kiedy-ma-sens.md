@@ -31,11 +31,9 @@ toc:
     label: "SEO i one page – da się to pogodzić, ale nie zawsze na długo"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Nie chodzi jednak o to, że one page jest zawsze lepszy. Chodzi o dopasowanie formatu do celu biznesowego. Dla jednych firm będzie to szybki sposób na uruchomienie skutecznej obecności online, dla innych – ograniczenie, które utrudni sprzedaż, pozycjonowanie i rozwój komunikacji. Właśnie dlatego warto podejść do tematu bez mody i bez skrótów myślowych.
 
-<h2 id="czym-naprawde-jest-strona-one-page-dla-firmy" class="reveal">Czym naprawdę jest strona one page dla firmy</h2>
+## Czym naprawdę jest strona one page dla firmy {#czym-naprawde-jest-strona-one-page-dla-firmy}
 
 Strona one page dla firmy to witryna, w której cała najważniejsza treść mieści się na jednej, przewijanej stronie. Zamiast przechodzić między podstronami, użytkownik schodzi niżej i po kolei poznaje markę, ofertę, przewagi, realizacje, opinie oraz formularz kontaktowy.
 
@@ -43,7 +41,7 @@ To rozwiązanie porządkuje przekaz. Firma nie rozprasza odbiorcy nadmiarem opcj
 
 Brzmi prosto, ale prostota to tutaj przewaga tylko wtedy, gdy za nią stoi dobra strategia treści. Jedna strona nie wybacza chaosu. Nie ma gdzie ukryć słabego komunikatu, zbędnych bloków czy niejasnej oferty.
 
-<h2 id="kiedy-one-page-dziala-najlepiej" class="reveal">Kiedy one page działa najlepiej</h2>
+## Kiedy one page działa najlepiej {#kiedy-one-page-dziala-najlepiej}
 
 Najlepiej sprawdza się wtedy, gdy firma ma jasno zdefiniowaną usługę albo niewielką liczbę usług, które można opisać jednym spójnym przekazem. To częsty wybór dla lokalnych biznesów usługowych, firm B2B pozyskujących leady, inwestycji deweloperskich, wydarzeń, kampanii promocyjnych czy marek osobistych.
 
@@ -51,7 +49,7 @@ Jeśli głównym celem strony jest kontakt, wysłanie zapytania, umówienie rozm
 
 Taki format dobrze działa również wtedy, gdy firma startuje i chce wejść na rynek szybko, bez wielomiesięcznego procesu budowy dużego serwisu. To rozsądna opcja, kiedy liczy się tempo, testowanie komunikacji i sprawne uruchomienie kampanii reklamowych.
 
-<h2 id="kiedy-lepiej-postawic-na-wiekszy-serwis" class="reveal">Kiedy lepiej postawić na większy serwis</h2>
+## Kiedy lepiej postawić na większy serwis {#kiedy-lepiej-postawic-na-wiekszy-serwis}
 
 Są sytuacje, w których strona one page dla firmy po prostu nie wystarczy. Jeśli masz szeroką ofertę, kilka grup odbiorców, rozbudowane portfolio albo planujesz mocno rozwijać widoczność w wyszukiwarce, jedna strona może szybko stać się zbyt ciasna.
 
@@ -59,7 +57,7 @@ Problem pojawia się też wtedy, gdy każdy obszar działalności wymaga osobneg
 
 One page nie jest więc skrótem do sukcesu. To narzędzie. Dobre w odpowiednim kontekście, słabsze tam, gdzie potrzeba większej elastyczności.
 
-<h2 id="co-decyduje-o-skutecznosci-strony-one-page-dla-firmy" class="reveal">Co decyduje o skuteczności strony one page dla firmy</h2>
+## Co decyduje o skuteczności strony one page dla firmy {#co-decyduje-o-skutecznosci-strony-one-page-dla-firmy}
 
 Największy błąd? Traktowanie one page jak tańszej wersji „prawdziwej strony”. To nie jest okrojony serwis. To osobny format, który wymaga precyzji.
 
@@ -69,7 +67,7 @@ Drugi element to hierarchia informacji. Najpierw obietnica i korzyść, potem ro
 
 Trzeci obszar to projekt i technologia. One page musi działać szybko, dobrze wyglądać na telefonie i być intuicyjny w przewijaniu. Tu nie ma miejsca na ciężkie animacje tylko po to, żeby coś się ruszało. Efekt wizualny ma wspierać sprzedaż, a nie spowalniać użytkownika.
 
-<h2 id="jak-powinna-wygladac-dobra-struktura" class="reveal">Jak powinna wyglądać dobra struktura</h2>
+## Jak powinna wyglądać dobra struktura {#jak-powinna-wygladac-dobra-struktura}
 
 Nie ma jednego idealnego schematu, ale są elementy, które zwykle pracują najlepiej. Na górze strony warto umieścić mocny nagłówek z konkretną wartością, krótkie rozwinięcie i widoczny przycisk działania. Poniżej powinno znaleźć się wyjaśnienie oferty napisane językiem korzyści, a nie wewnętrznym slangiem firmy.
 
@@ -77,7 +75,7 @@ Dalej dobrze działają sekcje z przewagami, procesem współpracy, [realizacjam
 
 Na końcu kontakt powinien być prosty. Nie formularz z dziesięcioma polami, tylko jasne wezwanie do rozmowy. Im mniej tarcia na ostatnim etapie, tym większa szansa na konwersję.
 
-<h2 id="seo-i-one-page-da-sie-to-pogodzic-ale-nie-zawsze-na-dlugo" class="reveal">SEO i one page – da się to pogodzić, ale nie zawsze na długo</h2>
+## SEO i one page – da się to pogodzić, ale nie zawsze na długo {#seo-i-one-page-da-sie-to-pogodzic-ale-nie-zawsze-na-dlugo}
 
 Wokół tego tematu krąży sporo uproszczeń. Jedni mówią, że one page zabija SEO, inni że nie ma to żadnego znaczenia. Prawda jest pośrodku.
 
@@ -87,7 +85,7 @@ Schody zaczynają się wtedy, gdy firma chce walczyć o widoczność na wiele fr
 
 Dlatego przy planowaniu warto myśleć nie tylko o tym, czego potrzebujesz dziś, ale też co będzie potrzebne za pół roku. Czasem one page to świetny etap pierwszy. Czasem lepiej od razu zbudować stronę, która zostawia przestrzeń na rozwój.
 
-<h2 id="one-page-a-kampanie-reklamowe" class="reveal">One page a kampanie reklamowe</h2>
+## One page a kampanie reklamowe {#one-page-a-kampanie-reklamowe}
 
 Tu ten format często pokazuje pełnię możliwości. Jeśli prowadzisz kampanie płatne i kierujesz ruch na konkretną usługę, strona one page dla firmy może być bardzo efektywnym miejscem domykania ruchu. Użytkownik klikający reklamę powinien trafić dokładnie tam, gdzie dostanie spójny komunikat, jasną ofertę i prostą ścieżkę kontaktu.
 
@@ -95,7 +93,7 @@ W takich projektach szczególnie ważna jest spójność. Reklama obiecuje jedno
 
 To jeden z powodów, dla których firmy coraz częściej traktują one page nie jako tani kompromis, ale jako narzędzie sprzedażowe. Zwłaszcza gdy projekt jest osadzony w szerszej [strategii marketingowej](/uslugi-marketingowe/obsluga-social-media/), a nie funkcjonuje w oderwaniu od kampanii, kreacji i analityki.
 
-<h2 id="najczestsze-bledy-ktore-psuja-efekt" class="reveal">Najczęstsze błędy, które psują efekt</h2>
+## Najczęstsze błędy, które psują efekt {#najczestsze-bledy-ktore-psuja-efekt}
 
 Najczęściej problemem nie jest sam format, tylko jego wykonanie. Firmy próbują zmieścić na jednej stronie wszystko, co wiedzą o sobie. Efekt? Ściana tekstu, zbyt dużo sekcji, za mało konkretu. Użytkownik przewija i nie znajduje odpowiedzi na najprostsze pytanie: dlaczego mam odezwać się właśnie do was.
 
@@ -103,7 +101,7 @@ Drugi błąd to nadmiar estetyki bez funkcji. Strona może wyglądać nowocześn
 
 Trzeci błąd jest bardziej strategiczny. Firma wybiera one page, bo „na razie wystarczy”, ale nie analizuje, czy ten format wspiera jej model pozyskiwania klientów. A to powinien być punkt wyjścia. Strona ma pracować na biznes, nie tylko być obecna w sieci.
 
-<h2 id="czy-warto-inwestowac-w-strone-one-page-dla-firmy" class="reveal">Czy warto inwestować w stronę one page dla firmy</h2>
+## Czy warto inwestować w stronę one page dla firmy {#czy-warto-inwestowac-w-strone-one-page-dla-firmy}
 
 Warto, jeśli ma konkretną rolę. Dla firmy usługowej, która chce szybko i skutecznie [pokazać ofertę](/uslugi-marketingowe/strony-internetowe-i-landing-page/), zebrać leady i uruchomić działania marketingowe, może to być bardzo dobry wybór. Szczególnie wtedy, gdy za projektem stoi nie tylko webdesign, ale też przemyślana treść, właściwa struktura i znajomość ścieżki zakupowej klienta.
 

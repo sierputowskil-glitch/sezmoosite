@@ -31,9 +31,7 @@ toc:
     label: "Fotografia produktowa do e commerce a zwroty i zaufanie"
 ---
 
-<div id="wstep" class="reveal"></div>
-
-<h2 id="fotografia-produktowa-do-e-commerce-sprzedaje-albo-blokuje-s" class="reveal">Fotografia produktowa do e commerce sprzedaje albo blokuje sprzedaż</h2>
+## Fotografia produktowa do e commerce sprzedaje albo blokuje sprzedaż {#fotografia-produktowa-do-e-commerce-sprzedaje-albo-blokuje-s}
 
 Dobre zdjęcie produktowe nie ma tylko wyglądać estetycznie. Ma odpowiedzieć na pytania klienta, zanim ten je zada. Jak wygląda faktura materiału? Jaki jest kolor w realnym świetle? Jak duży jest produkt? Czy detal wykończenia uzasadnia cenę?
 
@@ -41,7 +39,7 @@ W e commerce zdjęcie przejmuje część roli sprzedawcy. Nie doradzi, ale może
 
 Dlatego firmy, które traktują fotografię jako element procesu sprzedaży, zwykle podejmują lepsze decyzje niż te, które skupiają się wyłącznie na szybkim „zrobieniu packshotów”. Sam komplet zdjęć to za mało. Liczy się jakość, spójność i dopasowanie do kanału sprzedaży.
 
-<h2 id="jakie-zdjecia-naprawde-sa-potrzebne-w-sklepie-internetowym" class="reveal">Jakie zdjęcia naprawdę są potrzebne w sklepie internetowym</h2>
+## Jakie zdjęcia naprawdę są potrzebne w sklepie internetowym {#jakie-zdjecia-naprawde-sa-potrzebne-w-sklepie-internetowym}
 
 Nie każdy produkt wymaga tego samego zestawu ujęć. Inaczej fotografuje się kosmetyki premium, inaczej wyposażenie wnętrz, a jeszcze inaczej odzież czy akcesoria techniczne. Wspólny mianownik jest jeden – klient ma dostać pełniejszy obraz produktu niż z samego opisu.
 
@@ -61,7 +59,7 @@ Aranżacja pomaga pokazać nie tylko sam przedmiot, ale też jego styl, zastosow
 
 Trzeba jednak zachować proporcje. Zbyt artystyczna stylizacja potrafi przykryć produkt, a zbyt dużo rekwizytów rozprasza uwagę. Dobra fotografia produktowa do e commerce nie jest popisem scenografii. Produkt nadal ma grać pierwszą rolę.
 
-<h2 id="co-najczesciej-obniza-skutecznosc-zdjec-produktowych" class="reveal">Co najczęściej obniża skuteczność zdjęć produktowych</h2>
+## Co najczęściej obniża skuteczność zdjęć produktowych {#co-najczesciej-obniza-skutecznosc-zdjec-produktowych}
 
 Najwięcej problemów nie wynika z braku sprzętu, tylko z braku założeń. Firma zamawia zdjęcia bez ustalenia, gdzie będą używane, ile wariantów trzeba przygotować i jakie pytania klient ma rozwiązać obraz. Efekt bywa przewidywalny – ładne zdjęcia, które nie spinają się z kartą produktu, reklamą ani identyfikacją marki.
 
@@ -69,7 +67,7 @@ Drugim częstym błędem jest brak spójności. Część produktów ma białe t�
 
 Trzeci błąd to nadmierny retusz. W e commerce zdjęcie ma pomagać sprzedać realny produkt, a nie jego idealizowaną wersję. Oczywiście retusz jest potrzebny – usuwa drobne niedoskonałości, czyści tło, wyrównuje ekspozycję. Ale jeśli zmienia kolor, fakturę lub proporcje, zaczyna działać przeciwko marce.
 
-<h2 id="jak-zaplanowac-sesje-zeby-nie-przepalac-budzetu" class="reveal">Jak zaplanować sesję, żeby nie przepalać budżetu</h2>
+## Jak zaplanować sesję, żeby nie przepalać budżetu {#jak-zaplanowac-sesje-zeby-nie-przepalac-budzetu}
 
 Najdroższa sesja to nie ta z dużą liczbą kadrów, tylko ta źle zaplanowana. Kiedy zespół nie ma ustalonej listy produktów, kolejności pracy, zakresu retuszu i formatów końcowych, pojawiają się poprawki, dogrywki i chaos po stronie klienta. To kosztuje czas i pieniądze.
 
@@ -83,7 +81,7 @@ Nie chodzi o dokument na kilkanaście stron. Wystarczy jasno określić typ prod
 
 Im mniej domysłów po stronie produkcji, tym lepszy efekt końcowy. To szczególnie ważne wtedy, gdy fotografia ma wspierać nie tylko sklep, ale też szerszą komunikację marki.
 
-<h2 id="kiedy-robic-zdjecia-wewnetrznie-a-kiedy-zlecic-je-agencji" class="reveal">Kiedy robić zdjęcia wewnętrznie, a kiedy zlecić je agencji</h2>
+## Kiedy robić zdjęcia wewnętrznie, a kiedy zlecić je agencji {#kiedy-robic-zdjecia-wewnetrznie-a-kiedy-zlecic-je-agencji}
 
 To zależy od skali i oczekiwanego efektu. Jeśli firma sprzedaje niewielką liczbę prostych produktów, a zdjęcia są potrzebne sporadycznie, własna mini-studio setup może mieć sens. Zwłaszcza przy produktach technicznych, gdzie liczy się głównie czytelność i szybkość wdrożenia.
 
@@ -91,7 +89,7 @@ Ale przy większym katalogu, potrzebie zachowania spójności, kampaniach reklam
 
 To właśnie tu model full-service daje realną przewagę. Gdy fotografia jest częścią większej układanki – razem z reklamą, landing page’em, social mediami i materiałami sprzedażowymi – łatwiej zbudować spójny efekt. Zamiast koordynować kilku wykonawców, firma dostaje jeden zespół, który rozumie zarówno warstwę wizualną, jak i sprzedażową. Tak pracujemy [w SEZMOO](/#team), bo wiemy, że klient nie kupuje samych zdjęć. Kupuje sprawne wdrożenie i efekt biznesowy.
 
-<h2 id="fotografia-produktowa-do-e-commerce-a-zwroty-i-zaufanie" class="reveal">Fotografia produktowa do e commerce a zwroty i zaufanie</h2>
+## Fotografia produktowa do e commerce a zwroty i zaufanie {#fotografia-produktowa-do-e-commerce-a-zwroty-i-zaufanie}
 
 Wiele firm patrzy na zdjęcia wyłącznie przez pryzmat estetyki. Tymczasem ich wpływ na liczbę zwrotów jest często równie ważny jak wpływ na konwersję. Jeśli fotografia wiernie pokazuje kolor, proporcje i detale, klient rzadziej czuje rozczarowanie po otwarciu paczki.
 
@@ -99,7 +97,7 @@ To szczególnie istotne w branżach, gdzie decyzję zakupową podejmuje się na 
 
 Dlatego skuteczna fotografia nie obiecuje za dużo. Ma zachęcać, ale nie może wprowadzać w błąd. To niby oczywiste, a jednak wiele marek nadal przepłaca za zbyt efektowne obrazy, które na etapie sprzedaży robią więcej szkody niż pożytku.
 
-<h2 id="co-warto-mierzyc-po-wdrozeniu-nowych-zdjec" class="reveal">Co warto mierzyć po wdrożeniu nowych zdjęć</h2>
+## Co warto mierzyć po wdrożeniu nowych zdjęć {#co-warto-mierzyc-po-wdrozeniu-nowych-zdjec}
 
 Jeśli firma inwestuje w nowe materiały, powinna sprawdzić, czy ta inwestycja pracuje. Najbardziej użyteczne wskaźniki to konwersja na karcie produktu, współczynnik odrzuceń, czas spędzony na stronie i liczba zwrotów w danej kategorii. Czasem poprawa nie jest spektakularna na pierwszy rzut oka, ale przy większym wolumenie sprzedaży nawet niewielki wzrost daje bardzo konkretny wynik.
 

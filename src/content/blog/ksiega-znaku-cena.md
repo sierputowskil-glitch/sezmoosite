@@ -31,11 +31,9 @@ toc:
     label: "Jak nie przepłacić za księgę znaku"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dla jednych firm księga znaku będzie prostym dokumentem na kilka stron. Dla innych stanie się operacyjnym narzędziem, bez którego marka zaczyna się rozjeżdżać w social mediach, materiałach sprzedażowych, prezentacjach, [reklamie zewnętrznej](/uslugi-marketingowe/reklama-zewnetrzna/) i na stronie internetowej. Cena zależy więc nie od samej nazwy usługi, ale od tego, jak bardzo ten dokument ma pracować na co dzień.
 
-<h2 id="ksiega-znaku-cena-nie-bierze-sie-z-sufitu" class="reveal">Księga znaku – cena nie bierze się z sufitu</h2>
+## Księga znaku – cena nie bierze się z sufitu {#ksiega-znaku-cena-nie-bierze-sie-z-sufitu}
 
 Najkrótsza odpowiedź brzmi: to zależy od zakresu. Prosta księga znaku dla małej firmy może kosztować od kilkuset do kilku tysięcy złotych. Bardziej rozbudowane opracowanie dla marki, która działa wielokanałowo i ma wielu wykonawców, będzie kosztować wyraźnie więcej.
 
@@ -43,7 +41,7 @@ Różnica bierze się z tego, czy mówimy o podstawowym uporządkowaniu użycia 
 
 W praktyce najczęściej płacicie za trzy rzeczy: przygotowanie zasad, ich dopasowanie do realnych nośników oraz czytelne opracowanie dokumentu. To ważne rozróżnienie, bo nie każda księga znaku daje firmie taką samą wartość. Tania wersja może wyglądać poprawnie, ale nie rozwiązywać codziennych problemów. Dobrze przygotowana oszczędza czas i ogranicza koszt poprawek.
 
-<h2 id="co-zwykle-zawiera-ksiega-znaku" class="reveal">Co zwykle zawiera księga znaku</h2>
+## Co zwykle zawiera księga znaku {#co-zwykle-zawiera-ksiega-znaku}
 
 Podstawowa księga znaku opisuje zasady użycia logo. Obejmuje wersję podstawową, wersje alternatywne, pole ochronne, minimalne rozmiary, dopuszczalne tła, warianty kolorystyczne oraz przykłady błędnego użycia. Często dochodzi też informacja o kolorystyce i typografii.
 
@@ -57,7 +55,7 @@ Podstawowa wersja sprawdzi się wtedy, gdy firma jest mała, ma ograniczoną lic
 
 Rozbudowana wersja jest lepszym wyborem, gdy marka szybko rośnie, działa w kilku kanałach sprzedaży, korzysta z wielu podwykonawców albo ma kilka osób odpowiedzialnych za komunikację. Wtedy brak jasnych zasad zaczyna kosztować więcej niż sama księga. Pojawiają się niespójne formaty, złe kolory, źle dobrane tła, niepoprawne proporcje logo i ciągłe poprawki.
 
-<h2 id="od-czego-zalezy-cena-ksiegi-znaku" class="reveal">Od czego zależy cena księgi znaku</h2>
+## Od czego zależy cena księgi znaku {#od-czego-zalezy-cena-ksiegi-znaku}
 
 Największy wpływ na koszt ma zakres opracowania. Im więcej wariantów logo, zasad użycia i zastosowań na nośnikach, tym więcej godzin pracy projektowej. Prosta marka z jednym znakiem i jednym podstawowym zestawem kolorów będzie tańsza w opracowaniu niż system identyfikacji z subbrandami, wersjami poziomymi i pionowymi, dodatkowymi oznaczeniami oraz wieloma formatami publikacji.
 
@@ -67,7 +65,7 @@ Znaczenie ma również poziom szczegółowości. Jedne firmy potrzebują prostyc
 
 Nie bez znaczenia jest też to, kto przygotowuje dokument. Freelancer, małe studio i agencja full-service mogą wyceniać podobnie brzmiącą usługę zupełnie inaczej, bo oferują inny poziom konsultacji, zaplecza, testowania i wdrożenia. Sama cena bez kontekstu niewiele mówi.
 
-<h2 id="ile-kosztuje-ksiega-znaku-w-praktyce" class="reveal">Ile kosztuje księga znaku w praktyce</h2>
+## Ile kosztuje księga znaku w praktyce {#ile-kosztuje-ksiega-znaku-w-praktyce}
 
 Na rynku można spotkać bardzo szeroki rozstrzał. Najprostsze opracowania kosztują zwykle od około 1000 do 2500 zł. To najczęściej dokumenty z podstawowymi zasadami użycia logo i krótkim opisem kolorystyki.
 
@@ -77,7 +75,7 @@ Bardziej zaawansowane księgi znaku, zwłaszcza jako część pełnej [identyfik
 
 Czy da się kupić taniej? Oczywiście. Tylko że bardzo niska cena zwykle oznacza ograniczony zakres, szablonowe podejście albo dokument, który nie jest osadzony w realnym użyciu marki. To nie zawsze jest zły wybór, ale tylko wtedy, gdy firma naprawdę potrzebuje minimum.
 
-<h2 id="kiedy-ksiega-znaku-to-wydatek-a-kiedy-inwestycja" class="reveal">Kiedy księga znaku to wydatek, a kiedy inwestycja</h2>
+## Kiedy księga znaku to wydatek, a kiedy inwestycja {#kiedy-ksiega-znaku-to-wydatek-a-kiedy-inwestycja}
 
 Jeżeli marka używa logo raz na kilka miesięcy i działa lokalnie w bardzo prostym modelu, rozbudowana księga znaku może być przerostem formy nad treścią. W takim przypadku lepiej postawić na krótszy, konkretny standard i dopiero później go rozwijać.
 
@@ -85,7 +83,7 @@ Jeśli jednak firma tworzy regularnie materiały sprzedażowe, prowadzi social m
 
 Dlatego księga znaku jest inwestycją tam, gdzie marka ma działać sprawnie. Nie chodzi wyłącznie o estetykę. Chodzi o szybszą produkcję materiałów, łatwiejsze wdrażanie nowych osób i większą spójność komunikacji, która wpływa na odbiór firmy przez klientów, kandydatów i partnerów.
 
-<h2 id="jak-nie-przeplacic-za-ksiege-znaku" class="reveal">Jak nie przepłacić za księgę znaku</h2>
+## Jak nie przepłacić za księgę znaku {#jak-nie-przeplacic-za-ksiege-znaku}
 
 Najlepszy sposób to zacząć od realnych potrzeb, a nie od modnych nazw. Nie każda firma potrzebuje od razu pełnego brand booka. Czasem wystarczy dobrze przygotowana mini księga znaku, która porządkuje najważniejsze elementy i pozwala pracować bez chaosu.
 
@@ -99,7 +97,7 @@ Sama liczba stron nie powinna być głównym kryterium. Bardziej liczy się to, 
 
 Dobrze też zapytać, czy księga znaku jest częścią większego procesu identyfikacji wizualnej. Jeśli tak, cena może być bardziej opłacalna niż zamawianie wszystkiego osobno. W modelu pełnej obsługi, jaki preferują firmy działające szybko i wielokanałowo, to często najbardziej efektywna opcja operacyjnie.
 
-<h2 id="ksiega-znaku-cena-a-pelna-identyfikacja-wizualna" class="reveal">Księga znaku cena a pełna identyfikacja wizualna</h2>
+## Księga znaku cena a pełna identyfikacja wizualna {#ksiega-znaku-cena-a-pelna-identyfikacja-wizualna}
 
 To rozróżnienie często się zaciera, a potem pojawia się rozczarowanie po obu stronach. Księga znaku nie zawsze oznacza pełną identyfikację wizualną. Może być tylko zbiorem zasad użycia gotowego logo. Pełna identyfikacja obejmuje zwykle więcej: styl graficzny, typografię, paletę kolorów, layouty materiałów, system ikon, zasady tworzenia grafik i nieraz także wskazówki dla digitalu oraz druku.
 

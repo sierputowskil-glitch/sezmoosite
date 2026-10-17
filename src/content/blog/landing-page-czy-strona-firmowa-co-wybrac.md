@@ -31,17 +31,15 @@ toc:
     label: "Najczęstszy błąd: oczekiwanie, że jedna strona zrobi wszystko"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 W praktyce wiele firm podejmuje złą decyzję nie dlatego, że wybiera słabe rozwiązanie, ale dlatego, że oczekuje od niego wszystkiego naraz. Landing page ma sprzedawać, strona firmowa ma budować zaufanie i porządkować komunikację. Gdy próbujesz zrobić jedno i drugie w jednym miejscu bez strategii, zwykle kończy się przeciętnie.
 
-<h2 id="landing-page-czy-strona-firmowa-najkrotsza-odpowiedz" class="reveal">Landing page czy strona firmowa – najkrótsza odpowiedź</h2>
+## Landing page czy strona firmowa – najkrótsza odpowiedź {#landing-page-czy-strona-firmowa-najkrotsza-odpowiedz}
 
 Jeśli chcesz szybko wygenerować kontakt, zapisać użytkownika na webinar, sprzedać konkretną usługę albo skierować ruch z reklamy w jedno precyzyjne miejsce, lepszy będzie landing page. Jeśli potrzebujesz mocnej obecności online, pokazania całej oferty, portfolio, zespołu i wiarygodności firmy, potrzebna będzie strona firmowa.
 
 To jednak tylko punkt wyjścia. W realnym marketingu rzadko działa model zero-jedynkowy. Dla części firm najlepszą decyzją będzie start od jednej strony sprzedażowej. Dla innych – od pełnej strony www. Są też sytuacje, w których oba rozwiązania powinny działać równolegle.
 
-<h2 id="czym-naprawde-rozni-sie-landing-page-od-strony-firmowej" class="reveal">Czym naprawdę różni się landing page od strony firmowej</h2>
+## Czym naprawdę różni się landing page od strony firmowej {#czym-naprawde-rozni-sie-landing-page-od-strony-firmowej}
 
 Landing page to strona stworzona pod jeden konkretny cel. Ma prowadzić użytkownika do jednej akcji: wysłania formularza, zakupu, zapisu, pobrania oferty albo rezerwacji rozmowy. Nie rozprasza. Nie prowadzi w pięć miejsc naraz. Nie opowiada całej historii marki, tylko koncentruje uwagę na jednej decyzji.
 
@@ -49,7 +47,7 @@ Strona firmowa działa szerzej. To cyfrowa baza marki. Pokazuje, kim jesteś, co
 
 Tu pojawia się najważniejsza różnica: landing page zamyka użytkownika w jednym scenariuszu, a strona firmowa daje mu przestrzeń do poznania marki. Jedno narzędzie jest nastawione na działanie tu i teraz, drugie na wiarygodność, rozwój komunikacji i długofalową obecność.
 
-<h2 id="kiedy-landing-page-wygrywa" class="reveal">Kiedy landing page wygrywa</h2>
+## Kiedy landing page wygrywa {#kiedy-landing-page-wygrywa}
 
 Landing page sprawdza się najlepiej wtedy, gdy ruch ma konkretne źródło i konkretny cel. Jeśli uruchamiasz kampanię reklamową, promujesz nową usługę, prowadzisz nabór, organizujesz wydarzenie albo chcesz przetestować zainteresowanie nową ofertą, [strona sprzedażowa](/uslugi-marketingowe/strony-internetowe-i-landing-page/) daje przewagę.
 
@@ -59,7 +57,7 @@ To szczególnie ważne przy działaniach płatnych. Jeśli [inwestujesz w reklam
 
 Jest też drugi atut – szybkość. Landing page można przygotować szybciej niż rozbudowaną stronę firmową, a to ma znaczenie, gdy liczy się czas wejścia na rynek, test oferty albo start kampanii sezonowej.
 
-<h2 id="kiedy-strona-firmowa-jest-lepszym-wyborem" class="reveal">Kiedy strona firmowa jest lepszym wyborem</h2>
+## Kiedy strona firmowa jest lepszym wyborem {#kiedy-strona-firmowa-jest-lepszym-wyborem}
 
 Są firmy, które nie potrzebują jednej strony do jednego celu. Potrzebują solidnej obecności online, która porządkuje markę i daje odbiorcy pełen obraz kompetencji. Właśnie wtedy strona firmowa ma większy sens.
 
@@ -69,7 +67,7 @@ Strona firmowa pracuje też na wizerunek. Daje przestrzeń do pokazania jakości
 
 Warto też pamiętać o widoczności w wyszukiwarce. Strona firmowa daje większe możliwości rozbudowy treści, prezentacji różnych usług i budowania długofalowego ruchu. Landing page jest skuteczny w kampanii, ale rzadziej zastępuje pełne zaplecze komunikacyjne marki.
 
-<h2 id="landing-page-czy-strona-firmowa-w-zaleznosci-od-celu" class="reveal">Landing page czy strona firmowa w zależności od celu</h2>
+## Landing page czy strona firmowa w zależności od celu {#landing-page-czy-strona-firmowa-w-zaleznosci-od-celu}
 
 Najwięcej pomyłek bierze się z tego, że firmy wybierają narzędzie, zanim nazwą cel. A kolejność powinna być odwrotna.
 
@@ -79,7 +77,7 @@ Są też cele mieszane. Przykład? Firma budowlana ma stronę firmową, ale do k
 
 To często najlepszy model, bo nie zmusza jednego narzędzia do pełnienia wszystkich funkcji naraz.
 
-<h2 id="najczestszy-blad-oczekiwanie-ze-jedna-strona-zrobi-wszystko" class="reveal">Najczęstszy błąd: oczekiwanie, że jedna strona zrobi wszystko</h2>
+## Najczęstszy błąd: oczekiwanie, że jedna strona zrobi wszystko {#najczestszy-blad-oczekiwanie-ze-jedna-strona-zrobi-wszystko}
 
 Firmy często chcą mieć witrynę, która jednocześnie będzie wizytówką, katalogiem usług, narzędziem sprzedażowym, miejscem do kampanii i platformą rekrutacyjną. Da się to połączyć tylko do pewnego momentu. Im więcej funkcji próbujesz zmieścić w jednym miejscu, tym trudniej utrzymać prosty przekaz i wysoką skuteczność.
 
@@ -87,7 +85,7 @@ Dlatego warto oddzielić dwa porządki. Strona firmowa buduje fundament i zaufan
 
 W modelu, w którym marka rozwija kilka działań równolegle, osobne strony kampanijne dają też większą elastyczność. Można szybciej zmieniać komunikat, testować nagłówki, dopasowywać ofertę do segmentu odbiorców i bezpiecznie prowadzić kampanie bez przebudowy całej strony firmowej.
 
-<h2 id="co-wybrac-na-start-jesli-budzet-jest-ograniczony" class="reveal">Co wybrać na start, jeśli budżet jest ograniczony</h2>
+## Co wybrać na start, jeśli budżet jest ograniczony {#co-wybrac-na-start-jesli-budzet-jest-ograniczony}
 
 To zależy od etapu biznesu. Jeśli firma dopiero wchodzi z usługą na rynek i potrzebuje szybko zacząć pozyskiwać zapytania, landing page może być bardziej opłacalnym pierwszym krokiem. Pozwala sprawdzić, czy oferta i komunikacja trafiają do odbiorców, zanim zainwestujesz w rozbudowaną stronę.
 
@@ -95,7 +93,7 @@ Jeśli jednak działasz już aktywnie, masz kilka usług, chcesz wyglądać prof
 
 Rozsądne podejście polega na tym, by nie patrzeć tylko na koszt wdrożenia, ale na koszt utraconych szans. Czasem tańszy landing page wygra, bo szybciej zacznie zarabiać. A czasem brak pełnej strony firmowej będzie odbierał Ci wiarygodność przy większych projektach.
 
-<h2 id="jak-podjac-dobra-decyzje-bez-zgadywania" class="reveal">Jak podjąć dobrą decyzję bez zgadywania</h2>
+## Jak podjąć dobrą decyzję bez zgadywania {#jak-podjac-dobra-decyzje-bez-zgadywania}
 
 Zamiast pytać wyłącznie, landing page czy strona firmowa, lepiej zadać sobie kilka bardziej praktycznych pytań. Skąd będzie pochodził ruch? Jaką jedną akcję ma wykonać użytkownik? Czy odbiorca potrzebuje pełnego obrazu firmy, czy tylko konkretnej oferty? Jak długi jest proces decyzyjny? Czy planujesz kampanie reklamowe? Czy masz kilka person i kilka różnych komunikatów sprzedażowych?
 

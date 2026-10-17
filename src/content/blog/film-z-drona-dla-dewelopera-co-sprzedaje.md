@@ -31,11 +31,9 @@ toc:
     label: "Na co zwrócić uwagę przy zamawianiu filmu"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Zdjęcia z poziomu ziemi pokazują detale. Ujęcia z powietrza pokazują kontekst, a w nieruchomościach to często kontekst sprzedaje najmocniej. Bliskość zieleni, dojazd, ekspozycja budynków, odległość od głównych punktów miasta, układ części wspólnych – tego nie da się opowiedzieć równie przekonująco samym tekstem czy standardową galerią zdjęć.
 
-<h2 id="dlaczego-film-z-drona-dla-dewelopera-dziala" class="reveal">Dlaczego film z drona dla dewelopera działa</h2>
+## Dlaczego film z drona dla dewelopera działa {#dlaczego-film-z-drona-dla-dewelopera-dziala}
 
 Deweloperzy sprzedają coś więcej niż metraż. Sprzedają styl życia, wygodę, bezpieczeństwo decyzji i obietnicę dobrze ulokowanych pieniędzy. Film z drona pozwala pokazać tę wartość szybciej niż klasyczna prezentacja, bo od razu buduje skalę inwestycji i osadza ją w realnym miejscu.
 
@@ -43,7 +41,7 @@ Dla klienta indywidualnego to prosty komunikat – widzę, gdzie będę mieszka�
 
 To ważne rozróżnienie. Efektowny przelot nad osiedlem nie wystarczy, jeśli film nie odpowiada na realne pytania odbiorcy. Czy inwestycja jest skomunikowana? Czy teren wygląda na uporządkowany? Czy sąsiedztwo wspiera wartość nieruchomości? Czy budowa postępuje zgodnie z deklaracjami? Dobrze zaplanowany materiał odpowiada na te kwestie bez nachalnej sprzedaży.
 
-<h2 id="co-powinien-pokazac-dobry-film-z-drona-dla-dewelopera" class="reveal">Co powinien pokazać dobry film z drona dla dewelopera</h2>
+## Co powinien pokazać dobry film z drona dla dewelopera {#co-powinien-pokazac-dobry-film-z-drona-dla-dewelopera}
 
 Najlepsze realizacje nie ograniczają się do kilku widowiskowych najazdów. Pokazują inwestycję w sposób, który wzmacnia decyzję zakupową. W praktyce liczą się trzy warstwy.
 
@@ -53,7 +51,7 @@ Druga warstwa to sama inwestycja. Tu liczy się skala, etap realizacji, architek
 
 Trzecia warstwa to wiarygodność. W przypadku inwestycji w budowie materiał z drona pomaga regularnie potwierdzać postęp prac. To szczególnie cenne przy komunikacji z klientami, którzy już kupili mieszkania, ale też z tymi, którzy są jeszcze na etapie porównywania ofert. Regularne aktualizacje budują zaufanie dużo skuteczniej niż ogólniki o terminowości.
 
-<h2 id="kiedy-film-sprzedaje-a-kiedy-tylko-wyglada-dobrze" class="reveal">Kiedy film sprzedaje, a kiedy tylko wygląda dobrze</h2>
+## Kiedy film sprzedaje, a kiedy tylko wygląda dobrze {#kiedy-film-sprzedaje-a-kiedy-tylko-wyglada-dobrze}
 
 Tu pojawia się najczęstszy błąd. Deweloper zamawia materiał, który świetnie prezentuje się na spotkaniu czy w social mediach, ale nie wspiera lejka sprzedażowego. Problem zwykle nie leży w samych ujęciach, tylko w braku strategii wykorzystania.
 
@@ -61,7 +59,7 @@ Jeśli film ma trafić na stronę inwestycji, musi szybko komunikować najważni
 
 Podobnie z długością. Zbyt długi materiał obniża uwagę. Zbyt krótki może nie oddać przewag projektu. Dlatego zamiast jednego filmu warto myśleć pakietowo – pełna wersja wizerunkowo-sprzedażowa, krótsze cięcia do reklam, pionowe formaty do social mediów i aktualizacje z budowy. Jedna produkcja może pracować [w wielu kanałach](/uslugi-marketingowe/obsluga-social-media/), jeśli od początku planuje się ją jako część większej komunikacji.
 
-<h2 id="etap-inwestycji-ma-znaczenie" class="reveal">Etap inwestycji ma znaczenie</h2>
+## Etap inwestycji ma znaczenie {#etap-inwestycji-ma-znaczenie}
 
 Nie każdy film z drona dla dewelopera powinien wyglądać tak samo. Na etapie dziury w ziemi nie obroni się materiał oparty wyłącznie na pięknie gotowego osiedla, bo tego po prostu jeszcze nie ma. Wtedy kluczowe staje się pokazanie lokalizacji, infrastruktury, sąsiedztwa i skali terenu. Dobrze uzupełniają to animacje, plansze lub wizualizacje wkomponowane w realne ujęcia.
 
@@ -69,7 +67,7 @@ Przy stanie surowym rośnie znaczenie transparentności. Klienci chcą widzieć,
 
 W gotowej inwestycji film może wejść na inny poziom. Wtedy liczy się doświadczenie miejsca – jak osiedle układa się w otoczeniu, jak wygląda zieleń, elewacje, części wspólne i rytm codziennego życia wokół. To moment, w którym materiał z drona może najmocniej wspierać sprzedaż ostatnich lokali, a także komunikację kolejnych etapów projektu.
 
-<h2 id="jak-wykorzystac-material-w-marketingu-dewelopera" class="reveal">Jak wykorzystać materiał w marketingu dewelopera</h2>
+## Jak wykorzystać materiał w marketingu dewelopera {#jak-wykorzystac-material-w-marketingu-dewelopera}
 
 Największy zwrot z takiej produkcji pojawia się wtedy, gdy film nie kończy życia po jednej publikacji. Jeden dzień zdjęciowy powinien pracować długo i szeroko. Materiał można wykorzystać na [stronie inwestycji](/uslugi-marketingowe/strony-internetowe-i-landing-page/), w kampaniach płatnych, w social mediach, na ekranach sprzedażowych w biurze obsługi klienta, podczas targów nieruchomości i w komunikacji do obecnych nabywców.
 
@@ -77,7 +75,7 @@ Warto też pamiętać, że różne grupy odbiorców potrzebują różnych wersji
 
 W praktyce najbardziej opłacalne są realizacje zaprojektowane jako element całego systemu treści. Jeśli agencja myśli nie tylko o locie dronem, ale też o montażu wariantów, skrótach reklamowych, spójności z identyfikacją i późniejszej dystrybucji, materiał zyskuje realną wartość biznesową. Właśnie dlatego model jednego partnera, który ogarnia strategię, kreację i produkcję, zwykle oszczędza czas i ogranicza chaos po stronie dewelopera.
 
-<h2 id="na-co-zwrocic-uwage-przy-zamawianiu-filmu" class="reveal">Na co zwrócić uwagę przy zamawianiu filmu</h2>
+## Na co zwrócić uwagę przy zamawianiu filmu {#na-co-zwrocic-uwage-przy-zamawianiu-filmu}
 
 Najpierw trzeba ustalić cel. To brzmi banalnie, ale często właśnie tego brakuje. Czy chodzi o start sprzedaży, podbicie kampanii leadowej, komunikację postępu budowy, czy może budowę wizerunku marki deweloperskiej? Od tego zależy scenariusz, styl montażu i zakres zdjęć.
 
@@ -85,7 +83,7 @@ Druga sprawa to legalność i organizacja produkcji. Loty dronem w przestrzeni m
 
 Trzecia kwestia to jakość narracji. Same ujęcia z góry nie wystarczą. Liczy się to, jak zostaną zmontowane, czym zostaną uzupełnione i jaki komunikat finalnie niosą. Czasem lepiej sprawdzi się spokojny, elegancki film premium. Innym razem dynamiczny montaż, który od pierwszych sekund sprzedaje lokalizację i przewagi projektu. To zależy od segmentu inwestycji i etapu kampanii.
 
-<h2 id="ile-kosztuje-brak-takiego-materialu" class="reveal">Ile kosztuje brak takiego materiału</h2>
+## Ile kosztuje brak takiego materiału {#ile-kosztuje-brak-takiego-materialu}
 
 To pytanie pada rzadziej niż powinno. Deweloperzy często zastanawiają się, ile kosztuje produkcja, zamiast policzyć, ile kosztuje słaba prezentacja inwestycji. Jeśli klient nie rozumie lokalizacji, nie widzi skali projektu albo ma wątpliwości co do postępu prac, sprzedaż zwalnia. Zespół handlowy musi więcej tłumaczyć, leady są mniej jakościowe, a kampanie reklamowe pracują poniżej potencjału.
 

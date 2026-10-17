@@ -31,11 +31,9 @@ toc:
     label: "Ryzyko, o którym rzadko mówi się na początku"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Nie ma jednej odpowiedzi dobrej dla każdej firmy. Są za to bardzo konkretne scenariusze, w których freelancer będzie świetnym wyborem, i takie, w których lepiej działa agencja. Klucz nie leży w tym, kto jest „lepszy”, tylko w tym, jakiego efektu potrzebujesz, jak szybko chcesz go osiągnąć i ile obszarów trzeba po drodze ogarnąć.
 
-<h2 id="agencja-kreatywna-czy-freelancer-marketingowy-od-czego-napra" class="reveal">Agencja kreatywna czy freelancer marketingowy – od czego naprawdę zależy wybór</h2>
+## Agencja kreatywna czy freelancer marketingowy – od czego naprawdę zależy wybór {#agencja-kreatywna-czy-freelancer-marketingowy-od-czego-napra}
 
 Na pierwszy rzut oka różnica wydaje się prosta. Freelancer to jedna osoba z określoną specjalizacją, a agencja to zespół. W praktyce chodzi jednak o coś więcej niż liczbę ludzi w projekcie.
 
@@ -45,7 +43,7 @@ Agencja kreatywna jest mocniejszym rozwiązaniem wtedy, gdy marketing nie kończ
 
 Dlatego ten wybór warto oprzeć nie na stawce godzinowej, tylko na modelu działania Twojej firmy. Czy potrzebujesz wykonawcy do jednego obszaru, czy partnera, który przejmie większy kawałek marketingu i dowiezie go od pomysłu do publikacji?
 
-<h2 id="kiedy-freelancer-marketingowy-ma-przewage" class="reveal">Kiedy freelancer marketingowy ma przewagę</h2>
+## Kiedy freelancer marketingowy ma przewagę {#kiedy-freelancer-marketingowy-ma-przewage}
 
 Freelancer wygrywa tam, gdzie liczy się specjalizacja, szybkość kontaktu i prosty proces decyzyjny. Jeśli pracujesz z osobą doświadczoną, możesz dostać bardzo dobrą jakość bez rozbudowanej struktury i bez kosztów związanych z obsługą większego zespołu.
 
@@ -55,7 +53,7 @@ Freelancer bywa też korzystny przy krótkich zleceniach. Jednorazowa sesja, ser
 
 Jest jednak warunek. Ktoś po Twojej stronie musi pilnować kierunku, terminów i spójności. Freelancer zazwyczaj nie zastępuje całego działu marketingu. Realizuje swój wycinek. Im więcej takich wycinków dochodzi, tym większe ryzyko, że firma zacznie zarządzać mozaiką podwykonawców zamiast marketingiem.
 
-<h2 id="kiedy-agencja-kreatywna-daje-wiecej-niz-pojedynczy-specjalis" class="reveal">Kiedy agencja kreatywna daje więcej niż pojedynczy specjalista</h2>
+## Kiedy agencja kreatywna daje więcej niż pojedynczy specjalista {#kiedy-agencja-kreatywna-daje-wiecej-niz-pojedynczy-specjalis}
 
 Są momenty, w których firma nie potrzebuje kolejnej osoby „do czegoś”, tylko systemu pracy, który przyspiesza działania i zdejmuje z zespołu operacyjny chaos. Właśnie tu agencja zaczyna mieć realną przewagę.
 
@@ -65,7 +63,7 @@ Agencja skraca ten proces, bo pracuje zespołowo. Strateg, grafik, contentowiec,
 
 To szczególnie ważne wtedy, gdy marketing ma działać stale, a nie z doskoku. Firmy, które rozwijają sprzedaż, rekrutację i komunikację marki równolegle, potrzebują partnera, który potrafi przełączać się między formatami i kanałami bez utraty jakości.
 
-<h2 id="koszt-wspolpracy-taniej-nie-zawsze-znaczy-korzystniej" class="reveal">Koszt współpracy – taniej nie zawsze znaczy korzystniej</h2>
+## Koszt współpracy – taniej nie zawsze znaczy korzystniej {#koszt-wspolpracy-taniej-nie-zawsze-znaczy-korzystniej}
 
 Wiele firm zaczyna od prostego porównania cen. Freelancer wydaje się tańszy, agencja droższa. Na fakturze często tak właśnie jest. Problem w tym, że sam koszt usługi nie pokazuje całego obrazu.
 
@@ -75,7 +73,7 @@ W praktyce taniej bywa rozwiązanie, które oszczędza czas Twojego zespołu i z
 
 Dlatego warto patrzeć szerzej. Nie tylko ile kosztuje wykonanie, ale ile kosztuje dowiezienie całości. To dwie różne rzeczy.
 
-<h2 id="agencja-kreatywna-czy-freelancer-marketingowy-przy-stalej-ob" class="reveal">Agencja kreatywna czy freelancer marketingowy przy stałej obsłudze</h2>
+## Agencja kreatywna czy freelancer marketingowy przy stałej obsłudze {#agencja-kreatywna-czy-freelancer-marketingowy-przy-stalej-ob}
 
 Przy regularnych działaniach różnice widać najmocniej. Stała obsługa marketingowa wymaga nie tylko tworzenia materiałów, ale też utrzymania tempa, spójności komunikacji i reagowania na bieżące potrzeby biznesu.
 
@@ -85,7 +83,7 @@ Agencja daje większą elastyczność. Możesz w jednym miesiącu mocniej wejś�
 
 Właśnie dlatego model zewnętrznego działu marketingu jest wygodny dla firm, które chcą działać szerzej, ale nie planują tworzyć rozbudowanego zespołu in-house. Zyskują dostęp do różnych kompetencji wtedy, gdy są potrzebne, a nie dopiero po kilku tygodniach rekrutacji i onboardingu.
 
-<h2 id="ryzyko-o-ktorym-rzadko-mowi-sie-na-poczatku" class="reveal">Ryzyko, o którym rzadko mówi się na początku</h2>
+## Ryzyko, o którym rzadko mówi się na początku {#ryzyko-o-ktorym-rzadko-mowi-sie-na-poczatku}
 
 Największym ryzykiem przy współpracy z freelancerem nie jest wcale jakość pracy. Dobrych specjalistów na rynku nie brakuje. Problemem jest zależność od jednej osoby.
 
@@ -95,7 +93,7 @@ W agencji odpowiedzialność jest rozłożona. Projekt nie zależy od jednej par
 
 Drugie ryzyko to spójność. Im więcej niezależnych wykonawców, tym trudniej utrzymać jeden [standard wizualny](/dlaczego-twoja-firma-potrzebuje-spojnego-brandingu/), jeden ton marki i jeden sposób myślenia o celach biznesowych. Klient końcowy tego nie nazwie, ale to zauważy. Marka zacznie wyglądać, jakby była składana z kilku różnych pomysłów.
 
-<h2 id="jak-podjac-dobra-decyzje-bez-przepalania-budzetu" class="reveal">Jak podjąć dobrą decyzję bez przepalania budżetu</h2>
+## Jak podjąć dobrą decyzję bez przepalania budżetu {#jak-podjac-dobra-decyzje-bez-przepalania-budzetu}
 
 Zacznij od zakresu, nie od formy współpracy. Jeśli potrzebujesz jednej konkretnej kompetencji i masz zasoby, by nią zarządzić, freelancer może być trafnym wyborem. Jeśli potrzebujesz efektu, który wymaga kilku kompetencji naraz, agencja zwykle będzie bardziej przewidywalna.
 

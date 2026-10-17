@@ -31,11 +31,9 @@ toc:
     label: "Webinary, demo i formaty eksperckie"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Jeśli odpowiadasz za marketing, sprzedaż albo rozwój marki, to pewnie widzisz ten sam problem co większość firm. Budżet reklamowy jest ograniczony, oczekiwania wobec wyników rosną, a kampanie mają robić kilka rzeczy naraz: budować rozpoznawalność, generować leady i wspierać domknięcie sprzedaży. W takim układzie wybór formatu nie jest decyzją kreatywną. To decyzja biznesowa.
 
-<h2 id="najlepsze-formaty-reklamowe-dla-b2b-od-czego-to-zalezy" class="reveal">Najlepsze formaty reklamowe dla B2B – od czego to zależy</h2>
+## Najlepsze formaty reklamowe dla B2B – od czego to zależy {#najlepsze-formaty-reklamowe-dla-b2b-od-czego-to-zalezy}
 
 Zanim przejdziemy do konkretnych formatów, warto ustawić jedną rzecz. W B2B nie ma uniwersalnie najlepszego rozwiązania. Format, który działa świetnie w branży przemysłowej, nie musi dawać tych samych efektów w usługach HR, IT czy nieruchomościach komercyjnych.
 
@@ -43,7 +41,7 @@ Znaczenie ma kilka czynników: wartość oferty, złożoność produktu, długo�
 
 Dlatego sensowna strategia zaczyna się od pytania: czego ma dokonać reklama? Jeśli ma złapać uwagę rynku, potrzebujesz formatu o dużej sile wizualnej. Jeśli ma generować kontakt, potrzebujesz czegoś, co redukuje tarcie i szybko prowadzi do działania. Jeśli ma wesprzeć decyzję, potrzebujesz materiału, który tłumaczy, pokazuje i buduje wiarygodność.
 
-<h2 id="wideo-reklamowe-najmocniejszy-format-na-start-uwagi" class="reveal">Wideo reklamowe – najmocniejszy format na start uwagi</h2>
+## Wideo reklamowe – najmocniejszy format na start uwagi {#wideo-reklamowe-najmocniejszy-format-na-start-uwagi}
 
 Wideo w B2B działa najlepiej tam, gdzie trzeba szybko pokazać wartość, proces albo skalę działania. To bardzo dobry format dla firm, które chcą przestać mówić o sobie ogólnikami i zacząć pokazywać konkrety. Produkcja, zaplecze technologiczne, jakość realizacji, ludzie, standard pracy – to wszystko da się sprzedać znacznie szybciej obrazem niż blokiem tekstu.
 
@@ -57,7 +55,7 @@ Krótkie formaty są dziś bardzo użyteczne w kampaniach B2B, ale nie dlatego, 
 
 To szczególnie dobre rozwiązanie dla firm, które potrzebują regularnej obecności reklamowej i nie chcą opierać wszystkiego na jednej dużej produkcji. Krótkie wideo pomaga utrzymać częstotliwość, odświeża komunikację i dostarcza materiał do remarketingu.
 
-<h2 id="kampanie-lead-ads-i-landing-page-kiedy-liczy-sie-kontakt" class="reveal">Kampanie lead ads i landing page – kiedy liczy się kontakt</h2>
+## Kampanie lead ads i landing page – kiedy liczy się kontakt {#kampanie-lead-ads-i-landing-page-kiedy-liczy-sie-kontakt}
 
 Jeżeli celem jest pozyskanie zapytań, bardzo mocnym wyborem są reklamy kierujące na dobrze zaprojektowany [landing page](/uslugi-marketingowe/strony-internetowe-i-landing-page/) albo kampanie lead ads. W praktyce to jedne z najskuteczniejszych formatów performance dla B2B, bo skracają ścieżkę od zainteresowania do kontaktu.
 
@@ -65,7 +63,7 @@ Landing page daje pełną kontrolę nad przekazem. Możesz dopasować ofertę do
 
 Lead ads sprawdzają się wtedy, gdy chcesz ograniczyć liczbę kroków. Użytkownik nie musi przechodzić na stronę, więc bariera wejścia jest niższa. Minusem bywa jakość części kontaktów – łatwość wypełnienia formularza czasem obniża intencję. Dlatego ten format warto łączyć z dobrą kwalifikacją leadów i sensownym follow-upem po stronie sprzedaży.
 
-<h2 id="case-study-jako-format-reklamowy-nie-tylko-tresc-na-stronie" class="reveal">Case study jako format reklamowy, nie tylko treść na stronie</h2>
+## Case study jako format reklamowy, nie tylko treść na stronie {#case-study-jako-format-reklamowy-nie-tylko-tresc-na-stronie}
 
 W B2B klienci nie kupują obietnic. Kupują dowody. Dlatego case study należy traktować nie jako dodatki do oferty, ale jako pełnoprawny format reklamowy. Dobrze opracowany case działa na kilku poziomach jednocześnie: pokazuje problem, sposób działania, efekt i styl współpracy.
 
@@ -73,7 +71,7 @@ To szczególnie skuteczne w remarketingu oraz kampaniach kierowanych do odbiorc�
 
 Warto pamiętać, że case nie musi mieć formy długiego artykułu. Może być karuzelą, krótkim wideo, grafiką z wynikiem, animacją albo serią kreacji pokazujących proces i rezultat. Liczy się to, by historia była konkretna i osadzona w realnym kontekście biznesowym.
 
-<h2 id="kreacje-statyczne-i-karuzele-niedoceniane-a-bardzo-skuteczne" class="reveal">Kreacje statyczne i karuzele – niedoceniane, a bardzo skuteczne</h2>
+## Kreacje statyczne i karuzele – niedoceniane, a bardzo skuteczne {#kreacje-statyczne-i-karuzele-niedoceniane-a-bardzo-skuteczne}
 
 Wiele firm zakłada, że B2B wymaga wyłącznie „poważnych” formatów. Tymczasem proste kreacje statyczne i karuzele często robią świetną robotę, jeśli komunikat jest dobrze napisany. Ten format ma jedną dużą zaletę: pozwala szybko przekazać sedno oferty bez dużego kosztu produkcyjnego.
 
@@ -81,7 +79,7 @@ Karuzele dobrze działają, gdy trzeba pokazać kilka usług, etapy procesu, prz
 
 Ich ograniczenie jest proste. Jeśli sprzedajesz coś, co trzeba zobaczyć w ruchu, usłyszeć lub poczuć skalą realizacji, statyka może nie wystarczyć. Wtedy lepiej potraktować ją jako wsparcie dla wideo, nie zamiennik.
 
-<h2 id="webinary-demo-i-formaty-eksperckie" class="reveal">Webinary, demo i formaty eksperckie</h2>
+## Webinary, demo i formaty eksperckie {#webinary-demo-i-formaty-eksperckie}
 
 Tam, gdzie produkt lub usługa wymagają wyjaśnienia, mocno pracują formaty eksperckie. Webinar, demo, wypowiedź specjalisty czy krótka seria edukacyjna to reklama, która nie krzyczy, tylko prowadzi odbiorcę do zrozumienia wartości. W B2B to często znacznie skuteczniejsze niż agresywny przekaz sprzedażowy.
 
@@ -89,13 +87,13 @@ Tego typu formaty dobrze sprawdzają się w środkowej części lejka. Odbiorca 
 
 Warunek jest jeden: treść musi być konkretna. Zbyt ogólny webinar albo demo zamienia się w stratę czasu. W B2B odbiorca szybko wyczuwa, czy ktoś naprawdę rozumie jego problem.
 
-<h2 id="najlepsze-formaty-reklamowe-dla-b2b-na-roznych-etapach-lejka" class="reveal">Najlepsze formaty reklamowe dla B2B na różnych etapach lejka</h2>
+## Najlepsze formaty reklamowe dla B2B na różnych etapach lejka {#najlepsze-formaty-reklamowe-dla-b2b-na-roznych-etapach-lejka}
 
 Na górze lejka najlepiej działają formaty, które szybko budują uwagę i zapamiętywalność. Tu zwykle wygrywają krótkie wideo, mocne kreacje statyczne i materiały pokazujące markę w działaniu. W środku lejka rośnie znaczenie case studies, karuzel, treści eksperckich i kampanii edukacyjnych. Na dole lejka potrzebne są formaty, które ułatwiają kontakt i decyzję – landing page, lead ads, demo, konkretna oferta, social proof.
 
 Błąd wielu firm polega na tym, że próbują jednym formatem obsłużyć cały proces. To rzadko działa. Ktoś, kto widzi markę pierwszy raz, zwykle nie jest gotowy na formularz kontaktowy. Z kolei osoba, która już porównuje dostawców, nie potrzebuje kolejnego ogólnego filmu wizerunkowego. Potrzebuje dowodu, konkretu i jasnego powodu, żeby odezwać się właśnie teraz.
 
-<h2 id="jak-wybrac-format-ktory-faktycznie-zadziala" class="reveal">Jak wybrać format, który faktycznie zadziała</h2>
+## Jak wybrać format, który faktycznie zadziała {#jak-wybrac-format-ktory-faktycznie-zadziala}
 
 Najrozsądniej zacząć od zasobów, które już masz. Jeśli firma ma ciekawe realizacje, zaplecze produkcyjne, ekspertów albo mocne case’y, warto to wykorzystać zamiast wymyślać komunikację od zera. Najlepsze kampanie B2B rzadko są „najbardziej kreatywne” w oderwaniu od biznesu. Najczęściej są po prostu trafne i dobrze egzekwowane.
 

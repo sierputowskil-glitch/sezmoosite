@@ -31,11 +31,9 @@ toc:
     label: "Napisy, dźwięk i dostępność jako standard"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dla firm B2B, marek lokalnych i dużych organizacji wideo stało się narzędziem do znacznie więcej niż budowania zasięgów. Pomaga skrócić proces sprzedaży, pokazać ludzi stojących za marką, wyjaśnić złożoną usługę oraz wesprzeć rekrutację. Warunek jest prosty: materiał musi być zaplanowany pod cel, a nie nagrany tylko dlatego, że „trzeba coś wrzucić na social media”.
 
-<h2 id="trendy-w-video-marketingu-krocej-ale-nie-plycej" class="reveal">Trendy w video marketingu: krócej, ale nie płycej</h2>
+## Trendy w video marketingu: krócej, ale nie płycej {#trendy-w-video-marketingu-krocej-ale-nie-plycej}
 
 Krótkie formaty nadal dominują, ponieważ dobrze pasują do sposobu, w jaki konsumujemy treści w kanałach społecznościowych. Reels, shortsy i [pionowe materiały](/uslugi-marketingowe/obsluga-social-media/) nie muszą jednak oznaczać powierzchownej komunikacji. W 30-60 sekund można pokazać problem klienta, fragment realizacji, opinię użytkownika albo jedną konkretną przewagę firmy.
 
@@ -43,7 +41,7 @@ Najlepiej działają materiały, które zaczynają się od napięcia, pytania lu
 
 Krótki format wymaga większej dyscypliny niż film wizerunkowy trwający kilka minut. Jedna rolka powinna realizować jedno zadanie. Jeśli ma promować produkt, nie próbujmy jednocześnie opowiedzieć historii firmy, zrekrutować pracowników i objaśnić całej oferty. Rozdzielenie tematów daje czytelniejszy przekaz oraz więcej materiału do testowania.
 
-<h2 id="autentycznosc-wygrywa-z-reklamowa-perfekcja" class="reveal">Autentyczność wygrywa z reklamową perfekcją</h2>
+## Autentyczność wygrywa z reklamową perfekcją {#autentycznosc-wygrywa-z-reklamowa-perfekcja}
 
 Odbiorcy szybko rozpoznają materiał, który brzmi jak gotowy slogan. Nie oznacza to, że firma ma rezygnować z dobrej realizacji, światła czy montażu. Chodzi o to, by jakość produkcji wspierała wiarygodność, a nie przykrywała brak treści.
 
@@ -51,7 +49,7 @@ Coraz mocniejszym formatem są wypowiedzi ekspertów, pracowników i klientów. 
 
 Warto przygotować rozmówcę, ale nie pisać mu całej wypowiedzi słowo w słowo. Lepszy efekt daje zestaw pytań, jasny cel nagrania i przestrzeń na naturalną odpowiedź. Potknięcie w zdaniu da się wyciąć. Sztucznego tonu często nie da się uratować nawet najlepszym montażem.
 
-<h2 id="seriale-zamiast-pojedynczych-strzalow" class="reveal">Seriale zamiast pojedynczych strzałów</h2>
+## Seriale zamiast pojedynczych strzałów {#seriale-zamiast-pojedynczych-strzalow}
 
 Jednorazowy film może być świetny, ale rzadko buduje rozpoznawalność samodzielnie. Marki coraz częściej tworzą cykle wideo o powtarzalnym formacie. Mogą to być krótkie analizy branżowych problemów, kulisy realizacji, odpowiedzi na pytania klientów, prezentacje zespołu czy komentarze ekspertów.
 
@@ -59,7 +57,7 @@ Seria daje odbiorcom powód, aby wrócić. Daje też firmie sprawniejszy proces 
 
 Nie każda seria potrzebuje takiego samego tempa. Marka e-commerce może publikować dynamiczne materiały kilka razy w tygodniu, natomiast firma przemysłowa osiągnie dobry efekt dzięki dwóm wartościowym filmom miesięcznie. Liczy się regularność dopasowana do możliwości zespołu i do długości procesu zakupowego.
 
-<h2 id="wideo-produktowe-ma-pokazywac-uzytek-nie-tylko-produkt" class="reveal">Wideo produktowe ma pokazywać użytek, nie tylko produkt</h2>
+## Wideo produktowe ma pokazywać użytek, nie tylko produkt {#wideo-produktowe-ma-pokazywac-uzytek-nie-tylko-produkt}
 
 Estetyczne [przebitki produktu](/uslugi-marketingowe/fotografia/) nadal mają swoje miejsce, zwłaszcza w kampaniach wizerunkowych. Same w sobie często nie odpowiadają jednak na pytanie: dlaczego klient ma wybrać właśnie tę ofertę? Dlatego rośnie znaczenie wideo, które produkt demonstruje w realnym kontekście.
 
@@ -67,7 +65,7 @@ Maszyna powinna pracować, aplikacja rozwiązywać zadanie, kosmetyk być używa
 
 W przypadku produktów technicznych warto łączyć obraz z prostą narracją. Nie trzeba upraszczać technologii na siłę, ale trzeba przełożyć jej parametry na korzyść. Zamiast mówić tylko o mocy, systemie lub materiale, pokażmy, co oznacza to dla użytkownika: mniej przestojów, szybszą obsługę, niższe koszty albo większe bezpieczeństwo.
 
-<h2 id="personalizacja-i-ai-tempo-rosnie-odpowiedzialnosc-zostaje" class="reveal">Personalizacja i AI: tempo rośnie, odpowiedzialność zostaje</h2>
+## Personalizacja i AI: tempo rośnie, odpowiedzialność zostaje {#personalizacja-i-ai-tempo-rosnie-odpowiedzialnosc-zostaje}
 
 Narzędzia AI przyspieszają produkcję transkrypcji, napisów, wersji językowych, wstępnych scenariuszy oraz wariantów kreacji. To cenna pomoc, szczególnie gdy firma prowadzi wiele kampanii i potrzebuje szybko adaptować materiały do różnych kanałów. Technologia nie zastąpi jednak dobrej strategii, własnego punktu widzenia ani materiału źródłowego, który naprawdę ma coś do powiedzenia.
 
@@ -75,7 +73,7 @@ Największą wartość AI daje tam, gdzie usuwa powtarzalną pracę. Zespół mo
 
 Personalizacja nie musi oznaczać tworzenia osobnego filmu dla każdego odbiorcy. Często wystarczy przygotować kilka wersji otwarcia, inne przykłady dla poszczególnych branż lub osobne wezwania do działania dla klientów na różnych etapach decyzji. Ten sam materiał bazowy może wtedy pracować skuteczniej w kampanii remarketingowej, sprzedażowej i employer brandingowej.
 
-<h2 id="napisy-dzwiek-i-dostepnosc-jako-standard" class="reveal">Napisy, dźwięk i dostępność jako standard</h2>
+## Napisy, dźwięk i dostępność jako standard {#napisy-dzwiek-i-dostepnosc-jako-standard}
 
 Wideo jest często oglądane bez dźwięku – w biurze, w podróży, w kolejce czy między spotkaniami. Napisy nie są dodatkiem na końcu procesu. Są częścią projektu, podobnie jak kadrowanie i kolorystyka. Powinny być czytelne na telefonie, dobrze zsynchronizowane i bez nadmiaru tekstu na ekranie.
 
@@ -83,13 +81,13 @@ Trzeba też pamiętać o formacie. Materiał pionowy sprawdzi się w rolkach i r
 
 Dobrze zaplanowana produkcja zakłada od początku kilka wersji: krótką, dłuższą, pionową, poziomą oraz kluczowe kadry statyczne. Tak powstaje bank treści, który pracuje dłużej niż przez tydzień po publikacji premiery.
 
-<h2 id="mierzymy-dzialanie-nie-tylko-wyswietlenia" class="reveal">Mierzymy działanie, nie tylko wyświetlenia</h2>
+## Mierzymy działanie, nie tylko wyświetlenia {#mierzymy-dzialanie-nie-tylko-wyswietlenia}
 
 Duża liczba odtworzeń może wyglądać dobrze w raporcie, ale nie zawsze oznacza wartość dla biznesu. Jeśli celem filmu jest generowanie zapytań, obserwujmy kliknięcia, przejścia na stronę, wypełnione formularze i jakość leadów. Przy materiale rekrutacyjnym ważniejsze mogą być zgłoszenia kandydatów, a przy wideo edukacyjnym – średni czas oglądania oraz powracający odbiorcy.
 
 Warto testować różne pierwsze sekundy, miniatury, długości i wezwania do działania. Nie trzeba przy tym zmieniać wszystkiego naraz. Jedna zmienna na test pozwala zrozumieć, co faktycznie wpłynęło na wynik. Po kilku publikacjach marka zyskuje własne dane, znacznie cenniejsze niż kopiowanie trendu, który zadziałał u zupełnie innej firmy.
 
-<h2 id="od-trendu-do-systemu-tresci" class="reveal">Od trendu do systemu treści</h2>
+## Od trendu do systemu treści {#od-trendu-do-systemu-tresci}
 
 Najlepsze trendy nie są celem samym w sobie. Są wskazówką, jak zmieniają się zachowania odbiorców i jakie formaty dają dziś markom większą szansę na uwagę. Decyzję o ich wykorzystaniu trzeba jednak oprzeć na strategii, zasobach i konkretnym celu kampanii.
 

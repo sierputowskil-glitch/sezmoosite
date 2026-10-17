@@ -31,17 +31,15 @@ toc:
     label: "Najczęstsze błędy, które obniżają efekt sprzedażowy"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 W praktyce jedno ujęcie musi często zrobić kilka rzeczy naraz – pokazać detal, zbudować zaufanie, wpisać produkt w estetykę marki i dobrze działać w różnych kanałach. Sklep internetowy, kampania płatna, marketplace, social media, katalog czy landing page mają różne wymagania. To właśnie dlatego przypadkowe zdjęcia zrobione „na szybko” zwykle przestają działać w momencie, gdy firma chce skalować sprzedaż.
 
-<h2 id="czym-naprawde-jest-fotografia-reklamowa-produktow" class="reveal">Czym naprawdę jest fotografia reklamowa produktów</h2>
+## Czym naprawdę jest fotografia reklamowa produktów {#czym-naprawde-jest-fotografia-reklamowa-produktow}
 
 Dobra fotografia produktowa nie kończy się na tym, że produkt jest ostry i dobrze oświetlony. Reklamowy charakter zdjęcia polega na tym, że obraz ma wspierać konkretny cel biznesowy. Czasem chodzi o zwiększenie konwersji w e-commerce, czasem o podniesienie postrzeganej [wartości marki](/uslugi-marketingowe/identyfikacja-wizualna/), a czasem o przygotowanie materiałów do kampanii, która ma przyciągnąć uwagę w zatłoczonym feedzie.
 
 To oznacza, że sposób fotografowania powinien wynikać ze strategii, a nie z samej estetyki. Inaczej pokazuje się kosmetyki premium, inaczej komponenty przemysłowe, a jeszcze inaczej żywność, która ma pobudzić apetyt już na poziomie miniatury. W każdym z tych przypadków zdjęcie pracuje na inny efekt i wymaga innego podejścia do światła, kompozycji, stylizacji oraz postprodukcji.
 
-<h2 id="fotografia-reklamowa-produktow-a-zwykle-zdjecia-packshotowe" class="reveal">Fotografia reklamowa produktów a zwykłe zdjęcia packshotowe</h2>
+## Fotografia reklamowa produktów a zwykłe zdjęcia packshotowe {#fotografia-reklamowa-produktow-a-zwykle-zdjecia-packshotowe}
 
 Wiele firm zaczyna od prostych packshotów na białym tle i to często jest dobry ruch. Takie zdjęcia są potrzebne w kartach produktów, katalogach i marketplace’ach, gdzie liczy się czytelność, spójność i szybkie porównanie oferty. Problem pojawia się wtedy, gdy marka oczekuje od nich czegoś więcej niż technicznej prezentacji.
 
@@ -49,7 +47,7 @@ Packshot pokazuje, jak produkt wygląda. Fotografia reklamowa produktów ma jesz
 
 Marki, które myślą wyłącznie o pojedynczych zdjęciach, często kończą z materiałem poprawnym, ale mało użytecznym. Marki, które planują cały zestaw ujęć pod sprzedaż i komunikację, dostają content, który da się wykorzystać szeroko i przez dłuższy czas.
 
-<h2 id="co-decyduje-o-tym-czy-zdjecie-produktu-sprzedaje" class="reveal">Co decyduje o tym, czy zdjęcie produktu sprzedaje</h2>
+## Co decyduje o tym, czy zdjęcie produktu sprzedaje {#co-decyduje-o-tym-czy-zdjecie-produktu-sprzedaje}
 
 Największy błąd to skupienie się wyłącznie na sprzęcie. Owszem, technika ma znaczenie, ale sama nie załatwia efektu. O wyniku decyduje przede wszystkim to, czy zdjęcie odpowiada na potrzeby odbiorcy i wspiera ścieżkę zakupową.
 
@@ -63,7 +61,7 @@ Produkt z segmentu premium potrzebuje innego języka wizualnego niż marka nasta
 
 Dobrze zaplanowana sesja porządkuje ten przekaz. Dzięki temu komunikacja nie rozjeżdża się między stroną internetową, kampanią i social mediami. A to już bezpośrednio wpływa na wiarygodność.
 
-<h2 id="kiedy-warto-zainwestowac-w-profesjonalna-sesje" class="reveal">Kiedy warto zainwestować w profesjonalną sesję</h2>
+## Kiedy warto zainwestować w profesjonalną sesję {#kiedy-warto-zainwestowac-w-profesjonalna-sesje}
 
 Nie każda firma potrzebuje od razu rozbudowanej produkcji studyjnej z wieloma setami. Ale są momenty, w których profesjonalna realizacja szybko się zwraca. Najczęściej wtedy, gdy produkt ma walczyć o uwagę w konkurencyjnej kategorii, kiedy marka wchodzi na nowy rynek albo gdy dotychczasowe materiały po prostu nie dowożą wyniku.
 
@@ -71,7 +69,7 @@ Jeżeli dział marketingu stale tworzy kampanie, uruchamia reklamy i publikuje t
 
 Właśnie dlatego coraz więcej firm traktuje sesję produktową nie jako jednorazowy koszt, tylko jako produkcję zasobu contentowego. Dobrze przygotowany materiał daje bazę do [działań na tygodnie albo miesiące](/uslugi-marketingowe/obsluga-social-media/) i odciąża zespół po stronie klienta.
 
-<h2 id="jak-wyglada-skuteczna-fotografia-reklamowa-produktow" class="reveal">Jak wygląda skuteczna fotografia reklamowa produktów</h2>
+## Jak wygląda skuteczna fotografia reklamowa produktów {#jak-wyglada-skuteczna-fotografia-reklamowa-produktow}
 
 Najlepsze realizacje zaczynają się przed wejściem do studia. Najpierw trzeba wiedzieć, do czego zdjęcia będą używane, jakie formaty są potrzebne i jaki komunikat mają wspierać. Bez tego łatwo zrobić ładne kadry, które potem nie mieszczą się w layoutach, nie pracują w reklamach albo nie pasują do systemu wizualnego marki.
 
@@ -85,7 +83,7 @@ Tu pojawia się przewaga współpracy z partnerem, który patrzy szerzej niż ty
 
 Dla firm, które nie chcą koordynować kilku podwykonawców naraz, to po prostu wygodniejsze i szybsze. Taki model pracy szczególnie dobrze sprawdza się wtedy, gdy marketing ma działać sprawnie, bez przestojów i bez ciągłego tłumaczenia każdemu osobno tego samego briefu.
 
-<h2 id="najczestsze-bledy-ktore-obnizaja-efekt-sprzedazowy" class="reveal">Najczęstsze błędy, które obniżają efekt sprzedażowy</h2>
+## Najczęstsze błędy, które obniżają efekt sprzedażowy {#najczestsze-bledy-ktore-obnizaja-efekt-sprzedazowy}
 
 Najbardziej kosztowny błąd to niedopasowanie zdjęć do kanału sprzedaży. Drugim jest brak spójności między materiałami. Trzecim – przesadna postprodukcja, która wygląda efektownie, ale osłabia autentyczność produktu. Klient chce być zachęcony, nie wprowadzony w błąd.
 
@@ -93,13 +91,13 @@ Często problemem jest też pomijanie skali i funkcji. Samo estetyczne zdjęcie 
 
 Bywa też odwrotnie – firmy próbują opowiedzieć wszystko jednym obrazem. To rzadko działa. Lepiej zaplanować zestaw zdjęć, z których każde odpowiada za konkretną rolę w komunikacji.
 
-<h2 id="jak-ocenic-czy-zdjecia-produktowe-dzialaja" class="reveal">Jak ocenić, czy zdjęcia produktowe działają</h2>
+## Jak ocenić, czy zdjęcia produktowe działają {#jak-ocenic-czy-zdjecia-produktowe-dzialaja}
 
 Nie tylko po tym, czy się podobają zespołowi. Najważniejsze są wskaźniki związane z celem: [wyższy CTR reklam](/uslugi-marketingowe/kampanie-platne/), lepszy współczynnik konwersji, dłuższy czas na stronie produktu, mniejszy odsetek porzuceń albo większa skuteczność materiałów sprzedażowych. Oczywiście nie da się całego wyniku przypisać wyłącznie fotografii, bo działa ona razem z ofertą, ceną, UX-em i mediami. Ale słabe zdjęcia bardzo często blokują wynik już na starcie.
 
 Warto też patrzeć na tempo pracy zespołu marketingowego. Jeśli po sesji łatwiej przygotować kampanie, social media i materiały handlowe, to znak, że produkcja została zaplanowana właściwie. Dobra fotografia nie tylko wygląda. Ona upraszcza działanie.
 
-<h2 id="dlaczego-firmy-coraz-czesciej-stawiaja-na-partnera-full-serv" class="reveal">Dlaczego firmy coraz częściej stawiają na partnera full-service</h2>
+## Dlaczego firmy coraz częściej stawiają na partnera full-service {#dlaczego-firmy-coraz-czesciej-stawiaja-na-partnera-full-serv}
 
 Fotografia produktowa rzadko funkcjonuje dziś w izolacji. Ma współpracować z reklamą, landing page’em, identyfikacją wizualną, contentem w social mediach i materiałami dla działu sprzedaży. Im więcej elementów trzeba ze sobą zsynchronizować, tym większe znaczenie ma jeden zespół, który rozumie cały kontekst biznesowy.
 

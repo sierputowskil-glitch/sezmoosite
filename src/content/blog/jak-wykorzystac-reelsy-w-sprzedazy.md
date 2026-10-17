@@ -31,11 +31,9 @@ toc:
     label: "Najczęstsze błędy, przez które reels nie sprzedaje"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dla firm to ważna zmiana myślenia. Reels nie jest dodatkiem do działań marketingowych. Dobrze zaplanowany może przyciągać nowych odbiorców, edukować ich, obniżać opór przed kontaktem i skracać drogę do zapytania. To szczególnie cenne w B2B i usługach, gdzie decyzje zakupowe rzadko zapadają pod wpływem jednego impulsu.
 
-<h2 id="jak-wykorzystac-reelsy-w-sprzedazy-a-nie-tylko-w-komunikacji" class="reveal">Jak wykorzystać reelsy w sprzedaży, a nie tylko w komunikacji</h2>
+## Jak wykorzystać reelsy w sprzedaży, a nie tylko w komunikacji {#jak-wykorzystac-reelsy-w-sprzedazy-a-nie-tylko-w-komunikacji}
 
 Najczęstszy błąd wygląda prosto: firma publikuje krótkie wideo, które jest estetyczne, dynamiczne i zgodne z trendem, ale nie prowadzi odbiorcy nigdzie dalej. Jest ruch, czasem są reakcje, ale nie ma wzrostu liczby leadów, rozmów handlowych ani wejść w ofertę. To dlatego, że sam zasięg nie sprzedaje. Sprzedaje dopiero dobrze ustawiona narracja.
 
@@ -43,7 +41,7 @@ Najczęstszy błąd wygląda prosto: firma publikuje krótkie wideo, które jest
 
 W praktyce oznacza to, że reels powinien powstawać nie od pomysłu na efektowne ujęcie, tylko od pytania: co ma wydarzyć się po obejrzeniu tego materiału? Inaczej tworzy się wideo pod rozpoznawalność, inaczej pod pozyskanie zapytań, a jeszcze inaczej pod wsparcie sprzedaży bardziej złożonej usługi.
 
-<h2 id="reels-dziala-najlepiej-gdy-jest-osadzony-w-lejku" class="reveal">Reels działa najlepiej, gdy jest osadzony w lejku</h2>
+## Reels działa najlepiej, gdy jest osadzony w lejku {#reels-dziala-najlepiej-gdy-jest-osadzony-w-lejku}
 
 W wielu firmach content i sprzedaż nadal funkcjonują osobno. Marketing publikuje, handlowcy sprzedają, a potem trudno ocenić, co faktycznie działa. Tymczasem reelsy są najbardziej skuteczne wtedy, gdy wspierają konkretny etap decyzji zakupowej.
 
@@ -53,7 +51,7 @@ W środkowej części lejka warto publikować reelsy edukacyjne i dowodowe. Dobr
 
 Na dole lejka potrzebne są treści, które ułatwiają decyzję. Można pokazać efekt wdrożenia, konkretne liczby, fragment opinii klienta albo prosty komunikat o tym, z czym można zgłosić się do zespołu. Nie każda branża powinna sprzedawać agresywnym CTA. W usługach B2B częściej wygrywa jasny komunikat: pokażemy Ci, jak to może działać u Ciebie.
 
-<h2 id="jakie-reelsy-sprzedaja-najlepiej" class="reveal">Jakie reelsy sprzedają najlepiej</h2>
+## Jakie reelsy sprzedają najlepiej {#jakie-reelsy-sprzedaja-najlepiej}
 
 Nie ma jednego formatu, który działa zawsze. Są natomiast typy treści, które regularnie wspierają sprzedaż, bo odpowiadają na realne potrzeby odbiorców.
 
@@ -65,7 +63,7 @@ Trzeci to reels ekspercki. Krótki, rzeczowy komentarz do błędu, który firmy 
 
 Czwarty to reels zza kulis. Dla części firm brzmi zbyt lekko, ale w praktyce potrafi mocno wesprzeć sprzedaż. Pokazuje zespół, standard pracy, tempo realizacji, jakość produkcji i sposób myślenia. W branżach, gdzie klient kupuje nie tylko usługę, ale też spokój operacyjny, takie materiały mają duże znaczenie.
 
-<h2 id="jak-wykorzystac-reelsy-w-sprzedazy-b2b" class="reveal">Jak wykorzystać reelsy w sprzedaży B2B</h2>
+## Jak wykorzystać reelsy w sprzedaży B2B {#jak-wykorzystac-reelsy-w-sprzedazy-b2b}
 
 W B2B reels nie musi być rozrywkowy. Ma być trafny. Decydent nie szuka wyłącznie atrakcyjnego obrazu, tylko sygnału, że po drugiej stronie jest partner, który rozumie cele biznesowe i potrafi działać sprawnie.
 
@@ -73,7 +71,7 @@ Dlatego w komunikacji B2B warto ograniczyć przypadkowe trendy i skupić się na
 
 Warto też pamiętać, że odbiorca B2B często ogląda reelsy prywatnie, ale podejmuje decyzję zawodowo. To znaczy, że forma może być dynamiczna i nowoczesna, ale przekaz musi mieć biznesowy sens. Jeśli materiał jest efektowny, lecz nie pokazuje wartości, łatwo o wyświetlenia i trudno o zapytanie.
 
-<h2 id="co-powinno-znalezc-sie-w-kazdym-reelsie-sprzedazowym" class="reveal">Co powinno znaleźć się w każdym reelsie sprzedażowym</h2>
+## Co powinno znaleźć się w każdym reelsie sprzedażowym {#co-powinno-znalezc-sie-w-kazdym-reelsie-sprzedazowym}
 
 Nie chodzi o sztywny schemat, ale o kilka elementów, bez których materiałowi trudno pracować na wynik. Początek musi zatrzymać uwagę w pierwszych sekundach. Odbiorca powinien od razu wiedzieć, czy ten materiał dotyczy jego sytuacji. Dalej potrzebny jest jasny przekaz – jeden temat, jedna obietnica, jeden problem. Reels nie jest miejscem na opowiedzenie całej oferty.
 
@@ -81,7 +79,7 @@ Równie ważna jest wiarygodność. Można ją budować obrazem, podpisem, wypow
 
 Właśnie tu wiele marek traci potencjał. Publikują materiał, ale nie mówią odbiorcy, co zrobić dalej. A bez tego nawet dobry reels często kończy jako miły akcent, nie narzędzie sprzedażowe.
 
-<h2 id="najczestsze-bledy-przez-ktore-reels-nie-sprzedaje" class="reveal">Najczęstsze błędy, przez które reels nie sprzedaje</h2>
+## Najczęstsze błędy, przez które reels nie sprzedaje {#najczestsze-bledy-przez-ktore-reels-nie-sprzedaje}
 
 Pierwszy błąd to stawianie formy ponad funkcję. Ładne ujęcia pomagają, ale nie zastąpią komunikatu. Drugi to brak regularności. Jeden trafiony reels nie zbuduje przewidywalnego napływu zapytań. Trzeci to mówienie wyłącznie o sobie. Odbiorca szybciej reaguje na treści, które pokazują jego problem, koszt zaniechania i możliwe rozwiązanie.
 
@@ -89,7 +87,7 @@ Często problemem jest też brak spójności między treścią a ofertą. Jeśli
 
 Wreszcie błąd najbardziej kosztowny: brak systemu. Reels wrzucony bez planu, bez celu i bez późniejszej analizy nie daje firmie wiedzy, co skalować. A sprzedaż potrzebuje powtarzalności, nie pojedynczych strzałów.
 
-<h2 id="jak-mierzyc-czy-reels-naprawde-wspiera-sprzedaz" class="reveal">Jak mierzyć, czy reels naprawdę wspiera sprzedaż</h2>
+## Jak mierzyć, czy reels naprawdę wspiera sprzedaż {#jak-mierzyc-czy-reels-naprawde-wspiera-sprzedaz}
 
 Same wyświetlenia to za mało. Oczywiście warto patrzeć na zasięg, utrzymanie uwagi czy liczbę zapisów, bo to pokazuje, czy materiał był atrakcyjny. Ale jeśli celem jest sprzedaż, trzeba iść dalej.
 

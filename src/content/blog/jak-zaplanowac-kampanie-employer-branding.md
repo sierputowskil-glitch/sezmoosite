@@ -31,11 +31,9 @@ toc:
     label: "Jak mierzyć efekty kampanii employer branding"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dobra kampania employer brandingowa porządkuje to, kim jako pracodawca jesteście, do kogo mówicie i dlaczego ktoś miałby wybrać właśnie Was. To ważne, bo rynek szybko weryfikuje puste hasła. Kandydaci sprawdzają opinie, oglądają komunikację marki, porównują styl pracy i oczekują spójności. Jeśli obietnica nie zgadza się z rzeczywistością, kampania może przyciągnąć uwagę, ale nie zbuduje zaufania.
 
-<h2 id="od-czego-zaczac-planowanie-kampanii-employer-branding" class="reveal">Od czego zacząć planowanie kampanii employer branding</h2>
+## Od czego zacząć planowanie kampanii employer branding {#od-czego-zaczac-planowanie-kampanii-employer-branding}
 
 Najczęstszy błąd? Start od kreacji. Najpierw pojawia się pomysł na film, sesję zdjęciową albo hasło, a dopiero potem pytanie, co właściwie chcemy tym osiągnąć. Tymczasem kampanię trzeba zacząć od celu biznesowego.
 
@@ -43,7 +41,7 @@ W praktyce cele zwykle są trzy. Pierwszy to wsparcie rekrutacji na konkretne ro
 
 To rozróżnienie ma znaczenie, bo inna będzie kampania nastawiona na szybkie pozyskanie operatorów produkcji w jednym regionie, a inna dla firmy, która chce przez rok budować pozycję atrakcyjnego pracodawcy dla specjalistów. W obu przypadkach employer branding działa, ale narzędzia, komunikaty i sposób mierzenia efektów będą inne.
 
-<h2 id="zanim-ruszysz-z-komunikacja-sprawdz-stan-faktyczny" class="reveal">Zanim ruszysz z komunikacją, sprawdź stan faktyczny</h2>
+## Zanim ruszysz z komunikacją, sprawdź stan faktyczny {#zanim-ruszysz-z-komunikacja-sprawdz-stan-faktyczny}
 
 Nie da się zbudować wiarygodnej kampanii na przypuszczeniach. Jeśli chcesz wiedzieć, jak zaplanować kampanię employer branding skutecznie, zacznij od prostego audytu. Nie chodzi o wielomiesięczny projekt konsultingowy, tylko o zebranie danych, które pokażą, jak firma jest dziś postrzegana.
 
@@ -57,7 +55,7 @@ Na tym etapie trzeba zbudować lub doprecyzować EVP – Employee Value Proposit
 
 Jeżeli firma obiecuje rozwój, powinna pokazać, jak on wygląda w praktyce. Jeśli mówi o elastyczności, kandydat powinien wiedzieć, czy chodzi o godziny pracy, model hybrydowy czy sposób zarządzania. Im mniej ogólników, tym lepiej. Kandydaci są wyczuleni na marketingowy lakier.
 
-<h2 id="okresl-grupe-docelowa-a-nie-wszystkich-kandydatow" class="reveal">Określ grupę docelową, a nie „wszystkich kandydatów”</h2>
+## Określ grupę docelową, a nie „wszystkich kandydatów” {#okresl-grupe-docelowa-a-nie-wszystkich-kandydatow}
 
 W employer brandingu zbyt szerokie targetowanie zwykle kończy się przeciętnym efektem. Inaczej komunikujesz się do studentów i juniorów, inaczej do doświadczonych specjalistów, a jeszcze inaczej do pracowników fizycznych czy kadry managerskiej. Każda z tych grup ma inne motywacje, inne obawy i korzysta z innych kanałów.
 
@@ -65,7 +63,7 @@ Dlatego warto stworzyć profile kandydatów, podobnie jak robi się to w klasycz
 
 To moment, w którym wiele firm odkrywa, że nie potrzebuje jednej kampanii, tylko kilku wariantów komunikacji. To nie komplikuje działań bez sensu. To ogranicza przepalanie budżetu na treści, które trafiają do wszystkich, czyli de facto do nikogo.
 
-<h2 id="kanaly-dobieraj-do-celu-i-zachowan-kandydatow" class="reveal">Kanały dobieraj do celu i zachowań kandydatów</h2>
+## Kanały dobieraj do celu i zachowań kandydatów {#kanaly-dobieraj-do-celu-i-zachowan-kandydatow}
 
 Employer branding nie kończy się na LinkedInie. Dla części firm będzie to ważny kanał, ale dla innych lepszy efekt dadzą krótkie materiały wideo, [kampanie płatne](/uslugi-marketingowe/kampanie-platne/) w social mediach, [zakładka kariera](/uslugi-marketingowe/strony-internetowe-i-landing-page/), działania lokalne, outdoor czy content oparty na autentycznych historiach zespołu.
 
@@ -79,7 +77,7 @@ Kandydaci nie chcą oglądać wyłącznie deklaracji. Chcą zobaczyć ludzi, mie
 
 Dobrze [działa wideo](/uslugi-marketingowe/produkcja-wideo-reels/), bo szybko buduje wiarygodność i emocję, ale tylko wtedy, gdy nie jest przesadnie wyreżyserowane. Z kolei fotografia i grafika porządkują przekaz i pomagają zachować spójność na różnych nośnikach. Jeśli kampania ma być skuteczna, strategia i produkcja muszą iść razem. Właśnie dlatego model jednego partnera, który ogarnia koncepcję, kreację i wykonanie, często przyspiesza cały proces i zmniejsza liczbę wąskich gardeł.
 
-<h2 id="ustal-budzet-i-harmonogram-bez-myslenia-zyczeniowego" class="reveal">Ustal budżet i harmonogram bez myślenia życzeniowego</h2>
+## Ustal budżet i harmonogram bez myślenia życzeniowego {#ustal-budzet-i-harmonogram-bez-myslenia-zyczeniowego}
 
 Kampania employer branding potrzebuje planu operacyjnego. Nie tylko terminu startu, ale też decyzji, kto odpowiada za akceptacje, kto dostarcza materiały, kiedy rusza emisja i jakie elementy są niezbędne na dzień zero. Brak tego porządku to częsta przyczyna opóźnień.
 
@@ -87,7 +85,7 @@ Budżet też warto podzielić rozsądnie. Nie tylko na media, ale też na strate
 
 Z drugiej strony nie zawsze trzeba produkować kampanię na poziomie dużej marki korporacyjnej. Skala zależy od celu. Czasem wystarczy dobrze przemyślany pakiet treści i precyzyjna dystrybucja. Liczy się adekwatność, nie rozmach dla samego rozmachu.
 
-<h2 id="jak-mierzyc-efekty-kampanii-employer-branding" class="reveal">Jak mierzyć efekty kampanii employer branding</h2>
+## Jak mierzyć efekty kampanii employer branding {#jak-mierzyc-efekty-kampanii-employer-branding}
 
 Jeśli jedynym wskaźnikiem sukcesu są lajki, to trudno mówić o skutecznym employer brandingu. Kampanię trzeba oceniać przez pryzmat celu, od którego wyszliśmy. To może być liczba aplikacji, koszt pozyskania kandydata, jakość zgłoszeń, czas zamknięcia rekrutacji, liczba wejść na zakładkę kariera czy wzrost spontanicznej znajomości marki pracodawcy.
 
@@ -95,7 +93,7 @@ Warto też patrzeć szerzej. Dobra kampania może poprawić nie tylko wyniki rek
 
 Jednocześnie trzeba pamiętać, że employer branding rzadko daje pełny efekt po tygodniu. Kampanie wizerunkowe potrzebują czasu. Jeśli firma oczekuje natychmiastowego zwrotu jak z kampanii sprzedażowej, może się rozczarować. Tu liczy się konsekwencja i regularne optymalizowanie działań.
 
-<h2 id="najczestsze-bledy-ktore-psuja-nawet-dobry-pomysl" class="reveal">Najczęstsze błędy, które psują nawet dobry pomysł</h2>
+## Najczęstsze błędy, które psują nawet dobry pomysł {#najczestsze-bledy-ktore-psuja-nawet-dobry-pomysl}
 
 Najbardziej kosztowny błąd to obiecywanie rzeczy, których firma nie dowozi. Zaraz po nim jest niespójność między HR, marketingiem i zarządem. Jeśli każdy mówi coś innego o kulturze pracy, kampania szybko traci wiarygodność.
 

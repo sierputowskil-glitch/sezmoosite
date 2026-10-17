@@ -31,9 +31,7 @@ toc:
     label: "Papier i uszlachetnienia – kiedy warto dopłacić"
 ---
 
-<div id="wstep" class="reveal"></div>
-
-<h2 id="ulotka-reklamowa-projekt-zaczyna-sie-od-celu" class="reveal">Ulotka reklamowa – projekt zaczyna się od celu</h2>
+## Ulotka reklamowa – projekt zaczyna się od celu {#ulotka-reklamowa-projekt-zaczyna-sie-od-celu}
 
 Największy błąd pojawia się jeszcze przed pierwszą wersją layoutu. Firma mówi: „potrzebujemy ulotki”, ale nie odpowiada na prostsze pytanie – po co? Inaczej projektuje się materiał rozdawany na targach, inaczej ulotkę wrzucaną do pakietu sprzedażowego, a jeszcze inaczej format wspierający rekrutację czy otwarcie nowej lokalizacji.
 
@@ -41,7 +39,7 @@ Cel wpływa na wszystko: treść, układ, format, papier, a nawet liczbę inform
 
 W praktyce projekt ulotki nie zaczyna się od pytania o kolory czy zdjęcia. Zaczyna się od ustalenia, kto będzie ją czytał, w jakim kontekście i co ma zrobić po przeczytaniu.
 
-<h2 id="co-decyduje-o-tym-czy-ulotka-dziala" class="reveal">Co decyduje o tym, czy ulotka działa</h2>
+## Co decyduje o tym, czy ulotka działa {#co-decyduje-o-tym-czy-ulotka-dziala}
 
 Skuteczna ulotka nie musi być przeładowana efektami. Ma być czytelna i szybka w odbiorze. Odbiorca poświęca jej kilka sekund, czasem mniej. To oznacza, że projekt musi być zbudowany pod skanowanie wzrokiem, a nie pod długie studiowanie treści.
 
@@ -51,7 +49,7 @@ Duże znaczenie ma też hierarchia informacji. Odbiorca powinien od razu zobaczy
 
 Nie mniej ważna jest wiarygodność. Dobry projekt nie kończy się na estetyce. Musi zawierać elementy, które zdejmują opór: konkrety, liczby, znane marki, jasno opisany zakres usługi albo prosty mechanizm działania. Zbyt wiele ulotek mówi tylko „jesteśmy najlepsi”. Klient nie potrzebuje deklaracji. Potrzebuje powodu, by uwierzyć.
 
-<h2 id="ulotka-reklamowa-projekt-a-tresc-mniej-znaczy-wiecej" class="reveal">Ulotka reklamowa projekt a treść – mniej znaczy więcej</h2>
+## Ulotka reklamowa projekt a treść – mniej znaczy więcej {#ulotka-reklamowa-projekt-a-tresc-mniej-znaczy-wiecej}
 
 W wielu firmach tekst do ulotki powstaje w ten sam sposób: dopisujemy jeszcze to, jeszcze tamto, może jeszcze jedną usługę. Efekt jest przewidywalny. Projekt robi się ciasny, komunikat traci ostrość, a klient nie wie, od czego zacząć.
 
@@ -59,7 +57,7 @@ Dobra treść do ulotki jest selekcją, nie zbiorem wszystkiego. Zwykle wystarcz
 
 Warto pamiętać, że język ulotki powinien być prosty i konkretny. Bez branżowej waty, bez pustych sloganów, bez zdań, które brzmią dobrze tylko na prezentacji. Klient szybciej reaguje na „projekt i druk materiałów gotowych do użycia w sprzedaży” niż na „kompleksowe rozwiązania komunikacyjne wspierające rozwój biznesu”. Drugie brzmi poważnie. Pierwsze daje obraz i efekt.
 
-<h2 id="format-i-skladanie-detal-ktory-zmienia-odbior" class="reveal">Format i składanie – detal, który zmienia odbiór</h2>
+## Format i składanie – detal, który zmienia odbiór {#format-i-skladanie-detal-ktory-zmienia-odbior}
 
 Nie istnieje jeden najlepszy format ulotki. A5 sprawdzi się tam, gdzie liczy się prostota i szybka dystrybucja. DL dobrze działa w kampaniach bardziej ofertowych i tam, gdzie materiał ma wyglądać elegancko. Ulotki składane dają więcej miejsca na komunikację, ale tylko wtedy, gdy treść rzeczywiście tego wymaga.
 
@@ -67,7 +65,7 @@ Wybór formatu powinien wynikać z funkcji. Jeśli klient ma zabrać ulotkę ze 
 
 Składanie też ma znaczenie sprzedażowe. Dobrze zaprojektowane zgięcia mogą prowadzić odbiorcę przez przekaz krok po kroku. Źle zaplanowane sprawiają, że najważniejszy komunikat ląduje w niewidocznym miejscu lub zostaje przecięty linią łamu. To drobiazg tylko pozornie. W praktyce wpływa na to, czy materiał jest intuicyjny, czy chaotyczny.
 
-<h2 id="grafika-ktora-wspiera-sprzedaz-a-nie-przeszkadza" class="reveal">Grafika, która wspiera sprzedaż, a nie przeszkadza</h2>
+## Grafika, która wspiera sprzedaż, a nie przeszkadza {#grafika-ktora-wspiera-sprzedaz-a-nie-przeszkadza}
 
 Projekt graficzny ma przyciągać uwagę, ale nie może zagłuszać treści. To częsty problem w materiałach tworzonych bez jasnej strategii. Efektowne tło, zbyt wiele ikon, kilka stylów zdjęć, mocne kolory konkurujące ze sobą – wszystko to może wyglądać „kreatywnie”, ale jednocześnie obniżać skuteczność.
 
@@ -75,7 +73,7 @@ Dobra grafika porządkuje przekaz. Wzmacnia najważniejsze informacje, prowadzi 
 
 W materiałach firmowych ogromną rolę odgrywa [spójność z całą komunikacją marki](/dlaczego-twoja-firma-potrzebuje-spojnego-brandingu/). Ulotka nie może wyglądać jak osobny byt [oderwany od strony](/uslugi-marketingowe/strony-internetowe-i-landing-page/), social mediów czy prezentacji sprzedażowej. Klient odbiera markę całościowo. Jeśli każdy punkt styku wygląda inaczej, trudniej budować zaufanie i rozpoznawalność.
 
-<h2 id="papier-i-uszlachetnienia-kiedy-warto-doplacic" class="reveal">Papier i uszlachetnienia – kiedy warto dopłacić</h2>
+## Papier i uszlachetnienia – kiedy warto dopłacić {#papier-i-uszlachetnienia-kiedy-warto-doplacic}
 
 Papier nie jest tylko dodatkiem technicznym. Wpływa na odbiór jakości, trwałość materiału i pierwsze skojarzenie z marką. Cienka ulotka może być wystarczająca przy dużych akcjach promocyjnych, gdzie liczy się skala i koszt dotarcia. Przy komunikacji premium albo materiałach wspierających sprzedaż usług lepiej sprawdza się wyższa gramatura i starannie dobrane wykończenie.
 
@@ -83,7 +81,7 @@ Nie zawsze jednak więcej znaczy lepiej. Lakier UV, folia soft touch czy złocen
 
 Tu właśnie pojawia się ważny trade-off. Można zrobić ulotkę bardzo efektowną albo bardzo efektywną kosztowo. Najlepsze projekty łączą oba kierunki, ale punkt równowagi zależy od kampanii, skali druku i wartości pozyskiwanego klienta.
 
-<h2 id="najczestsze-bledy-w-projektowaniu-ulotek" class="reveal">Najczęstsze błędy w projektowaniu ulotek</h2>
+## Najczęstsze błędy w projektowaniu ulotek {#najczestsze-bledy-w-projektowaniu-ulotek}
 
 Firmy najczęściej tracą skuteczność nie przez brak budżetu, ale przez brak decyzji. Chcą powiedzieć wszystko naraz, zmieścić pełną ofertę, kilka grup odbiorców i jeszcze każdy element identyfikacji. W efekcie powstaje materiał, który nikogo nie prowadzi do działania.
 
@@ -91,7 +89,7 @@ Drugim błędem jest projektowanie „pod siebie”. Zarząd lubi konkretny kolo
 
 Trzeci problem to brak myślenia o dystrybucji. Inaczej projektuje się ulotkę rozdawaną na ulicy, inaczej tę wręczaną po spotkaniu handlowym. Bez uwzględnienia kontekstu nawet dobrze zaprojektowany materiał może nie dowozić wyniku.
 
-<h2 id="kiedy-warto-zlecic-projekt-agencji" class="reveal">Kiedy warto zlecić projekt agencji</h2>
+## Kiedy warto zlecić projekt agencji {#kiedy-warto-zlecic-projekt-agencji}
 
 Jeśli ulotka ma być tylko prostym nośnikiem informacji, wewnętrzny zespół czasem poradzi sobie sam. Problem zaczyna się wtedy, gdy materiał ma realnie wspierać sprzedaż, kampanię lokalną, employer branding albo działanie wizerunkowe prowadzone równolegle w kilku kanałach. Wtedy liczy się nie tylko sam layout, ale też pomysł, copy, [przygotowanie do druku](/jak-przygotowac-pliki-do-druku-checklista-dla-klientow-agencji-reklamowej/) i spójność z resztą komunikacji.
 

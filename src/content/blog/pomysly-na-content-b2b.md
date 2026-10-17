@@ -29,11 +29,9 @@ toc:
     label: "Mierz wpływ na sprzedaż, nie tylko zasięg"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dla działu marketingu oznacza to mniej treści „bo trzeba coś wrzucić”, a więcej materiałów, które handlowiec może wysłać po spotkaniu, klient pokazać zarządowi, a kandydat potraktować jako dowód, że firma wie, co robi. Dobry content B2B ma pracować długo – na widoczność marki, zaufanie i sprzedaż.
 
-<h2 id="zacznij-od-procesu-zakupowego-nie-od-kalendarza-publikacji" class="reveal">Zacznij od procesu zakupowego, nie od kalendarza publikacji</h2>
+## Zacznij od procesu zakupowego, nie od kalendarza publikacji {#zacznij-od-procesu-zakupowego-nie-od-kalendarza-publikacji}
 
 W wielu firmach plan contentowy powstaje od pytania: „Co opublikujemy w przyszłym miesiącu?”. To wygodny punkt startu, ale rzadko prowadzi do treści, które mają biznesowy ciężar. Lepsze pytanie brzmi: „Czego klient musi się dowiedzieć, aby przejść do kolejnego etapu rozmowy?”.
 
@@ -43,7 +41,7 @@ Na etapie zainteresowania dobrze działają treści edukacyjne i punktujące kos
 
 To ważne szczególnie w firmach oferujących usługi złożone, technologiczne lub droższe niż standardowy zakup operacyjny. Im dłuższy proces sprzedaży i więcej osób po stronie klienta, tym większe znaczenie ma content, który porządkuje decyzję.
 
-<h2 id="pomysly-na-content-b2b-ktore-daja-handlowcom-argumenty" class="reveal">Pomysły na content B2B, które dają handlowcom argumenty</h2>
+## Pomysły na content B2B, które dają handlowcom argumenty {#pomysly-na-content-b2b-ktore-daja-handlowcom-argumenty}
 
 Najlepszy temat często leży już w skrzynce działu sprzedaży. Wystarczy zebrać pytania powtarzające się na spotkaniach, powody utraconych szans oraz elementy, które klienci chcą sprawdzić przed podpisaniem umowy. To nie są „mało kreatywne” zagadnienia. To gotowa lista treści o wysokiej intencji zakupowej.
 
@@ -71,7 +69,7 @@ Warunek jest jeden: porównanie musi być uczciwe. Nie każda firma potrzebuje p
 
 Nie warto odpowiadać językiem reklamy. Zamiast zapewniać, że „wszystko będzie dobrze”, pokaż proces: jak wygląda przygotowanie briefu, kto akceptuje materiały, ile rund poprawek przewiduje projekt i co można przygotować po stronie klienta, aby przyspieszyć start. Konkret redukuje ryzyko odczuwane przez odbiorcę.
 
-<h2 id="format-dopasuj-do-pracy-odbiorcy" class="reveal">Format dopasuj do pracy odbiorcy</h2>
+## Format dopasuj do pracy odbiorcy {#format-dopasuj-do-pracy-odbiorcy}
 
 Ten sam temat można opowiedzieć na kilka sposobów, ale format powinien odpowiadać temu, jak odbiorca będzie korzystać z treści. Zarząd potrzebuje zwięzłego argumentu i efektów. Specjalista może oczekiwać technicznych szczegółów. Handlowiec potrzebuje materiału, który da się szybko wysłać po rozmowie.
 
@@ -79,7 +77,7 @@ Krótki film sprawdzi się, gdy trzeba pokazać ludzi, skalę realizacji, produk
 
 Warto też myśleć o produkcji modułowo. Jedna dobrze przygotowana realizacja może dostarczyć film główny, krótkie reelsy, zdjęcia, cytaty klienta, animacje, materiał na stronę i kreacje do kampanii płatnej. To nie jest mechaniczne „recyklingowanie treści”. To rozsądne wykorzystanie czasu zespołu, budżetu i dostępu do ekspertów.
 
-<h2 id="pokaz-ludzi-i-sposob-pracy-nie-tylko-efekt-koncowy" class="reveal">Pokaż ludzi i sposób pracy, nie tylko efekt końcowy</h2>
+## Pokaż ludzi i sposób pracy, nie tylko efekt końcowy {#pokaz-ludzi-i-sposob-pracy-nie-tylko-efekt-koncowy}
 
 Firmy kupują od firm, ale decyzje podejmują ludzie. W B2B szczególnie mocno działa pokazanie ekspertów, zespołu projektowego i osób, które będą odpowiadać za realizację. Nie chodzi o wymuszone zdjęcia przy biurku ani posty z okazji każdego święta branżowego. Chodzi o udowodnienie, że po drugiej stronie jest kompetentny partner, który rozumie temat i potrafi dowieźć projekt.
 
@@ -87,7 +85,7 @@ Dobrym kierunkiem są krótkie komentarze ekspertów do zmian na rynku, kulisy r
 
 Warto jednak zachować proporcje. Content zza kulis nie zastąpi komunikacji sprzedażowej, jeśli odbiorca nadal nie wie, co firma oferuje, dla kogo pracuje i jaki problem rozwiązuje. Ludzka twarz marki wzmacnia ofertę – nie może jej zasłaniać.
 
-<h2 id="mierz-wplyw-na-sprzedaz-nie-tylko-zasieg" class="reveal">Mierz wpływ na sprzedaż, nie tylko zasięg</h2>
+## Mierz wpływ na sprzedaż, nie tylko zasięg {#mierz-wplyw-na-sprzedaz-nie-tylko-zasieg}
 
 Duży zasięg może być przyjemny, ale sam w sobie nie opłaci kampanii ani pracy zespołu. W B2B warto sprawdzać, czy treści są wykorzystywane przez sprzedaż, czy generują zapytania od właściwych firm, jak długo odbiorcy zostają na stronie oraz jakie materiały pojawiają się w ścieżce kontaktu z leadem.
 

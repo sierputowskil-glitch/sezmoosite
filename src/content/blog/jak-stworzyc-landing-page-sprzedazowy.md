@@ -31,11 +31,9 @@ toc:
     label: "Design ma wspierać konwersję"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Landing page nie jest „ładną stroną do kampanii”. To narzędzie sprzedażowe. Ma prowadzić użytkownika po prostej ścieżce do jednej decyzji. Im więcej rozpraszaczy, tym słabszy efekt. Im lepiej dopasowany komunikat do źródła ruchu i intencji odbiorcy, tym większa szansa na konwersję.
 
-<h2 id="jak-stworzyc-landing-page-sprzedazowy-z-jasnym-celem" class="reveal">Jak stworzyć landing page sprzedażowy z jasnym celem</h2>
+## Jak stworzyć landing page sprzedażowy z jasnym celem {#jak-stworzyc-landing-page-sprzedazowy-z-jasnym-celem}
 
 Najczęstszy błąd pojawia się jeszcze przed projektowaniem. Firma chce na jednej stronie sprzedać usługę, zebrać leady, opowiedzieć o marce, pokazać portfolio i jeszcze przekierować do social mediów. W praktyce kończy się to stroną, która robi dużo, ale nie domyka niczego.
 
@@ -43,7 +41,7 @@ Dlatego najpierw trzeba odpowiedzieć na jedno pytanie: co dokładnie ma zrobić
 
 Cel wpływa na wszystko: układ sekcji, długość treści, rodzaj argumentów, a nawet formularz. Landing page dla zimnego ruchu z reklam będzie potrzebował więcej wyjaśnienia i dowodów niż strona kierowana do osób, które już znają markę.
 
-<h2 id="zanim-napiszesz-naglowek-ustal-dla-kogo-jest-ta-strona" class="reveal">Zanim napiszesz nagłówek, ustal dla kogo jest ta strona</h2>
+## Zanim napiszesz nagłówek, ustal dla kogo jest ta strona {#zanim-napiszesz-naglowek-ustal-dla-kogo-jest-ta-strona}
 
 Skuteczny [landing page](/uslugi-marketingowe/strony-internetowe-i-landing-page/) nie mówi do wszystkich. Mówi do konkretnej grupy w konkretnym momencie. Inaczej komunikujesz się z właścicielem firmy szukającym wsparcia marketingowego, inaczej z HR-em rekrutującym kandydatów, a jeszcze inaczej z managerem, który porównuje kilku dostawców i chce szybko ocenić, kto dowiezie temat bez chaosu.
 
@@ -51,7 +49,7 @@ W praktyce warto ustalić trzy rzeczy: jaki problem ma odbiorca, czego się obaw
 
 Jeśli użytkownik trafia z kampanii reklamowej, landing page powinien być spójny z reklamą. Ta sama obietnica, ten sam język, podobny kierunek wizualny. Kiedy reklama obiecuje szybkie wdrożenie, a strona otwiera się ogólnym hasłem o jakości i pasji, pojawia się zgrzyt. To często wystarcza, żeby użytkownik zamknął kartę.
 
-<h2 id="pierwszy-ekran-musi-sprzedawac-nie-ozdabiac" class="reveal">Pierwszy ekran musi sprzedawać, nie ozdabiać</h2>
+## Pierwszy ekran musi sprzedawać, nie ozdabiać {#pierwszy-ekran-musi-sprzedawac-nie-ozdabiac}
 
 Sekcja hero to miejsce, w którym decydują się pierwsze sekundy uwagi. Użytkownik powinien od razu zobaczyć, co oferujesz, dla kogo to jest i jaki daje efekt. Bez zgadywania. Bez branżowych ogólników.
 
@@ -59,7 +57,7 @@ Dobry nagłówek nie brzmi mądrze. Brzmi jasno. Zamiast pisać o kompleksowych 
 
 Na tym etapie grafika ma wspierać przekaz, a nie go zastępować. Zdjęcie, mockup, krótki materiał wideo albo wizualizacja usługi mogą pomóc, ale tylko wtedy, gdy wzmacniają komunikat. Stock bez związku z ofertą robi odwrotny efekt.
 
-<h2 id="jak-stworzyc-landing-page-sprzedazowy-ktory-prowadzi-uzytkow" class="reveal">Jak stworzyć landing page sprzedażowy, który prowadzi użytkownika do decyzji</h2>
+## Jak stworzyć landing page sprzedażowy, który prowadzi użytkownika do decyzji {#jak-stworzyc-landing-page-sprzedazowy-ktory-prowadzi-uzytkow}
 
 Dobra struktura działa jak rozmowa handlowa. Najpierw pokazujesz, że rozumiesz problem. Potem wyjaśniasz rozwiązanie. Następnie dostarczasz dowody, rozbrajasz obiekcje i proponujesz prosty kolejny krok.
 
@@ -69,7 +67,7 @@ Kolejna sekcja powinna pokazać rozwiązanie. Tu nie chodzi o pełen opis firmy,
 
 Potem przychodzi moment na dowody. Case studies, wyniki, opinie, rozpoznawalne marki, liczby, screeny, fragmenty realizacji. To szczególnie ważne w B2B, gdzie decyzja rzadko jest impulsem. Landing page powinien pomagać użytkownikowi uzasadnić wybór także wewnętrznie – przed wspólnikiem, zespołem albo przełożonym.
 
-<h2 id="tresc-ma-byc-konkretna-a-formularz-krotki" class="reveal">Treść ma być konkretna, a formularz krótki</h2>
+## Treść ma być konkretna, a formularz krótki {#tresc-ma-byc-konkretna-a-formularz-krotki}
 
 Wielu firmom wydaje się, że im mniej tekstu, tym lepiej. To nie zawsze prawda. Długość treści zależy od złożoności oferty i temperatury ruchu. Prosty produkt za niską kwotę może potrzebować krótkiej strony. Usługa za większy budżet, kierowana do wymagających klientów, zwykle potrzebuje więcej argumentów.
 
@@ -77,7 +75,7 @@ Najważniejsze jest to, by tekst był użyteczny. Każdy akapit powinien pracowa
 
 Podobnie z formularzem. Jeśli prosisz o imię, nazwisko, telefon, e-mail, nazwę firmy, branżę, budżet, termin realizacji i opis projektu już na starcie, liczba zgłoszeń spadnie. Owszem, leady mogą być bardziej przefiltrowane, ale czasem koszt jest zbyt wysoki. Tu nie ma jednej reguły. Przy prostym kontakcie lepiej skrócić formularz. Przy ofertach wymagających kwalifikacji można dodać więcej pól, ale trzeba mieć ku temu powód.
 
-<h2 id="design-ma-wspierac-konwersje" class="reveal">Design ma wspierać konwersję</h2>
+## Design ma wspierać konwersję {#design-ma-wspierac-konwersje}
 
 Estetyka jest ważna, ale skuteczny landing page sprzedażowy nie powstaje po to, by zdobyć uznanie projektantów. Ma działać. To oznacza czytelną hierarchię, kontrastowe przyciski, logiczne odstępy, dobrze widoczne sekcje i wersję mobilną dopracowaną równie mocno jak desktop.
 
@@ -85,7 +83,7 @@ W praktyce najwięcej problemów pojawia się właśnie na mobile. Zbyt duże bl
 
 Warto też pilnować jednego stylu wizualnego. Gdy landing page wygląda jak złożony z kilku różnych pomysłów, traci wiarygodność. [Spójny branding](/dlaczego-twoja-firma-potrzebuje-spojnego-brandingu/), jasne komunikaty i konsekwentne CTA wzmacniają poczucie profesjonalizmu. A to bezpośrednio wpływa na decyzję użytkownika.
 
-<h2 id="najczestsze-bledy-przez-ktore-landing-nie-sprzedaje" class="reveal">Najczęstsze błędy, przez które landing nie sprzedaje</h2>
+## Najczęstsze błędy, przez które landing nie sprzedaje {#najczestsze-bledy-przez-ktore-landing-nie-sprzedaje}
 
 Najczęściej problemem nie jest brak ruchu, tylko niedopasowanie strony do intencji odbiorcy. Firma kieruje kampanię do konkretnych osób, ale landing page mówi językiem zbyt szerokim. Albo odwrotnie – strona jest estetyczna, ale nie tłumaczy, dlaczego warto zostawić kontakt właśnie tutaj.
 
@@ -93,7 +91,7 @@ Drugim błędem jest nadmiar opcji. Menu, linki do podstron, kilka różnych prz
 
 Trzeci problem to brak dowodów. Dla firmy, która wydaje budżet, sama deklaracja jakości nie wystarcza. Potrzebne są konkrety. Realizacje, efekty, klienci, proces współpracy, terminy, liczby. Jeśli chcesz sprzedawać poważnie, pokaż, że potrafisz dowieźć temat, a nie tylko dobrze o nim opowiadać.
 
-<h2 id="testowanie-to-nie-dodatek-tylko-etap-pracy" class="reveal">Testowanie to nie dodatek, tylko etap pracy</h2>
+## Testowanie to nie dodatek, tylko etap pracy {#testowanie-to-nie-dodatek-tylko-etap-pracy}
 
 Landing page nie jest skończony w momencie publikacji. Dopiero wtedy zaczyna się właściwa weryfikacja. Warto sprawdzać nagłówki, układ pierwszego ekranu, długość formularza, treść przycisków czy kolejność sekcji. Czasem mała zmiana daje zauważalny wzrost konwersji.
 

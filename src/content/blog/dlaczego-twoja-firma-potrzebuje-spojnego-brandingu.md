@@ -31,17 +31,17 @@ toc:
     label: "Zadbaj o spójny branding z agencją reklamową"
 ---
 
-<h2 id="dlaczego-twoja-firma-potrzebuje-spojnego-brandingu" class="reveal">Dlaczego Twoja firma potrzebuje spójnego brandingu?</h2>
+## Dlaczego Twoja firma potrzebuje spójnego brandingu? {#dlaczego-twoja-firma-potrzebuje-spojnego-brandingu}
 
 Jeśli chcesz, by Twoja firma była zapamiętana, budziła profesjonalne skojarzenia i ułatwiała sprzedaż, potrzebujesz **spójnego, strategicznego brandingu**. Dlaczego to takie ważne? Już tłumaczymy.
 
-<h3 id="spojnosc-buduje-zaufanie">Spójność buduje zaufanie</h3>
+### Spójność buduje zaufanie {#spojnosc-buduje-zaufanie}
 
 Wyobraź sobie firmę, której wizytówki wyglądają inaczej niż jej strona internetowa, a w social mediach używa innego tonu komunikacji niż w materiałach reklamowych. Brzmi znajomo?
 
 Brak konsekwencji wizualnej i komunikacyjnej sprawia, że marka wydaje się **chaotyczna i mało profesjonalna**. Z kolei spójność – w kolorach, stylu, języku – sprawia, że klient szybciej jej **ufa** i częściej do niej wraca.
 
-<h3 id="branding-pomaga-sie-wyroznic">Branding pomaga się wyróżnić</h3>
+### Branding pomaga się wyróżnić {#branding-pomaga-sie-wyroznic}
 
 Na rynku nie wygrywa ten, kto ma najlepszy produkt – tylko ten, kto **potrafi go wyróżnić**.
 
@@ -51,7 +51,7 @@ Spójny branding:
 - pomaga budować emocjonalną relację z klientem
 - zwiększa skuteczność kampanii reklamowych
 
-<h3 id="silna-marka-latwiejszy-marketing-i-sprzedaz">Silna marka = łatwiejszy marketing i sprzedaż</h3>
+### Silna marka = łatwiejszy marketing i sprzedaż {#silna-marka-latwiejszy-marketing-i-sprzedaz}
 
 Dzięki brandingowi wiesz:
 
@@ -61,7 +61,7 @@ Dzięki brandingowi wiesz:
 
 To nie tylko ułatwia tworzenie kampanii i treści, ale też sprawia, że **Twoi klienci rozpoznają Cię od razu** – bez potrzeby „przedstawiania się” za każdym razem od nowa.
 
-<h3 id="niespojnosc-szkodzi-marce-i-kosztuje">Niespójność szkodzi marce (i kosztuje)</h3>
+### Niespójność szkodzi marce (i kosztuje) {#niespojnosc-szkodzi-marce-i-kosztuje}
 
 Brak strategii brandingowej prowadzi do:
 
@@ -71,7 +71,7 @@ Brak strategii brandingowej prowadzi do:
 
 Efekt? Chaos, słabsze wyniki i dodatkowe koszty.
 
-<h3 id="co-wchodzi-w-sklad-spojnego-brandingu">Co wchodzi w skład spójnego brandingu?</h3>
+### Co wchodzi w skład spójnego brandingu? {#co-wchodzi-w-sklad-spojnego-brandingu}
 
 Spójny branding to znacznie więcej niż logo. To cała tożsamość wizualna i komunikacyjna marki:
 
@@ -84,7 +84,7 @@ Spójny branding to znacznie więcej niż logo. To cała tożsamość wizualna i
 
 Wszystko to tworzy **system rozpoznawalności**, który działa na każdej platformie: od strony www, przez social media, po materiały drukowane i prezentacje.
 
-<h3 id="zadbaj-o-spojny-branding-z-agencja-reklamowa">Zadbaj o spójny branding z agencją reklamową</h3>
+### Zadbaj o spójny branding z agencją reklamową {#zadbaj-o-spojny-branding-z-agencja-reklamowa}
 
 Jeśli czujesz, że Twoja marka wygląda „trochę tu, trochę tam”, a w materiałach brakuje spójności – czas działać. Profesjonalny branding to nie koszt, tylko **inwestycja w wizerunek, który pracuje 24/7**.
 

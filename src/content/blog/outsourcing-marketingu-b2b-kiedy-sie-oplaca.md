@@ -31,11 +31,9 @@ toc:
     label: "Jak wygląda dobra współpraca w praktyce"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 W praktyce wiele firm wpada w ten sam schemat. Handlowcy potrzebują materiałów, zarząd oczekuje leadów, HR prosi o wsparcie w [employer brandingu](/dlaczego-twoja-firma-potrzebuje-spojnego-brandingu/), a marketing działa reaktywnie. Powstają pojedyncze kampanie, prezentacje, grafiki i filmy, ale trudno z tego zbudować spójny system, który realnie wspiera rozwój. I właśnie tu outsourcing przestaje być kosztem, a zaczyna pełnić rolę zewnętrznego działu marketingu.
 
-<h2 id="na-czym-naprawde-polega-outsourcing-marketingu-b2b" class="reveal">Na czym naprawdę polega outsourcing marketingu B2B</h2>
+## Na czym naprawdę polega outsourcing marketingu B2B {#na-czym-naprawde-polega-outsourcing-marketingu-b2b}
 
 To nie jest po prostu zlecanie postów na social media albo jednorazowej kampanii reklamowej. Dobrze poukładany outsourcing marketingu B2B oznacza przejęcie przez zewnętrzny zespół całego lub dużej części procesu marketingowego – od planowania, przez produkcję treści i materiałów sprzedażowych, po bieżące działania wizerunkowe i performance.
 
@@ -43,7 +41,7 @@ Dla firmy oznacza to dostęp do kompetencji, które trudno zbudować wewnętrzni
 
 Outsourcing daje elastyczność. W jednym kwartale priorytetem może być rekrutacja, w kolejnym nowa oferta, a później działania sprzedażowe na targi czy kampania wizerunkowa. Zewnętrzny partner jest w stanie przesuwać akcenty szybciej niż wewnętrzny dział budowany od zera.
 
-<h2 id="kiedy-outsourcing-marketingu-b2b-ma-najwiecej-sensu" class="reveal">Kiedy outsourcing marketingu B2B ma najwięcej sensu</h2>
+## Kiedy outsourcing marketingu B2B ma najwięcej sensu {#kiedy-outsourcing-marketingu-b2b-ma-najwiecej-sensu}
 
 Najczęściej wtedy, gdy firma jest w fazie wzrostu i marketing przestał być dodatkiem. Do pewnego momentu da się działać ad hoc. Właściciel zatwierdza treści, handlowiec poprawia prezentację, ktoś z biura wrzuca post na LinkedIn. Ale przy większej skali taki model zaczyna kosztować więcej, niż się wydaje.
 
@@ -53,7 +51,7 @@ Trzeci sygnał jest jeszcze prostszy – firma chce wyglądać i działać profe
 
 W takich sytuacjach model zewnętrznego działu marketingu zwykle sprawdza się lepiej niż doklejanie kolejnych pojedynczych usług.
 
-<h2 id="co-firma-realnie-zyskuje" class="reveal">Co firma realnie zyskuje</h2>
+## Co firma realnie zyskuje {#co-firma-realnie-zyskuje}
 
 Najważniejsza korzyść to tempo. Nie chodzi tylko o szybsze przygotowanie grafiki czy filmu, ale o zdolność do prowadzenia wielu działań równolegle. Kampania sprzedażowa, obsługa social media, sesja zdjęciowa i nowy landing page mogą powstawać w jednym rytmie, bez rozbijania projektu na kilku dostawców.
 
@@ -63,7 +61,7 @@ Trzecia sprawa to jakość egzekucji. Dobry partner zewnętrzny patrzy szerzej n
 
 Jest też korzyść mniej oczywista, ale bardzo praktyczna – odciążenie wewnętrznego zespołu. Marketing manager albo właściciel firmy nie musi być koordynatorem pięciu wykonawców. Zamiast gasić pożary, może skupić się na decyzjach biznesowych.
 
-<h2 id="kiedy-lepiej-nie-outsourcowac-wszystkiego" class="reveal">Kiedy lepiej nie outsourcować wszystkiego</h2>
+## Kiedy lepiej nie outsourcować wszystkiego {#kiedy-lepiej-nie-outsourcowac-wszystkiego}
 
 Outsourcing nie jest automatycznie najlepszym rozwiązaniem dla każdej firmy i w każdym zakresie. Jeśli organizacja ma silny wewnętrzny dział marketingu, jasne procesy i komplet kompetencji produkcyjnych, zewnętrzny partner może być potrzebny tylko do wybranych zadań. Na przykład do kampanii specjalnych, produkcji wideo albo wsparcia przy dużych wdrożeniach.
 
@@ -71,7 +69,7 @@ Podobnie w firmach, które działają w bardzo wąskiej niszy i opierają komuni
 
 Warto też uczciwie powiedzieć o ryzyku. Jeśli firma oczekuje, że partner zewnętrzny samodzielnie rozwiąże wszystkie problemy strategiczne, bez dostępu do danych, feedbacku i zaangażowania po stronie klienta, efekty będą ograniczone. Outsourcing działa najlepiej jako współpraca, nie jako zrzucenie odpowiedzialności.
 
-<h2 id="jak-wybrac-partnera-do-outsourcingu-marketingu-b2b" class="reveal">Jak wybrać partnera do outsourcingu marketingu B2B</h2>
+## Jak wybrać partnera do outsourcingu marketingu B2B {#jak-wybrac-partnera-do-outsourcingu-marketingu-b2b}
 
 Tu warto patrzeć mniej na deklaracje, a bardziej na model pracy. Sam zakres usług nie wystarczy. Ważne jest to, czy partner potrafi połączyć strategię z produkcją i czy dowozi działania od pomysłu do publikacji bez przepychania tematów między podwykonawcami.
 
@@ -81,7 +79,7 @@ Przy wyborze warto sprawdzić trzy rzeczy. Po pierwsze, czy zespół ma doświad
 
 Dla wielu firm najwygodniejszy jest model full-service. Zamiast szukać osobno studia graficznego, ekipy wideo, specjalisty od reklam i wykonawcy strony, współpracują z jednym partnerem, który bierze odpowiedzialność za całość. Tak działa między innymi SEZMOO – jako zewnętrzny dział marketingu, który łączy strategiczne spojrzenie z pełnym zapleczem produkcyjnym.
 
-<h2 id="jak-wyglada-dobra-wspolpraca-w-praktyce" class="reveal">Jak wygląda dobra współpraca w praktyce</h2>
+## Jak wygląda dobra współpraca w praktyce {#jak-wyglada-dobra-wspolpraca-w-praktyce}
 
 Najlepsze efekty daje jasny podział ról. Firma wnosi wiedzę o produkcie, klientach, procesie sprzedaży i priorytetach biznesowych. Partner zewnętrzny przekłada to na komunikację, plan działań, materiały i kampanie. Jeśli obie strony rozumieją swoją rolę, marketing przestaje być zbiorem przypadkowych zadań.
 
@@ -89,7 +87,7 @@ Na starcie dobrze uporządkować cele. Jedna firma chce zwiększyć liczbę lead
 
 Współpraca powinna też opierać się na rytmie. Stałe statusy, [planowanie działań](/uslugi-marketingowe/abonamenty/), szybkie akceptacje i dostęp do osób decyzyjnych robią dużą różnicę. Nawet najlepsza agencja nie przyspieszy procesu, jeśli po stronie klienta każdy materiał czeka tydzień na odpowiedź.
 
-<h2 id="czy-to-sie-oplaca-finansowo" class="reveal">Czy to się opłaca finansowo</h2>
+## Czy to się opłaca finansowo {#czy-to-sie-oplaca-finansowo}
 
 Najkrótsza odpowiedź brzmi: często tak, ale nie zawsze od pierwszego miesiąca da się to policzyć prostą tabelą. W B2B część efektów przychodzi po czasie. Lepsza jakość materiałów, bardziej spójna marka, sprawniejsze kampanie i lepsze wsparcie sprzedaży pracują na wynik stopniowo.
 
@@ -97,7 +95,7 @@ Jeśli jednak firma porówna koszt budowy własnego zespołu z dostępem do peł
 
 Dlatego pytanie nie powinno brzmieć wyłącznie: ile kosztuje outsourcing marketingu B2B. Lepiej zapytać: ile kosztuje nas brak uporządkowanego marketingu, który wspiera sprzedaż i markę.
 
-<h2 id="outsourcing-marketingu-b2b-to-nie-skrot-tylko-sposob-pracy" class="reveal">Outsourcing marketingu B2B to nie skrót, tylko sposób pracy</h2>
+## Outsourcing marketingu B2B to nie skrót, tylko sposób pracy {#outsourcing-marketingu-b2b-to-nie-skrot-tylko-sposob-pracy}
 
 Najlepsze firmy nie zlecają marketingu dlatego, że nie chcą budować kompetencji. Robią to dlatego, że chcą działać szybciej, mądrzej i bez rozbijania procesu na kilka przypadkowych ogniw. Dobrze dobrany partner nie jest dodatkiem do zespołu. Staje się jego realnym przedłużeniem.
 

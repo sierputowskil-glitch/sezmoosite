@@ -31,11 +31,9 @@ toc:
     label: "Raport ma prowadzić do decyzji"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dla firmy liczą się nie same liczby, ale decyzje, które można na ich podstawie podjąć. Dobrze ustawiony pomiar pokazuje, które działania warto skalować, które poprawić, a które zakończyć, zanim pochłoną kolejny budżet. To szczególnie ważne, gdy komunikacja obejmuje jednocześnie reklamy płatne, social media, landing page, materiały wideo, działania outdoorowe i sprzedaż prowadzoną przez handlowców.
 
-<h2 id="zacznij-od-celu-nie-od-liczby-wyswietlen" class="reveal">Zacznij od celu, nie od liczby wyświetleń</h2>
+## Zacznij od celu, nie od liczby wyświetleń {#zacznij-od-celu-nie-od-liczby-wyswietlen}
 
 Najczęstszy błąd to ocenianie każdej kampanii tym samym zestawem wskaźników. Liczba odsłon może być istotna w kampanii wizerunkowej, ale nie odpowie na pytanie, czy reklama B2B wygenerowała wartościowe rozmowy z potencjalnymi klientami. Z kolei niski koszt kliknięcia nie będzie sukcesem, jeśli użytkownicy po wejściu na stronę nie wykonują żadnego działania.
 
@@ -43,7 +41,7 @@ Przed startem kampanii warto zapisać jeden cel główny i maksymalnie dwa cele 
 
 Cel powinien mieć biznesowy sens oraz punkt odniesienia. Samo założenie, że chcemy więcej zapytań, jest zbyt ogólne. Lepiej określić, że kampania ma pozyskać 30 leadów miesięcznie przy koszcie nieprzekraczającym ustalonej kwoty, z których co najmniej kilka powinno wejść do procesu sprzedażowego.
 
-<h2 id="jak-mierzyc-skutecznosc-kampanii-reklamowej-przez-kpi" class="reveal">Jak mierzyć skuteczność kampanii reklamowej przez KPI</h2>
+## Jak mierzyć skuteczność kampanii reklamowej przez KPI {#jak-mierzyc-skutecznosc-kampanii-reklamowej-przez-kpi}
 
 KPI, czyli kluczowe wskaźniki efektywności, muszą wynikać z etapu, na którym znajduje się odbiorca. Nie każda reklama ma od razu sprzedawać. Część materiałów ma zatrzymać uwagę, wyjaśnić ofertę lub zbudować zaufanie przed kontaktem z handlowcem. Problem pojawia się wtedy, gdy kampanię zasięgową rozlicza się wyłącznie z natychmiastowego przychodu albo kampanię leadową wyłącznie z liczby reakcji pod postem.
 
@@ -65,7 +63,7 @@ W działaniach nastawionych na wynik najważniejsze będą liczba konwersji, wsp
 
 Nie warto jednak zatrzymywać analizy na koszcie formularza. Lead za 20 zł może być droższy od leada za 100 zł, jeśli pierwszy nie odpowiada profilowi klienta, a drugi regularnie kończy się sprzedażą. Zespół marketingowy powinien mieć informację zwrotną od handlowców: które kontakty są realne, na jakim etapie odpadają i jaka jest finalna wartość zawartych umów.
 
-<h2 id="policz-koszt-pozyskania-ale-uwzglednij-caly-proces" class="reveal">Policz koszt pozyskania, ale uwzględnij cały proces</h2>
+## Policz koszt pozyskania, ale uwzględnij cały proces {#policz-koszt-pozyskania-ale-uwzglednij-caly-proces}
 
 Koszt kampanii to nie tylko kwota wydana w systemie reklamowym. Jeżeli celem jest rzetelna ocena rentowności, należy uwzględnić również przygotowanie strategii, produkcję materiałów, projekt landing page, obsługę kampanii oraz czas pracy zespołu sprzedażowego.
 
@@ -73,7 +71,7 @@ Wzór na koszt pozyskania klienta jest prosty: całkowity koszt działań dzieli
 
 Dlatego przy długim procesie sprzedaży warto mierzyć także etapy pośrednie: kwalifikowany lead, odbyta rozmowa, przygotowana oferta, spotkanie oraz wygrana sprzedaż. Taki widok pozwala zauważyć, czy problem leży w reklamie, jakości leadów, ofercie czy obsłudze handlowej.
 
-<h2 id="uporzadkuj-dane-zanim-zaczniesz-je-interpretowac" class="reveal">Uporządkuj dane, zanim zaczniesz je interpretować</h2>
+## Uporządkuj dane, zanim zaczniesz je interpretować {#uporzadkuj-dane-zanim-zaczniesz-je-interpretowac}
 
 Wiele firm ma dostęp do dużej liczby danych, ale nie może ich ze sobą porównać. Formularze nie są oznaczone, źródła ruchu mieszają się w raportach, a handlowcy zapisują wyniki w osobnych plikach. W takiej sytuacji nawet najlepsza kreacja nie da pełnego obrazu skuteczności.
 
@@ -81,7 +79,7 @@ Podstawą są poprawnie skonfigurowane cele analityczne, zdarzenia na stronie i 
 
 Przy [działaniach offline](/uslugi-marketingowe/reklama-zewnetrzna/), takich jak billboard, event czy materiały drukowane, pomiar wymaga dodatkowego planu. Pomocne są osobne kody, dedykowane numery telefonów, indywidualne adresy landing page lub pytanie o źródło kontaktu w formularzu. Nie da to stuprocentowej pewności, ale pozwoli ograniczyć zgadywanie.
 
-<h2 id="porownuj-kreacje-i-testuj-jedna-zmiane-naraz" class="reveal">Porównuj kreacje i testuj jedną zmianę naraz</h2>
+## Porównuj kreacje i testuj jedną zmianę naraz {#porownuj-kreacje-i-testuj-jedna-zmiane-naraz}
 
 Reklama nie powinna być oceniana wyłącznie jako dobra lub słaba. Trzeba sprawdzić, który element wpływa na wynik: grupa odbiorców, format, nagłówek, pierwsze sekundy filmu, oferta, wezwanie do działania czy strona docelowa.
 
@@ -89,7 +87,7 @@ Testy A/B mają sens wtedy, gdy zmieniasz jeden istotny element i dajesz kampani
 
 Warto regularnie sprawdzać zmęczenie reklamą. Ta sama kreacja może na początku generować świetne wyniki, a po kilku tygodniach tracić skuteczność, ponieważ odbiorcy widzieli ją zbyt często. Rotacja formatów, nowych ujęć, wariantów copy i argumentów sprzedażowych pozwala utrzymać uwagę bez zmieniania całej strategii.
 
-<h2 id="raport-ma-prowadzic-do-decyzji" class="reveal">Raport ma prowadzić do decyzji</h2>
+## Raport ma prowadzić do decyzji {#raport-ma-prowadzic-do-decyzji}
 
 Dobry raport nie jest prezentacją pełną wykresów. Powinien w kilka minut odpowiedzieć na pytania: co osiągnęliśmy, ile to kosztowało, co zadziałało, co nie zadziałało i co robimy dalej. Dla zarządu kluczowe będą przychód, koszt pozyskania klienta i pipeline sprzedażowy. Dla zespołu marketingowego przydadzą się dodatkowo dane o kreacjach, grupach docelowych i ścieżce konwersji.
 

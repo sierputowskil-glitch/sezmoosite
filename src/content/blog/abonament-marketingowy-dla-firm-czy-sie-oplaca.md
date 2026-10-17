@@ -31,11 +31,9 @@ toc:
     label: "Na co uważać przed podpisaniem umowy"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 To rozwiązanie jest szczególnie sensowne tam, gdzie marketing nie kończy się na jednym poście miesięcznie. Jeśli firma prowadzi sprzedaż, rekrutuje, rozwija markę, obsługuje kilka kanałów komunikacji i regularnie potrzebuje nowych kreacji, abonament zaczyna działać nie jak koszt, ale jak narzędzie do uporządkowania tempa pracy.
 
-<h2 id="czym-jest-abonament-marketingowy-dla-firm" class="reveal">Czym jest abonament marketingowy dla firm</h2>
+## Czym jest abonament marketingowy dla firm {#czym-jest-abonament-marketingowy-dla-firm}
 
 Najprościej mówiąc, to stały model współpracy z agencją lub zewnętrznym zespołem marketingowym. Zamiast rozliczać każdy projekt osobno, firma płaci miesięczną kwotę i w jej ramach korzysta z ustalonego zakresu wsparcia. Może to obejmować strategię, kreację, produkcję materiałów, działania reklamowe, [obsługę social media](/uslugi-marketingowe/obsluga-social-media/), projektowanie, wideo czy wsparcie kampanii sprzedażowych.
 
@@ -43,7 +41,7 @@ Największa różnica względem współpracy projektowej polega na ciągłości.
 
 Dla wielu firm to po prostu wygodniejsza wersja własnego działu marketingu. Bez rekrutacji, bez kosztów stanowisk i bez ryzyka, że jedna osoba ma ogarnąć wszystko – od rolek po kampanie leadowe i druk materiałów na event.
 
-<h2 id="kiedy-abonament-ma-sens-a-kiedy-nie" class="reveal">Kiedy abonament ma sens, a kiedy nie</h2>
+## Kiedy abonament ma sens, a kiedy nie {#kiedy-abonament-ma-sens-a-kiedy-nie}
 
 Abonament nie jest rozwiązaniem dla każdego. Jeśli firma potrzebuje jednorazowo logo, strony albo filmu wizerunkowego, lepszy może być model projektowy. Podobnie wtedy, gdy marketing działa okazjonalnie i nie wymaga regularnej produkcji treści ani stałej koordynacji.
 
@@ -51,7 +49,7 @@ Ale jeśli co miesiąc pojawiają się podobne potrzeby, warto policzyć realne 
 
 Abonament zaczyna się opłacać wtedy, gdy firma chce działać szybciej, bardziej przewidywalnie i bez przestojów. Szczególnie dobrze sprawdza się w organizacjach, które rozwijają sprzedaż, intensywnie komunikują markę, prowadzą kampanie sezonowe albo potrzebują stałego dopływu contentu.
 
-<h2 id="co-realnie-zyskuje-firma" class="reveal">Co realnie zyskuje firma</h2>
+## Co realnie zyskuje firma {#co-realnie-zyskuje-firma}
 
 Pierwsza korzyść to przewidywalność budżetu. Zamiast zbierać kilka wycen miesięcznie i za każdym razem zastanawiać się, czy „ten film musi tyle kosztować”, firma zna ramy współpracy. To ułatwia planowanie i skraca decyzje.
 
@@ -61,7 +59,7 @@ Trzecia korzyść to kompetencje dostępne w jednym miejscu. Dzisiaj marketing t
 
 W modelu abonamentowym firma może korzystać z różnych kompetencji zależnie od momentu. Jednego miesiąca priorytetem będzie kampania employer brandingowa, w kolejnym [landing page](/uslugi-marketingowe/strony-internetowe-i-landing-page/) i reklamy płatne, a później sesja zdjęciowa, reelsy i materiały do handlowców. To ważne, bo potrzeby biznesu rzadko mieszczą się w jednej szufladzie.
 
-<h2 id="abonament-marketingowy-dla-firm-a-wlasny-dzial-marketingu" class="reveal">Abonament marketingowy dla firm a własny dział marketingu</h2>
+## Abonament marketingowy dla firm a własny dział marketingu {#abonament-marketingowy-dla-firm-a-wlasny-dzial-marketingu}
 
 To nie jest pojedynek pod tytułem „agencja albo etat”. W praktyce wiele firm potrzebuje jednego i drugiego, tylko w różnych proporcjach. Własny dział dobrze zna produkt, procesy wewnętrzne i codzienny rytm organizacji. Zewnętrzny zespół daje szerszy warsztat, świeże spojrzenie i większą elastyczność wykonawczą.
 
@@ -71,7 +69,7 @@ Z kolei dla firm bez działu marketingu abonament bywa najrozsądniejszym wejśc
 
 Oczywiście są też ograniczenia. Zewnętrzny partner nie siedzi fizycznie w biurze, nie uczestniczy w każdej rozmowie i nie zna firmy tak intuicyjnie jak pracownik po dwóch latach na pokładzie. Dlatego dobra współpraca abonamentowa wymaga jasnych celów, kontaktu po obu stronach i sprawnego procesu akceptacji.
 
-<h2 id="jak-rozpoznac-dobry-model-wspolpracy" class="reveal">Jak rozpoznać dobry model współpracy</h2>
+## Jak rozpoznać dobry model współpracy {#jak-rozpoznac-dobry-model-wspolpracy}
 
 Nie każdy abonament marketingowy dla firm działa tak samo. Sama miesięczna opłata jeszcze niczego nie gwarantuje. Kluczowe jest to, co naprawdę znajduje się w środku.
 
@@ -81,7 +79,7 @@ Warto też sprawdzić, czy partner potrafi łączyć strategię z produkcją. To
 
 Liczy się także elastyczność. Marketing nie działa w idealnie równych miesiącach. Raz potrzeba więcej contentu, innym razem więcej działań sprzedażowych albo materiałów na event. Dobry partner umie przesuwać akcenty bez rozwalania całego modelu współpracy.
 
-<h2 id="na-co-uwazac-przed-podpisaniem-umowy" class="reveal">Na co uważać przed podpisaniem umowy</h2>
+## Na co uważać przed podpisaniem umowy {#na-co-uwazac-przed-podpisaniem-umowy}
 
 Najczęstszy problem to zbyt ogólny zakres. Jeśli w ofercie jest „obsługa marketingowa”, ale nie wiadomo, co dokładnie obejmuje, trudno później ocenić efektywność. Lepiej doprecyzować, czy chodzi o określoną liczbę materiałów, wsparcie kampanii, projektowanie, montaż, publikację, raportowanie czy konsultacje.
 
@@ -89,7 +87,7 @@ Druga kwestia to czas reakcji i proces. Nawet świetny zespół nie dowiezie du�
 
 Trzeci temat to mierzenie efektów. Nie wszystko w marketingu da się sprowadzić do jednego wskaźnika, ale trzeba wiedzieć, po co robione są konkretne działania. Czasem celem będą leady, czasem wzrost rozpoznawalności, czasem poprawa jakości materiałów sprzedażowych, a czasem uporządkowanie całej komunikacji marki. Jeśli tego nie ustalicie na starcie, łatwo wpaść w produkowanie treści dla samego produkowania.
 
-<h2 id="dla-jakich-firm-ten-model-dziala-najlepiej" class="reveal">Dla jakich firm ten model działa najlepiej</h2>
+## Dla jakich firm ten model działa najlepiej {#dla-jakich-firm-ten-model-dziala-najlepiej}
 
 Najwięcej zyskują firmy, które są w ruchu. Rozwijają się, wchodzą na nowe rynki, potrzebują regularnej komunikacji albo chcą podnieść jakość materiałów bez tworzenia rozbudowanego działu in-house. Dotyczy to zarówno marek lokalnych, jak i większych organizacji, które potrzebują sprawnego wsparcia operacyjnego i kreatywnego jednocześnie.
 

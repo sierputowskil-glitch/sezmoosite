@@ -31,11 +31,9 @@ toc:
     label: "Projekt wizualny musi wspierać decyzję"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Wyobraźmy sobie firmę B2B oferującą kompleksowe wyposażenie biur dla inwestorów, deweloperów i zarządców obiektów. Firma prowadzi [kampanię płatną](/uslugi-marketingowe/kampanie-platne/), ma dobre kreacje, a odbiorcy klikają. Dotychczas kierowała ich jednak na stronę główną z kilkunastoma usługami, aktualnościami i menu pełnym odnośników. Użytkownik musiał sam ustalić, co jest dla niego istotne. Landing page zmienia tę sytuację: prowadzi jedną ścieżką do jednego działania.
 
-<h2 id="przyklad-landing-page-zwiekszajacego-leady-punkt-wyjscia" class="reveal">Przykład landing page zwiększającego leady: punkt wyjścia</h2>
+## Przykład landing page zwiększającego leady: punkt wyjścia {#przyklad-landing-page-zwiekszajacego-leady-punkt-wyjscia}
 
 Załóżmy, że kampania dotyczy usługi „projekt i wyposażenie biura pod klucz”. Celem nie będzie sprzedaż online. Celem jest pozyskanie kontaktu do osoby, która planuje inwestycję i chce poznać zakres, termin oraz orientacyjny budżet realizacji.
 
@@ -43,7 +41,7 @@ To rozróżnienie ma znaczenie. Landing page dla zakupu prostego produktu powini
 
 W analizowanym przykładzie strona ma jeden cel: zachęcić do bezpłatnej konsultacji dotyczącej inwestycji. Cała jej konstrukcja odpowiada na pytania, które odbiorca zadaje sobie w pierwszych kilkunastu sekundach: „Czy oni robią dokładnie to, czego potrzebuję?”, „Czy mają doświadczenie z podobną skalą?” oraz „Co dostanę po zostawieniu kontaktu?”.
 
-<h2 id="sekcja-pierwszego-ekranu-konkret-zamiast-hasla-o-jakosci" class="reveal">Sekcja pierwszego ekranu: konkret zamiast hasła o jakości</h2>
+## Sekcja pierwszego ekranu: konkret zamiast hasła o jakości {#sekcja-pierwszego-ekranu-konkret-zamiast-hasla-o-jakosci}
 
 Pierwszy ekran nie powinien zaczynać się od zdania „Tworzymy przestrzenie przyszłości”. Brzmi efektownie, ale nie mówi, dla kogo jest oferta ani jaki problem rozwiązuje. W kampanii performance liczy się jasność.
 
@@ -57,7 +55,7 @@ Przycisk CTA nie powinien mówić tylko „Wyślij”. Lepiej użyć komunikatu 
 
 Odbiorca nie musi interpretować ogólników. Od razu widzi usługę, skalę działania i następny krok. Dobrze dopasowany komunikat sprawia też, że kliknięcia z kampanii są lepiej wykorzystane. Reklama obiecuje konkretną wartość, a landing page natychmiast ją rozwija – bez zmiany tematu i bez odsyłania do pięciu podstron.
 
-<h2 id="najpierw-problem-klienta-potem-zakres-uslugi" class="reveal">Najpierw problem klienta, potem zakres usługi</h2>
+## Najpierw problem klienta, potem zakres usługi {#najpierw-problem-klienta-potem-zakres-uslugi}
 
 Kolejna sekcja może zaczynać się od sytuacji dobrze znanej grupie docelowej: opóźnione decyzje, wielu wykonawców, niedoszacowany budżet i brak jednej osoby odpowiedzialnej za całość. Nie chodzi o straszenie. Chodzi o pokazanie, że firma rozumie realia inwestycji.
 
@@ -65,7 +63,7 @@ Zamiast rozbudowanej listy usług warto opisać proces w trzech krótkich etapac
 
 W tym miejscu dobrze działa także ramka z informacją „Dla kogo jest ta usługa”. W analizowanym przypadku będą to firmy planujące nowe biuro, relokację lub modernizację istniejącej przestrzeni. Równie ważne jest wskazanie, dla kogo oferta nie będzie najlepsza, na przykład dla osób szukających pojedynczego biurka z natychmiastową dostawą. Taka szczerość zmniejsza liczbę słabych leadów i oszczędza czas handlowców.
 
-<h2 id="dowody-zamiast-deklaracji" class="reveal">Dowody zamiast deklaracji</h2>
+## Dowody zamiast deklaracji {#dowody-zamiast-deklaracji}
 
 Zdanie „jesteśmy liderem jakości” nie przekona osoby odpowiedzialnej za duży budżet. Potrzebuje ona potwierdzenia, że firma już realizowała projekty o podobnym poziomie złożoności.
 
@@ -75,7 +73,7 @@ Obok realizacji warto umieścić cytat klienta, szczególnie jeśli odnosi się 
 
 Jeśli marka obsługuje znane firmy, logotypy mogą wzmocnić wiarygodność. Nie powinny jednak zastępować argumentów. Logotyp mówi „pracowaliśmy dla nich”, ale to opis realizacji pokazuje, dlaczego przyszły klient ma zaufać właśnie teraz.
 
-<h2 id="formularz-ktory-nie-zabija-intencji" class="reveal">Formularz, który nie zabija intencji</h2>
+## Formularz, który nie zabija intencji {#formularz-ktory-nie-zabija-intencji}
 
 Wiele landing page traci leady w ostatnim kroku. Firma prosi o imię, nazwisko, e-mail, telefon, stanowisko, nazwę spółki, NIP, budżet, termin inwestycji i opis potrzeb. Odbiorca, który dopiero chce sprawdzić możliwości, rezygnuje.
 
@@ -83,7 +81,7 @@ W pierwszym kontakcie wystarczą zwykle imię, firmowy e-mail, telefon oraz jedn
 
 Przy formularzu powinien znaleźć się jasny komunikat, co wydarzy się dalej: „Skontaktujemy się, aby poznać zakres inwestycji i przygotować wstępny kierunek działania”. To drobny element, który redukuje obawę przed natarczywym telefonem handlowym.
 
-<h2 id="projekt-wizualny-musi-wspierac-decyzje" class="reveal">Projekt wizualny musi wspierać decyzję</h2>
+## Projekt wizualny musi wspierać decyzję {#projekt-wizualny-musi-wspierac-decyzje}
 
 Landing page nie musi być minimalistyczny za wszelką cenę. Jeśli sprzedajesz usługę kreatywną, wnętrza, produkcję wideo czy rozwiązania technologiczne, strona powinna pokazywać jakość wykonania. Estetyka ma budować zaufanie, ale nie może utrudniać działania.
 
@@ -91,7 +89,7 @@ W praktyce oznacza to czytelną hierarchię, kontrastowy przycisk, duże zdjęci
 
 Projekt powinien być przygotowany przede wszystkim na urządzenia mobilne. W B2B decyzja rzadko zapada na telefonie, ale pierwszy kontakt często zaczyna się właśnie tam – między spotkaniami, w podróży lub podczas szybkiego researchu. Jeżeli formularz, galeria albo przycisk źle działają na małym ekranie, atrakcyjna kampania traci paliwo na ostatnich metrach.
 
-<h2 id="co-mierzyc-po-publikacji-strony" class="reveal">Co mierzyć po publikacji strony</h2>
+## Co mierzyć po publikacji strony {#co-mierzyc-po-publikacji-strony}
 
 W tym przykładzie sukces nie kończy się na wskaźniku konwersji formularza. Strona może zbierać dużo kontaktów, które nie odbierają telefonu albo mają zbyt mały budżet. Dlatego warto połączyć dane z kampanii z informacją zwrotną od sprzedaży.
 

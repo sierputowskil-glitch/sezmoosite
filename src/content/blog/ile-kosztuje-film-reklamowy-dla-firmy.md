@@ -31,11 +31,9 @@ toc:
     label: "O co zapytać przed wyceną"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Jeśli materiał ma tylko „być”, da się go wyprodukować taniej. Jeśli ma sprzedawać, budować markę, wspierać rekrutację albo obsłużyć kampanię w kilku kanałach, koszt rośnie, bo rośnie też zakres pracy, odpowiedzialność i poziom produkcji. Dlatego zamiast pytać wyłącznie o cenę, warto zacząć od celu.
 
-<h2 id="ile-kosztuje-film-reklamowy-dla-firmy-realne-widelki" class="reveal">Ile kosztuje film reklamowy dla firmy – realne widełki</h2>
+## Ile kosztuje film reklamowy dla firmy – realne widełki {#ile-kosztuje-film-reklamowy-dla-firmy-realne-widelki}
 
 Na polskim rynku prosty film reklamowy dla firmy może kosztować od około 3 do 8 tys. zł netto. Mówimy tu zwykle o krótkiej realizacji, jednym dniu zdjęciowym, niewielkiej ekipie i ograniczonym zakresie postprodukcji. To opcja dla firm, które potrzebują sprawnego materiału do [social mediów](/uslugi-marketingowe/obsluga-social-media/), na stronę albo do prostych działań sprzedażowych.
 
@@ -45,7 +43,7 @@ Produkcje bardziej zaawansowane, z aktorami, wieloma lokalizacjami, ujęciami z 
 
 To nie są kwoty „z sufitu”. To efekt bardzo konkretnych decyzji produkcyjnych.
 
-<h2 id="co-naprawde-wplywa-na-koszt-filmu-reklamowego" class="reveal">Co naprawdę wpływa na koszt filmu reklamowego</h2>
+## Co naprawdę wpływa na koszt filmu reklamowego {#co-naprawde-wplywa-na-koszt-filmu-reklamowego}
 
 Największy wpływ na cenę ma zakres preprodukcji. Jeśli potrzebujesz tylko operatora i montażu, koszt będzie niższy. Jeśli wcześniej trzeba opracować koncepcję, napisać scenariusz, przygotować harmonogram, dobrać lokacje, zaplanować styl wizualny i skoordynować kilka osób po stronie klienta, budżet rośnie. I słusznie, bo to właśnie na tym etapie powstaje materiał, który ma sens biznesowy, a nie tylko estetyczny.
 
@@ -55,7 +53,7 @@ Znaczenie ma również miejsce realizacji. Nagranie w siedzibie firmy bywa prost
 
 Nie można też pominąć postprodukcji. Montaż to tylko część pracy. Dochodzi color grading, udźwiękowienie, zakup muzyki, animacje, plansze tekstowe, korekta wersji, przygotowanie formatów pionowych i poziomych oraz eksport pod konkretne media. Im więcej zastosowań filmu, tym większa wartość materiału – ale też większy nakład pracy.
 
-<h2 id="dlaczego-dwie-wyceny-moga-roznic-sie-kilkukrotnie" class="reveal">Dlaczego dwie wyceny mogą różnić się kilkukrotnie</h2>
+## Dlaczego dwie wyceny mogą różnić się kilkukrotnie {#dlaczego-dwie-wyceny-moga-roznic-sie-kilkukrotnie}
 
 Bo pod hasłem „film reklamowy” kryją się zupełnie różne produkty. Jedna firma chce 30-sekundowy materiał do kampanii Meta. Druga potrzebuje filmu employer brandingowego, który pokaże kulturę organizacji, ludzi i proces produkcyjny. Trzecia zamawia spot na targi, do social mediów, na stronę i do działań sprzedażowych handlowców. Formalnie wszystko to są filmy reklamowe, ale operacyjnie to trzy różne zadania.
 
@@ -63,7 +61,7 @@ Różnicę robi też sposób pracy wykonawcy. Freelancer może być dobrym wybor
 
 Dla wielu firm to właśnie ten element jest kluczowy. Nie koszt samej kamery, ale koszt czasu po stronie klienta, poprawek, niedopowiedzeń i koordynacji kilku podwykonawców. Jeśli projekt ma wspierać sprzedaż albo markę pracodawcy, źle zaplanowany materiał bywa po prostu droższy niż dobrze zrobiona produkcja.
 
-<h2 id="ile-kosztuje-film-reklamowy-dla-firmy-w-zaleznosci-od-celu" class="reveal">Ile kosztuje film reklamowy dla firmy w zależności od celu</h2>
+## Ile kosztuje film reklamowy dla firmy w zależności od celu {#ile-kosztuje-film-reklamowy-dla-firmy-w-zaleznosci-od-celu}
 
 Najtańsze są zwykle krótkie materiały sprzedażowe i social content, o ile nie wymagają dużej inscenizacji. Ich siłą jest szybkość produkcji i możliwość skalowania. Jednego dnia zdjęciowego można przygotować serię krótkich formatów, które później pracują w kampanii przez kilka tygodni.
 
@@ -73,7 +71,7 @@ Osobną kategorią są filmy rekrutacyjne i employer brandingowe. Z zewnątrz wy
 
 Największe budżety pojawiają się przy kampaniach 360, gdzie z jednej produkcji mają powstać różne wersje materiałów. Spot główny, cutdowny 15-sekundowe, reelsy, formaty pionowe, [fotografie](/uslugi-marketingowe/projektowanie-graficzne/) i teasery. Taka realizacja kosztuje więcej na starcie, ale często lepiej wykorzystuje budżet niż pięć osobnych produkcji robionych w różnych terminach.
 
-<h2 id="jak-nie-przepalic-budzetu-na-film-reklamowy" class="reveal">Jak nie przepalić budżetu na film reklamowy</h2>
+## Jak nie przepalić budżetu na film reklamowy {#jak-nie-przepalic-budzetu-na-film-reklamowy}
 
 Pierwsza zasada jest prosta: nie zamawiaj filmu, jeśli nie wiesz, gdzie będzie używany. Film na stronę, do kampanii płatnej, na targi i do onboardingu to nie to samo. Im precyzyjniej określisz funkcję materiału, tym łatwiej zbudować sensowną wycenę.
 
@@ -81,7 +79,7 @@ Druga sprawa to myślenie pakietowe. Często bardziej opłaca się zaplanować j
 
 Warto też uważać na pozorne oszczędności. Tani film bez scenariusza, bez planu dystrybucji i bez dostosowania do kanałów bardzo często kończy jako plik, którego nikt nie wykorzystuje. Z perspektywy biznesu to najdroższa wersja produkcji.
 
-<h2 id="o-co-zapytac-przed-wycena" class="reveal">O co zapytać przed wyceną</h2>
+## O co zapytać przed wyceną {#o-co-zapytac-przed-wycena}
 
 Dobra wycena nie zaczyna się od cennika, tylko od kilku konkretnych pytań. Jaki jest cel filmu? Do jakich kanałów ma trafić? Czy potrzebujesz jednej wersji, czy kilku formatów? Kto występuje w materiale? Czy zdjęcia odbywają się w jednej lokalizacji? Jaki jest termin i ile rund poprawek zakładamy?
 
@@ -89,7 +87,7 @@ Jeśli wykonawca nie pyta o takie rzeczy i od razu podaje cenę, to sygnał ostr
 
 W praktyce najlepiej działa model partnerski. Firma mówi, jaki ma cel i budżet, a zespół produkcyjny proponuje rozwiązanie, które da największy zwrot z tej kwoty. Czasem będzie to jeden film premium. Innym razem zestaw krótszych materiałów, które lepiej podkręcą sprzedaż.
 
-<h2 id="kiedy-drozszy-film-naprawde-sie-oplaca" class="reveal">Kiedy droższy film naprawdę się opłaca</h2>
+## Kiedy droższy film naprawdę się opłaca {#kiedy-drozszy-film-naprawde-sie-oplaca}
 
 Wtedy, gdy materiał ma dłuższy cykl życia i pracuje w kilku miejscach jednocześnie. Jeśli film trafia na stronę, do ofert handlowych, kampanii płatnych, prezentacji zarządczych i komunikacji HR, jego koszt rozkłada się na wiele zastosowań. W takiej sytuacji nie kupujesz jednego pliku wideo, tylko narzędzie do komunikacji.
 

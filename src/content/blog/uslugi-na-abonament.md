@@ -29,16 +29,16 @@ toc:
     label: "Podsumowanie"
 ---
 
-<h2 id="abonament-vs-zlecenie" class="reveal">Abonament vs. Zlecenie</h2>
+## Abonament vs. Zlecenie {#abonament-vs-zlecenie}
 
 Jeśli prowadzisz firmę i zastanawiasz się, która opcja będzie dla Ciebie lepsza, w tym artykule znajdziesz szczegółowe porównanie modeli współpracy, ich zalety, wady oraz wskazówki, który model sprawdzi się w Twoim biznesie.
 
-<h2 id="czym-sa-oba-modele" class="reveal">Czym są oba modele?</h2>
+## Czym są oba modele? {#czym-sa-oba-modele}
 
 Abonament – klient płaci stałą, miesięczną opłatę w zamian za określony zakres usług, co gwarantuje stałą współpracę i priorytetową obsługę. Ten model pozwala na regularne działania marketingowe i optymalizację strategii.
 – Jednorazowe zlecenie – klient płaci za konkretną realizację, np. stworzenie strony internetowej, logo czy kampanii reklamowej, bez długoterminowego zobowiązania. Jest to rozwiązanie idealne dla firm, które potrzebują pojedynczych projektów.
 
-<h2 id="abonament-vs-zlecenie-porownanie" class="reveal">Abonament vs. Zlecenie – porównanie</h2>
+## Abonament vs. Zlecenie – porównanie {#abonament-vs-zlecenie-porownanie}
 
 | Kryterium | Abonament | Jednorazowe zlecenie |
 | --- | --- | --- |
@@ -50,7 +50,7 @@ Abonament – klient płaci stałą, miesięczną opłatę w zamian za określon
 | Zaangażowanie agencji | Wysokie, bieżąca optymalizacja strategii | Tylko w zakresie danego zlecenia |
 | Dodatkowe benefity | Dostęp do systemu obsługi zleceń (np. ClickUp), archiwizacja plików, konsultacje | Brak dodatkowych udogodnień |
 
-<h2 id="ktory-model-dla-kogo" class="reveal">Który model dla kogo?</h2>
+## Który model dla kogo? {#ktory-model-dla-kogo}
 
 **Abonament**:
   – Firmy, które chcą stałego wsparcia marketingowego i szybkiej realizacji zadań.
@@ -65,7 +65,7 @@ Abonament – klient płaci stałą, miesięczną opłatę w zamian za określon
   – Biznesy, które nie wymagają stałej opieki marketingowej.
   – Przedsiębiorcy, którzy chcą przetestować współpracę z agencją przed podjęciem długoterminowego zobowiązania.
 
-<h2 id="seo-i-widocznosc-w-wyszukiwarkach" class="reveal">SEO i widoczność w wyszukiwarkach</h2>
+## SEO i widoczność w wyszukiwarkach {#seo-i-widocznosc-w-wyszukiwarkach}
 
 Jeśli zastanawiasz się, jak wybór modelu współpracy wpłynie na Twoją strategię SEO i widoczność w Google, warto pamiętać, że regularne działania marketingowe przynoszą lepsze efekty w dłuższym czasie. W modelu abonamentowym agencja może:
 – Systematycznie optymalizować treści pod kątem SEO,
@@ -75,7 +75,7 @@ Jeśli zastanawiasz się, jak wybór modelu współpracy wpłynie na Twoją stra
 
 W przypadku jednorazowego zlecenia działania SEO są często ograniczone do podstawowej optymalizacji i mogą nie przynieść tak trwałych efektów.
 
-<h2 id="podsumowanie" class="reveal">Podsumowanie</h2>
+## Podsumowanie {#podsumowanie}
 
 Zarówno abonament, jak i jednorazowe zlecenie mają swoje miejsce w branży reklamowej. Model abonamentowy to świetne rozwiązanie dla firm, które chcą zapewnić sobie stałą, profesjonalną obsługę i korzyści wynikające z długoterminowej współpracy. Natomiast jednorazowe zlecenie może być lepszym wyborem dla tych, którzy potrzebują konkretnej usługi bez długofalowych zobowiązań. Wybór zależy od indywidualnych potrzeb, budżetu i strategii firmy.
 

@@ -31,11 +31,9 @@ toc:
     label: "Najczęstsze błędy, które obniżają efekt"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Firmy często zamawiają materiały pojedynczo, w reakcji na zbliżający się event, start kampanii lub pilną potrzebę działu sprzedaży. To zrozumiałe, ale taki tryb pracy łatwo prowadzi do niespójnej komunikacji i kosztownych poprawek. Lepszy efekt daje spojrzenie na materiały jako na zestaw narzędzi, które wspierają jeden cel, a nie jako serię ładnych plików do wydruku.
 
-<h2 id="materialy-reklamowe-dla-firmy-zaczynaja-sie-od-celu" class="reveal">Materiały reklamowe dla firmy zaczynają się od celu</h2>
+## Materiały reklamowe dla firmy zaczynają się od celu {#materialy-reklamowe-dla-firmy-zaczynaja-sie-od-celu}
 
 Najpierw warto odpowiedzieć na pytanie: co odbiorca ma zrobić po kontakcie z materiałem? Jeśli ma zostawić dane, potrzebujesz jasnego wezwania do działania i krótkiej ścieżki kontaktu. Jeśli ma uwierzyć w kompetencje firmy, kluczowe będą liczby, realizacje, opinie klientów i dobrze pokazany proces. Gdy celem jest sprzedaż konkretnej usługi, materiał powinien prowadzić od problemu klienta do rozwiązania, zakresu współpracy i następnego kroku.
 
@@ -43,7 +41,7 @@ Ten sam folder nie spełni równie dobrze wszystkich tych ról. Prezentacja dla 
 
 Dlatego przed projektowaniem trzeba ustalić odbiorcę, etap jego decyzji i kanał dystrybucji. Te trzy elementy decydują o formacie, długości treści, rodzaju grafiki oraz nakładzie produkcyjnym.
 
-<h2 id="jak-dobrac-format-do-sytuacji-sprzedazowej" class="reveal">Jak dobrać format do sytuacji sprzedażowej</h2>
+## Jak dobrać format do sytuacji sprzedażowej {#jak-dobrac-format-do-sytuacji-sprzedazowej}
 
 Dobry wybór nie zaczyna się od pytania, czy firma potrzebuje ulotki. Zaczyna się od tego, gdzie i w jakich rękach materiał będzie pracował. W sprzedaży B2B szczególnie skuteczne są formaty, które handlowiec może łatwo dopasować do rozmowy: prezentacja ofertowa, one-pager z konkretną usługą, case study lub karta produktu. Nie powinny zastępować rozmowy, lecz porządkować ją i zostawiać klientowi mocny punkt odniesienia po spotkaniu.
 
@@ -53,7 +51,7 @@ W komunikacji rekrutacyjnej dobrze działają materiały pokazujące ludzi, kult
 
 Materiały do kampanii zewnętrznej mają jeszcze inne zasady. Billboard, reklama na nośniku miejskim czy grafika do digital out of home potrzebują prostoty, kontrastu i jednego przekazu. Próba zmieszczenia pełnej oferty na małej powierzchni zwykle kończy się projektem, którego nie da się odczytać w ruchu.
 
-<h2 id="co-powinien-zawierac-skuteczny-zestaw-materialow" class="reveal">Co powinien zawierać skuteczny zestaw materiałów</h2>
+## Co powinien zawierać skuteczny zestaw materiałów {#co-powinien-zawierac-skuteczny-zestaw-materialow}
 
 Nie każda firma potrzebuje rozbudowanego katalogu i kilkunastu formatów na start. Warto jednak zbudować bazę, którą można szybko rozwijać przy kolejnych działaniach. Dobrze przygotowany system ogranicza chaos, przyspiesza pracę zespołu i chroni markę przed przypadkowymi komunikatami.
 
@@ -67,7 +65,7 @@ W praktyce podstawowy zestaw może obejmować:
 
 Najważniejsza jest spójna hierarchia informacji. [Logo i firmowe kolory](/uslugi-marketingowe/identyfikacja-wizualna/) nie wystarczą, jeśli każda prezentacja mówi innym językiem, eksponuje inne korzyści i używa przypadkowych zdjęć. Identyfikacja wizualna powinna ułatwiać odbiorcy rozpoznanie marki, ale komunikacja ma przede wszystkim ułatwiać decyzję.
 
-<h2 id="projekt-to-nie-dekoracja" class="reveal">Projekt to nie dekoracja</h2>
+## Projekt to nie dekoracja {#projekt-to-nie-dekoracja}
 
 Estetyka przyciąga uwagę, lecz nie może ukrywać braku treści. W materiałach dla biznesu liczą się konkretne dowody: liczba wdrożeń, skala realizacji, certyfikaty, czas reakcji, proces współpracy, portfolio i wynik, który klient osiągnął. Nie trzeba umieszczać wszystkiego naraz. Trzeba wybrać to, co zmniejsza ryzyko w głowie odbiorcy.
 
@@ -75,7 +73,7 @@ Dobry projekt prowadzi wzrok. Odbiorca powinien wiedzieć, od czego zacząć, co
 
 Znaczenie ma też jakość materiałów wizualnych. Zdjęcia stockowe bywają uzasadnione, zwłaszcza przy ograniczonym budżecie lub w projektach wymagających szybkiego wdrożenia. Jeśli jednak firma sprzedaje zaufanie, doświadczenie zespołu, technologię lub wyjątkową przestrzeń, [własna fotografia i wideo](/uslugi-marketingowe/fotografia/) są znacznie mocniejszym argumentem. Pokazują, że za marką stoją realni ludzie i realne kompetencje.
 
-<h2 id="druk-digital-i-produkcja-musza-grac-razem" class="reveal">Druk, digital i produkcja muszą grać razem</h2>
+## Druk, digital i produkcja muszą grać razem {#druk-digital-i-produkcja-musza-grac-razem}
 
 Projekt przygotowany wyłącznie pod ekran może rozczarować po wydruku. Kolory różnią się między monitorami a papierem, zbyt mała typografia traci czytelność, a niewłaściwie przygotowane pliki generują błędy i opóźnienia. Z kolei materiał drukowany bez wersji cyfrowej może być trudny do wykorzystania w mailingu, kampanii lub pracy zdalnego zespołu handlowego.
 
@@ -83,7 +81,7 @@ Dlatego planowanie produkcji warto zacząć równolegle z kreacją. Rodzaj papie
 
 W digitalu warto zachować tę samą zasadę: jeden materiał, jeden priorytet. Grafika do kampanii płatnej nie musi zawierać wszystkich zalet usługi. Jej zadaniem jest zatrzymać uwagę i doprowadzić do kliknięcia. Dopiero landing page, prezentacja lub kontakt z handlowcem rozwijają argumentację.
 
-<h2 id="najczestsze-bledy-ktore-obnizaja-efekt" class="reveal">Najczęstsze błędy, które obniżają efekt</h2>
+## Najczęstsze błędy, które obniżają efekt {#najczestsze-bledy-ktore-obnizaja-efekt}
 
 Pierwszym błędem jest zaczynanie od formatu zamiast od strategii. Firma zamawia folder, bo konkurencja ma folder, choć realnie potrzebuje krótkiego pakietu dla handlowców i aktualnej prezentacji. Drugi błąd to zbyt wiele treści. Gdy każdy dział chce dopisać swój akapit, materiał przestaje być narzędziem sprzedażowym, a staje się archiwum firmowych informacji.
 
@@ -91,7 +89,7 @@ Problemem jest również brak aktualizacji. Nieaktualne logo klienta w portfolio
 
 Wreszcie, wiele marek nie mierzy efektu. Warto pytać handlowców, które materiały pomagają w rozmowach, obserwować liczbę zapytań z kampanii i sprawdzać, czy odbiorcy rozumieją główną propozycję wartości. Nie każdy rezultat da się przypisać do jednego folderu, ale bez informacji zwrotnej trudno poprawiać kolejne wydania.
 
-<h2 id="jeden-partner-mniej-koordynacji" class="reveal">Jeden partner, mniej koordynacji</h2>
+## Jeden partner, mniej koordynacji {#jeden-partner-mniej-koordynacji}
 
 Gdy materiały obejmują strategię, copywriting, projekt, zdjęcia, wideo, animację, druk i kampanię, koordynowanie kilku wykonawców potrafi spowolnić cały proces. Każda zmiana wymaga wtedy dodatkowych ustaleń, a odpowiedzialność za spójność rozmywa się między zespołami.
 

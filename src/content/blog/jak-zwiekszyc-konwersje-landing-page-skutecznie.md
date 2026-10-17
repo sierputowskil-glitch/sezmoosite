@@ -31,11 +31,9 @@ toc:
     label: "Treść musi brzmieć jak odpowiedź na problem"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dobra wiadomość jest taka, że konwersję da się poprawić bez stawiania strony od zera. Trzeba jednak patrzeć na landing page jak na narzędzie sprzedażowe, a nie tylko estetyczną wizytówkę kampanii. Liczy się to, czy użytkownik od razu rozumie ofertę, ufa marce i wie, co zrobić dalej.
 
-<h2 id="jak-zwiekszyc-konwersje-landing-page-bez-zgadywania" class="reveal">Jak zwiększyć konwersję landing page bez zgadywania</h2>
+## Jak zwiększyć konwersję landing page bez zgadywania {#jak-zwiekszyc-konwersje-landing-page-bez-zgadywania}
 
 Zanim zmienisz nagłówek, przycisk albo formularz, sprawdź jedną rzecz: czy obietnica reklamy zgadza się z tym, co użytkownik widzi po wejściu na stronę. Jeśli kampania mówi o darmowej wycenie, a landing page otwiera się ogólnym opisem firmy, pojawia się zgrzyt. Jeśli reklama obiecuje szybki termin realizacji, a strona skupia się głównie na historii marki, użytkownik traci impet.
 
@@ -43,7 +41,7 @@ Konwersja rośnie wtedy, gdy ścieżka jest spójna. Reklama przyciąga konkretn
 
 W praktyce warto zacząć od trzech pytań. Co dokładnie oferujesz? Dla kogo to jest? Dlaczego warto zrobić to teraz? Jeżeli odpowiedzi nie da się odczytać w pierwszych sekundach, strona prawdopodobnie traci część ruchu, zanim użytkownik przewinie ekran.
 
-<h2 id="najpierw-komunikat-potem-design" class="reveal">Najpierw komunikat, potem design</h2>
+## Najpierw komunikat, potem design {#najpierw-komunikat-potem-design}
 
 W wielu projektach zbyt dużo energii idzie w animacje, układ sekcji i warstwę wizualną, a za mało w sedno komunikatu. Tymczasem użytkownik nie przyszedł podziwiać layoutu. Chce szybko ocenić, czy trafił we właściwe miejsce.
 
@@ -57,7 +55,7 @@ Landing page zbyt często próbuje robić wszystko naraz. Sprzedawać, edukować
 
 Jeśli celem jest zebranie leadów, podporządkuj temu całą stronę. Niech każdy blok wzmacnia decyzję o kontakcie. Jeżeli celem jest zapis na demo, nie odciągaj uwagi dodatkowymi ścieżkami. Im mniej bocznych opcji, tym większa szansa, że użytkownik wykona dokładnie to działanie, na którym ci zależy.
 
-<h2 id="co-realnie-podnosi-konwersje-landing-page" class="reveal">Co realnie podnosi konwersję landing page</h2>
+## Co realnie podnosi konwersję landing page {#co-realnie-podnosi-konwersje-landing-page}
 
 Najmocniej działają nie sztuczki, tylko redukcja oporu. Użytkownik musi poczuć, że oferta jest dla niego, proces jest prosty, a ryzyko niewielkie.
 
@@ -75,7 +73,7 @@ Jeśli formularz jest niewygodny, tekst zbyt drobny, a przycisk CTA schowany za 
 
 Dlatego landing page trzeba projektować od strony użyteczności, nie tylko grafiki. Dobra kreacja ma wspierać ruch sprzedażowy, a nie go spowalniać.
 
-<h2 id="jak-zwiekszyc-konwersje-landing-page-przez-lepsza-strukture" class="reveal">Jak zwiększyć konwersję landing page przez lepszą strukturę</h2>
+## Jak zwiększyć konwersję landing page przez lepszą strukturę {#jak-zwiekszyc-konwersje-landing-page-przez-lepsza-strukture}
 
 Struktura strony powinna odpowiadać na naturalne pytania użytkownika. Najpierw musi paść jasna obietnica. Potem krótkie rozwinięcie korzyści. Następnie dowody, że oferta działa. Na końcu prosty krok do działania. Kiedy ten porządek zostaje zaburzony, użytkownik musi sam sobie układać narrację, a to zwykle kończy się odpływem.
 
@@ -89,7 +87,7 @@ Jednym z częstszych błędów jest zbyt szeroki przekaz. Strona próbuje trafi�
 
 Skuteczny landing page zawęża komunikację. Mówi wprost, do kogo jest kierowany i w jakiej sytuacji pomaga. To może oznaczać mniejszy zasięg komunikatu, ale zwykle daje lepszą jakość leadów i wyższą konwersję. Szeroko nie zawsze znaczy skutecznie.
 
-<h2 id="testy-ktore-maja-sens" class="reveal">Testy, które mają sens</h2>
+## Testy, które mają sens {#testy-ktore-maja-sens}
 
 Jeśli chcesz poprawiać wynik, nie zmieniaj wszystkiego jednocześnie. Wtedy nie wiesz, co faktycznie zadziałało. Lepiej testować pojedyncze elementy: nagłówek, układ hero sekcji, treść CTA, długość formularza, kolejność bloków albo rodzaj dowodu społecznego.
 
@@ -97,7 +95,7 @@ Testy A/B mają sens wtedy, gdy ruch jest wystarczający, a hipoteza konkretna. 
 
 Dlatego landing page trzeba oceniać nie tylko po współczynniku konwersji, ale też po tym, co dzieje się dalej. Ile leadów przechodzi do rozmowy? Ile kończy się ofertą? Ile domyka sprzedaż? Bez tego łatwo poprawić wskaźnik na papierze, a nie w realnym biznesie.
 
-<h2 id="tresc-musi-brzmiec-jak-odpowiedz-na-problem" class="reveal">Treść musi brzmieć jak odpowiedź na problem</h2>
+## Treść musi brzmieć jak odpowiedź na problem {#tresc-musi-brzmiec-jak-odpowiedz-na-problem}
 
 Dobre landing page nie są przeładowane tekstem, ale nie są też puste. Potrzebują treści, która odpowiada na realne obawy odbiorcy. W B2B często są to pytania o czas wdrożenia, koszt, zakres obsługi, doświadczenie zespołu czy przewidywalność procesu. Jeśli strona nie adresuje tych tematów, handlowiec będzie musiał odrabiać to później.
 
@@ -105,7 +103,7 @@ Właśnie dlatego najlepiej działają treści pisane z perspektywy decyzji zaku
 
 W pracy nad [landing page](/#team) dobrze sprawdza się podejście, w którym strategia, kreacja i wdrożenie są spięte w jeden proces. To zmniejsza liczbę niespójności między reklamą, projektem i treścią. Właśnie dlatego model zewnętrznego działu marketingu, jaki rozwija SEZMOO, bywa dla wielu firm po prostu szybszy i skuteczniejszy operacyjnie.
 
-<h2 id="kiedy-problem-nie-lezy-w-stronie" class="reveal">Kiedy problem nie leży w stronie</h2>
+## Kiedy problem nie leży w stronie {#kiedy-problem-nie-lezy-w-stronie}
 
 Czasem landing page dostaje winę za słaby wynik, chociaż problem zaczyna się wcześniej. Ruch może być źle dobrany, oferta niedopasowana do etapu lejka, a kampania kierowana do zbyt szerokiej grupy. Nawet najlepiej zaprojektowana strona nie naprawi obietnicy, która nie trafia w realną potrzebę.
 

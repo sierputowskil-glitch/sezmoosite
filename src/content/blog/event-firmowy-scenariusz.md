@@ -31,11 +31,9 @@ toc:
     label: "Kiedy warto oddać scenariusz w ręce agencji"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dobrze przygotowany scenariusz porządkuje nie tylko przebieg imprezy, ale też cele biznesowe. Bo event ma działać – budować relacje, wzmacniać markę pracodawcy, wspierać sprzedaż, integrować zespół albo pokazywać firmę z mocnej strony. Jeśli scenariusz tego nie uwzględnia, nawet efektowna oprawa nie przykryje chaosu.
 
-<h2 id="event-firmowy-scenariusz-zaczyna-sie-od-celu" class="reveal">Event firmowy – scenariusz zaczyna się od celu</h2>
+## Event firmowy – scenariusz zaczyna się od celu {#event-firmowy-scenariusz-zaczyna-sie-od-celu}
 
 Najczęstszy błąd? Pisanie scenariusza od atrakcji. Najpierw DJ, potem występ, może panel, może konkurs, a dopiero później pytanie, po co w ogóle ten event powstaje. W praktyce powinno być odwrotnie.
 
@@ -43,7 +41,7 @@ Scenariusz trzeba budować od celu wydarzenia. Inaczej wygląda plan gali dla kl
 
 To ważne również dlatego, że dobry event nie jest zlepkiem atrakcji. Jest narzędziem komunikacji. I dokładnie tak warto go traktować.
 
-<h2 id="co-powinien-zawierac-dobry-scenariusz-eventu-firmowego" class="reveal">Co powinien zawierać dobry scenariusz eventu firmowego</h2>
+## Co powinien zawierać dobry scenariusz eventu firmowego {#co-powinien-zawierac-dobry-scenariusz-eventu-firmowego}
 
 Scenariusz nie kończy się na rozpisce godzinowej. Owszem, agenda jest podstawą, ale sama lista punktów programu zwykle nie wystarcza. Profesjonalny dokument powinien pokazywać, co dzieje się o konkretnej godzinie, kto za to odpowiada, jakie są zależności techniczne i gdzie mogą pojawić się ryzyka.
 
@@ -63,7 +61,7 @@ Wydarzenie firmowe ma swoją dramaturgię. Początek powinien przyciągać uwag�
 
 Dlatego scenariusz powinien pracować rytmem. Po intensywnym bloku merytorycznym zwykle potrzebny jest oddech. Po części oficjalnej warto przejść do lżejszego formatu. Jeśli plan jest za ciężki, uczestnicy odpadają mentalnie. Jeśli zbyt luźny, event traci sens biznesowy. Tu nie ma jednego szablonu. Trzeba dopasować tempo do grupy, celu i formatu.
 
-<h2 id="jak-stworzyc-event-firmowy-scenariusz-krok-po-kroku" class="reveal">Jak stworzyć event firmowy – scenariusz krok po kroku</h2>
+## Jak stworzyć event firmowy – scenariusz krok po kroku {#jak-stworzyc-event-firmowy-scenariusz-krok-po-kroku}
 
 Najpierw trzeba określić, dla kogo organizowane jest wydarzenie i jaką reakcję ma wywołać. Inaczej projektuje się event dla zarządu i kluczowych kontrahentów, inaczej dla całej organizacji, a jeszcze inaczej dla kandydatów w procesie employer brandingowym. To definiuje nie tylko treść, ale też styl prowadzenia, długość części oficjalnej i skalę atrakcji.
 
@@ -73,7 +71,7 @@ Kolejny krok to rozpisanie osi wydarzenia. Najpierw główne bloki: przyjazd go�
 
 Na końcu przychodzi etap, którego wiele firm nie lubi, bo jest najmniej widowiskowy – produkcyjne doszczegółowienie. Czyli przypisanie odpowiedzialności, czasów technicznych, punktów kontrolnych i planów awaryjnych. To właśnie ten etap decyduje, czy event wygląda profesjonalnie, czy improwizowany.
 
-<h2 id="gdzie-scenariusze-najczesciej-sie-sypia" class="reveal">Gdzie scenariusze najczęściej się sypią</h2>
+## Gdzie scenariusze najczęściej się sypią {#gdzie-scenariusze-najczesciej-sie-sypia}
 
 Problem rzadko leży w braku pomysłu. Zwykle zawodzi koordynacja. Dział marketingu widzi komunikację, HR patrzy na doświadczenie pracowników, zarząd chce konkretnego efektu biznesowego, a podwykonawcy pracują w swoich zakresach. Jeśli nikt nie scala tego w jeden przebieg wydarzenia, pojawiają się zgrzyty.
 
@@ -83,7 +81,7 @@ Drugi częsty błąd to brak marginesu czasowego. Na papierze wszystko się mie�
 
 Trzeci problem to przeciążenie programu. Firmy chcą zmieścić za dużo, bo skoro już organizują wydarzenie, to chcą powiedzieć wszystko. Efekt? Uczestnicy wynoszą mniej, nie więcej. Lepiej zagrać precyzją niż przeładowaniem.
 
-<h2 id="scenariusz-a-doswiadczenie-uczestnika" class="reveal">Scenariusz a doświadczenie uczestnika</h2>
+## Scenariusz a doświadczenie uczestnika {#scenariusz-a-doswiadczenie-uczestnika}
 
 Z perspektywy organizatora scenariusz to dokument roboczy. Z perspektywy gościa – niewidzialna konstrukcja całego doświadczenia. Uczestnik nie widzi tabel, cue sheetów i checklist, ale odczuwa ich brak natychmiast. Za długa rejestracja, niezrozumiałe przejścia, źle ustawiona kolejność punktów programu, przestoje i chaos informacyjny błyskawicznie obniżają ocenę całego wydarzenia.
 
@@ -91,7 +89,7 @@ Dlatego scenariusz powinien być projektowany nie tylko od strony produkcji, ale
 
 Dobrze zaplanowany przebieg działa trochę jak dobra kampania. Ma początek, rozwinięcie i punkt kulminacyjny. Nie męczy nadmiarem, tylko prowadzi do efektu.
 
-<h2 id="kiedy-warto-oddac-scenariusz-w-rece-agencji" class="reveal">Kiedy warto oddać scenariusz w ręce agencji</h2>
+## Kiedy warto oddać scenariusz w ręce agencji {#kiedy-warto-oddac-scenariusz-w-rece-agencji}
 
 Jeśli wydarzenie jest małe i wewnętrzne, część firm spokojnie poradzi sobie samodzielnie. Ale im większa stawka, większa liczba interesariuszy i większa odpowiedzialność za efekt, tym bardziej opłaca się pracować z partnerem, który łączy strategię, kreację i produkcję.
 

@@ -27,11 +27,9 @@ toc:
     label: "Jak zaplanować wideo, które podkręca sprzedaż"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dla firm B2B to konkretna zmiana. Wideo przestaje być wyłącznie elementem wizerunkowym pokazywanym raz w roku. Staje się narzędziem, z którego korzysta marketing, handlowiec, rekrutacja i obsługa klienta. Dobrze zaplanowany materiał potrafi skrócić pierwszą rozmowę, uwiarygodnić ofertę i przygotować klienta do decyzji jeszcze zanim zespół sprzedaży odbierze telefon.
 
-<h2 id="przyszlosc-contentu-wideo-w-sprzedazy-mniej-halasu-wiecej-od" class="reveal">Przyszłość contentu wideo w sprzedaży: mniej hałasu, więcej odpowiedzi</h2>
+## Przyszłość contentu wideo w sprzedaży: mniej hałasu, więcej odpowiedzi {#przyszlosc-contentu-wideo-w-sprzedazy-mniej-halasu-wiecej-od}
 
 Rynek jest pełen treści, ale odbiorca nie potrzebuje kolejnej efektownej animacji bez kontekstu. Potrzebuje odpowiedzi na pytania, które naprawdę zatrzymują zakup: czy to rozwiązanie pasuje do mojej firmy, ile wdrożenie będzie wymagało pracy, kto już z niego korzysta i jak wygląda efekt?
 
@@ -47,7 +45,7 @@ Na etapie zainteresowania dobrze działa dynamiczny materiał, który trafnie na
 
 To szczególnie istotne w B2B, gdzie decyzję często podejmuje kilka osób. Osoba z marketingu ocenia spójność marki, dział operacyjny pyta o wdrożenie, a zarząd chce wiedzieć, czy inwestycja się obroni. Materiał wideo może pomóc każdej z tych osób, o ile nie próbuje mówić do wszystkich tym samym komunikatem.
 
-<h2 id="wideo-wspiera-handlowca-a-nie-zastepuje-relacji" class="reveal">Wideo wspiera handlowca, a nie zastępuje relacji</h2>
+## Wideo wspiera handlowca, a nie zastępuje relacji {#wideo-wspiera-handlowca-a-nie-zastepuje-relacji}
 
 Automatyzacja, sztuczna inteligencja i rosnąca liczba kanałów cyfrowych zmieniają pracę zespołów sprzedaży. Nie zastąpią jednak rozmowy tam, gdzie oferta jest złożona, a stawka wysoka. Wideo ma inną rolę: pozwala handlowcowi wejść w rozmowę lepiej przygotowanemu i nie tracić czasu na wielokrotne tłumaczenie podstaw.
 
@@ -61,7 +59,7 @@ Reelsy, pionowe wideo i szybkie tempo są skuteczne w budowaniu zasięgu. Nie ka
 
 Kluczem jest dopasowanie długości do celu. Krótkie wideo ma zachęcić do kolejnego kroku. Materiał trzy- lub pięciominutowy może wyjaśnić proces, pokazać realizację i rozwiać obawy. Dłuższa rozmowa ekspercka sprawdzi się u odbiorcy, który jest już blisko decyzji i szuka dowodów kompetencji. Problemem nie jest długość, lecz brak powodu, by oglądać dalej.
 
-<h2 id="dane-i-autentycznosc-beda-wazniejsze-niz-perfekcja" class="reveal">Dane i autentyczność będą ważniejsze niż perfekcja</h2>
+## Dane i autentyczność będą ważniejsze niż perfekcja {#dane-i-autentycznosc-beda-wazniejsze-niz-perfekcja}
 
 Generatywne narzędzia przyspieszają tworzenie scenariuszy, wersji językowych, napisów i prostych [formatów animowanych](/uslugi-marketingowe/animacje-2d-i-3d/). To dobra wiadomość dla firm, które muszą reagować szybko. Jednocześnie łatwo będzie produkować coraz więcej treści podobnych do siebie: poprawnych, ale bez charakteru, doświadczenia i prawdziwego punktu widzenia.
 
@@ -69,7 +67,7 @@ Dlatego zyska autentyczność. Prawdziwy ekspert, klient mówiący własnymi sł
 
 Firmy powinny też przestać oceniać wideo wyłącznie przez liczbę odsłon. W [kampanii zasięgowej](/uslugi-marketingowe/kampanie-platne/) jest to przydatny sygnał, ale w sprzedaży liczą się kolejne działania odbiorcy. Czy obejrzał kluczowy fragment? Czy przeszedł na stronę oferty? Czy zostawił zapytanie? Czy materiał pomógł handlowcowi przesunąć rozmowę do następnego etapu?
 
-<h2 id="jak-zaplanowac-wideo-ktore-podkreca-sprzedaz" class="reveal">Jak zaplanować wideo, które podkręca sprzedaż</h2>
+## Jak zaplanować wideo, które podkręca sprzedaż {#jak-zaplanowac-wideo-ktore-podkreca-sprzedaz}
 
 Punktem wyjścia nie powinno być pytanie: „jaki film nagrywamy?”. Lepsze brzmi: „w którym miejscu tracimy klientów i czego nie potrafimy im dziś dobrze wyjaśnić?”. Czasem odpowiedzią będzie film produktowy. Czasem seria krótkich materiałów z ekspertami, a czasem case study, które handlowcy będą wysyłać po pierwszym spotkaniu.
 

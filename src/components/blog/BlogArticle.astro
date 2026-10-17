@@ -42,6 +42,9 @@ const {
   ctaLabel = 'Porozmawiajmy',
   showCta = true,
 } = Astro.props;
+
+/** Lead-only TOC anchor — injected so MD bodies stay pure Markdown. */
+const injectWstep = toc.some((item) => item.id === 'wstep');
 ---
 
 <article class="article shell">
@@ -90,6 +93,7 @@ const {
     }
 
     <div class="article__content">
+      {injectWstep ? <div id="wstep" class="reveal"></div> : null}
       <slot />
       {
         showCta ? (

@@ -31,11 +31,9 @@ toc:
     label: "Kiedy prosty landing wystarczy, a kiedy trzeba pójść szerzej"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 To ważna różnica, bo dobra kampania nie kończy się na zasięgu czy CTR-ze. Jeśli użytkownik trafia na stronę, która miesza komunikaty, rozprasza, ładuje się zbyt długo albo nie daje jasnej odpowiedzi na pytanie „co mam zrobić dalej?”, budżet zaczyna się przepalać. I to bardzo szybko.
 
-<h2 id="czym-rozni-sie-landing-page-dla-kampanii-od-zwyklej-strony" class="reveal">Czym różni się landing page dla kampanii od zwykłej strony</h2>
+## Czym różni się landing page dla kampanii od zwykłej strony {#czym-rozni-sie-landing-page-dla-kampanii-od-zwyklej-strony}
 
 Strona firmowa ma wiele zadań naraz. Ma budować wiarygodność, pokazywać ofertę, opowiadać o marce, zbierać ruch z różnych źródeł i odpowiadać na potrzeby różnych grup odbiorców. To normalne. Problem zaczyna się wtedy, gdy oczekujemy od niej takiej samej skuteczności sprzedażowej jak od strony przygotowanej pod jedną konkretną akcję reklamową.
 
@@ -43,7 +41,7 @@ Landing page dla kampanii jest projektowany pod jeden cel. Nie pod pięć celów
 
 Dlatego skuteczny landing page jest węższy, prostszy i bardziej zdyscyplinowany komunikacyjnie niż klasyczna witryna. Nie musi opowiadać wszystkiego o firmie. Ma powiedzieć dokładnie tyle, ile trzeba, żeby użytkownik przeszedł do działania.
 
-<h2 id="co-naprawde-decyduje-o-skutecznosci-landing-page-a" class="reveal">Co naprawdę decyduje o skuteczności landing page’a</h2>
+## Co naprawdę decyduje o skuteczności landing page’a {#co-naprawde-decyduje-o-skutecznosci-landing-page-a}
 
 Najczęstszy błąd? Skupienie na wyglądzie zamiast na funkcji. Estetyka ma znaczenie, ale sama nie sprzedaje. Jeśli nagłówek jest ogólny, oferta nieczytelna, a formularz wygląda jak przesłuchanie, nawet najlepszy projekt graficzny nie naprawi wyniku.
 
@@ -53,7 +51,7 @@ Drugi element to hierarchia informacji. Użytkownik nie powinien zastanawiać si
 
 Liczy się też tempo. Strona musi działać szybko i dobrze wyglądać na telefonie. Dziś to nie detal techniczny, tylko podstawowy warunek skuteczności. Jeżeli landing ładuje się zbyt długo, szczególnie przy ruchu z [kampanii mobilnych](/uslugi-marketingowe/obsluga-social-media/), tracisz użytkownika jeszcze przed pierwszym komunikatem.
 
-<h2 id="landing-page-dla-kampanii-z-czego-powinien-sie-skladac" class="reveal">Landing page dla kampanii – z czego powinien się składać</h2>
+## Landing page dla kampanii – z czego powinien się składać {#landing-page-dla-kampanii-z-czego-powinien-sie-skladac}
 
 Nie ma jednego uniwersalnego układu dla wszystkich branż, bo kampania rekrutacyjna działa inaczej niż kampania leadowa dla dewelopera czy sprzedaż szkolenia B2B. Są jednak elementy, które pojawiają się niemal zawsze, jeśli celem jest konwersja.
 
@@ -65,7 +63,7 @@ Dalej warto pokazać, dlaczego ta oferta ma sens. Tu dobrze działają krótkie 
 
 Formularz lub moduł kontaktowy powinien być maksymalnie prosty. Jeśli nie potrzebujesz siedmiu pól, nie dodawaj siedmiu pól. Każde dodatkowe pytanie obniża szansę na wypełnienie. Czasem lepiej zebrać mniej danych na starcie i doprecyzować potrzeby później, już w kontakcie handlowym.
 
-<h2 id="dlaczego-jedna-kampania-powinna-miec-jedna-strone" class="reveal">Dlaczego jedna kampania powinna mieć jedną stronę</h2>
+## Dlaczego jedna kampania powinna mieć jedną stronę {#dlaczego-jedna-kampania-powinna-miec-jedna-strone}
 
 Firmy często próbują obsłużyć kilka grup odbiorców jednym landing page’em. To zrozumiałe z perspektywy czasu i kosztów, ale zwykle kończy się spadkiem skuteczności. Inaczej mówi się do dyrektora HR, inaczej do właściciela firmy, a jeszcze inaczej do brand managera odpowiedzialnego za konkretny wynik sprzedażowy.
 
@@ -73,7 +71,7 @@ Jeśli kampania ma kilka wariantów komunikatu, kilka person lub kilka różnych
 
 To samo dotyczy etapu lejka. Użytkownik z kampanii remarketingowej potrzebuje innego poziomu informacji niż osoba, która pierwszy raz styka się z marką. Jedna strona może próbować pogodzić oba cele, ale zwykle robi to kosztem skuteczności.
 
-<h2 id="najczestsze-bledy-ktore-psuja-wynik-kampanii" class="reveal">Najczęstsze błędy, które psują wynik kampanii</h2>
+## Najczęstsze błędy, które psują wynik kampanii {#najczestsze-bledy-ktore-psuja-wynik-kampanii}
 
 Pierwszy to przeładowanie treścią. Firmy boją się, że użytkownik „nie zrozumie”, więc wrzucają wszystko: historię marki, pełną ofertę, każde możliwe zastosowanie i kilka różnych ścieżek kontaktu. Efekt jest prosty – odbiorca nie wie, gdzie skupić uwagę.
 
@@ -83,7 +81,7 @@ Trzeci problem to projektowanie pod gust zespołu, a nie pod decyzje odbiorcy. T
 
 Czwarty błąd jest bardziej strategiczny – brak mierzenia tego, co dzieje się po wejściu na stronę. Bez analityki nie da się uczciwie ocenić, czy problem leży w reklamie, ofercie, formularzu czy może w wersji mobilnej. A bez tej wiedzy optymalizacja staje się zgadywaniem.
 
-<h2 id="kiedy-prosty-landing-wystarczy-a-kiedy-trzeba-pojsc-szerzej" class="reveal">Kiedy prosty landing wystarczy, a kiedy trzeba pójść szerzej</h2>
+## Kiedy prosty landing wystarczy, a kiedy trzeba pójść szerzej {#kiedy-prosty-landing-wystarczy-a-kiedy-trzeba-pojsc-szerzej}
 
 To zależy od oferty i kosztu decyzji. Jeśli promujesz prosty produkt, limitowaną akcję, zapis na wydarzenie albo pobranie materiału, krótka strona często działa najlepiej. Użytkownik potrzebuje wtedy szybkiej informacji i prostego impulsu do działania.
 
@@ -91,7 +89,7 @@ Jeżeli jednak mówimy o usłudze o wyższej wartości, dłuższym procesie decy
 
 W praktyce skuteczny [landing page](/uslugi-marketingowe/strony-internetowe-i-landing-page/) dla kampanii nie jest ani możliwie najkrótszy, ani możliwie najdłuższy. Jest tak krótki, jak to możliwe, i tak rozbudowany, jak to konieczne.
 
-<h2 id="jak-wyglada-dobry-proces-tworzenia-strony-pod-kampanie" class="reveal">Jak wygląda dobry proces tworzenia strony pod kampanię</h2>
+## Jak wygląda dobry proces tworzenia strony pod kampanię {#jak-wyglada-dobry-proces-tworzenia-strony-pod-kampanie}
 
 Najpierw trzeba odpowiedzieć na kilka pytań: do kogo mówimy, jaki jest cel kampanii, z jakiego źródła przyjdzie ruch i jaka obietnica pojawia się w reklamie. Bez tego projekt strony jest tylko zgadywaniem w ładnej oprawie.
 
@@ -99,7 +97,7 @@ Dopiero potem ma sens układanie treści, projektowanie makiety i dobieranie [ma
 
 To właśnie dlatego wiele firm wybiera model jednego partnera, który ogarnia komunikację, kreację i wdrożenie. Gdy zespół odpowiedzialny za kampanię rozumie także stronę docelową, łatwiej utrzymać spójność i szybciej reagować na dane. W SEZMOO właśnie tak podchodzimy do projektów – nie jako do osobnych zleceń, tylko jako do jednego procesu, który ma dowieźć efekt.
 
-<h2 id="landing-page-nie-konczy-pracy-po-wdrozeniu" class="reveal">Landing page nie kończy pracy po wdrożeniu</h2>
+## Landing page nie kończy pracy po wdrożeniu {#landing-page-nie-konczy-pracy-po-wdrozeniu}
 
 Uruchomienie strony to dopiero start. Później zaczyna się etap, który realnie poprawia wynik: testowanie nagłówków, skracanie formularza, zmiana kolejności sekcji, podmiana CTA, dopracowanie wersji mobilnej. Czasem wystarczy jedna korekta, żeby koszt pozyskania leada spadł zauważalnie.
 

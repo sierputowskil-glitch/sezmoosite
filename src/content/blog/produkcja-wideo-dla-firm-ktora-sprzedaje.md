@@ -31,11 +31,9 @@ toc:
     label: "Kiedy warto wejść w wideo właśnie teraz"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Firmy coraz częściej wiedzą, że potrzebują wideo. Problem zaczyna się chwilę później – kiedy trzeba zdecydować, jaki materiał ma powstać, do kogo ma mówić i po czym poznać, że inwestycja miała sens. W praktyce nie chodzi o samo nagranie. Chodzi o zaprojektowanie materiału, który pasuje do etapu lejka, kanału publikacji i celu biznesowego.
 
-<h2 id="produkcja-wideo-dla-firm-zaczyna-sie-od-celu" class="reveal">Produkcja wideo dla firm zaczyna się od celu</h2>
+## Produkcja wideo dla firm zaczyna się od celu {#produkcja-wideo-dla-firm-zaczyna-sie-od-celu}
 
 Najdroższy błąd? Zamówienie filmu bez ustalenia, po co on właściwie powstaje. Inaczej buduje się materiał employer brandingowy, inaczej film sprzedażowy dla handlowców, a jeszcze inaczej reelsy do kampanii social media. Każdy z tych formatów może być skuteczny, ale tylko wtedy, gdy od początku wiadomo, jakie zadanie ma wykonać.
 
@@ -43,7 +41,7 @@ Jeśli celem jest sprzedaż, wideo powinno szybko pokazać problem, rozwiązanie
 
 To właśnie tutaj wiele firm traci budżet. Powstaje jeden ładny film, który próbuje robić wszystko naraz. Ma sprzedawać, budować prestiż, tłumaczyć ofertę, rekrutować i jeszcze pasować do każdego kanału. Efekt zazwyczaj jest przeciętny. Lepiej zaplanować kilka materiałów o różnych funkcjach niż jeden, który rozmija się z potrzebami odbiorcy.
 
-<h2 id="jakie-materialy-wideo-naprawde-dzialaja-w-firmach" class="reveal">Jakie materiały wideo naprawdę działają w firmach</h2>
+## Jakie materiały wideo naprawdę działają w firmach {#jakie-materialy-wideo-naprawde-dzialaja-w-firmach}
 
 Nie ma jednego formatu dobrego dla wszystkich. Są za to typy produkcji, które regularnie wspierają biznes, jeśli są dobrze osadzone w strategii.
 
@@ -71,7 +69,7 @@ Działy HR coraz częściej korzystają z wideo, bo kandydaci chcą zobaczyć fi
 
 Autentyczność jest tu ważniejsza niż perfekcyjnie wyuczone wypowiedzi. Kandydat szybciej wyczuje sztuczność niż brak studyjnej idealności.
 
-<h2 id="co-odroznia-skuteczne-wideo-od-ladnego-wideo" class="reveal">Co odróżnia skuteczne wideo od ładnego wideo</h2>
+## Co odróżnia skuteczne wideo od ładnego wideo {#co-odroznia-skuteczne-wideo-od-ladnego-wideo}
 
 Estetyka ma znaczenie, ale sama nie zamyka sprzedaży i nie buduje przewagi. Skuteczne wideo jest podporządkowane funkcji. Wie, do kogo mówi, w jakim miejscu zostanie opublikowane i co ma wydarzyć się po obejrzeniu.
 
@@ -79,7 +77,7 @@ Dlatego tak ważny jest etap koncepcji. Trzeba ustalić nie tylko scenariusz, al
 
 Dobrze zaplanowana produkcja zwiększa zwrot z budżetu. Jednego dnia zdjęciowego można przygotować materiał główny, krótkie cuty do reklam, backstage, zdjęcia i kilka wersji montażowych. To szczególnie opłacalne dla firm, które chcą działać sprawnie i nie angażować czasu zespołu co kilka tygodni w osobne realizacje.
 
-<h2 id="produkcja-wideo-dla-firm-a-budzet-gdzie-naprawde-sa-koszty" class="reveal">Produkcja wideo dla firm a budżet – gdzie naprawdę są koszty</h2>
+## Produkcja wideo dla firm a budżet – gdzie naprawdę są koszty {#produkcja-wideo-dla-firm-a-budzet-gdzie-naprawde-sa-koszty}
 
 Pytanie o cenę pojawia się szybko i słusznie. Tyle że koszt produkcji wideo dla firm zależy nie tylko od czasu pracy operatora czy montażysty. Na budżet wpływa koncepcja, scenariusz, liczba dni zdjęciowych, ekipa, lokalizacje, sprzęt, animacje, lektor, postprodukcja oraz liczba finalnych wersji materiału.
 
@@ -87,7 +85,7 @@ Tańsza produkcja nie zawsze oznacza gorszy efekt. Czasem prostszy format nagran
 
 Najrozsądniej patrzeć na budżet przez pryzmat użyteczności. Jeden film, który da się wykorzystać tylko raz, ma mniejszą wartość niż produkcja, z której powstaje cały pakiet treści do kampanii, sprzedaży i komunikacji marki.
 
-<h2 id="jak-wyglada-dobra-wspolpraca-przy-produkcji-wideo" class="reveal">Jak wygląda dobra współpraca przy produkcji wideo</h2>
+## Jak wygląda dobra współpraca przy produkcji wideo {#jak-wyglada-dobra-wspolpraca-przy-produkcji-wideo}
 
 Najlepsze realizacje nie biorą się z przypadku ani z chaosu po stronie klienta i wykonawcy. Potrzebny jest partner, który potrafi przełożyć cele firmy na konkretny format i sprawnie dowieźć całość – od pomysłu po finalne pliki.
 
@@ -97,7 +95,7 @@ Dla wielu marek najwygodniejszy model to współpraca z zespołem, który ogarni
 
 To jeden z powodów, dla których firmy wybierają partnerów działających jak zewnętrzny dział marketingu. W SEZMOO właśnie tak patrzymy na wideo – nie jako osobną usługę, tylko jako część większej układanki, która ma przynieść efekt biznesowy.
 
-<h2 id="kiedy-warto-wejsc-w-wideo-wlasnie-teraz" class="reveal">Kiedy warto wejść w wideo właśnie teraz</h2>
+## Kiedy warto wejść w wideo właśnie teraz {#kiedy-warto-wejsc-w-wideo-wlasnie-teraz}
 
 Nie trzeba czekać na rebranding, wielką premierę albo nową stronę. Wideo warto wdrożyć wtedy, gdy firma ma coś ważnego do pokazania i chce zrobić to skuteczniej niż samym tekstem czy statyczną grafiką. Może to być nowa usługa, rozwój zespołu, wejście na nowy rynek, kampania sprzedażowa albo potrzeba uporządkowania komunikacji marki.
 

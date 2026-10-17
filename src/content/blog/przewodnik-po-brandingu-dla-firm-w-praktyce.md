@@ -31,11 +31,9 @@ toc:
     label: "Kiedy warto zrobić rebranding, a kiedy wystarczy korekta"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 W praktyce branding nie zaczyna się od wyboru koloru ani od projektowania logo. Zaczyna się od odpowiedzi na prostsze, ale trudniejsze pytania: kim jesteście jako firma, do kogo mówicie, za co klienci mają Was zapamiętać i dlaczego mają wybrać właśnie Was, a nie pięć podobnych opcji z rynku. Jeśli te kwestie są niejasne, nawet najlepsza kampania będzie tylko głośna, a nie skuteczna.
 
-<h2 id="czym-naprawde-jest-branding-firmy" class="reveal">Czym naprawdę jest branding firmy</h2>
+## Czym naprawdę jest branding firmy {#czym-naprawde-jest-branding-firmy}
 
 Branding to sposób, w jaki marka jest odbierana na każdym styku z klientem. Obejmuje nazwę, [identyfikację wizualną](/uslugi-marketingowe/identyfikacja-wizualna/), język komunikacji, doświadczenie na stronie, materiały sprzedażowe, social media, ofertę handlową, a nawet to, jak wygląda prezentacja dla partnera czy ogłoszenie rekrutacyjne.
 
@@ -43,7 +41,7 @@ Wielu firmom branding kojarzy się głównie z warstwą wizualną. To część u
 
 Dobry branding porządkuje markę od środka i przekłada tę spójność na zewnątrz. Dzięki temu sprzedaż ma mocniejsze argumenty, marketing działa szybciej, a zespół wie, jak komunikować firmę bez zgadywania.
 
-<h2 id="przewodnik-po-brandingu-dla-firm-od-strategii-do-egzekucji" class="reveal">Przewodnik po brandingu dla firm – od strategii do egzekucji</h2>
+## Przewodnik po brandingu dla firm – od strategii do egzekucji {#przewodnik-po-brandingu-dla-firm-od-strategii-do-egzekucji}
 
 Największy błąd? Zaczynanie od końca. Najpierw projekt, potem poprawki, potem kolejny projekt, a na końcu pytanie, dlaczego to nie działa. Branding powinien iść w logicznej kolejności.
 
@@ -71,7 +69,7 @@ Logo, kolorystyka, typografia, styl zdjęć, grafiki i animacje mają wzmacniać
 
 Tu też liczy się konsekwencja. Wizerunek marki nie buduje się jedną dobrą grafiką. Buduje się dziesiątkami materiałów – od www i social media po katalog, roll-up, reklamę zewnętrzną czy wideo sprzedażowe. Branding, który działa tylko w prezentacji PDF, nie jest gotowy do pracy.
 
-<h2 id="gdzie-branding-najczesciej-sie-sypie" class="reveal">Gdzie branding najczęściej się sypie</h2>
+## Gdzie branding najczęściej się sypie {#gdzie-branding-najczesciej-sie-sypie}
 
 Problem zwykle nie polega na braku pomysłów, tylko na braku spójności i egzekucji. Firma ma logo, stronę, ulotkę i profil na LinkedIn, ale każdy element mówi innym językiem. Handlowiec wysyła ofertę w innym stylu niż marketing. Social media są luźne, strona bardzo formalna, a reklamy wyglądają jak z trzeciej firmy.
 
@@ -79,7 +77,7 @@ Drugi częsty problem to branding oderwany od sprzedaży. Marka wygląda dobrze,
 
 Trzeci błąd to jednorazowe podejście. Rebranding zrobiony raz na kilka lat bez wdrożenia do codziennych działań szybko się rozmywa. Branding musi żyć w materiałach handlowych, kampaniach, zdjęciach, wideo, landing page’ach i komunikacji zespołu. Inaczej kończy jako plik z księgą znaku, do którego nikt nie wraca.
 
-<h2 id="jak-przelozyc-branding-na-wyniki" class="reveal">Jak przełożyć branding na wyniki</h2>
+## Jak przełożyć branding na wyniki {#jak-przelozyc-branding-na-wyniki}
 
 Dobrze zrobiony branding skraca drogę od pierwszego kontaktu do decyzji. Klient szybciej rozumie, czym zajmuje się firma, jaki poziom jakości oferuje i czy pasuje do jego potrzeb. To ważne zwłaszcza w B2B, gdzie decyzje rzadko zapadają impulsywnie, ale pierwsze wrażenie nadal ma znaczenie.
 
@@ -87,7 +85,7 @@ Branding wpływa też na efektywność marketingu. Kampanie reklamowe działają
 
 Z perspektywy sprzedaży liczy się jeszcze jeden efekt – mniej tarcia. Gdy marka jest czytelna, handlowiec nie musi zaczynać od tłumaczenia podstaw. Może szybciej przejść do dopasowania rozwiązania, argumentów i warunków współpracy. To oszczędza czas i poprawia jakość leadów.
 
-<h2 id="przewodnik-po-brandingu-dla-firm-ktore-rosna" class="reveal">Przewodnik po brandingu dla firm, które rosną</h2>
+## Przewodnik po brandingu dla firm, które rosną {#przewodnik-po-brandingu-dla-firm-ktore-rosna}
 
 Im szybciej firma się rozwija, tym bardziej potrzebuje uporządkowanego brandingu. Na początku wiele rzeczy da się „dogadać na bieżąco”. Przy większej skali zaczynają się schody. Dochodzą nowe osoby, nowe kanały, nowe kampanie, różne segmenty klientów i więcej materiałów do przygotowania. Bez jasnych zasad marka zaczyna się rozjeżdżać.
 
@@ -95,7 +93,7 @@ Dlatego branding warto traktować jako system, nie dekorację. Taki system powin
 
 Dobrze działa model, w którym strategia, kreacja i produkcja są połączone. Wtedy nie trzeba tłumaczyć tej samej marki kilku podwykonawcom osobno. To szczególnie ważne, gdy firma potrzebuje jednocześnie strony, materiałów sprzedażowych, [social media](/uslugi-marketingowe/obsluga-social-media/), kampanii, zdjęć i wideo. Jeden spójny kierunek daje lepszy efekt niż kilka osobnych pomysłów realizowanych równolegle.
 
-<h2 id="kiedy-warto-zrobic-rebranding-a-kiedy-wystarczy-korekta" class="reveal">Kiedy warto zrobić rebranding, a kiedy wystarczy korekta</h2>
+## Kiedy warto zrobić rebranding, a kiedy wystarczy korekta {#kiedy-warto-zrobic-rebranding-a-kiedy-wystarczy-korekta}
 
 Nie każda firma potrzebuje pełnej zmiany. Czasem wystarczy dopracowanie komunikacji, uporządkowanie oferty i odświeżenie identyfikacji. Pełny rebranding ma sens wtedy, gdy marka przestała pasować do skali biznesu, weszła na inny rynek, zmieniła model działania albo zwyczajnie nie nadąża za ambicją firmy.
 
@@ -103,7 +101,7 @@ Jeżeli problemem jest tylko chaos w materiałach lub niespójny ton, lepsza mo�
 
 W praktyce najrozsądniej zacząć od audytu. Trzeba zobaczyć, co działa, co blokuje rozwój i które elementy naprawdę wpływają na wynik. Dopiero wtedy warto decydować, czy potrzebny jest lifting, nowe pozycjonowanie czy pełna przebudowa marki.
 
-<h2 id="jak-podejsc-do-brandingu-bez-marnowania-czasu-i-budzetu" class="reveal">Jak podejść do brandingu bez marnowania czasu i budżetu</h2>
+## Jak podejść do brandingu bez marnowania czasu i budżetu {#jak-podejsc-do-brandingu-bez-marnowania-czasu-i-budzetu}
 
 Najlepsze efekty daje podejście etapowe, ale konsekwentne. Najpierw strategia i kierunek marki, potem język i identyfikacja, a następnie wdrożenie w kanałach, które realnie pracują na biznes. Nie wszystko trzeba robić naraz, ale wszystko powinno iść w jednym kierunku.
 

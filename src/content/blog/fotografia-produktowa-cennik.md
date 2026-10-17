@@ -31,11 +31,9 @@ toc:
     label: "Kiedy wycena indywidualna jest lepsza niż sztywny cennik"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Dla firmy liczy się nie tylko stawka, ale też to, co realnie dostaje w pakiecie. Zdjęcie na białym tle do marketplace’u to inny projekt niż packshot premium do kampanii, katalogu i social mediów. Problem zaczyna się wtedy, gdy porównuje się dwa cenniki, które na pierwszy rzut oka wyglądają podobnie, ale w praktyce dotyczą zupełnie różnych usług.
 
-<h2 id="fotografia-produktowa-cennik-zalezy-od-celu-nie-tylko-od-lic" class="reveal">Fotografia produktowa – cennik zależy od celu, nie tylko od liczby zdjęć</h2>
+## Fotografia produktowa – cennik zależy od celu, nie tylko od liczby zdjęć {#fotografia-produktowa-cennik-zalezy-od-celu-nie-tylko-od-lic}
 
 Najczęstszy błąd? Pytanie wyłącznie o cenę za jedno zdjęcie. To wygodne, ale z biznesowego punktu widzenia za mało. Koszt fotografii produktowej zależy przede wszystkim od tego, do czego zdjęcia mają służyć.
 
@@ -45,7 +43,7 @@ Jeśli jednak zdjęcia mają budować markę, wspierać kampanię sprzedażową 
 
 To dlatego dwie firmy mogą podawać zupełnie inne stawki za „fotografię produktową”, a obie będą miały rację. Po prostu sprzedają coś innego.
 
-<h2 id="co-realnie-wplywa-na-cene-zdjec-produktowych" class="reveal">Co realnie wpływa na cenę zdjęć produktowych</h2>
+## Co realnie wpływa na cenę zdjęć produktowych {#co-realnie-wplywa-na-cene-zdjec-produktowych}
 
 W praktyce wycena składa się z kilku warstw. Im lepiej je rozumiesz, tym łatwiej ocenisz, czy oferta jest atrakcyjna, czy tylko wygląda tanio.
 
@@ -69,7 +67,7 @@ To jeden z najczęściej niedoszacowanych elementów. Podstawowa obróbka zwykle
 
 Nie każda wycena obejmuje pełne prawa do szerokiego wykorzystania materiałów. Zdjęcia do sklepu internetowego to jedno, a użycie w kampanii outdoorowej, katalogach, [reklamach płatnych](/uslugi-marketingowe/kampanie-platne/) i materiałach drukowanych to coś innego. Warto sprawdzić, co dokładnie zawiera oferta, żeby po realizacji nie okazało się, że trzeba dopłacać za dodatkowe pola eksploatacji.
 
-<h2 id="fotografia-produktowa-cennik-orientacyjne-widelki" class="reveal">Fotografia produktowa cennik – orientacyjne widełki</h2>
+## Fotografia produktowa cennik – orientacyjne widełki {#fotografia-produktowa-cennik-orientacyjne-widelki}
 
 Nie ma jednego rynkowego cennika, który pasuje do każdego projektu, ale można wskazać orientacyjne poziomy. Proste packshoty przy większych wolumenach bywają wyceniane od kilkunastu do kilkudziesięciu złotych za ujęcie. Bardziej dopracowane zdjęcia produktowe do e-commerce często mieszczą się w przedziale od kilkudziesięciu do około stu kilkudziesięciu złotych za kadr.
 
@@ -77,7 +75,7 @@ Zdjęcia aranżowane i lifestyle’owe zwykle kosztują więcej, bo obejmują do
 
 Warto też pamiętać, że bardzo niska cena rzadko bierze się znikąd. Czasem oznacza ograniczony retusz, brak spójności między kadrami, słabsze oświetlenie albo brak zapasu jakości do późniejszego użycia w kampaniach. Jeśli zdjęcia mają zostać z marką na dłużej, oszczędność na starcie może szybko zamienić się w koszt ponownej realizacji.
 
-<h2 id="tani-cennik-czy-dobra-inwestycja" class="reveal">Tani cennik czy dobra inwestycja?</h2>
+## Tani cennik czy dobra inwestycja? {#tani-cennik-czy-dobra-inwestycja}
 
 Dla działu marketingu i właściciela firmy ważniejsze od pytania „ile kosztuje zdjęcie?” jest pytanie „ile pracy wykona to zdjęcie?”. To różnica między kosztem a inwestycją.
 
@@ -85,7 +83,7 @@ Jeśli sprzedajesz prosty produkt o niskiej marży i potrzebujesz setek packshot
 
 Dobry materiał wizualny skraca drogę do decyzji zakupowej. Lepiej pokazuje detale, buduje zaufanie, porządkuje ofertę i wspiera spójność marki w każdym punkcie styku. Właśnie dlatego sensowna wycena nie kończy się na stawce za plik JPG.
 
-<h2 id="jak-porownac-oferty-zeby-nie-przeplacic" class="reveal">Jak porównać oferty, żeby nie przepłacić</h2>
+## Jak porównać oferty, żeby nie przepłacić {#jak-porownac-oferty-zeby-nie-przeplacic}
 
 Porównanie samych kwot niewiele daje. Dwie wyceny warto zestawić według tego samego zakresu: liczby produktów, liczby ujęć, rodzaju tła, poziomu retuszu, terminów i praw do wykorzystania. Bez tego jedna oferta może wydawać się droższa tylko dlatego, że zawiera rzeczy, które druga pominęła.
 
@@ -93,7 +91,7 @@ Zwróć uwagę, czy w cenie jest przygotowanie koncepcji, czy tylko wykonanie zd
 
 Dobrze zadane pytania przed startem oszczędzają nie tylko budżet, ale też czas zespołu. A ten, zwłaszcza przy kampaniach i premierach produktowych, bywa równie cenny jak sama produkcja.
 
-<h2 id="kiedy-wycena-indywidualna-jest-lepsza-niz-sztywny-cennik" class="reveal">Kiedy wycena indywidualna jest lepsza niż sztywny cennik</h2>
+## Kiedy wycena indywidualna jest lepsza niż sztywny cennik {#kiedy-wycena-indywidualna-jest-lepsza-niz-sztywny-cennik}
 
 Sztywny cennik sprawdza się tam, gdzie proces jest powtarzalny. Gdy jednak projekt obejmuje kilka kanałów komunikacji, różne formaty i więcej niż jeden cel biznesowy, lepsza jest wycena szyta pod zadanie.
 
@@ -101,7 +99,7 @@ To szczególnie ważne dla firm, które nie potrzebują wyłącznie zdjęć, ale
 
 Właśnie dlatego część marek wybiera partnera, który ogarnia nie tylko produkcję zdjęć, ale cały proces marketingowy. SEZMOO działa właśnie w takim modelu – jako zewnętrzny dział marketingu, który potrafi połączyć estetykę z egzekucją i dostarczyć materiały gotowe do realnego użycia w sprzedaży.
 
-<h2 id="o-co-zapytac-przed-zamowieniem-zdjec-produktowych" class="reveal">O co zapytać przed zamówieniem zdjęć produktowych</h2>
+## O co zapytać przed zamówieniem zdjęć produktowych {#o-co-zapytac-przed-zamowieniem-zdjec-produktowych}
 
 Dobra współpraca zaczyna się od briefu. Im precyzyjniej określisz cel, tym trafniejsza będzie wycena i mniejsze ryzyko niedomówień. Warto od razu ustalić, gdzie zdjęcia będą publikowane, ile produktów obejmuje projekt, jaki standard wizualny jest potrzebny i czy materiał ma być skalowalny na kolejne kampanie.
 

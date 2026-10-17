@@ -31,11 +31,9 @@ toc:
     label: "Połącz landing z kampanią i obsługą leada"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Landing page nie jest skróconą wersją strony internetowej ani cyfrową ulotką. Ma jedno zadanie. Może nim być zebranie leadów, sprzedaż produktu, zapis na wydarzenie, pobranie katalogu, umówienie konsultacji albo rekrutacja kandydatów. Im precyzyjniej określisz ten cel przed startem projektu, tym mniej przypadkowych decyzji pojawi się później w treści, designie i kampanii.
 
-<h2 id="zacznij-od-celu-nie-od-makiety" class="reveal">Zacznij od celu, nie od makiety</h2>
+## Zacznij od celu, nie od makiety {#zacznij-od-celu-nie-od-makiety}
 
 Najczęstszy błąd brzmi niewinnie: „zróbmy landing o naszej ofercie”. Oferta to za mało. Zespół musi wiedzieć, co użytkownik ma zrobić po wejściu na stronę oraz co firma zrobi z jego danymi lub zamówieniem dalej.
 
@@ -43,7 +41,7 @@ Jeżeli celem jest kontakt handlowy, określ jego jakość. Inaczej zbudujesz st
 
 Warto od razu ustalić wskaźnik sukcesu. Nie musi to być wyłącznie liczba formularzy. Równie sensowne bywają: koszt pozyskania leada, liczba umówionych spotkań, współczynnik przejścia do zakupu, pobrania materiału czy jakość zgłoszeń oceniona przez dział sprzedaży. Strona, która generuje dużo przypadkowych kontaktów, może dobrze wyglądać w raporcie i jednocześnie przeciążać handlowców.
 
-<h2 id="poznaj-odbiorce-i-moment-w-ktorym-trafia-na-strone" class="reveal">Poznaj odbiorcę i moment, w którym trafia na stronę</h2>
+## Poznaj odbiorcę i moment, w którym trafia na stronę {#poznaj-odbiorce-i-moment-w-ktorym-trafia-na-strone}
 
 Ten sam landing page nie przekona wszystkich. Osoba, która widzi markę pierwszy raz w reklamie na LinkedInie, potrzebuje innego komunikatu niż klient wracający po kliknięciu w mailing. Pierwsza chce szybko zrozumieć, czym się zajmujesz i dlaczego warto Ci zaufać. Druga oczekuje potwierdzenia konkretnej obietnicy, którą już zobaczyła wcześniej.
 
@@ -51,7 +49,7 @@ Przed przygotowaniem treści odpowiedz na kilka pytań: jaki problem odbiorca ch
 
 Nie zakładaj też, że odbiorca przeczyta wszystko. Na telefonie skanuje ekran, szuka odpowiedzi i ocenia wiarygodność w kilka sekund. Dlatego najważniejsza informacja musi znaleźć się wysoko: dla kogo jest oferta, co klient zyskuje i jaki kolejny krok może wykonać.
 
-<h2 id="jak-zaplanowac-firmowy-landing-page-wokol-jednej-obietnicy" class="reveal">Jak zaplanować firmowy landing page wokół jednej obietnicy</h2>
+## Jak zaplanować firmowy landing page wokół jednej obietnicy {#jak-zaplanowac-firmowy-landing-page-wokol-jednej-obietnicy}
 
 Dobra strona docelowa ma jeden główny komunikat. Nie próbuje równocześnie sprzedawać pięciu usług, opowiadać pełnej historii firmy i prezentować wszystkich realizacji. To zadania dla rozbudowanej strony firmowej. Landing ma prowadzić użytkownika po prostej ścieżce od zainteresowania do decyzji.
 
@@ -61,7 +59,7 @@ Pod nagłówkiem umieść krótkie rozwinięcie i widoczne CTA. Przycisk powinie
 
 Dalsza część strony powinna rozwijać obietnicę w logicznej kolejności. Najpierw pokaż problem i efekt, potem sposób działania, dowody wiarygodności, odpowiedzi na obiekcje oraz prosty krok kontaktowy. Jeśli oferta jest złożona, nie oznacza to, że landing ma być chaotyczny. Złożoność można uporządkować etapami współpracy, przykładami zastosowań i jasnym wskazaniem, co klient otrzymuje.
 
-<h2 id="zadbaj-o-tresc-ktora-skraca-droge-do-decyzji" class="reveal">Zadbaj o treść, która skraca drogę do decyzji</h2>
+## Zadbaj o treść, która skraca drogę do decyzji {#zadbaj-o-tresc-ktora-skraca-droge-do-decyzji}
 
 Tekst na landing page nie służy do imponowania branżowym słownictwem. Ma odpowiadać na pytania, które użytkownik zadaje przed wysłaniem formularza. Co dokładnie dostanę? Czy to pasuje do mojej firmy? Ile czasu zajmie start? Czy mogę zaufać temu wykonawcy? Co wydarzy się po kontakcie?
 
@@ -74,7 +72,7 @@ W praktyce przydają się cztery rodzaje argumentów:
 
 Nie wszystkie dowody działają tak samo. Logo znanej marki może podnieść zaufanie, ale przy usłudze specjalistycznej silniejsza będzie krótka historia problemu, działania i rezultatu. W przypadku kampanii lokalnej warto pokazać znajomość regionu. Przy produkcie technicznym lepiej wyjaśnić zastosowanie niż budować przekaz wyłącznie na estetyce.
 
-<h2 id="projektuj-pod-dzialanie-nie-pod-ozdobniki" class="reveal">Projektuj pod działanie, nie pod ozdobniki</h2>
+## Projektuj pod działanie, nie pod ozdobniki {#projektuj-pod-dzialanie-nie-pod-ozdobniki}
 
 Design ma prowadzić wzrok, podkreślać hierarchię i wspierać zrozumienie treści. Efektowne animacje, duże materiały wideo czy kreatywne przejścia mogą wzmacniać przekaz, o ile nie spowalniają strony ani nie odciągają od celu. To szczególnie istotne, gdy większość ruchu pochodzi z mobile.
 
@@ -82,7 +80,7 @@ Zanim zaakceptujesz projekt, sprawdź go na telefonie. Czy nagłówek jest czyte
 
 Liczba pól zależy od wartości oferty i etapu decyzyjnego. Przy zapisie na webinar wystarczą podstawowe dane. Przy zapytaniu o usługę o większej wartości możesz zadać więcej pytań, ale tylko takich, które będą wykorzystane w dalszej rozmowie. Każde dodatkowe pole obniża liczbę zgłoszeń, za to może podnieść ich jakość. Tu nie ma uniwersalnej odpowiedzi – trzeba zdecydować, czego potrzebuje sprzedaż.
 
-<h2 id="polacz-landing-z-kampania-i-obsluga-leada" class="reveal">Połącz landing z kampanią i obsługą leada</h2>
+## Połącz landing z kampanią i obsługą leada {#polacz-landing-z-kampania-i-obsluga-leada}
 
 Landing page nie działa w oderwaniu od źródła ruchu. Treść reklamy, mailingu czy posta powinna odpowiadać temu, co użytkownik zobaczy po kliknięciu. Jeżeli reklama obiecuje bezpłatną konsultację, strona nie może nagle promować ogólny katalog usług. Taka niespójność podnosi koszt kampanii i obniża zaufanie.
 
@@ -90,7 +88,7 @@ Przed publikacją ustal również, kto odbiera leady i jak szybko reaguje. Nawet
 
 Warto wdrożyć pomiar od pierwszego dnia. Śledź nie tylko kliknięcie przycisku, lecz także wysłanie formularza, źródło ruchu, zachowanie użytkowników i dalszy los kontaktu w CRM. Dopiero zestawienie danych marketingowych z informacją od handlowców pokazuje, które komunikaty naprawdę podkręcają sprzedaż.
 
-<h2 id="traktuj-publikacje-jako-poczatek-nie-final" class="reveal">Traktuj publikację jako początek, nie finał</h2>
+## Traktuj publikację jako początek, nie finał {#traktuj-publikacje-jako-poczatek-nie-final}
 
 Pierwsza wersja landing page rzadko jest wersją najlepszą. Po zebraniu danych możesz testować nagłówek, kolejność sekcji, długość formularza, argumenty, CTA czy format materiałów wizualnych. Nie zmieniaj jednak wszystkiego naraz. Jeśli równocześnie przebudujesz reklamę, ofertę i stronę, nie dowiesz się, co wpłynęło na wynik.
 

@@ -31,11 +31,9 @@ toc:
     label: "Mierzenie efektów – nie każdy lead jest tyle samo wart"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Jeśli sprzedajesz usługi, rozwiązania technologiczne, produkcję, doradztwo albo ofertę o dłuższym cyklu decyzyjnym, Google Ads może działać bardzo dobrze. Ale tylko wtedy, gdy kampania jest zbudowana pod sposób, w jaki kupują firmy. A firmy kupują inaczej niż konsumenci – ostrożniej, wolniej i prawie zawsze zespołowo.
 
-<h2 id="dlaczego-kampanie-google-ads-dla-b2b-dzialaja-inaczej" class="reveal">Dlaczego kampanie Google Ads dla B2B działają inaczej</h2>
+## Dlaczego kampanie Google Ads dla B2B działają inaczej {#dlaczego-kampanie-google-ads-dla-b2b-dzialaja-inaczej}
 
 W modelu B2B użytkownik rzadko klika reklamę, żeby kupić od razu. Częściej chce porównać opcje, sprawdzić kompetencje dostawcy, pobrać ofertę albo umówić rozmowę. To oznacza, że kampania nie powinna być oceniana wyłącznie przez koszt kliknięcia czy liczbę wejść na stronę. Najważniejsze pytanie brzmi: czy ten ruch ma szansę zamienić się w wartościowy lead.
 
@@ -43,7 +41,7 @@ Druga różnica to węższa grupa docelowa. W wielu branżach B2B liczba realnyc
 
 Znaczenie ma też sam produkt. Im bardziej specjalistyczna usługa lub oferta, tym większą rolę odgrywa edukacja, zaufanie i spójność komunikacji. Reklama może przyciągnąć uwagę, ale sprzedaż domknie się dopiero wtedy, gdy landing page, case studies, kreacja i argumenty handlowe będą mówiły jednym głosem.
 
-<h2 id="od-czego-zaczac-kampanie-google-ads-dla-b2b" class="reveal">Od czego zacząć kampanie Google Ads dla B2B</h2>
+## Od czego zacząć kampanie Google Ads dla B2B {#od-czego-zaczac-kampanie-google-ads-dla-b2b}
 
 Najczęstszy błąd pojawia się jeszcze przed uruchomieniem kampanii. Firma wybiera kilka ogólnych fraz, ustawia formularz kontaktowy i czeka na leady. Problem w tym, że bez strategii dostajesz albo przypadkowy ruch, albo kontakty niskiej jakości.
 
@@ -51,7 +49,7 @@ Punktem wyjścia powinno być doprecyzowanie, kogo chcesz pozyskać. Nie tylko b
 
 Dopiero potem warto przejść do struktury kampanii. W praktyce dobrze działa podział na intencje. Osobno frazy stricte sprzedażowe, osobno rozwiązaniowe, osobno brandowe i osobno działania remarketingowe. Dzięki temu łatwiej kontrolować budżet i oceniać, które segmenty faktycznie dowożą wartość.
 
-<h2 id="slowa-kluczowe-mniej-ogolnie-bardziej-biznesowo" class="reveal">Słowa kluczowe – mniej ogólnie, bardziej biznesowo</h2>
+## Słowa kluczowe – mniej ogólnie, bardziej biznesowo {#slowa-kluczowe-mniej-ogolnie-bardziej-biznesowo}
 
 W B2B szerokie frazy potrafią przepalać budżet szybciej, niż zdążysz wyciągnąć wnioski. Hasło typu „marketing”, „oprogramowanie” czy „producent opakowań” może generować ruch, ale niekoniecznie ruch zakupowy. Dlatego selekcja słów kluczowych musi być ostrzejsza.
 
@@ -59,7 +57,7 @@ Dobrze sprawdzają się frazy z wyraźną intencją działania, na przykład zwi
 
 Równie ważne są wykluczenia. Jeśli ich nie dopilnujesz, reklamy mogą wyświetlać się osobom szukającym pracy, szkoleń, darmowych narzędzi, definicji albo rozwiązań dla klientów indywidualnych. To szczególnie istotne w branżach usługowych i specjalistycznych, gdzie jedno złe dopasowanie szybko psuje wyniki kampanii.
 
-<h2 id="reklama-to-nie-wszystko-landing-page-decyduje-o-wyniku" class="reveal">Reklama to nie wszystko – landing page decyduje o wyniku</h2>
+## Reklama to nie wszystko – landing page decyduje o wyniku {#reklama-to-nie-wszystko-landing-page-decyduje-o-wyniku}
 
 Możesz mieć dobrze ustawione konto i sensowny budżet, a mimo to tracić leady na stronie. W B2B landing page musi odpowiadać na pytania, które klient zadaje sobie jeszcze przed pierwszym kontaktem. Czy ta firma zna moją branżę? Czy dowiezie projekt? Czy rozumie skalę mojego problemu? Czy kontakt będzie konkretny, a nie sprzedażowy dla samej sprzedaży?
 
@@ -67,7 +65,7 @@ Dlatego dobra strona docelowa nie kończy się na formularzu i kilku ogólnikach
 
 Liczy się też forma kontaktu. Nie każdy użytkownik chce od razu dzwonić. Część woli zostawić zapytanie, część poprosi o ofertę, a część umówi konsultację. Im lepiej dopasujesz wezwanie do działania do etapu decyzji, tym większa szansa na konwersję. Za wysoki próg wejścia potrafi zabić nawet dobrze rokujący ruch.
 
-<h2 id="jakie-typy-kampanii-maja-sens-w-b2b" class="reveal">Jakie typy kampanii mają sens w B2B</h2>
+## Jakie typy kampanii mają sens w B2B {#jakie-typy-kampanii-maja-sens-w-b2b}
 
 Najczęściej podstawą są kampanie w sieci wyszukiwania. To one przechwytują popyt i pozwalają docierać do osób, które aktywnie szukają rozwiązania. W wielu firmach właśnie ten kanał daje najbardziej przewidywalne leady, szczególnie na starcie.
 
@@ -75,7 +73,7 @@ Nie zawsze jednak warto kończyć na searchu. Jeśli proces decyzyjny jest dług
 
 Kampanie Performance Max czy display mogą działać, ale nie w każdej sytuacji. Jeśli masz ograniczony budżet, mało danych i niszową grupę odbiorców, lepiej zacząć od prostszej struktury i czytelnych intencji. Automatyzacja daje możliwości, ale bez odpowiednich sygnałów potrafi pójść w złą stronę.
 
-<h2 id="mierzenie-efektow-nie-kazdy-lead-jest-tyle-samo-wart" class="reveal">Mierzenie efektów – nie każdy lead jest tyle samo wart</h2>
+## Mierzenie efektów – nie każdy lead jest tyle samo wart {#mierzenie-efektow-nie-kazdy-lead-jest-tyle-samo-wart}
 
 W B2B największy problem nie polega zwykle na braku leadów, tylko na ich jakości. Kampania może generować formularze, a handlowcy i tak powiedzą, że to nie są właściwe kontakty. Dlatego samo liczenie konwersji nie wystarczy.
 
@@ -83,7 +81,7 @@ Potrzebujesz informacji, które leady są wartościowe. Czy zapytanie pochodzi o
 
 Najlepiej, gdy dane z reklam spotykają się z informacją zwrotną ze sprzedaży. Wtedy można ocenić nie tylko koszt leada, ale koszt realnej szansy sprzedaży albo nawet koszt pozyskania klienta. To zmienia sposób podejmowania decyzji. Czasem droższa kampania jest lepsza, bo przyciąga mniej przypadkowych kontaktów i więcej klientów, z którymi da się pracować biznesowo.
 
-<h2 id="najczestsze-bledy-ktore-obnizaja-skutecznosc" class="reveal">Najczęstsze błędy, które obniżają skuteczność</h2>
+## Najczęstsze błędy, które obniżają skuteczność {#najczestsze-bledy-ktore-obnizaja-skutecznosc}
 
 Jednym z najczęstszych błędów jest zbyt szerokie targetowanie i zbyt ogólny komunikat. Jeśli próbujesz mówić do wszystkich, kończysz z reklamą, która nie trafia do nikogo konkretnie. W B2B precyzja zwykle wygrywa z rozmachem.
 
@@ -93,7 +91,7 @@ Trzeci błąd to zbyt szybkie wyciąganie wniosków. W B2B dane zbierają się w
 
 Czwarty błąd to traktowanie Google Ads jako osobnego silosu. Kampania działa lepiej, gdy jest spięta z całą komunikacją marki – od treści na stronie, przez [materiały sprzedażowe](/uslugi-marketingowe/materialy-reklamowe/), po remarketing i follow-up handlowy. Właśnie dlatego firmy coraz częściej wolą pracować z jednym partnerem, który ogarnia [strategię, kreację i wykonanie](/uslugi-marketingowe/), zamiast rozdzielać te elementy między kilka podmiotów.
 
-<h2 id="kiedy-google-ads-ma-najwiekszy-sens-w-b2b" class="reveal">Kiedy Google Ads ma największy sens w B2B</h2>
+## Kiedy Google Ads ma największy sens w B2B {#kiedy-google-ads-ma-najwiekszy-sens-w-b2b}
 
 Najwięcej zyskują firmy, które mają już dopracowaną ofertę i wiedzą, kogo chcą pozyskiwać. Jeśli potrafisz jasno powiedzieć, jaki problem rozwiązujesz i dla kogo, Google Ads może szybko wygenerować wartościowy ruch. Zwłaszcza wtedy, gdy klient aktywnie szuka dostawcy, porównuje opcje albo potrzebuje szybkiego kontaktu.
 

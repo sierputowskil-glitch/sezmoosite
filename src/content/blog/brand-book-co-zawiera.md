@@ -31,11 +31,9 @@ toc:
     label: "Kiedy firma naprawdę potrzebuje brand booka"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Brand book nie jest ozdobnym PDF-em dla zarządu. To narzędzie operacyjne. Ma sprawić, żeby marka była spójna w praktyce – w social mediach, [materiałach sprzedażowych](/uslugi-marketingowe/materialy-reklamowe/), reklamie outdoorowej, [na stronie](/uslugi-marketingowe/strony-internetowe-i-landing-page/), w prezentacji handlowej i podczas rekrutacji. Im więcej punktów styku z klientem, tym bardziej brak zasad zaczyna kosztować czas, pieniądze i wiarygodność.
 
-<h2 id="brand-book-co-zawiera-w-praktyce" class="reveal">Brand book – co zawiera w praktyce</h2>
+## Brand book – co zawiera w praktyce {#brand-book-co-zawiera-w-praktyce}
 
 Najprościej mówiąc, brand book zawiera zasady używania tożsamości marki. Tyle że dobry dokument nie kończy się na pokazaniu logo na białym tle. Powinien odpowiadać na realne pytania zespołu, grafika, marketera, drukarni, fotografa czy partnera zewnętrznego: jak mamy wyglądać, jak mamy mówić i czego nie robić.
 
@@ -45,7 +43,7 @@ Drugi filar to kolorystyka. Nie chodzi tylko o wskazanie głównego koloru i dw�
 
 Trzeci obszar to typografia. Brand book powinien określać fonty podstawowe i uzupełniające, hierarchię nagłówków, zasady składu oraz zamienniki na wypadek ograniczeń systemowych. To szczególnie ważne w firmach, które tworzą dużo materiałów samodzielnie. Bez tego każda prezentacja handlowa zaczyna żyć własnym życiem.
 
-<h2 id="co-powinien-zawierac-brand-book-poza-identyfikacja-wizualna" class="reveal">Co powinien zawierać brand book poza identyfikacją wizualną</h2>
+## Co powinien zawierać brand book poza identyfikacją wizualną {#co-powinien-zawierac-brand-book-poza-identyfikacja-wizualna}
 
 Tu pojawia się różnica między dokumentem poprawnym a dokumentem naprawdę użytecznym. W wielu firmach brand book kończy się na grafice. Problem w tym, że marka to nie tylko wygląd. To także język, [ton komunikacji](/dlaczego-twoja-firma-potrzebuje-spojnego-brandingu/) i sposób, w jaki firma zachowuje się w różnych kontekstach.
 
@@ -55,7 +53,7 @@ W praktyce warto uwzględnić także przykłady zastosowania. Same zasady są po
 
 Dobrze przygotowany brand book może też obejmować zasady doboru zdjęć, ilustracji, ikon, animacji czy stylu wideo. Dla marek, które mocno stawiają na content, to nie dodatek, tylko konieczność. Bez takich wytycznych łatwo o sytuację, w której kampania sprzedażowa wygląda dynamicznie i nowocześnie, a materiały employer brandingowe są zachowawcze i wizualnie z innej epoki.
 
-<h2 id="brand-book-a-ksiega-znaku-to-nie-to-samo" class="reveal">Brand book a księga znaku – to nie to samo</h2>
+## Brand book a księga znaku – to nie to samo {#brand-book-a-ksiega-znaku-to-nie-to-samo}
 
 Te pojęcia są często używane zamiennie, ale nie znaczą dokładnie tego samego. Księga znaku skupia się głównie na logo i zasadach jego używania. Jest bardziej techniczna i węższa. Brand book ma szerszy zakres – opisuje cały system marki, często łącząc warstwę wizualną z komunikacyjną.
 
@@ -63,7 +61,7 @@ Jeśli firma jest na bardzo wczesnym etapie, czasem wystarczy dobrze opracowana 
 
 To jeden z tych obszarów, gdzie nie ma jednej odpowiedzi dla wszystkich. Mała firma usługowa z prostą komunikacją może potrzebować krótszego dokumentu. Z kolei marka rozwijająca sprzedaż, rekrutację i kilka kanałów marketingowych naraz potrzebuje bardziej rozbudowanych wytycznych.
 
-<h2 id="jak-wyglada-dobry-brand-book-z-perspektywy-biznesu" class="reveal">Jak wygląda dobry brand book z perspektywy biznesu</h2>
+## Jak wygląda dobry brand book z perspektywy biznesu {#jak-wyglada-dobry-brand-book-z-perspektywy-biznesu}
 
 Dla właściciela firmy czy marketing managera najważniejsze nie jest to, ile stron ma dokument. Liczy się to, czy można go wdrożyć bez codziennego zgadywania. Dobry brand book skraca proces akceptacji, ogranicza liczbę poprawek i przyspiesza pracę z agencją, grafikiem, drukarnią czy zespołem wewnętrznym.
 
@@ -71,7 +69,7 @@ Jest jeszcze druga korzyść – przewidywalność. Kiedy marka ma opisane stand
 
 W praktyce brand book pomaga też utrzymać jakość przy wzroście firmy. Na początku wszystko często przechodzi przez jedną osobę. Później dochodzą handlowcy, HR, partnerzy, social media managerowie, kilku grafików i firmy zewnętrzne. Bez jednego źródła zasad spójność zaczyna się rozsypywać. A jeśli rozsypuje się spójność, spada też siła marki.
 
-<h2 id="czego-nie-warto-wpisywac-do-brand-booka" class="reveal">Czego nie warto wpisywać do brand booka</h2>
+## Czego nie warto wpisywać do brand booka {#czego-nie-warto-wpisywac-do-brand-booka}
 
 Tu łatwo przesadzić. Częsty błąd to tworzenie dokumentu zbyt ogólnego albo zbyt akademickiego. Jeśli brand book pełen jest haseł o misji, ale nie odpowiada na pytanie, jak przygotować baner, prezentację lub karuzelę reklamową, zespół i tak nie będzie z niego korzystał.
 
@@ -79,7 +77,7 @@ Drugim błędem jest przesadna sztywność. Marka potrzebuje zasad, ale też prz
 
 Nie warto też kopiować rozwiązań z dużych marek tylko dlatego, że dobrze wyglądają w portfolio. Brand book ma być dopasowany do realnego modelu działania firmy. Inne potrzeby ma producent przemysłowy, inne deweloper, inne sieć retail, a jeszcze inne firma usługowa działająca lokalnie i ogólnopolsko jednocześnie.
 
-<h2 id="kiedy-firma-naprawde-potrzebuje-brand-booka" class="reveal">Kiedy firma naprawdę potrzebuje brand booka</h2>
+## Kiedy firma naprawdę potrzebuje brand booka {#kiedy-firma-naprawde-potrzebuje-brand-booka}
 
 Najczęściej wtedy, gdy komunikacja przestaje mieścić się w głowie jednej osoby. Jeśli marka uruchamia kampanie, rozwija sprzedaż, zatrudnia, produkuje content i korzysta z kilku kanałów jednocześnie, brak standardów szybko wychodzi na jaw. Zaczynają się poprawki, rozjazdy wizualne, chaos decyzyjny i pytania zadawane po raz setny.
 
@@ -87,7 +85,7 @@ Brand book przydaje się też przy rebrandingu, wejściu na nowy rynek, reorgani
 
 W firmach działających dynamicznie sprawdza się szczególnie dobrze wtedy, gdy ma wspierać egzekucję, a nie tylko porządek estetyczny. Jeśli marka inwestuje w wideo, social media, materiały sprzedażowe, stronę i kampanie płatne, wszystko powinno opierać się na jednym systemie. Właśnie wtedy brand book zaczyna pracować na wynik, nie tylko na wizerunek.
 
-<h2 id="jak-przygotowac-brand-book-ktory-bedzie-uzywany" class="reveal">Jak przygotować brand book, który będzie używany</h2>
+## Jak przygotować brand book, który będzie używany {#jak-przygotowac-brand-book-ktory-bedzie-uzywany}
 
 Najlepsze dokumenty powstają nie od strony teorii, ale od strony realnych zastosowań. Zanim cokolwiek trafi do brand booka, warto sprawdzić, gdzie marka faktycznie się komunikuje i kto z tych materiałów korzysta. Inne priorytety będzie miała firma oparta na działaniach handlowych, a inne marka budująca silny employer branding.
 

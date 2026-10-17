@@ -19,8 +19,6 @@ toc:
     label: "Wstęp"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 ![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725890236-1024x683.jpg)
 
 Był to jeden z najbardziej złożonych projektów, jakie kiedykolwiek realizowaliśmy. Od pustego kontenera do w pełni wyposażonego pokoju gier – droga była długa i pełna wyzwań. Projekt pokoju gier został zaprojektowany przez** Jarosława Chodoniuka** i **Agnieszkę Hincę**, a Jarek zajął się całą konstrukcją.
@@ -71,7 +69,7 @@ Zdjęcia: **Wojtek Rojek**
 
 ![](/assets/blog/inline/10-lat-world-of-warships-gaming-room-i-event-na-10-lecie-1758725887764-1024x683.jpg)
 
-<h2 id="w-mediach-o-projekcie" class="reveal">W mediach o projekcie</h2>
+## W mediach o projekcie {#w-mediach-o-projekcie}
 
 Poniżej kilka artykułów, które opisują 10-lecie *World of Warships* oraz otwarcie Strefy Gracza w Gdyni
 

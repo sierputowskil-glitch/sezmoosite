@@ -31,11 +31,9 @@ toc:
     label: "Ile powinien trwać film i gdzie go publikować"
 ---
 
-<div id="wstep" class="reveal"></div>
-
 Problem nie polega jednak na tym, czy robić wideo. Problem polega na tym, jakie wideo ma sens biznesowy. Bo źle zaplanowany materiał potrafi wyglądać efektownie, a mimo to nie wnosić nic poza kosztem. Dobry film wizerunkowy działa inaczej – ma konkretny cel, spójny przekaz i daje się wykorzystać w więcej niż jednym miejscu.
 
-<h2 id="czym-naprawde-jest-film-wizerunkowy-dla-firmy" class="reveal">Czym naprawdę jest film wizerunkowy dla firmy</h2>
+## Czym naprawdę jest film wizerunkowy dla firmy {#czym-naprawde-jest-film-wizerunkowy-dla-firmy}
 
 Najprościej: to materiał, który pokazuje, kim jesteś jako marka i dlaczego warto Ci zaufać. Nie musi sprzedawać produktu wprost. Często ważniejsze jest to, że buduje wiarygodność, porządkuje komunikat i skraca dystans między firmą a odbiorcą.
 
@@ -43,7 +41,7 @@ To może być opowieść o zespole, procesie, wartościach, jakości obsługi, s
 
 W praktyce taki materiał oglądają nie tylko potencjalni klienci. Widzą go kandydaci do pracy, partnerzy biznesowi, inwestorzy, media i osoby, które trafiają na Twoją stronę po raz pierwszy. To ważne, bo jeden dobrze przygotowany film może wspierać kilka obszarów firmy jednocześnie.
 
-<h2 id="kiedy-film-wizerunkowy-ma-sens-biznesowy" class="reveal">Kiedy film wizerunkowy ma sens biznesowy</h2>
+## Kiedy film wizerunkowy ma sens biznesowy {#kiedy-film-wizerunkowy-ma-sens-biznesowy}
 
 Nie każda firma potrzebuje go na już. Jeśli nie masz uporządkowanej oferty, strona nie działa, a komunikacja jest niespójna, sam film nie załatwi problemu. Wideo nie naprawia chaosu. Ono wzmacnia to, co już jest.
 
@@ -51,7 +49,7 @@ Ale są sytuacje, w których inwestycja ma bardzo mocne uzasadnienie. Na przykł
 
 Dużo zależy też od branży. W sektorach, gdzie decyzja zakupowa opiera się na zaufaniu – jak usługi, produkcja, nieruchomości, medycyna estetyczna, automotive czy employer branding – film potrafi przyspieszyć cały proces. Pokazuje ludzi, standard pracy i atmosferę. A to są rzeczy, których tekst na stronie zwykle nie oddaje równie skutecznie.
 
-<h2 id="co-taki-film-daje-poza-samym-ladnym-obrazkiem" class="reveal">Co taki film daje poza samym „ładnym obrazkiem”</h2>
+## Co taki film daje poza samym „ładnym obrazkiem” {#co-taki-film-daje-poza-samym-ladnym-obrazkiem}
 
 Największa korzyść to skrócenie drogi do zrozumienia marki. Zamiast kilku zakładek, długich opisów i slajdów w PDF-ie odbiorca dostaje skondensowany komunikat. Widzi skalę, styl działania i poziom profesjonalizmu w kilkadziesiąt sekund.
 
@@ -59,7 +57,7 @@ Druga sprawa to zaufanie. Profesjonalnie zrealizowany materiał pokazuje, że fi
 
 Trzecia korzyść jest bardzo praktyczna: film daje się ciąć, adaptować i wykorzystywać wielokanałowo. Jedna produkcja może zasilić stronę internetową, [social media](/uslugi-marketingowe/obsluga-social-media/), reklamy płatne, prezentacje sprzedażowe, targi, działania HR i komunikację wewnętrzną. Właśnie dlatego warto myśleć o nim nie jako o pojedynczym pliku, ale o zasobie marketingowym.
 
-<h2 id="film-wizerunkowy-dla-firmy-a-sprzedaz-gdzie-jest-przelozenie" class="reveal">Film wizerunkowy dla firmy a sprzedaż – gdzie jest przełożenie</h2>
+## Film wizerunkowy dla firmy a sprzedaż – gdzie jest przełożenie {#film-wizerunkowy-dla-firmy-a-sprzedaz-gdzie-jest-przelozenie}
 
 Wielu decydentów zadaje to samo pytanie: dobrze, ale czy to sprzedaje? Odpowiedź brzmi: tak, jeśli jest częścią sensownie ułożonego procesu. Film wizerunkowy rzadko domyka sprzedaż sam. Znacznie częściej podnosi skuteczność innych działań.
 
@@ -67,7 +65,7 @@ Działa na etapie pierwszego kontaktu, kiedy marka musi zwrócić uwagę. Dział
 
 Jeśli ktoś oczekuje prostego modelu: publikujemy film i od razu rośnie obrót, to najpewniej się rozczaruje. Jeżeli jednak materiał jest osadzony w stronie, [kampanii](/uslugi-marketingowe/kampanie-platne/), lejku sprzedażowym i komunikacji handlowej, jego wpływ bywa bardzo konkretny – lepszy czas na stronie, wyższe zaangażowanie, łatwiejsze rozmowy sprzedażowe i mniejszy opór po stronie klienta.
 
-<h2 id="jak-wyglada-skuteczny-film-a-nie-tylko-efektowny" class="reveal">Jak wygląda skuteczny film, a nie tylko efektowny</h2>
+## Jak wygląda skuteczny film, a nie tylko efektowny {#jak-wyglada-skuteczny-film-a-nie-tylko-efektowny}
 
 Tu najczęściej rozjeżdżają się oczekiwania i rezultat. Firmy skupiają się na ujęciach, sprzęcie i montażu, a za mało uwagi poświęcają strategii. Tymczasem przed produkcją trzeba odpowiedzieć na kilka prostych pytań: do kogo mówimy, co ma zostać zapamiętane, gdzie film będzie używany i jaki ma wywołać efekt.
 
@@ -81,7 +79,7 @@ Pierwszy to brak celu. Film ma wyglądać dobrze, ale nikt nie wie, po co dokła
 
 Częsty problem to również mylenie filmu wizerunkowego z prezentacją firmy. To nie jest slajd z lektorem. Odbiorca nie potrzebuje pełnej historii przedsiębiorstwa od 2009 roku. Potrzebuje zrozumieć, dlaczego właśnie ta marka jest warta uwagi teraz.
 
-<h2 id="ile-powinien-trwac-film-i-gdzie-go-publikowac" class="reveal">Ile powinien trwać film i gdzie go publikować</h2>
+## Ile powinien trwać film i gdzie go publikować {#ile-powinien-trwac-film-i-gdzie-go-publikowac}
 
 Nie ma jednej długości idealnej. To zależy od celu i miejsca emisji. Na stronie głównej dobrze działa materiał krótki, dynamiczny i czytelny. W działaniach sprzedażowych albo employer brandingowych można pozwolić sobie na bardziej rozbudowaną formę. Najczęściej najlepiej sprawdza się główna wersja oraz kilka krótszych adaptacji.
 
@@ -89,7 +87,7 @@ To ważne z perspektywy budżetu. Jeśli już organizujesz [plan zdjęciowy](/us
 
 Właśnie tutaj przewagę daje współpraca z partnerem, który myśli szerzej niż tylko o samym nagraniu. Jeżeli ktoś rozumie jednocześnie strategię, kampanie, content i produkcję, łatwiej zamienić film w narzędzie, które pracuje w kilku kanałach naraz. Tak działa model zewnętrznego działu marketingu, z którego korzysta coraz więcej firm, bo oszczędza czas i ogranicza chaos po stronie klienta.
 
-<h2 id="ile-kosztuje-film-wizerunkowy-i-od-czego-zalezy-wycena" class="reveal">Ile kosztuje film wizerunkowy i od czego zależy wycena</h2>
+## Ile kosztuje film wizerunkowy i od czego zależy wycena {#ile-kosztuje-film-wizerunkowy-i-od-czego-zalezy-wycena}
 
 To jedno z tych pytań, na które uczciwa odpowiedź brzmi: to zależy. Na koszt wpływa scenariusz, liczba dni zdjęciowych, lokalizacje, skala ekipy, ujęcia z drona, animacje, lektor, poziom postprodukcji i liczba finalnych wersji.
 
@@ -97,7 +95,7 @@ Najtańsza opcja nie zawsze będzie błędem, jeśli potrzebujesz prostego, spra
 
 Lepiej patrzeć na to jak na inwestycję w asset marki niż jednorazowy koszt produkcyjny. Jeżeli materiał jest dobrze zaplanowany, może pracować jednocześnie na wizerunek, sprzedaż i rekrutację. A to zmienia sposób liczenia opłacalności.
 
-<h2 id="jak-przygotowac-firme-do-nagran" class="reveal">Jak przygotować firmę do nagrań</h2>
+## Jak przygotować firmę do nagrań {#jak-przygotowac-firme-do-nagran}
 
 Najlepsze realizacje nie biorą się z przypadku. Przed zdjęciami warto ustalić kluczowy przekaz, wybrać osoby występujące w materiale, przygotować przestrzeń i zastanowić się, które elementy firmy naprawdę warto pokazać. Nie wszystko, co dzieje się na co dzień, będzie czytelne dla odbiorcy z zewnątrz.
 
