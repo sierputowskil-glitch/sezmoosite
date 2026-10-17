@@ -27,8 +27,8 @@ const jsonLd = itemListJsonLd({
   items: copy.schemaItems.map((it) => ({ name: it.name, url: pageUrl(it.path) })),
 });
 
-const tileWidths = [400, 720, 1080];
-const tileSizes = '(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 40vw';
+const tileWidths = [480, 720, 1080];
+const tileSizes = '(max-width: 760px) 100vw, 1080px';
 ---
 
 <PortfolioLayout
@@ -91,7 +91,7 @@ const tileSizes = '(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 40vw';
                 loading="lazy"
                 widths={tileWidths}
                 sizes={tileSizes}
-                quality={72}
+                quality={84}
               />
               <span class="pt-media__badge"><span class="d"></span>{t.badge}</span>
               {t.open && <span class="pt-media__open" aria-hidden="true">{t.open}</span>}
