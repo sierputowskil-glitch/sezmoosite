@@ -1219,7 +1219,8 @@ section { position: relative; }
 .studio__sticky { position: sticky; top: 88px; }
 .studio__media { position: relative; aspect-ratio: 3/4; border-radius:4px; overflow:hidden; border:1px solid var(--line-soft); }
 .studio__media .frame-media { position:absolute; inset:0; }
-.studio__media .ovl { position:absolute; inset:0; z-index:2; }
+/* Decorative corners/timecode must not steal taps from video-bg__play */
+.studio__media .ovl { position:absolute; inset:0; z-index:2; pointer-events:none; }
 .studio__media .corners span{ position:absolute; width:26px;height:26px;border:2px solid oklch(0.96 0.006 80 / .5); }
 .studio__media .corners span:nth-child(1){top:14px;left:14px;border-right:0;border-bottom:0}
 .studio__media .corners span:nth-child(2){top:14px;right:14px;border-left:0;border-bottom:0}
@@ -3181,40 +3182,36 @@ img.card__video { background: var(--bg-2); }
   border: 0; pointer-events: none;
   object-fit: cover;
 }
-/* Save-Data / 2g / reduced-motion: poster + explicit play */
-.video-bg__play {
-  position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, -50%);
+/* Save-Data / 2g / reduced-motion: poster + explicit play (above decorative ovl) */
+.video-bg__play,
+.hero__video__play {
+  position: absolute; z-index: 6; top: 50%; left: 50%; transform: translate(-50%, -50%);
   width: clamp(56px, 12cqw, 88px); aspect-ratio: 1; border-radius: 50%;
   border: 1px solid oklch(0.96 0.006 80 / 0.55);
-  background: oklch(0.96 0.006 80 / 0.1);
+  background: oklch(0.96 0.006 80 / 0.12);
   -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
-  cursor: pointer; padding: 0;
+  cursor: pointer; padding: 0; margin: 0;
   display: grid; place-items: center;
+  pointer-events: auto;
+  touch-action: manipulation;
 }
-.video-bg__play::before {
+.video-bg__play::before,
+.hero__video__play::before {
   content: "";
   border-left: 16px solid var(--fg);
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   margin-left: 4px;
 }
-.video-bg.is-playing .video-bg__play { display: none; }
-.hero__video__play {
-  position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: clamp(64px, 9vw, 100px); aspect-ratio: 1; border-radius: 50%;
-  border: 1px solid oklch(0.96 0.006 80 / 0.5);
-  background: oklch(0.96 0.006 80 / 0.08);
-  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
-  cursor: pointer; padding: 0;
-  display: grid; place-items: center;
-}
+.hero__video__play { width: clamp(64px, 9vw, 100px); }
 .hero__video__play::before {
-  content: "";
-  border-left: 18px solid var(--fg);
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
+  border-left-width: 18px;
+  border-top-width: 12px;
+  border-bottom-width: 12px;
   margin-left: 5px;
 }
+.video-bg.is-playing .video-bg__play,
+.studio__media.is-playing .video-bg__play,
 .hero__video.is-playing .hero__video__play { display: none; }
 /* Portfolio / lightbox — CDN <video> fills media frames */
 .pt-media video.cdn-video {

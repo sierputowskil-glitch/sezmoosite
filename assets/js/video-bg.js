@@ -36,7 +36,9 @@
   }
 
   function ensurePlayButton(el) {
-    if (el.querySelector('.video-bg__play')) return;
+    // Prefer host .studio__media so the control sits above .ovl (z-index 2).
+    var host = el.closest('.studio__media') || el;
+    if (host.querySelector('.video-bg__play')) return;
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'video-bg__play';
@@ -48,8 +50,9 @@
       delete el.dataset.videoMounted;
       mount(el);
       el.classList.add('is-playing');
+      host.classList.add('is-playing');
     });
-    el.appendChild(btn);
+    host.appendChild(btn);
   }
 
   function mountCdnBg(el, id) {
