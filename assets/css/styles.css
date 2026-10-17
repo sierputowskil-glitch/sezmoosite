@@ -417,12 +417,17 @@ main {
   object-fit: cover;
   /* brightness/saturate baked into showreel-poster(-m).webp — keep LCP img filter-free */
 }
+/* picture wrapper (mobile srcset) must sit under <video> — otherwise LCP poster
+   paints above a playing showreel and desktop looks like "no autoplay". */
 .hero__video picture {
   position: absolute; inset: 0;
   display: block;
+  z-index: 0;
+  transition: opacity 1.1s var(--ease);
 }
 .hero__video video {
   position: absolute; inset: 0;
+  z-index: 1;
   width: 100%; height: 100%;
   max-width: none;
   object-fit: cover;
@@ -432,6 +437,7 @@ main {
   filter: brightness(0.78) saturate(1.05);
 }
 .hero__video.is-playing video { opacity: 1; }
+.hero__video.is-playing picture { opacity: 0; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
   .hero__video video { display: none; }
 }
