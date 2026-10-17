@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 /**
- * Copy root `assets/` → `public/assets/` as real files.
+ * Copy media (+ a few public-URL JS vendors) from `assets/` → `public/assets/`.
  * Symlinks break on some Cloudflare / GitHub Pages deploys; this survives both.
  *
- * All MP4 under assets/video/ live on cdn.sezmoo.com — skip copying into Pages
- * (keeps deploy under the 25 MiB asset limit). Posters still ship with Pages.
+ * Synced: images, fonts, video posters / non-MP4 under video/, favicons, OG.
+ * Skipped: CSS & Vite-bundled JS (imported via Astro), MP4 (CDN), optimized/lcp,
+ * legacy partials.
+ *
+ * Public-URL vendors that stay synced: flowing-background.js, lenis.min.js.
  */
 import { cpSync, existsSync, lstatSync, rmSync, unlinkSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -14,9 +17,42 @@ const dest = resolve('public/assets');
 const rootIco = resolve('public/favicon.ico');
 const srcIco = resolve('assets/favicon.ico');
 
-/** Skip every MP4 under assets/video/ (CDN). */
+const MEDIA_EXT =
+  /\.(avif|webp|jpe?g|png|gif|svg|ico|woff2?|ttf|otf|eot|mp3|wav|webm)$/i;
+
+/** Lazy public-URL scripts (not Vite-bundled). */
+const PUBLIC_JS = new Set(['js/flowing-background.js', 'js/lenis.min.js']);
+
+/** Top-level dirs / files never copied. */
+const SKIP_PREFIXES = ['css/', 'optimized/', 'partials/'];
+
 function skipForCdn(rel) {
   return /^video\/.+\.mp4$/i.test(rel);
+}
+
+/**
+ * @param {string} rel posix path relative to assets/
+ * @param {boolean} isDir
+ */
+function shouldCopy(rel, isDir) {
+  if (!rel) return true;
+  if (skipForCdn(rel)) return false;
+  for (const p of SKIP_PREFIXES) {
+    if (rel === p.slice(0, -1) || rel.startsWith(p)) return false;
+  }
+  // JS: only vendor public URLs (+ allow traversing js/)
+  if (rel === 'js' || rel.startsWith('js/')) {
+    if (isDir) return true;
+    return PUBLIC_JS.has(rel);
+  }
+  // Video: posters / json / images — never MP4 (already filtered)
+  if (rel === 'video' || rel.startsWith('video/')) {
+    if (isDir) return true;
+    return MEDIA_EXT.test(rel) || /\.json$/i.test(rel);
+  }
+  // Everything else: media files + dirs that may contain them
+  if (isDir) return true;
+  return MEDIA_EXT.test(rel);
 }
 
 if (!existsSync(src)) {
@@ -39,12 +75,21 @@ cpSync(src, dest, {
   filter: (from) => {
     const rel = from.slice(src.length).replace(/^[/\\]/, '').replace(/\\/g, '/');
     if (!rel) return true;
-    return !skipForCdn(rel);
+    let isDir = false;
+    try {
+      isDir = lstatSync(from).isDirectory();
+    } catch {
+      isDir = false;
+    }
+    return shouldCopy(rel, isDir);
   },
 });
+
 // Google / legacy crawlers request /favicon.ico at site root
 if (existsSync(srcIco)) {
   cpSync(srcIco, rootIco);
 }
 
-console.log('sync-public-assets: copied assets/ → public/assets/ (MP4 → CDN)');
+console.log(
+  'sync-public-assets: media + public JS → public/assets/ (skip css/bundled js/MP4/optimized)',
+);

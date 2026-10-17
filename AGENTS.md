@@ -17,7 +17,7 @@ Phone everywhere: **+48 739 260 450** (`src/lib/site.ts` → `PHONE_DISPLAY` / `
 ## Non-negotiables
 
 1. **Never commit secrets:** `.env`, `.dev.vars`, SMTP/Turnstile secrets. Use `.env.example` / `.dev.vars.example` only.
-2. **Edit source assets in `assets/`**, not `public/assets/`. `predev` / `prebuild` run `npm run sync:assets` (real copy, not symlink).
+2. **Edit source assets in `assets/`**, not `public/assets/`. `predev` / `prebuild` run `npm run sync:assets` (real copy, not symlink). Sync copies **media** (images, fonts, video posters) plus public-URL vendors (`flowing-background.js`, `lenis.min.js`). CSS and Vite-bundled JS are **not** synced — import them from layouts/pages.
 3. **Trailing slashes** on all internal links (`/blog/`, `/uslugi-marketingowe/abonamenty/`). Match `astro.config.mjs`.
 4. **Canonicals / OG** must use `pageUrl()` / `PUBLIC_SITE_URL` — never hardcode `localhost` in shipped meta. Prod CI bakes `https://sezmoo.com`.
 5. **Do not reintroduce** `/abonament/` or `/en/retainer/` as on-site pages — they 301 to `https://abonament.sezmoo.com/` (separate campaign LP). Service page `/uslugi-marketingowe/abonamenty/` stays here.
@@ -77,21 +77,27 @@ Edit source here, not `public/assets/`. Vite-hashed imports from layouts/pages.
 
 | File | Loads | Role |
 | --- | --- | --- |
-| `app.js` | `BaseLayout` | Barrel: `core.js` + `form.js` |
+| `app.js` | `BaseLayout` | Barrel: core, form, theme, CookieYes paint, video-bg, flowing loader, GTM |
 | `core.js` | via `app.js` | Nav, logo, Lenis, reveal, anchors, sub-hero intro, mobile bar |
 | `form.js` | via `app.js` | Contact / retainer Turnstile (`#retainer-form`, `form.cform`) |
-| `home.js` | `index.astro` + `en/index.astro` only | Hero video, reel, timeline, pack, team, hover-play |
+| `theme-controls.js` | via `app.js` | Desktop `[data-theme-set]` (FOUC theme boot stays inline in `BaseLayout`) |
+| `cookieyes-paint.js` | via `app.js` | Override CookieYes Free inline styles after CMP mounts |
+| `video-bg.js` | via `app.js` | `[data-video-bg]` posters + CDN MP4 (needs `cdn-video-map` first) |
+| `flowing-bg-loader.js` | via `app.js` | Lazy-injects public `/assets/js/flowing-background.js` on fine pointer |
+| `gtm.js` | via `app.js` | Idle-loads GTM when `__SEZMOO__.gtmId` is set |
+| `home.js` | `HomePage` only | Hero video, reel, timeline, pack, team, hover-play |
 | `portfolio-page.js` | `PortfolioLayout` | Listing filters / lightbox |
-| `cdn-video-map.js` | `BaseLayout` | CDN `data-video` map (home, services, cases) |
-| `flowing-background.js` | lazy public URL | Desktop FX — leave as-is |
+| `cdn-video-map.js` | `BaseLayout` (before `app.js`) | CDN `data-video` map (home, services, cases) |
+| `flowing-background.js` | lazy public URL | Desktop FX — keep public; synced by `sync:assets` |
+| `lenis.min.js` | public URL via `core.js` | Smooth scroll vendor — synced by `sync:assets` |
 
-Do not dump homepage or portfolio logic back into `app.js`. Case-study play stays in `CaseStudyLayout` inline.
+Do not dump homepage or portfolio logic back into `app.js`. Case-study play stays in `CaseStudyLayout` inline. Keep `BaseLayout` `is:inline` only for FOUC theme boot, critical CSS, and `__SEZMOO__` config.
 
 ### Assets & media
 
-- Site images/CSS/JS: `assets/…` → synced to `/assets/…`.
+- **Media sync:** images / fonts / video posters → `/assets/…` via `sync:assets`. CSS (`styles.css`, etc.) and most JS go through Vite (`?url` / `import`), not the public tree.
 - Blog heroes: typically `/assets/blog/<slug>.webp` (file under `assets/blog/`).
-- **Service LCP / reel images:** store the real source under `assets/work/`, `assets/photo/`, `assets/img/`, or `assets/portfolio/` and render with `AssetImage` / `OptImage`. Do **not** point copy at `/assets/optimized/lcp/` (prebaked srcsets). `src/lib/local-image.ts` globs those folders. Heroes: `fetchpriority="high"` + `loading="eager"`.
+- **Service LCP / reel images:** store the real source under `assets/work/`, `assets/photo/`, `assets/img/`, or `assets/portfolio/` and render with `AssetImage` / `OptImage`. Do not use a prebaked `optimized/lcp` tree. `src/lib/local-image.ts` globs those folders. Heroes: `fetchpriority="high"` + `loading="eager"`.
 - MP4: Hostido CDN via `getMediaBase()` / `mediaUrl()` (`PUBLIC_MEDIA_BASE`, default `https://cdn.sezmoo.com`). Posters may stay on Pages for LCP.
 - Video case-study ids and posters: `assets/video/yt/manifest.json` (and related queue) — keep `case-studies.ts` `videoId`s aligned with the manifest / `CASE_STUDY_ORDER`.
 

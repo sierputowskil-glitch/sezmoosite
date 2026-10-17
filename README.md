@@ -45,7 +45,7 @@ Put Turnstile + SMTP secrets in `.dev.vars` (see `.dev.vars.example`).
 | `npm run check` | `astro check` (types / Astro diagnostics) |
 | `npm run lint` | ESLint (Astro + TS) |
 | `npm run format` | Prettier write |
-| `npm run sync:assets` | Copy `assets/` → `public/assets/` (real files, not symlink) |
+| `npm run sync:assets` | Copy media + public JS vendors → `public/assets/` (skips CSS / Vite JS / MP4) |
 | `npm run dev:functions` | Wrangler Pages Dev over `dist/` |
 | `migrate:*` / `unstring:*` | **One-shot migrators** — not for CI; see `scripts/*.mjs` headers |
 

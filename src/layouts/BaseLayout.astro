@@ -214,95 +214,14 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     <script type="application/ld+json" set:html={block} />
   ))}
   {extraHead && <Fragment set:html={extraHead} />}
-  <script is:inline define:vars={{ turnstileKey, contactApi, enableGtm }}>
+  {/* CookieYes theme: src/styles/cookieyes.css; paint override: assets/js/cookieyes-paint.js */}
+  <script is:inline define:vars={{ turnstileKey, contactApi, enableGtm, gtmId }}>
     window.__SEZMOO__ = {
       turnstileSiteKey: turnstileKey,
       contactApiUrl: contactApi,
       expectCmp: !!enableGtm,
+      gtmId: enableGtm ? gtmId : '',
     };
-  </script>
-  {/* CookieYes Free paints blue via element style= — mirror live sezmoo.com WP theme after CMP mounts */}
-  <style is:inline>
-    .cky-consent-container .cky-consent-bar{background-color:#fff!important;border:1px solid #f4f4f4!important;border-radius:6px!important;box-shadow:0 -1px 10px 0 #acabab4d!important}
-    .cky-title,.cky-notice-des,.cky-notice-des *,.cky-notice-group,.cky-preference-title,.cky-preference-content-wrapper,.cky-accordion-btn,.cky-accordion-header-des{color:#212121!important}
-    .cky-policy,.cky-notice-des a.cky-policy,.cky-show-desc-btn{color:#ffd200!important}
-    .cky-btn{border-radius:2px!important;border-width:2px!important;font-size:14px!important;font-weight:500!important;text-transform:none!important;letter-spacing:normal!important;min-height:0!important;padding:8px!important}
-    .cky-btn-accept,.cky-btn-accept-all,.cky-preference-center .cky-btn-accept,.cky-btn-save-preferences{background-color:#ffd200!important;border-color:#ffd200!important;color:#000!important}
-    .cky-btn-reject,.cky-btn-reject-all,.cky-btn-customize,.cky-btn-preferences{background-color:transparent!important;border-color:#ffd200!important;color:#ffd200!important}
-    .cky-modal,.cky-preference-center{background-color:#fff!important;border-color:#f4f4f4!important;color:#212121!important;border-radius:6px!important}
-    .cky-preference-body-wrapper{color-scheme:light!important;scrollbar-width:thin!important;scrollbar-color:#c8c8c8 #f4f4f4!important;overscroll-behavior:contain!important}
-    .cky-preference-body-wrapper::-webkit-scrollbar{width:8px!important;height:8px!important;background:#f4f4f4!important}
-    .cky-preference-body-wrapper::-webkit-scrollbar-track{background:#f4f4f4!important;border:none!important;box-shadow:none!important}
-    .cky-preference-body-wrapper::-webkit-scrollbar-thumb{background:#c8c8c8!important;border-radius:999px!important;border:2px solid #f4f4f4!important;background-clip:padding-box!important;box-shadow:none!important}
-    html:has(.cky-modal.cky-modal-open),body:has(.cky-modal.cky-modal-open){overflow:hidden!important}
-    .cky-switch input[type=checkbox]{background:#d0d5d2!important}
-    .cky-switch input[type=checkbox]:checked{background:#ffd200!important}
-    .cky-btn-revisit-wrapper{background-color:#ffd200!important}
-    [data-cky-tag=powered-by],[data-cky-tag=detail-powered-by]{display:none!important}
-  </style>
-  <script is:inline>
-    (function () {
-      var Y = '#FFD200';
-      var map = [
-        ['.cky-consent-bar', 'border-color:#f4f4f4;background-color:#FFFFFF'],
-        ['.cky-title', 'color:#212121'],
-        ['.cky-notice-des', 'color:#212121'],
-        ['.cky-policy', 'color:' + Y + ';border-color:transparent;background-color:transparent'],
-        ['.cky-btn-accept', 'color:#000000;border-color:' + Y + ';background-color:#ffd200'],
-        ['.cky-btn-reject', 'color:' + Y + ';border-color:' + Y + ';background-color:transparent'],
-        ['.cky-btn-customize', 'color:' + Y + ';border-color:' + Y + ';background-color:transparent'],
-        ['.cky-btn-preferences', 'color:' + Y + ';border-color:' + Y + ';background-color:transparent'],
-        ['.cky-preference-center', 'color:#212121;border-color:#F4F4F4;background-color:#FFFFFF'],
-        ['.cky-preference-title', 'color:#212121'],
-        ['.cky-btn-revisit-wrapper', 'background-color:' + Y],
-      ];
-      function paint(root) {
-        var scope = root && root.querySelectorAll ? root : document;
-        for (var i = 0; i < map.length; i++) {
-          var nodes = scope.querySelectorAll(map[i][0]);
-          for (var j = 0; j < nodes.length; j++) {
-            nodes[j].setAttribute('style', map[i][1]);
-          }
-        }
-        var toggles = scope.querySelectorAll('.cky-switch input[type="checkbox"]');
-        for (var k = 0; k < toggles.length; k++) {
-          toggles[k].style.backgroundColor = toggles[k].checked ? Y : '#d0d5d2';
-        }
-        // Let Lenis ignore nested CookieYes scroll (attribute + closest() prevent)
-        var scrollers = scope.querySelectorAll(
-          '.cky-preference-body-wrapper, .cky-modal, .cky-preference-center'
-        );
-        for (var s = 0; s < scrollers.length; s++) {
-          scrollers[s].setAttribute('data-lenis-prevent', '');
-        }
-      }
-      function boot() {
-        paint(document);
-        if (!window.MutationObserver) return;
-        var obs = new MutationObserver(function (muts) {
-          for (var i = 0; i < muts.length; i++) {
-            var nodes = muts[i].addedNodes;
-            for (var j = 0; j < nodes.length; j++) {
-              var n = nodes[j];
-              if (n.nodeType !== 1) continue;
-              if (
-                n.classList &&
-                (n.classList.contains('cky-consent-container') ||
-                  n.classList.contains('cky-modal') ||
-                  n.id === 'cky-consent-container')
-              ) {
-                paint(n);
-              } else if (n.querySelector && n.querySelector('.cky-consent-bar,.cky-btn-accept,.cky-preference-center')) {
-                paint(n);
-              }
-            }
-          }
-        });
-        obs.observe(document.documentElement, { childList: true, subtree: true });
-      }
-      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
-      else boot();
-    })();
   </script>
 </head>
 <body id={bodyId} class={bodyClass}>
@@ -339,173 +258,13 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     {includeFooter && <Footer lang={lang} />}
   </main>
 
-  <script is:inline>
-  /* Heavy desktop FX only — skip on touch / reduced-motion */
-  (function () {
-    try {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-      if (reduce || !fine) return;
-      var s = document.createElement('script');
-      s.src = '/assets/js/flowing-background.js';
-      s.async = true;
-      document.body.appendChild(s);
-    } catch (_e) {}
-  })();
-  </script>
   {/* Vite-bundled site JS (hashed). Lenis + flowing-background stay public URLs.
-      app.js = core chrome + contact forms. Homepage scenes: home.js. Portfolio listing: portfolio-page.js. */}
+      app.js = core + form + theme + CookieYes paint + video-bg + flowing loader + GTM.
+      Homepage: home.js. Portfolio listing: portfolio-page.js. */}
   <script>
     import '../../assets/js/cdn-video-map.js';
     import '../../assets/js/app.js';
   </script>
-  <script is:inline>
-  /* Background video: local poster first, then first-party CDN MP4 (no YouTube iframe).
-     Touch / coarse pointer: poster only. */
-  (function () {
-    var finePointer = false;
-    try {
-      finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches
-        && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    } catch (_e) {}
-    function applyPoster(el) {
-      var poster = el.getAttribute('data-video-poster');
-      if (poster && !el.style.backgroundImage) {
-        el.style.backgroundImage = 'url("' + poster + '")';
-      }
-    }
-    function mountCdnBg(el, id) {
-      var s = window.__SEZMOO__;
-      if (!s || !s.mountCdnVideo || !s.cdnVideoUrl || !s.cdnVideoUrl(id)) return false;
-      if (el.dataset.videoMounted) return true;
-      el.dataset.videoMounted = '1';
-      s.mountCdnVideo(el, id, {
-        muted: true,
-        loop: true,
-        autoplay: true,
-        preload: 'metadata',
-        className: 'video-bg__video',
-        title: el.getAttribute('data-video-title') || '',
-      });
-      return true;
-    }
-    function mount(el) {
-      if (!el || el.dataset.videoMounted) return;
-      applyPoster(el);
-      if (!finePointer) {
-        el.dataset.videoMounted = '1';
-        return;
-      }
-      var id = el.getAttribute('data-video-id');
-      if (!id) return;
-      if (mountCdnBg(el, id)) return;
-      if (!window.__SEZMOO__ || !window.__SEZMOO__.cdnVideoMap) {
-        var tries = 0;
-        var t = setInterval(function () {
-          tries++;
-          if (mountCdnBg(el, id) || tries > 40) {
-            clearInterval(t);
-            if (!el.dataset.videoMounted) el.dataset.videoMounted = '1';
-          }
-        }, 50);
-        return;
-      }
-      el.dataset.videoMounted = '1';
-    }
-    function playBgMedia(el) {
-      var v = el.querySelector('video');
-      if (!v) return;
-      var p = v.play();
-      if (p && typeof p.catch === 'function') p.catch(function () {});
-    }
-    function pauseBgMedia(el) {
-      var v = el.querySelector('video');
-      if (v && !v.paused) v.pause();
-    }
-    function whenIdle(fn) {
-      if ('requestIdleCallback' in window) requestIdleCallback(fn, { timeout: 2200 });
-      else if (document.readyState === 'complete') setTimeout(fn, 1);
-      else window.addEventListener('load', function () { setTimeout(fn, 1); });
-    }
-    function whenNear(el) {
-      if (!('IntersectionObserver' in window)) {
-        whenIdle(function () { mount(el); });
-        return;
-      }
-      var io = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (e) {
-            var target = e.target;
-            if (e.isIntersecting) {
-              applyPoster(target);
-              if (!target.dataset.videoMounted) mount(target);
-              else playBgMedia(target);
-            } else {
-              pauseBgMedia(target);
-            }
-          });
-        },
-        { rootMargin: '120px 0px', threshold: 0.15 }
-      );
-      io.observe(el);
-    }
-    document.querySelectorAll('[data-video-bg]').forEach(function (el) {
-      applyPoster(el);
-      if (!finePointer) {
-        el.dataset.videoMounted = '1';
-        return;
-      }
-      if (el.getAttribute('data-video-priority') === 'hero') whenIdle(function () { mount(el); });
-      else whenNear(el);
-    });
-  })();
-  </script>
-  <script is:inline>
-  (function () {
-    var root = document.documentElement;
-    var opts = [].slice.call(document.querySelectorAll('[data-theme-set]'));
-    function apply(t) {
-      root.setAttribute('data-theme', t);
-      try { localStorage.setItem('sezmoo-theme', t); } catch (_e) {}
-      opts.forEach(function (b) {
-        var on = b.getAttribute('data-theme-set') === t;
-        b.classList.toggle('is-active', on);
-        b.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
-    }
-    opts.forEach(function (b) {
-      b.addEventListener('click', function () { apply(b.getAttribute('data-theme-set')); });
-    });
-    apply(root.getAttribute('data-theme') || 'dark');
-  })();
-  </script>
-  {enableGtm && gtmId && (
-    <script is:inline set:html={`
-    (function () {
-      var GTM_ID = ${JSON.stringify(gtmId)};
-      function loadGtm() {
-        if (window.__SEZMOO_GTM__ || !GTM_ID) return;
-        window.__SEZMOO_GTM__ = true;
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
-        var f = document.getElementsByTagName('script')[0];
-        var j = document.createElement('script');
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
-        f.parentNode.insertBefore(j, f);
-      }
-      if (document.readyState === 'complete') {
-        if ('requestIdleCallback' in window) requestIdleCallback(loadGtm, { timeout: 3000 });
-        else setTimeout(loadGtm, 1);
-      } else {
-        window.addEventListener('load', function () {
-          if ('requestIdleCallback' in window) requestIdleCallback(loadGtm, { timeout: 3000 });
-          else setTimeout(loadGtm, 1);
-        });
-      }
-    })();
-    `} />
-  )}
   {pageScripts && <Fragment set:html={pageScripts} />}
 </body>
 </html>
