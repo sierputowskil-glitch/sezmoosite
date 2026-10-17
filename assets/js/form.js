@@ -74,10 +74,28 @@
     host.style.cssText = "position:absolute;width:0;height:0;overflow:hidden;clip:rect(0,0,0,0);";
     f.appendChild(host);
 
-    function say(t) {
-      if (note) {
-        note.textContent = t;
-        note.style.color = "var(--rec)";
+    var noteIdle = note ? note.textContent : "";
+
+    function say(t, kind) {
+      if (!note) return;
+      note.textContent = t;
+      note.style.color = kind === "idle" ? "" : "var(--rec)";
+      note.setAttribute("data-state", kind || "alert");
+    }
+
+    function setSending(on) {
+      f.classList.toggle("is-sending", on);
+      f.setAttribute("aria-busy", on ? "true" : "false");
+      if (btn) {
+        btn.disabled = !!on;
+        btn.classList.toggle("is-sending", on);
+        btn.setAttribute("aria-busy", on ? "true" : "false");
+      }
+      if (lbl) lbl.textContent = on ? (en ? "Sending\u2026" : "Wysy\u0142anie\u2026") : lblText;
+      if (on) {
+        say(en ? "\u25cf Sending\u2026" : "\u25cf Wysy\u0142anie\u2026", "idle");
+      } else if (note && note.getAttribute("data-state") === "idle") {
+        say(noteIdle, "idle");
       }
     }
 
@@ -235,8 +253,7 @@
         f.reportValidity();
         return;
       }
-      if (btn) btn.disabled = true;
-      if (lbl) lbl.textContent = en ? "Sending\u2026" : "Wysy\u0142anie\u2026";
+      setSending(true);
 
       var meta = formMeta(f);
 
@@ -318,8 +335,7 @@
           resetWidget();
         })
         .finally(function () {
-          if (btn) btn.disabled = false;
-          if (lbl) lbl.textContent = lblText;
+          setSending(false);
         });
     });
   }
