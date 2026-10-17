@@ -145,15 +145,24 @@
     video.addEventListener("canplay", tryPlay, { once: true });
 
     if (posterOnly) {
-      // Save-Data / 2g: no autoplay — tap hero to start
-      wrap.addEventListener(
-        "click",
-        () => {
-          gateOpen = true;
-          attachSrc();
-        },
-        { once: true }
-      );
+      // Save-Data / 2g / reduced-motion: poster + visible play control
+      if (!wrap.querySelector(".hero__video__play")) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "hero__video__play";
+        btn.setAttribute("aria-label", "Play showreel");
+        btn.addEventListener(
+          "click",
+          (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            gateOpen = true;
+            attachSrc();
+          },
+          { once: true }
+        );
+        wrap.appendChild(btn);
+      }
     } else if (fine) {
       afterPoster(openGate);
     } else {

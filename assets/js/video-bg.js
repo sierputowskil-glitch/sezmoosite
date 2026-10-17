@@ -1,7 +1,7 @@
 /**
  * Background video: local poster first, then first-party CDN MP4 (no YouTube iframe).
  * Desktop + mobile: mount when near viewport (muted autoplay).
- * Save-Data / 2g / reduced-motion: poster only.
+ * Save-Data / 2g / reduced-motion: poster + play button (tap to start).
  * Offscreen on touch: detach buffer so lazy images keep the pipe.
  * Depends on window.__SEZMOO__ from cdn-video-map.
  */
@@ -30,6 +30,28 @@
     }
   }
 
+  function playLabel(el) {
+    var t = el.getAttribute('data-video-title');
+    return t ? 'Play: ' + t : 'Play video';
+  }
+
+  function ensurePlayButton(el) {
+    if (el.querySelector('.video-bg__play')) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'video-bg__play';
+    btn.setAttribute('aria-label', playLabel(el));
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      el.dataset.forcePlay = '1';
+      delete el.dataset.videoMounted;
+      mount(el);
+      el.classList.add('is-playing');
+    });
+    el.appendChild(btn);
+  }
+
   function mountCdnBg(el, id) {
     var s = window.__SEZMOO__;
     if (!s || !s.mountCdnVideo || !s.cdnVideoUrl || !s.cdnVideoUrl(id)) return false;
@@ -39,24 +61,24 @@
       muted: true,
       loop: true,
       autoplay: true,
-      // Mobile: metadata first; browser still buffers for muted autoplay when playing.
       preload: finePointer ? 'auto' : 'metadata',
       className: 'video-bg__video',
       title: el.getAttribute('data-video-title') || '',
     });
+    el.classList.add('is-playing');
     return true;
   }
 
   function mount(el) {
-    if (!el || posterOnly) {
-      if (el) {
-        applyPoster(el);
-        el.dataset.videoMounted = '1';
-      }
+    if (!el) return;
+    applyPoster(el);
+    var forced = el.dataset.forcePlay === '1';
+    if (posterOnly && !forced) {
+      el.dataset.videoMounted = '1';
+      ensurePlayButton(el);
       return;
     }
     if (el.dataset.videoMounted === '1' && el.querySelector('video')) return;
-    applyPoster(el);
     var id = el.getAttribute('data-video-id');
     if (!id) return;
     if (mountCdnBg(el, id)) return;
@@ -101,6 +123,7 @@
     } catch (_e2) {}
     if (v.parentNode) v.parentNode.removeChild(v);
     delete el.dataset.videoMounted;
+    el.classList.remove('is-playing');
   }
 
   function whenIdle(fn) {
@@ -125,12 +148,15 @@
           var target = e.target;
           if (e.isIntersecting) {
             applyPoster(target);
+            if (posterOnly && target.dataset.forcePlay !== '1') {
+              ensurePlayButton(target);
+              return;
+            }
             if (!target.querySelector('video')) mount(target);
             else playBgMedia(target);
           } else {
             pauseBgMedia(target);
-            // Touch: drop buffer so below-fold lazy media can use the pipe
-            if (!finePointer) detachBgMedia(target);
+            if (!finePointer && target.dataset.forcePlay !== '1') detachBgMedia(target);
           }
         });
       },
@@ -142,6 +168,7 @@
   document.querySelectorAll('[data-video-bg]').forEach(function (el) {
     applyPoster(el);
     if (posterOnly) {
+      ensurePlayButton(el);
       el.dataset.videoMounted = '1';
       return;
     }
