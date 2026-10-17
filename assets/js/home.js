@@ -18,21 +18,40 @@
     return `${p(h)}:${p(m)}:${p(s)}:${p(f)}`;
   }
 
-  /* ---------- HERO background video: muted autoplay (desktop + mobile) ---------- */
+  /* ---------- HERO background video (abonament LP handoff model) ----------
+   * Poster = first paint / LCP. MP4 via data-src only after gate:
+   *   desktop: ~100ms after poster ready
+   *   mobile: after LCP (~2.8s fallback)
+   *   Save-Data / 2g: poster + tap-to-play
+   * Offscreen on touch: detach src so lazy images below can load.
+   */
   (function heroVideo() {
     const wrap = document.querySelector(".hero__video");
     const video = document.getElementById("hero-video");
+    const poster = wrap && wrap.querySelector(".hero__poster");
     if (!wrap || !video) return;
 
-    // Accessibility: keep poster only
     if (reduce) {
       try { video.pause(); } catch (_e) {}
-      video.removeAttribute("autoplay");
       return;
     }
 
+    const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const saveData = !!(conn && conn.saveData);
+    const slowNet = !!(
+      conn &&
+      (conn.effectiveType === "2g" ||
+        conn.effectiveType === "slow-2g" ||
+        (typeof conn.downlink === "number" && conn.downlink > 0 && conn.downlink < 0.7))
+    );
+    // Do NOT gate on connection.type === 'cellular' (iOS often missing; LTE autoplay OK).
+    const posterOnly = saveData || slowNet;
+
     let attached = false;
+    let gateOpen = false;
     const reveal = () => wrap.classList.add("is-playing");
+    const unreveal = () => wrap.classList.remove("is-playing");
+
     const tryPlay = () => {
       if (!attached) return;
       video.muted = true;
@@ -44,7 +63,6 @@
       const play = video.play();
       if (play && typeof play.then === "function") {
         play.then(reveal).catch(() => {
-          // iOS / low-power: retry once on first user gesture
           const unlock = () => {
             video.play().then(reveal).catch(() => {});
             window.removeEventListener("touchstart", unlock);
@@ -56,9 +74,21 @@
       }
     };
 
+    const detachSrc = () => {
+      if (!attached) return;
+      try { video.pause(); } catch (_e) {}
+      video.removeAttribute("src");
+      while (video.firstChild) video.removeChild(video.firstChild);
+      try { video.load(); } catch (_e) {}
+      attached = false;
+      unreveal();
+    };
+
     const attachSrc = () => {
-      if (attached) return;
-      const src = video.getAttribute("data-src");
+      if (attached || !gateOpen) return;
+      // Desktop / fine pointer → 1080p; touch → 720p loop (CDN showreel-720.mp4).
+      const srcMobile = video.getAttribute("data-src-mobile");
+      const src = (!fine && srcMobile) || video.getAttribute("data-src");
       if (!src) return;
       attached = true;
       const source = document.createElement("source");
@@ -69,21 +99,26 @@
       tryPlay();
     };
 
-    video.addEventListener("playing", reveal);
-    video.addEventListener("canplay", tryPlay, { once: true });
+    const afterPoster = (fn) => {
+      const go = () => setTimeout(fn, fine ? 100 : 0);
+      if (!poster) {
+        go();
+        return;
+      }
+      const ready = () => {
+        if (poster.decode) poster.decode().then(go).catch(go);
+        else go();
+      };
+      if (poster.complete) ready();
+      else poster.addEventListener("load", ready, { once: true });
+    };
 
-    // Defer MP4 until after LCP + idle — poster stays the LCP candidate; ~15MB
-    // showreel must not contend with critical images/fonts.
-    const scheduleAttach = () => {
+    const afterLcp = (fn) => {
       let done = false;
       const run = () => {
         if (done) return;
         done = true;
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(attachSrc, { timeout: 2000 });
-        } else {
-          setTimeout(attachSrc, 600);
-        }
+        fn();
       };
       try {
         const po = new PerformanceObserver((list) => {
@@ -97,28 +132,53 @@
         run();
         return;
       }
-      window.addEventListener("load", () => setTimeout(run, 2500), { once: true });
-      setTimeout(run, 5000);
+      setTimeout(run, 2800);
     };
-    scheduleAttach();
 
-    // Pause when off-screen / tab hidden — saves CPU & data on mobile
-    const sync = () => {
+    const openGate = () => {
+      gateOpen = true;
+      attachSrc();
+    };
+
+    video.addEventListener("playing", reveal);
+    video.addEventListener("canplay", tryPlay, { once: true });
+
+    if (posterOnly) {
+      // Save-Data / 2g: no autoplay — tap hero to start
+      wrap.addEventListener(
+        "click",
+        () => {
+          gateOpen = true;
+          attachSrc();
+        },
+        { once: true }
+      );
+    } else if (fine) {
+      afterPoster(openGate);
+    } else {
+      afterLcp(() => afterPoster(openGate));
+    }
+
+    document.addEventListener("visibilitychange", () => {
       if (document.hidden) {
-        video.pause();
+        try { video.pause(); } catch (_e) {}
         return;
       }
       tryPlay();
-    };
-    document.addEventListener("visibilitychange", sync);
+    });
+
     if ("IntersectionObserver" in window) {
       const io = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
             if (e.isIntersecting && !document.hidden) {
-              attachSrc();
+              if (gateOpen) attachSrc();
               tryPlay();
-            } else video.pause();
+            } else {
+              try { video.pause(); } catch (_e) {}
+              // Touch: drop buffer so below-fold lazy media can use the pipe
+              if (!fine) detachSrc();
+            }
           });
         },
         { threshold: 0.15 }

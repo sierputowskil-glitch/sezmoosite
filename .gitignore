@@ -81,6 +81,7 @@ dist/
 .cache/
 .astro/
 .wrangler/
+.docs/
 
 # Video masters live on cdn.sezmoo.com — keep posters (webp) + yt/manifest|queue in git
 /assets/video/**/*.mp4

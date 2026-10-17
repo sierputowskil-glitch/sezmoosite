@@ -1,9 +1,8 @@
 ---
 /**
- * Native hero background showreel — muted autoplay on desktop + mobile.
- * MP4 from cdn.sezmoo.com; posters stay on Pages for LCP.
- * Real <img> poster (not CSS background) so LCP can select it; video src is
- * attached in home.js after LCP/idle so the ~15MB MP4 stays off the critical path.
+ * Native hero background showreel — muted autoplay after LCP gate (see home.js).
+ * Pattern: .docs/abonament_video_handoff.md — poster LCP, MP4 via data-src only.
+ * CDN: showreel.mp4 = 1080p loop; showreel-720.mp4 = mobile; showreel-full.mp4 = master.
  */
 import { mediaUrl } from '../lib/site';
 
@@ -13,17 +12,18 @@ interface Props {
 const { title = 'SEZMOO showreel' } = Astro.props;
 
 const videoSrc = mediaUrl('video/showreel.mp4');
+const videoSrcMobile = mediaUrl('video/showreel-720.mp4');
 const posterWebp = '/assets/video/showreel-poster.webp?v=20261017a';
 ---
 
-<div class="hero__video">
+<div class="hero__video" data-bg-video data-bg-video-priority="hero">
   <img
     class="hero__poster"
     src={posterWebp}
     alt=""
     width="1600"
     height="900"
-    decoding="async"
+    decoding="sync"
     fetchpriority="high"
   />
   <video
@@ -33,7 +33,9 @@ const posterWebp = '/assets/video/showreel-poster.webp?v=20261017a';
     loop
     preload="none"
     data-src={videoSrc}
+    data-src-mobile={videoSrcMobile}
     aria-label={title}
+    aria-hidden="true"
     disablepictureinpicture
     disableRemotePlayback
   ></video>
