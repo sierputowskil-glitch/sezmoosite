@@ -210,10 +210,10 @@ if (typeof jsonLd === 'string' && jsonLd.trim()) {
     /* Hide chrome until full CSS — no !important so styles.css can reveal */
     .grain,.vignette,.cursor,.cursor-dot,.scrubber,.flow-bg-canvas,.floating-socials,.scroll-top{display:none}
   </style>
-  {/* Main design system must stay render-blocking — async media=print sometimes
-      never fires onload (cached CSS), leaving below-the-fold with no layout. */}
+  {/* styles.css stays render-blocking: full defer re-stamped text LCP (~5s lab).
+      Preload starts the fetch during HTML parse; home.css stays async in pages. */}
+  <link rel="preload" as="style" href={stylesHref} />
   <link rel="stylesheet" href={stylesHref} />
-  {/* Secondary sheets can stay async; failsafe forces media=all if onload skipped. */}
   <link rel="stylesheet" href={fontsHref} media="print" onload="this.onload=null;this.setAttribute('media','all')" />
   <link rel="stylesheet" href={perfHref} media="print" onload="this.onload=null;this.setAttribute('media','all')" />
   <link rel="stylesheet" href={cookieyesHref} media="print" onload="this.onload=null;this.setAttribute('media','all')" />
